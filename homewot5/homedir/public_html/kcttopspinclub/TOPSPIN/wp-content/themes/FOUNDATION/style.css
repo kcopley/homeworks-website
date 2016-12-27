@@ -1,0 +1,182 @@
+/*
+Theme Name: Foundation
+Theme URI: http://www.fourthcup.org
+Description: Custom client framework built from Foundation v5 by ZURB
+Author: Jason Sprenger
+Author URI: http://www.fourthcup.org/about-me
+Version: 5.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Webfonts
+-------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'VideoJS';
+    src: url('webfonts/vjs.eot');
+    src: url('webfonts/vjs.eot?#iefix') format('embedded-opentype'), 
+         url('webfonts/vjs.woff') format('woff'), 
+         url('webfonts/vjs.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OblikBoldRegular';
+    src: url('webfonts/Oblik_Bold-webfont.eot');
+    src: url('webfonts/Oblik_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/Oblik_Bold-webfont.woff') format('woff'),
+         url('webfonts/Oblik_Bold-webfont.ttf') format('truetype'),
+         url('webfonts/Oblik_Bold-webfont.svg#OblikBoldRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Colors
+-------------------------------------------------------------------------------
+Blue: #188ac7
+Green: #518443
+
+
+
+*/
+
+/* Structure
+-------------------------------------------------------------------------------*/
+body { overflow-x: hidden; overflow-y: scroll; }
+html, body { height: 100%; margin: 0; }
+#wrapper { display: table; width: 100%; }
+html>/**/#wrapper { height: 100%; }
+.section { display: table-row; height: 1px; overflow: hidden; }
+html>body .section.expand { height: auto; }
+header { position: fixed; top: 0; width: 100%; z-index: 100; border-top: .5em solid #188ac7; background: #fff; }
+footer { background: #188ac7; }
+table { border: none; width: 100%; -moz-border-radius: .25em; -webkit-border-radius: .25em; border-radius: .25em; }
+table thead { background: #188ac7; color: #fff; }
+table thead tr th { color: #fff; }
+
+
+/* Navigation
+-------------------------------------------------------------------------------*/
+#menu-main { float: left; margin: 0; padding: 1em 0; left: 50%; position: relative; text-align: center; color: #fff; }
+#menu-main li { display: block; float: left; margin: 0; padding: 0; position: relative; /*--Important--*/ right: 50%; line-height: 1em; color: #0c89c5; border-right: .15em solid #ccc; }
+#menu-main li:last-child { border-right: none; }
+#menu-main li a:link, .home #menu-main li a:visited { font-family: 'Open Sans', sans-serif; font-weight: normal; display: block; margin: 0; padding: 0 25px; text-decoration: none; color: #188ac7; letter-spacing: .1em; text-transform: uppercase; }
+#menu-main li a:hover { color: #ccc; }
+#menu-main ul { display: none; }
+
+.facebook a:before { color: #7d7373; content: "\f082"; display: inline-block; font-family: 'FontAwesome'; font-size: 1.5em; padding: 0 .5em 0 0; } 
+.twitter a:before { color: #7d7373; content: "\f099"; display: inline-block; font-family: 'FontAwesome'; font-size: 1.5em; padding: 0 .5em 0 0; } 
+
+/* Typography
+-------------------------------------------------------------------------------*/
+body, p, li, label { font-family: 'Open Sans', sans-serif; font-size: .9em; color: #fff; }
+ol, ul { font-size: 1em; }
+h1, h2, h3, h4, h5, h6 { font-family: 'OblikBoldRegular', sans-serif; line-height: .9em; margin: 0; color: #fff; letter-spacing: -.025em; }
+h1 { font-size: 3em; margin: 0 0 .25em; }
+h1 span { font-size: 75%; }
+h2 { font-size: 1.5em; line-height: 1.25em; color: #188ac7; margin: 0 0 .5em; }
+h3 { font-size: 1.15em; line-height: 1.25em; margin: 0 0 .5em; }
+h4 { font-size: 1em; line-height: 1.75em; text-align: center; margin: 1em 0 .25em; }
+h4 span { font-size: 1.5em; }
+
+strong { font-weight: 700; }
+.accent { color: #188ac7; }
+i { margin-right: .5em; }
+
+#copyright { font-size: .75em; text-align: center; color: #fff; margin-top: .25em; }
+
+/* Forms
+-------------------------------------------------------------------------------*/
+form label { margin: 1.5em 0 .5em; }
+
+input[type="text"] { font-family: "Open Sans", Arial, sans-serif; font-size: 1em; color: #666; padding: 8px 15px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; border: 1px solid #999; width: 50%; }
+
+input[type="email"] { font-family: "Open Sans", Arial, sans-serif; font-size: 1em; color: #666; padding: 8px 15px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; border: 1px solid #999; width: 300px; }
+
+input[type="password"] { font-family: "Open Sans", Arial, sans-serif; font-size: 1em; color: #666; padding: 8px 15px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; border: 1px solid #999; width: 300px; }
+
+form select { font-family: "Open Sans", Arial, sans-serif; font-size: 1em; outline: none; focus: none; width: 75%; padding: 5px; margin-top: 5px; }
+
+form textarea { font-family: "Open Sans", Arial, sans-serif; color: #666; padding: 15px 5px 5px 15px; -webkit-border-radius: 5px 5px 0 5px; -moz-border-radius: 5px 5px 0 5px; border-radius: 5px 5px 0 5px; border: 1px solid #999; width: 60%; height: auto; }
+
+#contactPhone1, #contactPhone2 { margin: 0 10px 0 0; width: 11%; float: left; }
+#contactPhone3 { margin: 0 10px 0 0; width: 20%; }
+
+.success { z-index: 999; width: 100%; background: #fff; }
+
+/* Links
+-------------------------------------------------------------------------------*/
+a:link, a:visited { color: #188ac7; outline: none; focus: none; }
+a:hover { text-decoration: underline; }
+
+button, .button, a.button { font-family: 'OblikBoldRegular', sans-serif; font-size: 1em; color: #fff; text-transform: uppercase; transition: none; text-shadow: none; -moz-border-radius: .25em; -webkit-border-radius: .25em; border-radius: .25em; background: #188ac7; padding: .75em 2em; }
+button:hover, .button:hover { text-decoration: none; background: #43b1e5; }
+
+#cta { font-size: 1.25em; margin: 1em 0 0; }
+
+
+/* Misc
+-------------------------------------------------------------------------------*/
+::selection { background: #8f919d; color: #fff; text-shadow: none; }
+::-webkit-selection { background: #8f919d; color: #fff; text-shadow: none; }
+::-moz-selection { background: #8f919d; color: #fff; text-shadow: none; }
+
+.hidden, input.hidden { display: none; }
+.ldivider { border-left: .1em solid #8f919d; margin-top: 1em; margin-bottom: 1em; }
+.rdivider { border-right: .1em solid #8f919d; margin-top: 1em; margin-bottom: 1em; }
+.indent { padding-left: 4em; }
+.transparent { background: rgba(0,0,0,.25); padding: 2em; -moz-border-radius: 1em; -webkit-border-radius: 1em; border-radius: 1em; }
+
+#login-square { position: absolute; top: 0; z-index: 999; }
+#login { z-index: 999; }
+#login p, #login label { color: #181818; }
+#bkgd { min-height: 100%; min-width: 100%; width: 100%; height: auto; z-index: -1; position: fixed; top: 0; left: 0; }
+.parallax { width: 100%; padding: 14em 0 30em; }
+
+#logo { margin-top: 1.5em; }
+#marker { font-size: 1.25em; color: #d05252; float: left; margin: 0 .5em 0 0; }
+
+/* HOME
+-------------------------------------------------------------------------------*/
+#Home{ background:url(img/BKGD.jpg) 75% 0 no-repeat fixed; padding-top: 15em; }
+#Schedule{ background:url(img/REVBKGD.jpg) 35% 0 no-repeat fixed; }
+#Location{ background:url(img/BKGD.jpg) 100% 0 no-repeat fixed; }
+#Contact{ background:url(img/REVBKGD.jpg) 100% 0 no-repeat fixed; border-bottom: .25em solid #fff; }
+
+
+/* 404
+-------------------------------------------------------------------------------*/
+
+
+/* SITEMAP
+-------------------------------------------------------------------------------*/
+
+
+
+
+
+/* Responsive
+-------------------------------------------------------------------------------*/
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}

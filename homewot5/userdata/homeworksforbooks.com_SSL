@@ -1,0 +1,47 @@
+--- 
+customlog: 
+  - 
+    format: combined
+    target: /usr/local/apache/domlogs/homeworksforbooks.com
+  - 
+    format: "\"%{%s}t %I .\\n%{%s}t %O .\""
+    target: /usr/local/apache/domlogs/homeworksforbooks.com-bytes_log
+  - 
+    format: combined
+    target: /usr/local/apache/domlogs/homeworksforbooks.com-ssl_log
+directoryhomehomewotpublichtmlcgibin: 
+  ssloptions: +StdEnvVars
+documentroot: /home/homewot5/public_html
+enable_sni_for_mail: 0
+group: homewot5
+hascgi: 1
+homedir: /home/homewot5
+ifmodulemodsuphpc: 
+  group: homewot5
+ip: 162.144.69.239
+ipv6: ~
+owner: root
+phpopenbasedirprotect: 1
+port: 443
+scriptalias: 
+  - 
+    path: /home/homewot5/public_html/cgi-bin/
+    url: /cgi-bin/
+secruleengineoff: ~
+serveradmin: webmaster@homeworksforbooks.com
+serveralias: www.homeworksforbooks.com
+servername: homeworksforbooks.com
+setenvif: 
+  - 
+    attribute: User-Agent
+    env_variables: nokeepalive ssl-unclean-shutdown
+    regex: "\".*MSIE.*\""
+ssl: 1
+sslcacertificatefile: /var/cpanel/ssl/installed/cabundles/COMODO_CA_Limited_dbe3e9376d3359020526b6bc3f725c0f_1865548799.cabundle
+sslcertificatefile: /var/cpanel/ssl/installed/certs/www_homeworksforbooks_com_b695e_77cc7_1481068799_7e70a3d7abc359e8454e37d794840b1b.crt
+sslcertificatekeyfile: /var/cpanel/ssl/installed/keys/b695e_77cc7_4ae6db54e6dd2e62f45b6a37ffbe6155.key
+sslciphersuite: RC4:HIGH:!MD5:!aNULL:!EDH:!AES:!3DES
+sslengine: 'on'
+usecanonicalname: 'Off'
+user: homewot5
+userdirprotect: ''

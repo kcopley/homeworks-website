@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	margin:0px;
+	padding:0px;
+	margin-left:10px;
+}
+.clear {
+	height:0;
+	width:0;
+	padding:0;
+	margin:0;
+	line-height:0;
+	font-size:0;
+	clear:both;
+}
+.twoColumnLeft {
+	float:left;
+	width:49%;
+}
+.twoColumnRight {
+	float:right;
+	width:49%;
+}
+.mouseOver {
+	cursor:pointer;
+	background-color:#FFFFFF;
+}
+.mouseOverOn {
+	cursor:pointer;
+	background-color:#CCCCCC;
+}
+.hideSuggestClass {
+	border: 2px solid #999999;
+	background-color: white;
+	height: 75px;
+	overflow:auto;
+	display:none;
+	width: 250px;
+	margin: 0px;
+	cursor: pointer;
+	z-index: 1011;
+}
+.showSuggestClass .hideSuggestClass {
+	display: block !important;
+}
+.showSuggestClass .hoverSuggestClass {
+	background-color: #CCCCCC !important;
+}
+.iframeSuggest {
+	position: absolute;
+	z-index: 1010;
+ filter:alpha(opacity:0.1);
+}
+.expidite {
+	background-color:#CCCCCC;
+	font-weight:bold;
+}
+#popUp {
+	background-color:#FFFFFF;
+	border:solid 6px #ccc;
+	width:500px;
+	position:absolute;
+	height:300px;
+	margin: 100px 25%;
+	display:none
+}
+#popUp a#close {
+	float:right;
+	padding:3px;
+	color:#FF0000;
+	font-weight:bold;
+	cursor:pointer
+}
+
+#mask {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:9000;
+	background-color:#000;
+	display:none;
+	width:500px;
+}
+#boxes .window {
+	position:absolute;
+	left:0;
+	top:0;
+	width:160px;
+	height:32px;
+	display:none;
+	z-index:9999;
+	padding:20px;
+}
+#boxes #dialog {
+	width:160px;
+	height:32px;
+	padding:10px;
+	background-color:#ffffff;
+}
+#ccSig{ width:350px;}

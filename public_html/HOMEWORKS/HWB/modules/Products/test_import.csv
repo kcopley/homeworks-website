@@ -1,0 +1,3 @@
+#FLAG|#name|#sku|#details|#price|#create_date|#modified_date|#taxable|#status|#weight|#HIER|#CAT:test1|#CAT:test2|#FIELD:image:Image|#FIELD:textarea:Notes|#ATTRIBS
+P|Puptent|1234p|"this is a two man pup tent"|14.99|2009-01-01|2009-01-01|1|published|2.25|"Outdoors >> Camping"|1|0|puptent.png|"this is auxillary data about the pup tent"|Color:Red:+2.5:1234p-r -- Color:Green:+4.5:1234p-g
+P|"Family Tent"|1235f|"this is a family tent"|43.74|2009-02-02|2009-02-02|1|published|5.35|"Outdoors >> Tents"|0|1|bigtent.png|"this is auxillary data about the family tent"|Color:Blue:+2.5:1235f-b -- Color:Red:+3.5:1235f-r

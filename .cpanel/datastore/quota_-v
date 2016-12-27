@@ -1,0 +1,14 @@
+Disk quotas for user homewot5 (uid 1823):
+Filesystem    blocks quota limit grace files quota limit grace
+/dev/sde1   0      0     0           0     0     0
+/dev/sdg1   0      0     0           0     0     0
+/dev/sdj1   218    0     0           69    0     0
+/dev/sdb2   0      0     0           1     0     0
+/dev/sdf1   0      0     0           0     0     0
+/dev/sdi1   0      0     0           0     0     0
+/dev/sdc1   0      0     0           0     0     0
+/dev/sda14  0      0     0           0     0     0
+/dev/sdd1   0      0     0           0     0     0
+/dev/sdd1   0      0     0           0     0     0
+/dev/sdh1   0      0     0           0     0     0
+/dev/sdb1   0      0     0           3     0     0

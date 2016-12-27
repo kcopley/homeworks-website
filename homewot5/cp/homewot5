@@ -1,0 +1,46 @@
+# cPanel -- If you edit this file directly you must run /usr/local/cpanel/scripts/updateuserdomains afterwards to rebuild the system caches.
+# If you edit MAX_EMAIL_PER_HOUR or MAX_EMAIL_PER_HOUR-[domain] you must run /usr/local/cpanel/scripts/updateuserdomains'
+
+BWLIMIT=unlimited
+CONTACTEMAIL=homeworksforbooks@sbcglobal.net
+CONTACTEMAIL2=
+DEMO=0
+DNS=homeworksforbooks.com
+DNS1=kcttopspinclub.com
+DNS2=kcttopspinclub.homeworksforbooks.com
+FEATURELIST=bluehost
+HASCGI=1
+HASDKIM=0
+HASSPF=0
+HOMEDIRPATHS=/home8/homewot5
+IP=162.144.69.239
+LANG=english-utf8
+LEGACY_BACKUP=1
+LOCALE=en
+MAXADDON=unlimited
+MAXFTP=unlimited
+MAXLST=unlimited
+MAXPARK=unlimited
+MAXPOP=unlimited
+MAXSQL=unlimited
+MAXSUB=unlimited
+MTIME=1462428878
+MXCHECK-homeworksforbooks.com=0
+OWNER=root
+PLAN=Platinum Pak
+PUSHBULLET_ACCESS_TOKEN=
+RS=bluehost
+STARTDATE=1291933212
+USER=homewot5
+notify_account_authn_link=
+notify_account_authn_link_notification_disabled=
+notify_account_login=
+notify_account_login_for_known_netblock=
+notify_account_login_notification_disabled=
+notify_bandwidth_limit=
+notify_contact_address_change=
+notify_contact_address_change_notification_disabled=
+notify_disk_limit=
+notify_email_quota_limit=
+notify_password_change=
+notify_password_change_notification_disabled=

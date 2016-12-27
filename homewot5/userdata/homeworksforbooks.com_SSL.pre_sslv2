@@ -1,0 +1,22 @@
+--- 
+documentroot: /home/homewot5/public_html
+enable_sni_for_mail: 0
+group: homewot5
+hascgi: 1
+homedir: /home/homewot5
+ip: 162.144.69.239
+ipv6: ~
+owner: root
+phpopenbasedirprotect: ~
+port: 443
+secruleengineoff: ~
+serveradmin: webmaster@homeworksforbooks.com
+serveralias: www.homeworksforbooks.com
+servername: homeworksforbooks.com
+ssl: 1
+sslcacertificatefile: /var/cpanel/ssl/installed/cabundles/COMODO_CA_Limited_dbe3e9376d3359020526b6bc3f725c0f_1865548799.cabundle
+sslcertificatefile: /var/cpanel/ssl/installed/certs/www_homeworksforbooks_com_b695e_77cc7_1481068799_7e70a3d7abc359e8454e37d794840b1b.crt
+sslcertificatekeyfile: /var/cpanel/ssl/installed/keys/b695e_77cc7_4ae6db54e6dd2e62f45b6a37ffbe6155.key
+usecanonicalname: 'Off'
+user: homewot5
+userdirprotect: -1

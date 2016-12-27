@@ -1,0 +1,26 @@
+RewriteEngine On 
+RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://www.homeworksforbooks.com/$1 [R,L]
+
+Options +FollowSymLinks
+
+# BEGIN WordPress
+
+# END WordPress
+
+
+# Wordfence WAF
+<IfModule mod_suphp.c>
+	suPHP_ConfigPath '/home/homewot5/public_html'
+</IfModule>
+<Files ".user.ini">
+<IfModule mod_authz_core.c>
+	Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+	Order allow,deny
+    	Allow from all
+</IfModule>
+</Files>
+
+# END Wordfence WAF

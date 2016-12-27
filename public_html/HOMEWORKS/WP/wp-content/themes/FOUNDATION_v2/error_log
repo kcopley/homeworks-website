@@ -1,0 +1,39 @@
+[16-Mar-2014 17:50:26 America/Denver] PHP Warning:  mktime() expects parameter 4 to be long, string given in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 14
+[16-Mar-2014 17:50:26 America/Denver] PHP Warning:  mktime() expects parameter 4 to be long, string given in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 15
+[16-Mar-2014 17:50:26 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 39
+[16-Mar-2014 17:52:56 America/Denver] PHP Warning:  mktime() expects parameter 4 to be long, string given in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 14
+[16-Mar-2014 17:52:56 America/Denver] PHP Warning:  mktime() expects parameter 4 to be long, string given in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 15
+[16-Mar-2014 17:52:56 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 39
+[16-Mar-2014 18:13:21 America/Denver] PHP Warning:  mktime() expects parameter 4 to be long, string given in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 14
+[16-Mar-2014 18:13:21 America/Denver] PHP Warning:  mktime() expects parameter 4 to be long, string given in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 15
+[16-Mar-2014 18:13:21 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 39
+[16-Mar-2014 18:13:21 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 39
+[16-Mar-2014 18:13:57 America/Denver] PHP Warning:  mktime() expects parameter 4 to be long, string given in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 14
+[16-Mar-2014 18:13:57 America/Denver] PHP Warning:  mktime() expects parameter 4 to be long, string given in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 15
+[16-Mar-2014 18:13:57 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 39
+[16-Mar-2014 18:15:18 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 39
+[16-Mar-2014 18:28:35 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 35
+[16-Mar-2014 18:57:28 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 35
+[16-Mar-2014 18:57:52 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 35
+[16-Mar-2014 18:58:57 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 35
+[16-Mar-2014 19:05:14 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 35
+[16-Mar-2014 19:05:24 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 35
+[16-Mar-2014 19:07:13 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 35
+[16-Mar-2014 19:13:31 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 35
+[16-Mar-2014 19:13:38 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 35
+[16-Mar-2014 19:15:04 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 36
+[16-Mar-2014 19:42:58 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 37
+[16-Mar-2014 19:44:26 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 37
+[16-Mar-2014 19:44:31 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 37
+[16-Mar-2014 19:45:25 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 37
+[16-Mar-2014 19:46:01 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 37
+[16-Mar-2014 19:46:06 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 37
+[16-Mar-2014 19:53:34 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 37
+[16-Mar-2014 19:53:45 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 37
+[16-Mar-2014 20:22:58 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 37
+[16-Mar-2014 20:23:08 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 37
+[16-Mar-2014 20:25:56 America/Denver] PHP Fatal error:  Call to undefined function get_posts() in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 37
+[16-Mar-2014 20:31:41 America/Denver] PHP Fatal error:  Class 'WP_Query' not found in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 37
+[16-Mar-2014 20:34:41 America/Denver] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 51
+[16-Mar-2014 20:36:16 America/Denver] PHP Warning:  require_once(./wp-blog-header.php): failed to open stream: No such file or directory in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 1
+[16-Mar-2014 20:36:16 America/Denver] PHP Fatal error:  require_once(): Failed opening required './wp-blog-header.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/homewot5/public_html/HOMEWORKS/WP/wp-content/themes/FOUNDATION_v2/calendar.php on line 1

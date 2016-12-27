@@ -1,0 +1,16 @@
+/* CSS Document */
+
+#menu a{
+	width:180px;
+	padding:8px 0;
+	margin:10px 0px;
+	border:1px solid #FFF;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	display:block;
+	}
+#menu a:hover{
+	background-color:#fff;
+
+	}

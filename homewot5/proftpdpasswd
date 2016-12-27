@@ -1,0 +1,4 @@
+jsprenger:$1$Za9GqIGX$a1.6ZpXftbClK3UemNunb1:500:501:homewot5:/home/homewot5/public_html:/bin/ftpsh
+homewot5:$1$ouTLrfep$00f885NkisOZ6z22Y7mK./:500:501::/home/homewot5:/bin/ftpsh
+ftp::14:50::/home/homewot5/public_ftp:/bin/ftpsh
+homewot5_logs:$1$ouTLrfep$00f885NkisOZ6z22Y7mK./:500:501:homewot5:/usr/local/apache/domlogs/homewot5:/bin/ftpsh

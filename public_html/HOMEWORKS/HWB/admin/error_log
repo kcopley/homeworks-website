@@ -1,0 +1,12 @@
+[06-Feb-2011 11:25:37] PHP Parse error:  syntax error, unexpected T_STRING in /home8/homewot5/public_html/admin/edituserplugin.php(108) : eval()'d code on line 6
+[06-Feb-2011 11:26:02] PHP Parse error:  syntax error, unexpected T_STRING in /home8/homewot5/public_html/admin/edituserplugin.php(108) : eval()'d code on line 6
+[06-Feb-2011 11:26:38] PHP Parse error:  syntax error, unexpected T_STRING in /home8/homewot5/public_html/admin/edituserplugin.php(108) : eval()'d code on line 6
+[06-Feb-2011 11:27:13] PHP Parse error:  syntax error, unexpected T_STRING in /home8/homewot5/public_html/admin/edituserplugin.php(108) : eval()'d code on line 6
+[15-Mar-2011 09:46:07] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home8/homewot5/public_html/admin/edituserplugin.php(108) : eval()'d code on line 9
+[15-Mar-2011 09:47:33] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home8/homewot5/public_html/admin/edituserplugin.php(108) : eval()'d code on line 9
+[15-Mar-2011 09:53:30] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home8/homewot5/public_html/admin/edituserplugin.php(108) : eval()'d code on line 10
+[11-May-2011 19:46:08] PHP Fatal error:  Attempt to connect to database homewot5_cms on homewot5@localhost failed in /home8/homewot5/public_html/lib/adodb.functions.php on line 85
+[11-May-2011 19:46:53] PHP Fatal error:  Attempt to connect to database homewot5_cms on homewot5@localhost failed in /home8/homewot5/public_html/lib/adodb.functions.php on line 85
+[12-May-2011 10:17:30] PHP Fatal error:  Attempt to connect to database homewot5_cms on homewot5@localhost failed in /home8/homewot5/public_html/lib/adodb.functions.php on line 85
+[18-May-2012 02:36:12] PHP Fatal error:  Call to a member function DisplayMainDivEnd() on a non-object in /home8/homewot5/public_html/admin/footer.php on line 8
+[16-Aug-2012 19:12:53 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home8/homewot5/public_html/admin/edituserplugin.php(108) : eval()'d code on line 5

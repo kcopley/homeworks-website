@@ -1,0 +1,5 @@
+[08-Feb-2013 22:25:24] PHP Fatal error:  Call to undefined function  plugin_dir_path() in /home8/homewot5/public_html/HOMEWORKS/WP/wp-content/plugins/sales-console/barcode.php on line 2
+[08-Feb-2013 22:25:32] PHP Fatal error:  Call to undefined function  plugin_dir_path() in /home8/homewot5/public_html/HOMEWORKS/WP/wp-content/plugins/sales-console/barcode.php on line 2
+[08-Feb-2013 22:35:17] PHP Fatal error:  Call to undefined function  plugin_dir_path() in /home8/homewot5/public_html/HOMEWORKS/WP/wp-content/plugins/sales-console/barcode.php on line 2
+[08-Feb-2013 22:35:18] PHP Fatal error:  Call to undefined function  plugin_dir_path() in /home8/homewot5/public_html/HOMEWORKS/WP/wp-content/plugins/sales-console/barcode.php on line 2
+[08-Feb-2013 22:37:18] PHP Fatal error:  Call to undefined function  plugin_dir_path() in /home8/homewot5/public_html/HOMEWORKS/WP/wp-content/plugins/sales-console/barcode.php on line 2

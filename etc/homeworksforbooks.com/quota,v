@@ -1,0 +1,39 @@
+head	1.2;
+access;
+symbols;
+locks
+	homewot5:1.2; strict;
+comment	@# @;
+
+
+1.2
+date	2011.12.10.00.40.07;	author homewot5;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2011.12.10.00.40.07;	author homewot5;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@admin:262144000
+@
+
+
+1.1
+log
+@"Modified by /usr/local/cpanel/cpanel "
+@
+text
+@d1 1
+@

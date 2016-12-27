@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cfd0125c-dc3a-4a67-bb94-a6301753b222" name="Default" comment="" />
+    <ignored path="HOMEWORKS.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="HOMEWORKS" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="bookmethods.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/bookmethods.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="270" column="5" selection-start-line="268" selection-start-column="4" selection-end-line="270" selection-end-column="5" />
+              <folding>
+                <element signature="e#6#90#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transactions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2567">
+              <caret line="159" column="33" selection-start-line="159" selection-start-column="33" selection-end-line="159" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="checkout.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="828" column="24" selection-start-line="828" selection-start-column="24" selection-end-line="828" selection-end-column="24" />
+              <folding>
+                <element signature="n#process_auth#0;n#!!top" expanded="false" />
+                <element signature="n#print_formatting#0;n#!!top" expanded="false" />
+                <element signature="e#12565#12587#0#HTML" expanded="true" />
+                <element signature="n#get_customer_check_info#0;n#!!top" expanded="false" />
+                <element signature="n#get_customer_cash_info#0;n#!!top" expanded="false" />
+                <element signature="n#add_item_formatting#0;n#!!top" expanded="false" />
+                <element signature="n#bookbag_list_formatting#0;n#!!top" expanded="false" />
+                <element signature="n#credit_box_formatting#0;n#!!top" expanded="false" />
+                <element signature="n#add_item#0;n#!!top" expanded="false" />
+                <element signature="n#get_total#0;n#!!top" expanded="false" />
+                <element signature="n#get_subtotal#0;n#!!top" expanded="false" />
+                <element signature="n#remove_item_from_cart#0;n#!!top" expanded="false" />
+                <element signature="n#add_item_to_cart#0;n#!!top" expanded="false" />
+                <element signature="n#clear_cart#0;n#!!top" expanded="false" />
+                <element signature="n#add_credit#0;n#!!top" expanded="false" />
+                <element signature="n#remove_credit#0;n#!!top" expanded="false" />
+                <element signature="n#get_credit_total#0;n#!!top" expanded="false" />
+                <element signature="n#get_tax_total#0;n#!!top" expanded="false" />
+                <element signature="n#get_cart_books#0;n#!!top" expanded="false" />
+                <element signature="n#get_credits#0;n#!!top" expanded="false" />
+                <element signature="n#get_next_invoice#0;n#!!top" expanded="false" />
+                <element signature="n#set_last_invoice#0;n#!!top" expanded="false" />
+                <element signature="n#state_select#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="original.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/original.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding>
+                <marker date="1482529528324" expanded="true" signature="1412:1556" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+                <marker date="1482529528324" expanded="true" signature="1787:1991" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="library.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/library.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="171" column="11" selection-start-line="171" selection-start-column="11" selection-end-line="171" selection-end-column="11" />
+              <folding>
+                <element signature="e#9659#9687#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="book.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/book.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Input.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Input.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Button.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Button.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/book-page.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/inventory/update.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/checkout.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/functions.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/sales-console.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/css/stylesheet.css" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/test.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/original.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/library.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/bookmethods.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/consigners.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/book.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TableRow.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Table.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TableColumn.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Renderable.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="D:\xampp\php\PEAR" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="1932" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Code StylePHP</id>
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpRedundantClosingTagInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-includes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FOUNDATION_v2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sales-console" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sales-console" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extensions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\homeworks\public_html\HOMEWORKS\WP\wp-content\plugins\sales-console" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.update.php">
+    <configuration default="false" name="update.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/homeworks/public_html/HOMEWORKS/WP/wp-content/plugins/sales-console/inventory/update.php">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.update.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.update.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cfd0125c-dc3a-4a67-bb94-a6301753b222" name="Default" comment="" />
+      <created>1479686680131</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1479686680131</updated>
+      <workItem from="1479686681675" duration="37506000" />
+      <workItem from="1480367854965" duration="28869000" />
+      <workItem from="1482348897410" duration="6386000" />
+      <workItem from="1482437962646" duration="28108000" />
+      <workItem from="1482522321381" duration="18370000" />
+      <workItem from="1482868565501" duration="2952000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="122191000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="0" width="1932" height="1047" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18006264" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="18" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/hwbookstore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/library.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#9659#9687#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-includes/link-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding>
+            <marker date="1476831169806" expanded="true" signature="51927:51975" ph="SELECT p.ID ${$wpdb-&gt;posts}" />
+            <marker date="1476831169806" expanded="true" signature="79439:79526" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/SALES/checkout.php" />
+    <entry file="file://$PROJECT_DIR$/WP/SALES/login.php" />
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/refund.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1122">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1476829204966" expanded="true" signature="612:748" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-includes/post-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1003">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-includes/query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="3862" column="20" selection-start-line="3862" selection-start-column="20" selection-end-line="3862" selection-end-column="20" />
+          <folding>
+            <marker date="1476831161418" expanded="true" signature="95467:95558" ph="SELECT ${$di... ${$wpdb-&gt;comments}" />
+            <marker date="1476831161418" expanded="true" signature="103761:103857" ph="SELECT ${$fo... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161418" expanded="true" signature="105709:105813" ph="SELECT ${$fo... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161418" expanded="true" signature="108087:108168" ph="SELECT ${$wp... ${$wpdb-&gt;comments}" />
+            <marker date="1476831161418" expanded="true" signature="140764:140901" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/barcode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="958" column="69" selection-start-line="958" selection-start-column="67" selection-end-line="958" selection-end-column="69" />
+          <folding>
+            <marker date="1476829207416" expanded="true" signature="222:363" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="561:702" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="900:1041" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="1239:1380" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="1578:1719" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="1917:2058" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="2256:2397" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="2595:2736" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="2934:3075" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="3276:3418" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="3625:3767" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="3974:4116" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="4323:4465" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="4672:4814" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="5021:5163" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="5370:5512" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="5719:5861" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="6068:6210" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="6417:6559" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="6766:6908" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="7115:7257" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="7464:7606" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="7813:7955" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="8162:8304" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="8511:8653" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="8860:9002" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="9209:9351" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="9558:9700" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="9907:10049" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476829207416" expanded="true" signature="10256:10398" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/barcode/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/humans.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/book-page.php" />
+    <entry file="file://$PROJECT_DIR$/WP/wp-includes/post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="1784" column="9" selection-start-line="1784" selection-start-column="9" selection-end-line="1784" selection-end-column="9" />
+          <folding>
+            <marker date="1476831161868" expanded="true" signature="57823:57839" ph="Insert into post... " />
+            <marker date="1476831161868" expanded="true" signature="57849:57865" ph="Insert into page... " />
+            <marker date="1476831161868" expanded="true" signature="82983:83067" ph="SELECT post_... $" />
+            <marker date="1476831161868" expanded="true" signature="85003:85154" ph="SELECT post_... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="85324:85417" ph="SELECT COUNT... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="91144:91184" ph="SELECT * FRO... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="92590:92658" ph="SELECT * FRO... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="92983:93060" ph="SELECT ID FR... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="93512:93577" ph="SELECT comme... ${$wpdb-&gt;comments}" />
+            <marker date="1476831161868" expanded="true" signature="93770:93824" ph="SELECT meta_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476831161868" expanded="true" signature="98412:98495" ph="SELECT comme... ${$wpdb-&gt;comments}" />
+            <marker date="1476831161868" expanded="true" signature="100417:100500" ph="UPDATE ${$wp... " />
+            <marker date="1476831161868" expanded="true" signature="119758:119799" ph="SELECT ID FR... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="130370:130446" ph="SELECT post_... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="131518:131653" ph="SELECT post_... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="132770:132865" ph="SELECT post_... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="143223:143268" ph="SELECT pinge... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="144791:144836" ph="SELECT pinge... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="145406:145452" ph="SELECT to_pi... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="146884:146936" ph="SELECT ID FR... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="148868:149008" ph="SELECT ID, p... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="150612:150710" ph="SELECT ID FR... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="150771:150848" ph="SELECT ID FR... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="162829:162887" ph="SELECT * FRO... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="167006:167046" ph="SELECT * FRO... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="168164:168229" ph="SELECT comme... ${$wpdb-&gt;comments}" />
+            <marker date="1476831161868" expanded="true" signature="168423:168477" ph="SELECT meta_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476831161868" expanded="true" signature="169048:169167" ph="SELECT meta_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476831161868" expanded="true" signature="190555:190700" ph="SELECT post_... " />
+            <marker date="1476831161868" expanded="true" signature="190759:190900" ph="SELECT post_... " />
+            <marker date="1476831161868" expanded="true" signature="191000:191194" ph="SELECT DATE_... " />
+            <marker date="1476831161868" expanded="true" signature="201939:202049" ph="SELECT ID FR... ${$wpdb-&gt;posts}" />
+            <marker date="1476831161868" expanded="true" signature="204570:204626" ph="SELECT ${$wp... ${$wpdb-&gt;posts}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/single-classes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7846">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/inventory/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="155" column="9" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/twentyfourteen/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7634">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../php/pear/PHP/Compat/Function/array_search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-includes/plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7446">
+          <caret line="456" column="9" selection-start-line="456" selection-start-column="9" selection-end-line="456" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-admin/includes/plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="1069" column="47" selection-start-line="1069" selection-start-column="47" selection-end-line="1069" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/loop-search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/single-bookstore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/classes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="448" column="36" selection-start-line="448" selection-start-column="36" selection-end-line="448" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/booklist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-includes/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74555">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding>
+            <marker date="1476831173100" expanded="true" signature="17181:17285" ph="SELECT meta_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476831173100" expanded="true" signature="18343:18447" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476831173100" expanded="true" signature="38331:38400" ph="SELECT optio... ${$wpdb-&gt;options}" />
+            <marker date="1476831173100" expanded="true" signature="131221:131269" ph="SELECT id FR... $" />
+            <marker date="1476831173100" expanded="true" signature="139658:139754" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1476831173100" expanded="true" signature="140217:140319" ph="SELECT comme... ${$wpdb-&gt;commentmeta}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/hwbookstore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="154" column="69" selection-start-line="154" selection-start-column="60" selection-end-line="154" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="274" column="37" selection-start-line="274" selection-start-column="37" selection-end-line="274" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/sales-console.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4063">
+          <caret line="255" column="51" selection-start-line="255" selection-start-column="51" selection-end-line="255" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/checkout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/barcode/generate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2584">
+          <caret line="152" column="76" selection-start-line="152" selection-start-column="76" selection-end-line="152" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/consigners.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4182">
+          <caret line="254" column="45" selection-start-line="254" selection-start-column="45" selection-end-line="254" selection-end-column="45" />
+          <folding>
+            <element signature="n#book_table_search_input#0;n#!!top" expanded="false" />
+            <element signature="n#book_table_results#0;n#!!top" expanded="false" />
+            <marker date="1482538452447" expanded="true" signature="556:573" ph="..." />
+            <marker date="1482538452447" expanded="true" signature="1748:1765" ph="..." />
+            <marker date="1482538452447" expanded="true" signature="2325:2342" ph="..." />
+            <marker date="1482538452447" expanded="true" signature="2520:2686" ph="..." />
+            <marker date="1482538452447" expanded="true" signature="2941:2976" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2567">
+          <caret line="159" column="33" selection-start-line="159" selection-start-column="33" selection-end-line="159" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/original.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <marker date="1482529528324" expanded="true" signature="1412:1556" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1482529528324" expanded="true" signature="1787:1991" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="828" column="24" selection-start-line="828" selection-start-column="24" selection-end-line="828" selection-end-column="24" />
+          <folding>
+            <element signature="n#process_auth#0;n#!!top" expanded="false" />
+            <element signature="n#print_formatting#0;n#!!top" expanded="false" />
+            <element signature="e#12565#12587#0#HTML" expanded="true" />
+            <element signature="n#get_customer_check_info#0;n#!!top" expanded="false" />
+            <element signature="n#get_customer_cash_info#0;n#!!top" expanded="false" />
+            <element signature="n#add_item_formatting#0;n#!!top" expanded="false" />
+            <element signature="n#bookbag_list_formatting#0;n#!!top" expanded="false" />
+            <element signature="n#credit_box_formatting#0;n#!!top" expanded="false" />
+            <element signature="n#add_item#0;n#!!top" expanded="false" />
+            <element signature="n#get_total#0;n#!!top" expanded="false" />
+            <element signature="n#get_subtotal#0;n#!!top" expanded="false" />
+            <element signature="n#remove_item_from_cart#0;n#!!top" expanded="false" />
+            <element signature="n#add_item_to_cart#0;n#!!top" expanded="false" />
+            <element signature="n#clear_cart#0;n#!!top" expanded="false" />
+            <element signature="n#add_credit#0;n#!!top" expanded="false" />
+            <element signature="n#remove_credit#0;n#!!top" expanded="false" />
+            <element signature="n#get_credit_total#0;n#!!top" expanded="false" />
+            <element signature="n#get_tax_total#0;n#!!top" expanded="false" />
+            <element signature="n#get_cart_books#0;n#!!top" expanded="false" />
+            <element signature="n#get_credits#0;n#!!top" expanded="false" />
+            <element signature="n#get_next_invoice#0;n#!!top" expanded="false" />
+            <element signature="n#set_last_invoice#0;n#!!top" expanded="false" />
+            <element signature="n#state_select#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/bookmethods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="270" column="5" selection-start-line="268" selection-start-column="4" selection-end-line="270" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/library.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="171" column="11" selection-start-line="171" selection-start-column="11" selection-end-line="171" selection-end-column="11" />
+          <folding>
+            <element signature="e#9659#9687#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TableRow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TableColumn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding>
+            <marker date="1482871320416" expanded="true" signature="964:971" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Renderable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/book.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Input.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Button.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

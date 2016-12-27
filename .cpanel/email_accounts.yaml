@@ -1,0 +1,24 @@
+--- 
+__version: '2.1'
+homeworksforbooks.com: 
+  account_count: 2
+  accounts: 
+    admin: 
+      disk_mtime: '1388806311'
+      diskquota: 262144000
+      diskused: 86140
+    jcopley: 
+      disk_mtime: '1388806311'
+      diskquota: 0
+      diskused: 0
+  disk_mtime: '1388806311'
+  passwd_mtime: '1388806311'
+  quota_mtime: '1388806311'
+kcttopspinclub.com: 
+  account_count: 0
+  accounts: {}
+
+kcttopspinclub.homeworksforbooks.com: 
+  account_count: 0
+  accounts: {}
+
