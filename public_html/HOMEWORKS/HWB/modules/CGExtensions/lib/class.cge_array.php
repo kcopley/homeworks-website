@@ -292,7 +292,7 @@ class cge_array
   /***
    * Convert a hash into a stdclass object
    *
-   * @param hash InputHTML array
+   * @param hash Input array
    * @returns stdclass object.
    */
   static public function &to_object($array)
@@ -309,7 +309,7 @@ class cge_array
   /**
    * Prepend a key/value pair to a hash
    *
-   * @param hash InputHTML array
+   * @param hash Input array
    * @param string key
    * @param mixed value
    * @returns hash

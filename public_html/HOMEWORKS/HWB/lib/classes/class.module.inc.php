@@ -759,7 +759,7 @@ class CMSModule
 	 * @abstract
 	 * @param string Content block name
 	 * @param array  Content block parameters
-	 * @param array  InputHTML parameters
+	 * @param array  Input parameters
 	 * @return mixed The content block value if possible.
 	 */
 	function GetContentBlockValue($blockName,$blockParams,$inputParams)
@@ -2824,7 +2824,7 @@ class CMSModule
 	 * note, there is no caching involved.
 	 *
 	 * @final
-	 * @param data InputHTML template
+	 * @param data Input template
 	 * @return string
 	 */
 	function ProcessTemplateFromData( $data )

@@ -63,5 +63,5 @@ function style($str){
 }
 
 function button($value) {
-    return new InputHTML(classType('button-primary').type('submit').name('button').value($value));
+    return new Input(classType('button-primary').type('submit').name('button').value($value));
 }

@@ -223,7 +223,7 @@ class ADODB_DataDict {
 	 * List columns in a database as an array of ADOFieldObjects. 
 	 * See top of file for definition of object.
 	 *
-	 * @param table	TableHTML name to query
+	 * @param table	TableArr name to query
 	 * @param upper	uppercase table name (required by some databases)
 	 * @schema is optional database schema to use - not supported by all databases.
 	 *
@@ -248,7 +248,7 @@ class ADODB_DataDict {
 
 	/**
 	  * List indexes on a table as an array.
-	  * @param table  TableHTML name to query
+	  * @param table  TableArr name to query
      * @param primary true to only show primary keys. Not actually used for most databases
 	  *
 	  * @return array of indexes on current table. Each element represents an index, and is itself an associative array.

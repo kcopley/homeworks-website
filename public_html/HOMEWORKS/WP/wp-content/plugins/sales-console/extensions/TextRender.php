@@ -6,7 +6,7 @@
  * Date: 12/27/2016
  * Time: 2:43 PM
  */
-class Renderable
+class TextRender
 {
     public $renderable = '';
 

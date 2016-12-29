@@ -396,7 +396,7 @@ function cms_calculate_url()
  * A replacement for the built in htmlentities method.
  *
  * @ignore
- * @param string  InputHTML string
+ * @param string  Input string
  * @param boolean A flag wether or not to handle single quotes.
  * @return unknown
  */
@@ -461,7 +461,7 @@ function my_htmlentities($val, $convert_single_quotes = false)
  *
  * @internal
  * @deprecated
- * @param string InputHTML string
+ * @param string Input string
  * @return string
  */
 function cms_utf8entities($val)

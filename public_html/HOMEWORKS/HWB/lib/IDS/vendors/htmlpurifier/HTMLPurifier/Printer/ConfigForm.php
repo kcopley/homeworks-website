@@ -29,7 +29,7 @@ class HTMLPurifier_Printer_ConfigForm extends HTMLPurifier_Printer
     protected $compress = false;
 
     /**
-     * @param $name FormHTML element name for directives to be stuffed into
+     * @param $name Form element name for directives to be stuffed into
      * @param $doc_url String documentation URL, will have fragment tagged on
      * @param $compress Integer max length before compressing a directive name, set to false to turn off
      */

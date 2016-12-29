@@ -6,11 +6,11 @@ include_once "BaseHTML.php";
  * Date: 12/27/2016
  * Time: 2:43 PM
  */
-class FormHTML extends BaseHTML
+class Label extends BaseHTML
 {
     function __construct()
     {
         parent::__construct(func_get_args());
-        $this->type = 'form';
+        $this->type = 'label';
     }
 }

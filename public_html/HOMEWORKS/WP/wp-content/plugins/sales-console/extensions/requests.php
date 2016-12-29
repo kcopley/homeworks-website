@@ -1,12 +1,12 @@
 <?php
 
 include_once 'Column.php';
-include_once 'FormHTML.php';
-include_once 'InputHTML.php';
-include_once 'LabelHTML.php';
+include_once 'Form.php';
+include_once 'Input.php';
+include_once 'Label.php';
 include_once "Renderable.php";
-include_once "RowHTML.php";
-include_once "TableHTML.php";
+include_once "Row.php";
+include_once "Table.php";
 include_once "utility.php";
 
 
@@ -32,7 +32,7 @@ class book_request {
     public static $condition = 'query_condition';
 
     public static function InputTitle() {
-        return new InputHTML(id(book_request::$title).name(book_request::$title).type('text'));
+        return new Input(id(book_request::$title).name(book_request::$title).type('text'));
     }
 
     public static function GetTitle() {
@@ -40,7 +40,7 @@ class book_request {
     }
 
     public static function InputBarcode() {
-        return new InputHTML(id(book_request::$barcode).name(book_request::$barcode).type('text'));
+        return new Input(id(book_request::$barcode).name(book_request::$barcode).type('text'));
     }
 
     public static function GetBarcode() {
@@ -48,7 +48,7 @@ class book_request {
     }
 
     public static function InputISBN() {
-        return new InputHTML(id(book_request::$isbn).name(book_request::$isbn).type('text'));
+        return new Input(id(book_request::$isbn).name(book_request::$isbn).type('text'));
     }
 
     public static function GetISBN() {
@@ -56,7 +56,7 @@ class book_request {
     }
 
     public static function InputPublisher() {
-        return new InputHTML(id(book_request::$publisher).name(book_request::$publisher).type('text'));
+        return new Input(id(book_request::$publisher).name(book_request::$publisher).type('text'));
     }
 
     public static function GetPublisher() {
@@ -64,7 +64,7 @@ class book_request {
     }
 
     public static function InputPrice() {
-        return new InputHTML(id(book_request::$price).name(book_request::$price).type('text'));
+        return new Input(id(book_request::$price).name(book_request::$price).type('text'));
     }
 
     public static function GetPrice() {
@@ -82,6 +82,10 @@ class book_request {
     public static function GetCondition(){
         return $_REQUEST[book_request::$condition];
     }
+
+    public static function Store() {
+        
+    }
 }
 
 class book_addition {
@@ -97,7 +101,7 @@ class book_addition {
     public static $condition = 'add_condition';
 
     public static function InputTitle() {
-        return new InputHTML(id(book_addition::$title).name(book_addition::$title).type('text'));
+        return new Input(id(book_addition::$title).name(book_addition::$title).type('text'));
     }
 
     public static function GetTitle() {
@@ -105,7 +109,7 @@ class book_addition {
     }
 
     public static function InputBarcode() {
-        return new InputHTML(id(book_addition::$barcode).name(book_addition::$barcode).type('text'));
+        return new Input(id(book_addition::$barcode).name(book_addition::$barcode).type('text'));
     }
 
     public static function GetBarcode() {
@@ -113,7 +117,7 @@ class book_addition {
     }
 
     public static function InputISBN() {
-        return new InputHTML(id(book_addition::$isbn).name(book_addition::$isbn).type('text'));
+        return new Input(id(book_addition::$isbn).name(book_addition::$isbn).type('text'));
     }
 
     public static function GetISBN() {
@@ -121,7 +125,7 @@ class book_addition {
     }
 
     public static function InputPublisher() {
-        return new InputHTML(id(book_addition::$publisher).name(book_addition::$publisher).type('text').value(book_request::GetPublisher()));
+        return new Input(id(book_addition::$publisher).name(book_addition::$publisher).type('text').value(book_request::GetPublisher()));
     }
 
     public static function GetPublisher() {
@@ -129,7 +133,7 @@ class book_addition {
     }
 
     public static function InputPrice() {
-        return new InputHTML(id(book_addition::$price).name(book_addition::$price).type('text'));
+        return new Input(id(book_addition::$price).name(book_addition::$price).type('text'));
     }
 
     public static function GetPrice() {
@@ -137,7 +141,7 @@ class book_addition {
     }
 
     public static function InputMSRP() {
-        return new InputHTML(id(book_addition::$msrp).name(book_addition::$msrp).type('text'));
+        return new Input(id(book_addition::$msrp).name(book_addition::$msrp).type('text'));
     }
 
     public static function GetMSRP() {
@@ -145,7 +149,7 @@ class book_addition {
     }
 
     public static function InputCost() {
-        return new InputHTML(id(book_addition::$cost).name(book_addition::$cost).type('text'));
+        return new Input(id(book_addition::$cost).name(book_addition::$cost).type('text'));
     }
 
     public static function GetCost() {
@@ -157,7 +161,7 @@ class page_action {
     public static $action = 'page_action';
 
     public static function InputAction($value) {
-        return new InputHTML(id(page_action::$action).name(page_action::$action).type('hidden').value($value));
+        return new Input(id(page_action::$action).name(page_action::$action).type('hidden').value($value));
     }
 
     public static function GetAction() {
