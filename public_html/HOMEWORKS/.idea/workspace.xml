@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfd0125c-dc3a-4a67-bb94-a6301753b222" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HWB/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Printer/ConfigForm.php" afterPath="$PROJECT_DIR$/HWB/lib/IDS/vendors/htmlpurifier/HTMLPurifier/Printer/ConfigForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HWB/lib/adodb_lite/adodb-datadict.inc.php" afterPath="$PROJECT_DIR$/HWB/lib/adodb_lite/adodb-datadict.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HWB/lib/adodb_lite/adodbSQL_drivers/postgres/postgres_meta_module.inc" afterPath="$PROJECT_DIR$/HWB/lib/adodb_lite/adodbSQL_drivers/postgres/postgres_meta_module.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HWB/lib/adodb_lite/adodbSQL_drivers/postgres64/postgres64_meta_module.inc" afterPath="$PROJECT_DIR$/HWB/lib/adodb_lite/adodbSQL_drivers/postgres64/postgres64_meta_module.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HWB/lib/adodb_lite/adodbSQL_drivers/postgres8/postgres8_meta_module.inc" afterPath="$PROJECT_DIR$/HWB/lib/adodb_lite/adodbSQL_drivers/postgres8/postgres8_meta_module.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HWB/lib/classes/class.module.inc.php" afterPath="$PROJECT_DIR$/HWB/lib/classes/class.module.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HWB/lib/misc.functions.php" afterPath="$PROJECT_DIR$/HWB/lib/misc.functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HWB/modules/CGExtensions/lib/class.cge_array.php" afterPath="$PROJECT_DIR$/HWB/modules/CGExtensions/lib/class.cge_array.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/BaseHTML.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/BaseHTML.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/library.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/library.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/FormHTML.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Form.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/InputHTML.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Input.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/LabelHTML.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Label.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Renderable.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TextRender.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/RowHTML.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Row.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TableHTML.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TableArr.php" />
     </list>
     <ignored path="HOMEWORKS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="library.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="library.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/library.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
+            <state relative-caret-position="3252">
               <caret line="311" column="9" selection-start-line="311" selection-start-column="9" selection-end-line="311" selection-end-column="9" />
               <folding>
                 <marker date="1483053565282" expanded="true" signature="8544:11146" ph="..." />
@@ -121,8 +103,8 @@
       <file leaf-file-name="requests.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+            <state relative-caret-position="594">
+              <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -158,7 +140,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseHTML.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseHTML.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/BaseHTML.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -171,8 +153,8 @@
       <file leaf-file-name="TableArr.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TableArr.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -218,10 +200,10 @@
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Table.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TableArr.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/library.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Renderable.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TextRender.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/RenderList.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php" />
       </list>
     </option>
   </component>
@@ -575,15 +557,15 @@
       <workItem from="1482437962646" duration="28108000" />
       <workItem from="1482522321381" duration="18370000" />
       <workItem from="1482868565501" duration="14700000" />
-      <workItem from="1483042524648" duration="9920000" />
+      <workItem from="1483042524648" duration="10250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143859000" />
+    <option name="totallyTimeSpent" value="144189000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1932" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1932" height="1047" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18006264" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -811,6 +793,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7446">
           <caret line="456" column="9" selection-start-line="456" selection-start-column="9" selection-end-line="456" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1061,17 +1044,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Row.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/BaseHTML.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TableArr.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/RenderList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TextRender.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/library.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
+        <state relative-caret-position="3252">
           <caret line="311" column="9" selection-start-line="311" selection-start-column="9" selection-end-line="311" selection-end-column="9" />
           <folding>
             <marker date="1483053565282" expanded="true" signature="8544:11146" ph="..." />
@@ -1106,54 +1137,6 @@
             <marker date="1483053565282" expanded="true" signature="18560:18644" ph="..." />
             <marker date="1483053565282" expanded="true" signature="18590:18630" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TextRender.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Row.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/RenderList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/BaseHTML.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -76,7 +76,7 @@ class book_request {
     }
 
     public static function GetAvailability() {
-        return $_REQUEST[book_request::$price];
+        return $_REQUEST[book_request::$availability];
     }
 
     public static function GetCondition(){
@@ -84,7 +84,17 @@ class book_request {
     }
 
     public static function Store() {
-        
+        $list = new RenderList(
+            new Input(id(book_request::$department).name(book_request::$department).type('hidden')),
+            new Input(id(book_request::$condition).name(book_request::$condition).type('hidden')),
+            new Input(id(book_request::$price).name(book_request::$price).type('hidden')),
+            new Input(id(book_request::$availability).name(book_request::$availability).type('hidden')),
+            new Input(id(book_request::$publisher).name(book_request::$publisher).type('hidden')),
+            new Input(id(book_request::$title).name(book_request::$title).type('hidden')),
+            new Input(id(book_request::$barcode).name(book_request::$barcode).type('hidden')),
+            new Input(id(book_request::$isbn).name(book_request::$isbn).type('hidden'))
+        );
+        return $list;
     }
 }
 
