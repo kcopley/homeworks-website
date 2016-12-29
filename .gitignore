@@ -1,7 +1,6 @@
 *.log
 *.png
 *.svg
-*.php
 *.db
 *.hist
 *.current
