@@ -34,6 +34,10 @@ function name($str) {
     return ' name="'.$str.'" ';
 }
 
+function colspan($str) {
+    return ' colspan="'.$str.'" ';
+}
+
 function valign($str) {
     return ' valign="'.$str.'" ';
 }

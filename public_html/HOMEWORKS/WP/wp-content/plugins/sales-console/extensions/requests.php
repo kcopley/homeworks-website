@@ -1,15 +1,4 @@
 <?php
-
-include_once 'Column.php';
-include_once 'Form.php';
-include_once 'Input.php';
-include_once 'Label.php';
-include_once "Renderable.php";
-include_once "Row.php";
-include_once "Table.php";
-include_once "utility.php";
-
-
 /**
  * Created by PhpStorm.
  * User: Kurtis
@@ -19,6 +8,84 @@ include_once "utility.php";
 class action_types {
     public static $search = 'search_action';
     public static $add_book = 'add_book_action';
+    public static $select_book = 'select_book_action';
+    public static $edit_book = 'edit_book_action';
+    public static $delete_book = 'delete_book_action';
+}
+
+class selection {
+    public static $book = 'selected_book';
+    public static $consigner = 'selected_consigner';
+
+    public static function GetBook() {
+        return $_REQUEST[selection::$book];
+    }
+
+    public static function GetConsigner() {
+        return $_REQUEST[selection::$consigner];
+    }
+}
+
+function QueryBook() {
+    $args = array(
+        'numberposts' => -1,
+        'posts_per_page' => -1,
+        'order' => 'ASC',
+        'orderby' => 'date',
+        'post_type' => 'bookstore'
+    );
+
+    $meta_query_array = array('relation' => 'AND');
+
+    if (book_request::GetTitle()) {
+        $args['s'] = book_request::GetTitle();
+    }
+    if (book_request::GetDepartment()) {
+        $args['cat'] = book_request::GetDepartment();
+    }
+    if (book_request::GetPublisher()) {
+        $meta_query_array[] = array(
+            'key' => '_cmb_resource_publisher',
+            'value' => book_request::GetPublisher()
+        );
+    }
+    if (book_request::GetPrice()) {
+        $meta_query_array[] = array(
+            'key' => '_cmb_resource_price',
+            'value' => book_request::GetPrice()
+        );
+    };
+    if (book_request::GetBarcode()) {
+        $meta_query_array[] = array(
+            'key' => '_cmb_resource_barcode',
+            'value' => book_request::GetBarcode()
+        );
+    };
+    if (book_request::GetISBN()) {
+        $meta_query_array[] = array(
+            'key' => '_cmb_resource_u-sku',
+            'value' => book_request::GetISBN()
+        );
+        $meta_query_array[] = array(
+            'key' => '_cmb_resource_sku',
+            'value' => book_request::GetISBN()
+        );
+    }
+    if (book_request::GetCondition()) {
+        $meta_query_array[] = array(
+            'key' => '_cmb_resource_condition',
+            'value' => book_request::GetCondition()
+        );
+    };
+    if (book_request::GetAvailability()) {
+        $meta_query_array[] = array(
+            'key' => '_cmb_resource_available',
+            'value' => book_request::GetAvailability()
+        );
+    };
+
+    $args['meta_query'] = $meta_query_array;
+    return new WP_Query($args);
 }
 
 class book_request {
@@ -95,6 +162,112 @@ class book_request {
             new Input(id(book_request::$isbn).name(book_request::$isbn).type('hidden'))
         );
         return $list;
+    }
+}
+
+class book_properties {
+    public static $title = 'title';
+    public static $cost = 'cost';
+    public static $price = 'price';
+    public static $MSRP = 'MSRP';
+    public static $publisher = 'publisher';
+    public static $isbn = 'isbn';
+    public static $condition = 'condition';
+    public static $availability = 'availability';
+    public static $barcode = 'barcode';
+    public static $hasimage = 'hasimage';
+    public static $selectable = 'selectable';
+    public static $quantity = 'quantity';
+
+    public static function get_book_title($post_id) {
+        return get_the_title($post_id);
+    }
+
+    public static function get_book_cost($post_id) {
+        return get_post_meta($post_id, '_cmb_resource_cost', true);
+    }
+
+    public static function set_book_cost($post_id, $cost) {
+        update_post_meta($post_id, '_cmb_resource_cost', $cost);
+    }
+
+    public static function get_book_msrp($post_id) {
+        return get_post_meta($post_id, '_cmb_resource_MSRP', true);
+    }
+
+    public static function set_book_msrp($post_id, $msrp) {
+        update_post_meta($post_id, '_cmb_resource_MSRP', $msrp);
+    }
+
+    public static function get_book_saleprice($post_id) {
+        return str_replace('$', '', get_post_meta($post_id, '_cmb_resource_price', true));
+    }
+
+    public static function set_book_saleprice($post_id, $saleprice) {
+        $saleprice = str_replace('$', '', $saleprice);
+        update_post_meta($post_id, '_cmb_resource_price', $saleprice);
+    }
+
+    public static function get_book_publisher($post_id) {
+        return get_post_meta($post_id, '_cmb_resource_publisher', true);
+    }
+
+    public static function set_book_publisher($post_id, $publisher) {
+        update_post_meta($post_id, '_cmb_resource_publisher', $publisher);
+    }
+
+    public static function get_book_availablity($post_id) {
+        return get_post_meta($post_id, '_cmb_resource_available', true);
+    }
+
+    public static function set_book_availablity($post_id, $availability) {
+        update_post_meta($post_id, '_cmb_resource_available', $availability);
+    }
+
+    public static function get_book_isbn($post_id) {
+        $sku = get_post_meta($post_id, '_cmb_resource_sku', true);
+        if (empty($sku)) {
+            $sku = get_post_meta($post_id, '_cmb_resource_u-sku', true);
+            update_post_meta($post_id, '_cmb_resource_sku', $sku);
+        }
+        return $sku;
+    }
+
+    public static function set_book_sku($post_id, $sku) {
+        update_post_meta($post_id, '_cmb_resource_sku', $sku);
+    }
+
+    public static function get_book_condition($post_id) {
+        return get_post_meta($post_id, '_cmb_resource_condition', true);
+    }
+
+    public static function set_book_condition($post_id, $condition) {
+        update_post_meta($post_id, '_cmb_resource_condition', $condition);
+    }
+
+    public static function get_book_barcode($post_id) {
+        return get_post_meta($post_id, '_cmb_resource_barcode', true);
+    }
+
+    public static function set_book_barcode($post_id, $barcode) {
+        update_post_meta($post_id, '_cmb_resource_barcode', $barcode);
+    }
+
+    public static function get_book_numsold($post_id) {
+        return get_post_meta($post_id, '_cmb_resource_numsold', true);
+    }
+
+    public static function add_book_numsold($post_id, $num) {
+        $curNum = get_book_numsold($post_id);
+        set_book_numsold($post_id, $curNum + $num);
+    }
+
+    public static function set_book_numsold($post_id, $num) {
+        update_post_meta($post_id, '_cmb_resource_numsold', $num);
+    }
+
+    public static function get_book_image($post_id) {
+        return has_post_thumbnail($post_id);
     }
 }
 
