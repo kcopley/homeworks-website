@@ -70,6 +70,14 @@ function size($str){
     return ' size="'.$str.'" ';
 }
 
+function form($str){
+    return ' form="'.$str.'" ';
+}
+
+function add_image($id) {
+    set_post_thumbnail($id, absint( $_POST[book_request::$image_set]));
+}
+
 function button($value) {
     return new Input(classType('button-primary').type('submit').name('button').value($value));
 }

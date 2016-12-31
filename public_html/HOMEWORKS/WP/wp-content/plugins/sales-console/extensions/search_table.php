@@ -41,70 +41,71 @@ function search_books()
 
     if (array_key_exists(book_properties::$title, $display)){
         $table->add_object(
-            new Column(width(25), new TextRender('Title'))
+            new Column(width(25).style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Title'))
         );
     }
     if (array_key_exists(book_properties::$barcode, $display)){
         $table->add_object(
-            new Column(new TextRender('Barcode'))
+            new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Barcode'))
         );
     }
     if (array_key_exists(book_properties::$publisher, $display)){
         $table->add_object(
-            new Column(new TextRender('Publisher'))
+            new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Publisher'))
         );
     }
     if (array_key_exists(book_properties::$isbn, $display)){
         $table->add_object(
-            new Column(new TextRender('ISBN'))
+            new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('ISBN'))
         );
     }
     if (array_key_exists(book_properties::$cost, $display)){
         $table->add_object(
-            new Column(new TextRender('Cost'))
+            new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Cost'))
         );
     }
     if (array_key_exists(book_properties::$MSRP, $display)){
         $table->add_object(
-            new Column(new TextRender('MSRP'))
+            new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('MSRP'))
         );
     }
     if (array_key_exists(book_properties::$price, $display)){
         $table->add_object(
-            new Column(new TextRender('Price'))
+            new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Price'))
         );
     }
     if (array_key_exists(book_properties::$quantity, $display)){
         $table->add_object(
-            new Column(new TextRender('Quantity'))
+            new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px').align('center'), new TextRender('Quantity'))
         );
     }
     if (array_key_exists(book_properties::$condition, $display)){
         $table->add_object(
-            new Column(new TextRender('Condition'))
+            new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px').align('center'), new TextRender('Condition'))
         );
     }
     if (array_key_exists(book_properties::$availability, $display)){
         $table->add_object(
-            new Column(new TextRender('Available'))
+            new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px').align('center'), new TextRender('Available'))
         );
     }
     if (array_key_exists(book_properties::$hasimage, $display)){
         $table->add_object(
-            new Column(width(5).align('center'),
+            new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px').width(5).align('center'),
                 new TextRender('Image?'))
         );
     }
     if ($consignerID != -1){
         $table->add_object(
-            new Column(width(5).align('center'),
-                new TextRender('ADd'))
+            new Column(width(5).align('center').style('padding-bottom: 8px; font-weight: bold; font-size: 14px'),
+                new TextRender('Add'))
         );
     }
 
     $table->add_object(
-        new Row(colspan(count($display)),
-            new HR()));
+        new Row(style('border: none; padding-bottom: 8px; height: 1px;'),
+            new Column(colspan(count($display).style('padding-bottom: 8px;')),
+                new HR(style('margin: 0px;')))));
 
     $query = QueryBook();
     while ($query->have_posts()):
@@ -113,6 +114,11 @@ function search_books()
         $product_id = $post->ID;
         $table->add_object(
             book_display($display, $product_id));
+        $table->add_object(
+            new Row(style('border: none; padding: 0px; height: 1px;'),
+                new Column(colspan(count($display).style('padding-bottom: 0px;')),
+                    new HR(style('margin: 0px;')))
+            ));
     endwhile;
     return $table;
 }
@@ -124,11 +130,11 @@ function book_display($display, $id) {
         if (array_key_exists(book_properties::$selectable, $display)){
             $row->add_object(new Column(
                 new Form(method('POST').name('select_book'),
-                    new Input(type('hidden').name(selection::$book).value($id)),
+                    selection::InputBook($id),
                     book_request::Store(),
                     page_action::InputAction(action_types::$select_book),
                     new Input(classType('button').type('submit').name('button').value(get_the_title($id)).style('background:none!important; border:none; 
-                        padding:0!important; font-family:arial,sans-serif; color:#069; cursor:pointer;'))
+                        padding:0!important; font-family:arial,sans-serif; color:#069; box-shadow: 0 0px 0 #ccc; cursor:pointer;'))
                 )
             ));
         }
@@ -155,50 +161,38 @@ function book_display($display, $id) {
     }
     if (array_key_exists(book_properties::$cost, $display)){
         $row->add_object(new Column(
-            new TextRender(book_properties::get_book_cost($id))
+            new TextRender('$'.book_properties::get_book_cost($id))
         ));
     }
     if (array_key_exists(book_properties::$MSRP, $display)){
         $row->add_object(new Column(
-            new TextRender(book_properties::get_book_msrp($id))
+            new TextRender('$'.book_properties::get_book_msrp($id))
         ));
     }
     if (array_key_exists(book_properties::$price, $display)){
         $row->add_object(new Column(
-            new TextRender(book_properties::get_book_saleprice($id))
+            new TextRender('$'.book_properties::get_book_saleprice($id))
         ));
     }
     if (array_key_exists(book_properties::$quantity, $display)){
-        $row->add_object(new Column(
+        $row->add_object(new Column(align('center'),
             new TextRender(book_properties::get_consigner_count($id))
         ));
     }
     if (array_key_exists(book_properties::$condition, $display)){
-        $row->add_object(new Column(
+        $row->add_object(new Column(align('center'),
             new TextRender(book_properties::get_book_condition($id))
         ));
     }
     if (array_key_exists(book_properties::$availability, $display)){
-        $row->add_object(new Column(
+        $row->add_object(new Column(align('center'),
             new TextRender(book_properties::get_book_availablity($id))
         ));
     }
     if (array_key_exists(book_properties::$hasimage, $display)){
-        $color = 'red';
-        $text = 'No';
-        if (book_properties::get_book_image($id)){
-            $text = 'Yes';
-            $color = 'green';
-        }
         $row->add_object(
             new Column(width(5).align('center'),
-                new Form(method('post').id($id).name($id),
-                    page_action::InputAction(action_types::$add_image_to_book),
-                    book_request::Store(),
-                    new Input(id(selection::$book).type('hidden').name(selection::$book).value($id)),
-                    new Input(id($id).type('button').classType('upload_image_button').style('color: '.$color.';').value($text)),
-                    new Input(type('hidden').name(book_request::$image_set).id(book_request::$image_set))
-                )
+                book_properties::get_image_form($id, action_types::$add_image_to_book_search)
             )
         );
     }

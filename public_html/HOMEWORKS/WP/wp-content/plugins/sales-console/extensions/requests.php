@@ -11,12 +11,22 @@ class action_types {
     public static $select_book = 'select_book_action';
     public static $edit_book = 'edit_book_action';
     public static $delete_book = 'delete_book_action';
-    public static $add_image_to_book = 'add_image_to_book';
+    public static $delete_book_sure = 'delete_book_sure_action';
+    public static $change_book = 'change_book_action';
+    public static $add_image_to_book_search = 'add_image_to_book_search';
+    public static $add_image_to_book_edit = 'add_image_to_book_edit';
+
+    public static $add_book_to_owner = 'add_book_to_owner_action';
+    public static $select_consigner = 'select_consigner_action';
 }
 
 class selection {
     public static $book = 'selected_book';
     public static $consigner = 'selected_consigner';
+
+    public static function InputBook($id) {
+        return new Input(id(selection::$book).type('hidden').name(selection::$book).value($id));
+    }
 
     public static function GetBook() {
         return $_REQUEST[selection::$book];
@@ -154,17 +164,85 @@ class book_request {
     }
 
     public static function Store() {
-        $list = new RenderList(
-            new Input(id(book_request::$department).name(book_request::$department).type('hidden').value(self::GetDepartment())),
-            new Input(id(book_request::$condition).name(book_request::$condition).type('hidden').value(self::GetCondition())),
-            new Input(id(book_request::$price).name(book_request::$price).type('hidden').value(self::GetPrice())),
-            new Input(id(book_request::$availability).name(book_request::$availability).type('hidden').value(self::GetAvailability())),
-            new Input(id(book_request::$publisher).name(book_request::$publisher).type('hidden').value(self::GetPublisher())),
-            new Input(id(book_request::$title).name(book_request::$title).type('hidden').value(self::GetTitle())),
-            new Input(id(book_request::$barcode).name(book_request::$barcode).type('hidden').value(self::GetBarcode())),
-            new Input(id(book_request::$isbn).name(book_request::$isbn).type('hidden').value(self::GetISBN()))
-        );
+        $args = func_get_args();
+        $form = '';
+        if (count($args) > 0){
+            $form = $args[0];
+        }
+        if (!empty($form)){
+            $list = new RenderList(
+                new Input(form($form).id(book_request::$department).name(book_request::$department).type('hidden').value(self::GetDepartment())),
+                new Input(form($form).id(book_request::$condition).name(book_request::$condition).type('hidden').value(self::GetCondition())),
+                new Input(form($form).id(book_request::$price).name(book_request::$price).type('hidden').value(self::GetPrice())),
+                new Input(form($form).id(book_request::$availability).name(book_request::$availability).type('hidden').value(self::GetAvailability())),
+                new Input(form($form).id(book_request::$publisher).name(book_request::$publisher).type('hidden').value(self::GetPublisher())),
+                new Input(form($form).id(book_request::$title).name(book_request::$title).type('hidden').value(self::GetTitle())),
+                new Input(form($form).id(book_request::$barcode).name(book_request::$barcode).type('hidden').value(self::GetBarcode())),
+                new Input(form($form).id(book_request::$isbn).name(book_request::$isbn).type('hidden').value(self::GetISBN()))
+            );
+        }
+        else {
+            $list = new RenderList(
+                new Input(id(book_request::$department).name(book_request::$department).type('hidden').value(self::GetDepartment())),
+                new Input(id(book_request::$condition).name(book_request::$condition).type('hidden').value(self::GetCondition())),
+                new Input(id(book_request::$price).name(book_request::$price).type('hidden').value(self::GetPrice())),
+                new Input(id(book_request::$availability).name(book_request::$availability).type('hidden').value(self::GetAvailability())),
+                new Input(id(book_request::$publisher).name(book_request::$publisher).type('hidden').value(self::GetPublisher())),
+                new Input(id(book_request::$title).name(book_request::$title).type('hidden').value(self::GetTitle())),
+                new Input(id(book_request::$barcode).name(book_request::$barcode).type('hidden').value(self::GetBarcode())),
+                new Input(id(book_request::$isbn).name(book_request::$isbn).type('hidden').value(self::GetISBN()))
+            );
+        }
         return $list;
+    }
+}
+
+class book_editing
+{
+    public static $title = 'edit_title';
+    public static $cost = 'edit_cost';
+    public static $price = 'edit_price';
+    public static $MSRP = 'edit_MSRP';
+    public static $publisher = 'edit_publisher';
+    public static $isbn = 'edit_isbn';
+    public static $condition = 'edit_condition';
+    public static $availability = 'edit_availability';
+    public static $barcode = 'edit_barcode';
+
+    public static function GetTitle() {
+        return $_REQUEST[book_editing::$title];
+    }
+
+    public static function GetCost() {
+        return $_REQUEST[book_editing::$cost];
+    }
+
+    public static function GetPrice() {
+        return $_REQUEST[book_editing::$price];
+    }
+
+    public static function GetMSRP() {
+        return $_REQUEST[book_editing::$MSRP];
+    }
+
+    public static function GetPublisher() {
+        return $_REQUEST[book_editing::$publisher];
+    }
+
+    public static function GetISBN() {
+        return $_REQUEST[book_editing::$isbn];
+    }
+
+    public static function GetCondition() {
+        return $_REQUEST[book_editing::$condition];
+    }
+
+    public static function GetAvailability() {
+        return $_REQUEST[book_editing::$availability];
+    }
+
+    public static function GetBarcode() {
+        return $_REQUEST[book_editing::$barcode];
     }
 }
 
@@ -187,19 +265,19 @@ class book_properties {
     }
 
     public static function get_book_cost($post_id) {
-        return get_post_meta($post_id, '_cmb_resource_cost', true);
+        return str_replace('$', '', get_post_meta($post_id, '_cmb_resource_cost', true));
     }
 
     public static function set_book_cost($post_id, $cost) {
-        update_post_meta($post_id, '_cmb_resource_cost', $cost);
+        update_post_meta($post_id, '_cmb_resource_cost', str_replace('$', '', $cost));
     }
 
     public static function get_book_msrp($post_id) {
-        return get_post_meta($post_id, '_cmb_resource_MSRP', true);
+        return str_replace('$', '', get_post_meta($post_id, '_cmb_resource_MSRP', true));
     }
 
     public static function set_book_msrp($post_id, $msrp) {
-        update_post_meta($post_id, '_cmb_resource_MSRP', $msrp);
+        update_post_meta($post_id, '_cmb_resource_MSRP', str_replace('$', '', $msrp));
     }
 
     public static function get_book_saleprice($post_id) {
@@ -289,8 +367,35 @@ class book_properties {
         else return 0;
     }
 
-    function set_consigners($book, $consigners) {
+    public static function set_consigners($book, $consigners) {
         update_post_meta($book, '_cmb_resource_consigners', $consigners);
+    }
+
+    public static function get_image_form($id, $action) {
+        $color = 'red';
+        $text = 'No';
+        if (book_properties::get_book_image($id)){
+            $text = 'Yes';
+            $color = 'green';
+        }
+        return new Form(method('post').id($id).name($id),
+            page_action::InputAction($action),
+            book_request::Store(),
+            selection::InputBook($id),
+            new Input(id($id).type('button').classType('upload_image_button').style('color: '.$color.';').value($text)),
+            new Input(type('hidden').name(book_request::$image_set).id(book_request::$image_set))
+        );
+    }
+
+    function add_book($book_id, $consigner_id) {
+        book_properties::add_consigner_to_book($book_id, $consigner_id);
+        consigner_properties::add_book_to_consigner($consigner_id, $book_id);
+    }
+
+    private static function add_consigner_to_book($book, $consigner) {
+        $consigners = book_properties::get_consigners($book);
+        $consigners[] = $consigner;
+        set_consigners($book, $consigners);
     }
 }
 
@@ -305,6 +410,19 @@ class book_addition {
     public static $department = 'add_department';
     public static $availability = 'add_availability';
     public static $condition = 'add_condition';
+    public static $quantity = 'add_quantity';
+
+    public static function GetCondition() {
+        return $_REQUEST[book_addition::$condition];
+    }
+
+    public static function GetAvailability() {
+        return $_REQUEST[book_addition::$availability];
+    }
+
+    public static function GetDepartment() {
+        return $_REQUEST[book_addition::$department];
+    }
 
     public static function InputTitle() {
         return new Input(id(book_addition::$title).name(book_addition::$title).type('text'));
@@ -361,6 +479,55 @@ class book_addition {
     public static function GetCost() {
         return $_REQUEST[book_addition::$cost];
     }
+
+    public static function InputQuantity() {
+        return new Input(id(book_addition::$quantity).name(book_addition::$quantity).type('text'));
+    }
+
+    public static function GetQuantity() {
+        return $_REQUEST[book_addition::$quantity];
+    }
+
+    public static function add_book_post($booktitle, $bookcategory) {
+        //Set up barcode
+        $lastBarcodeExists = get_option('_cmb_resource_lastBarcode');
+        $lastBarcode = 15000;
+        if ($lastBarcodeExists == false){
+            add_option('_cmb_resource_lastBarcode', 15000);
+            $lastBarcode = get_option('_cmb_resource_lastBarcode');
+        }
+        $newbarcode = $lastBarcode + 1;
+        update_option('_cmb_resource_lastBarcode', $newbarcode);
+
+        $order = array(
+            'post_title' => $booktitle,
+            'post_status' => 'publish',
+            'post_author' => 4,
+            'post_category' => array(
+                $bookcategory
+            ),
+            'post_type' => 'bookstore'
+        );
+        $postid = wp_insert_post($order);
+        book_properties::set_book_sku($postid, $newbarcode);
+        return $postid;
+    }
+
+    public static function add_book() {
+        $postid = add_book_post(book_addition::GetTitle(), book_addition::GetDepartment());
+        book_properties::set_book_cost($postid, book_addition::GetCost());
+        book_properties::set_book_condition($postid, book_addition::GetCondition());
+        book_properties::set_book_sku($postid, book_addition::GetISBN());
+        book_properties::set_book_msrp($postid, book_addition::GetMSRP());
+        book_properties::set_book_publisher($postid, book_addition::GetPublisher());
+        book_properties::set_book_saleprice($postid, book_addition::GetPrice());
+        book_properties::set_book_availablity($postid, book_addition::GetAvailability());
+
+        for ($i = 0; $i < book_addition::GetQuantity(); $i++) {
+            add_book_and_consigner($postid, get_consigner_owner());
+        }
+        return $postid;
+    }
 }
 
 class page_action {
@@ -372,5 +539,102 @@ class page_action {
 
     public static function GetAction() {
         return $_REQUEST[page_action::$action];
+    }
+}
+
+class consigner_properties {
+    public static function get_consigner_name($consigner) {
+        return get_the_title($consigner);
+    }
+
+    public static function get_books($consigner) {
+        $ret = get_post_meta($consigner, "_cmb_consigner_books", true);
+        if (!$ret){
+            $ret = array();
+        }
+        return $ret;
+    }
+
+    public static function set_books($consigner, $books) {
+        update_post_meta($consigner, "_cmb_consigner_books", $books);
+    }
+
+    public static function get_consigner_sold_books($consigner) {
+        $ret = get_post_meta($consigner, "_cmb_consigner_sold_books", true);
+        if (!$ret){
+            $ret = array();
+        }
+        return $ret;
+    }
+
+    public static function set_consigner_sold_books($consigner, $books) {
+        update_post_meta($consigner, "_cmb_consigner_sold_books", $books);
+    }
+
+    public static function get_consigner_id($consigner) {
+        return get_post_meta($consigner, "_cmb_consigner_id", true);
+    }
+
+    public static function set_consigner_id($consigner, $id) {
+        update_post_meta($consigner, "_cmb_consigner_id", $id);
+    }
+
+    public static function get_consigner_date($consigner) {
+        return get_post_meta($consigner, "_cmb_consigner_date", true);
+    }
+
+    public static function set_consigner_date($consigner, $date) {
+        update_post_meta($consigner, "_cmb_consigner_date", $date);
+    }
+
+    public static function consigner_add_sold_book($consigner_id, $book_id) {
+        $books = get_consigner_sold_books($consigner_id);
+        $books[$book_id] = 'N';
+        set_consigner_sold_books($consigner_id, $books);
+    }
+
+    function consigner_remove_sold_book($consigner_id, $book_id) {
+        $books = get_consigner_sold_books($consigner_id);
+        if (($key = array_search($book_id, $books)) !== false) {
+            unset($books[$key]);
+        }
+        $books = array_values($books);
+        set_consigner_sold_books($consigner_id, $books);
+    }
+
+    private static function add_consigner_to_book($consigner, $book) {
+        $books = consigner_properties::get_books($consigner);
+        $books[] = $book;
+        consigner_properties::set_books($consigner, $books);
+    }
+}
+
+class consigner_addition {
+    function add_consigner() {
+        //Get the input data from form
+        $consignertitle = $_REQUEST[request_consigner_title()];
+        $consignerdate = $_REQUEST[request_consigner_date_to()];
+
+        $order = array(
+            'post_title' => $consignertitle,
+            'post_status' => 'publish',
+            'post_author' => 4,
+            'post_type' => 'consigners'
+        );
+        $postid = wp_insert_post($order);
+
+        //Set up barcode
+        $lastConsignerID = get_option('_cmb_consigner_lastID');
+        if ($lastConsignerID == false){
+            add_option('_cmb_consigner_lastID', -1);
+            $lastConsignerID = get_option('_cmb_consigner_lastID');
+            update_option('_cmb_consigner_owner', $postid);
+        }
+        $newConsignerID = $lastConsignerID + 1;
+        update_option('_cmb_consigner_lastID', $newConsignerID);
+
+        set_consigner_id($postid, $newConsignerID);
+        set_consigner_date($postid, $consignerdate);
+        return $postid;
     }
 }
