@@ -99,6 +99,8 @@ class book_request {
     public static $availability = 'query_availability';
     public static $condition = 'query_condition';
 
+    public static $image_set = 'image_attachment_id';
+
     public static function InputTitle() {
         return new Input(id(book_request::$title).name(book_request::$title).type('text'));
     }

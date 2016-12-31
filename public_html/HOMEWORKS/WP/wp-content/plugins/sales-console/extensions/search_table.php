@@ -31,6 +31,11 @@ function search_books()
         $display = $displays[0];
     }
 
+    $consignerID = -1;
+    if (count($displays) > 1) {
+        $consignerID = $displays[1];
+    }
+
     $table =
         new TableArr(id('formtable').width(100).border(0).cellspacing(0).cellpadding(0).style('margin: 10px 0 50px;'));
 
@@ -86,7 +91,14 @@ function search_books()
     }
     if (array_key_exists(book_properties::$hasimage, $display)){
         $table->add_object(
-            new Column(new TextRender('Has Image?'))
+            new Column(width(5).align('center'),
+                new TextRender('Image?'))
+        );
+    }
+    if ($consignerID != -1){
+        $table->add_object(
+            new Column(width(5).align('center'),
+                new TextRender('ADd'))
         );
     }
 
@@ -172,23 +184,23 @@ function book_display($display, $id) {
         ));
     }
     if (array_key_exists(book_properties::$hasimage, $display)){
-        $text = 'N';
+        $color = 'red';
+        $text = 'No';
         if (book_properties::get_book_image($id)){
-            $text = 'Y';
+            $text = 'Yes';
+            $color = 'green';
         }
-        $row->add_object(new Column(
-            new Form(method('post'),
-                page_action::InputAction(action_types::$add_image_to_book),
-                book_request::Store(),
-                new Input(id(selection::$book).type('hidden').name(selection::$book).value($id)),
-                new Input(type('hidden').name('image_attachment_id').id('image_attachment_id').value($_REQUEST['image_attachment_id'])),
-                new Input(
-                    id('upload_image_button').type('button').classType('button').value($text)),
-                new Input(align('right'),
-                    type('submit').name('submit_image_selector').value('Save').classType('button-primary')
+        $row->add_object(
+            new Column(width(5).align('center'),
+                new Form(method('post').id($id).name($id),
+                    page_action::InputAction(action_types::$add_image_to_book),
+                    book_request::Store(),
+                    new Input(id(selection::$book).type('hidden').name(selection::$book).value($id)),
+                    new Input(id($id).type('button').classType('upload_image_button').style('color: '.$color.';').value($text)),
+                    new Input(type('hidden').name(book_request::$image_set).id(book_request::$image_set))
                 )
             )
-        ));
+        );
     }
     return $row;
 }

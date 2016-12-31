@@ -66,6 +66,10 @@ function style($str){
     return ' style="'.$str.'" ';
 }
 
+function size($str){
+    return ' size="'.$str.'" ';
+}
+
 function button($value) {
     return new Input(classType('button-primary').type('submit').name('button').value($value));
 }
