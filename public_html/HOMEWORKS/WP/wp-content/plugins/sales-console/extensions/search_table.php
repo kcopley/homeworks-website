@@ -69,6 +69,11 @@ function search_books()
             new Column(new TextRender('Price'))
         );
     }
+    if (array_key_exists(book_properties::$quantity, $display)){
+        $table->add_object(
+            new Column(new TextRender('Quantity'))
+        );
+    }
     if (array_key_exists(book_properties::$condition, $display)){
         $table->add_object(
             new Column(new TextRender('Condition'))
@@ -94,7 +99,8 @@ function search_books()
         $query->the_post();
         global $post;
         $product_id = $post->ID;
-        $table->add_object(book_display($display, $product_id));
+        $table->add_object(
+            book_display($display, $product_id));
     endwhile;
     return $table;
 }
@@ -151,7 +157,7 @@ function book_display($display, $id) {
         ));
     }
     if (array_key_exists(book_properties::$quantity, $display)){
-        $row->add_object(new Column(align('center'),
+        $row->add_object(new Column(
             new TextRender(book_properties::get_consigner_count($id))
         ));
     }
@@ -171,11 +177,25 @@ function book_display($display, $id) {
             $text = 'Y';
         }
         $row->add_object(new Column(
-            new TextRender(
-                $text
+            new Form(method('post'),
+                page_action::InputAction(action_types::$add_image_to_book),
+                book_request::Store(),
+                new Input(id(selection::$book).type('hidden').name(selection::$book).value($id)),
+                new Input(type('hidden').name('image_attachment_id').id('image_attachment_id').value($_REQUEST['image_attachment_id'])),
+                new Input(
+                    id('upload_image_button').type('button').classType('button').value($text)),
+                new Input(align('right'),
+                    type('submit').name('submit_image_selector').value('Save').classType('button-primary')
+                )
             )
         ));
     }
-
     return $row;
 }
+
+?>
+
+
+
+
+

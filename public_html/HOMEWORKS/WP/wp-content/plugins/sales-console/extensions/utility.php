@@ -23,7 +23,7 @@ function action($str) {
 }
 
 function id($str) {
-    return ' action="'.$str.'" ';
+    return ' id="'.$str.'" ';
 }
 
 function method($str) {

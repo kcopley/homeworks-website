@@ -26,7 +26,7 @@ class TextRender
     }
 
     public function add_object($obj) {
-        if (gettype($obj) == 'string'){
+        if (gettype($obj) == 'string' || gettype($obj) == 'boolean' || gettype($obj) == 'integer' || gettype($obj) == 'double'){
             $this->renderable = $this->renderable.$obj;
         }
     }

@@ -11,6 +11,7 @@ class action_types {
     public static $select_book = 'select_book_action';
     public static $edit_book = 'edit_book_action';
     public static $delete_book = 'delete_book_action';
+    public static $add_image_to_book = 'add_image_to_book';
 }
 
 class selection {
@@ -152,14 +153,14 @@ class book_request {
 
     public static function Store() {
         $list = new RenderList(
-            new Input(id(book_request::$department).name(book_request::$department).type('hidden')),
-            new Input(id(book_request::$condition).name(book_request::$condition).type('hidden')),
-            new Input(id(book_request::$price).name(book_request::$price).type('hidden')),
-            new Input(id(book_request::$availability).name(book_request::$availability).type('hidden')),
-            new Input(id(book_request::$publisher).name(book_request::$publisher).type('hidden')),
-            new Input(id(book_request::$title).name(book_request::$title).type('hidden')),
-            new Input(id(book_request::$barcode).name(book_request::$barcode).type('hidden')),
-            new Input(id(book_request::$isbn).name(book_request::$isbn).type('hidden'))
+            new Input(id(book_request::$department).name(book_request::$department).type('hidden').value(self::GetDepartment())),
+            new Input(id(book_request::$condition).name(book_request::$condition).type('hidden').value(self::GetCondition())),
+            new Input(id(book_request::$price).name(book_request::$price).type('hidden').value(self::GetPrice())),
+            new Input(id(book_request::$availability).name(book_request::$availability).type('hidden').value(self::GetAvailability())),
+            new Input(id(book_request::$publisher).name(book_request::$publisher).type('hidden').value(self::GetPublisher())),
+            new Input(id(book_request::$title).name(book_request::$title).type('hidden').value(self::GetTitle())),
+            new Input(id(book_request::$barcode).name(book_request::$barcode).type('hidden').value(self::GetBarcode())),
+            new Input(id(book_request::$isbn).name(book_request::$isbn).type('hidden').value(self::GetISBN()))
         );
         return $list;
     }
@@ -268,6 +269,26 @@ class book_properties {
 
     public static function get_book_image($post_id) {
         return has_post_thumbnail($post_id);
+    }
+
+    public static function get_consigners($book) {
+        $consigners = get_post_meta($book, '_cmb_resource_consigners', true);
+        if (empty($consigners)) {
+            $consigners = array();
+            book_properties::set_consigners($book, $consigners);
+        }
+        return $consigners;
+    }
+
+    public static function get_consigner_count($book) {
+        $consigners = book_properties::get_consigners($book);
+        if ($consigners && !empty($consigners))
+            return count($consigners);
+        else return 0;
+    }
+
+    function set_consigners($book, $consigners) {
+        update_post_meta($book, '_cmb_resource_consigners', $consigners);
     }
 }
 
