@@ -74,6 +74,10 @@ function form($str){
     return ' form="'.$str.'" ';
 }
 
+function checkedAttr($str){
+    return ' checked="'.$str.'" ';
+}
+
 function add_image($id) {
     set_post_thumbnail($id, absint( $_POST[book_request::$image_set]));
 }

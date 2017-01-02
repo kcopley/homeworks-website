@@ -24,24 +24,37 @@ function search_books()
     );
 
     $displays = func_get_args();
-    if (count($displays) <= 0){
-        $display = $default;
+    $props = array();
+
+    $additionalRenders = new RenderList();
+    $counter = 0;
+    foreach ($displays as $disp) {
+        if (method_exists($disp, 'Render')) {
+            $additionalRenders->add_object($disp);
+        }
+        else {
+            $props[$counter] = $disp;
+        }
+    }
+
+    if (count($props) > 0) {
+        $display = $props[0];
     }
     else {
-        $display = $displays[0];
+        $display = $default;
     }
 
     $consignerID = -1;
-    if (count($displays) > 1) {
-        $consignerID = $displays[1];
+    if (array_key_exists(book_properties::$consigner_id, $display)) {
+        $consignerID = $display[book_properties::$consigner_id];
     }
 
     $table =
-        new TableArr(id('formtable').width(100).border(0).cellspacing(0).cellpadding(0).style('margin: 10px 0 50px;'));
+        new TableArr(id('formtable').width(100).border(0).cellspacing(0).cellpadding(0).style('margin: 10px 0 5px;'));
 
     if (array_key_exists(book_properties::$title, $display)){
         $table->add_object(
-            new Column(width(25).style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Title'))
+            new Column(width(30).style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Title'))
         );
     }
     if (array_key_exists(book_properties::$barcode, $display)){
@@ -107,23 +120,89 @@ function search_books()
             new Column(colspan(count($display).style('padding-bottom: 8px;')),
                 new HR(style('margin: 0px;')))));
 
-    $query = QueryBook();
+    $display_post_num = book_request::GetBooksPerPage();
+    $current_page = book_request::GetCurrentPage();
+    if (!$current_page) $current_page = 1;
+
+    $offset = ($current_page - 1) * $display_post_num;
+    if ($offset < 0) $offset = 0;
+
+    $query = QueryBook($display_post_num, $offset);
+
     while ($query->have_posts()):
         $query->the_post();
         global $post;
         $product_id = $post->ID;
         $table->add_object(
-            book_display($display, $product_id));
+            book_display($display, $product_id, $consignerID));
         $table->add_object(
             new Row(style('border: none; padding: 0px; height: 1px;'),
                 new Column(colspan(count($display).style('padding-bottom: 0px;')),
                     new HR(style('margin: 0px;')))
             ));
     endwhile;
-    return $table;
+
+    $renderlist = new RenderList();
+    $renderlist->add_object($table);
+
+    $pageTable = new TableArr(id('formtable').width(100).border(0).cellspacing(0).cellpadding(0).style('padding-top: 5px; margin: 5px 0 5px;'));
+    if ($query->found_posts > $display_post_num) {
+        $row = new Row();
+        $row->add_object(new Column(width(82)));
+        $row->add_object(
+            new Column(align('center').width(6).style('padding: 3px;'),
+                new H4(new TextRender('Page: ' . $current_page))
+            )
+        );
+        if ($current_page > 1) {
+            $row->add_object(
+                new Column(align('center').width(6).style('padding: 3px;'),
+                    new Form(
+                        book_request::Store(),
+                        page_action::InputAction(action_types::$search),
+                        book_request::InputCurrentPage($current_page - 1),
+                        GetAdditionalRenders($additionalRenders),
+                        button('Previous')
+                    )
+                )
+            );
+        }
+        else {
+            $row->add_object(new Column(align('center').width(6).style('padding: 3px;')));
+        }
+        if ($current_page * $display_post_num < $query->found_posts) {
+            $row->add_object(
+                new Column(align('center').width(6).style('padding: 3px;'),
+                    new Form(
+                        book_request::Store(),
+                        page_action::InputAction(action_types::$search),
+                        book_request::InputCurrentPage($current_page + 1),
+                        GetAdditionalRenders($additionalRenders),
+                        button('Next')
+                    )
+                )
+            );
+        }
+        else {
+            $row->add_object(new Column(align('center').width(6).style('padding: 3px;')));
+        }
+        $pageTable->add_object(
+            $row
+        );
+    }
+    $renderlist->add_object($pageTable);
+
+    return $renderlist;
 }
 
-function book_display($display, $id) {
+function GetAdditionalRenders($additionalRenders) {
+    if ($additionalRenders != null) {
+        return $additionalRenders;
+    }
+    return new RenderList();
+}
+
+function book_display($display, $id, $consignerID) {
     $row = new Row();
 
     if (array_key_exists(book_properties::$title, $display)){
@@ -196,9 +275,115 @@ function book_display($display, $id) {
             )
         );
     }
+    if (array_key_exists(book_properties::$consigner_id, $display)){
+        $row->add_object(
+            new Column(width(5).align('center'),
+                new Form(
+                    page_action::InputAction(action_types::$add_book_to_consigner),
+                    book_request::Store(),
+                    consigner_request::Store(),
+                    selection::InputBook($id),
+                    selection::InputConsigner($consignerID),
+                    button('Add')
+                )
+            )
+        );
+    }
     return $row;
 }
 
+function request_form_books() {
+    if (count(func_get_args()) > 0) {
+        $used = true;
+    }
+    else {
+        $used = false;
+    }
+    return new Form(action('').id('library').method('post').name('library_search'),
+        new Column(width(15).align('left').valign('top').style('text-align: left;'),
+            new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100),
+                new Row (
+                    new Column(align('right').width(7), new Label(new TextRender('Title:'))),
+                    new Column(width(93).style('padding-left: 5px;'), book_request::InputTitle())
+                ),
+                new Row (
+                    new Column(align('right').width(7), new Label(new TextRender('Barcode:'))),
+                    new Column(width(93).style('padding-left: 5px;'), book_request::InputBarcode())
+                ),
+                new Row (
+                    new Column(align('right').width(7), new Label(new TextRender('ISBN:'))),
+                    new Column(width(93).style('padding-left: 5px;'), book_request::InputISBN())
+                ),
+                new Row (
+                    new Column(align('right').width(7), new Label(new TextRender('Publisher:'))),
+                    new Column(width(93).style('padding-left: 5px;'), book_request::InputPublisher())
+                ),
+                new Row (
+                    new Column(align('right').width(7), new Label(new TextRender('Price:'))),
+                    new Column(width(93).style('padding-left: 5px;'), book_request::InputPrice())
+                ),
+                new Row (
+                    new Column(width(35).style('padding-bottom: 15px; padding-top: 10px;'),
+                        page_action::InputAction(action_types::$search),
+                        book_request::InputCurrentPage(1),
+                        button('Search')
+                    )
+                )
+            )
+        ),
+        new Column(width(18).align('left').valign('top').style('text-align: left;'),
+            new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100),
+                new Row(
+                    new Column(align('right').width(40), new Label('', new TextRender('Department:'))),
+                    new Column(style('padding-left: 5px;').width(60), new TextRender(wp_dropdown_categories(array(
+                        'hide_empty' => 0,
+                        'name' => book_request::$department,
+                        'hierarchical' => true,
+                        'show_option_all' => 'Choose one',
+                        'echo' => 0
+                    ))))
+                ),
+                new Row(
+                    new Column(align('right').width(40), new Label(new TextRender('Availability:'))),
+                    new Column(style('padding-left: 5px;').width(60),
+                        new Input(type('radio').name(book_request::$availability).value('Active')),
+                        new TextRender('Active '),
+                        new Input(type('radio').name(book_request::$availability).value('Inactive')),
+                        new TextRender('Inactive '))
+                ),
+                new Row(
+                    new Column(align('right').width(40), new Label(new TextRender('Condition:'))),
+                    GetUsedNewRadio($used)
+                ),
+                new Row(
+                    new Column(align('right').width(40), new Label(new TextRender('Books / Page:'))),
+                    new Column(width(60).style('padding-left: 5px;'),
+                        book_request::InputBooksPerPage()
+                    )
+                )
+            )
+        )
+    );
+}
+
+function GetUsedNewRadio($usedValue) {
+    $column = new Column(style('padding-left: 5px;').width(60));
+    $column->add_object(
+        new Input(type('radio').name(book_request::$condition).value('New')));
+    $column->add_object(new TextRender('New '));
+
+    if ($usedValue) {
+        $column->add_object(
+            new Input(type('radio').name(book_request::$condition).value('Used').checkedAttr('true')));
+        $column->add_object(new TextRender('Used '));
+    }
+    else {
+        $column->add_object(
+            new Input(type('radio').name(book_request::$condition).value('Used')));
+        $column->add_object(new TextRender('Used '));
+    }
+    return $column;
+}
 ?>
 
 
