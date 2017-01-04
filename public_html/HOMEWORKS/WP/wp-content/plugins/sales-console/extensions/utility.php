@@ -78,10 +78,33 @@ function checkedAttr($str){
     return ' checked="'.$str.'" ';
 }
 
+function maxlength($str){
+    return ' maxlength="'.$str.'" ';
+}
+
+function placeholder($str){
+    return ' placeholder="'.$str.'" ';
+}
+
+function onclick($str){
+    return ' onclick="'.$str.'" ';
+}
+
+function forAttr($str){
+    return ' for="'.$str.'" ';
+}
+
 function add_image($id) {
     set_post_thumbnail($id, absint( $_POST[book_request::$image_set]));
 }
 
 function button($value) {
     return new Input(classType('button-primary').type('submit').name('button').value($value));
+}
+
+function get_state_comma($state) {
+    if ($state != ""){
+        return ', ';
+    }
+    else return '';
 }

@@ -148,10 +148,11 @@ class transaction_properties {
         update_post_meta($id, '_cmb_transaction_taxrate', $tax);
     }
 
-    public static function create_payment_type($type, $amount) {
+    public static function create_payment_type($type, $amount, $transfirst) {
         return array(
             self::$payment_type => $type,
-            self::$payment_amount = $amount
+            self::$payment_amount = $amount,
+            self::$transfirstid = $transfirst
         );
     }
 
@@ -168,7 +169,16 @@ class transaction_properties {
         if (!$payments) {
             $payments = array();
         }
-        $payments[] = self::create_payment_type($type, $amount);
+        $payments[] = self::create_payment_type($type, $amount, -1);
+        self::set_payment_types($id, $payments);
+    }
+
+    public static function add_payment_credit($id, $type, $amount, $transfirst) {
+        $payments = self::get_payment_types($id);
+        if (!$payments) {
+            $payments = array();
+        }
+        $payments[] = self::create_payment_type($type, $amount, $transfirst);
         self::set_payment_types($id, $payments);
     }
 
@@ -231,28 +241,32 @@ class transaction_properties {
         update_post_meta($id, '_cmb_transaction_total', $total);
     }
 
-    public static function get_transaction_customer_name($transaction_id){
+    public static function get_customer_name($transaction_id){
         return get_post_meta($transaction_id, '_cmb_transaction_customer_name', true);
     }
 
-    public static function set_transaction_customer_name($transaction_id, $name){
+    public static function set_customer_name($transaction_id, $name){
         update_post_meta($transaction_id, '_cmb_transaction_customer_name', $name);
     }
 
-    public static function get_transaction_customer_email($transaction_id){
+    public static function get_customer_email($transaction_id){
         return get_post_meta($transaction_id, '_cmb_transaction_customer_email', true);
     }
 
-    public static function set_transaction_customer_email($transaction_id, $name){
+    public static function set_customer_email($transaction_id, $name){
         update_post_meta($transaction_id, '_cmb_transaction_customer_email', $name);
     }
 
-    public static function get_transaction_customer_address($transaction_id){
+    public static function get_customer_address($transaction_id){
         return get_post_meta($transaction_id, '_cmb_transaction_customer_address', true);
     }
 
-    public static function set_transaction_customer_address($transaction_id, $name){
+    public static function set_customer_address($transaction_id, $name){
         update_post_meta($transaction_id, '_cmb_transaction_customer_address', $name);
+    }
+
+    public static function remove_transaction($post) {
+        wp_delete_post($post);
     }
 }
 
@@ -352,16 +366,16 @@ class transaction_request {
 
     public static function Store() {
         $renderlist = new RenderList(
-            self::InputID(),
-            self::InputCustomerAddress(),
-            self::InputCustomerEmail(),
-            self::InputCustomerName(),
-            self::InputDateFrom(),
-            self::InputDateTo(),
-            self::InputTaxRate(),
-            self::InputTransFirstID(),
-            self::InputTotalTo(),
-            self::InputTotalFrom()
+            new Input(id(self::$id).name(self::$id).type('hidden').value(self::GetID())),
+            new Input(id(self::$customer_address).name(self::$customer_address).type('hidden').value(self::GetCustomerAddress())),
+            new Input(id(self::$customer_email).name(self::$customer_email).type('hidden').value(self::GetCustomerEmail())),
+            new Input(id(self::$customer_name).name(self::$customer_name).type('hidden').value(self::GetCustomerName())),
+            new Input(id(self::$datefrom).name(self::$datefrom).type('hidden').value(self::GetDateFrom())),
+            new Input(id(self::$dateto).name(self::$dateto).type('hidden').value(self::GetDateTo())),
+            new Input(id(self::$taxrate).name(self::$taxrate).type('hidden').value(self::GetTaxRate())),
+            new Input(id(self::$transfirstid).name(self::$transfirstid).type('hidden').value(self::GetTransFirstID())),
+            new Input(id(self::$totalto).name(self::$totalto).type('hidden').value(self::GetTotalTo())),
+            new Input(id(self::$totalfrom).name(self::$totalfrom).type('hidden').value(self::GetTotalFrom()))
         );
         return $renderlist;
     }

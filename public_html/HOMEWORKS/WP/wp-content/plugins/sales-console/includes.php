@@ -24,3 +24,7 @@ include_once "extensions/search_transactions.php";
 include_once "consigner_classes.php";
 include_once "book_classes.php";
 include_once "transaction_classes.php";
+include_once "checkout_classes.php";
+include_once "extensions/Paragraph.php";
+include_once "extensions/strong.php";
+include_once "extensions/BR.php";

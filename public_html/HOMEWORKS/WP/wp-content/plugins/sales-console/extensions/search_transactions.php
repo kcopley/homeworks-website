@@ -14,13 +14,13 @@
 function search_transactions()
 {
     $default = array(
-        transaction_properties::$id,
-        transaction_properties::$date,
-        transaction_properties::$customer_name,
-        transaction_properties::$total,
-        transaction_properties::$transfirstid,
-        transaction_properties::$taxrate,
-        transaction_properties::$removeable
+        transaction_properties::$id => true,
+        transaction_properties::$date => true,
+        transaction_properties::$customer_name => true,
+        transaction_properties::$total => true,
+        transaction_properties::$transfirstid => true,
+        transaction_properties::$taxrate => true,
+        transaction_properties::$removeable => true
     );
 
     $displays = func_get_args();
@@ -41,37 +41,37 @@ function search_transactions()
     }
     if (array_key_exists(transaction_properties::$date, $display)){
         $table->add_object(
-            new Column(width(25).style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Date'))
+            new Column(width('auto').style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Date'))
         );
     }
     if (array_key_exists(transaction_properties::$total, $display)){
         $table->add_object(
-            new Column(width(25).style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Total'))
+            new Column(width('auto').style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Total'))
         );
     }
     if (array_key_exists(transaction_properties::$customer_name, $display)){
         $table->add_object(
-            new Column(width(25).style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Name'))
+            new Column(width('auto').style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Name'))
         );
     }
     if (array_key_exists(transaction_properties::$customer_address, $display)){
         $table->add_object(
-            new Column(width(25).style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Address'))
+            new Column(width('auto').style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Address'))
         );
     }
     if (array_key_exists(transaction_properties::$customer_email, $display)){
         $table->add_object(
-            new Column(width(25).style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Email'))
+            new Column(width('auto').style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Email'))
         );
     }
     if (array_key_exists(transaction_properties::$transfirstid, $display)){
         $table->add_object(
-            new Column(width(25).style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('TransFirst ID'))
+            new Column(width('auto').style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('TransFirst ID'))
         );
     }
     if (array_key_exists(transaction_properties::$taxrate, $display)){
         $table->add_object(
-            new Column(width(25).style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Tax Rate'))
+            new Column(width('auto').style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Tax Rate'))
         );
     }
 
@@ -85,8 +85,7 @@ function search_transactions()
         $query->the_post();
         global $post;
         $transaction = $post->ID;
-        $table->add_object(
-            transaction_display($display, $transaction));
+        $table->add_object(transaction_display($display, $transaction));
         $table->add_object(
             new Row(style('border: none; padding: 0px; height: 1px;'),
                 new Column(colspan(count($display).style('padding-bottom: 0px;')),
@@ -129,17 +128,17 @@ function transaction_display($display, $id) {
     }
     if (array_key_exists(transaction_properties::$customer_name, $display)){
         $row->add_object(new Column(
-            new TextRender(transaction_properties::get_transaction_customer_name($id))
+            new TextRender(transaction_properties::get_customer_name($id))
         ));
     }
     if (array_key_exists(transaction_properties::$customer_address, $display)){
         $row->add_object(new Column(
-            new TextRender(transaction_properties::get_transaction_customer_address($id))
+            new TextRender(transaction_properties::get_customer_address($id))
         ));
     }
     if (array_key_exists(transaction_properties::$customer_email, $display)){
         $row->add_object(new Column(
-            new TextRender(transaction_properties::get_transaction_customer_email($id))
+            new TextRender(transaction_properties::get_customer_email($id))
         ));
     }
     if (array_key_exists(transaction_properties::$transfirstid, $display)){

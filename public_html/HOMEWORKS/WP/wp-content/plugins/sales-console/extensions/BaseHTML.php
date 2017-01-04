@@ -12,6 +12,8 @@ class BaseHTML
     public $mod = '';
     public $type = '';
 
+    public $close_tags = true;
+
     function __construct()
     {
         $args = func_get_args()[0];
@@ -33,10 +35,19 @@ class BaseHTML
     }
 
     public function Render() {
-        echo '<'.$this->type.' '.$this->mod.' >';
-        foreach ($this->renderables as $row) {
-            $row->Render();
+        if ($this->close_tags) {
+            echo '<' . $this->type . ' ' . $this->mod . ' >';
+            foreach ($this->renderables as $row) {
+                $row->Render();
+            }
+            echo '</' . $this->type . '>';
         }
-        echo '</'.$this->type.'>';
+        else {
+            echo '<' . $this->type . ' ' . $this->mod . ' ';
+            foreach ($this->renderables as $row) {
+                $row->Render();
+            }
+            echo ' />';
+        }
     }
 }

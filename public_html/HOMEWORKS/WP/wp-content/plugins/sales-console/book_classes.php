@@ -446,6 +446,21 @@ class book_properties {
         book_properties::set_consigners($book, $consigners);
     }
 
+    public static function sell_book($book_id) {
+        $consigners = self::get_consigners($book_id);
+        if (count($consigners) > 0) {
+            $soldconsigner = array_shift($consigners);
+        }
+        else {
+            $soldconsigner = get_consigner_owner_id(); //if quantity is wrong.. assume we sold the book from owner
+        }
+        if ($soldconsigner != get_consigner_owner_id()) {
+            consigner_properties::consigner_add_sold_book($soldconsigner, $book_id);
+        }
+        self::set_consigners($book_id, $consigners);
+
+    }
+
     public static function remove_book($book_id, $consigner_id) {
         self::remove_consigner_from_book($book_id, $consigner_id);
         consigner_properties::remove_book_from_consigner($consigner_id, $book_id);
