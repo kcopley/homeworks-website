@@ -94,12 +94,25 @@ function forAttr($str){
     return ' for="'.$str.'" ';
 }
 
+function ariahidden($str){
+    return ' aria-hidden="'.$str.'" ';
+}
+
+function tabindex($str){
+    return ' tabindex="'.$str.'" ';
+}
+
 function add_image($id) {
     set_post_thumbnail($id, absint( $_POST[book_request::$image_set]));
 }
 
 function button($value) {
     return new Input(classType('button-primary').type('submit').name('button').value($value));
+}
+
+function get_user_name() {
+    $user = wp_get_current_user();
+    return $user->first_name;
 }
 
 function get_state_comma($state) {

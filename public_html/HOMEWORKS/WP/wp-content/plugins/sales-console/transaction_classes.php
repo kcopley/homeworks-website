@@ -69,6 +69,13 @@ function QueryTransaction() {
             );
     }
 
+    if (transaction_request::GetCompleted() && transaction_request::GetCompleted() != 'all') {
+        $meta_query_array[] = array(
+            'key' => '_cmb_transaction_completed',
+            'value' => transaction_request::GetCompleted()
+        );
+    }
+
     $args['meta_query'] = $meta_query_array;
     return new WP_Query($args);
 }
@@ -87,12 +94,16 @@ class transaction_properties {
     public static $book_quantity = 'transaction_book_quantity';
     public static $book_price = 'transaction_price';
     public static $book_refunded_quantity = 'transaction_refunded_book_quantity';
+    public static $credit_name = 'transaction_credit_name';
+    public static $credit_amount = 'transaction_credit_amount';
 
     public static $payment_type = 'payment_type';
     public static $payment_amount = 'payment_amount';
 
     public static $removeable = 'transaction_removeable';
     public static $selectable = 'transaction_selectable';
+    public static $printable = 'transaction_printable';
+    public static $completed = 'transaction_completed';
 
     public static function create_book_transaction($book, $quantity) {
         return array(
@@ -101,6 +112,213 @@ class transaction_properties {
             self::$book_price => book_properties::get_book_saleprice($book),
             self::$book_refunded_quantity => 0,
         );
+    }
+
+    public static function create_refund_transaction($book, $quantity) {
+        return array(
+            self::$book_id => $book,
+            self::$book_quantity => $quantity,
+            self::$book_price => book_properties::get_book_saleprice($book)
+        );
+    }
+
+    public static function create_credit_transaction($name, $amount) {
+        return array(
+            self::$credit_name => $name,
+            self::$credit_amount => $amount
+        );
+    }
+
+    public static function get_refund_book_printing($id) {
+        $books = self::get_refunds($id);
+        $list = new RenderList();
+        if (!empty($books)) {
+            $list->add_object(
+                new Row(
+                    new Column(colspan(2), new H4(style('margin: 0px; padding-top: 4px; padding-bottom: 4px;'), new TextRender('Refunds:')))
+                )
+            );
+            $list->add_object(new Row(style('border: none; padding: 0px; height: 1px;'),
+                new Column(colspan(10).style('padding-bottom: 0px;'),
+                    new HR(style('margin: 0px;')))));
+            foreach ($books as $book) {
+                $book_id = $book[self::$book_id];
+                $title = book_properties::get_book_title($book_id);
+                $price = $book[self::$book_price];
+                $quantity = $book[self::$book_quantity];
+                $lineTotal = $price * $quantity;
+                $list->add_object(
+                    new Row(
+                        new Column(align('left') . colspan(2) . valign('top'),
+                            new TextRender(
+                                '(' . $quantity . ') ' . $title
+                            )
+                        ),
+                        new Column(valign('top') . width(15),
+                            new TextRender('-$' . number_format($lineTotal, 2))
+                        )
+                    )
+                );
+            }
+        }
+        return $list;
+    }
+
+    public static function get_book_printing($id) {
+        $books = self::get_books($id);
+        $list = new RenderList();
+        if (!empty($books)) {
+            $list->add_object(
+                new Row(
+                    new Column(colspan(2), new H4(style('margin: 0px; padding-top: 4px; padding-bottom: 4px;'), new TextRender('Books:')))
+                )
+            );
+            $list->add_object(new Row(style('border: none; padding: 0px; height: 1px;'),
+                new Column(colspan(10).style('padding-bottom: 0px;'),
+                    new HR(style('margin: 0px;')))));
+            foreach ($books as $book) {
+                $book_id = $book[self::$book_id];
+                $title = book_properties::get_book_title($book_id);
+                $price = $book[self::$book_price];
+                $quantity = $book[self::$book_quantity];
+                $lineTotal = $price * $quantity;
+                $list->add_object(
+                    new Row(
+                        new Column(align('left') . colspan(2) . valign('top'),
+                            new TextRender(
+                                '(' . $quantity . ') ' . $title
+                            )
+                        ),
+                        new Column(valign('top') . width(15),
+                            new TextRender('$' . number_format($lineTotal, 2))
+                        )
+                    )
+                );
+            }
+        }
+        return $list;
+    }
+
+    public static function get_credit_printing($id) {
+        $credits = self::get_credits($id);
+        $list = new RenderList();
+
+        if (!empty($credits)) {
+            $list->add_object(
+                new Row(
+                    new Column(colspan(2), new H4(style('margin: 0px; padding-top: 4px; padding-bottom: 4px;'), new TextRender('Credits:')))
+                )
+            );
+            $list->add_object(new Row(style('border: none; padding: 0px; height: 1px;'),
+                new Column(colspan(10).style('padding-bottom: 0px;'),
+                    new HR(style('margin: 0px;')))));
+            foreach ($credits as $credit) {
+                $name = $credit[self::$credit_name];
+                $amount = $credit[self::$credit_amount];
+                $list->add_object(
+                    new Row(
+                        new Column(align('left') . colspan(2) . valign('top'),
+                            new TextRender(
+                                $name
+                            )
+                        ),
+                        new Column(valign('top') . width(15),
+                            new TextRender('-$' . number_format($amount, 2))
+                        )
+                    )
+                );
+            }
+        }
+        return $list;
+    }
+
+    public static function get_payment_text($type) {
+        if ($type == checkout_payment::$payment_cash) {
+            return 'Cash';
+        }
+        if ($type == checkout_payment::$payment_credit) {
+            return 'Credit';
+        }
+        if ($type == checkout_payment::$payment_check) {
+            return 'Check';
+        }
+        if ($type == checkout_payment::$payment_phone) {
+            return 'Phone';
+        }
+    }
+
+    public static function get_payment_printing($id) {
+        $payments = self::get_payment_types($id);
+        $list = new RenderList();
+        if (!empty($payments)) {
+            foreach ($payments as $payment) {
+                $type = $payment[self::$payment_type];
+                $amount = $payment[self::$payment_amount];
+                $list->add_object(
+                    new Row(
+                        new Column(align('left') . colspan(2) . valign('top'),
+                            new TextRender(
+                                self::get_payment_text($type)
+                            )
+                        ),
+                        new Column(valign('top') . width(15),
+                            new TextRender('-$' . number_format($amount, 2))
+                        )
+                    )
+                );
+            }
+        }
+        return $list;
+    }
+
+    public static function get_refund_printing($id) {
+        $list = new RenderList();
+        if (self::get_refund_amount($id) > 0) {
+            $list->add_object(
+                new Row(
+                    new Column(valign('top')),
+                    new Column(align('right').valign('top').width(10),
+                        new Strong(new TextRender('Refund:'))),
+                    new Column(style('padding-left: 4px;'),
+                        new Strong(new TextRender(' $'.number_format(transaction_properties::get_refund_amount($id), 2)))
+                    )
+                )
+            );
+        }
+        else {
+            $list->add_object(
+                new Row(
+                    new Column(valign('top')),
+                    new Column(align('right').valign('top').width(10),
+                        new Strong(new TextRender('Due:'))),
+                    new Column(style('padding-left: 4px;'),
+                        new Strong(new TextRender(' $'.number_format(0, 2)))
+                    )
+                )
+            );
+        }
+        return $list;
+    }
+
+    public static function get_refund_amount($id) {
+        $amountPaid = ceil(self::get_total_paid($id) * 100);
+        $total = ceil(self::get_total($id) * 100);
+        if ($amountPaid > $total) {
+            return self::get_total_paid($id) - self::get_total($id);
+        }
+        else return 0;
+    }
+
+    public static function get_total_paid($id) {
+        $payments = self::get_payment_types($id);
+        $total = 0;
+        if (!empty($payments)) {
+            foreach ($payments as $payment) {
+                $amount = $payment[self::$payment_amount];
+                $total = $total + $amount;
+            }
+        }
+        return $total;
     }
 
     public static function get_id($postid){
@@ -132,12 +350,58 @@ class transaction_properties {
         update_post_meta($id, '_cmb_transaction_transfirstid', $transfirstid);
     }
 
+    public static function get_completed($id){
+        return get_post_meta($id, '_cmb_transaction_completed', true);
+    }
+
+    public static function set_completed($id, $completed){
+        update_post_meta($id, '_cmb_transaction_completed', $completed);
+    }
+
     public static function get_books($id) {
         return get_post_meta($id, '_cmb_transaction_books', true);
     }
 
+    public static function get_refunds($id) {
+        return get_post_meta($id, '_cmb_transaction_refunds', true);
+    }
+
+    public static function set_books_from_cart($id, $cart) {
+        $books = array();
+        foreach ($cart as $key => $value) {
+            $book = $key;
+            $quantity = $value[checkout_cart::$cart_book_quantity];
+            $books[] = self::create_book_transaction($book, $quantity);
+        }
+        self::set_books($id, $books);
+    }
+
+    public static function set_refunds_from_cart($id, $cart) {
+        $books = array();
+        foreach ($cart as $key => $value) {
+            $book = $key;
+            $quantity = $value[checkout_cart::$cart_book_quantity];
+            $books[] = self::create_book_transaction($book, $quantity);
+        }
+        self::set_refunds($id, $books);
+    }
+
+    public static function set_credits_from_cart($id, $credits) {
+        $creditarr = array();
+        foreach ($credits as $key => $value) {
+            $name = $value[checkout_cart::$credit_name];
+            $amount = $value[checkout_cart::$credit_amount];
+            $creditarr[] = self::create_credit_transaction($name, $amount);
+        }
+        self::set_credits($id, $creditarr);
+    }
+
     public static function set_books($id, $books) {
         update_post_meta($id, '_cmb_transaction_books', $books);
+    }
+
+    public static function set_refunds($id, $books) {
+        update_post_meta($id, '_cmb_transaction_refunds', $books);
     }
 
     public static function get_taxrate($id){
@@ -151,8 +415,8 @@ class transaction_properties {
     public static function create_payment_type($type, $amount, $transfirst) {
         return array(
             self::$payment_type => $type,
-            self::$payment_amount = $amount,
-            self::$transfirstid = $transfirst
+            self::$payment_amount => $amount,
+            self::$transfirstid => $transfirst
         );
     }
 
@@ -197,11 +461,11 @@ class transaction_properties {
             $books = array();
         }
         $books[$book] = self::create_book_transaction($book, $quantity);
-        self::set_stored_total($id, self::get_transaction_total($id));
+        self::set_stored_total($id, self::get_total($id));
     }
 
     public static function refund_book($id, $book, $quantity) {
-        $books = self::get_books($id);
+        $books = self::get_refunds($id);
         if (array_key_exists($book, $books)) {
             $existing_quantity = $books[$book][self::$book_quantity];
             $refunded_quantity = $books[$book][self::$book_refunded_quantity];
@@ -211,18 +475,21 @@ class transaction_properties {
             $books[$book][self::$book_quantity] = $existing_quantity - $quantity;
             $books[$book][self::$book_refunded_quantity] = $refunded_quantity + $quantity;
         }
-        self::set_books($id, $books);
+        self::set_refunds($id, $books);
     }
 
-    function get_transaction_total($transaction_id) {
-        $books = self::get_books($transaction_id);
+    public static function get_subtotal($id) {
+        $books = self::get_books($id);
         $total = 0;
         if (!empty($books)) {
-            foreach ($books as $book => $trans) {
-                $total += $trans[self::$book_quantity] * $trans[self::$book_price];
+            foreach ($books as $book) {
+                $price = $book[self::$book_price];
+                $quantity = $book[self::$book_quantity];
+                $lineTotal = $price * $quantity;
+                $total = $total + $lineTotal;
             }
+            return $total;
         }
-        return $total;
     }
 
     public static function get_credits($id) {
@@ -268,6 +535,143 @@ class transaction_properties {
     public static function remove_transaction($post) {
         wp_delete_post($post);
     }
+
+    public static function get_total($id) {
+        return self::get_subtotal($id) + self::get_tax_total($id) - self::get_credit_total($id) - self::get_refund_total($id);
+    }
+
+    public static function get_refund_total($id) {
+        $refunds = self::get_refunds($id);
+        $total = 0;
+        if (!empty($refunds)) {
+            foreach ($refunds as $refund) {
+                $amount = $refund[self::$book_price];
+                $total = $total + $amount;
+            }
+        }
+        return $total;
+    }
+
+    public static function get_credit_total($id) {
+        $credits = self::get_credits($id);
+        $total = 0;
+        if (!empty($credits)) {
+            foreach ($credits as $credit) {
+                $amount = $credit[self::$credit_amount];
+                $total = $total + $amount;
+            }
+        }
+        return $total;
+    }
+
+    public static function get_tax_total($id) {
+        $taxpercent = transaction_properties::get_taxrate($id);
+        $subtotal = self::get_subtotal($id);
+        return $subtotal * $taxpercent - self::get_refund_total($id) * $taxpercent;
+    }
+
+    public static function print_formatting($id) {
+        $print =
+            new Div(style('display: none;'),
+                new Div(id('toPrint'),
+                    new Paragraph(style('text-align: center;'),
+                        new Strong(new TextRender('Home Works for Books')),
+                        new BR(),
+                        new EM(new TextRender('Your homeschool connection for discounted new and used homeschool materials!'))
+                    ),
+                    new Paragraph(style('text-align: center;'),
+                        new TextRender(get_option('invoiceaddress')),
+                        new BR(),
+                        new Strong(new TextRender('Phone: ')),
+                        new TextRender(get_option('invoicephone')),
+                        new BR(),
+                        new TextRender('Come visit us online at '),
+                        new TextRender(get_option('invoiceURL')),
+                        new BR(),
+                        new BR(),
+                        new TextRender(date("Y/m/d H:i:s")),
+                        new BR(),
+                        new TextRender('Cashier: '.get_user_name())
+                    ),
+                    new Paragraph(), //blank
+                    new TableArr(border(0).cellpadding(0).cellspacing(0).width(100),
+                        transaction_properties::get_book_printing($id),
+                        transaction_properties::get_refund_book_printing($id),
+                        transaction_properties::get_credit_printing($id),
+                        new Row(
+                            new Column(),
+                            new Column(align('left').colspan(2).valign('middle'),
+                                new HR()
+                            )
+                        ),
+                        new Row(
+                            new Column(valign('top')),
+                            new Column(align('right').valign('top').width(10),
+                                new Strong(new TextRender('Subtotal:'))),
+                            new Column(style('padding-left: 4px;'),
+                                new Strong(new TextRender(' $'.number_format(transaction_properties::get_subtotal($id), 2)))
+                            )
+                        ),
+                        new Row(
+                            new Column(valign('top')),
+                            new Column(align('right').valign('top').width(10),
+                                new Strong(new TextRender('Refunds:'))),
+                            new Column(style('padding-left: 4px;'),
+                                new Strong(new TextRender(' -$'.number_format(transaction_properties::get_refund_total($id), 2)))
+                            )
+                        ),
+                        new Row(
+                            new Column(valign('top')),
+                            new Column(align('right').valign('top').width(10),
+                                new Strong(new TextRender('Credits:'))),
+                            new Column(style('padding-left: 4px;'),
+                                new Strong(new TextRender(' $'.number_format(transaction_properties::get_credit_total($id), 2)))
+                            )
+                        ),
+                        new Row(
+                            new Column(valign('top')),
+                            new Column(align('right').valign('top').width(10),
+                                new Strong(new TextRender('Tax:'))),
+                            new Column(style('padding-left: 4px;'),
+                                new Strong(new TextRender(' $'.number_format(transaction_properties::get_tax_total($id), 2)))
+                            )
+                        ),
+                        new Row(
+                            new Column(),
+                            new Column(align('left').colspan(2).valign('middle'),
+                                new HR()
+                            )
+                        ),
+                        new Row(
+                            new Column(valign('top')),
+                            new Column(align('right').valign('top').width(10),
+                                new Strong(new TextRender('Total:'))),
+                            new Column(style('padding-left: 4px;'),
+                                new Strong(new TextRender(' $'.number_format(transaction_properties::get_total($id), 2)))
+                            )
+                        ),
+                        new Row(
+                            new Column(colspan(2), new H4(style('margin: 0px; padding-top: 4px; padding-bottom: 4px;'), new TextRender('Payments:')))
+                        ),
+                        new Row(style('border: none; padding: 0px; height: 1px;'),
+                            new Column(colspan(10).style('padding-bottom: 0px;'),
+                                new HR(style('margin: 0px;')))),
+                        transaction_properties::get_payment_printing($id),
+                        transaction_properties::get_refund_printing($id)
+                    ),
+                    new Paragraph(style('text-align: center;'),
+                        new TextRender(get_option('invoicepromo'))
+                    ),
+                    new Paragraph(style('text-align: center;'),
+                        new Strong(new TextRender('Invoice: #')),
+                        new TextRender(transaction_properties::get_id($id)),
+                        new BR(),
+                        new TextRender('Customer Copy')
+                    )
+                )
+            );
+        $print->Render();
+    }
 }
 
 class transaction_request {
@@ -281,6 +685,11 @@ class transaction_request {
     public static $taxrate = 'req_transaction_taxrate';
     public static $totalto = 'req_transaction_total_to';
     public static $totalfrom = 'req_transaction_total_from';
+    public static $completed = 'req_transaction_completed';
+
+    public static function GetCompleted() {
+        return $_REQUEST[self::$completed];
+    }
 
     public static function GetID() {
         return $_REQUEST[self::$id];
@@ -375,7 +784,8 @@ class transaction_request {
             new Input(id(self::$taxrate).name(self::$taxrate).type('hidden').value(self::GetTaxRate())),
             new Input(id(self::$transfirstid).name(self::$transfirstid).type('hidden').value(self::GetTransFirstID())),
             new Input(id(self::$totalto).name(self::$totalto).type('hidden').value(self::GetTotalTo())),
-            new Input(id(self::$totalfrom).name(self::$totalfrom).type('hidden').value(self::GetTotalFrom()))
+            new Input(id(self::$totalfrom).name(self::$totalfrom).type('hidden').value(self::GetTotalFrom())),
+            new Input(id(self::$completed).name(self::$completed).type('hidden').value(self::GetCompleted()))
         );
         return $renderlist;
     }

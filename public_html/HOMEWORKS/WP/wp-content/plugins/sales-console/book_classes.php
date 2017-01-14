@@ -455,6 +455,7 @@ class book_properties {
             $soldconsigner = get_consigner_owner_id(); //if quantity is wrong.. assume we sold the book from owner
         }
         if ($soldconsigner != get_consigner_owner_id()) {
+            consigner_properties::remove_book_from_consigner($soldconsigner, $book_id);
             consigner_properties::consigner_add_sold_book($soldconsigner, $book_id);
         }
         self::set_consigners($book_id, $consigners);

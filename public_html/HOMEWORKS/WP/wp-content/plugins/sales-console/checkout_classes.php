@@ -27,6 +27,7 @@ class checkout_payment {
     public static $payment_check = 'payment_check';
     public static $payment_phone = 'payment_phone';
 
+    public static $display_payment_info = 'display_payment_info';
     public static $display_credit = 'display_credit';
     public static $display_phone = 'display_phone';
     public static $display_cash = 'display_cash';
@@ -148,14 +149,6 @@ class checkout_payment {
     public static function InputZip() {
         return new Input(id(self::$zip).name(self::$zip).type('text'));
     }
-
-    public static function SetRefund($value) {
-        $_REQUEST[self::$refund_amount] = $value;
-    }
-
-    public static function GetRefund() {
-        return $_REQUEST[self::$refund_amount];
-    }
 }
 
 class checkout_width_constants {
@@ -218,6 +211,7 @@ class checkout_request {
 class checkout_cart {
     public static $session_cart = 'session_cart';
     public static $session_credit = 'session_credit';
+    public static $session_refund = 'session_refund';
 
     public static $cart_book_id = 'cart_book_barcode';
     public static $cart_book_quantity = 'cart_book_quantity';
@@ -233,6 +227,14 @@ class checkout_cart {
         $_SESSION[self::$session_cart] = $cart;
     }
 
+    public static function GetRefundBooks() {
+        return $_SESSION[self::$session_refund];
+    }
+
+    public static function SetRefundBooks($refund) {
+        $_SESSION[self::$session_refund] = $refund;
+    }
+
     public static function GetCredit() {
         return $_SESSION[self::$session_credit];
     }
@@ -242,6 +244,18 @@ class checkout_cart {
     }
 
     public static function add_book($barcode, $isbn, $quantity) {
+        $book = self::get_book($barcode, $isbn);
+        if ($book == null) return;
+        self::add_book_to_cart($book, $quantity);
+    }
+
+    public static function add_refund($barcode, $isbn, $quantity) {
+        $book = self::get_book($barcode, $isbn);
+        if ($book == null) return;
+        self::add_book_to_refund($book, $quantity);
+    }
+
+    public static function get_book($barcode, $isbn) {
         $book = null;
         if ($barcode != -1) {
             $query = new WP_Query(
@@ -277,9 +291,7 @@ class checkout_cart {
                 break;
             endwhile;
         }
-        if ($book != null) {
-            self::add_book_to_cart($book, $quantity);
-        }
+        return $book;
     }
 
     public static function add_book_to_cart($book, $quantity) {
@@ -295,6 +307,21 @@ class checkout_cart {
             $cart[$book] = self::create_cart_entry($book, $quantity);
         }
         self::SetCart($cart);
+    }
+
+    public static function add_book_to_refund($book, $quantity) {
+        if ($book == null) return;
+
+        $cart = self::GetRefundBooks();
+        if (!$cart) $cart = array();
+
+        if (array_key_exists($book, $cart)) {
+            $cart[$book][self::$cart_book_quantity] = $cart[$book][self::$cart_book_quantity] + $quantity;
+        }
+        else {
+            $cart[$book] = self::create_cart_entry($book, $quantity);
+        }
+        self::SetRefundBooks($cart);
     }
 
     public static function create_cart_entry($book, $quantity) {
@@ -326,6 +353,28 @@ class checkout_cart {
         self::SetCart($cart);
     }
 
+    public static function remove_book_from_refund($book, $quantity) {
+        if ($book == null) return;
+
+        $cart = self::GetRefundBooks();
+        if (array_key_exists($book, $cart)) {
+            $book_arr = $cart[$book];
+            if ($quantity == 'all') {
+                unset($cart[$book]);
+            }
+            else {
+                $book_arr[self::$cart_book_quantity] = $book_arr[self::$cart_book_quantity] - $quantity;
+
+                if ($book_arr[self::$cart_book_quantity] <= 0) {
+                    unset($cart[$book]);
+                } else {
+                    $cart[$book] = $book_arr;
+                }
+            }
+        }
+        self::SetRefundBooks($cart);
+    }
+
     public static function clear_cart() {
         unset($_SESSION[self::$session_cart]);
         $_SESSION[self::$session_cart] = array();
@@ -336,9 +385,15 @@ class checkout_cart {
         $_SESSION[self::$session_credit] = array();
     }
 
+    public static function clear_refunds() {
+        unset($_SESSION[self::$session_refund]);
+        $_SESSION[self::$session_refund] = array();
+    }
+
     public static function clear_all() {
         self::clear_cart();
         self::clear_credit();
+        self::clear_refunds();
     }
 
     public static function add_credit($credit_name, $amount) {

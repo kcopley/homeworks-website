@@ -47,7 +47,6 @@ function search_consigners()
             new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender('Date Added'))
         );
     }
-
     $table->add_object(
         new Row(style('border: none; padding-bottom: 8px; height: 1px;'),
             new Column(colspan(count($display).style('padding-bottom: 8px;')),
@@ -143,8 +142,7 @@ function request_form_consigners() {
                     )
                 )
             )
-        ),
-        new Column(width(40))
+        )
     );
 }
 

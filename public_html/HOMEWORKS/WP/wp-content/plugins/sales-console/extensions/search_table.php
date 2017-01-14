@@ -18,7 +18,7 @@ function search_books()
         book_properties::$barcode => true,
         book_properties::$isbn => true,
         book_properties::$publisher => true,
-        book_properties::$cost => true,
+        //book_properties::$cost => true,
         book_properties::$price => true,
         book_properties::$quantity => true
     );

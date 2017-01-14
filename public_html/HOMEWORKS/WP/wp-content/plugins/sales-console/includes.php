@@ -28,3 +28,6 @@ include_once "checkout_classes.php";
 include_once "extensions/Paragraph.php";
 include_once "extensions/strong.php";
 include_once "extensions/BR.php";
+include_once "extensions/EM.php";
+include_once "extensions/Button.php";
+include_once "extensions/TextArea.php";

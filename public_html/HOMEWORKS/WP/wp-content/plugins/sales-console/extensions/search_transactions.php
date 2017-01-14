@@ -20,7 +20,10 @@ function search_transactions()
         transaction_properties::$total => true,
         transaction_properties::$transfirstid => true,
         transaction_properties::$taxrate => true,
-        transaction_properties::$removeable => true
+        transaction_properties::$removeable => true,
+        transaction_properties::$completed => true,
+        transaction_properties::$printable => true,
+        transaction_properties::$selectable => true
     );
 
     $displays = func_get_args();
@@ -123,7 +126,7 @@ function transaction_display($display, $id) {
     }
     if (array_key_exists(transaction_properties::$total, $display)){
         $row->add_object(new Column(
-            new TextRender(transaction_properties::get_stored_total($id))
+            new TextRender('$'.number_format(transaction_properties::get_stored_total($id), 2))
         ));
     }
     if (array_key_exists(transaction_properties::$customer_name, $display)){
@@ -152,7 +155,7 @@ function transaction_display($display, $id) {
         ));
     }
     if (array_key_exists(transaction_properties::$removeable, $display)) {
-        $row->add_object(new Column(
+        $row->add_object(new Column(align('center'),
             new Form(
                 selection::InputTransaction($id),
                 transaction_request::Store(),
@@ -220,6 +223,16 @@ function request_form_transactions() {
                 new Row (
                     new Column(align('right').width($leftwidth), new Label(new TextRender('TransFirst ID:'))),
                     new Column(width($rightwidth).style('padding-left: 5px;'), transaction_request::InputTransFirstID())
+                ),
+                new Row (
+                    new Column(align('right').width($leftwidth), new Label(new TextRender('Complete?:'))),
+                    new Column(width($rightwidth).style('padding-left: 5px;'),
+                        new Input(type('radio').name(transaction_request::$completed).value(1).checkedAttr('true')),
+                        new TextRender('True '),
+                        new Input(type('radio').name(transaction_request::$completed).value(-1)),
+                        new TextRender('False '),
+                        new Input(type('radio').name(transaction_request::$completed).value('all')),
+                        new TextRender('All '))
                 )
             )
         )

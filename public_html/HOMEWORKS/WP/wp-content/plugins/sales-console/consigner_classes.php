@@ -43,8 +43,17 @@ class consigner_properties {
     public static $name = 'consigner_name';
     public static $date = 'consigner_date';
     public static $id = 'consigner_id';
+    public static $consigner_email = 'consigner_email';
+    public static $consigner_address = 'consigner_address';
+    public static $consigner_phone = 'consigner_phone';
+    public static $consigner_paypal = 'consigner_paypal';
+    public static $consigner_additional_info = 'consigner_additional_info';
     public static $delete = 'consigner_deletable';
     public static $selectable = 'consigner_selectable';
+    public static $paid_column = 'paid_column';
+
+    public static $book_id = 'id';
+    public static $book_paid = 'paid';
 
     public static function get_consigner_name($consigner) {
         return get_the_title($consigner);
@@ -70,7 +79,7 @@ class consigner_properties {
         update_post_meta($consigner, "_cmb_consigner_books", $books);
     }
 
-    public static function get_consigner_sold_books($consigner) {
+    public static function get_sold_books($consigner) {
         $ret = get_post_meta($consigner, "_cmb_consigner_sold_books", true);
         if (!$ret){
             $ret = array();
@@ -98,14 +107,62 @@ class consigner_properties {
         update_post_meta($consigner, "_cmb_consigner_date", $date);
     }
 
+    public static function get_consigner_paypal($consigner) {
+        return get_post_meta($consigner, "_cmb_consigner_paypal", true);
+    }
+
+    public static function set_consigner_paypal($consigner, $paypal) {
+        update_post_meta($consigner, "_cmb_consigner_paypal", $paypal);
+    }
+
+    public static function get_consigner_info($consigner) {
+        return get_post_meta($consigner, "_cmb_consigner_info", true);
+    }
+
+    public static function set_consigner_info($consigner, $info) {
+        update_post_meta($consigner, "_cmb_consigner_info", $info);
+    }
+
+    public static function get_consigner_address($consigner) {
+        return get_post_meta($consigner, "_cmb_consigner_address", true);
+    }
+
+    public static function set_consigner_address($consigner, $address) {
+        update_post_meta($consigner, "_cmb_consigner_address", $address);
+    }
+
+    public static function get_consigner_email($consigner) {
+        return get_post_meta($consigner, "_cmb_consigner_email", true);
+    }
+
+    public static function set_consigner_email($consigner, $email) {
+        update_post_meta($consigner, "_cmb_consigner_email", $email);
+    }
+
+    public static function get_consigner_phone($consigner) {
+        return get_post_meta($consigner, "_cmb_consigner_phone", true);
+    }
+
+    public static function set_consigner_phone($consigner, $phone) {
+        update_post_meta($consigner, "_cmb_consigner_phone", $phone);
+    }
+
     public static function consigner_add_sold_book($consigner_id, $book_id) {
-        $books = consigner_properties::get_consigner_sold_books($consigner_id);
-        $books[$book_id] = 'N';
+        $books = consigner_properties::get_sold_books($consigner_id);
+        if (!$books) $books = array();
+        $books[] = self::create_sold_book($book_id);
         consigner_properties::set_consigner_sold_books($consigner_id, $books);
     }
 
+    public static function create_sold_book($book_id) {
+        return array(
+            self::$book_id => $book_id,
+            self::$book_paid => 'No'
+        );
+    }
+
     function consigner_remove_sold_book($consigner_id, $book_id) {
-        $books = consigner_properties::get_consigner_sold_books($consigner_id);
+        $books = consigner_properties::get_sold_books($consigner_id);
         if (($key = array_search($book_id, $books)) !== false) {
             unset($books[$key]);
         }
@@ -165,6 +222,11 @@ class consigner_addition {
     public static $name = 'add_name';
     public static $date = 'add_date';
     public static $id = 'add_id';
+    public static $address = 'add_address';
+    public static $email = 'add_email';
+    public static $paypal = 'add_paypal';
+    public static $info = 'add_additional_info';
+    public static $phone = 'add_phone';
 
     public static function InputName() {
         return new Input(id(self::$name).name(self::$name).type('text'));
@@ -190,10 +252,62 @@ class consigner_addition {
         return $_REQUEST[self::$id];
     }
 
+    public static function InputEmail() {
+        return new Input(id(self::$email).name(self::$email).type('text'));
+    }
+
+    public static function GetEmail() {
+        return $_REQUEST[self::$email];
+    }
+
+    public static function InputAddress() {
+        return new Input(id(self::$address).name(self::$address).type('text'));
+    }
+
+    public static function GetAddress() {
+        return $_REQUEST[self::$address];
+    }
+
+    public static function InputPaypal() {
+        return new Input(id(self::$paypal).name(self::$paypal).type('text'));
+    }
+
+    public static function GetPaypal() {
+        return $_REQUEST[self::$paypal];
+    }
+
+    public static function InputPhone() {
+        return new Input(id(self::$phone).name(self::$phone).type('text'));
+    }
+
+    public static function GetPhone() {
+        return $_REQUEST[self::$phone];
+    }
+
+    public static function InputAdditionalInfo() {
+        return new TextArea(id(self::$info).name(self::$info).type('text'));
+    }
+
+    public static function GetAdditionalInfo() {
+        return $_POST[self::$info];
+    }
+
     public static function add_consigner() {
         //Get the input data from form
         $consignertitle = self::GetName();
         $consignerdate = self::GetDate();
+        if (!$consignertitle)
+            return;
+        if (!$consignerdate) {
+            date_default_timezone_set('America/Chicago');
+            $consignerdate = date('Y-m-d');
+        }
+
+        $phone = self::GetPhone();
+        $address = self::GetAddress();
+        $paypal = self::GetPaypal();
+        $info = self::GetAdditionalInfo();
+        $email = self::GetEmail();
 
         $order = array(
             'post_title' => $consignertitle,
@@ -215,6 +329,11 @@ class consigner_addition {
 
         consigner_properties::set_consigner_id($postid, $newConsignerID);
         consigner_properties::set_consigner_date($postid, $consignerdate);
+        consigner_properties::set_consigner_address($postid, $address);
+        consigner_properties::set_consigner_phone($postid, $phone);
+        consigner_properties::set_consigner_paypal($postid, $paypal);
+        consigner_properties::set_consigner_info($postid, $info);
+        consigner_properties::set_consigner_email($postid, $email);
         return $postid;
     }
 }
@@ -224,6 +343,12 @@ class consigner_editing {
     public static $name = 'edit_name';
     public static $date = 'edit_date';
     public static $id = 'edit_id';
+
+    public static $phone = 'edit_phone';
+    public static $email = 'edit_email';
+    public static $address = 'edit_address';
+    public static $info = 'edit_info';
+    public static $paypal = 'edit_paypal';
 
     public static function GetName() {
         return $_REQUEST[self::$name];
@@ -237,10 +362,35 @@ class consigner_editing {
         return $_REQUEST[self::$id];
     }
 
+    public static function GetPhone() {
+        return $_REQUEST[self::$phone];
+    }
+
+    public static function GetPaypal() {
+        return $_REQUEST[self::$paypal];
+    }
+
+    public static function GetAddress() {
+        return $_REQUEST[self::$address];
+    }
+
+    public static function GetInfo() {
+        return $_POST[self::$info];
+    }
+
+    public static function GetEmail() {
+        return $_REQUEST[self::$email];
+    }
+
     public static function UpdateConsigner($id) {
         if (self::GetName()) consigner_properties::set_consigner_name($id, self::GetName());
         if (self::GetID()) consigner_properties::set_consigner_id($id, self::GetID());
         if (self::GetDate()) consigner_properties::set_consigner_date($id, self::GetDate());
+        if (self::GetEmail()) consigner_properties::set_consigner_email($id, self::GetEmail());
+        if (self::GetPhone()) consigner_properties::set_consigner_phone($id, self::GetPhone());
+        if (self::GetAddress()) consigner_properties::set_consigner_address($id, self::GetAddress());
+        if (self::GetInfo()) consigner_properties::set_consigner_info($id, self::GetInfo());
+        if (self::GetPaypal()) consigner_properties::set_consigner_paypal($id, self::GetPaypal());
     }
 }
 

@@ -31,7 +31,8 @@ class action_types {
 
     public static $add_item_checkout = 'add_item_to_checkout';
     public static $add_credit_checkout = 'add_credit_to_checkout';
-    public static $remove_item_checkout = 'remove_item_to_checkout';
+    public static $remove_item_checkout = 'remove_item_from_checkout';
+    public static $remove_item_refund = 'remove_item_from_refund';
     public static $remove_credit_checkout = 'remove_credit_to_checkout';
     public static $clear_checkout_cart = 'clear_checkout_cart';
     public static $clear_checkout_credit = 'clear_checkout_credit';
