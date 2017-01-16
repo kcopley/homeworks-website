@@ -6,7 +6,7 @@
  * Time: 3:06 PM
  */
 class action_types {
-    public static $search = 'search_action';
+    public static $search_books = 'search_action';
     public static $add_book = 'add_book_action';
     public static $select_book = 'select_book_action';
     public static $edit_book = 'edit_book_action';
