@@ -19,6 +19,26 @@ function get_consigner_owner() { return '_cmb_consigner_owner'; }
 function get_consigner_owner_id() { return get_option(get_consigner_owner()); }
 function set_consigner_owner() { update_option('_cmb_consigner_owner', 66755); }
 
+class vars {
+    public static $var_name = 0;
+    public static $var_type = 1;
+    public static $var_db = 2;
+    public static $var_search = 3;
+    public static $var_edit = 4;
+    public static $var_add = 5;
+    public static $var_format = 6;
+
+    public static $search_prefix = 'search_';
+    public static $edit_prefix = 'edit_';
+    public static $add_prefix = 'add_';
+}
+
+function dump($var) {
+    echo '<pre>';
+    var_dump($var);
+    echo '</pre>';
+}
+
 function align($type) {
     return ' align="'.$type.'" ';
 }

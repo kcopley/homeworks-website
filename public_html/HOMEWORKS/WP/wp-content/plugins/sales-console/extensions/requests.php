@@ -6,13 +6,37 @@
  * Time: 3:06 PM
  */
 class action_types {
-    public static $search_books = 'search_action';
+    public static $delete_sure = 'deletion_sure';
+    public static $consigner_books = 'search_consigner_books';
+    public static function get_search($source) {
+        return 'search_'.$source.'_action';
+    }
+    public static function get_add($source) {
+        return 'add_'.$source.'_action';
+    }
+    public static function get_select($source) {
+        return 'select_'.$source.'_action';
+    }
+    public static function get_update($source) {
+        return 'update_'.$source.'_action';
+    }
+    public static function get_delete($source) {
+        return 'delete_'.$source.'_action';
+    }
+    public static function get_delete_sure($source) {
+        return 'delete_'.$source.'_sure_action';
+    }
+    public static function add_image($source) {
+        return 'add_image_'.$source;
+    }
+
+    public static $search_books = 'search_book_action';
     public static $add_book = 'add_book_action';
     public static $select_book = 'select_book_action';
-    public static $edit_book = 'edit_book_action';
+    public static $edit_book = 'update_book_action';
     public static $delete_book = 'delete_book_action';
     public static $delete_book_sure = 'delete_book_sure_action';
-    public static $change_book = 'change_book_action';
+
     public static $add_image_to_book_search = 'add_image_to_book_search';
     public static $add_image_to_book_edit = 'add_image_to_book_edit';
 
@@ -43,9 +67,17 @@ class action_types {
 }
 
 class selection {
-    public static $book = 'selected_book';
-    public static $consigner = 'selected_consigner';
-    public static $transaction = 'selected_transaction';
+    public static function SetID($id, $source) {
+        return new Input(id('selection_'.$source).type('hidden').name('selection_'.$source).value($id));
+    }
+
+    public static function SetIDForm($id, $source, $form) {
+        return new Input(form($form).id('selection_'.$source).type('hidden').name('selection_'.$source).value($id));
+    }
+
+    public static function GetID($source) {
+        return $_REQUEST['selection_'.$source];
+    }
 
     public static function InputBook($id) {
         return new Input(id(selection::$book).type('hidden').name(selection::$book).value($id));
@@ -77,6 +109,10 @@ class page_action {
 
     public static function InputAction($value) {
         return new Input(id(page_action::$action).name(page_action::$action).type('hidden').value($value));
+    }
+
+    public static function InputActionForm($value, $form) {
+        return new Input(form($form).id(page_action::$action).name(page_action::$action).type('hidden').value($value));
     }
 
     public static function GetAction() {

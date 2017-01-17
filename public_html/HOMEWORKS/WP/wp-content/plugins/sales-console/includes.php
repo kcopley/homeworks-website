@@ -25,5 +25,7 @@ include_once "extensions/BR.php";
 include_once "extensions/EM.php";
 include_once "extensions/Button.php";
 include_once "extensions/TextArea.php";
+include_once "extensions/Inputs.php";
+include_once "extensions/Generation.php";
 include_once "Book.php";
 include_once "Consigner.php";

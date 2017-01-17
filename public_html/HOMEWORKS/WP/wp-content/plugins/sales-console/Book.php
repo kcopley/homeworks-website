@@ -7,21 +7,47 @@
  * Time: 7:31 PM
  */
 class Book {
-    public static $var_name = 0;
-    public static $var_type = 1;
-    public static $var_db = 2;
-    public static $var_search = 3;
-    public static $var_edit = 4;
-    public static $var_add = 5;
-    public static $var_display = 6;
-    public static $var_format = 7;
-    public static $var_radio = 8;
+    static function init()
+    {
+        self::$props = array();
 
-    public static $search_prefix = 'search_';
-    public static $edit_prefix = 'edit_';
-    public static $add_prefix = 'add_';
+        self::$props[] = new Text('book_title', 'Name', 'title');
+        $barcode = new Text('book_barcode', 'Barcode', '_cmb_resource_barcode');
+        $barcode->exact = 1;
+        $barcode->add_param = false;
+        $barcode->display_in_add = false;
+        $barcode->edit_param = false;
+        self::$props[] = $barcode;
 
-    public static $props = array(
+        self::$props[] = new Text('book_cost', 'Cost', '_cmb_resource_cost');
+        self::$props[] = new Text('book_price', 'Price', '_cmb_resource_price');
+        self::$props[] = new Text('book_msrp', 'MSRP', '_cmb_resource_MSRP');
+        self::$props[] = new Text('book_publisher', 'Publisher', '_cmb_resource_publisher');
+        self::$props[] = new Text('book_isbn', 'ISBN', '_cmb_resource_isbn');
+
+        $condition = new Radio('book_condition', 'Condition', '_cmb_resource_condition');
+        $condition->options = array('Used', 'New');
+        self::$props[] = $condition;
+
+        $availability = new Radio('book_availability', 'Available', '_cmb_resource_available');
+        $availability->options = array('Active', 'Inactive');
+        self::$props[] = $availability;
+
+        $image = new Image('book_image', 'Image', 'image');
+        $image->options = array('Yes', 'No');
+        $image->add_param = false;
+        $image->display_in_add = false;
+        $image->edit_param = false;
+        $image->display_in_edit = false;
+        self::$props[] = $image;
+        //$online = new Checkbox('book_online', 'Online', '_cmb_resource_online');
+    }
+
+    public static $source = 'Book';
+    public static $post_type = 'bookstore';
+    public static $props ;
+        /*
+        = array(
         //variable,                 data type, database reference, search, edit, add, display, formatted-variable, radio-categories
         array('book_title',     'text', 'title',                true, true, true, true, 'Name'),
         array('book_barcode',   'text', '_cmb_resource_barcode',  true, false, true, true, 'Barcode'),
@@ -35,6 +61,7 @@ class Book {
         array('book_online',     'checkbox', '_cmb_resource_online',  false, true, true, true, 'Online'),
         array('book_image',     'radio', 'image',  true, true, false, true, 'Image', array('All', 'Yes', 'No')),
     );
+*/
 
     public static function GenerateInput($prop, $prefix, $postfix) {
         return new Input(id($prefix.$prop[Book::$var_name].$postfix).name($prefix.$prop[Book::$var_name].$postfix).type($prop[Book::$var_type]));
@@ -62,16 +89,16 @@ class Book {
         return new TableArr(border(0).cellpadding(0).cellspacing(0).width(100),
             new Row(
                 new Column(width(45),
-                    Book::GenerateSearchBox()
+                    GenerateSearchBox(self::$props, self::$source, 'Search:', 'Search Books')
                 ),
                 new Column(width(45),
-                    Book::GenerateAddBox()
+                    GenerateAddBox(self::$props, self::$source, 'Add:', 'Add Book')
                 ),
                 new Column(width(10))
             )
         );
     }
-
+/*
     public static function GenerateSearchBox() {
         $leftwidth = 45;
         $rightwidth = 55;
@@ -203,7 +230,7 @@ class Book {
         );
         return $form;
     }
-
+*/
     public static function GenerateQuery($num_posts, $offset) {
         $args = array(
             'posts_per_page' => $num_posts,
@@ -458,22 +485,6 @@ class Book {
         update_post_meta($book, '_cmb_resource_consigners', $consigners);
     }
 
-    public static function get_image_form($id, $action) {
-        $color = 'red';
-        $text = 'No';
-        if (book_properties::has_book_image($id)){
-            $text = 'Yes';
-            $color = 'green';
-        }
-        return new Form(method('post').id($id).name($id),
-            page_action::InputAction($action),
-            book_request::Store(),
-            selection::InputBook($id),
-            new Input(id($id).type('button').classType('upload_image_button').style('color: '.$color.';').value($text)),
-            new Input(type('hidden').name(book_request::$image_set).id(book_request::$image_set))
-        );
-    }
-
     public static function add_book($book_id, $consigner_id) {
         book_properties::add_consigner_to_book($book_id, $consigner_id);
         consigner_properties::add_book_to_consigner($consigner_id, $book_id);
@@ -515,3 +526,4 @@ class Book {
         book_properties::set_consigners($book, $consigners);
     }
 }
+Book::init();
