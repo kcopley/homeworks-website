@@ -151,7 +151,7 @@ function GenerateAddBox($props, $source, $title, $button) {
 function GenerateQuery($props, $post_type, $display_post_num, $offset) {
     $args = array(
         'numberposts' => $display_post_num,
-        'posts_per_page' => 25,
+        'posts_per_page' => $display_post_num,
         'order' => 'ASC',
         'orderby' => 'date',
         'post_type' => $post_type,
@@ -161,6 +161,7 @@ function GenerateQuery($props, $post_type, $display_post_num, $offset) {
     add_filter('get_meta_sql','cast_decimal_precision');
     $meta_query_array = array('relation' => 'AND');
     $args['meta_query'] = $meta_query_array;
+
 
     foreach ($props as $key => $prop) {
         if ($prop->search_param) {
@@ -173,25 +174,43 @@ function GenerateQuery($props, $post_type, $display_post_num, $offset) {
 function GenerateSearch($props, $source, $post_type) {
     $table = new TableArr(id('formtable').width(100).border(0).cellspacing(0).cellpadding(0).style('margin: 10px 0 50px;'));
 
+    $toprow = new Row();
+    $table->add_object($toprow);
+    $nextRow = new Row();
+    $table->add_object($nextRow);
     $counter = 0;
+    $cols = array();
     foreach ($props as $key => $prop) {
-        if ($prop->search_param) {
+        if ($prop->display_in_search) {
             if ($counter == 0) {
-                $table->add_object(
-                    new Column(width(20).style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender($prop->format))
+                $col =  new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender($prop->format));
+                $cols[] = $col;
+                $nextRow->add_object(
+                    $col
                 );
             }
             else {
-                $table->add_object(
-                    new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender($prop->format))
+                $col = new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender($prop->format));
+                $cols[] = $col;
+                $nextRow->add_object(
+                    $col
                 );
             }
             $counter++;
         }
     }
-    $table->add_object(
-        new Column(width(20))
-    );
+
+    $width = 100 / ($counter + 1);
+    $first = true;
+    foreach ($cols as $col) {
+        if ($first) {
+            $col->add_object(width($width * 2));
+            $first = false;
+        }
+        else {
+            $col->add_object(width($width));
+        }
+    }
 
     $table->add_object(
         new Row(style('border: none; padding-bottom: 8px; height: 1px;'),
@@ -206,6 +225,8 @@ function GenerateSearch($props, $source, $post_type) {
     if ($offset < 0) $offset = 0;
 
     $query = GenerateQuery($props, $post_type, $display_post_num, $offset);
+
+    $toprow->add_object(new Column(new Strong(new TextRender('Search found '.$query->found_posts.' posts.'))));
     while ($query->have_posts()):
         $query->the_post();
         global $post;
@@ -213,7 +234,7 @@ function GenerateSearch($props, $source, $post_type) {
         $table->add_object(Display($props, $id, $source));
         $table->add_object(
             new Row(style('border: none; padding: 0px; height: 1px;'),
-                new Column(colspan($counter+5).style('padding-bottom: 0px;'),
+                new Column(colspan($counter+1).style('padding-bottom: 0px;'),
                     new HR(style('margin: 0px;')))
             ));
     endwhile;
@@ -270,15 +291,26 @@ function GenerateSearch($props, $source, $post_type) {
 function Display($props, $id, $source) {
     $row = new Row();
     $counter = 0;
+    $cols = array();
     foreach ($props as $key => $prop) {
         if ($prop->display_in_search) {
-            $row->add_object($prop->GetDisplay($id, $source));
+            $col = $prop->GetDisplay($id, $source);
+            $cols[] = $col;
+            $row->add_object($col);
             $counter++;
         }
     }
-    $row->add_object(
-        new Column(width(20))
-    );
+    $width = 100 / ($counter + 1);
+    $first = true;
+    foreach ($cols as $col) {
+        if ($first) {
+            $col->add_object(width($width * 2));
+            $first = false;
+        }
+        else {
+            $col->add_object(width($width));
+        }
+    }
     return $row;
 }
 
@@ -437,7 +469,7 @@ function Add($props, $source, $post_type) {
         //Set up ID
         $lastID = get_option('_cmb_consigner_lastID');
         if ($lastID == false) {
-            add_option('_cmb_consigner_lastID', 20000);
+            add_option('_cmb_consigner_lastID', 0);
             $lastID = get_option('_cmb_consigner_lastID');
             Consigner::update_owner($postid);
         }
@@ -449,7 +481,7 @@ function Add($props, $source, $post_type) {
     else if ($source == 'Book' && $idprop != null){
         $lastBarcodeExists = get_option('_cmb_resource_lastBarcode');
         if ($lastBarcodeExists == false){
-            add_option('_cmb_resource_lastBarcode', 15000);
+            add_option('_cmb_resource_lastBarcode', 20000);
             $lastBarcode = get_option('_cmb_resource_lastBarcode');
         }
         $newbarcode = $lastBarcode + 1;
@@ -459,7 +491,7 @@ function Add($props, $source, $post_type) {
     else if ($source == 'Transaction' && $idprop != null){
         $lastBarcodeExists = get_option('_cmb_transaction_lastID');
         if ($lastBarcodeExists == false){
-            add_option('_cmb_transaction_lastID', 15000);
+            add_option('_cmb_transaction_lastID', 2000);
             $lastBarcode = get_option('_cmb_transaction_lastID');
         }
         $newbarcode = $lastBarcode + 1;
@@ -470,19 +502,36 @@ function Add($props, $source, $post_type) {
 }
 
 function Remove($source, $id) {
-    if ($source == 'Book') {
-        $consigners = book_properties::get_consigners($id);
+    if ($source == Book::$source) {
+        $consigners = Book::get_consigners($id);
         if (!empty($consigners)) {
             foreach ($consigners as $consigner) {
-                $consigner_book_list = consigner_properties::get_books($consigner);
+                $consigner_book_list = Consigner::get_books($consigner);
                 if (!empty($consigner_book_list)) {
                     $temparr = array();
                     foreach ($consigner_book_list as $book) {
-                        if ($product_id != $book) {
+                        if ($id != $book) {
                             $temparr[] = $book;
                         }
                     }
-                    consigner_properties::set_books($consigner, $temparr);
+                    Consigner::set_books($consigner, $temparr);
+                }
+            }
+        }
+    }
+    if ($source == Consigner::$source) {
+        $books = Consigner::get_books($id);
+        if (!empty($books)) {
+            foreach ($books as $book) {
+                $book_consigners = Book::get_consigners($book);
+                if (!empty($book_consigners)) {
+                    $temparr = array();
+                    foreach ($book_consigners as $consigner) {
+                        if ($id != $consigner) {
+                            $temparr[] = $consigner;
+                        }
+                    }
+                    Book::set_consigners($book, $temparr);
                 }
             }
         }

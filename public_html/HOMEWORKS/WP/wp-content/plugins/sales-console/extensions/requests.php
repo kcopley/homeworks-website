@@ -66,15 +66,6 @@ class action_types {
 
     public static $pre_card_submission = 'pre_card_submission';
     public static $process_payment = 'process_payment';
-
-    public static $verify_books = 'verify_books';
-    public static $verify_consigners = 'verify_consigners';
-    public static $verify_transactions = 'verify_transactions';
-    public static $reset_counters = 'verify_reset_counters';
-
-    public static $set_bids = 'set_bids';
-    public static $set_cids = 'set_cids';
-    public static $set_tids = 'set_tids';
 }
 
 class selection {

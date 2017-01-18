@@ -84,9 +84,9 @@ class Radio extends __input {
         $row->add_object($col);
         $col->add_object(new TextRender('All: '));
         $col->add_object(new Input(id($prefix.$this->name).name($prefix.$this->name).type('radio').value('All')));
-        foreach ($this->options as $option) {
-            $col->add_object(new TextRender($option.': '));
-            $col->add_object(new Input(id($prefix.$this->name).name($prefix.$this->name).type('radio').value($option)));
+        foreach ($this->options as $key => $value) {
+            $col->add_object(new TextRender($value.': '));
+            $col->add_object(new Input(id($prefix.$this->name).name($prefix.$this->name).type('radio').value($key)));
         }
 
         return $row;
@@ -99,9 +99,9 @@ class Radio extends __input {
         $col = new Column(width($rightWidth).style('padding-left: 5px;'));
         $row->add_object($col);
 
-        foreach ($this->options as $option) {
-            $col->add_object(new TextRender($option.': '));
-            $col->add_object(new Input(id($prefix.$this->name).name($prefix.$this->name).type('radio').value($option)));
+        foreach ($this->options as $key => $value) {
+            $col->add_object(new TextRender($value.': '));
+            $col->add_object(new Input(id($prefix.$this->name).name($prefix.$this->name).type('radio').value($key)));
         }
 
         return $row;
@@ -109,7 +109,7 @@ class Radio extends __input {
 
     public function GetQuery($args, $prefix) {
         $query = $_SESSION[$prefix.$this->name];
-        if ($query) {
+        if ($query && $query != 'All') {
             $args['meta_query'][] =  array(
                 'key' => $this->db_value,
                 'value' => $query,
@@ -120,7 +120,7 @@ class Radio extends __input {
     }
 
     public function GetDisplay($id, $source) {
-        return new Column(style('padding-bottom: 8px; font-size: 14px'), new TextRender($this->GetValue($id)));
+        return new Column(style('padding-bottom: 8px; font-size: 14px'), new TextRender($this->options[$this->GetValue($id)]));
     }
 
     public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
@@ -129,17 +129,17 @@ class Radio extends __input {
         $col =  new Column(width($rightwidth).style('padding-left: 5px;'));
         $row->add_object($col);
 
-        $val = $this->GetValue($id);
+        $val = $this->options[$this->GetValue($id)];
 
         if ($this->edit_param) {
-            foreach ($this->options as $option) {
-                if ($val == $option) {
-                    $col->add_object(new TextRender($option.': '));
-                    $col->add_object(new Input(checkedAttr(1).form($form).id(vars::$edit_prefix.$this->name).name(vars::$edit_prefix.$this->name).type('radio').value($option)));
+            foreach ($this->options as $key => $value) {
+                if ($val == $value) {
+                    $col->add_object(new TextRender($value.': '));
+                    $col->add_object(new Input(checkedAttr(1).form($form).id(vars::$edit_prefix.$this->name).name(vars::$edit_prefix.$this->name).type('radio').value($key)));
                 }
                 else {
-                    $col->add_object(new TextRender($option.': '));
-                    $col->add_object(new Input(form($form).id(vars::$edit_prefix.$this->name).name(vars::$edit_prefix.$this->name).type('radio').value($option)));
+                    $col->add_object(new TextRender($value.': '));
+                    $col->add_object(new Input(form($form).id(vars::$edit_prefix.$this->name).name(vars::$edit_prefix.$this->name).type('radio').value($key)));
                 }
             }
         }
@@ -176,9 +176,9 @@ class Image extends __input {
         $row->add_object($col);
         $col->add_object(new TextRender('All: '));
         $col->add_object(new Input(id($prefix.$this->name).name($prefix.$this->name).type('radio').value('All')));
-        foreach ($this->options as $option) {
-            $col->add_object(new TextRender($option.': '));
-            $col->add_object(new Input(id($prefix.$this->name).name($prefix.$this->name).type('radio').value($option)));
+        foreach ($this->options as $key => $value) {
+            $col->add_object(new TextRender($value.': '));
+            $col->add_object(new Input(id($prefix.$this->name).name($prefix.$this->name).type('radio').value($key)));
         }
         return $row;
     }
@@ -194,7 +194,7 @@ class Image extends __input {
             if ($query == 'All') {
                 return $args;
             }
-            else if ($query == 'Yes')
+            else if ($query == 2)
             {
                 $args['meta_query'][] =  array(
                     'key' => '_thumbnail_id',
@@ -298,7 +298,8 @@ class Date extends __input  {
 }
 
 class Decimal extends __input  {
-    public $format = false;
+    public $cost = false;
+    public $display_prefix;
 
     function GetInputAdd($leftWidth, $rightWidth, $prefix) {
         $list = new RenderList();
@@ -351,7 +352,9 @@ class Decimal extends __input  {
         add_filter('get_meta_sql','cast_decimal_precision');
 
         $totalfrom = $_SESSION[$prefix.$this->name.'_from'];
+        if (!$totalfrom) $totalfrom = 0;
         $totalto = $_SESSION[$prefix.$this->name.'_to'];
+        if (!$totalto) $totalto = 9999999;
 
         if ($totalfrom) {
             $args['meta_query'][] = array(
@@ -374,8 +377,8 @@ class Decimal extends __input  {
     }
 
     public function GetDisplay($id, $source) {
-        if ($this->format) {
-            return new Column(style('padding-bottom: 8px; font-size: 14px'), new TextRender('$'.number_format(get_post_meta($id, $this->db_value, true), 2)));
+        if ($this->cost) {
+            return new Column(style('padding-bottom: 8px; font-size: 14px'), new TextRender($this->display_prefix.number_format(get_post_meta($id, $this->db_value, true), 2)));
         }
         else {
             return new Column(style('padding-bottom: 8px; font-size: 14px'), new TextRender(get_post_meta($id, $this->db_value, true)));
@@ -392,11 +395,11 @@ class Decimal extends __input  {
             );
         }
         else {
-            if ($this->format) {
+            if ($this->cost) {
                 return new Row(
                     new Column(align('right') . width($leftwidth), new Label(new TextRender($this->format . ':'))),
                     new Column(width($rightwidth) . style('padding-left: 5px;'),
-                        new Strong(new TextRender(number_format($this->GetValue($id), 2)))
+                        new Strong(new TextRender($this->display_prefix.number_format($this->GetValue($id), 2)))
                     )
                 );
             }
@@ -446,6 +449,48 @@ class TextBox extends __input  {
             new Column(align('right').width($leftwidth), new Label(new TextRender($this->format.':'))),
             new Column(width($rightwidth).style('padding-left: 5px;'),
                 new TextArea(form($form).style('width: 90%;').type('text').id(vars::$edit_prefix.$this->name).name(vars::$edit_prefix.$this->name), new TextRender($this->GetValue($id)))
+            )
+        );
+    }
+}
+
+class Quantity extends __input {
+    public $exact = -1;
+    public $display_prefix;
+
+    public function GetValue($id)
+    {
+        $consigners = Book::get_consigner_count($id);
+        return $consigners;
+    }
+
+    public function GetInputSearch($leftWidth, $rightWidth, $prefix) {
+        $row = new Row(
+        );
+        return $row;
+    }
+
+    public function GetInputAdd($leftWidth, $rightWidth, $prefix) {
+        $row = new Row(
+        );
+        return $row;
+    }
+
+    public function GetQuery($args, $prefix) {
+        return $args;
+    }
+
+    public function GetDisplay($id, $source) {
+        return new Column(style('font-size: 14px; padding-right: 2px;'),
+            new TextRender($this->display_prefix.$this->GetValue($id)));
+    }
+
+    public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
+        $val = $this->GetValue($id);
+        return new Row(
+            new Column(align('right').width($leftwidth), new Label(new TextRender($this->format.':'))),
+            new Column(width($rightwidth).style('padding-left: 5px; width: 90%;'),
+                new Strong(new TextRender($val))
             )
         );
     }

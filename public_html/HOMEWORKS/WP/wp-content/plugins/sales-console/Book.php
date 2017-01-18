@@ -18,6 +18,7 @@ class Book {
     public static $available = 'book_availability';
     public static $online = 'book_online';
     public static $image = 'book_image';
+    public static $quantity = 'book_quantity';
 
     public static $image_set = 'image_attachment_id';
 
@@ -42,17 +43,22 @@ class Book {
         $publisher = new Text('book_publisher', 'Publisher', '_cmb_resource_publisher');
         $isbn = new Text('book_isbn', 'ISBN', '_cmb_resource_isbn');
 
+        $quantity = new Quantity('book_quantity', 'Quantity', 'quantity');
+        $quantity->search_param = false;
+        $quantity->edit_param = false;
+        $quantity->add_param = false;
+
         $condition = new Radio('book_condition', 'Condition', '_cmb_resource_condition');
-        $condition->options = array('Used', 'New');
+        $condition->options = array(1 => 'Used', 2 => 'New');
 
         $availability = new Radio('book_availability', 'Available', '_cmb_resource_available');
-        $availability->options = array('Active', 'Inactive');
+        $availability->options = array(2 => 'Active', 1 => 'Inactive');
 
         $online = new Radio('book_online', 'Online', '_cmb_resource_online');
-        $online->options = array('Yes', 'No');
+        $online->options = array(2 => 'Yes', 1 => 'No');
 
         $image = new Image('book_image', 'Image', 'image');
-        $image->options = array('Yes', 'No');
+        $image->options = array(2 => 'Yes', 1 => 'No');
         $image->add_param = false;
         $image->display_in_add = false;
         $image->edit_param = false;
@@ -67,6 +73,7 @@ class Book {
             self::$publisher => $publisher,
             self::$isbn => $isbn,
             self::$condition => $condition,
+            self::$quantity => $quantity,
             self::$available => $availability,
             self::$online => $online,
             self::$image => $image
