@@ -8,8 +8,8 @@
  */
 
 function GenerateSearchBox($props, $source, $title, $button) {
-    $leftwidth = 45;
-    $rightwidth = 55;
+    $leftwidth = 20;
+    $rightwidth = 80;
 
     $outsidetable = new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100).
         style('padding: 10px; border: solid; border-width: 1px; border-color: #D0D0D0;'));
@@ -23,25 +23,37 @@ function GenerateSearchBox($props, $source, $title, $button) {
 
     $counter = 0;
     $table = new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100));
-    $outsiderow->add_object(new Column(valign('top'),
+    $columns = array();
+    $col = new Column(valign('top'),
         $table
-    ));
+    );
+    $columns[] = $col;
+    $outsiderow->add_object(
+        $col
+    );
 
-    foreach ($props as $prop) {
+    foreach ($props as $key => $prop) {
         if ($prop->search_param) {
             if ($counter > 3) {
                 $counter = 0;
                 $table = new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100));
+                $col = new Column(valign('top').align('left'),
+                    $table
+                );
+                $columns[] = $col;
                 $outsiderow->add_object(
-                    new Column(valign('top'),
-                        $table
-                    )
+                    $col
                 );
             }
             $inp = $prop->GetInputSearch($leftwidth, $rightwidth, vars::$search_prefix);
             $table->add_object($inp);
             $counter = $counter + 1;
         }
+    }
+
+    $totalColumns = count($columns);
+    foreach ($columns as $column) {
+        $column->add_object(width(100 / $totalColumns));
     }
 
     $table->add_object(
@@ -56,8 +68,8 @@ function GenerateSearchBox($props, $source, $title, $button) {
 }
 
 function GenerateAddBox($props, $source, $title, $button) {
-    $leftwidth = 45;
-    $rightwidth = 55;
+    $leftwidth = 20;
+    $rightwidth = 80;
 
     $outsidetable = new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100).
         style('padding: 10px; border: solid; border-width: 1px; border-color: #D0D0D0;'));
@@ -71,25 +83,37 @@ function GenerateAddBox($props, $source, $title, $button) {
 
     $counter = 0;
     $table = new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100));
-    $outsiderow->add_object(new Column(valign('top'),
+    $columns = array();
+    $col = new Column(valign('top'),
         $table
-    ));
+    );
+    $columns[] = $col;
+    $outsiderow->add_object(
+        $col
+    );
 
-    foreach ($props as $prop) {
+    foreach ($props as $key => $prop) {
         if ($prop->add_param) {
             if ($counter > 3) {
                 $counter = 0;
                 $table = new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100));
+                $col = new Column(valign('top').align('left'),
+                    $table
+                );
+                $columns[] = $col;
                 $outsiderow->add_object(
-                    new Column(valign('top'),
-                        $table
-                    )
+                    $col
                 );
             }
             $inp = $prop->GetInputAdd($leftwidth, $rightwidth, vars::$add_prefix);
             $table->add_object($inp);
             $counter = $counter + 1;
         }
+    }
+
+    $totalColumns = count($columns);
+    foreach ($columns as $column) {
+        $column->add_object(width(100 / $totalColumns));
     }
 
     $table->add_object(
@@ -112,10 +136,11 @@ function GenerateQuery($props, $post_type) {
         'post_type' => $post_type
     );
 
+    add_filter('get_meta_sql','cast_decimal_precision');
     $meta_query_array = array('relation' => 'AND');
     $args['meta_query'] = $meta_query_array;
 
-    foreach ($props as $prop) {
+    foreach ($props as $key => $prop) {
         if ($prop->search_param) {
             $args = $prop->GetQuery($args);
         }
@@ -127,7 +152,7 @@ function GenerateSearch($props, $source, $post_type) {
     $table = new TableArr(id('formtable').width(100).border(0).cellspacing(0).cellpadding(0).style('margin: 10px 0 50px;'));
 
     $counter = 0;
-    foreach ($props as $prop) {
+    foreach ($props as $key => $prop) {
         if ($prop->search_param) {
             if ($counter == 0) {
                 $table->add_object(
@@ -169,7 +194,7 @@ function GenerateSearch($props, $source, $post_type) {
 function Display($props, $id, $source) {
     $row = new Row();
     $counter = 0;
-    foreach ($props as $prop) {
+    foreach ($props as $key => $prop) {
         if ($prop->display_in_search) {
             $row->add_object($prop->GetDisplay($id, $source));
             $counter++;
@@ -185,18 +210,26 @@ function EditDisplay($props, $id, $rows, $source) {
     $leftwidth = 15;
     $rightwidth = 85;
 
-    if ($_SESSION['last_page']) {
-        $formresults = new Form(method('post').name('backtoresults').id('backtoresults').action($_SESSION['last_page']));
-        $backtoresults = new RenderList(
-            new Input(form('backtoresults').id(page_action::$action).name(page_action::$action).type('hidden').value($_SESSION['last_action'])),
-            new Input(form('backtoresults').classType('button-primary').type('submit').name('button').value('Back to Last Page'))
-        );
+    $lastType = '';
+
+    if (strpos($_SESSION[vars::$last_action], 'search') !== false){
+        $lastType = 'Back to Search Results';
     }
     else {
-        $formresults = new Form(method('post') . name('backtoresults') . id('backtoresults'));
+        if ($_SESSION[vars::$last_page] == vars::$library_page) {
+            $lastType = 'Back to Book';
+        } else if ($_SESSION[vars::$last_page] == vars::$consigner_page) {
+            $lastType = 'Back to Consigner';
+        } else if ($_SESSION[vars::$last_page] == vars::$transaction_page) {
+            $lastType = 'Back to Transaction';
+        }
+    }
+    if ($_SESSION[vars::$last_action] != null) {
+        $formresults = new Form(method('post').name('backtoresults').id('backtoresults').action($_SESSION[vars::$last_page]));
         $backtoresults = new RenderList(
-            new Input(form('backtoresults') . id(page_action::$action) . name(page_action::$action) . type('hidden') . value(action_types::get_search($source))),
-            new Input(form('backtoresults') . classType('button-primary') . type('submit') . name('button') . value('Back to Search Results'))
+            new Input(form('backtoresults').id(vars::$went_back).name(vars::$went_back).type('hidden').value(true)),
+            new Input(form('backtoresults').id(page_action::$action).name(page_action::$action).type('hidden').value($_SESSION[vars::$last_action])),
+            new Input(form('backtoresults').classType('button-primary').type('submit').name('button').value($lastType))
         );
     }
 
@@ -238,7 +271,8 @@ function EditDisplay($props, $id, $rows, $source) {
         $table
     ));
 
-    foreach ($props as $prop) {
+    $rowCounter = 1;
+    foreach ($props as $key => $prop) {
         if ($prop->display_in_edit) {
             if ($counter > ($rows - 1)) {
                 $counter = 0;
@@ -248,6 +282,7 @@ function EditDisplay($props, $id, $rows, $source) {
                         $table
                     )
                 );
+                $rowCounter++;
             }
             $edi = $prop->GetEditForm($id, $leftwidth, $rightwidth, 'edit_form');
             $table->add_object(
@@ -261,19 +296,20 @@ function EditDisplay($props, $id, $rows, $source) {
     if ($_POST[action_types::$delete_sure]) {
         $form->add_object(
             new Row(
-                new Column(colspan(2).align('center').style('padding-top: 5px;'),
+                new Column(align('left').style('padding-top: 5px;')
+                ),
+                new Column(colspan($rows).align('center').style('padding-top: 5px;'),
                     new Strong(new TextRender('Are you sure?'))
                 )
             )
         );
     }
-
     $form->add_object(
         new Row(
             new Column(align('left').style('padding-top: 5px;')
             ),
-            new Column(align('center').style('padding-top: 5px;'),
-                new Div(align('left').style('display:inline-block; padding-right: 5px;'),
+            new Column(colspan($rows).align('center').style('padding-top: 5px;'),
+                new Div(align('right').style('display:inline-block; padding-right: 5px;'),
                     selection::SetID($id, $source),
                     page_action::InputAction(action_types::get_update($source)),
                     button('Update '.$source)
@@ -293,7 +329,7 @@ function EditDisplay($props, $id, $rows, $source) {
 function Add($props, $source, $post_type) {
     $postid = null;
     date_default_timezone_set('America/Chicago');
-    foreach ($props as $prop) {
+    foreach ($props as $key => $prop) {
         if ($prop->add_param) {
             if ($prop->db_value == 'title') {
                 $title = $prop->GetPostValue(vars::$add_prefix);
@@ -309,7 +345,7 @@ function Add($props, $source, $post_type) {
     }
     if ($postid == null) return null;
     $idprop = null;
-    foreach ($props as $prop) {
+    foreach ($props as $key => $prop) {
         if ($prop->name == 'consigner_id' || $prop->name == 'book_barcode')
             $idprop = $prop;
         else if ($prop->add_param) {
@@ -366,13 +402,11 @@ function Remove($source, $id) {
             }
         }
     }
-    else {
-        wp_delete_post($id);
-    }
+    wp_delete_post($id);
 }
 
 function Update($props, $id) {
-    foreach ($props as $prop) {
+    foreach ($props as $key => $prop) {
         if ($prop->edit_param && $prop->GetPostValue(vars::$edit_prefix)) {
             $prop->SetValue($id, $prop->GetPostValue(vars::$edit_prefix));
         }

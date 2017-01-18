@@ -69,7 +69,7 @@ class Radio extends __input {
         $row = new Row();
 
         $row->add_object(new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))));
-        $col = new Column(width($rightWidth).style('padding-left: 5px;'));
+        $col = new Column(width($rightWidth).style('padding-left: 5px; display: inline;'));
         $row->add_object($col);
         $col->add_object(new TextRender('All: '));
         $col->add_object(new Input(id($prefix.$this->name).name($prefix.$this->name).type('radio').value('All')));
@@ -220,7 +220,7 @@ class Date extends __input  {
             new Row(
                 new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))),
                 new Column(width($rightWidth).style('padding-left: 5px;'),
-                    new Input(id($prefix.$this->name.'_from').name($prefix.$this->name).type('date'))
+                    new Input(style('width: 100%;').id($prefix.$this->name).name($prefix.$this->name).type('date'))
                 )
             )
         );
@@ -231,17 +231,12 @@ class Date extends __input  {
         $list = new RenderList();
         $list->add_object(
             new Row(
-                new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.' From:'))),
-                new Column(width($rightWidth / 2).style('padding-left: 5px;'),
-                    new Input(id($prefix.$this->name.'_from').name($prefix.$this->name.'_from').type('date'))
-                )
-            )
-        );
-        $list->add_object(
-            new Row(
-                new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.' To:'))),
-                new Column(width($rightWidth / 2).style('padding-left: 5px;'),
-                    new Input(id($prefix.$this->name.'_to').name($prefix.$this->name.'_to').type('date'))
+                new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))),
+                new Column(width($rightWidth / 2).style('padding-left: 5px; display: inline;'),
+                    new Label(new TextRender(' From: ')),
+                    new Input(style('width: 35%;').id($prefix.$this->name.'_from').name($prefix.$this->name.'_from').type('date')),
+                    new Label(new TextRender(' To: ')),
+                    new Input(style('width: 35%;').id($prefix.$this->name.'_to').name($prefix.$this->name.'_to').type('date'))
                 )
             )
         );
@@ -275,6 +270,109 @@ class Date extends __input  {
                 new Input(form($form).style('width: 90%;').id(vars::$edit_prefix.$this->name).name(vars::$edit_prefix.$this->name).type('date').value($this->GetValue($id)))
             )
         );
+    }
+}
+
+class Decimal extends __input  {
+    public $format = false;
+
+    function GetInputAdd($leftWidth, $rightWidth, $prefix) {
+        $list = new RenderList();
+        $list->add_object(
+            new Row(
+                new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))),
+                new Column(width($rightWidth).style('padding-left: 5px;'),
+                    new Input(style('width: 100%;').id($prefix.$this->name).name($prefix.$this->name).type('text'))
+                )
+            )
+        );
+        return $list;
+    }
+
+    function GetInputSearch($leftWidth, $rightWidth, $prefix) {
+        $list = new RenderList();
+        $list->add_object(
+            new Row(
+                new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))),
+                new Column(width($rightWidth).style('padding-left: 5px;'),
+                    new TableArr(width(100).cellpadding(0).cellspacing(0),
+                        new Row(
+                            new Column(new Label(new TextRender(' From:'))),
+                            new Column(new Input(style('width: 80%; display: inline;').id($prefix.$this->name.'_from').name($prefix.$this->name.'_from').type('text')))
+                        ),
+                        new Row(
+                            new Column(new Label(new TextRender(' To:'))),
+                            new Column(new Input(style('width: 80%; display: inline;').id($prefix.$this->name.'_to').name($prefix.$this->name.'_to').type('text')))
+                        )
+                    )
+                )
+            )
+        );
+        return $list;
+    }
+
+    function GetQuery($args) {
+        add_filter('get_meta_sql','cast_decimal_precision');
+
+        $totalfrom = $_REQUEST[vars::$search_prefix.$this->name.'_from'];
+        $totalto = $_REQUEST[vars::$search_prefix.$this->name.'_to'];
+
+        if ($totalfrom) {
+            $args['meta_query'][] = array(
+                'key' => $this->db_value,
+                'value' => $totalfrom,
+                'compare' => '>',
+                'type' => 'DECIMAL'
+            );
+        }
+        if ($totalto) {
+            $args['meta_query'][] = array(
+                'key' => $this->db_value,
+                'value' => $totalto,
+                'compare' => '<',
+                'type' => 'DECIMAL'
+            );
+        }
+
+        return $args;
+    }
+
+    public function GetDisplay($id, $source) {
+        if ($this->format) {
+            return new Column(style('padding-bottom: 8px; font-size: 14px'), new TextRender('$'.number_format(get_post_meta($id, $this->db_value, true), 2)));
+        }
+        else {
+            return new Column(style('padding-bottom: 8px; font-size: 14px'), new TextRender(get_post_meta($id, $this->db_value, true)));
+        }
+    }
+
+    public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
+        if ($this->edit_param) {
+            return new Row(
+                new Column(align('right') . width($leftwidth), new Label(new TextRender($this->format . ':'))),
+                new Column(width($rightwidth) . style('padding-left: 5px;'),
+                    new Input(form($form) . style('width: 90%;') . id(vars::$edit_prefix . $this->name) . name(vars::$edit_prefix . $this->name) . type('number') . value($this->GetValue($id)))
+                )
+            );
+        }
+        else {
+            if ($this->format) {
+                return new Row(
+                    new Column(align('right') . width($leftwidth), new Label(new TextRender($this->format . ':'))),
+                    new Column(width($rightwidth) . style('padding-left: 5px;'),
+                        new Strong(new TextRender(number_format($this->GetValue($id), 2)))
+                    )
+                );
+            }
+            else {
+                return new Row(
+                    new Column(align('right') . width($leftwidth), new Label(new TextRender($this->format . ':'))),
+                    new Column(width($rightwidth) . style('padding-left: 5px;'),
+                        new Strong(new TextRender($this->GetValue($id)))
+                    )
+                );
+            }
+        }
     }
 }
 
@@ -324,7 +422,7 @@ class Text extends __input  {
         $row = new Row(
             new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))),
             new Column(width($rightWidth).style('padding-left: 5px;'),
-                new Input(id($prefix.$this->name).name($prefix.$this->name).type('text'))
+                new Input(style('width: 100%;').id($prefix.$this->name).name($prefix.$this->name).type('text'))
             )
         );
         return $row;
@@ -334,7 +432,7 @@ class Text extends __input  {
         $row = new Row(
             new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))),
             new Column(width($rightWidth).style('padding-left: 5px;'),
-                new Input(id($prefix.$this->name).name($prefix.$this->name).type('text'))
+                new Input(style('width: 100%;').id($prefix.$this->name).name($prefix.$this->name).type('text'))
             )
         );
         return $row;
@@ -367,8 +465,9 @@ class Text extends __input  {
 
     public function GetDisplay($id, $source) {
         if ($this->db_value == 'title') {
-            return new Column(
-                new Form(method('POST'),
+            $action = vars::GetPage($source);
+            return new Column(style('padding-right: 8px;'),
+                new Form(method('POST').action($action),
                     page_action::InputAction(action_types::get_select($source)),
                     selection::SetID($id, $source),
                     new Input(classType('button').type('submit').name('button').value(get_the_title($id)).style('background:none!important; border:none; 
@@ -377,7 +476,7 @@ class Text extends __input  {
             );
         }
         else {
-            return new Column(style('padding-bottom: 8px; font-size: 14px'), new TextRender(get_post_meta($id, $this->db_value, true)));
+            return new Column(style('font-size: 14px; padding-right: 2px;'), new TextRender(get_post_meta($id, $this->db_value, true)));
         }
     }
 
@@ -404,4 +503,125 @@ class Text extends __input  {
 
 class Checkbox {
 
+}
+
+class BookButton {
+    public $button;
+    public $action;
+    public $custom;
+
+    public $search_param;
+    public $display_in_search;
+    public $edit_param;
+    public $display_in_edit;
+    public $add_param;
+    public $display_in_add;
+
+    function __construct($name)
+    {
+        $this->name = $name;
+
+        $this->search_param = true;
+        $this->display_in_search = true;
+        $this->add_param = true;
+        $this->display_in_add = true;
+        $this->edit_param = true;
+        $this->display_in_edit = true;
+    }
+
+    public function GetInputSearch($leftWidth, $rightWidth, $prefix) {
+    }
+
+    public function GetInputAdd($leftWidth, $rightWidth, $prefix) {
+    }
+
+    public function GetQuery($args) {
+        return $args;
+    }
+
+    public function GetDisplay($id, $source) {
+        if ($this->custom) {
+            $button = $this->custom;
+        }
+        else {
+            $button = new Input(classType('button-primary').type('submit').name('button').value($this->button));
+        }
+        return new Column(
+            new Form(
+                page_action::InputAction($this->action),
+                selection::SetID($id, Book::$source),
+                $button
+            )
+        );
+    }
+
+    public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
+    }
+}
+
+class TransactionButton {
+    public $button;
+    public $action;
+    public $custom;
+
+    public $search_param;
+    public $display_in_search;
+    public $edit_param;
+    public $display_in_edit;
+    public $add_param;
+    public $display_in_add;
+
+    function __construct($name)
+    {
+        $this->name = $name;
+
+        $this->search_param = true;
+        $this->display_in_search = true;
+        $this->add_param = true;
+        $this->display_in_add = true;
+        $this->edit_param = true;
+        $this->display_in_edit = true;
+    }
+
+    public function GetInputSearch($leftWidth, $rightWidth, $prefix) {
+    }
+
+    public function GetInputAdd($leftWidth, $rightWidth, $prefix) {
+    }
+
+    public function GetQuery($args) {
+        return $args;
+    }
+
+    public function GetDisplay($id, $source) {
+        if ($this->custom) {
+            $button = $this->custom;
+        }
+        else {
+            $button = new Input(classType('button-primary').type('submit').name('button').value($this->button));
+        }
+        return new Column(
+            new Form(
+                page_action::InputAction($this->action),
+                selection::SetID($id, Transaction::$source),
+                $button
+            )
+        );
+    }
+
+    public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
+        if ($this->custom) {
+            $button = $this->custom;
+        }
+        else {
+            $button = new Input(classType('button-primary').type('submit').name('button').value($this->button));
+        }
+        return new Row(new Column(
+            new Form(
+                page_action::InputAction($this->action),
+                selection::SetID($id, Transaction::$source),
+                $button
+            )
+        ));
+    }
 }

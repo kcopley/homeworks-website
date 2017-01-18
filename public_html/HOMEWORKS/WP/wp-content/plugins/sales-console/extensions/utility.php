@@ -31,6 +31,35 @@ class vars {
     public static $search_prefix = 'search_';
     public static $edit_prefix = 'edit_';
     public static $add_prefix = 'add_';
+
+    public static $went_back = 'went_back';
+    public static $new_page = 'current_page';
+    public static $last_page = 'last_page';
+    public static $last2_page = 'last_page';
+    public static $last2_action = 'last2_action';
+    public static $last_action = 'last_action';
+    public static $new_action = 'new_action';
+    public static $consigner_page = 'admin.php?page=sales_console_consigners';
+    public static $library_page = 'admin.php?page=library_breakdown';
+    public static $transaction_page = 'admin.php?page=sales_console_transactions';
+
+    public static function GetPage($source) {
+        if ($source == Book::$source) {
+            return vars::$library_page;
+        }
+        else if ($source == Consigner::$source) {
+            return vars::$consigner_page;
+        }
+        else if ($source == Transaction::$source) {
+            return vars::$transaction_page;
+       }
+        return '';
+    }
+}
+
+function cast_decimal_precision( $array ) {
+    $array['where'] = str_replace('DECIMAL','DECIMAL(10,3)',$array['where']);
+    return $array;
 }
 
 function dump($var) {
@@ -133,6 +162,10 @@ function ariahidden($str){
 
 function tabindex($str){
     return ' tabindex="'.$str.'" ';
+}
+
+function step($str){
+    return ' step="'.$str.'" ';
 }
 
 function add_image($id) {
