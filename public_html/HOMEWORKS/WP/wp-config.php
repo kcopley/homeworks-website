@@ -21,6 +21,9 @@
 /** The name of the database for WordPress */
 define('DB_NAME', 'homewot5_wpsite');
 
+define( 'WP_MEMORY_LIMIT', '512M' );
+define( 'WP_MAX_MEMORY_LIMIT', '512M' );
+
 /** MySQL database username */
 define('DB_USER', 'homewot5_admin');
 

@@ -5,20 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfd0125c-dc3a-4a67-bb94-a6301753b222" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Span.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/search_transactions.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/verify.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/original.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../homewot5/mysql/localhost.sql" afterPath="$PROJECT_DIR$/../../homewot5/mysql/localhost.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-config.php" afterPath="$PROJECT_DIR$/WP/wp-config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Book.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Book.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Books.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Books.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Consigner.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Consigner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/consigners.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/consigners.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/includes.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/includes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/sales-console.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/sales-console.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php" />
     </list>
     <ignored path="HOMEWORKS.iws" />
@@ -40,16 +41,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="consigners.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/consigners.php">
+      <file leaf-file-name="requests.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="29" column="50" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="50" />
-              <folding>
-                <element signature="n#display_consigner_books#0;n#!!top" expanded="false" />
-                <element signature="n#display_sold_consigner_books#0;n#!!top" expanded="false" />
-                <element signature="n#GenerateResults#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="278">
+              <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,31 +54,48 @@
       <file leaf-file-name="Inputs.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="951">
-              <caret line="342" column="9" selection-start-line="342" selection-start-column="9" selection-end-line="342" selection-end-column="9" />
+            <state relative-caret-position="329">
+              <caret line="515" column="76" selection-start-line="515" selection-start-column="76" selection-end-line="515" selection-end-column="76" />
               <folding>
-                <element signature="n#__construct#0;n#__input#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputAdd#0;n#Radio#0;n#!!top" expanded="false" />
-                <element signature="n#GetQuery#0;n#Radio#0;n#!!top" expanded="false" />
-                <element signature="n#GetDisplay#0;n#Radio#0;n#!!top" expanded="false" />
                 <element signature="n#GetEditForm#0;n#Radio#0;n#!!top" expanded="false" />
-                <element signature="n#Image#0;n#!!top" expanded="false" />
-                <element signature="n#GetQuery#0;n#Image#0;n#!!top" expanded="false" />
-                <element signature="n#Date#0;n#!!top" expanded="false" />
-                <element signature="n#GetQuery#0;n#Date#0;n#!!top" expanded="false" />
-                <element signature="e#8923#9112#0#PHP" expanded="false" />
-                <element signature="e#11730#11966#0#PHP" expanded="false" />
-                <element signature="n#TextBox#0;n#!!top" expanded="false" />
+                <element signature="e#9727#9916#0#PHP" expanded="false" />
+                <element signature="e#12949#13185#0#PHP" expanded="false" />
                 <element signature="n#GetInputSearch#0;n#TextBox#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputAdd#0;n#TextBox#0;n#!!top" expanded="false" />
-                <element signature="n#GetQuery#0;n#TextBox#0;n#!!top" expanded="false" />
                 <element signature="n#GetDisplay#0;n#TextBox#0;n#!!top" expanded="false" />
-                <element signature="n#Text#0;n#!!top" expanded="false" />
-                <element signature="n#GetQuery#0;n#Text#0;n#!!top" expanded="false" />
                 <element signature="n#Checkbox#0;n#!!top" expanded="false" />
-                <element signature="n#BookButton#0;n#!!top" expanded="false" />
-                <element signature="n#TransactionButton#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verify.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/verify.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="222" column="52" selection-start-line="222" selection-start-column="52" selection-end-line="222" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wp-config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="666">
+              <caret line="94" column="49" selection-start-line="94" selection-start-column="49" selection-end-line="94" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sales-console.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/sales-console.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="411">
+              <caret line="294" column="112" selection-start-line="294" selection-start-column="112" selection-end-line="294" selection-end-column="112" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,14 +103,14 @@
       <file leaf-file-name="Consigner.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Consigner.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="712">
+              <caret line="405" column="27" selection-start-line="405" selection-start-column="27" selection-end-line="405" selection-end-column="27" />
               <folding>
+                <element signature="n#init#0;n#Consigner#0;n#!!top" expanded="false" />
                 <element signature="n#DisplaySoldConsignerBooks#0;n#Consigner#0;n#!!top" expanded="false" />
                 <element signature="n#get_current_consigner_books#0;n#Consigner#0;n#!!top" expanded="false" />
                 <element signature="n#get_sold_consigner_books#0;n#Consigner#0;n#!!top" expanded="false" />
                 <element signature="n#DisplaySoldBook#0;n#Consigner#0;n#!!top" expanded="false" />
-                <element signature="n#GenerateBookSearch#0;n#Consigner#0;n#!!top" expanded="false" />
                 <element signature="n#ConsignerBookSearch#0;n#Consigner#0;n#!!top" expanded="false" />
                 <element signature="n#get_books#0;n#Consigner#0;n#!!top" expanded="false" />
               </folding>
@@ -104,168 +118,89 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkout.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="checkout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="883" column="66" selection-start-line="883" selection-start-column="66" selection-end-line="883" selection-end-column="66" />
+            <state relative-caret-position="-221">
+              <caret line="881" column="38" selection-start-line="881" selection-start-column="38" selection-end-line="881" selection-end-column="38" />
               <folding>
                 <element signature="n#get_paid_message#0;n#!!top" expanded="false" />
                 <element signature="n#get_payments#0;n#!!top" expanded="false" />
                 <element signature="n#process_auth#0;n#!!top" expanded="false" />
+                <element signature="n#display_cart_book#0;n#!!top" expanded="false" />
                 <element signature="e#41625#41874#0#PHP" expanded="false" />
                 <element signature="e#42321#42570#0#PHP" expanded="false" />
                 <element signature="e#43704#43953#0#PHP" expanded="false" />
                 <element signature="e#44398#44647#0#PHP" expanded="false" />
                 <element signature="n#get_credit_total#0;n#!!top" expanded="false" />
-                <marker date="1484707339549" expanded="true" signature="24703:24729" ph="{...}" />
-                <marker date="1484707339549" expanded="true" signature="49927:53116" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="49973:49991" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50019:50052" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50080:50113" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50141:50174" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50202:50235" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50263:50296" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50324:50357" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50385:50418" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50446:50479" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50507:50540" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50568:50601" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50629:50662" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50690:50723" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50751:50784" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50812:50845" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50873:50906" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50934:50967" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="50995:51028" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51056:51089" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51117:51150" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51178:51211" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51239:51272" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51300:51333" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51361:51394" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51422:51455" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51483:51516" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51544:51577" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51605:51638" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51666:51699" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51727:51760" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51788:51821" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51849:51882" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51910:51943" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="51971:52004" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52032:52065" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52093:52126" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52154:52187" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52215:52248" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52276:52309" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52337:52370" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52398:52431" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52459:52492" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52520:52553" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52581:52614" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52642:52675" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52703:52736" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52764:52797" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52825:52858" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52886:52919" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="52947:52980" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="53008:53041" ph="..." />
-                <marker date="1484707339549" expanded="true" signature="53069:53102" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="24703:24729" ph="{...}" />
+                <marker date="1484714889761" expanded="true" signature="49927:53116" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="49973:49991" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50019:50052" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50080:50113" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50141:50174" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50202:50235" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50263:50296" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50324:50357" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50385:50418" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50446:50479" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50507:50540" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50568:50601" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50629:50662" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50690:50723" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50751:50784" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50812:50845" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50873:50906" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50934:50967" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="50995:51028" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51056:51089" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51117:51150" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51178:51211" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51239:51272" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51300:51333" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51361:51394" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51422:51455" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51483:51516" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51544:51577" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51605:51638" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51666:51699" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51727:51760" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51788:51821" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51849:51882" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51910:51943" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="51971:52004" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52032:52065" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52093:52126" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52154:52187" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52215:52248" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52276:52309" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52337:52370" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52398:52431" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52459:52492" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52520:52553" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52581:52614" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52642:52675" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52703:52736" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52764:52797" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52825:52858" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52886:52919" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="52947:52980" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="53008:53041" ph="..." />
+                <marker date="1484714889761" expanded="true" signature="53069:53102" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkout_classes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout_classes.php">
+      <file leaf-file-name="Generation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="296" column="27" selection-start-line="296" selection-start-column="27" selection-end-line="296" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Transaction.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state relative-caret-position="-218">
+              <caret line="439" column="55" selection-start-line="439" selection-start-column="55" selection-end-line="439" selection-end-column="55" />
               <folding>
-                <element signature="e#7#90#0#PHP" expanded="false" />
-                <element signature="e#3479#3563#0#PHP" expanded="false" />
-                <element signature="e#3572#3660#0#PHP" expanded="false" />
-                <element signature="e#3669#3755#0#PHP" expanded="false" />
-                <element signature="e#3764#3850#0#PHP" expanded="false" />
-                <element signature="n#get_refund_list#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="n#get_book_list#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="n#get_payment_printing#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="e#19850#20064#0#PHP" expanded="false" />
-                <element signature="e#23378#23648#0#PHP" expanded="false" />
-                <element signature="e#23411#23638#0#PHP" expanded="false" />
-                <element signature="n#set_refunds_from_cart#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="e#23791#24061#0#PHP" expanded="false" />
-                <element signature="e#23824#24051#0#PHP" expanded="false" />
-                <element signature="n#set_credits_from_cart#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="e#24213#24517#0#PHP" expanded="false" />
-                <element signature="e#24249#24507#0#PHP" expanded="false" />
-                <element signature="n#create_payment_type#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="e#24662#24813#0#PHP" expanded="false" />
-                <element signature="n#get_payment_types#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="n#set_payment_types#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="n#create_credit_transaction#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="e#25726#25827#0#PHP" expanded="false" />
-                <element signature="n#add_payment#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="e#25956#26016#0#PHP" expanded="false" />
-                <element signature="n#add_payment_credit#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="e#26282#26342#0#PHP" expanded="false" />
-                <element signature="n#remove_payment#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="e#26912#26965#0#PHP" expanded="false" />
-                <element signature="n#refund_book#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="e#27246#27728#0#PHP" expanded="false" />
-                <element signature="e#27446#27545#0#PHP" expanded="false" />
-                <element signature="n#get_total#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="n#get_refund_total#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="e#28509#28697#0#PHP" expanded="false" />
-                <element signature="e#28545#28687#0#PHP" expanded="false" />
-                <element signature="n#get_credit_total#0;n#Transaction#0;n#!!top" expanded="false" />
-                <element signature="e#28850#29041#0#PHP" expanded="false" />
-                <element signature="e#28886#29031#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transactions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="102" selection-start-line="39" selection-start-column="102" selection-end-line="39" selection-end-column="102" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requests.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
-              <folding>
-                <element signature="n#selection#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utility.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="175" column="11" selection-start-line="175" selection-start-column="11" selection-end-line="175" selection-end-column="93" />
-              <folding>
-                <element signature="n#cast_decimal_precision#0;n#!!top" expanded="false" />
+                <element signature="e#7#91#0#PHP" expanded="true" />
+                <element signature="n#EditDisplay#0;n#!!top" expanded="false" />
+                <element signature="e#17048#17149#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -274,10 +209,10 @@
       <file leaf-file-name="Book.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Book.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+            <state relative-caret-position="476">
+              <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
               <folding>
-                <element signature="e#6248#6359#0#PHP" expanded="false" />
+                <element signature="e#9362#9473#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -298,8 +233,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/FormHTML.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/InputHTML.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Input.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/LabelHTML.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Label.php" />
@@ -335,20 +268,22 @@
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/bookmethods.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/library.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/test.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/sales-console.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/consigners.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Books.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Span.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Consigner.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Book.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/includes.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Consigner.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/consigners.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Books.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/sales-console.php" />
+        <option value="$PROJECT_DIR$/WP/wp-config.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Book.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/verify.php" />
       </list>
     </option>
   </component>
@@ -789,22 +724,22 @@
       <workItem from="1484429278999" duration="12150000" />
       <workItem from="1484509780608" duration="22265000" />
       <workItem from="1484591471970" duration="25759000" />
-      <workItem from="1484678940146" duration="28216000" />
+      <workItem from="1484678940146" duration="45460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="352598000" />
+    <option name="totallyTimeSpent" value="369842000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -833,73 +768,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="53" />
+      <option name="time" value="57" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WP/wp-includes/l10n.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="216" column="9" selection-start-line="216" selection-start-column="9" selection-end-line="216" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Input.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/H4.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-includes/general-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="3498" column="9" selection-start-line="3498" selection-start-column="9" selection-end-line="3498" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Div.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TextRender.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/inventory/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/strong.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1049,14 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/pay.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/bestsellers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1079,14 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/sales-console.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3417">
-          <caret line="217" column="78" selection-start-line="217" selection-start-column="78" selection-end-line="217" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation" />
     <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Row.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1101,51 +958,6 @@
         <state relative-caret-position="221">
           <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Books.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="e#2996#3214#0#PHP" expanded="false" />
-            <element signature="e#3983#4165#0#PHP" expanded="false" />
-            <element signature="n#book_display#0;n#!!top" expanded="false" />
-            <element signature="e#4438#5319#0#PHP" expanded="false" />
-            <element signature="e#4504#5313#0#PHP" expanded="false" />
-            <element signature="e#4579#5151#0#PHP" expanded="false" />
-            <element signature="e#4939#5117#0#PHP" expanded="false" />
-            <element signature="e#5171#5313#0#PHP" expanded="false" />
-            <element signature="e#5190#5302#0#PHP" expanded="false" />
-            <element signature="e#5324#5505#0#PHP" expanded="false" />
-            <element signature="e#5392#5498#0#PHP" expanded="false" />
-            <element signature="e#5510#5695#0#PHP" expanded="false" />
-            <element signature="e#5580#5688#0#PHP" expanded="false" />
-            <element signature="e#5700#5875#0#PHP" expanded="false" />
-            <element signature="e#5765#5868#0#PHP" expanded="false" />
-            <element signature="e#5880#6059#0#PHP" expanded="false" />
-            <element signature="e#5945#6052#0#PHP" expanded="false" />
-            <element signature="e#6064#6243#0#PHP" expanded="false" />
-            <element signature="e#6129#6236#0#PHP" expanded="false" />
-            <element signature="e#6248#6433#0#PHP" expanded="false" />
-            <element signature="e#6314#6426#0#PHP" expanded="false" />
-            <element signature="e#6438#6639#0#PHP" expanded="false" />
-            <element signature="e#6507#6632#0#PHP" expanded="false" />
-            <element signature="e#6644#6845#0#PHP" expanded="false" />
-            <element signature="e#6714#6838#0#PHP" expanded="false" />
-            <element signature="e#6850#7056#0#PHP" expanded="false" />
-            <element signature="e#6923#7049#0#PHP" expanded="false" />
-            <element signature="e#7268#7356#0#PHP" expanded="false" />
-            <element signature="e#7368#7628#0#PHP" expanded="false" />
-            <element signature="e#7437#7621#0#PHP" expanded="false" />
-            <element signature="e#7633#8164#0#PHP" expanded="false" />
-            <element signature="e#7706#8157#0#PHP" expanded="false" />
-            <element signature="n#GetUsedNewRadio#0;n#!!top" expanded="false" />
-            <element signature="e#8293#8391#0#PHP" expanded="false" />
-            <element signature="e#8677#8780#0#PHP" expanded="false" />
-            <element signature="n#media_selector_print_scripts#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1173,161 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="302" column="17" selection-start-line="302" selection-start-column="17" selection-end-line="302" selection-end-column="17" />
-          <folding>
-            <element signature="e#7#91#0#PHP" expanded="true" />
-            <element signature="e#13746#13847#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Consigner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="n#DisplaySoldConsignerBooks#0;n#Consigner#0;n#!!top" expanded="false" />
-            <element signature="n#get_current_consigner_books#0;n#Consigner#0;n#!!top" expanded="false" />
-            <element signature="n#get_sold_consigner_books#0;n#Consigner#0;n#!!top" expanded="false" />
-            <element signature="n#DisplaySoldBook#0;n#Consigner#0;n#!!top" expanded="false" />
-            <element signature="n#GenerateBookSearch#0;n#Consigner#0;n#!!top" expanded="false" />
-            <element signature="n#ConsignerBookSearch#0;n#Consigner#0;n#!!top" expanded="false" />
-            <element signature="n#get_books#0;n#Consigner#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#90#0#PHP" expanded="false" />
-            <element signature="e#3479#3563#0#PHP" expanded="false" />
-            <element signature="e#3572#3660#0#PHP" expanded="false" />
-            <element signature="e#3669#3755#0#PHP" expanded="false" />
-            <element signature="e#3764#3850#0#PHP" expanded="false" />
-            <element signature="n#get_refund_list#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="n#get_book_list#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="n#get_payment_printing#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="e#19850#20064#0#PHP" expanded="false" />
-            <element signature="e#23378#23648#0#PHP" expanded="false" />
-            <element signature="e#23411#23638#0#PHP" expanded="false" />
-            <element signature="n#set_refunds_from_cart#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="e#23791#24061#0#PHP" expanded="false" />
-            <element signature="e#23824#24051#0#PHP" expanded="false" />
-            <element signature="n#set_credits_from_cart#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="e#24213#24517#0#PHP" expanded="false" />
-            <element signature="e#24249#24507#0#PHP" expanded="false" />
-            <element signature="n#create_payment_type#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="e#24662#24813#0#PHP" expanded="false" />
-            <element signature="n#get_payment_types#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="n#set_payment_types#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="n#create_credit_transaction#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="e#25726#25827#0#PHP" expanded="false" />
-            <element signature="n#add_payment#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="e#25956#26016#0#PHP" expanded="false" />
-            <element signature="n#add_payment_credit#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="e#26282#26342#0#PHP" expanded="false" />
-            <element signature="n#remove_payment#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="e#26912#26965#0#PHP" expanded="false" />
-            <element signature="n#refund_book#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="e#27246#27728#0#PHP" expanded="false" />
-            <element signature="e#27446#27545#0#PHP" expanded="false" />
-            <element signature="n#get_total#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="n#get_refund_total#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="e#28509#28697#0#PHP" expanded="false" />
-            <element signature="e#28545#28687#0#PHP" expanded="false" />
-            <element signature="n#get_credit_total#0;n#Transaction#0;n#!!top" expanded="false" />
-            <element signature="e#28850#29041#0#PHP" expanded="false" />
-            <element signature="e#28886#29031#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="175" column="11" selection-start-line="175" selection-start-column="11" selection-end-line="175" selection-end-column="93" />
-          <folding>
-            <element signature="n#cast_decimal_precision#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
-          <folding>
-            <element signature="n#selection#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="102" selection-start-line="39" selection-start-column="102" selection-end-line="39" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/consigners.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="29" column="50" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="50" />
-          <folding>
-            <element signature="n#display_consigner_books#0;n#!!top" expanded="false" />
-            <element signature="n#display_sold_consigner_books#0;n#!!top" expanded="false" />
-            <element signature="n#GenerateResults#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="951">
-          <caret line="342" column="9" selection-start-line="342" selection-start-column="9" selection-end-line="342" selection-end-column="9" />
-          <folding>
-            <element signature="n#__construct#0;n#__input#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#Radio#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#Radio#0;n#!!top" expanded="false" />
-            <element signature="n#GetDisplay#0;n#Radio#0;n#!!top" expanded="false" />
-            <element signature="n#GetEditForm#0;n#Radio#0;n#!!top" expanded="false" />
-            <element signature="n#Image#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#Image#0;n#!!top" expanded="false" />
-            <element signature="n#Date#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#Date#0;n#!!top" expanded="false" />
-            <element signature="e#8923#9112#0#PHP" expanded="false" />
-            <element signature="e#11730#11966#0#PHP" expanded="false" />
-            <element signature="n#TextBox#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputSearch#0;n#TextBox#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#TextBox#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#TextBox#0;n#!!top" expanded="false" />
-            <element signature="n#GetDisplay#0;n#TextBox#0;n#!!top" expanded="false" />
-            <element signature="n#Text#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#Text#0;n#!!top" expanded="false" />
-            <element signature="n#Checkbox#0;n#!!top" expanded="false" />
-            <element signature="n#BookButton#0;n#!!top" expanded="false" />
-            <element signature="n#TransactionButton#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Book.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
-          <folding>
-            <element signature="e#6248#6359#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout_classes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1336,74 +993,305 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding>
+            <element signature="n#cast_decimal_precision#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="82" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/consigners.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/original.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/pay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/reports/income.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="78" column="31" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
+          <folding>
+            <element signature="e#7#90#0#PHP" expanded="false" />
+            <element signature="e#3498#3582#0#PHP" expanded="false" />
+            <element signature="e#3591#3679#0#PHP" expanded="false" />
+            <element signature="e#3688#3774#0#PHP" expanded="false" />
+            <element signature="e#3783#3869#0#PHP" expanded="false" />
+            <element signature="n#get_refund_list#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="n#get_book_list#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="n#get_payment_printing#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="e#19869#20083#0#PHP" expanded="false" />
+            <element signature="e#23397#23667#0#PHP" expanded="false" />
+            <element signature="e#23430#23657#0#PHP" expanded="false" />
+            <element signature="n#set_refunds_from_cart#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="e#23810#24080#0#PHP" expanded="false" />
+            <element signature="e#23843#24070#0#PHP" expanded="false" />
+            <element signature="n#set_credits_from_cart#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="e#24232#24536#0#PHP" expanded="false" />
+            <element signature="e#24268#24526#0#PHP" expanded="false" />
+            <element signature="n#create_payment_type#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="e#24681#24832#0#PHP" expanded="false" />
+            <element signature="n#get_payment_types#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="n#set_payment_types#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="n#create_credit_transaction#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="e#25745#25846#0#PHP" expanded="false" />
+            <element signature="n#add_payment#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="e#25975#26035#0#PHP" expanded="false" />
+            <element signature="n#add_payment_credit#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="e#26301#26361#0#PHP" expanded="false" />
+            <element signature="n#remove_payment#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="e#26931#26984#0#PHP" expanded="false" />
+            <element signature="n#refund_book#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="e#27265#27747#0#PHP" expanded="false" />
+            <element signature="e#27465#27564#0#PHP" expanded="false" />
+            <element signature="n#get_total#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="n#get_refund_total#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="e#28528#28716#0#PHP" expanded="false" />
+            <element signature="e#28564#28706#0#PHP" expanded="false" />
+            <element signature="n#get_credit_total#0;n#Transaction#0;n#!!top" expanded="false" />
+            <element signature="e#28869#29060#0#PHP" expanded="false" />
+            <element signature="e#28905#29050#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Books.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <element signature="e#318#2503#0#PHP" expanded="false" />
+            <element signature="n#media_selector_print_scripts#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/refund.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <marker date="1476829204966" expanded="true" signature="612:748" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/credit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="883" column="66" selection-start-line="883" selection-start-column="66" selection-end-line="883" selection-end-column="66" />
+        <state relative-caret-position="-221">
+          <caret line="881" column="38" selection-start-line="881" selection-start-column="38" selection-end-line="881" selection-end-column="38" />
           <folding>
             <element signature="n#get_paid_message#0;n#!!top" expanded="false" />
             <element signature="n#get_payments#0;n#!!top" expanded="false" />
             <element signature="n#process_auth#0;n#!!top" expanded="false" />
+            <element signature="n#display_cart_book#0;n#!!top" expanded="false" />
             <element signature="e#41625#41874#0#PHP" expanded="false" />
             <element signature="e#42321#42570#0#PHP" expanded="false" />
             <element signature="e#43704#43953#0#PHP" expanded="false" />
             <element signature="e#44398#44647#0#PHP" expanded="false" />
             <element signature="n#get_credit_total#0;n#!!top" expanded="false" />
-            <marker date="1484707339549" expanded="true" signature="24703:24729" ph="{...}" />
-            <marker date="1484707339549" expanded="true" signature="49927:53116" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="49973:49991" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50019:50052" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50080:50113" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50141:50174" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50202:50235" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50263:50296" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50324:50357" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50385:50418" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50446:50479" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50507:50540" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50568:50601" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50629:50662" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50690:50723" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50751:50784" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50812:50845" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50873:50906" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50934:50967" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="50995:51028" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51056:51089" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51117:51150" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51178:51211" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51239:51272" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51300:51333" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51361:51394" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51422:51455" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51483:51516" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51544:51577" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51605:51638" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51666:51699" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51727:51760" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51788:51821" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51849:51882" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51910:51943" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="51971:52004" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52032:52065" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52093:52126" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52154:52187" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52215:52248" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52276:52309" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52337:52370" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52398:52431" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52459:52492" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52520:52553" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52581:52614" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52642:52675" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52703:52736" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52764:52797" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52825:52858" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52886:52919" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="52947:52980" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="53008:53041" ph="..." />
-            <marker date="1484707339549" expanded="true" signature="53069:53102" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="24703:24729" ph="{...}" />
+            <marker date="1484714889761" expanded="true" signature="49927:53116" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="49973:49991" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50019:50052" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50080:50113" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50141:50174" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50202:50235" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50263:50296" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50324:50357" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50385:50418" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50446:50479" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50507:50540" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50568:50601" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50629:50662" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50690:50723" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50751:50784" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50812:50845" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50873:50906" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50934:50967" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="50995:51028" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51056:51089" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51117:51150" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51178:51211" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51239:51272" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51300:51333" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51361:51394" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51422:51455" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51483:51516" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51544:51577" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51605:51638" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51666:51699" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51727:51760" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51788:51821" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51849:51882" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51910:51943" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="51971:52004" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52032:52065" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52093:52126" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52154:52187" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52215:52248" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52276:52309" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52337:52370" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52398:52431" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52459:52492" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52520:52553" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52581:52614" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52642:52675" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52703:52736" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52764:52797" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52825:52858" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52886:52919" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="52947:52980" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="53008:53041" ph="..." />
+            <marker date="1484714889761" expanded="true" signature="53069:53102" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/sales-console.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="294" column="112" selection-start-line="294" selection-start-column="112" selection-end-line="294" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Input.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Consigner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="405" column="27" selection-start-line="405" selection-start-column="27" selection-end-line="405" selection-end-column="27" />
+          <folding>
+            <element signature="n#init#0;n#Consigner#0;n#!!top" expanded="false" />
+            <element signature="n#DisplaySoldConsignerBooks#0;n#Consigner#0;n#!!top" expanded="false" />
+            <element signature="n#get_current_consigner_books#0;n#Consigner#0;n#!!top" expanded="false" />
+            <element signature="n#get_sold_consigner_books#0;n#Consigner#0;n#!!top" expanded="false" />
+            <element signature="n#DisplaySoldBook#0;n#Consigner#0;n#!!top" expanded="false" />
+            <element signature="n#ConsignerBookSearch#0;n#Consigner#0;n#!!top" expanded="false" />
+            <element signature="n#get_books#0;n#Consigner#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="94" column="49" selection-start-line="94" selection-start-column="49" selection-end-line="94" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="515" column="76" selection-start-line="515" selection-start-column="76" selection-end-line="515" selection-end-column="76" />
+          <folding>
+            <element signature="n#GetInputAdd#0;n#Radio#0;n#!!top" expanded="false" />
+            <element signature="n#GetEditForm#0;n#Radio#0;n#!!top" expanded="false" />
+            <element signature="e#9727#9916#0#PHP" expanded="false" />
+            <element signature="e#12949#13185#0#PHP" expanded="false" />
+            <element signature="n#GetInputSearch#0;n#TextBox#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputAdd#0;n#TextBox#0;n#!!top" expanded="false" />
+            <element signature="n#GetDisplay#0;n#TextBox#0;n#!!top" expanded="false" />
+            <element signature="n#Checkbox#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Book.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="e#9362#9473#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-218">
+          <caret line="439" column="55" selection-start-line="439" selection-start-column="55" selection-end-line="439" selection-end-column="55" />
+          <folding>
+            <element signature="e#7#91#0#PHP" expanded="true" />
+            <element signature="n#EditDisplay#0;n#!!top" expanded="false" />
+            <element signature="e#17048#17149#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/verify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="222" column="52" selection-start-line="222" selection-start-column="52" selection-end-line="222" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>

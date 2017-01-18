@@ -15,10 +15,6 @@ class Consigner {
     public static $book_paid = 'paid';
     public static $book_price = 'price';
 
-    public static function Selected() {
-        return selection::GetConsigner();
-    }
-
     public static $name = 'consigner_name';
     public static $id = 'consigner_id';
     public static $date = 'consigner_date';
@@ -77,9 +73,6 @@ class Consigner {
             self::$totalpaid => $paid,
             self::$totalowed => $owed
         );
-    }
-
-    public static function StoreQuery() {
     }
 
     public static function GenerateConsignerSearch()
@@ -280,6 +273,7 @@ class Consigner {
     public static function GenerateBookSearch($id) {
         $list = new RenderList();
         if ($_SESSION[action_types::$consigner_books] == true) {
+            StoreQuery(Book::$props);
             $list->add_object(
                 GenerateSearch(Book::$consigner_book_search_props, Book::$source, Book::$post_type)
             );

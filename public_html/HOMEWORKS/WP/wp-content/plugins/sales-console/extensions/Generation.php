@@ -7,6 +7,25 @@
  * Time: 12:36 PM
  */
 
+function StoreQuery($props) {
+    foreach ($props as $key => $prop) {
+        if (method_exists($prop, 'GetPostValue')) {
+            $val = $prop->GetPostValue(vars::$search_prefix);
+            if ($val && method_exists($prop, 'SetSessionValue')) {
+                $prop->SetSessionValue(vars::$search_prefix, $val);
+            }
+        }
+    }
+}
+
+function ResetQuery($props) {
+    foreach ($props as $key => $prop) {
+        if (method_exists($prop, 'SetSessionValue')) {
+            $prop->UnsetSessionValue(vars::$search_prefix);
+        }
+    }
+}
+
 function GenerateSearchBox($props, $source, $title, $button) {
     $leftwidth = 20;
     $rightwidth = 80;
@@ -60,6 +79,8 @@ function GenerateSearchBox($props, $source, $title, $button) {
         new Row(
             new Column(colspan(2).width($rightwidth).align('center').style('padding-left: 5px; padding-top: 5px;'),
                 page_action::InputAction(action_types::get_search($source)),
+                selection::SetID(1, vars::$current_page),
+                new Input(type('hidden').name('reset_query_'.$source).id('reset_query_'.$source).value('true')),
                 button($button)
             )
         )
@@ -127,13 +148,14 @@ function GenerateAddBox($props, $source, $title, $button) {
     return $form;
 }
 
-function GenerateQuery($props, $post_type) {
+function GenerateQuery($props, $post_type, $display_post_num, $offset) {
     $args = array(
-        'numberposts' => 25,
+        'numberposts' => $display_post_num,
         'posts_per_page' => 25,
         'order' => 'ASC',
         'orderby' => 'date',
-        'post_type' => $post_type
+        'post_type' => $post_type,
+        'offset' => $offset
     );
 
     add_filter('get_meta_sql','cast_decimal_precision');
@@ -142,7 +164,7 @@ function GenerateQuery($props, $post_type) {
 
     foreach ($props as $key => $prop) {
         if ($prop->search_param) {
-            $args = $prop->GetQuery($args);
+            $args = $prop->GetQuery($args, vars::$search_prefix);
         }
     }
     return new WP_Query($args);
@@ -176,7 +198,14 @@ function GenerateSearch($props, $source, $post_type) {
             new Column(colspan($counter+1).style('padding-bottom: 8px;'),
                 new HR(style('margin: 0px;')))));
 
-    $query = GenerateQuery($props, $post_type);
+    $display_post_num = 25;
+    $current_page = selection::GetID(vars::$current_page);
+    if (!$current_page) $current_page = 1;
+
+    $offset = ($current_page - 1) * $display_post_num;
+    if ($offset < 0) $offset = 0;
+
+    $query = GenerateQuery($props, $post_type, $display_post_num, $offset);
     while ($query->have_posts()):
         $query->the_post();
         global $post;
@@ -188,7 +217,54 @@ function GenerateSearch($props, $source, $post_type) {
                     new HR(style('margin: 0px;')))
             ));
     endwhile;
-    return $table;
+
+    $renderlist = new RenderList();
+    $renderlist->add_object($table);
+
+    $pageTable = new TableArr(id('formtable').width(100).border(0).cellspacing(0).cellpadding(0).style('padding-top: 5px; margin: 5px 0 5px;'));
+    if ($query->found_posts > $display_post_num) {
+        $row = new Row();
+        $row->add_object(new Column(width(82)));
+        $row->add_object(
+            new Column(align('center').width(6).style('padding: 3px;'),
+                new H4(new TextRender('Page: ' . $current_page))
+            )
+        );
+        if ($current_page > 1) {
+            $row->add_object(
+                new Column(align('center').width(6).style('padding: 3px;'),
+                    new Form(
+                        selection::SetID($current_page - 1, vars::$current_page),
+                        page_action::InputAction(action_types::get_search($source)),
+                        button('Previous')
+                    )
+                )
+            );
+        }
+        else {
+            $row->add_object(new Column(align('center').width(6).style('padding: 3px;')));
+        }
+        if ($current_page * $display_post_num < $query->found_posts) {
+            $row->add_object(
+                new Column(align('center').width(6).style('padding: 3px;'),
+                    new Form(
+                        selection::SetID($current_page + 1, vars::$current_page),
+                        page_action::InputAction(action_types::get_search($source)),
+                        button('Next')
+                    )
+                )
+            );
+        }
+        else {
+            $row->add_object(new Column(align('center').width(6).style('padding: 3px;')));
+        }
+        $pageTable->add_object(
+            $row
+        );
+    }
+    $renderlist->add_object($pageTable);
+
+    return $renderlist;
 }
 
 function Display($props, $id, $source) {
@@ -372,13 +448,22 @@ function Add($props, $source, $post_type) {
     }
     else if ($source == 'Book' && $idprop != null){
         $lastBarcodeExists = get_option('_cmb_resource_lastBarcode');
-        $lastBarcode = 15000;
         if ($lastBarcodeExists == false){
             add_option('_cmb_resource_lastBarcode', 15000);
             $lastBarcode = get_option('_cmb_resource_lastBarcode');
         }
         $newbarcode = $lastBarcode + 1;
         update_option('_cmb_resource_lastBarcode', $newbarcode);
+        $idprop->SetValue($postid, $newbarcode);
+    }
+    else if ($source == 'Transaction' && $idprop != null){
+        $lastBarcodeExists = get_option('_cmb_transaction_lastID');
+        if ($lastBarcodeExists == false){
+            add_option('_cmb_transaction_lastID', 15000);
+            $lastBarcode = get_option('_cmb_transaction_lastID');
+        }
+        $newbarcode = $lastBarcode + 1;
+        update_option('_cmb_transaction_lastID', $newbarcode);
         $idprop->SetValue($postid, $newbarcode);
     }
     return $postid;

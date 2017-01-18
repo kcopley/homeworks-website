@@ -76,7 +76,7 @@ class Transaction
             self::$total => $total,
             self::$taxrate => $taxrate,
             self::$transfirstid => $transfirst,
-            $completed,
+            self::$complete => $completed,
             'printing' => $print
         );
     }

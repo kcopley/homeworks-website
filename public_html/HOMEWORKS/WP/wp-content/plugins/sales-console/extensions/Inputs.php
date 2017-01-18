@@ -41,7 +41,6 @@ class __input {
             return has_post_thumbnail($id);
         else
             return get_post_meta($id, $this->db_value, true);
-
     }
 
     public function SetValue($id, $value) {
@@ -59,6 +58,18 @@ class __input {
 
     public function GetPostValue($prefix) {
         return $_REQUEST[$prefix.$this->name];
+    }
+
+    public function GetSessionValue($prefix) {
+        return $_SESSION[$prefix.$this->name];
+    }
+
+    public function SetSessionValue($prefix, $val) {
+        $_SESSION[$prefix.$this->name] = $val;
+    }
+
+    public function UnsetSessionValue($prefix) {
+        unset($_SESSION[$prefix.$this->name]);
     }
 }
 
@@ -96,8 +107,8 @@ class Radio extends __input {
         return $row;
     }
 
-    public function GetQuery($args) {
-        $query = $_REQUEST[vars::$search_prefix.$this->name];
+    public function GetQuery($args, $prefix) {
+        $query = $_SESSION[$prefix.$this->name];
         if ($query) {
             $args['meta_query'][] =  array(
                 'key' => $this->db_value,
@@ -152,6 +163,7 @@ class Image extends __input {
             new Form(method('post').id($id).name($id),
                 page_action::InputAction(action_types::add_image($source)),
                 selection::SetID($id, $source),
+                new Input(type('hidden').name(Book::$image_set).id(Book::$image_set)),
                 new Input(id($id).type('button').classType('upload_image_button').style('color: '.$color.';').value($text))
             )
         );
@@ -176,8 +188,8 @@ class Image extends __input {
         return $row;
     }
 
-    public function GetQuery($args) {
-        $query = $_REQUEST[vars::$search_prefix.$this->name];
+    public function GetQuery($args, $prefix) {
+        $query = $_SESSION[$prefix.$this->name];
         if ($query) {
             if ($query == 'All') {
                 return $args;
@@ -243,11 +255,23 @@ class Date extends __input  {
         return $list;
     }
 
-    function GetQuery($args) {
+    public function SetSessionValue($prefix, $val)
+    {
+        $_SESSION[$prefix.$this->name.'_from'] = $_REQUEST[vars::$search_prefix.$this->name.'_from'];
+        $_SESSION[$prefix.$this->name.'_to'] = $_REQUEST[vars::$search_prefix.$this->name.'_to'];
+    }
+
+    public function UnsetSessionValue($prefix)
+    {
+        unset($_SESSION[$prefix.$this->name.'_from']);
+        unset($_SESSION[$prefix.$this->name.'_to']);
+    }
+
+    function GetQuery($args, $prefix) {
         date_default_timezone_set('America/Chicago');
-        $datefrom = $_REQUEST[vars::$search_prefix.$this->name.'_from'];
+        $datefrom = $_SESSION[$prefix.$this->name.'_from'];
         if (!$datefrom) $datefrom = date("Y-m-d", mktime(0, 0, 0, 1, 1, 2014));
-        $dateto = $_REQUEST[vars::$search_prefix.$this->name.'_to'];
+        $dateto = $_SESSION[$prefix.$this->name.'_to'];
         if (!$dateto) $dateto = date('Y-m-d');
 
         $args['meta_query'][] = array(
@@ -311,11 +335,23 @@ class Decimal extends __input  {
         return $list;
     }
 
-    function GetQuery($args) {
+    public function SetSessionValue($prefix, $val)
+    {
+        $_SESSION[$prefix.$this->name.'_from'] = $_REQUEST[vars::$search_prefix.$this->name.'_from'];
+        $_SESSION[$prefix.$this->name.'_to'] = $_REQUEST[vars::$search_prefix.$this->name.'_to'];
+    }
+
+    public function UnsetSessionValue($prefix)
+    {
+        unset($_SESSION[$prefix.$this->name.'_from']);
+        unset($_SESSION[$prefix.$this->name.'_to']);
+    }
+
+    function GetQuery($args, $prefix) {
         add_filter('get_meta_sql','cast_decimal_precision');
 
-        $totalfrom = $_REQUEST[vars::$search_prefix.$this->name.'_from'];
-        $totalto = $_REQUEST[vars::$search_prefix.$this->name.'_to'];
+        $totalfrom = $_SESSION[$prefix.$this->name.'_from'];
+        $totalto = $_SESSION[$prefix.$this->name.'_to'];
 
         if ($totalfrom) {
             $args['meta_query'][] = array(
@@ -397,7 +433,7 @@ class TextBox extends __input  {
         return $row;
     }
 
-    public function GetQuery($args) {
+    public function GetQuery($args, $prefix) {
         return $args;
     }
 
@@ -417,6 +453,7 @@ class TextBox extends __input  {
 
 class Text extends __input  {
     public $exact = -1;
+    public $display_prefix;
 
     public function GetInputSearch($leftWidth, $rightWidth, $prefix) {
         $row = new Row(
@@ -438,8 +475,8 @@ class Text extends __input  {
         return $row;
     }
 
-    public function GetQuery($args) {
-        $query = $_REQUEST[vars::$search_prefix.$this->name];
+    public function GetQuery($args, $prefix) {
+        $query = $_SESSION[$prefix.$this->name];
         if ($query) {
             if ($this->db_value == 'title') {
                     $args['s'] = $query;
@@ -476,7 +513,8 @@ class Text extends __input  {
             );
         }
         else {
-            return new Column(style('font-size: 14px; padding-right: 2px;'), new TextRender(get_post_meta($id, $this->db_value, true)));
+            return new Column(style('font-size: 14px; padding-right: 2px;'),
+                new TextRender($this->display_prefix.get_post_meta($id, $this->db_value, true)));
         }
     }
 
@@ -535,7 +573,7 @@ class BookButton {
     public function GetInputAdd($leftWidth, $rightWidth, $prefix) {
     }
 
-    public function GetQuery($args) {
+    public function GetQuery($args, $prefix) {
         return $args;
     }
 
@@ -589,7 +627,7 @@ class TransactionButton {
     public function GetInputAdd($leftWidth, $rightWidth, $prefix) {
     }
 
-    public function GetQuery($args) {
+    public function GetQuery($args, $prefix) {
         return $args;
     }
 

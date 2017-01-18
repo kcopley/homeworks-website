@@ -16,7 +16,10 @@ class Book {
     public static $isbn = 'book_isbn';
     public static $condition = 'book_condition';
     public static $available = 'book_availability';
+    public static $online = 'book_online';
     public static $image = 'book_image';
+
+    public static $image_set = 'image_attachment_id';
 
     static function init()
     {
@@ -31,8 +34,11 @@ class Book {
         $barcode->edit_param = false;
 
         $cost = new Text('book_cost', 'Cost', '_cmb_resource_cost');
+        $cost->display_prefix = '$';
         $price = new Text('book_price', 'Price', '_cmb_resource_price');
+        $price->display_prefix = '$';
         $msrp = new Text('book_msrp', 'MSRP', '_cmb_resource_MSRP');
+        $msrp->display_prefix = '$';
         $publisher = new Text('book_publisher', 'Publisher', '_cmb_resource_publisher');
         $isbn = new Text('book_isbn', 'ISBN', '_cmb_resource_isbn');
 
@@ -41,6 +47,9 @@ class Book {
 
         $availability = new Radio('book_availability', 'Available', '_cmb_resource_available');
         $availability->options = array('Active', 'Inactive');
+
+        $online = new Radio('book_online', 'Online', '_cmb_resource_online');
+        $online->options = array('Yes', 'No');
 
         $image = new Image('book_image', 'Image', 'image');
         $image->options = array('Yes', 'No');
@@ -59,6 +68,7 @@ class Book {
             self::$isbn => $isbn,
             self::$condition => $condition,
             self::$available => $availability,
+            self::$online => $online,
             self::$image => $image
         );
 
@@ -115,6 +125,66 @@ class Book {
         );
     }
 
+    public static function SelectBook($id) {
+        return new TableArr(width(100).border(0).cellspacing(0).cellpadding(0),
+            new Row(
+                new Column(width(100).valign('top'),
+                    new TableArr(width(100).border(0).cellspacing(0).cellpadding(0),
+                        new Row(
+                            new Column(EditDisplay(Book::$props, selection::GetID(Book::$source), 5, Book::$source))
+                        )
+                    )
+                )
+            ),
+            new Row(
+                new Column(width(100).valign('top'),
+                    new TableArr(width(100).border(0).cellspacing(0).cellpadding(0),
+                        new Row(
+                            new Column(Book::display_consigners($id))
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+    public static function display_consigners($id) {
+        $consigners = Book::get_consigners($id);
+
+        $list = new RenderList();
+        if (!empty($consigners)) {
+            $outsidetable = new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100).
+                style('padding: 10px; border: solid; border-width: 1px; border-color: #D0D0D0;'));
+            $row = new Row();
+            $outsidetable->add_object($row);
+            $counter = 0;
+            foreach (Consigner::$props as $key => $prop) {
+                if ($prop->search_param) {
+                    if ($counter == 0) {
+                        $row->add_object(
+                            new Column(width(20).style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender($prop->format))
+                        );
+                    }
+                    else {
+                        $row->add_object(
+                            new Column(style('padding-bottom: 8px; font-weight: bold; font-size: 14px'), new TextRender($prop->format))
+                        );
+                    }
+                    $counter++;
+                }
+            }
+            $row->add_object(
+                new Column(width(20))
+            );
+
+            foreach ($consigners as $consigner) {
+                $outsidetable->add_object(Display(Consigner::$props, $consigner, Consigner::$source));
+            }
+            $list->add_object($outsidetable);
+        }
+        return $list;
+    }
+
     public static function has_book_image($id) {
         return has_post_thumbnail($id);
     }
@@ -137,6 +207,17 @@ class Book {
 
     public static function set_consigners($book, $consigners) {
         update_post_meta($book, '_cmb_resource_consigners', $consigners);
+        //self::update_count($book);
+    }
+
+    public static function update_count($book) {
+        $count = self::get_consigner_count($book);
+        if ($count <= 0) {
+            Book::$props[Book::$available]->SetValue($book, 'Inactive');
+        }
+        else {
+            Book::$props[Book::$available]->SetValue($book, 'Active');
+        }
     }
 
     public static function add_book($book_id, $consigner_id) {

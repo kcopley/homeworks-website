@@ -28,6 +28,8 @@ class vars {
     public static $var_add = 5;
     public static $var_format = 6;
 
+    public static $current_page;
+
     public static $search_prefix = 'search_';
     public static $edit_prefix = 'edit_';
     public static $add_prefix = 'add_';
@@ -169,7 +171,7 @@ function step($str){
 }
 
 function add_image($id) {
-    set_post_thumbnail($id, absint( $_POST[book_request::$image_set]));
+    set_post_thumbnail($id, absint( $_POST[Book::$image_set]));
 }
 
 function button($value) {

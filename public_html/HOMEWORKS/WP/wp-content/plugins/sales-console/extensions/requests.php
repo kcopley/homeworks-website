@@ -66,6 +66,15 @@ class action_types {
 
     public static $pre_card_submission = 'pre_card_submission';
     public static $process_payment = 'process_payment';
+
+    public static $verify_books = 'verify_books';
+    public static $verify_consigners = 'verify_consigners';
+    public static $verify_transactions = 'verify_transactions';
+    public static $reset_counters = 'verify_reset_counters';
+
+    public static $set_bids = 'set_bids';
+    public static $set_cids = 'set_cids';
+    public static $set_tids = 'set_tids';
 }
 
 class selection {
@@ -89,6 +98,11 @@ class selection {
         if (self::GetIDPost(Book::$source)) $_SESSION['selection_'.Book::$source] = self::GetIDPost(Book::$source);
         if (self::GetIDPost(Consigner::$source)) $_SESSION['selection_'.Consigner::$source] = self::GetIDPost(Consigner::$source);
         if (self::GetIDPost(Transaction::$source)) $_SESSION['selection_'.Transaction::$source] = self::GetIDPost(Transaction::$source);
+        if (self::GetIDPost(vars::$current_page)) $_SESSION['selection_'.vars::$current_page] = self::GetIDPost(vars::$current_page);
+    }
+
+    public static function ResetPage() {
+        $_SESSION['selection_'.vars::$current_page] = 1;
     }
 
     public static function ResetPages($page) {
