@@ -42,7 +42,8 @@ class action_types {
 
     public static $pay_sold_books = 'pay_sold_books_action';
     public static $search_consigner = 'search_consigner_action';
-    public static $add_book_to_owner = 'add_book_to_owner_action';
+    public static $add_book_to_owner_search = 'add_book_to_owner_search_action';
+    public static $add_book_to_owner_select = 'add_book_to_owner_select_action';
     public static $select_consigner = 'select_consigner_action';
     public static $remove_consigner = 'remove_consigner_action';
     public static $update_consigner = 'update_consigner_action';
@@ -63,9 +64,11 @@ class action_types {
     public static $clear_checkout_cart = 'clear_checkout_cart';
     public static $clear_checkout_credit = 'clear_checkout_credit';
     public static $clear_checkout = 'clear_checkout';
+    public static $clear_checkout_save = 'clear_checkout_save';
 
     public static $pre_card_submission = 'pre_card_submission';
     public static $process_payment = 'process_payment';
+    public static $import_transaction = 'import_transaction';
 }
 
 class selection {

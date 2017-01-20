@@ -19,7 +19,9 @@ class Book {
     public static $online = 'book_online';
     public static $image = 'book_image';
     public static $quantity = 'book_quantity';
-
+    public static $bookaddbutton = 'book_add_button';
+    public static $editaddbutton = 'book_edit_add_button';
+    public static $consigner_id = 'consigner_id_input';
     public static $image_set = 'image_attachment_id';
 
     static function init()
@@ -36,23 +38,40 @@ class Book {
 
         $cost = new Text('book_cost', 'Cost', '_cmb_resource_cost');
         $cost->display_prefix = '$';
+        $cost->exact = true;
         $price = new Text('book_price', 'Price', '_cmb_resource_price');
         $price->display_prefix = '$';
+        $price->exact = true;
         $msrp = new Text('book_msrp', 'MSRP', '_cmb_resource_MSRP');
         $msrp->display_prefix = '$';
+        $msrp->exact = true;
         $publisher = new Text('book_publisher', 'Publisher', '_cmb_resource_publisher');
         $isbn = new Text('book_isbn', 'ISBN', '_cmb_resource_isbn');
 
         $quantity = new Quantity('book_quantity', 'Quantity', 'quantity');
         $quantity->search_param = false;
         $quantity->edit_param = false;
-        $quantity->add_param = false;
+
+        $consignerid = new ConsignerID('consigner_id', 'Consigner', '');
+        $consignerid->search_param = false;
+        $consignerid->display_in_search = false;
+        $consignerid->edit_param = false;
+        $consignerid->display_in_edit = false;
+
+        $addbutton = new BookButton('book_add_button');
+        $addbutton->action = action_types::$add_book_to_owner_search;
+        $addbutton->button = 'Add';
+        $addbutton->add_param = false;
+        $addbutton->display_in_add = false;
+        $addbutton->display_in_edit = false;
+        $addbutton->edit_param = false;
 
         $condition = new Radio('book_condition', 'Condition', '_cmb_resource_condition');
         $condition->options = array(1 => 'Used', 2 => 'New');
 
         $availability = new Radio('book_availability', 'Available', '_cmb_resource_available');
         $availability->options = array(2 => 'Active', 1 => 'Inactive');
+        $availability->add_param = false;
 
         $online = new Radio('book_online', 'Online', '_cmb_resource_online');
         $online->options = array(2 => 'Yes', 1 => 'No');
@@ -62,7 +81,7 @@ class Book {
         $image->add_param = false;
         $image->display_in_add = false;
         $image->edit_param = false;
-        $image->display_in_edit = false;
+        $image->display_in_edit = true;
 
         self::$props = array(
             self::$name => $title,
@@ -73,10 +92,12 @@ class Book {
             self::$publisher => $publisher,
             self::$isbn => $isbn,
             self::$condition => $condition,
-            self::$quantity => $quantity,
             self::$available => $availability,
             self::$online => $online,
-            self::$image => $image
+            self::$image => $image,
+            self::$quantity => $quantity,
+            self::$bookaddbutton => $addbutton,
+            self::$consigner_id => $consignerid,
         );
 
         $remove = new BookButton('remove_book');
@@ -121,24 +142,35 @@ class Book {
         return new TableArr(border(0).cellpadding(0).cellspacing(0).width(100),
             new Row(
                 new Column(width(52),
-                    GenerateSearchBox(self::$props, self::$source, 'Search:', 'Search Books')
+                    GenerateSearchBox(self::$props, self::$source, 'Search Books:', 'Search Books')
                 ),
                 new Column(width(2)),
-                new Column(width(36),
-                    GenerateAddBox(self::$props, self::$source, 'Add:', 'Add Book')
+                new Column(width(44),
+                    GenerateAddBox(self::$props, self::$source, 'Add Book:', 'Add Book')
                 ),
-                new Column(width(10))
+                new Column(width(2))
             )
         );
     }
 
     public static function SelectBook($id) {
+        $form = new Form(id('add_book_select_button').name('add_book_select_button'));
+        $addbutton = new RenderList(
+            page_action::InputActionForm(action_types::$add_book_to_owner_select, 'add_book_select_button'),
+            selection::SetIDForm($id, Book::$source, 'add_book_select_button'),
+            new TextRender('Consigner ID: '),
+            new Input(form('add_book_select_button').type('text').id(vars::$edit_prefix.Book::$consigner_id).name(vars::$edit_prefix.Book::$consigner_id)),
+            new Input(form('add_book_select_button').classType('button-primary').type('submit').name('button').value('Add'))
+        );
         return new TableArr(width(100).border(0).cellspacing(0).cellpadding(0),
             new Row(
                 new Column(width(100).valign('top'),
                     new TableArr(width(100).border(0).cellspacing(0).cellpadding(0),
                         new Row(
-                            new Column(EditDisplay(Book::$props, selection::GetID(Book::$source), 5, Book::$source))
+                            new Column(
+                                $form,
+                                EditDisplay(Book::$props, $id, 3, Book::$source, $addbutton)
+                            )
                         )
                     )
                 )
@@ -214,22 +246,22 @@ class Book {
 
     public static function set_consigners($book, $consigners) {
         update_post_meta($book, '_cmb_resource_consigners', $consigners);
-        //self::update_count($book);
     }
 
     public static function update_count($book) {
         $count = self::get_consigner_count($book);
         if ($count <= 0) {
-            Book::$props[Book::$available]->SetValue($book, 'Inactive');
+            Book::$props[Book::$available]->SetValue($book, 1);
         }
         else {
-            Book::$props[Book::$available]->SetValue($book, 'Active');
+            Book::$props[Book::$available]->SetValue($book, 2);
         }
     }
 
     public static function add_book($book_id, $consigner_id) {
         Book::add_consigner_to_book($book_id, $consigner_id);
         Consigner::add_book_to_consigner($consigner_id, $book_id);
+        Book::update_count($book_id);
     }
 
     public static function add_consigner_to_book($book, $consigner) {

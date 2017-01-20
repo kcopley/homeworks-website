@@ -16,6 +16,8 @@ class verify {
     public static $verify_radios = 'verify_radios';
     public static $get_book_totals = 'get_book_totals';
     public static $set_db_name = 'set_db_name';
+    public static $set_conference_name = 'set_conference_name';
+    public static $set_shipping_margin = 'set_shipping_margin';
 
     public static $set_bids = 'set_bids';
     public static $set_cids = 'set_cids';
@@ -49,6 +51,12 @@ switch (page_action::GetAction()){
         break;
     case verify::$set_db_name:
         set_db_website();
+        break;
+    case verify::$set_conference_name:
+        set_conference_name();
+        break;
+    case verify::$set_shipping_margin:
+        set_shipping_margin();
         break;
 }
 
@@ -120,6 +128,30 @@ $list = new RenderList(
                             new Form(
                                 page_action::InputAction(verify::$set_db_name),
                                 button('Start')
+                            )
+                        )
+                    ),
+                    new Row(
+                        new Column(width(10).align('right'),
+                            new TextRender('Set Conference Name')
+                        ),
+                        new Column(
+                            new Form(
+                                page_action::InputAction(verify::$set_conference_name),
+                                new Input(style('margin: 6px;').type('text').name('conf_name').id('conf_name')),
+                                button('Set')
+                            )
+                        )
+                    ),
+                    new Row(
+                        new Column(width(10).align('right'),
+                            new TextRender('Set Shipping Margin')
+                        ),
+                        new Column(
+                            new Form(
+                                page_action::InputAction(verify::$set_shipping_margin),
+                                new Input(style('margin: 6px;').type('text').name('shipping_margin').id('shipping_margin')),
+                                button('Set')
                             )
                         )
                     )
@@ -254,6 +286,10 @@ function verify_radio($id) {
 }
 
 function verify_book($id) {
+
+    $testISBN = Book::$props[Book::$isbn]->GetValue($id);
+    if ($testISBN) return;
+
     $title = get_the_title($id);
     if (!$title){
         wp_delete_post($id);
@@ -299,8 +335,6 @@ function verify_book($id) {
     if (!$isbn)
         $isbn = 'NOTSET';
     Book::$props[Book::$isbn]->SetValue($id, $isbn);
-    delete_post_meta($id, '_cmb_resource_u-sku');
-    delete_post_meta($id, '_cmb_resource_sku');
 
     $condition = getVal($id, '_cmb_resource_condition');
     if (!$condition) $condition = 'NOTSET';
@@ -322,13 +356,16 @@ function verify_book($id) {
     else {
         Book::$props[Book::$available]->SetValue($id, 2);
     }
+
+    delete_post_meta($id, '_cmb_resource_u-sku');
+    delete_post_meta($id, '_cmb_resource_sku');
 }
 
 function get_book_total() {
     $args = array(
         'numberposts' => -1,
         'posts_per_page' => -1,
-        'post_type' => 'bookstore',
+        'post_type' => Book::$post_type,
         'cache_results' => false
     );
 
@@ -373,14 +410,35 @@ function get_book_total() {
 
 function verify_consigner_database() {}
 
-function verify_transaction_database() {
+function delete_transaction_database() {
     $args = array(
         'numberposts' => -1,
         'posts_per_page' => -1,
-        'post_type' => 'purchases',
+        'post_type' => Transaction::$post_type,
         'cache_results' => false
     );
 
+
+    $query = new WP_Query($args);
+    $counter = 0;
+    while ($query->have_posts()):
+        $query->the_post();
+        global $post;
+        $t = $post->ID;
+        wp_delete_post($t);
+        $counter++;
+    endwhile;
+
+    echo 'Completed '.$counter.' transactions.';
+}
+
+function verify_transaction_database() {
+    $args = array(
+        'numberposts' => 20,
+        'posts_per_page' => 20,
+        'post_type' => 'purchases',
+        'cache_results' => false
+    );
 
     $query = new WP_Query($args);
     $counter = 0;
@@ -401,20 +459,85 @@ function verify_transaction($id) {
         wp_delete_post($id);
         return;
     }
-    Transaction::$props[Transaction::$id]->SetValue($id, $title);
-/*
-    post-type = purchases
-    update_post_meta($postid, '_cmb_order_invoice', $invoice);
-    update_post_meta($postid, '_cmb_transfirst', $transid);
-    update_post_meta($postid, '_cmb_customer_address', $address);
-    update_post_meta($postid, '_cmb_customer_email', $email);
-    update_post_meta($postid, '_cmb_customer_organization', $school);
-    update_post_meta($postid, '_cmb_order_summary', $summary);
-    update_post_meta($postid, '_cmb_purchase_price', $purchaseprice);
-    update_post_meta($postid, '_cmb_purchase_tax', $ordertax);
-    _cmb_payment_type
-    _cmb_customer_payment
-*/
+    $order = array(
+        'post_title' => $title,
+        'post_status' => 'publish',
+        'post_author' => 4,
+        'post_type' => Transaction::$post_type
+    );
+    $postid = wp_insert_post($order);
+
+    Transaction::$props[Transaction::$customer_name]->SetValue($postid, $title);
+    Transaction::$props[Transaction::$complete]->SetValue($postid, 2);
+    Transaction::$props[Transaction::$id]->SetValue($postid, $title);
+    $invoice = get_post_meta($id, '_cmb_order_invoice', true);
+    if ($invoice) {
+        $invoice = substr($invoice, 5);
+        Transaction::$props[Transaction::$invoiceid]->SetValue($postid, $invoice);
+    }
+
+    Transaction::$props[Transaction::$conference]->SetValue($postid, 2);
+
+    $trans = get_post_meta($id, '_cmb_transfirst', true);
+    Transaction::$props[Transaction::$transfirstid]->SetValue($postid, $trans);
+
+    $addressphone = get_post_meta($id, '_cmb_customer_address', true);
+    if ($addressphone) {
+        if ($addressphone == 'No shipping address available (conference sale)') {
+            Transaction::$props[Transaction::$conference]->SetValue($postid, 1);
+        }
+        else {
+            $posphone = strpos($addressphone, 'Phone:');
+            $split = substr($addressphone, $posphone + 6);
+            $phone = trim($split);
+            Transaction::$props[Transaction::$customer_phone]->SetValue($postid, $phone);
+
+            $address = trim(substr($addressphone, 0, $posphone));
+            Transaction::$props[Transaction::$customer_address]->SetValue($postid, $address);
+        }
+    }
+
+    $email = get_post_meta($id, '_cmb_customer_email', true);
+    if ($email)
+        Transaction::$props[Transaction::$customer_email]->SetValue($postid, $email);
+
+    $org = get_post_meta($id, '_cmb_customer_organization', true);
+    if ($org)
+        Transaction::$props[Transaction::$schoolname]->SetValue($postid, $org);
+
+    $price = str_replace('$', '', get_post_meta($id, '_cmb_purchase_price', true));
+    Transaction::$props[Transaction::$total]->SetValue($postid, $price);
+
+    date_default_timezone_set('America/Chicago');
+    Transaction::$props[Transaction::$date]->SetValue($postid, get_the_date('Y-m-d', $id));
+
+    Transaction::add_payment($postid, checkout_payment::$payment_credit, str_replace('$', '', $price));
+    Transaction::$props[Transaction::$total]->SetValue($postid, $price);
+
+    $summ = get_post_meta($id, '_cmb_order_summary', true);
+    if ($summ) {
+        $books = explode(PHP_EOL, $summ);
+        if (!empty($books)) {
+            foreach ($books as $book) {
+                $str = trim($book);
+
+                $start = strpos($str, '(');
+                $end = strpos($str, ')', $start + 1);
+                if ($start !== false && $end !== false) {
+                    $length = $end - $start;
+                    $result = substr($str, $start + 1, $length - 1);
+
+                    $booktitle = trim(substr($str, 0, $start - 1));
+
+                    $bid = get_book_by_title($booktitle);
+                    if ($bid) {
+                        Transaction::add_book($postid, $bid, $result);
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 function set_bids() {
@@ -455,6 +578,22 @@ function set_db_website() {
     {
         mysql_query($query['s']);
     }
+}
+
+function set_conference_name() {
+    $name = $_REQUEST['conf_name'];
+    if (!$name) {
+        $name = '';
+    }
+    update_option(vars::$conference_name, $name);
+}
+
+function set_shipping_margin() {
+    $name = $_REQUEST['shipping_margin'];
+    if (!$name) {
+        $name = '';
+    }
+    update_option(vars::$shipping_margin, $name);
 }
 
 $list->Render();

@@ -13,8 +13,12 @@ class Transaction
     public static $props;
 
     public static $id = 'transaction_id';
+    public static $invoiceid = 'transaction_invoice';
+    public static $schoolcontact = 'transaction_school_contact';
+    public static $schoolname = 'transaction_school_name';
     public static $date = 'transaction_date';
     public static $customer_name = 'transaction_cust_name';
+    public static $customer_phone = 'transaction_cust_phone';
     public static $customer_email = 'transaction_cust_email';
     public static $customer_address = 'transaction_cust_address';
     public static $transfirstid = 'transaction_transfirst';
@@ -31,19 +35,30 @@ class Transaction
     public static $credit_amount = 'transaction_credit_amount';
     public static $payment_type = 'payment_type';
     public static $payment_amount = 'payment_amount';
+    public static $conference = 'conference_sale';
+    public static $open_in_checkout = 'open_in_checkout';
 
     static function init()
     {
         self::$props = array();
 
-        $id = new Text('transaction_id', 'ID', 'title');
+        $id = new Text('transaction_id', 'Sale', 'title');
         $id->edit_param = false;
+
+        $invoice = new Text('transaction_invoice', 'Invoice', '_cmb_transaction_invoice');
+        $invoice->edit_param = false;
+        //$schoolcontact = new Text('transaction_school_contact', 'School Contact', '_cmb_transaction_school_contact');
+        $schoolname = new Text('transaction_school_name', 'School Name', '_cmb_transaction_school_name');
+
         $date = new Date('transaction_date', 'Date', '_cmb_transaction_date');
 
         $name = new Text('transaction_customer_name', 'Name', '_cmb_transaction_customer_name');
+        $phone = new Text('transaction_customer_phone', 'Phone', '_cmb_transaction_customer_phone');
         $email = new Text('transaction_customer_email', 'Email', '_cmb_transaction_customer_email');
         $address = new Text('transaction_customer_address', 'Address', '_cmb_transaction_customer_address');
         $total = new Decimal('transaction_total', 'Total', '_cmb_transaction_total');
+        $total->display_prefix = '$';
+        $total->cost = true;
         $total->edit_param = false;
         $taxrate = new Text('transaction_taxrate', 'Tax Rate', '_cmb_transaction_taxrate');
         $taxrate->edit_param = false;
@@ -60,23 +75,40 @@ class Transaction
         $print->add_param = false;
         $print->custom = new Input(classType('button-primary').onclick("printContent('toPrint');").type('button').value('Print Invoice'));
 
-        $completed = new Text('transaction_complete', 'Complete', '_cmb_transaction_completed');
-        $completed->search_param = false;
-        $completed->display_in_search = false;
+        $completed = new Radio('transaction_complete', 'Complete', '_cmb_transaction_completed');
+        $completed->options = array(1 => 'No', 2 => 'Yes');
         $completed->add_param = false;
         $completed->edit_param = false;
         $completed->display_in_edit = false;
 
+        $conference = new Radio(self::$conference, 'Sale Type', '_cmb_transaction_saletype');
+        $conference->options = array(1 => 'Conference', 2 => 'Online');
+        $conference->edit_param = false;
+        $conference->add_param = false;
+
+        $openincheckout = new ImportButton('checkout_button');
+        $openincheckout->formaction = vars::$checkout_page;
+        $openincheckout->action = action_types::$import_transaction;
+        $openincheckout->button = 'Open in Checkout';
+        $openincheckout->edit_param = false;
+        $openincheckout->add_param = false;
+        $openincheckout->search_param = false;
+
         self::$props = array(
             self::$id => $id,
+            self::$invoiceid => $invoice,
             self::$date => $date,
+            self::$conference => $conference,
             self::$customer_name => $name,
+            self::$customer_phone => $phone,
             self::$customer_email => $email,
             self::$customer_address => $address,
+            self::$schoolname => $schoolname,
             self::$total => $total,
             self::$taxrate => $taxrate,
             self::$transfirstid => $transfirst,
             self::$complete => $completed,
+            self::$open_in_checkout => $openincheckout,
             'printing' => $print
         );
     }
@@ -104,7 +136,7 @@ class Transaction
                 new Column(width(100).valign('top').style('padding-bottom: 8px;'),
                     new TableArr(width(100) . border(0) . cellspacing(0) . cellpadding(0),
                         new Row(
-                            new Column(EditDisplay(Transaction::$props, $id, 2, Transaction::$source))
+                            new Column(EditDisplay(Transaction::$props, $id, 2, Transaction::$source, new RenderList()))
                         )
                     )
                 )
@@ -193,20 +225,14 @@ class Transaction
         $book_id = $book[self::$book_id];
         $quantity = $book[self::$book_quantity];
         $price = $book[self::$book_price];
-        $refunded = $book[self::$book_refunded_quantity];
         $title = $book[self::$book_title];
 
         return new Row(
-            new Column(style('padding-top: 6px; padding-bottom: 6px;'),
-                new TextRender($title)),
-            new Column(style('padding-top: 6px; padding-bottom: 6px;'),
-                new TextRender(Book::$props[Book::$publisher]->GetValue($book_id))),
-            new Column(style('padding-top: 6px; padding-bottom: 6px;'),
-                new TextRender(Book::$props[Book::$isbn]->GetValue($book_id))),
-            new Column(style('padding-top: 6px; padding-bottom: 6px;'),
-                new TextRender(Book::$props[Book::$barcode]->GetValue($book_id))),
-            new Column(style('padding-top: 6px; padding-bottom: 6px;'),
-                new TextRender(Book::$props[Book::$condition]->GetValue($book_id))),
+            Book::$props[Book::$name]->GetDisplay($book_id, Book::$source),
+            Book::$props[Book::$publisher]->GetDisplay($book_id, Book::$source),
+            Book::$props[Book::$isbn]->GetDisplay($book_id, Book::$source),
+            Book::$props[Book::$barcode]->GetDisplay($book_id, Book::$source),
+            Book::$props[Book::$condition]->GetDisplay($book_id, Book::$source),
             new Column(style('padding-top: 6px; padding-bottom: 6px;'),
                 new TextRender($quantity)),
             new Column(style('padding-top: 6px; padding-bottom: 6px;'),
@@ -574,7 +600,8 @@ class Transaction
         return array(
             self::$book_id => $book,
             self::$book_quantity => $quantity,
-            self::$book_price => Book::$props[Book::$price]->GetValue($book)
+            self::$book_price => Book::$props[Book::$price]->GetValue($book),
+            self::$book_title => Book::$props[Book::$name]->GetValue($book),
         );
     }
 
@@ -582,7 +609,8 @@ class Transaction
         return array(
             self::$book_id => $book,
             self::$book_quantity => $quantity,
-            self::$book_price => Book::$props[Book::$price]->GetValue($book)
+            self::$book_price => Book::$props[Book::$price]->GetValue($book),
+            self::$book_title => Book::$props[Book::$name]->GetValue($book),
         );
     }
 
@@ -625,7 +653,8 @@ class Transaction
         if (!$books){
             $books = array();
         }
-        $books[$book] = self::create_book_transaction($book, $quantity);
+        $books[] = self::create_book_transaction($book, $quantity);
+        self::set_books($id, $books);
         Transaction::$props[Transaction::$total]->SetValue($id, self::get_total($id));
     }
 

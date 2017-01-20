@@ -44,6 +44,7 @@ class vars {
     public static $consigner_page = 'admin.php?page=sales_console_consigners';
     public static $library_page = 'admin.php?page=library_breakdown';
     public static $transaction_page = 'admin.php?page=sales_console_transactions';
+    public static $checkout_page = 'admin.php?page=sales-console-admin';
 
     public static function GetPage($source) {
         if ($source == Book::$source) {
@@ -57,6 +58,73 @@ class vars {
        }
         return '';
     }
+
+    public static $conference_name = '_cmb_conference_name';
+    public static $shipping_margin = '_cmb_shipping_margin';
+}
+
+function get_next_invoice() {
+    $lastID = get_option('_cmb_transaction_lastID');
+    if (!$lastID){
+        add_option('_cmb_transaction_lastID', 2000);
+        $lastID = get_option('_cmb_transaction_lastID');
+    }
+    $newbarcode = $lastID + 1;
+    update_option('_cmb_transaction_lastID', $newbarcode);
+    return $newbarcode;
+}
+
+function get_consigner_wp_id($id) {
+    $args = array(
+        'numberposts' => -1,
+        'posts_per_page' => -1,
+        'order' => 'ASC',
+        'orderby' => 'date',
+        'post_type' => Consigner::$post_type,
+    );
+
+    $meta_query_array = array('relation' => 'AND');
+    $args['meta_query'] = $meta_query_array;
+
+    $args['meta_query'][] = array(
+        'key' => Consigner::$props[Consigner::$id]->db_value,
+        'value' => $id
+    );
+
+    $query = new WP_Query($args);
+
+    while ($query->have_posts()):
+        $query->the_post();
+        global $post;
+        $id = $post->ID;
+        return $id;
+    endwhile;
+    return get_consigner_owner_id();
+}
+
+function get_book_by_title($title) {
+    $args = array(
+        'numberposts' => -1,
+        'posts_per_page' => -1,
+        'order' => 'ASC',
+        'orderby' => 'date',
+        'post_type' => Book::$post_type,
+        'sentence' => 1
+    );
+
+    $meta_query_array = array('relation' => 'AND');
+    $args['meta_query'] = $meta_query_array;
+    $args['s'] = $title;
+
+    $query = new WP_Query($args);
+
+    while ($query->have_posts()):
+        $query->the_post();
+        global $post;
+        $id = $post->ID;
+        return $id;
+    endwhile;
+    return false;
 }
 
 function cast_decimal_precision( $array ) {

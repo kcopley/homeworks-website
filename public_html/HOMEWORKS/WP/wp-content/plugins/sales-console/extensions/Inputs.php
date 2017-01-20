@@ -159,14 +159,13 @@ class Image extends __input {
             $text = 'Yes';
             $color = 'green';
         }
-        return new Column(
+        return
             new Form(method('post').id($id).name($id),
                 page_action::InputAction(action_types::add_image($source)),
                 selection::SetID($id, $source),
                 new Input(type('hidden').name(Book::$image_set).id(Book::$image_set)),
                 new Input(id($id).type('button').classType('upload_image_button').style('color: '.$color.';').value($text))
-            )
-        );
+            );
     }
 
     public function GetInputSearch($leftWidth, $rightWidth, $prefix) {
@@ -212,13 +211,13 @@ class Image extends __input {
     }
 
     public function GetDisplay($id, $source) {
-        return $this->get_image_form($id, $source);
+        return new Column($this->get_image_form($id, $source));
     }
 
     public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
         return new Row(
             new Column(align('right').width($leftwidth), new Label(new TextRender($this->format.':'))),
-            new Column(width($rightwidth).style('padding-left: 5px;'),
+            new Column(align('left').width($rightwidth).style('padding-left: 5px;'),
                 $this->get_image_form($id, Book::$source)
             )
         );
@@ -270,10 +269,10 @@ class Date extends __input  {
     function GetQuery($args, $prefix) {
         date_default_timezone_set('America/Chicago');
         $datefrom = $_SESSION[$prefix.$this->name.'_from'];
-        if (!$datefrom) $datefrom = date("Y-m-d", mktime(0, 0, 0, 1, 1, 2014));
+        //if (!$datefrom) $datefrom = date("Y-m-d", mktime(0, 0, 0, 1, 1, 2014));
         $dateto = $_SESSION[$prefix.$this->name.'_to'];
-        if (!$dateto) $dateto = date('Y-m-d');
-
+        //if (!$dateto) $dateto = date('Y-m-d');
+if ($datefrom && $dateto)
         $args['meta_query'][] = array(
                 'key' => $this->db_value,
                 'value' => array($datefrom, $dateto),
@@ -352,9 +351,9 @@ class Decimal extends __input  {
         add_filter('get_meta_sql','cast_decimal_precision');
 
         $totalfrom = $_SESSION[$prefix.$this->name.'_from'];
-        if (!$totalfrom) $totalfrom = 0;
+        //if (!$totalfrom) $totalfrom = 0;
         $totalto = $_SESSION[$prefix.$this->name.'_to'];
-        if (!$totalto) $totalto = 9999999;
+        //if (!$totalto) $totalto = 9999999;
 
         if ($totalfrom) {
             $args['meta_query'][] = array(
@@ -464,14 +463,29 @@ class Quantity extends __input {
         return $consigners;
     }
 
+    public function SetValue($id, $value)
+    {
+        $consigner = Book::$props[Book::$consigner_id]->GetPostValue(vars::$add_prefix);
+        $consigner = get_consigner_wp_id($consigner);
+        if (!$consigner) {
+            $consigner = get_consigner_owner_id();
+        }
+        for ($i = 0; $i < $value; $i++) {
+            Book::add_book($id, $consigner);
+        }
+    }
+
     public function GetInputSearch($leftWidth, $rightWidth, $prefix) {
-        $row = new Row(
-        );
-        return $row;
+        $list = new RenderList();
+        return $list;
     }
 
     public function GetInputAdd($leftWidth, $rightWidth, $prefix) {
         $row = new Row(
+            new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))),
+            new Column(width($rightWidth).style('padding-left: 5px;'),
+                new Input(style('width: 100%;').id($prefix.$this->name).name($prefix.$this->name).type('text'))
+            )
         );
         return $row;
     }
@@ -493,6 +507,49 @@ class Quantity extends __input {
                 new Strong(new TextRender($val))
             )
         );
+    }
+}
+
+class ConsignerID extends __input {
+    public $exact = -1;
+    public $display_prefix;
+
+    public function GetValue($id)
+    {
+    }
+
+    public function SetValue($id, $value)
+    {
+    }
+
+    public function GetInputSearch($leftWidth, $rightWidth, $prefix) {
+        $list = new RenderList();
+        return $list;
+    }
+
+    public function GetInputAdd($leftWidth, $rightWidth, $prefix) {
+        $row = new Row(
+            new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))),
+            new Column(width($rightWidth).style('padding-left: 5px;'),
+                new Input(style('width: 100%;').id($prefix.$this->name).name($prefix.$this->name).type('text'))
+            )
+        );
+        return $row;
+    }
+
+    public function GetQuery($args, $prefix) {
+        return $args;
+    }
+
+    public function GetDisplay($id, $source) {
+        return new RenderList();
+    }
+
+    public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
+        $row = new Row(
+
+        );
+        return $row;
     }
 }
 
@@ -629,16 +686,33 @@ class BookButton {
         else {
             $button = new Input(classType('button-primary').type('submit').name('button').value($this->button));
         }
-        return new Column(
-            new Form(
-                page_action::InputAction($this->action),
-                selection::SetID($id, Book::$source),
-                $button
-            )
-        );
+        return
+            new Column(
+                new Form(
+                    page_action::InputAction($this->action),
+                    selection::SetID($id, Book::$source),
+                    $button
+                )
+            );
     }
 
     public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
+        if ($this->custom) {
+            $button = $this->custom;
+        }
+        else {
+            $button = new Input(classType('button-primary').type('submit').name('button').value($this->button));
+        }
+        return new Row(
+            new Column(width($leftwidth)),
+            new Column(width($rightwidth).align('left'),
+                new Form(
+                    page_action::InputAction($this->action),
+                    selection::SetID($id, Book::$source),
+                    $button
+                )
+            )
+        );
     }
 }
 
@@ -646,6 +720,7 @@ class TransactionButton {
     public $button;
     public $action;
     public $custom;
+    public $formaction;
 
     public $search_param;
     public $display_in_search;
@@ -679,14 +754,24 @@ class TransactionButton {
     public function GetDisplay($id, $source) {
         if ($this->custom) {
             $button = $this->custom;
+            $button->add_object(form($id.$source));
         }
         else {
-            $button = new Input(classType('button-primary').type('submit').name('button').value($this->button));
+            $button = new Input(form($id.$source).classType('button-primary').type('submit').name('button').value($this->button));
+        }
+        if ($this->formaction) {
+            return new Column(
+                new Form(id($id.$source).name($id.$source).action($this->formaction),
+                    page_action::InputActionForm($this->action, $id.$source),
+                    selection::SetIDForm($id, Transaction::$source, $id.$source),
+                    $button
+                )
+            );
         }
         return new Column(
-            new Form(
-                page_action::InputAction($this->action),
-                selection::SetID($id, Transaction::$source),
+            new Form(id($id.$source).name($id.$source),
+                page_action::InputActionForm($this->action, $id.$source),
+                selection::SetIDForm($id, Transaction::$source, $id.$source),
                 $button
             )
         );
@@ -695,16 +780,139 @@ class TransactionButton {
     public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
         if ($this->custom) {
             $button = $this->custom;
+            $button->add_object(form($id));
         }
         else {
-            $button = new Input(classType('button-primary').type('submit').name('button').value($this->button));
+            $button = new Input(form($id).classType('button-primary').type('submit').name('button').value($this->button));
         }
-        return new Row(new Column(
-            new Form(
-                page_action::InputAction($this->action),
-                selection::SetID($id, Transaction::$source),
+
+        if ($this->formaction) {
+            return new Row(
+                new Column(width($leftwidth)),
+                new Column(width($rightwidth),
+                    new Form(id($id).name($id).action($this->formaction),
+                        page_action::InputActionForm($this->action, $id),
+                        selection::SetIDForm($id, Transaction::$source, $id),
+                        $button
+                    )
+                )
+            );
+        }
+        return new Row(
+            new Column(width($leftwidth)),
+            new Column(width($rightwidth),
+                new Form(id($id).name($id),
+                    page_action::InputActionForm($this->action, $id),
+                    selection::SetIDForm($id, Transaction::$source, $id),
+                    $button
+                )
+            )
+        );
+    }
+}
+
+class ImportButton {
+    public $button;
+    public $action;
+    public $custom;
+    public $formaction;
+
+    public $search_param;
+    public $display_in_search;
+    public $edit_param;
+    public $display_in_edit;
+    public $add_param;
+    public $display_in_add;
+
+    function __construct($name)
+    {
+        $this->name = $name;
+
+        $this->search_param = true;
+        $this->display_in_search = true;
+        $this->add_param = true;
+        $this->display_in_add = true;
+        $this->edit_param = true;
+        $this->display_in_edit = true;
+    }
+
+    public function GetInputSearch($leftWidth, $rightWidth, $prefix) {
+    }
+
+    public function GetInputAdd($leftWidth, $rightWidth, $prefix) {
+    }
+
+    public function GetQuery($args, $prefix) {
+        return $args;
+    }
+
+    public function GetDisplay($id, $source) {
+        $block = false;
+        if (Transaction::$props[Transaction::$complete]->GetValue($id) == 2) {
+            $block = true;
+        }
+
+        if ($this->custom) {
+            $button = $this->custom;
+            $button->add_object(form($id.$source));
+        }
+        else {
+            if ($block) $button = new Input(form($id.$source).classType('button').name('button').value($this->button));
+            else $button = new Input(form($id.$source).classType('button-primary').type('submit').name('button').value($this->button));
+        }
+        if ($this->formaction) {
+            return new Column(
+                new Form(id($id.$source).name($id.$source).action($this->formaction),
+                    page_action::InputActionForm($this->action, $id.$source),
+                    selection::SetIDForm($id, Transaction::$source, $id.$source),
+                    $button
+                )
+            );
+        }
+        return new Column(
+            new Form(id($id.$source).name($id.$source),
+                page_action::InputActionForm($this->action, $id.$source),
+                selection::SetIDForm($id, Transaction::$source, $id.$source),
                 $button
             )
-        ));
+        );
+    }
+
+    public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
+        $block = false;
+        if (Transaction::$props[Transaction::$complete]->GetValue($id) == 2) {
+            $block = true;
+        }
+        if ($this->custom) {
+            $button = $this->custom;
+            $button->add_object(form($id.'import'));
+        }
+        else {
+            if ($block) $button = new Input(form($id.'import').classType('button').name('button').value($this->button));
+            else $button = new Input(form($id.'import').classType('button-primary').type('submit').name('button').value($this->button));
+        }
+
+        if ($this->formaction) {
+            return new Row(
+                new Column(width($leftwidth)),
+                new Column(width($rightwidth),
+                    new Form(id($id.'import').name($id.'import').action($this->formaction),
+                        page_action::InputActionForm($this->action, $id.'import'),
+                        selection::SetIDForm($id, Transaction::$source, $id.'import'),
+                        $button
+                    )
+                )
+            );
+        }
+        return new Row(
+            new Column(width($leftwidth)),
+            new Column(width($rightwidth),
+                new Form(id($id).name($id),
+                    page_action::InputActionForm($this->action, $id),
+                    selection::SetIDForm($id, Transaction::$source, $id),
+                    $button
+                )
+            )
+        );
     }
 }

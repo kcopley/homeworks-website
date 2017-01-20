@@ -95,7 +95,7 @@ class Consigner {
                 new Column(width(54).valign('top'),
                     new TableArr(width(100).border(0).cellspacing(0).cellpadding(0),
                         new Row(
-                            new Column(EditDisplay(Consigner::$props, $id, 4, Consigner::$source))
+                            new Column(EditDisplay(Consigner::$props, $id, 2, Consigner::$source, new RenderList()))
                         ),
                         new Row(
                             new Column(self::ShowTotals($id))
@@ -291,37 +291,6 @@ class Consigner {
             )
         );
     }
-
-    public static function ConsignerBookSearch() {
-        return new TableArr(id('formtable').width(100).border(0).cellspacing(0).cellpadding(0),
-            new Row(
-                new Column(width(49).valign('top'),
-                    new TableArr(id('formtable').border(0).cellspacing(0).cellpadding(0).style('margin: 10px 0 10px;'),
-                        new Row(
-                            new Column(new H4(style('margin: 10px 0px 0px 0px;'), new TextRender('Books'))),
-                            new Column(new H4(style('margin: 10px 0px 0px 0px;'), new TextRender('ISBN'))),
-                            new Column(new H4(style('margin: 10px 0px 0px 0px;'), new TextRender('Cost'))),
-                            new Column(new H4(style('margin: 10px 0px 0px 0px;'), new TextRender('Barcode'))),
-                            new Column(width(10)),
-                            new Column(width(6))
-                        ),
-                        new Row(new Column(colspan(6), new HR())),
-                        display_consigner_books($id),
-                        new Row(
-                            new Column(new H4(new TextRender('Books Sold'))),
-                            new Column(colspan(3), new HR()),
-                            new Column(width(10), new H4(align('center'), new TextRender('Paid?'))),
-                            new Column(colspan(1), new HR())
-                        ),
-                        display_sold_consigner_books($id)
-                    )
-                )
-            )
-        )
-            ;
-
-    }
-
     public static function get_books($consigner) {
         $ret = get_post_meta($consigner, "_cmb_consigner_books", true);
         if (!$ret){
@@ -349,7 +318,7 @@ class Consigner {
     public static function consigner_add_sold_book($consigner_id, $book_id) {
         $books = Consigner::get_sold_books($consigner_id);
         if (!$books) $books = array();
-        $books[] = self::create_sold_book($book_id, 'No');
+        $books[] = self::create_sold_book($book_id, 'No', Book::$props[Book::$cost]->GetValue($book_id));
         Consigner::set_consigner_sold_books($consigner_id, $books);
     }
 

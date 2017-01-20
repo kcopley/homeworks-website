@@ -314,7 +314,7 @@ function Display($props, $id, $source) {
     return $row;
 }
 
-function EditDisplay($props, $id, $rows, $source) {
+function EditDisplay($props, $id, $rows, $source, $extraDivs) {
     $leftwidth = 15;
     $rightwidth = 85;
 
@@ -370,30 +370,28 @@ function EditDisplay($props, $id, $rows, $source) {
     $outsiderow = new Row();
     $form = new Form(method('post').name('edit_form').id('edit_form'));
     $outsidetable->add_object($form);
-    $form->add_object($outsiderow);
+    $outsidetable->add_object($outsiderow);
 
-    $colwidth = $rows * 10;
+    $tableArr = array();
+    $colwidth = 100 / $rows;
     $counter = 0;
-    $table = new TableArr(border(0).cellpadding(4).cellspacing(4).id('formtable').width(100));
-    $outsiderow->add_object(new Column(valign('top').width($colwidth),
-        $table
-    ));
+
+    for ($i = 0; $i < $rows; $i++) {
+        $table = new TableArr(border(0).cellpadding(4).cellspacing(4).id('formtable').width(100));
+        $outsiderow->add_object(new Column(valign('top').width($colwidth),
+            $table
+        ));
+        $tableArr[] = $table;
+    }
 
     $rowCounter = 1;
     foreach ($props as $key => $prop) {
         if ($prop->display_in_edit) {
-            if ($counter > ($rows - 1)) {
+            if ($counter == $rows) {
                 $counter = 0;
-                $table = new TableArr(border(0).cellpadding(4).cellspacing(4).id('formtable').width(100));
-                $outsiderow->add_object(
-                    new Column(valign('top').width($colwidth),
-                        $table
-                    )
-                );
-                $rowCounter++;
             }
             $edi = $prop->GetEditForm($id, $leftwidth, $rightwidth, 'edit_form');
-            $table->add_object(
+            $tableArr[$counter]->add_object(
                 $edi
             );
 
@@ -402,7 +400,7 @@ function EditDisplay($props, $id, $rows, $source) {
     }
 
     if ($_POST[action_types::$delete_sure]) {
-        $form->add_object(
+        $outsidetable->add_object(
             new Row(
                 new Column(align('left').style('padding-top: 5px;')
                 ),
@@ -412,21 +410,24 @@ function EditDisplay($props, $id, $rows, $source) {
             )
         );
     }
-    $form->add_object(
+    $outsidetable->add_object(
         new Row(
             new Column(align('left').style('padding-top: 5px;')
             ),
             new Column(colspan($rows).align('center').style('padding-top: 5px;'),
                 new Div(align('right').style('display:inline-block; padding-right: 5px;'),
-                    selection::SetID($id, $source),
-                    page_action::InputAction(action_types::get_update($source)),
-                    button('Update '.$source)
+                    selection::SetIDForm($id, $source, 'edit_form'),
+                    page_action::InputActionForm(action_types::get_update($source), 'edit_form'),
+                    new Input(form('edit_form').classType('button-primary').type('submit').name('button').value('Update '.$source))
                 ),
                 new Div(align('right').style('display:inline-block; padding-left: 5px;'),
                     $backtoresults
                 ),
                 new Div(align('right').style('display:inline-block; padding-left: 5px;'),
                     $deletelist
+                ),
+                new Div(align('right').style('display: inline-block; padding-left: 5px;'),
+                    $extraDivs
                 )
             )
         )
@@ -465,7 +466,7 @@ function Add($props, $source, $post_type) {
         }
     }
 
-    if ($source == 'Consigner' && $idprop != null) {
+    if ($source == Consigner::$source) {
         //Set up ID
         $lastID = get_option('_cmb_consigner_lastID');
         if ($lastID == false) {
@@ -476,27 +477,21 @@ function Add($props, $source, $post_type) {
         $newID = $lastID + 1;
         update_option('_cmb_consigner_lastID', $newID);
 
-        $idprop->SetValue($postid, $newID);
+        Consigner::$props[Consigner::$id]->SetValue($postid, $newID);
     }
-    else if ($source == 'Book' && $idprop != null){
-        $lastBarcodeExists = get_option('_cmb_resource_lastBarcode');
-        if ($lastBarcodeExists == false){
+    else if ($source == Book::$source){
+        $lastBarcode = get_option('_cmb_resource_lastBarcode');
+        if (!$lastBarcode){
             add_option('_cmb_resource_lastBarcode', 20000);
             $lastBarcode = get_option('_cmb_resource_lastBarcode');
         }
         $newbarcode = $lastBarcode + 1;
         update_option('_cmb_resource_lastBarcode', $newbarcode);
-        $idprop->SetValue($postid, $newbarcode);
+        Book::$props[Book::$barcode]->SetValue($postid, $newbarcode);
     }
-    else if ($source == 'Transaction' && $idprop != null){
-        $lastBarcodeExists = get_option('_cmb_transaction_lastID');
-        if ($lastBarcodeExists == false){
-            add_option('_cmb_transaction_lastID', 2000);
-            $lastBarcode = get_option('_cmb_transaction_lastID');
-        }
-        $newbarcode = $lastBarcode + 1;
-        update_option('_cmb_transaction_lastID', $newbarcode);
-        $idprop->SetValue($postid, $newbarcode);
+    else if ($source == Transaction::$source){
+        $newID = get_next_invoice();
+        Transaction::$props[Transaction::$props]->SetValue($postid, $newID);
     }
     return $postid;
 }
@@ -541,8 +536,10 @@ function Remove($source, $id) {
 
 function Update($props, $id) {
     foreach ($props as $key => $prop) {
-        if ($prop->edit_param && $prop->GetPostValue(vars::$edit_prefix)) {
-            $prop->SetValue($id, $prop->GetPostValue(vars::$edit_prefix));
+        if (method_exists($prop, 'GetPostValue') && method_exists($prop, 'SetValue')) {
+            if ($prop->edit_param && $prop->GetPostValue(vars::$edit_prefix)) {
+                $prop->SetValue($id, $prop->GetPostValue(vars::$edit_prefix));
+            }
         }
     }
 }

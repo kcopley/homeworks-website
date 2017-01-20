@@ -43,7 +43,7 @@ class checkout_payment {
         if ($_SESSION[self::$total_amount_paid]) {
             return $_SESSION[self::$total_amount_paid];
         }
-        else return 0;
+        else return 0.0;
     }
 
     public static function SetTotalAmountPaid($value) {
