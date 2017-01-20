@@ -157,6 +157,9 @@ function GenerateQuery($props, $post_type, $display_post_num, $offset) {
         'post_type' => $post_type,
         'offset' => $offset
     );
+    if ($post_type == Transaction::$post_type) {
+        $args['order'] = 'DESC';
+    }
 
     add_filter('get_meta_sql','cast_decimal_precision');
     $meta_query_array = array('relation' => 'AND');
