@@ -1,5 +1,4 @@
 <?php
-
 include_once "includes.php";
 /**
  * Created by PhpStorm.
@@ -27,9 +26,6 @@ class verify {
 switch (page_action::GetAction()){
     case verify::$verify_books:
         verify_book_database();
-        break;
-    case verify::$verify_consigners:
-        verify_consigner_database();
         break;
     case verify::$verify_transactions:
         verify_transaction_database();
@@ -322,7 +318,7 @@ function verify_book($id) {
     if (!$available) $available = 'NOTSET';
     else if ($available == 'Inactive') $available = 1;
     else if ($available == 'Active') $available = 2;
-    Book::$props[Book::$online]->SetValue($id, $available);
+    Book::$props[Book::$online]->SetValue($id, 2);
 
     $MSRP = getVal($id, '_cmb_resource_MSRP');
     if (!$MSRP) $MSRP = 'NOTSET';
@@ -434,8 +430,8 @@ function delete_transaction_database() {
 
 function verify_transaction_database() {
     $args = array(
-        'numberposts' => 20,
-        'posts_per_page' => 20,
+        'numberposts' => -1,
+        'posts_per_page' => -1,
         'post_type' => 'purchases',
         'cache_results' => false
     );
@@ -454,6 +450,9 @@ function verify_transaction_database() {
 }
 
 function verify_transaction($id) {
+    if (Transaction::$props[Transaction::$complete]->GetValue($id)) {
+        return;
+    }
     $title = get_the_title($id);
     if (!$title){
         wp_delete_post($id);
@@ -537,7 +536,7 @@ function verify_transaction($id) {
             }
         }
     }
-
+    Transaction::$props[Transaction::$complete]->SetValue($id, 2);
 }
 
 function set_bids() {

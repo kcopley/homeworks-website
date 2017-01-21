@@ -238,6 +238,10 @@ function step($str){
     return ' step="'.$str.'" ';
 }
 
+function href($str){
+    return ' href="'.$str.'" ';
+}
+
 function add_image($id) {
     set_post_thumbnail($id, absint( $_POST[Book::$image_set]));
 }

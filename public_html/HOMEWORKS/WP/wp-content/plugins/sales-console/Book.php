@@ -13,6 +13,7 @@ class Book {
     public static $price = 'book_price';
     public static $msrp = 'book_msrp';
     public static $publisher = 'book_publisher';
+    public static $departments = 'book_departments';
     public static $isbn = 'book_isbn';
     public static $condition = 'book_condition';
     public static $available = 'book_availability';
@@ -48,6 +49,9 @@ class Book {
         $publisher = new Text('book_publisher', 'Publisher', '_cmb_resource_publisher');
         $isbn = new Text('book_isbn', 'ISBN', '_cmb_resource_isbn');
 
+        $department = new Category('category_types', 'Department', 'category');
+        //$department->search_param = false;
+
         $quantity = new Quantity('book_quantity', 'Quantity', 'quantity');
         $quantity->search_param = false;
         $quantity->edit_param = false;
@@ -65,6 +69,7 @@ class Book {
         $addbutton->display_in_add = false;
         $addbutton->display_in_edit = false;
         $addbutton->edit_param = false;
+        $addbutton->search_param = false;
 
         $condition = new Radio('book_condition', 'Condition', '_cmb_resource_condition');
         $condition->options = array(1 => 'Used', 2 => 'New');
@@ -89,6 +94,7 @@ class Book {
             self::$cost => $cost,
             self::$price => $price,
             self::$msrp => $msrp,
+            self::$departments => $department,
             self::$publisher => $publisher,
             self::$isbn => $isbn,
             self::$condition => $condition,

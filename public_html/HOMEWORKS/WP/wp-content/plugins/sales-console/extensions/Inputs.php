@@ -641,6 +641,170 @@ class Text extends __input  {
     }
 }
 
+class Category extends __input  {
+    public $exact = -1;
+    public $display_prefix;
+
+    function get_dropdown($prefix, $form) {
+        $categories = get_categories(array('fields' => 'id=>slug'));
+
+        $div = new Div(id('checkboxes').name('checkboxes').classType('checkboxes'));
+        if ($form == -1) {
+            foreach ($categories as $catID => $name) {
+                $div->add_object(
+                    new Label(forAttr($catID),
+                        new Input(type('checkbox').id($prefix.$catID).name($prefix.$catID),
+                            new TextRender(
+                                $name
+                            )
+                        )
+                    )
+                );
+            }
+        }
+        else {
+            foreach ($categories as $catID => $name) {
+                $div->add_object(
+                    new Label(forAttr($catID),
+                        new Input(form($form).type('checkbox').id($prefix.$catID).name($prefix.$catID),
+                            new TextRender(
+                                $name
+                            )
+                        )
+                    )
+                );
+            }
+        }
+        return new Div(classType('multiselect'),
+            new Div(classType('selectBox'),
+                new Select(
+                    new Option(new TextRender('Select an option'))
+                ),
+                new Div(classType('overSelect'))
+            ),
+            $div
+        );
+    }
+
+    function get_dropdown_checked($val, $prefix, $form) {
+        $categories = get_categories(array('fields' => 'id=>slug'));
+        $cats = wp_get_post_categories($val, array('fields' => 'ids'));
+        $div = new Div(id('checkboxes').name('checkboxes').classType('checkboxes'));
+        foreach ($categories as $catID => $name) {
+            if (in_array($catID, $cats)) {
+                $div->add_object(
+                    new Label(forAttr($catID),
+                        new Input(form($form).type('checkbox').checkedAttr(true).id($prefix.$catID).name($prefix.$catID),
+                            new TextRender(
+                                $name
+                            )
+                        )
+                    )
+                );
+            }
+            else {
+                $div->add_object(
+                    new Label(forAttr($catID),
+                        new Input(form($form).type('checkbox').id($prefix.$catID).name($prefix.$catID),
+                            new TextRender(
+                                $name
+                            )
+                        )
+                    )
+                );
+            }
+        }
+        return new Div(classType('multiselect'),
+            new Div(classType('selectBox'),
+                new Select(
+                    new Option(new TextRender('Select an option'))
+                ),
+                new Div(classType('overSelect'))
+            ),
+            $div
+        );
+    }
+
+    public function GetInputSearch($leftWidth, $rightWidth, $prefix) {
+        $row = new Row(
+            new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))),
+            new Column(width($rightWidth).style('padding-left: 5px;'),
+                $this->get_dropdown($prefix, -1)
+            )
+        );
+        return $row;
+    }
+
+    public function GetInputAdd($leftWidth, $rightWidth, $prefix) {
+        $row = new Row(
+            new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))),
+            new Column(width($rightWidth).style('padding-left: 5px;'),
+                $this->get_dropdown($prefix, -1)
+            )
+        );
+        return $row;
+    }
+
+    public function GetPostValue($prefix)
+    {
+        $categories = get_categories(array('fields' => 'id=>slug'));
+        $ret = array();
+        foreach ($categories as $catID => $name) {
+            $precat = $prefix.$catID;
+            if (isset($_REQUEST[$precat])) {
+                $ret[] = $catID;
+            }
+        }
+        return $ret;
+    }
+
+    public function GetValue($id)
+    {
+        return get_the_category($id);
+    }
+
+    public function SetValue($id, $value)
+    {
+        wp_set_post_categories($id, $value);
+    }
+
+    public function GetQuery($args, $prefix) {
+        $query = $this->GetPostValue($prefix);
+
+        if ($query) {
+            if ($this->db_value == 'category') {
+                $args['category__in'] = $query;
+            }
+        }
+        return $args;
+    }
+
+    public function GetDisplay($id, $source) {
+        $args = array('fields' => 'names');
+        $cats = wp_get_post_categories($id, $args);
+        $col = new Column(style('font-size: 14px; padding-right: 2px;'));
+        $first = true;
+        foreach ($cats as $cat) {
+            if (!$first) {
+                $col->add_object(new TextRender(', '));
+            }
+            $col->add_object(new TextRender($cat));
+            $first = false;
+        }
+        return $col;
+    }
+
+    public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
+        $val = $this->GetValue($id);
+        return new Row(
+            new Column(align('right').width($leftwidth), new Label(new TextRender($this->format.':'))),
+            new Column(width($rightwidth).style('padding-left: 5px;'),
+                $this->get_dropdown_checked($id, vars::$edit_prefix, $form)
+            )
+        );
+    }
+}
+
 class Checkbox {
 
 }

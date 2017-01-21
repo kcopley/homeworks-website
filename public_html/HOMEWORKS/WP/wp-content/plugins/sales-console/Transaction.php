@@ -248,7 +248,7 @@ class Transaction
 
         return new Row(
             new Column(style('padding-top: 6px; padding-bottom: 6px;'),
-                new TextRender($title)),
+                Book::$props[Book::$name]->GetDisplay($book_id, Book::$source)),
             new Column(style('padding-top: 6px; padding-bottom: 6px;'),
                 new TextRender($book_id)),
             new Column(style('padding-top: 6px; padding-bottom: 6px;'),
