@@ -9,18 +9,15 @@
 
 function StoreQuery($props) {
     foreach ($props as $key => $prop) {
-        if (method_exists($prop, 'GetPostValue')) {
-            $val = $prop->GetPostValue(vars::$search_prefix);
-            if ($val && method_exists($prop, 'SetSessionValue')) {
-                $prop->SetSessionValue(vars::$search_prefix, $val);
-            }
+        if (method_exists($prop, 'SetSessionValue')) {
+            $prop->SetSessionValue(vars::$search_prefix);
         }
     }
 }
 
 function ResetQuery($props) {
     foreach ($props as $key => $prop) {
-        if (method_exists($prop, 'SetSessionValue')) {
+        if (method_exists($prop, 'UnsetSessionValue')) {
             $prop->UnsetSessionValue(vars::$search_prefix);
         }
     }
@@ -228,7 +225,7 @@ function GenerateSearch($props, $source, $post_type) {
     if ($offset < 0) $offset = 0;
 
     $query = GenerateQuery($props, $post_type, $display_post_num, $offset);
-
+    
     $toprow->add_object(new Column(new Strong(new TextRender('Search found '.$query->found_posts.' posts.'))));
     while ($query->have_posts()):
         $query->the_post();

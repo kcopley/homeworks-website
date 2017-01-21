@@ -64,7 +64,8 @@ class __input {
         return $_SESSION[$prefix.$this->name];
     }
 
-    public function SetSessionValue($prefix, $val) {
+    public function SetSessionValue($prefix) {
+        $val = $this->GetPostValue($prefix);
         $_SESSION[$prefix.$this->name] = $val;
     }
 
@@ -254,10 +255,10 @@ class Date extends __input  {
         return $list;
     }
 
-    public function SetSessionValue($prefix, $val)
+    public function SetSessionValue($prefix)
     {
-        $_SESSION[$prefix.$this->name.'_from'] = $_REQUEST[vars::$search_prefix.$this->name.'_from'];
-        $_SESSION[$prefix.$this->name.'_to'] = $_REQUEST[vars::$search_prefix.$this->name.'_to'];
+        $_SESSION[$prefix.$this->name.'_from'] = $_REQUEST[$prefix.$this->name.'_from'];
+        $_SESSION[$prefix.$this->name.'_to'] = $_REQUEST[$prefix.$this->name.'_to'];
     }
 
     public function UnsetSessionValue($prefix)
@@ -269,14 +270,15 @@ class Date extends __input  {
     function GetQuery($args, $prefix) {
         date_default_timezone_set('America/Chicago');
         $datefrom = $_SESSION[$prefix.$this->name.'_from'];
-        //if (!$datefrom) $datefrom = date("Y-m-d", mktime(0, 0, 0, 1, 1, 2014));
+        if (!$datefrom) $datefrom = date("Y-m-d", mktime(0, 0, 0, 1, 1, 2014));
         $dateto = $_SESSION[$prefix.$this->name.'_to'];
-        //if (!$dateto) $dateto = date('Y-m-d');
-if ($datefrom && $dateto)
-        $args['meta_query'][] = array(
+        if (!$dateto) $dateto = date('Y-m-d');
+
+        if ($datefrom && $dateto)
+            $args['meta_query'][] = array(
                 'key' => $this->db_value,
-                'value' => array($datefrom, $dateto),
-                'compare' => 'BETWEEN',
+                'value' => $datefrom,
+                'compare' => '>=',
                 'type' => 'DATE'
             );
         return $args;
@@ -335,10 +337,10 @@ class Decimal extends __input  {
         return $list;
     }
 
-    public function SetSessionValue($prefix, $val)
+    public function SetSessionValue($prefix)
     {
-        $_SESSION[$prefix.$this->name.'_from'] = $_REQUEST[vars::$search_prefix.$this->name.'_from'];
-        $_SESSION[$prefix.$this->name.'_to'] = $_REQUEST[vars::$search_prefix.$this->name.'_to'];
+        $_SESSION[$prefix.$this->name.'_from'] = $_REQUEST[$prefix.$this->name.'_from'];
+        $_SESSION[$prefix.$this->name.'_to'] = $_REQUEST[$prefix.$this->name.'_to'];
     }
 
     public function UnsetSessionValue($prefix)
@@ -351,9 +353,9 @@ class Decimal extends __input  {
         add_filter('get_meta_sql','cast_decimal_precision');
 
         $totalfrom = $_SESSION[$prefix.$this->name.'_from'];
-        //if (!$totalfrom) $totalfrom = 0;
+        if (!$totalfrom) $totalfrom = 0;
         $totalto = $_SESSION[$prefix.$this->name.'_to'];
-        //if (!$totalto) $totalto = 9999999;
+        if (!$totalto) $totalto = 9999999;
 
         if ($totalfrom) {
             $args['meta_query'][] = array(

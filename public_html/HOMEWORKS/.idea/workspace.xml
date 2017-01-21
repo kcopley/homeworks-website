@@ -5,28 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfd0125c-dc3a-4a67-bb94-a6301753b222" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/A.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/DD.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/DL.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/DT.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/LI.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Option.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Select.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/UL.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Book.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Book.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Books.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Books.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/barcode.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/barcode.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/css/stylesheet.css" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/css/stylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/includes.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/includes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/verify.php" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/verify.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/404.php" afterPath="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/404.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/CCresponse.php" afterPath="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/CCresponse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/category.php" afterPath="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/hwbookstore.php" afterPath="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/hwbookstore.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/js/barcodes.js" afterPath="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/js/barcodes.js" />
     </list>
     <ignored path="HOMEWORKS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,20 +30,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="verify.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/verify.php">
+      <file leaf-file-name="checkout.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="320" column="50" selection-start-line="320" selection-start-column="50" selection-end-line="320" selection-end-column="50" />
+            <state relative-caret-position="184">
+              <caret line="388" column="69" selection-start-line="388" selection-start-column="69" selection-end-line="388" selection-end-column="69" />
               <folding>
-                <element signature="n#verify_radios#0;n#!!top" expanded="false" />
-                <element signature="n#getVal#0;n#!!top" expanded="false" />
-                <element signature="n#verify_radio#0;n#!!top" expanded="false" />
-                <element signature="n#verify_transaction#0;n#!!top" expanded="false" />
-                <element signature="n#set_cids#0;n#!!top" expanded="false" />
-                <element signature="n#set_tids#0;n#!!top" expanded="false" />
-                <element signature="n#set_db_website#0;n#!!top" expanded="false" />
-                <marker date="1484962459340" expanded="true" signature="18529:18765" ph="SELECT conca... columns" />
+                <element signature="n#get_payments#0;n#!!top" expanded="false" />
+                <element signature="n#get_payment_info#0;n#!!top" expanded="false" />
+                <marker date="1484970994891" expanded="true" signature="54840:58029" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="54886:54904" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="54932:54965" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="54993:55026" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55054:55087" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55115:55148" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55176:55209" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55237:55270" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55298:55331" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55359:55392" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55420:55453" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55481:55514" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55542:55575" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55603:55636" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55664:55697" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55725:55758" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55786:55819" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55847:55880" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55908:55941" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="55969:56002" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56030:56063" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56091:56124" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56152:56185" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56213:56246" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56274:56307" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56335:56368" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56396:56429" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56457:56490" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56518:56551" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56579:56612" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56640:56673" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56701:56734" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56762:56795" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56823:56856" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56884:56917" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="56945:56978" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57006:57039" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57067:57100" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57128:57161" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57189:57222" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57250:57283" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57311:57344" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57372:57405" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57433:57466" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57494:57527" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57555:57588" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57616:57649" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57677:57710" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57738:57771" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57799:57832" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57860:57893" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57921:57954" ph="..." />
+                <marker date="1484970994891" expanded="true" signature="57982:58015" ph="..." />
               </folding>
             </state>
           </provider>
@@ -69,79 +99,59 @@
       <file leaf-file-name="Inputs.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="614" column="14" selection-start-line="614" selection-start-column="14" selection-end-line="614" selection-end-column="14" />
+            <state relative-caret-position="323">
+              <caret line="339" column="43" selection-start-line="339" selection-start-column="43" selection-end-line="339" selection-end-column="43" />
               <folding>
-                <element signature="n#__input#0;n#!!top" expanded="false" />
                 <element signature="n#__construct#0;n#__input#0;n#!!top" expanded="false" />
                 <element signature="n#GetValue#0;n#__input#0;n#!!top" expanded="false" />
                 <element signature="e#783#1029#0#PHP" expanded="false" />
-                <element signature="n#SetValue#0;n#__input#0;n#!!top" expanded="false" />
                 <element signature="n#GetPostValue#0;n#__input#0;n#!!top" expanded="false" />
                 <element signature="n#GetSessionValue#0;n#__input#0;n#!!top" expanded="false" />
-                <element signature="n#SetSessionValue#0;n#__input#0;n#!!top" expanded="false" />
-                <element signature="n#UnsetSessionValue#0;n#__input#0;n#!!top" expanded="false" />
-                <element signature="n#Radio#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputSearch#0;n#Radio#0;n#!!top" expanded="false" />
-                <element signature="e#2374#2605#0#PHP" expanded="false" />
+                <element signature="e#2413#2644#0#PHP" expanded="false" />
                 <element signature="n#GetInputAdd#0;n#Radio#0;n#!!top" expanded="false" />
-                <element signature="e#2964#3195#0#PHP" expanded="false" />
+                <element signature="e#3003#3234#0#PHP" expanded="false" />
                 <element signature="n#GetQuery#0;n#Radio#0;n#!!top" expanded="false" />
-                <element signature="e#3329#3543#0#PHP" expanded="false" />
-                <element signature="e#3399#3532#0#PHP" expanded="false" />
+                <element signature="e#3368#3582#0#PHP" expanded="false" />
+                <element signature="e#3438#3571#0#PHP" expanded="false" />
                 <element signature="n#GetDisplay#0;n#Radio#0;n#!!top" expanded="false" />
                 <element signature="n#GetEditForm#0;n#Radio#0;n#!!top" expanded="false" />
-                <element signature="e#4158#4918#0#PHP" expanded="false" />
-                <element signature="e#4195#4819#0#PHP" expanded="false" />
-                <element signature="e#4256#4805#0#PHP" expanded="false" />
-                <element signature="e#4554#4805#0#PHP" expanded="false" />
-                <element signature="e#4838#4918#0#PHP" expanded="false" />
+                <element signature="e#4197#4957#0#PHP" expanded="false" />
+                <element signature="e#4234#4858#0#PHP" expanded="false" />
+                <element signature="e#4295#4844#0#PHP" expanded="false" />
+                <element signature="e#4593#4844#0#PHP" expanded="false" />
+                <element signature="e#4877#4957#0#PHP" expanded="false" />
                 <element signature="n#Image#0;n#!!top" expanded="false" />
                 <element signature="n#get_image_form#0;n#Image#0;n#!!top" expanded="false" />
-                <element signature="e#5106#5199#0#PHP" expanded="false" />
+                <element signature="e#5145#5238#0#PHP" expanded="false" />
                 <element signature="n#GetInputSearch#0;n#Image#0;n#!!top" expanded="false" />
-                <element signature="e#6123#6354#0#PHP" expanded="false" />
+                <element signature="e#6162#6393#0#PHP" expanded="false" />
                 <element signature="n#GetInputAdd#0;n#Image#0;n#!!top" expanded="false" />
                 <element signature="n#GetQuery#0;n#Image#0;n#!!top" expanded="false" />
-                <element signature="e#6609#7120#0#PHP" expanded="false" />
-                <element signature="e#6635#7110#0#PHP" expanded="false" />
-                <element signature="e#6719#7110#0#PHP" expanded="false" />
-                <element signature="e#6791#6903#0#PHP" expanded="false" />
-                <element signature="e#6931#7110#0#PHP" expanded="false" />
-                <element signature="e#6979#7095#0#PHP" expanded="false" />
+                <element signature="e#6648#7159#0#PHP" expanded="false" />
+                <element signature="e#6674#7149#0#PHP" expanded="false" />
+                <element signature="e#6758#7149#0#PHP" expanded="false" />
+                <element signature="e#6830#6942#0#PHP" expanded="false" />
+                <element signature="e#6970#7149#0#PHP" expanded="false" />
+                <element signature="e#7018#7134#0#PHP" expanded="false" />
                 <element signature="n#GetDisplay#0;n#Image#0;n#!!top" expanded="false" />
                 <element signature="n#GetEditForm#0;n#Image#0;n#!!top" expanded="false" />
-                <element signature="n#Date#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputAdd#0;n#Date#0;n#!!top" expanded="false" />
-                <element signature="e#7777#8157#0#PHP" expanded="false" />
+                <element signature="e#7816#8196#0#PHP" expanded="false" />
                 <element signature="n#GetInputSearch#0;n#Date#0;n#!!top" expanded="false" />
-                <element signature="e#8294#8952#0#PHP" expanded="false" />
-                <element signature="n#SetSessionValue#0;n#Date#0;n#!!top" expanded="false" />
-                <element signature="n#UnsetSessionValue#0;n#Date#0;n#!!top" expanded="false" />
-                <element signature="n#GetQuery#0;n#Date#0;n#!!top" expanded="false" />
-                <element signature="e#9814#10003#0#PHP" expanded="false" />
+                <element signature="e#8333#8991#0#PHP" expanded="false" />
                 <element signature="n#GetDisplay#0;n#Date#0;n#!!top" expanded="false" />
                 <element signature="n#GetEditForm#0;n#Date#0;n#!!top" expanded="false" />
-                <element signature="n#Decimal#0;n#!!top" expanded="false" />
-                <element signature="n#GetInputAdd#0;n#Decimal#0;n#!!top" expanded="false" />
-                <element signature="e#10889#11269#0#PHP" expanded="false" />
                 <element signature="n#GetInputSearch#0;n#Decimal#0;n#!!top" expanded="false" />
-                <element signature="e#11406#12370#0#PHP" expanded="false" />
                 <element signature="n#SetSessionValue#0;n#Decimal#0;n#!!top" expanded="false" />
                 <element signature="n#UnsetSessionValue#0;n#Decimal#0;n#!!top" expanded="false" />
-                <element signature="n#GetQuery#0;n#Decimal#0;n#!!top" expanded="false" />
-                <element signature="e#13150#13386#0#PHP" expanded="false" />
-                <element signature="e#13204#13375#0#PHP" expanded="false" />
-                <element signature="e#13395#13627#0#PHP" expanded="false" />
-                <element signature="e#13447#13616#0#PHP" expanded="false" />
-                <element signature="n#GetDisplay#0;n#Decimal#0;n#!!top" expanded="false" />
-                <element signature="e#13713#14080#0#PHP" expanded="false" />
-                <element signature="e#13927#14080#0#PHP" expanded="false" />
+                <element signature="e#13672#14039#0#PHP" expanded="false" />
+                <element signature="e#13886#14039#0#PHP" expanded="false" />
                 <element signature="n#GetEditForm#0;n#Decimal#0;n#!!top" expanded="false" />
-                <element signature="e#14167#15473#0#PHP" expanded="false" />
-                <element signature="e#14653#15473#0#PHP" expanded="false" />
-                <element signature="e#14672#15463#0#PHP" expanded="false" />
-                <element signature="e#15100#15463#0#PHP" expanded="false" />
+                <element signature="e#14126#15432#0#PHP" expanded="false" />
+                <element signature="e#14612#15432#0#PHP" expanded="false" />
+                <element signature="e#14631#15422#0#PHP" expanded="false" />
+                <element signature="e#15059#15422#0#PHP" expanded="false" />
                 <element signature="n#TextBox#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputSearch#0;n#TextBox#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputAdd#0;n#TextBox#0;n#!!top" expanded="false" />
@@ -151,8 +161,8 @@
                 <element signature="n#Quantity#0;n#!!top" expanded="false" />
                 <element signature="n#GetValue#0;n#Quantity#0;n#!!top" expanded="false" />
                 <element signature="n#SetValue#0;n#Quantity#0;n#!!top" expanded="false" />
-                <element signature="e#17596#17675#0#PHP" expanded="false" />
-                <element signature="e#17684#17772#0#PHP" expanded="false" />
+                <element signature="e#17555#17634#0#PHP" expanded="false" />
+                <element signature="e#17643#17731#0#PHP" expanded="false" />
                 <element signature="n#GetInputSearch#0;n#Quantity#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputAdd#0;n#Quantity#0;n#!!top" expanded="false" />
                 <element signature="n#GetQuery#0;n#Quantity#0;n#!!top" expanded="false" />
@@ -166,21 +176,22 @@
                 <element signature="n#GetQuery#0;n#ConsignerID#0;n#!!top" expanded="false" />
                 <element signature="n#GetDisplay#0;n#ConsignerID#0;n#!!top" expanded="false" />
                 <element signature="n#GetEditForm#0;n#ConsignerID#0;n#!!top" expanded="false" />
+                <element signature="n#Text#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputSearch#0;n#Text#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputAdd#0;n#Text#0;n#!!top" expanded="false" />
                 <element signature="n#GetQuery#0;n#Text#0;n#!!top" expanded="false" />
-                <element signature="e#21135#21772#0#PHP" expanded="false" />
-                <element signature="e#21161#21762#0#PHP" expanded="false" />
-                <element signature="e#21262#21762#0#PHP" expanded="false" />
-                <element signature="e#21285#21748#0#PHP" expanded="false" />
-                <element signature="e#21356#21476#0#PHP" expanded="false" />
-                <element signature="e#21512#21748#0#PHP" expanded="false" />
-                <element signature="e#21564#21729#0#PHP" expanded="false" />
-                <element signature="e#22293#22471#0#PHP" expanded="false" />
-                <element signature="e#22524#22715#0#PHP" expanded="false" />
+                <element signature="e#21094#21731#0#PHP" expanded="false" />
+                <element signature="e#21120#21721#0#PHP" expanded="false" />
+                <element signature="e#21221#21721#0#PHP" expanded="false" />
+                <element signature="e#21244#21707#0#PHP" expanded="false" />
+                <element signature="e#21315#21435#0#PHP" expanded="false" />
+                <element signature="e#21471#21707#0#PHP" expanded="false" />
+                <element signature="e#21523#21688#0#PHP" expanded="false" />
+                <element signature="e#22252#22430#0#PHP" expanded="false" />
+                <element signature="e#22483#22674#0#PHP" expanded="false" />
                 <element signature="n#GetEditForm#0;n#Text#0;n#!!top" expanded="false" />
-                <element signature="e#22839#23612#0#PHP" expanded="false" />
-                <element signature="e#23287#23612#0#PHP" expanded="false" />
+                <element signature="e#22798#23571#0#PHP" expanded="false" />
+                <element signature="e#23246#23571#0#PHP" expanded="false" />
                 <element signature="n#Category#0;n#!!top" expanded="false" />
                 <element signature="n#get_dropdown#0;n#Category#0;n#!!top" expanded="false" />
                 <element signature="n#get_dropdown_checked#0;n#Category#0;n#!!top" expanded="false" />
@@ -190,116 +201,60 @@
                 <element signature="n#GetInputSearch#0;n#BookButton#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputAdd#0;n#BookButton#0;n#!!top" expanded="false" />
                 <element signature="n#GetDisplay#0;n#BookButton#0;n#!!top" expanded="false" />
-                <element signature="e#29919#30124#0#PHP" expanded="false" />
-                <element signature="e#29995#30124#0#PHP" expanded="false" />
+                <element signature="e#29878#30083#0#PHP" expanded="false" />
+                <element signature="e#29954#30083#0#PHP" expanded="false" />
                 <element signature="n#GetEditForm#0;n#BookButton#0;n#!!top" expanded="false" />
-                <element signature="e#30456#30661#0#PHP" expanded="false" />
-                <element signature="e#30532#30661#0#PHP" expanded="false" />
+                <element signature="e#30415#30620#0#PHP" expanded="false" />
+                <element signature="e#30491#30620#0#PHP" expanded="false" />
                 <element signature="n#TransactionButton#0;n#!!top" expanded="false" />
                 <element signature="n#__construct#0;n#TransactionButton#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputSearch#0;n#TransactionButton#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputAdd#0;n#TransactionButton#0;n#!!top" expanded="false" />
                 <element signature="n#GetQuery#0;n#TransactionButton#0;n#!!top" expanded="false" />
                 <element signature="n#GetDisplay#0;n#TransactionButton#0;n#!!top" expanded="false" />
-                <element signature="e#31864#32139#0#PHP" expanded="false" />
-                <element signature="e#31992#32139#0#PHP" expanded="false" />
-                <element signature="e#32148#32520#0#PHP" expanded="false" />
+                <element signature="e#31823#32098#0#PHP" expanded="false" />
+                <element signature="e#31951#32098#0#PHP" expanded="false" />
+                <element signature="e#32107#32479#0#PHP" expanded="false" />
                 <element signature="n#GetEditForm#0;n#TransactionButton#0;n#!!top" expanded="false" />
-                <element signature="e#32891#33150#0#PHP" expanded="false" />
-                <element signature="e#33011#33150#0#PHP" expanded="false" />
-                <element signature="e#33160#33629#0#PHP" expanded="false" />
+                <element signature="e#32850#33109#0#PHP" expanded="false" />
+                <element signature="e#32970#33109#0#PHP" expanded="false" />
+                <element signature="e#33119#33588#0#PHP" expanded="false" />
                 <element signature="n#ImportButton#0;n#!!top" expanded="false" />
                 <element signature="n#__construct#0;n#ImportButton#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputSearch#0;n#ImportButton#0;n#!!top" expanded="false" />
                 <element signature="n#GetInputAdd#0;n#ImportButton#0;n#!!top" expanded="false" />
                 <element signature="n#GetQuery#0;n#ImportButton#0;n#!!top" expanded="false" />
                 <element signature="n#GetDisplay#0;n#ImportButton#0;n#!!top" expanded="false" />
-                <element signature="e#34880#34987#0#PHP" expanded="false" />
-                <element signature="e#34997#35397#0#PHP" expanded="false" />
-                <element signature="e#35125#35397#0#PHP" expanded="false" />
-                <element signature="e#35406#35778#0#PHP" expanded="false" />
+                <element signature="e#34839#34946#0#PHP" expanded="false" />
+                <element signature="e#34956#35356#0#PHP" expanded="false" />
+                <element signature="e#35084#35356#0#PHP" expanded="false" />
+                <element signature="e#35365#35737#0#PHP" expanded="false" />
                 <element signature="n#GetEditForm#0;n#ImportButton#0;n#!!top" expanded="false" />
-                <element signature="e#36173#36280#0#PHP" expanded="false" />
-                <element signature="e#36289#36692#0#PHP" expanded="false" />
-                <element signature="e#36418#36692#0#PHP" expanded="false" />
-                <element signature="e#36702#37207#0#PHP" expanded="false" />
+                <element signature="e#36132#36239#0#PHP" expanded="false" />
+                <element signature="e#36248#36651#0#PHP" expanded="false" />
+                <element signature="e#36377#36651#0#PHP" expanded="false" />
+                <element signature="e#36661#37166#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transactions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php">
+      <file leaf-file-name="income.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/reports/income.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="442">
+              <caret line="116" column="27" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkout.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php">
+      <file leaf-file-name="utility.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="423" column="29" selection-start-line="423" selection-start-column="29" selection-end-line="423" selection-end-column="29" />
-              <folding>
-                <element signature="n#get_payments#0;n#!!top" expanded="false" />
-                <element signature="n#get_payment_info#0;n#!!top" expanded="false" />
-                <marker date="1484962602419" expanded="true" signature="54479:57668" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="54525:54543" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="54571:54604" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="54632:54665" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="54693:54726" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="54754:54787" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="54815:54848" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="54876:54909" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="54937:54970" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="54998:55031" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55059:55092" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55120:55153" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55181:55214" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55242:55275" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55303:55336" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55364:55397" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55425:55458" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55486:55519" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55547:55580" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55608:55641" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55669:55702" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55730:55763" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55791:55824" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55852:55885" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55913:55946" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="55974:56007" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56035:56068" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56096:56129" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56157:56190" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56218:56251" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56279:56312" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56340:56373" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56401:56434" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56462:56495" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56523:56556" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56584:56617" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56645:56678" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56706:56739" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56767:56800" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56828:56861" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56889:56922" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="56950:56983" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="57011:57044" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="57072:57105" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="57133:57166" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="57194:57227" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="57255:57288" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="57316:57349" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="57377:57410" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="57438:57471" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="57499:57532" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="57560:57593" ph="..." />
-                <marker date="1484962602419" expanded="true" signature="57621:57654" ph="..." />
-              </folding>
+            <state relative-caret-position="218">
+              <caret line="131" column="18" selection-start-line="131" selection-start-column="18" selection-end-line="131" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -307,8 +262,8 @@
       <file leaf-file-name="Transaction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="632" column="27" selection-start-line="632" selection-start-column="27" selection-end-line="632" selection-end-column="27" />
+            <state relative-caret-position="901">
+              <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
               <folding>
                 <element signature="e#7#90#0#PHP" expanded="false" />
                 <element signature="e#5212#5296#0#PHP" expanded="false" />
@@ -345,11 +300,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Generation.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="transactions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requests.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Books.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Books.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="20" />
+              <folding>
+                <element signature="e#673#1316#0#PHP" expanded="false" />
+                <marker date="1484951779610" expanded="true" signature="3351:3736" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Generation.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1157">
-              <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="227" column="4" selection-start-line="227" selection-start-column="4" selection-end-line="227" selection-end-column="4" />
               <folding>
                 <element signature="n#Display#0;n#!!top" expanded="false" />
               </folding>
@@ -357,12 +345,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/category.php">
+      <file leaf-file-name="invoices.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/js/invoices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="374">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <marker date="1476829238135" expanded="true" signature="318:337" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -382,8 +372,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Button.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/TextArea.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/consigner_classes.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/search_consigners.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/book_classes.php" />
@@ -424,15 +412,17 @@
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/A.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/css/stylesheet.css" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Books.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Book.php" />
-        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/CCresponse.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/404.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/category.php" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/verify.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/barcode.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/js/barcodes.js" />
         <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php" />
+        <option value="$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php" />
       </list>
     </option>
   </component>
@@ -591,32 +581,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FOUNDATION_v2" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HOMEWORKS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HOMEWORKS" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -644,6 +608,96 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sales-console" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sales-console" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reports" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sales-console" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOMEWORKS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WP" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sales-console" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inventory" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -674,36 +728,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="extensions" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HOMEWORKS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HOMEWORKS" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sales-console" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -816,12 +840,12 @@
       <workItem from="1484678940146" duration="45460000" />
       <workItem from="1484767719265" duration="24294000" />
       <workItem from="1484856817845" duration="28916000" />
-      <workItem from="1484941755470" duration="17393000" />
+      <workItem from="1484941755470" duration="23380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440445000" />
+    <option name="totallyTimeSpent" value="446432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -831,6 +855,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -842,7 +867,6 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
@@ -860,83 +884,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="59" />
+      <option name="time" value="61" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/sitemap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
-          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
-          <caret line="184" column="31" selection-start-line="184" selection-start-column="31" selection-end-line="184" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25551">
-          <caret line="404" column="39" selection-start-line="404" selection-start-column="39" selection-end-line="404" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/loop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/offline.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/loop-single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/calendar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -953,45 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/barcode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <marker date="1476829207416" expanded="true" signature="222:363" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="561:702" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="900:1041" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="1239:1380" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="1578:1719" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="1917:2058" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="2256:2397" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="2595:2736" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="2934:3075" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="3276:3418" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="3625:3767" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="3974:4116" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="4323:4465" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="4672:4814" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="5021:5163" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="5370:5512" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="5719:5861" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="6068:6210" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="6417:6559" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="6766:6908" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="7115:7257" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="7464:7606" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="7813:7955" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="8162:8304" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="8511:8653" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="8860:9002" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="9209:9351" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="9558:9700" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="9907:10049" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-            <marker date="1476829207416" expanded="true" signature="10256:10398" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Consigner.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
@@ -1001,19 +914,6 @@
             <element signature="n#get_current_consigner_books#0;n#Consigner#0;n#!!top" expanded="false" />
             <element signature="n#get_sold_consigner_books#0;n#Consigner#0;n#!!top" expanded="false" />
             <element signature="n#get_books#0;n#Consigner#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/pay.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="256" column="78" selection-start-line="256" selection-start-column="78" selection-end-line="256" selection-end-column="78" />
-          <folding>
-            <element signature="e#5381#5387#0#HTML" expanded="false" />
-            <element signature="e#5387#5393#0#HTML" expanded="false" />
-            <element signature="e#6187#6193#0#HTML" expanded="false" />
-            <element signature="e#6193#6199#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1051,17 +951,6 @@
             <element signature="e#2702#2708#0#HTML" expanded="false" />
             <element signature="e#2709#2715#0#HTML" expanded="false" />
             <marker date="1476829204966" expanded="true" signature="612:748" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/classes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1476829506950" expanded="true" signature="6624:6643" ph="..." />
-            <marker date="1476829506950" expanded="true" signature="7731:9772" ph="SELECT wpost... ${$wpdb-&gt;posts}" />
           </folding>
         </state>
       </provider>
@@ -1198,17 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Books.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
-          <folding>
-            <element signature="e#673#1316#0#PHP" expanded="false" />
-            <marker date="1484951779610" expanded="true" signature="3351:3736" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/booklist.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1221,14 +1099,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="129" column="25" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="242" column="1" selection-start-line="242" selection-start-column="1" selection-end-line="242" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1277,181 +1147,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php">
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/checkout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="-2882">
+          <caret line="132" column="66" selection-start-line="132" selection-start-column="66" selection-end-line="132" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php">
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/reports/sales.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1157">
-          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
-          <folding>
-            <element signature="n#Display#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="501">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php">
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/sales-console.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="614" column="14" selection-start-line="614" selection-start-column="14" selection-end-line="614" selection-end-column="14" />
-          <folding>
-            <element signature="n#__input#0;n#!!top" expanded="false" />
-            <element signature="n#__construct#0;n#__input#0;n#!!top" expanded="false" />
-            <element signature="n#GetValue#0;n#__input#0;n#!!top" expanded="false" />
-            <element signature="e#783#1029#0#PHP" expanded="false" />
-            <element signature="n#SetValue#0;n#__input#0;n#!!top" expanded="false" />
-            <element signature="n#GetPostValue#0;n#__input#0;n#!!top" expanded="false" />
-            <element signature="n#GetSessionValue#0;n#__input#0;n#!!top" expanded="false" />
-            <element signature="n#SetSessionValue#0;n#__input#0;n#!!top" expanded="false" />
-            <element signature="n#UnsetSessionValue#0;n#__input#0;n#!!top" expanded="false" />
-            <element signature="n#Radio#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputSearch#0;n#Radio#0;n#!!top" expanded="false" />
-            <element signature="e#2374#2605#0#PHP" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#Radio#0;n#!!top" expanded="false" />
-            <element signature="e#2964#3195#0#PHP" expanded="false" />
-            <element signature="n#GetQuery#0;n#Radio#0;n#!!top" expanded="false" />
-            <element signature="e#3329#3543#0#PHP" expanded="false" />
-            <element signature="e#3399#3532#0#PHP" expanded="false" />
-            <element signature="n#GetDisplay#0;n#Radio#0;n#!!top" expanded="false" />
-            <element signature="n#GetEditForm#0;n#Radio#0;n#!!top" expanded="false" />
-            <element signature="e#4158#4918#0#PHP" expanded="false" />
-            <element signature="e#4195#4819#0#PHP" expanded="false" />
-            <element signature="e#4256#4805#0#PHP" expanded="false" />
-            <element signature="e#4554#4805#0#PHP" expanded="false" />
-            <element signature="e#4838#4918#0#PHP" expanded="false" />
-            <element signature="n#Image#0;n#!!top" expanded="false" />
-            <element signature="n#get_image_form#0;n#Image#0;n#!!top" expanded="false" />
-            <element signature="e#5106#5199#0#PHP" expanded="false" />
-            <element signature="n#GetInputSearch#0;n#Image#0;n#!!top" expanded="false" />
-            <element signature="e#6123#6354#0#PHP" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#Image#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#Image#0;n#!!top" expanded="false" />
-            <element signature="e#6609#7120#0#PHP" expanded="false" />
-            <element signature="e#6635#7110#0#PHP" expanded="false" />
-            <element signature="e#6719#7110#0#PHP" expanded="false" />
-            <element signature="e#6791#6903#0#PHP" expanded="false" />
-            <element signature="e#6931#7110#0#PHP" expanded="false" />
-            <element signature="e#6979#7095#0#PHP" expanded="false" />
-            <element signature="n#GetDisplay#0;n#Image#0;n#!!top" expanded="false" />
-            <element signature="n#GetEditForm#0;n#Image#0;n#!!top" expanded="false" />
-            <element signature="n#Date#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#Date#0;n#!!top" expanded="false" />
-            <element signature="e#7777#8157#0#PHP" expanded="false" />
-            <element signature="n#GetInputSearch#0;n#Date#0;n#!!top" expanded="false" />
-            <element signature="e#8294#8952#0#PHP" expanded="false" />
-            <element signature="n#SetSessionValue#0;n#Date#0;n#!!top" expanded="false" />
-            <element signature="n#UnsetSessionValue#0;n#Date#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#Date#0;n#!!top" expanded="false" />
-            <element signature="e#9814#10003#0#PHP" expanded="false" />
-            <element signature="n#GetDisplay#0;n#Date#0;n#!!top" expanded="false" />
-            <element signature="n#GetEditForm#0;n#Date#0;n#!!top" expanded="false" />
-            <element signature="n#Decimal#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#Decimal#0;n#!!top" expanded="false" />
-            <element signature="e#10889#11269#0#PHP" expanded="false" />
-            <element signature="n#GetInputSearch#0;n#Decimal#0;n#!!top" expanded="false" />
-            <element signature="e#11406#12370#0#PHP" expanded="false" />
-            <element signature="n#SetSessionValue#0;n#Decimal#0;n#!!top" expanded="false" />
-            <element signature="n#UnsetSessionValue#0;n#Decimal#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#Decimal#0;n#!!top" expanded="false" />
-            <element signature="e#13150#13386#0#PHP" expanded="false" />
-            <element signature="e#13204#13375#0#PHP" expanded="false" />
-            <element signature="e#13395#13627#0#PHP" expanded="false" />
-            <element signature="e#13447#13616#0#PHP" expanded="false" />
-            <element signature="n#GetDisplay#0;n#Decimal#0;n#!!top" expanded="false" />
-            <element signature="e#13713#14080#0#PHP" expanded="false" />
-            <element signature="e#13927#14080#0#PHP" expanded="false" />
-            <element signature="n#GetEditForm#0;n#Decimal#0;n#!!top" expanded="false" />
-            <element signature="e#14167#15473#0#PHP" expanded="false" />
-            <element signature="e#14653#15473#0#PHP" expanded="false" />
-            <element signature="e#14672#15463#0#PHP" expanded="false" />
-            <element signature="e#15100#15463#0#PHP" expanded="false" />
-            <element signature="n#TextBox#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputSearch#0;n#TextBox#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#TextBox#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#TextBox#0;n#!!top" expanded="false" />
-            <element signature="n#GetDisplay#0;n#TextBox#0;n#!!top" expanded="false" />
-            <element signature="n#GetEditForm#0;n#TextBox#0;n#!!top" expanded="false" />
-            <element signature="n#Quantity#0;n#!!top" expanded="false" />
-            <element signature="n#GetValue#0;n#Quantity#0;n#!!top" expanded="false" />
-            <element signature="n#SetValue#0;n#Quantity#0;n#!!top" expanded="false" />
-            <element signature="e#17596#17675#0#PHP" expanded="false" />
-            <element signature="e#17684#17772#0#PHP" expanded="false" />
-            <element signature="n#GetInputSearch#0;n#Quantity#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#Quantity#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#Quantity#0;n#!!top" expanded="false" />
-            <element signature="n#GetDisplay#0;n#Quantity#0;n#!!top" expanded="false" />
-            <element signature="n#GetEditForm#0;n#Quantity#0;n#!!top" expanded="false" />
-            <element signature="n#ConsignerID#0;n#!!top" expanded="false" />
-            <element signature="n#GetValue#0;n#ConsignerID#0;n#!!top" expanded="false" />
-            <element signature="n#SetValue#0;n#ConsignerID#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputSearch#0;n#ConsignerID#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#ConsignerID#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#ConsignerID#0;n#!!top" expanded="false" />
-            <element signature="n#GetDisplay#0;n#ConsignerID#0;n#!!top" expanded="false" />
-            <element signature="n#GetEditForm#0;n#ConsignerID#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputSearch#0;n#Text#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#Text#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#Text#0;n#!!top" expanded="false" />
-            <element signature="e#21135#21772#0#PHP" expanded="false" />
-            <element signature="e#21161#21762#0#PHP" expanded="false" />
-            <element signature="e#21262#21762#0#PHP" expanded="false" />
-            <element signature="e#21285#21748#0#PHP" expanded="false" />
-            <element signature="e#21356#21476#0#PHP" expanded="false" />
-            <element signature="e#21512#21748#0#PHP" expanded="false" />
-            <element signature="e#21564#21729#0#PHP" expanded="false" />
-            <element signature="e#22293#22471#0#PHP" expanded="false" />
-            <element signature="e#22524#22715#0#PHP" expanded="false" />
-            <element signature="n#GetEditForm#0;n#Text#0;n#!!top" expanded="false" />
-            <element signature="e#22839#23612#0#PHP" expanded="false" />
-            <element signature="e#23287#23612#0#PHP" expanded="false" />
-            <element signature="n#Category#0;n#!!top" expanded="false" />
-            <element signature="n#get_dropdown#0;n#Category#0;n#!!top" expanded="false" />
-            <element signature="n#get_dropdown_checked#0;n#Category#0;n#!!top" expanded="false" />
-            <element signature="n#Checkbox#0;n#!!top" expanded="false" />
-            <element signature="n#BookButton#0;n#!!top" expanded="false" />
-            <element signature="n#__construct#0;n#BookButton#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputSearch#0;n#BookButton#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#BookButton#0;n#!!top" expanded="false" />
-            <element signature="n#GetDisplay#0;n#BookButton#0;n#!!top" expanded="false" />
-            <element signature="e#29919#30124#0#PHP" expanded="false" />
-            <element signature="e#29995#30124#0#PHP" expanded="false" />
-            <element signature="n#GetEditForm#0;n#BookButton#0;n#!!top" expanded="false" />
-            <element signature="e#30456#30661#0#PHP" expanded="false" />
-            <element signature="e#30532#30661#0#PHP" expanded="false" />
-            <element signature="n#TransactionButton#0;n#!!top" expanded="false" />
-            <element signature="n#__construct#0;n#TransactionButton#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputSearch#0;n#TransactionButton#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#TransactionButton#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#TransactionButton#0;n#!!top" expanded="false" />
-            <element signature="n#GetDisplay#0;n#TransactionButton#0;n#!!top" expanded="false" />
-            <element signature="e#31864#32139#0#PHP" expanded="false" />
-            <element signature="e#31992#32139#0#PHP" expanded="false" />
-            <element signature="e#32148#32520#0#PHP" expanded="false" />
-            <element signature="n#GetEditForm#0;n#TransactionButton#0;n#!!top" expanded="false" />
-            <element signature="e#32891#33150#0#PHP" expanded="false" />
-            <element signature="e#33011#33150#0#PHP" expanded="false" />
-            <element signature="e#33160#33629#0#PHP" expanded="false" />
-            <element signature="n#ImportButton#0;n#!!top" expanded="false" />
-            <element signature="n#__construct#0;n#ImportButton#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputSearch#0;n#ImportButton#0;n#!!top" expanded="false" />
-            <element signature="n#GetInputAdd#0;n#ImportButton#0;n#!!top" expanded="false" />
-            <element signature="n#GetQuery#0;n#ImportButton#0;n#!!top" expanded="false" />
-            <element signature="n#GetDisplay#0;n#ImportButton#0;n#!!top" expanded="false" />
-            <element signature="e#34880#34987#0#PHP" expanded="false" />
-            <element signature="e#34997#35397#0#PHP" expanded="false" />
-            <element signature="e#35125#35397#0#PHP" expanded="false" />
-            <element signature="e#35406#35778#0#PHP" expanded="false" />
-            <element signature="n#GetEditForm#0;n#ImportButton#0;n#!!top" expanded="false" />
-            <element signature="e#36173#36280#0#PHP" expanded="false" />
-            <element signature="e#36289#36692#0#PHP" expanded="false" />
-            <element signature="e#36418#36692#0#PHP" expanded="false" />
-            <element signature="e#36702#37207#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="450">
+          <caret line="140" column="62" selection-start-line="140" selection-start-column="62" selection-end-line="140" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/pay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4352">
+          <caret line="256" column="78" selection-start-line="256" selection-start-column="78" selection-end-line="256" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1459,14 +1183,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/checkout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2882">
-          <caret line="132" column="66" selection-start-line="132" selection-start-column="66" selection-end-line="132" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -1488,10 +1204,356 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/inventory/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="84" selection-start-line="0" selection-start-column="84" selection-end-line="0" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#7570#0#HTML" expanded="false" />
+            <element signature="n#change_amount#0;n#!!top" expanded="false" />
+            <element signature="n#search#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/themes/FOUNDATION_v2/classes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="300" column="29" selection-start-line="300" selection-start-column="29" selection-end-line="300" selection-end-column="29" />
+          <folding>
+            <marker date="1476829506950" expanded="true" signature="6624:6643" ph="..." />
+            <marker date="1476829506950" expanded="true" signature="7731:9772" ph="SELECT wpost... ${$wpdb-&gt;posts}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/js/barcodes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="58" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="58" />
+          <folding>
+            <marker date="1484970245909" expanded="true" signature="558:577" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/barcode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1484969520895" expanded="true" signature="222:363" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="544:685" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="869:1010" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="1194:1335" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="1519:1660" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="1844:1985" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="2169:2310" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="2494:2635" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="2819:2960" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="3147:3289" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="3482:3624" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="3817:3959" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="4152:4294" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="4487:4629" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="4822:4964" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="5157:5299" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="5492:5634" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="5827:5969" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="6162:6304" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="6497:6639" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="6832:6974" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="7167:7309" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="7502:7644" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="7837:7979" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="8172:8314" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="8507:8649" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="8842:8984" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="9177:9319" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="9512:9654" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+            <marker date="1484969520895" expanded="true" signature="9847:9989" ph="SELECT post_... ${$wpdb-&gt;postmeta}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/js/invoices.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1476829238135" expanded="true" signature="318:337" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/reports/total-income.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1122">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/reports/total-sales.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/reports/income.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="116" column="27" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/utility.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="131" column="18" selection-start-line="131" selection-start-column="18" selection-end-line="131" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Books.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="20" />
+          <folding>
+            <element signature="e#673#1316#0#PHP" expanded="false" />
+            <marker date="1484951779610" expanded="true" signature="3351:3736" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/transactions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/requests.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="388" column="69" selection-start-line="388" selection-start-column="69" selection-end-line="388" selection-end-column="69" />
+          <folding>
+            <element signature="n#get_payments#0;n#!!top" expanded="false" />
+            <element signature="n#get_payment_info#0;n#!!top" expanded="false" />
+            <marker date="1484970994891" expanded="true" signature="54840:58029" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="54886:54904" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="54932:54965" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="54993:55026" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55054:55087" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55115:55148" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55176:55209" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55237:55270" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55298:55331" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55359:55392" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55420:55453" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55481:55514" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55542:55575" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55603:55636" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55664:55697" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55725:55758" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55786:55819" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55847:55880" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55908:55941" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="55969:56002" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56030:56063" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56091:56124" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56152:56185" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56213:56246" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56274:56307" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56335:56368" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56396:56429" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56457:56490" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56518:56551" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56579:56612" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56640:56673" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56701:56734" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56762:56795" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56823:56856" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56884:56917" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="56945:56978" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57006:57039" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57067:57100" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57128:57161" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57189:57222" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57250:57283" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57311:57344" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57372:57405" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57433:57466" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57494:57527" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57555:57588" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57616:57649" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57677:57710" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57738:57771" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57799:57832" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57860:57893" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57921:57954" ph="..." />
+            <marker date="1484970994891" expanded="true" signature="57982:58015" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Inputs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="339" column="43" selection-start-line="339" selection-start-column="43" selection-end-line="339" selection-end-column="43" />
+          <folding>
+            <element signature="n#__construct#0;n#__input#0;n#!!top" expanded="false" />
+            <element signature="n#GetValue#0;n#__input#0;n#!!top" expanded="false" />
+            <element signature="e#783#1029#0#PHP" expanded="false" />
+            <element signature="n#GetPostValue#0;n#__input#0;n#!!top" expanded="false" />
+            <element signature="n#GetSessionValue#0;n#__input#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputSearch#0;n#Radio#0;n#!!top" expanded="false" />
+            <element signature="e#2413#2644#0#PHP" expanded="false" />
+            <element signature="n#GetInputAdd#0;n#Radio#0;n#!!top" expanded="false" />
+            <element signature="e#3003#3234#0#PHP" expanded="false" />
+            <element signature="n#GetQuery#0;n#Radio#0;n#!!top" expanded="false" />
+            <element signature="e#3368#3582#0#PHP" expanded="false" />
+            <element signature="e#3438#3571#0#PHP" expanded="false" />
+            <element signature="n#GetDisplay#0;n#Radio#0;n#!!top" expanded="false" />
+            <element signature="n#GetEditForm#0;n#Radio#0;n#!!top" expanded="false" />
+            <element signature="e#4197#4957#0#PHP" expanded="false" />
+            <element signature="e#4234#4858#0#PHP" expanded="false" />
+            <element signature="e#4295#4844#0#PHP" expanded="false" />
+            <element signature="e#4593#4844#0#PHP" expanded="false" />
+            <element signature="e#4877#4957#0#PHP" expanded="false" />
+            <element signature="n#Image#0;n#!!top" expanded="false" />
+            <element signature="n#get_image_form#0;n#Image#0;n#!!top" expanded="false" />
+            <element signature="e#5145#5238#0#PHP" expanded="false" />
+            <element signature="n#GetInputSearch#0;n#Image#0;n#!!top" expanded="false" />
+            <element signature="e#6162#6393#0#PHP" expanded="false" />
+            <element signature="n#GetInputAdd#0;n#Image#0;n#!!top" expanded="false" />
+            <element signature="n#GetQuery#0;n#Image#0;n#!!top" expanded="false" />
+            <element signature="e#6648#7159#0#PHP" expanded="false" />
+            <element signature="e#6674#7149#0#PHP" expanded="false" />
+            <element signature="e#6758#7149#0#PHP" expanded="false" />
+            <element signature="e#6830#6942#0#PHP" expanded="false" />
+            <element signature="e#6970#7149#0#PHP" expanded="false" />
+            <element signature="e#7018#7134#0#PHP" expanded="false" />
+            <element signature="n#GetDisplay#0;n#Image#0;n#!!top" expanded="false" />
+            <element signature="n#GetEditForm#0;n#Image#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputAdd#0;n#Date#0;n#!!top" expanded="false" />
+            <element signature="e#7816#8196#0#PHP" expanded="false" />
+            <element signature="n#GetInputSearch#0;n#Date#0;n#!!top" expanded="false" />
+            <element signature="e#8333#8991#0#PHP" expanded="false" />
+            <element signature="n#GetDisplay#0;n#Date#0;n#!!top" expanded="false" />
+            <element signature="n#GetEditForm#0;n#Date#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputSearch#0;n#Decimal#0;n#!!top" expanded="false" />
+            <element signature="n#SetSessionValue#0;n#Decimal#0;n#!!top" expanded="false" />
+            <element signature="n#UnsetSessionValue#0;n#Decimal#0;n#!!top" expanded="false" />
+            <element signature="e#13672#14039#0#PHP" expanded="false" />
+            <element signature="e#13886#14039#0#PHP" expanded="false" />
+            <element signature="n#GetEditForm#0;n#Decimal#0;n#!!top" expanded="false" />
+            <element signature="e#14126#15432#0#PHP" expanded="false" />
+            <element signature="e#14612#15432#0#PHP" expanded="false" />
+            <element signature="e#14631#15422#0#PHP" expanded="false" />
+            <element signature="e#15059#15422#0#PHP" expanded="false" />
+            <element signature="n#TextBox#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputSearch#0;n#TextBox#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputAdd#0;n#TextBox#0;n#!!top" expanded="false" />
+            <element signature="n#GetQuery#0;n#TextBox#0;n#!!top" expanded="false" />
+            <element signature="n#GetDisplay#0;n#TextBox#0;n#!!top" expanded="false" />
+            <element signature="n#GetEditForm#0;n#TextBox#0;n#!!top" expanded="false" />
+            <element signature="n#Quantity#0;n#!!top" expanded="false" />
+            <element signature="n#GetValue#0;n#Quantity#0;n#!!top" expanded="false" />
+            <element signature="n#SetValue#0;n#Quantity#0;n#!!top" expanded="false" />
+            <element signature="e#17555#17634#0#PHP" expanded="false" />
+            <element signature="e#17643#17731#0#PHP" expanded="false" />
+            <element signature="n#GetInputSearch#0;n#Quantity#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputAdd#0;n#Quantity#0;n#!!top" expanded="false" />
+            <element signature="n#GetQuery#0;n#Quantity#0;n#!!top" expanded="false" />
+            <element signature="n#GetDisplay#0;n#Quantity#0;n#!!top" expanded="false" />
+            <element signature="n#GetEditForm#0;n#Quantity#0;n#!!top" expanded="false" />
+            <element signature="n#ConsignerID#0;n#!!top" expanded="false" />
+            <element signature="n#GetValue#0;n#ConsignerID#0;n#!!top" expanded="false" />
+            <element signature="n#SetValue#0;n#ConsignerID#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputSearch#0;n#ConsignerID#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputAdd#0;n#ConsignerID#0;n#!!top" expanded="false" />
+            <element signature="n#GetQuery#0;n#ConsignerID#0;n#!!top" expanded="false" />
+            <element signature="n#GetDisplay#0;n#ConsignerID#0;n#!!top" expanded="false" />
+            <element signature="n#GetEditForm#0;n#ConsignerID#0;n#!!top" expanded="false" />
+            <element signature="n#Text#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputSearch#0;n#Text#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputAdd#0;n#Text#0;n#!!top" expanded="false" />
+            <element signature="n#GetQuery#0;n#Text#0;n#!!top" expanded="false" />
+            <element signature="e#21094#21731#0#PHP" expanded="false" />
+            <element signature="e#21120#21721#0#PHP" expanded="false" />
+            <element signature="e#21221#21721#0#PHP" expanded="false" />
+            <element signature="e#21244#21707#0#PHP" expanded="false" />
+            <element signature="e#21315#21435#0#PHP" expanded="false" />
+            <element signature="e#21471#21707#0#PHP" expanded="false" />
+            <element signature="e#21523#21688#0#PHP" expanded="false" />
+            <element signature="e#22252#22430#0#PHP" expanded="false" />
+            <element signature="e#22483#22674#0#PHP" expanded="false" />
+            <element signature="n#GetEditForm#0;n#Text#0;n#!!top" expanded="false" />
+            <element signature="e#22798#23571#0#PHP" expanded="false" />
+            <element signature="e#23246#23571#0#PHP" expanded="false" />
+            <element signature="n#Category#0;n#!!top" expanded="false" />
+            <element signature="n#get_dropdown#0;n#Category#0;n#!!top" expanded="false" />
+            <element signature="n#get_dropdown_checked#0;n#Category#0;n#!!top" expanded="false" />
+            <element signature="n#Checkbox#0;n#!!top" expanded="false" />
+            <element signature="n#BookButton#0;n#!!top" expanded="false" />
+            <element signature="n#__construct#0;n#BookButton#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputSearch#0;n#BookButton#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputAdd#0;n#BookButton#0;n#!!top" expanded="false" />
+            <element signature="n#GetDisplay#0;n#BookButton#0;n#!!top" expanded="false" />
+            <element signature="e#29878#30083#0#PHP" expanded="false" />
+            <element signature="e#29954#30083#0#PHP" expanded="false" />
+            <element signature="n#GetEditForm#0;n#BookButton#0;n#!!top" expanded="false" />
+            <element signature="e#30415#30620#0#PHP" expanded="false" />
+            <element signature="e#30491#30620#0#PHP" expanded="false" />
+            <element signature="n#TransactionButton#0;n#!!top" expanded="false" />
+            <element signature="n#__construct#0;n#TransactionButton#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputSearch#0;n#TransactionButton#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputAdd#0;n#TransactionButton#0;n#!!top" expanded="false" />
+            <element signature="n#GetQuery#0;n#TransactionButton#0;n#!!top" expanded="false" />
+            <element signature="n#GetDisplay#0;n#TransactionButton#0;n#!!top" expanded="false" />
+            <element signature="e#31823#32098#0#PHP" expanded="false" />
+            <element signature="e#31951#32098#0#PHP" expanded="false" />
+            <element signature="e#32107#32479#0#PHP" expanded="false" />
+            <element signature="n#GetEditForm#0;n#TransactionButton#0;n#!!top" expanded="false" />
+            <element signature="e#32850#33109#0#PHP" expanded="false" />
+            <element signature="e#32970#33109#0#PHP" expanded="false" />
+            <element signature="e#33119#33588#0#PHP" expanded="false" />
+            <element signature="n#ImportButton#0;n#!!top" expanded="false" />
+            <element signature="n#__construct#0;n#ImportButton#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputSearch#0;n#ImportButton#0;n#!!top" expanded="false" />
+            <element signature="n#GetInputAdd#0;n#ImportButton#0;n#!!top" expanded="false" />
+            <element signature="n#GetQuery#0;n#ImportButton#0;n#!!top" expanded="false" />
+            <element signature="n#GetDisplay#0;n#ImportButton#0;n#!!top" expanded="false" />
+            <element signature="e#34839#34946#0#PHP" expanded="false" />
+            <element signature="e#34956#35356#0#PHP" expanded="false" />
+            <element signature="e#35084#35356#0#PHP" expanded="false" />
+            <element signature="e#35365#35737#0#PHP" expanded="false" />
+            <element signature="n#GetEditForm#0;n#ImportButton#0;n#!!top" expanded="false" />
+            <element signature="e#36132#36239#0#PHP" expanded="false" />
+            <element signature="e#36248#36651#0#PHP" expanded="false" />
+            <element signature="e#36377#36651#0#PHP" expanded="false" />
+            <element signature="e#36661#37166#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/Transaction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="632" column="27" selection-start-line="632" selection-start-column="27" selection-end-line="632" selection-end-column="27" />
+        <state relative-caret-position="901">
+          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
           <folding>
             <element signature="e#7#90#0#PHP" expanded="false" />
             <element signature="e#5212#5296#0#PHP" expanded="false" />
@@ -1527,66 +1589,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/checkout.php">
+    <entry file="file://$PROJECT_DIR$/WP/wp-content/plugins/sales-console/extensions/Generation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="423" column="29" selection-start-line="423" selection-start-column="29" selection-end-line="423" selection-end-column="29" />
+        <state relative-caret-position="306">
+          <caret line="227" column="4" selection-start-line="227" selection-start-column="4" selection-end-line="227" selection-end-column="4" />
           <folding>
-            <element signature="n#get_payments#0;n#!!top" expanded="false" />
-            <element signature="n#get_payment_info#0;n#!!top" expanded="false" />
-            <marker date="1484962602419" expanded="true" signature="54479:57668" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="54525:54543" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="54571:54604" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="54632:54665" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="54693:54726" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="54754:54787" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="54815:54848" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="54876:54909" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="54937:54970" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="54998:55031" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55059:55092" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55120:55153" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55181:55214" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55242:55275" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55303:55336" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55364:55397" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55425:55458" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55486:55519" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55547:55580" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55608:55641" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55669:55702" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55730:55763" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55791:55824" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55852:55885" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55913:55946" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="55974:56007" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56035:56068" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56096:56129" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56157:56190" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56218:56251" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56279:56312" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56340:56373" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56401:56434" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56462:56495" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56523:56556" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56584:56617" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56645:56678" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56706:56739" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56767:56800" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56828:56861" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56889:56922" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="56950:56983" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="57011:57044" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="57072:57105" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="57133:57166" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="57194:57227" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="57255:57288" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="57316:57349" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="57377:57410" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="57438:57471" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="57499:57532" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="57560:57593" ph="..." />
-            <marker date="1484962602419" expanded="true" signature="57621:57654" ph="..." />
+            <element signature="n#Display#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
