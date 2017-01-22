@@ -1,5 +1,10 @@
-<?php
-
-namespace Guzzle\Common\Exception;
-
-class BadMethodCallException extends \BadMethodCallException implements GuzzleException {}
+<?php
+
+
+
+namespace Guzzle\Common\Exception;
+
+
+
+class BadMethodCallException extends \BadMethodCallException implements GuzzleException {}
+

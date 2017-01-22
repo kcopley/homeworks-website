@@ -1,5 +1,10 @@
-<?php
-
-namespace Guzzle\Common\Exception;
-
-class RuntimeException extends \RuntimeException implements GuzzleException {}
+<?php
+
+
+
+namespace Guzzle\Common\Exception;
+
+
+
+class RuntimeException extends \RuntimeException implements GuzzleException {}
+

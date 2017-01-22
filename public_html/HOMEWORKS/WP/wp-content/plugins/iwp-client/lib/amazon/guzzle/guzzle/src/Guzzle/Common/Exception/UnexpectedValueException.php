@@ -1,5 +1,10 @@
-<?php
-
-namespace Guzzle\Common\Exception;
-
-class UnexpectedValueException extends \UnexpectedValueException implements GuzzleException {}
+<?php
+
+
+
+namespace Guzzle\Common\Exception;
+
+
+
+class UnexpectedValueException extends \UnexpectedValueException implements GuzzleException {}
+

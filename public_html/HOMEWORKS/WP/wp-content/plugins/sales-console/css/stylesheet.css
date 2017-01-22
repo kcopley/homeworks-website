@@ -1,1 +1,314 @@
-#formtable td { padding-bottom: 0px; }.dropdown dd,.dropdown dt {     margin: 0px;     padding: 0px;}.dropdown ul {     margin: -1px 0 0 0;}.dropdown dd {     position: relative;}.dropdown a,.dropdown a:visited {     color: #fff;     text-decoration: none;     outline: none;     font-size: 12px;}.dropdown dt a {     background-color: #4F6877;     display: block;     padding: 8px 20px 5px 10px;     min-height: 25px;     line-height: 24px;     overflow: hidden;     border: 0;     width: 272px;}.dropdown dt a span,.multiSel span {     cursor: pointer;     display: inline-block;     padding: 0 3px 2px 0;}.dropdown dd ul {     background-color: #4F6877;     border: 0;     color: #fff;     display: none;     left: 0px;     padding: 2px 15px 2px 5px;     position: absolute;     top: 2px;     width: 280px;     list-style: none;     height: 100px;     overflow: auto;}.dropdown span.value {     display: none;}.dropdown dd ul li a {     padding: 5px;     display: block;}.dropdown dd ul li a:hover {     background-color: #fff;}.multiselect {     width: 200px;}.selectBox {     position: relative;}.selectBox select {     width: 100%;     font-weight: bold;}.overSelect {     position: absolute;     left: 0;     right: 0;     top: 0;     bottom: 0;}#checkboxes {     display: none;     border: 1px #dadada solid;     position: absolute;     padding: 2px 15px 2px 5px;     background-color: #F0F0F0;}#checkboxes label {     display: block;}#checkboxes label:hover {     background-color: #1e90ff;}#library tr:nth-last-child(n+7) td { padding: 5px 5px 4px 15px; }#library tr:nth-last-child(n+7) { background: #fff; }#library tr:nth-last-child(n+8) td { border-bottom: 1px solid #ccc; }#library tr:nth-child(even) { background: none; }#library tr:first-child th { background: #F9F9F9; padding: 0 0 4px 15px; border-bottom: 1px solid #222; }#library tr:nth-last-child(n+7) td.price, #bookbag tr:first-child th.price { padding-left: 0; }#bookbag tr:nth-last-child(n+7) { background: #fff; }#bookbag tr:nth-child(even) { background: none; }#bookbag tr:first-child th { background: #F9F9F9; padding: 0 0 4px 5px; border-bottom: 1px solid #222; }#bookbag tr:nth-last-child(n+7) td.price, #bookbag tr:first-child th.price { padding-left: 0; }#checkoutdash { border: none; background: none; font-size: 1.5em; font-weight: 900; line-height: 1em; padding: 1px 3px; margin: 0; }#checkoutdash:hover { color: #fff; cursor: pointer; border: 1px solid #ccc; padding: 0 3px; background: #21759B; }#checkoutx { border: none; background: none; font-size: 1.15em; font-weight: 900; line-height: 1em; padding: 1px 3px; margin: 0; }#checkoutx:hover { color: #fff; cursor: pointer; border: 1px solid #ccc; padding: 0 3px; background: #21759B; }#payment-column { width: 280px; padding-left: 25px; border-left: 1px solid #ccc; }#credit_details { border: 1px solid #ccc; padding: 0 15px 20px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; margin-bottom: 25px; }#credit_details h4 { margin-bottom: 0; }#credit_details .button-primary { margin-top: 10px; }#swipe { background: none; }#paytype { line-height: 2em; }#paytype input[type="radio"] { vertical-align: baseline; }.button-table {     background: #0085ba;     border-color: #0073aa #006799 #006799;     color: #fff;     text-decoration: none;     vertical-align: top;}.hide-button-handler {     width: 0;     height: 0;     padding: 0;     border: 0;     margin: 0;}#results td { padding: 5px 5px 4px 5px; border-bottom: 1px solid #ccc; }#results tr:nth-child(odd) { background: #fff; }#results tr:first-child { background: none; }#results tr:last-child td { border-bottom: none; }#results tr th { padding: 0 5px 4px; border-bottom: 1px solid #222; }#results tr:nth-child(2) td { padding-top: 7px; }#searchtable td { padding: 12px 10px 5px; border-bottom: 1px solid #ccc; }#searchtable td.update { padding: 7px 10px 7px; }#searchtable th td { padding: 0; }#searchtable tr:nth-child(2) td { padding: 0; border: none; }#labels { background: #fff; }#labels .left { width: 45%; float: left; }#labels .right {  }#online, #conference { display: none; }#bestsellers { margin-top: 15px; }#bestsellers tr:nth-child(odd) { background: #fff; }#bestsellers th { border-bottom: 1px solid #222; }#bestsellers tr:first-child { background: none; }#bestsellers td { padding: 7px 5px 6px 5px; border-bottom: 1px solid #ccc; }@media print {body {background:white;      font-size:10pt;      margin:0 }#sidebar { display:none }#header { height:75px }#content{ margin-left:0;      float:none;      width:auto }.demo .red { color:black;      font-weight:bold }#content a { font-weight:bold;      color:#000066;      text-decoration:underline }#content{ margin-left:0;      float:none;      width:auto }#footer, .ad { display:none }h1, h2, h3, h4, h5, h6 { page-break-after:avoid;      page-break-inside:avoid }h3 { margin-left:10px;      margin-bottom:0px;      padding-bottom:0px }blockquote, table, pre { page-break-inside:avoid }ul, ol, dl  { page-break-before:avoid }img.centered { display: block;      margin-left: auto;      margin-right: auto; }img.right { padding: 4px;      margin: 0 0 2px 7px;      display: inline; }img.left { padding: 4px;      margin: 0 7px 2px 0;      display: inline; }.right { float: right; }.left { float: left }img { page-break-inside:avoid;      page-break-after:avoid; }.floatedTable {	float:left;}.inlineTable {	display: inline-block;}.alright {    text-align: right;    margin-right: 1em;}.alleft {    text-align: left;    margin-left: 1em;}#labels { background: #fff; }#labels .left { width: 45%; float: left; }#labels .right {  }}
+#formtable td { padding-bottom: 0px; }
+
+.dropdown dd,
+.dropdown dt {
+     margin: 0px;
+     padding: 0px;
+}
+
+.dropdown ul {
+     margin: -1px 0 0 0;
+}
+
+.dropdown dd {
+     position: relative;
+}
+
+.dropdown a,
+.dropdown a:visited {
+     color: #fff;
+     text-decoration: none;
+     outline: none;
+     font-size: 12px;
+}
+
+.dropdown dt a {
+     background-color: #4F6877;
+     display: block;
+     padding: 8px 20px 5px 10px;
+     min-height: 25px;
+     line-height: 24px;
+     overflow: hidden;
+     border: 0;
+     width: 272px;
+}
+
+.dropdown dt a span,
+.multiSel span {
+     cursor: pointer;
+     display: inline-block;
+     padding: 0 3px 2px 0;
+}
+
+.dropdown dd ul {
+     background-color: #4F6877;
+     border: 0;
+     color: #fff;
+     display: none;
+     left: 0px;
+     padding: 2px 15px 2px 5px;
+     position: absolute;
+     top: 2px;
+     width: 280px;
+     list-style: none;
+     height: 100px;
+     overflow: auto;
+}
+
+.dropdown span.value {
+     display: none;
+}
+
+.dropdown dd ul li a {
+     padding: 5px;
+     display: block;
+}
+
+.dropdown dd ul li a:hover {
+     background-color: #fff;
+}
+
+.multiselect {
+     width: 200px;
+}
+
+.selectBox {
+     position: relative;
+}
+
+.selectBox select {
+     width: 100%;
+     font-weight: bold;
+}
+
+.overSelect {
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+}
+
+#checkboxes {
+     display: none;
+     border: 1px #dadada solid;
+     position: absolute;
+     padding: 2px 15px 2px 5px;
+     background-color: #F0F0F0;
+}
+
+#checkboxes label {
+     display: block;
+}
+
+#checkboxes label:hover {
+     background-color: #1e90ff;
+}
+
+#library tr:nth-last-child(n+7) td { padding: 5px 5px 4px 15px; }
+
+#library tr:nth-last-child(n+7) { background: #fff; }
+
+#library tr:nth-last-child(n+8) td { border-bottom: 1px solid #ccc; }
+
+#library tr:nth-child(even) { background: none; }
+
+#library tr:first-child th { background: #F9F9F9; padding: 0 0 4px 15px; border-bottom: 1px solid #222; }
+
+#library tr:nth-last-child(n+7) td.price, #bookbag tr:first-child th.price { padding-left: 0; }
+
+
+#bookbag tr:nth-last-child(n+7) { background: #fff; }
+
+#bookbag tr:nth-child(even) { background: none; }
+
+#bookbag tr:first-child th { background: #F9F9F9; padding: 0 0 4px 5px; border-bottom: 1px solid #222; }
+
+#bookbag tr:nth-last-child(n+7) td.price, #bookbag tr:first-child th.price { padding-left: 0; }
+
+#checkoutdash { border: none; background: none; font-size: 1.5em; font-weight: 900; line-height: 1em; padding: 1px 3px; margin: 0; }
+
+#checkoutdash:hover { color: #fff; cursor: pointer; border: 1px solid #ccc; padding: 0 3px; background: #21759B; }
+
+#checkoutx { border: none; background: none; font-size: 1.15em; font-weight: 900; line-height: 1em; padding: 1px 3px; margin: 0; }
+
+#checkoutx:hover { color: #fff; cursor: pointer; border: 1px solid #ccc; padding: 0 3px; background: #21759B; }
+
+
+
+#payment-column { width: 280px; padding-left: 25px; border-left: 1px solid #ccc; }
+
+#credit_details { border: 1px solid #ccc; padding: 0 15px 20px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; margin-bottom: 25px; }
+
+#credit_details h4 { margin-bottom: 0; }
+
+#credit_details .button-primary { margin-top: 10px; }
+
+#swipe { background: none; }
+
+#paytype { line-height: 2em; }
+
+#paytype input[type="radio"] { vertical-align: baseline; }
+
+.button-table {
+     background: #0085ba;
+     border-color: #0073aa #006799 #006799;
+     color: #fff;
+     text-decoration: none;
+     vertical-align: top;
+}
+
+.hide-button-handler {
+     width: 0;
+     height: 0;
+     padding: 0;
+     border: 0;
+     margin: 0;
+}
+
+#results td { padding: 5px 5px 4px 5px; border-bottom: 1px solid #ccc; }
+
+#results tr:nth-child(odd) { background: #fff; }
+
+#results tr:first-child { background: none; }
+
+#results tr:last-child td { border-bottom: none; }
+
+#results tr th { padding: 0 5px 4px; border-bottom: 1px solid #222; }
+
+#results tr:nth-child(2) td { padding-top: 7px; }
+
+#searchtable td { padding: 12px 10px 5px; border-bottom: 1px solid #ccc; }
+
+#searchtable td.update { padding: 7px 10px 7px; }
+
+#searchtable th td { padding: 0; }
+
+#searchtable tr:nth-child(2) td { padding: 0; border: none; }
+
+
+
+#labels { background: #fff; }
+
+#labels .left { width: 45%; float: left; }
+
+#labels .right {  }
+
+
+
+#online, #conference { display: none; }
+
+
+
+#bestsellers { margin-top: 15px; }
+
+#bestsellers tr:nth-child(odd) { background: #fff; }
+
+#bestsellers th { border-bottom: 1px solid #222; }
+
+#bestsellers tr:first-child { background: none; }
+
+#bestsellers td { padding: 7px 5px 6px 5px; border-bottom: 1px solid #ccc; }
+
+
+
+@media print {
+
+body {background:white; 
+
+     font-size:10pt; 
+
+     margin:0 }
+
+#sidebar { display:none }
+
+#header { height:75px }
+
+#content{ margin-left:0; 
+
+     float:none; 
+
+     width:auto }
+
+.demo .red { color:black; 
+
+     font-weight:bold }
+
+#content a { font-weight:bold; 
+
+     color:#000066; 
+
+     text-decoration:underline }
+
+#content{ margin-left:0; 
+
+     float:none; 
+
+     width:auto }
+
+#footer, .ad { display:none }
+
+h1, h2, h3, h4, h5, h6 { page-break-after:avoid; 
+
+     page-break-inside:avoid }
+
+h3 { margin-left:10px; 
+
+     margin-bottom:0px; 
+
+     padding-bottom:0px }
+
+blockquote, table, pre { page-break-inside:avoid }
+
+ul, ol, dl  { page-break-before:avoid }
+
+img.centered { display: block; 
+
+     margin-left: auto; 
+
+     margin-right: auto; }
+
+img.right { padding: 4px; 
+
+     margin: 0 0 2px 7px; 
+
+     display: inline; }
+
+img.left { padding: 4px; 
+
+     margin: 0 7px 2px 0; 
+
+     display: inline; }
+
+.right { float: right; }
+
+.left { float: left }
+
+img { page-break-inside:avoid; 
+
+     page-break-after:avoid; }
+
+.floatedTable {
+	float:left;
+}
+.inlineTable {
+	display: inline-block;
+}
+
+.alright {
+    text-align: right;
+    margin-right: 1em;
+}
+
+.alleft {
+    text-align: left;
+    margin-left: 1em;
+}
+
+#labels { background: #fff; }
+
+#labels .left { width: 45%; float: left; }
+
+#labels .right {  }
+
+}

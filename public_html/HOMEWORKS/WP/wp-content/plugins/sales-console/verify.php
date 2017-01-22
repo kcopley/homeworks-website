@@ -168,8 +168,9 @@ $list = new RenderList(
                             new TextRender('Update Books')
                         ),
                         new Column(width(16),
-                            new Form(
+                            new Form(id('verifying_books'),
                                 page_action::InputAction(verify::$verify_books),
+                                new Input(type('hidden').value($_REQUEST['last_update']).name('last_update').id('last_update')),
                                 button('Start')
                             )
                         )
@@ -201,8 +202,9 @@ $list = new RenderList(
                             new TextRender('Update Transactions')
                         ),
                         new Column(width(12),
-                            new Form(
+                            new Form(id('verifying_trans'),
                                 page_action::InputAction(verify::$verify_transactions),
+                                new Input(type('hidden').value($_REQUEST['last_update_trans']).name('last_update_trans').id('last_update_trans')),
                                 button('Start')
                             )
                         )
@@ -247,11 +249,15 @@ static $available = 'book_availability';
 static $online = 'book_online';
 
 function verify_book_database() {
+    $offset = $_REQUEST['last_update'];
+    if (!$offset) $offset = 0;
+
     $args = array(
-        'numberposts' => -1,
-        'posts_per_page' => -1,
+        'numberposts' => 500,
+        'posts_per_page' => 500,
         'post_type' => 'bookstore',
-        'cache_results' => false
+        'cache_results' => false,
+        'offset' => $offset
     );
 
 
@@ -264,8 +270,9 @@ function verify_book_database() {
         verify_book($book);
         $counter++;
     endwhile;
+    $_REQUEST['last_update'] = $offset + 500;
 
-    echo 'Completed '.$counter.' books.';
+    echo 'Completed '.$_REQUEST['last_update'].' books.';
 }
 
 function verify_radios() {
@@ -465,11 +472,15 @@ function delete_transaction_database() {
 }
 
 function verify_transaction_database() {
+    $offset = $_REQUEST['last_update_trans'];
+    if (!$offset) $offset = 0;
+
     $args = array(
-        'numberposts' => 1000,
-        'posts_per_page' => 1000,
+        'numberposts' => 1,
+        'posts_per_page' => 1,
         'post_type' => 'purchases',
-        'cache_results' => false
+        'cache_results' => false,
+        'offset' => $offset
     );
 
     $query = new WP_Query($args);
@@ -482,11 +493,12 @@ function verify_transaction_database() {
         $counter++;
     endwhile;
 
-    echo 'Completed '.$counter.' transactions.';
+    $_REQUEST['last_update_trans'] = $offset + 1;
+    echo 'Completed '.$_REQUEST['last_update_trans'].' transactions.';
 }
 
 function verify_transaction($id) {
-    if (Transaction::$props[Transaction::$complete]->GetValue($id)) {
+    if (get_post_meta($id, 'test_complete_4', true)) {
         return;
     }
 
@@ -503,9 +515,12 @@ function verify_transaction($id) {
     );
     $postid = wp_insert_post($order);
 
-    Transaction::$props[Transaction::$customer_name]->SetValue($postid, $title);
+    if ($title)
+        Transaction::$props[Transaction::$customer_name]->SetValue($postid, $title);
     Transaction::$props[Transaction::$complete]->SetValue($postid, 2);
-    Transaction::$props[Transaction::$id]->SetValue($postid, $title);
+
+    if ($title)
+        Transaction::$props[Transaction::$id]->SetValue($postid, $title);
     $invoice = get_post_meta($id, '_cmb_order_invoice', true);
     if ($invoice) {
         $invoice = substr($invoice, 5);
@@ -515,7 +530,8 @@ function verify_transaction($id) {
     Transaction::$props[Transaction::$conference]->SetValue($postid, 2);
 
     $trans = get_post_meta($id, '_cmb_transfirst', true);
-    Transaction::$props[Transaction::$transfirstid]->SetValue($postid, $trans);
+    if ($trans)
+        Transaction::$props[Transaction::$transfirstid]->SetValue($postid, $trans);
 
     $addressphone = get_post_meta($id, '_cmb_customer_address', true);
     if ($addressphone) {
@@ -546,34 +562,44 @@ function verify_transaction($id) {
 
     $summ = get_post_meta($id, '_cmb_order_summary', true);
     if ($summ) {
-        $books = preg_split('/\((.*?)\)/', $summ, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
-        if (!empty($books)) {
-            $count = count($books);
-            for ($i = 0; $i < $count; $i += 2) {
-                $book = trim($books[$i]);
-                $qty = trim($books[$i + 1]);
-                if ($book == '' || $qty == '') continue;
-
-                $bid = get_book_by_title($book);
-                if ($bid && intval($qty)) {
-                    Transaction::add_book_fast($postid, $bid, intval($qty));
+        $bookArr = explode("\n", $summ);
+        foreach ($bookArr as $book) {
+            $b = trim($book);
+            $endparen = strrchr($b, '(');
+            $endparen2 = strpos($endparen, ')');
+            if ($endparen && $endparen2 && intval($endparen2)) {
+                $qty = substr($endparen, 1, $endparen2 - 1);
+                $actualBook = substr($b, 0, strripos($b, '('));
+                if ($actualBook && $qty && $actualBook != '' && $qty != '') {
+                    $bid = get_book_by_title(trim($actualBook));
+                    if ($bid && intval($qty)) {
+                        Transaction::add_book_fast($postid, $bid, intval($qty));
+                    }
                 }
             }
         }
     }
 
-    $taxtotal = str_replace('$', '', get_post_meta($id, '_cmb_purchase_tax', true));
-    $price = str_replace('$', '', get_post_meta($id, '_cmb_purchase_price', true));
-    $total = $price + $taxtotal;
-    Transaction::$props[Transaction::$total]->SetValue($postid, $total);
+    $taxtotal = get_post_meta($id, '_cmb_purchase_tax', true);
+    if ($taxtotal)
+        $taxtotal = str_replace('$', '', $taxtotal);
 
-    Transaction::add_payment($postid, checkout_payment::$payment_credit, $total);
+    $price = get_post_meta($id, '_cmb_purchase_price', true);
+    if ($price)
+        $price = str_replace('$', '', get_post_meta($id, '_cmb_purchase_price', true));
+
+    if ($price && $taxtotal) {
+        $total = $price + $taxtotal;
+        Transaction::$props[Transaction::$total]->SetValue($postid, $total);
+        Transaction::add_payment($postid, checkout_payment::$payment_credit, $total);
+    }
 
     if ($taxtotal) {
         update_post_meta($postid, Transaction::$old_taxedamount_location, $taxtotal);
     }
 
     Transaction::$props[Transaction::$complete]->SetValue($id, 2);
+    update_post_meta($id, 'test_complete_4', true);
 }
 
 function set_bids() {
@@ -641,3 +667,15 @@ function set_shipping_margin() {
 }
 
 $list->Render();
+
+if ($_REQUEST['last_update'] && $_REQUEST['last_update'] < 20000)
+{
+    echo '<script>document.getElementById(\'verifying_books\').submit();</script>';
+}
+
+if ($_REQUEST['last_update_trans'] && $_REQUEST['last_update_trans'] < 5000)
+{
+    echo '<script>document.getElementById(\'verifying_trans\').submit();</script>';
+}
+?>
+

@@ -1,518 +1,1035 @@
-/*
-Theme Name:         WordPress Foundation
-Theme URI:          http://fourthcup.org/PREVIEW/
-Description:        Custom WordPress framework/theme for Xxxx based on the ZURB Foundation framework.
-Version:            2.0
-Author:             Jason Sprenger
-Author URI:         http://fourthcup.org/
-*/
-
-/* Webfonts
--------------------------------------------------------------------------------*/
-@font-face{ 
-	font-family: 'WebSymbolsRegular';
-	src: url('webfonts/websymbols-regular-webfont.eot');
-	src: url('webfonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/websymbols-regular-webfont.woff') format('woff'), url('webfonts/websymbols-regular-webfont.ttf') format('truetype'), url('webfonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-    font-family: 'MatchbookMatchbook';
-    src: url('webfonts/Matchbook-webfont.eot');
-    src: url('webfonts/Matchbook-webfont.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/Matchbook-webfont.woff') format('woff'),
-         url('webfonts/Matchbook-webfont.ttf') format('truetype'),
-         url('webfonts/Matchbook-webfont.svg#MatchbookMatchbook') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansLight';
-    src: url('webfonts/OpenSans-Light-webfont.eot');
-    src: url('webfonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/OpenSans-Light-webfont.woff') format('woff'),
-         url('webfonts/OpenSans-Light-webfont.ttf') format('truetype'),
-         url('webfonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansLightItalic';
-    src: url('webfonts/OpenSans-LightItalic-webfont.eot');
-    src: url('webfonts/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/OpenSans-LightItalic-webfont.woff') format('woff'),
-         url('webfonts/OpenSans-LightItalic-webfont.ttf') format('truetype'),
-         url('webfonts/OpenSans-LightItalic-webfont.svg#OpenSansLightItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansRegular';
-    src: url('webfonts/OpenSans-Regular-webfont.eot');
-    src: url('webfonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/OpenSans-Regular-webfont.woff') format('woff'),
-         url('webfonts/OpenSans-Regular-webfont.ttf') format('truetype'),
-         url('webfonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansItalic';
-    src: url('webfonts/OpenSans-Italic-webfont.eot');
-    src: url('webfonts/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/OpenSans-Italic-webfont.woff') format('woff'),
-         url('webfonts/OpenSans-Italic-webfont.ttf') format('truetype'),
-         url('webfonts/OpenSans-Italic-webfont.svg#OpenSansItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansSemibold';
-    src: url('webfonts/OpenSans-Semibold-webfont.eot');
-    src: url('webfonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/OpenSans-Semibold-webfont.woff') format('woff'),
-         url('webfonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
-         url('webfonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansSemiboldItalic';
-    src: url('webfonts/OpenSans-SemiboldItalic-webfont.eot');
-    src: url('webfonts/OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/OpenSans-SemiboldItalic-webfont.woff') format('woff'),
-         url('webfonts/OpenSans-SemiboldItalic-webfont.ttf') format('truetype'),
-         url('webfonts/OpenSans-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansBold';
-    src: url('webfonts/OpenSans-Bold-webfont.eot');
-    src: url('webfonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/OpenSans-Bold-webfont.woff') format('woff'),
-         url('webfonts/OpenSans-Bold-webfont.ttf') format('truetype'),
-         url('webfonts/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansBoldItalic';
-    src: url('webfonts/OpenSans-BoldItalic-webfont.eot');
-    src: url('webfonts/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/OpenSans-BoldItalic-webfont.woff') format('woff'),
-         url('webfonts/OpenSans-BoldItalic-webfont.ttf') format('truetype'),
-         url('webfonts/OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansExtrabold';
-    src: url('webfonts/OpenSans-ExtraBold-webfont.eot');
-    src: url('webfonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/OpenSans-ExtraBold-webfont.woff') format('woff'),
-         url('webfonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
-         url('webfonts/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'OpenSansExtraboldItalic';
-    src: url('webfonts/OpenSans-ExtraBoldItalic-webfont.eot');
-    src: url('webfonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
-         url('webfonts/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
-         url('webfonts/OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraboldItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-/* Colors
--------------------------------------------------------------------------------
-Teal  #1D393C
-Moss  #77968E
-Sun  #FFD978
-Orange  #ED8505
-Dull Black  #181818
-Navy Blue #1d3164
-
-*/
-
-/* Structure
--------------------------------------------------------------------------------*/
-body { height: auto; background-color: #f9f9f9; }
-header { position: relative; overflow-x: hidden; }
-header nav { background: #3b3c34; height: 3em; margin-top: 65px; }
-article { position: relative; padding-bottom: 0; }
-aside {  }
-footer { display: block; position: relative; background: #e4e4e4; padding: 25px 0 0; margin-top: 50px; z-index: 25; }
-#bkgd { background: url('images/HEADER-GENERIC.jpg') no-repeat scroll center top; position: absolute; width: 100%; height: 100%; z-index: -1; }
-
-/* Navigation
--------------------------------------------------------------------------------*/
-#menu-main { float:left; margin: 0; padding: 0; height: 3em; left: 40%; position: relative; text-align: center; color: #fff; }
-
-#menu-main li { display: block; float: left; margin: 0; padding: 0; position: relative; /*--Important--*/ right: 50%; text-transform: uppercase; line-height: 3em; color: #fff; height: 3em; }
-
-#menu-main li a:link, #menu-main li a:visited { height: 3em; line-height: 3em; display: block; margin: 0; padding: 0 25px; text-decoration: none; font-size: 1em; color: #fff; }
-
-#menu-main li.m1:hover { background: #1d3164; }
-#menu-main li.m2:hover { background: #809b13; }
-#menu-main li.m3:hover { background: #ED8505; }
-#menu-main li.m4:hover { background: #1d3164; }
-#menu-main li.m5:hover { background: #ffbc12; }
-#menu-main li.m6:hover { background: #6f1d4e; }
-
-#menu-main ul { list-style: none; position: absolute; left: -9999px; }
-#menu-main ul li { border-top: 2px solid #fff; float: none; text-align: left; color: #fff; }
-#menu-main ul a:link { white-space: nowrap; color: #fff; }
-#menu-main li:hover ul { left: 72%; }
-#menu-main li:hover ul a:link { color: #fff; background: #ff9f2c; text-decoration: none; padding: 0 50px 0 25px; margin: 0; }
-#menu-main li:hover ul li a:hover { color: #fff; background: #ffd563; }
-
-footer .menu li a:link, footer .menu li a:visited { color: #444; }
-footer .menu li a:hover { color: #1d3164; }
-
-/* Typography
--------------------------------------------------------------------------------*/
-body { font-family: "OpenSansRegular", Arial, sans-serif; }
-h1 { font-family: "MatchbookMatchbook", Arial, sans-serif; font-weight: normal; text-transform: uppercase; }
-h2, h3, h4, h5, h6 { font-family: "OpenSansLight", Arial, sans-serif; font-weight: normal; }
-h1 { font-size: 5.5em; letter-spacing: -.01em; margin: 50px 0 15px 0; }
-h1:first-letter{ color: #1d3164; font-size: 1.15em; }
-h2 { line-height: 1em; }
-h3 { font-size: 1.5em; line-height: 1.1em; padding: 0 0 10px; margin: 0 0 25px; border-bottom: 1px solid #999; }
-h4 { font-family: "OpenSansBold", Arial, sans-serif; font-size: 1.25em; line-height: 1em; text-transform: uppercase; margin: 0 0 15px 0; }
-h5 { font-family: "OpenSansSemibold", Arial, sans-serif; color: #ED8505; margin: 0 0 15px; }
-h6 { font-family: "OpenSansBold", Arial, sans-serif; font-size: 1em; line-height: 1em; text-transform: uppercase; margin: 0 0 5px 0; }
-p { line-height: 1.5em; }
-small { font-size: .85em; }
-
-h2 sup { font-size: .5em; }
-sup { vertical-align: text-top; }
-aside p { line-height: 1.5em; }
-footer p { font-size: .85em; line-height: 1.5em; }
-#copyright { font-size: .75em; margin: 0 0 35px; }
-
-fieldset { -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; border: 1px solid #999; padding: 25px; }
-legend { font-family: "OpenSansBold", Arial, sans-serif; font-size: 1.25em; line-height: 1em; text-transform: uppercase; padding: 0 25px; }
-table thead tr th { font-family: "OpenSansBold", Arial, sans-serif; color: #fff; font-size: 1em; font-weight: normal; }
-th { font-family: "OpenSansBold", Arial, sans-serif; color: #fff; text-align: left; background: #3B3C34; padding: 5px 0; }
-th:first-child { padding-left: 15px; }
-table tbody tr td { text-align: left; padding: 5px 0; }
-td:first-child { font-family: "OpenSansBold", Arial, sans-serif; text-transform: uppercase; padding-left: 15px; } 
-
-/* Forms
--------------------------------------------------------------------------------*/
-#searchform { position: relative; z-index: 25; }
-#publishersearch { margin: 0; padding: 0; }
-form.add, form.remove, form#empty { margin: 0; padding: 0; }
-#s { padding: 8px 15px; width: 75%; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; border: 1px solid #999; }
-#p { font-size: .8em; margin: 0; padding: 0; text-decoration: underline; }
-.booklist #s { font-size: .9em; }
-#searchsubmit { font-family: "WebSymbolsRegular"; font-size: 1.25em; line-height: 2em; color: #ccc; background: none; padding: .5em 0 0; width: 2.5em; height: 2em; margin: 0; }
-#searchsubmit:hover { opacity: .5; }
-
-form label { margin: 15px 0 5px; }
-label[for=commentsText] { padding-bottom: 10px; }
-
-input[type="text"] { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1em; color: #666; padding: 8px 15px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; border: 1px solid #999; width: 75%; }
-
-input[type="email"] { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1em; color: #666; padding: 8px 15px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; border: 1px solid #999; width: 300px; }
-
-input[type="password"] { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1em; color: #666; padding: 8px 15px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; border: 1px solid #999; width: 300px; }
-
-form select { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1em; outline: none; focus: none; width: 75%; padding: 5px; margin-top: 5px; }
-
-form textarea { font-family: "OpenSansRegular", Arial, sans-serif; color: #666; padding: 15px 5px 5px 15px; -webkit-border-radius: 5px 5px 0 5px; -moz-border-radius: 5px 5px 0 5px; border-radius: 5px 5px 0 5px; border: 1px solid #999; width: 500px; }
-
-input.credit { width: 15%; float: left; margin-right: 10px; }
-
-/* Buttons
--------------------------------------------------------------------------------*/
-a:link, a:visited { color: #1d3164; }
-a:hover { text-decoration: underline; }
-
-a.button, button, input[type="submit"], input[type="reset"], input[type="button"], .button { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1.15em; line-height: 2.5em; color: #181818; font-weight: normal; text-transform: uppercase; text-decoration: none; padding: 0 25px; height: 2.5em; margin: 15px 0 0 5px; background: #e2e2e2; background: rgba(0, 0, 0, 0.1); border: none; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; }
-
-a.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:hover { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1.15em; line-height: 2.5em; color: #fff; background-color: #ffbc12; cursor: pointer; }
-
-#bookdetail a.button, bookdetail button, bookdetail input[type="submit"], bookdetail input[type="reset"], bookdetail input[type="button"] { width: 100%; margin: 0; }
-
-form.add input[type="submit"] { background-color: transparent; padding: 0 5px; margin: 0 5px; height: 1.75em; float: left; }
-form.remove input[type="submit"] { background-color: transparent; padding: 0 5px; margin: 0 5px; height: 1.5em; float: left; }
-
-form#empty input[type="submit"], form#checkout input[type="submit"] { background-color: transparent; padding: 0; margin: 0; text-align: left; }
-form#empty input[type="submit"]:hover, form#checkout input[type="submit"]:hover { text-decoration: underline; color: #181818; }
-
-/* Slide
--------------------------------------------------------------------------------*/
-#FEATURED { background: url('images/WN-BKGD.jpg') no-repeat left top; background-size: 100%; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; padding: 25px 0; }
-#NEW-BOOKS h2 { font-family: "OpenSansBold", Arial, sans-serif; font-size: 1.25em; line-height: 1em; text-transform: uppercase; border: none; margin: 25px 0 5px 25px; }
-.WN-SLIDE { padding: 0 25px; }
-.WN-SLIDE h3 { font-family: "OpenSansLight", Arial, sans-serif; font-size: 2em; line-height: 1.25em; border: none; margin: 10px 0 5px; padding: 0; }
-.WN-SLIDE .price { font-size: 1.5em; color: #ED8505; margin: 0 0 5px; }
-.WN-SLIDE img { float: left; margin-right: 25px; }
-.WN-SLIDE a { color: #181818; margin: 15px 0; }
-.WN-SLIDE a.snapshot-link { display: none; }
-.WN-SLIDE a.button:hover { background: #ED8505; }
-#NEW-BOOKS ul.block-grid li { min-height: 175px; margin-bottom: 15px; }
-.WN-SLIDE sup { vertical-align: text-top; font-size: .6em; }
-
-/* Misc
--------------------------------------------------------------------------------*/
-.hidden { display: none; }
-.backwards { direction: rtl; unicode-bidi:bidi-override; }
-#logo { position: relative; float: left; top: -55px; left: 50px; }
-.top-off { padding-top: 125px; }
-.indent { padding-left: 25px; }
-.left-divider { border-left: 1px solid #ccc; padding-left: 25px; } 
-.category .top-off { padding-top: 100px; }
-.box { border: 1px solid #ccc; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; padding: 15px 25px; }
-.symbol { font-family: "WebSymbolsRegular"; font-size: 1.25em; font-weight: normal; padding: 0 5px; }
-hr { margin: 25px 0; }
-.socialmedia { font-family: "WebSymbolsRegular"; font-size: 2em; font-weight: normal; padding: 0 5px; float: left; }
-#addressline { font-family: "OpenSansRegular", Arial, sans-serif; font-size: .9em; line-height: 1.5em; text-transform: uppercase; margin: 0 0 15px 0; padding-top: 10px; border-top: 1px solid #999; }
-#copyright a:link { padding-right: 15px; }
-#map { width: 960px; margin-left: -480px; }
-
-
-/* Home
--------------------------------------------------------------------------------*/
-.home #bkgd { background: url('images/HEADER-ROCKET.jpg') no-repeat scroll center top; }
-.home aside { margin-top: 135px; background: #1d3164; padding: 25px 25px 15px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; }
-.home h1 { line-height: 1em; letter-spacing: -.05em; margin: 60px 0 0 0; }
-.home h2 { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1.5em; line-height: 1.25em; }
-.home aside h4 { color: #fff; padding: 0 0 10px; border-bottom: 1px solid #fff; }
-.home aside a { color: #fff; text-decoration: underline; }
-
-/* About
--------------------------------------------------------------------------------*/
-.about-us #bkgd { background: url('images/HEADER-PHOTOS.jpg') no-repeat scroll center top; }
-.about-us aside { margin-top: 135px; background: #809b13; padding: 25px 25px 15px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; }
-.about-us aside a:link { text-decoration: underline; }
-.about-us h1 { letter-spacing: -.05em; margin: 30px 0 0 0; }
-.about-us h1:first-letter { color: #809b13; font-size: 1.15em; }
-.about-us hr { margin: 25px 0; }
-
-/* Booklists
--------------------------------------------------------------------------------*/
-.christ-preparatory-academy-book-list #bkgd { background: url('images/HEADER-LIST.jpg') no-repeat scroll center top; }
-.brighton-academy-book-list #bkgd { background: url('images/HEADER-LIST.jpg') no-repeat scroll center top; }
-#schoolyard { margin-top: 150px; }
-.booklist #help-box { margin: 15px 50px 0 0; background: #1d3164; padding: 25px 25px 10px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; }
-.booklist aside h6 { color: #fff; }
-.booklist aside a:link { color: #fff; text-decoration: underline; }
-.booklist h1 { letter-spacing: -.05em; margin: 50px 0 0 0; }
-.booklist h2 { border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 15px; }
-a.button:hover span.symbol { text-decoration: none; }
-.booklist a.button { margin: 0 0 50px; }
-.booklist a.button:hover { background-color: #274bc1; }
-
-/* Bookstore
--------------------------------------------------------------------------------*/
-.library #bkgd { background: url('images/HEADER-BOOK.jpg') no-repeat scroll center top; }
-.library h1 { font-size: 8em; line-height: 1em; letter-spacing: -.05em; margin: 75px 0 0 20px; }
-.library h1:first-letter { color: #ED8505; font-size: 1.15em; }
-#conferences { background: #ED8505; padding: 25px 25px 15px; color: #fff; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; }
-#conferences h4 { color: #fff; }
-#conferences a:link { color: #fff; text-decoration: underline; }
-.seobreadcrumbs sup { display: none; }
-.seobreadcrumbs { margin: 0 100px 25px 0; }
-.price { font-size: 1.15em; color: #ED8505; }
-.block-grid li { border: 1px solid #ccc; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; padding: 10px 15px 20px; margin-bottom: 25px; }
-.block-grid li:nth-child(3n+4) { clear: both; }
-.single .block-grid li:nth-child(3n+4), .library .block-grid li:nth-child(3n+4) { clear: none; }
-.block-grid li h6 { margin: 10px 0 5px 0; }
-
-/* Bookstore Home
--------------------------------------------------------------------------------*/
-.single-bookstore #bkgd, .category #bkgd { background: url('images/HEADER-BOOK.jpg') no-repeat scroll center top; }
-.bookstore h2 { border-bottom: 1px solid #ccc; padding-bottom: 10px; margin: 0 0 15px 20px; }
-.bookstore aside h2 { font-family: "OpenSansBold", Arial, sans-serif; font-size: 1.25em; line-height: 1em; text-transform: uppercase; padding: 0 0 10px; border-bottom: 1px solid #fff; }
-.bookstore hr { margin: 25px 0; }
-.category #bookdetail h2 { font-family: "MatchbookMatchbook", Arial, sans-serif; font-weight: normal; text-transform: uppercase; font-size: 5em; line-height: 1em; letter-spacing: -.05em; }
-.category #bookdetail h2:first-letter { color: #ED8505; font-size: 1.15em; }
-#library ul { margin: 0 0  15px 10px; }
-#library li a:link { color: #999; }
-#library li a:hover { text-decoration: underline; color: #1d3164;  }
-#library li ul li a:link { font-family: "OpenSansRegular", Arial, sans-serif; }
-#library ul ul { margin-left: 10px; }
-#library ul { display: none; }
-#library .current-cat ul, #library .current-cat-parent ul { display: block; }
-#library .current-cat ul li { margin: 3px 0 0; }
-#library .current-cat a:link, #library .current-cat li a:link { font-family: "OpenSansBold", Arial, sans-serif; color: #1d3164; }
-#library .current-cat li ul a:link { font-family: "OpenSansRegular", Arial, sans-serif; }
-#library .current-cat-parent li ul a:link { font-family: "OpenSansRegular", Arial, sans-serif; }
-
-/* Order Response
--------------------------------------------------------------------------------*/
-.response h1 { margin-bottom: 0; }
-.response #bookdetail h3 { margin-bottom: 10px; }
-.response fieldset { width: 75%; margin: 0 0 25px 0; }
-
-/* Contact
--------------------------------------------------------------------------------*/
-.contact-us #bkgd { background: url('images/HEADER-LETTER.jpg') no-repeat scroll center top; }
-.contact-us aside { margin-top: 140px; }
-#addressbox { padding: 0 25px 30px 0; }
-.contact-us aside h4 { margin: 0 0 5px; }
-.contact-us aside a:link { color: #181818; text-decoration: underline; }
-.contact-us h1 { letter-spacing: -.05em; margin: 50px 0 0 0; line-height: .75em; }
-.contact-us h1:first-letter { color: #ffbc12; font-size: 1.15em; }
-#contactPhone1 { width: 11%; margin: 0 10px 0 0; }
-#contactPhone2 { width: 11%; margin: 0 10px 0 0; }
-#contactPhone3 { width: 20%; margin: 0 10px 0 0; }
-.contact-us button.button { background: #ffbc12; font-family: "OpenSansBold", Arial, sans-serif; color: #fff; }
-.contact-us button.button:hover { opacity: .75; color: #fff; }
-
-/* Sports
--------------------------------------------------------------------------------*/
-.sports h1 { font-size: 8em; line-height: 1em; letter-spacing: -.05em; margin: 25px 0 0; }
-.sports h1:first-letter { color: #ED8505; font-size: 1.15em; }
-.sports h2 { font-size: 2em; font-family: "OpenSansSemibold", Arial, sans-serif; }
-
-
-/* Sitemap
--------------------------------------------------------------------------------*/
-.site-map #bkgd { background: url('images/HEADER-MAP.jpg') no-repeat scroll center top; }
-.site-map h1 { line-height: .75em; }
-.site-map aside { margin-top: 135px; background: #1d3164; padding: 25px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; }
-.site-map aside h6 { color: #fff; }
-.site-map aside a:link { color: #fff; text-decoration: underline; }
-
-/* Search Results
--------------------------------------------------------------------------------*/
-.search #bkgd { background: url('images/HEADER-ROBOT.jpg') no-repeat scroll center top; }
-.search h1 { line-height: .9em; }
-.search h1 span { color: #1d3164; }
-.search h2 { font-size: 2em; }
-.search h3 { margin: 15px 0 5px; }
-.search p { margin: 0; }
-.search #wrapper .button { margin-bottom: 15px; }
-.search #publisher-list { -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; border: 1px solid #ccc; padding: 2em 2em 4em 2em; }
-
-/* Publishers Results
--------------------------------------------------------------------------------*/
-.publishers #bkgd { background: url('images/HEADER-ROBOT.jpg') no-repeat scroll center top; }
-.publishers h1 { line-height: .9em; }
-.publishers h1 span { color: #1d3164; }
-.publishers h2 { font-size: 1.5em; }
-.publishers aside { margin-top: 135px; background: #1d3164; padding: 25px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; }
-.publishers aside h6 { color: #fff; }
-.publishers aside a:link { color: #fff; text-decoration: underline; }
-.publishers p { margin: 0; }
-.publishers .price { font-size: 1em; color: #ED8505; }
-
-/* Bookstore Booklist
--------------------------------------------------------------------------------*/
-table { border: none; background: #f9f9f9; }
-table tbody tr:nth-child(2n) { background: transparent; }
-.productListing-rowheading th { background: #1d3164; color; #fff; padding: 5px; text-align: center; }
-.productListing-rowheading a { color: #fff; }
-.itemTitle { margin: 5px 0; }
-.productListing-data img { display: none; }
-#breadcrumb { margin: 0 0 25px 0; }
-#cartAdd input[type="text"] { width: 55px; }
-
-/* Cart
--------------------------------------------------------------------------------*/
-.bookbag #bkgd { background: url('images/HEADER-BOOKBAG.jpg') no-repeat scroll center top; }
-.bookbag h1:first-letter { color: #ED8505; font-size: 1.15em; }
-.quantity { float: left; line-height: 2em; }
-.notice { text-transform: none; font-family: "OpenSansRegular", Arial, sans-serif; color: #ED8505;  }
-
-/* Checkout
--------------------------------------------------------------------------------*/
-.checkout h1 { margin-top: 85px; }
-.checkout h1:first-letter { color: #ED8505; font-size: 1.15em; }
-.checkout td { border-top: 1px solid #ccc; }
-td.checkout_quantity, th.checkout_quantity { text-align: center; }
-.calculate td { border-top: none; padding: 0; }
-#resource { width: 50%; }
-#condition { width: 20%; }
-#listprice { width: 15%; }
-#price { width: 15%; }
-#tax-disclaimer { float: right; margin: 0 5px 15px; }
-#shippingPhone1 { width: 11%; margin: 0 10px 0 0; }
-#shippingPhone2 { width: 11%; margin: 0 10px 0 0; }
-#shippingPhone3 { width: 20%; margin: 0 10px 0 0; }
-#AVSZIP { width: 75%; }
-#TRANSFIRST input[type="submit"] { margin: 25px 0 0; }
-
-.order h1 { line-height: 1em; letter-spacing: -.05em; margin: 75px 0 0 0; }
-.order h1:first-letter { color: #ED8505; font-size: 1.15em; }
-.order fieldset { padding: 10px 10px 0px 25px; margin-bottom: 10px; }
-.order legend { padding: 0 10px; }
-.order aside { margin-top: 135px; background: #ED8505; padding: 25px 25px 15px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; }
-.order aside h4 { color: #fff; padding: 0 0 10px; border-bottom: 1px solid #fff; }
-.order aside a { color: #fff; text-decoration: underline; }
-
-/* Classes
--------------------------------------------------------------------------------*/
-.classes #bkgd, .single-classes #bkgd { background: url('images/HEADER-SPACEMAN.jpg') no-repeat scroll center top; }
-table.calendar { border-left: 1px solid #999; width: 100%; margin-bottom: 2em; }
-.classes h1 { margin-bottom: 0; }
-.classes h1:first-letter { color: #1d3164; font-size: 1.15em; }
-tr.calendar-row	{ }
-td.calendar-day	{ font-size: 11px; position: relative; } 
-td.calendar-day	p { margin-bottom: 5px; } 
-html div.calendar-day { }
-td.calendar-day-np { background: #eee; } 
-html div.calendar-day-np { }
-td.calendar-day-head { background: #1d3164; color: #fff; text-align: center; padding: 5px; border-bottom: 1px solid #999; border-top: 1px solid #999; border-right: 1px solid #999; }
-div.day-number { font-family: "OpenSansBold", Arial, sans-serif; padding: 5px; color: #1d3164; float: right; margin: -5px -5px 0 0; text-align: center; }
-td.calendar-day, td.calendar-day-np { min-width: 14.28%; min-height: 14.28%; height: 8em; padding: 5px; border-bottom: 1px solid #999; border-right: 1px solid #999; }
-td.calendar-day:hover { background: #eceff5; border-bottom: 4px solid #1d3164; border-right: 2px solid #999; }
-.month h2 { text-align: center; font-size: 1.5em; }
-.cprevious, .cnext, .disabled { font-family: "WebSymbolsRegular"; margin: 0 1em; cursor: pointer; color: #1d3164; }  
-.disabled { color: #ccc; cursor: default;}
-.cprevious:hover, .cnext:hover { text-decoration: none; color: #ED8505; }
-.disabled:hover { text-decoration: none; color: #ccc; }
-#next, #next2 { display: none; }
-
-#classdetail { margin-top: 7em; }
-#classtimes { background: #f2f2f2; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; padding: 20px; }
-#classtimes p { line-height: 2em; }
-#cpage { text-align: center; background: #f2f2f2; display: block; padding: 0 0 1.5em; margin: .5em auto; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; width: 75%; height: 75%; border: 1px solid #ccc; }
-#cpage h6 { background: #1d3164; color: #fff; display: block; padding: .75em 0 .5em; margin: 0 0 .5em; border-bottom: 3px double #999; }
-#cpage p { font-family: "OpenSansLight", Arial, sans-serif; font-size: 6em; color: #444; line-height: 1em; margin: 0; }
-.classes h3 { margin: .5em 0 .25em; }
-.classes h3 span { font-size: .75em; }
-.single-classes .fb-like { margin-bottom: 1em; }
-.class-description { width: 480px; }
-.class-description p { margin: 0 0 1em; }
-.single-classes .price { font-size: 2.5em; margin-top: .6em; }
-.single-classes .price small { color: #333; font-size: .45em; }
-.class-description .button { margin: 0 0 1.5em; }
-
-.classes aside { background: #1d3164; padding: 25px 25px 10px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; margin-top: -3em; }
-.classes aside h4 { color: #fff; margin-bottom: .5em; }
-.classes aside a { color: #fff; text-decoration: underline; }
-.upage { text-align: center; background: #f2f2f2; display: block; padding: 0 0 .5em; margin: .1em 0; -webkit-border-radius: 3px 3px 3px 3px; -moz-border-radius: 3px 3px 3px 3px; border-radius: 3px 3px 3px 3px; width: 85%; border: 1px solid #ccc; }
-.upage p { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1.25em; color: #444; line-height: 1em; margin: 0; padding: .25em 0 0; border-top: 7px solid #1d3164;}
-
-#instructor { margin-bottom: .25em; }
-.single-classes .button { margin: 1em 0 0; }
-.single-classes aside { margin-top: 150px; padding: 1em 0 0 2em; }
-#classForm { display: none; }
-.single-classes #contactPhone1 { width: 21%; margin: 0 10px 0 0; }
-.single-classes #contactPhone2 { width: 21%; margin: 0 10px 0 0; }
-.single-classes #contactPhone3 { width: 30%; margin: 0 10px 0 0; }
-.single-classes label + textarea, label { margin-top: 0; }
-
-/* OFFLINE
--------------------------------------------------------------------------------*/
-.offline h1, h1#offline { line-height: .75em; margin-bottom: 5px; }
-.offline aside { margin-top: 0; background: #1d3164; padding: 25px 25px 15px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; }
-.offline aside h4 { color: #fff; padding: 0 0 10px; border-bottom: 1px solid #fff; }
-.offline aside a { color: #fff; text-decoration: underline; }
-
-
-/* MOBILE
--------------------------------------------------------------------------------*/
-@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
-
-body { padding-bottom: 50%; }
+/*
+
+Theme Name:         WordPress Foundation
+
+Theme URI:          http://fourthcup.org/PREVIEW/
+
+Description:        Custom WordPress framework/theme for Xxxx based on the ZURB Foundation framework.
+
+Version:            2.0
+
+Author:             Jason Sprenger
+
+Author URI:         http://fourthcup.org/
+
+*/
+
+
+
+/* Webfonts
+
+-------------------------------------------------------------------------------*/
+
+@font-face{ 
+
+	font-family: 'WebSymbolsRegular';
+
+	src: url('webfonts/websymbols-regular-webfont.eot');
+
+	src: url('webfonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), url('webfonts/websymbols-regular-webfont.woff') format('woff'), url('webfonts/websymbols-regular-webfont.ttf') format('truetype'), url('webfonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+
+	font-weight: normal;
+
+	font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: 'MatchbookMatchbook';
+
+    src: url('webfonts/Matchbook-webfont.eot');
+
+    src: url('webfonts/Matchbook-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/Matchbook-webfont.woff') format('woff'),
+
+         url('webfonts/Matchbook-webfont.ttf') format('truetype'),
+
+         url('webfonts/Matchbook-webfont.svg#MatchbookMatchbook') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: 'OpenSansLight';
+
+    src: url('webfonts/OpenSans-Light-webfont.eot');
+
+    src: url('webfonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/OpenSans-Light-webfont.woff') format('woff'),
+
+         url('webfonts/OpenSans-Light-webfont.ttf') format('truetype'),
+
+         url('webfonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: 'OpenSansLightItalic';
+
+    src: url('webfonts/OpenSans-LightItalic-webfont.eot');
+
+    src: url('webfonts/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/OpenSans-LightItalic-webfont.woff') format('woff'),
+
+         url('webfonts/OpenSans-LightItalic-webfont.ttf') format('truetype'),
+
+         url('webfonts/OpenSans-LightItalic-webfont.svg#OpenSansLightItalic') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: 'OpenSansRegular';
+
+    src: url('webfonts/OpenSans-Regular-webfont.eot');
+
+    src: url('webfonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/OpenSans-Regular-webfont.woff') format('woff'),
+
+         url('webfonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+
+         url('webfonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: 'OpenSansItalic';
+
+    src: url('webfonts/OpenSans-Italic-webfont.eot');
+
+    src: url('webfonts/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/OpenSans-Italic-webfont.woff') format('woff'),
+
+         url('webfonts/OpenSans-Italic-webfont.ttf') format('truetype'),
+
+         url('webfonts/OpenSans-Italic-webfont.svg#OpenSansItalic') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: 'OpenSansSemibold';
+
+    src: url('webfonts/OpenSans-Semibold-webfont.eot');
+
+    src: url('webfonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/OpenSans-Semibold-webfont.woff') format('woff'),
+
+         url('webfonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+
+         url('webfonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: 'OpenSansSemiboldItalic';
+
+    src: url('webfonts/OpenSans-SemiboldItalic-webfont.eot');
+
+    src: url('webfonts/OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/OpenSans-SemiboldItalic-webfont.woff') format('woff'),
+
+         url('webfonts/OpenSans-SemiboldItalic-webfont.ttf') format('truetype'),
+
+         url('webfonts/OpenSans-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: 'OpenSansBold';
+
+    src: url('webfonts/OpenSans-Bold-webfont.eot');
+
+    src: url('webfonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/OpenSans-Bold-webfont.woff') format('woff'),
+
+         url('webfonts/OpenSans-Bold-webfont.ttf') format('truetype'),
+
+         url('webfonts/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: 'OpenSansBoldItalic';
+
+    src: url('webfonts/OpenSans-BoldItalic-webfont.eot');
+
+    src: url('webfonts/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/OpenSans-BoldItalic-webfont.woff') format('woff'),
+
+         url('webfonts/OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+
+         url('webfonts/OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: 'OpenSansExtrabold';
+
+    src: url('webfonts/OpenSans-ExtraBold-webfont.eot');
+
+    src: url('webfonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/OpenSans-ExtraBold-webfont.woff') format('woff'),
+
+         url('webfonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+
+         url('webfonts/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: 'OpenSansExtraboldItalic';
+
+    src: url('webfonts/OpenSans-ExtraBoldItalic-webfont.eot');
+
+    src: url('webfonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+
+         url('webfonts/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
+
+         url('webfonts/OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraboldItalic') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+
+
+
+
+/* Colors
+
+-------------------------------------------------------------------------------
+
+Teal  #1D393C
+
+Moss  #77968E
+
+Sun  #FFD978
+
+Orange  #ED8505
+
+Dull Black  #181818
+
+Navy Blue #1d3164
+
+
+
+*/
+
+
+
+/* Structure
+
+-------------------------------------------------------------------------------*/
+
+body { height: auto; background-color: #f9f9f9; }
+
+header { position: relative; overflow-x: hidden; }
+
+header nav { background: #3b3c34; height: 3em; margin-top: 65px; }
+
+article { position: relative; padding-bottom: 0; }
+
+aside {  }
+
+footer { display: block; position: relative; background: #e4e4e4; padding: 25px 0 0; margin-top: 50px; z-index: 25; }
+
+#bkgd { background: url('images/HEADER-GENERIC.jpg') no-repeat scroll center top; position: absolute; width: 100%; height: 100%; z-index: -1; }
+
+
+
+/* Navigation
+
+-------------------------------------------------------------------------------*/
+
+#menu-main { float:left; margin: 0; padding: 0; height: 3em; left: 40%; position: relative; text-align: center; color: #fff; }
+
+
+
+#menu-main li { display: block; float: left; margin: 0; padding: 0; position: relative; /*--Important--*/ right: 50%; text-transform: uppercase; line-height: 3em; color: #fff; height: 3em; }
+
+
+
+#menu-main li a:link, #menu-main li a:visited { height: 3em; line-height: 3em; display: block; margin: 0; padding: 0 25px; text-decoration: none; font-size: 1em; color: #fff; }
+
+
+
+#menu-main li.m1:hover { background: #1d3164; }
+
+#menu-main li.m2:hover { background: #809b13; }
+
+#menu-main li.m3:hover { background: #ED8505; }
+
+#menu-main li.m4:hover { background: #1d3164; }
+
+#menu-main li.m5:hover { background: #ffbc12; }
+
+#menu-main li.m6:hover { background: #6f1d4e; }
+
+
+
+#menu-main ul { list-style: none; position: absolute; left: -9999px; }
+
+#menu-main ul li { border-top: 2px solid #fff; float: none; text-align: left; color: #fff; }
+
+#menu-main ul a:link { white-space: nowrap; color: #fff; }
+
+#menu-main li:hover ul { left: 72%; }
+
+#menu-main li:hover ul a:link { color: #fff; background: #ff9f2c; text-decoration: none; padding: 0 50px 0 25px; margin: 0; }
+
+#menu-main li:hover ul li a:hover { color: #fff; background: #ffd563; }
+
+
+
+footer .menu li a:link, footer .menu li a:visited { color: #444; }
+
+footer .menu li a:hover { color: #1d3164; }
+
+
+
+/* Typography
+
+-------------------------------------------------------------------------------*/
+
+body { font-family: "OpenSansRegular", Arial, sans-serif; }
+
+h1 { font-family: "MatchbookMatchbook", Arial, sans-serif; font-weight: normal; text-transform: uppercase; }
+
+h2, h3, h4, h5, h6 { font-family: "OpenSansLight", Arial, sans-serif; font-weight: normal; }
+
+h1 { font-size: 5.5em; letter-spacing: -.01em; margin: 50px 0 15px 0; }
+
+h1:first-letter{ color: #1d3164; font-size: 1.15em; }
+
+h2 { line-height: 1em; }
+
+h3 { font-size: 1.5em; line-height: 1.1em; padding: 0 0 10px; margin: 0 0 25px; border-bottom: 1px solid #999; }
+
+h4 { font-family: "OpenSansBold", Arial, sans-serif; font-size: 1.25em; line-height: 1em; text-transform: uppercase; margin: 0 0 15px 0; }
+
+h5 { font-family: "OpenSansSemibold", Arial, sans-serif; color: #ED8505; margin: 0 0 15px; }
+
+h6 { font-family: "OpenSansBold", Arial, sans-serif; font-size: 1em; line-height: 1em; text-transform: uppercase; margin: 0 0 5px 0; }
+
+p { line-height: 1.5em; }
+
+small { font-size: .85em; }
+
+
+
+h2 sup { font-size: .5em; }
+
+sup { vertical-align: text-top; }
+
+aside p { line-height: 1.5em; }
+
+footer p { font-size: .85em; line-height: 1.5em; }
+
+#copyright { font-size: .75em; margin: 0 0 35px; }
+
+
+
+fieldset { -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; border: 1px solid #999; padding: 25px; }
+
+legend { font-family: "OpenSansBold", Arial, sans-serif; font-size: 1.25em; line-height: 1em; text-transform: uppercase; padding: 0 25px; }
+
+table thead tr th { font-family: "OpenSansBold", Arial, sans-serif; color: #fff; font-size: 1em; font-weight: normal; }
+
+th { font-family: "OpenSansBold", Arial, sans-serif; color: #fff; text-align: left; background: #3B3C34; padding: 5px 0; }
+
+th:first-child { padding-left: 15px; }
+
+table tbody tr td { text-align: left; padding: 5px 0; }
+
+td:first-child { font-family: "OpenSansBold", Arial, sans-serif; text-transform: uppercase; padding-left: 15px; } 
+
+
+
+/* Forms
+
+-------------------------------------------------------------------------------*/
+
+#searchform { position: relative; z-index: 25; }
+
+#publishersearch { margin: 0; padding: 0; }
+
+form.add, form.remove, form#empty { margin: 0; padding: 0; }
+
+#s { padding: 8px 15px; width: 75%; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; border: 1px solid #999; }
+
+#p { font-size: .8em; margin: 0; padding: 0; text-decoration: underline; }
+
+.booklist #s { font-size: .9em; }
+
+#searchsubmit { font-family: "WebSymbolsRegular"; font-size: 1.25em; line-height: 2em; color: #ccc; background: none; padding: .5em 0 0; width: 2.5em; height: 2em; margin: 0; }
+
+#searchsubmit:hover { opacity: .5; }
+
+
+
+form label { margin: 15px 0 5px; }
+
+label[for=commentsText] { padding-bottom: 10px; }
+
+
+
+input[type="text"] { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1em; color: #666; padding: 8px 15px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; border: 1px solid #999; width: 75%; }
+
+
+
+input[type="email"] { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1em; color: #666; padding: 8px 15px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; border: 1px solid #999; width: 300px; }
+
+
+
+input[type="password"] { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1em; color: #666; padding: 8px 15px; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; border: 1px solid #999; width: 300px; }
+
+
+
+form select { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1em; outline: none; focus: none; width: 75%; padding: 5px; margin-top: 5px; }
+
+
+
+form textarea { font-family: "OpenSansRegular", Arial, sans-serif; color: #666; padding: 15px 5px 5px 15px; -webkit-border-radius: 5px 5px 0 5px; -moz-border-radius: 5px 5px 0 5px; border-radius: 5px 5px 0 5px; border: 1px solid #999; width: 500px; }
+
+
+
+input.credit { width: 15%; float: left; margin-right: 10px; }
+
+
+
+/* Buttons
+
+-------------------------------------------------------------------------------*/
+
+a:link, a:visited { color: #1d3164; }
+
+a:hover { text-decoration: underline; }
+
+
+
+a.button, button, input[type="submit"], input[type="reset"], input[type="button"], .button { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1.15em; line-height: 2.5em; color: #181818; font-weight: normal; text-transform: uppercase; text-decoration: none; padding: 0 25px; height: 2.5em; margin: 15px 0 0 5px; background: #e2e2e2; background: rgba(0, 0, 0, 0.1); border: none; -webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px; }
+
+
+
+a.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:hover { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1.15em; line-height: 2.5em; color: #fff; background-color: #ffbc12; cursor: pointer; }
+
+
+
+#bookdetail a.button, bookdetail button, bookdetail input[type="submit"], bookdetail input[type="reset"], bookdetail input[type="button"] { width: 100%; margin: 0; }
+
+
+
+form.add input[type="submit"] { background-color: transparent; padding: 0 5px; margin: 0 5px; height: 1.75em; float: left; }
+
+form.remove input[type="submit"] { background-color: transparent; padding: 0 5px; margin: 0 5px; height: 1.5em; float: left; }
+
+
+
+form#empty input[type="submit"], form#checkout input[type="submit"] { background-color: transparent; padding: 0; margin: 0; text-align: left; }
+
+form#empty input[type="submit"]:hover, form#checkout input[type="submit"]:hover { text-decoration: underline; color: #181818; }
+
+
+
+/* Slide
+
+-------------------------------------------------------------------------------*/
+
+#FEATURED { background: url('images/WN-BKGD.jpg') no-repeat left top; background-size: 100%; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; padding: 25px 0; }
+
+#NEW-BOOKS h2 { font-family: "OpenSansBold", Arial, sans-serif; font-size: 1.25em; line-height: 1em; text-transform: uppercase; border: none; margin: 25px 0 5px 25px; }
+
+.WN-SLIDE { padding: 0 25px; }
+
+.WN-SLIDE h3 { font-family: "OpenSansLight", Arial, sans-serif; font-size: 2em; line-height: 1.25em; border: none; margin: 10px 0 5px; padding: 0; }
+
+.WN-SLIDE .price { font-size: 1.5em; color: #ED8505; margin: 0 0 5px; }
+
+.WN-SLIDE img { float: left; margin-right: 25px; }
+
+.WN-SLIDE a { color: #181818; margin: 15px 0; }
+
+.WN-SLIDE a.snapshot-link { display: none; }
+
+.WN-SLIDE a.button:hover { background: #ED8505; }
+
+#NEW-BOOKS ul.block-grid li { min-height: 175px; margin-bottom: 15px; }
+
+.WN-SLIDE sup { vertical-align: text-top; font-size: .6em; }
+
+
+
+/* Misc
+
+-------------------------------------------------------------------------------*/
+
+.hidden { display: none; }
+
+.backwards { direction: rtl; unicode-bidi:bidi-override; }
+
+#logo { position: relative; float: left; top: -55px; left: 50px; }
+
+.top-off { padding-top: 125px; }
+
+.indent { padding-left: 25px; }
+
+.left-divider { border-left: 1px solid #ccc; padding-left: 25px; } 
+
+.category .top-off { padding-top: 100px; }
+
+.box { border: 1px solid #ccc; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; padding: 15px 25px; }
+
+.symbol { font-family: "WebSymbolsRegular"; font-size: 1.25em; font-weight: normal; padding: 0 5px; }
+
+hr { margin: 25px 0; }
+
+.socialmedia { font-family: "WebSymbolsRegular"; font-size: 2em; font-weight: normal; padding: 0 5px; float: left; }
+
+#addressline { font-family: "OpenSansRegular", Arial, sans-serif; font-size: .9em; line-height: 1.5em; text-transform: uppercase; margin: 0 0 15px 0; padding-top: 10px; border-top: 1px solid #999; }
+
+#copyright a:link { padding-right: 15px; }
+
+#map { width: 960px; margin-left: -480px; }
+
+
+
+
+
+/* Home
+
+-------------------------------------------------------------------------------*/
+
+.home #bkgd { background: url('images/HEADER-ROCKET.jpg') no-repeat scroll center top; }
+
+.home aside { margin-top: 135px; background: #1d3164; padding: 25px 25px 15px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; }
+
+.home h1 { line-height: 1em; letter-spacing: -.05em; margin: 60px 0 0 0; }
+
+.home h2 { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1.5em; line-height: 1.25em; }
+
+.home aside h4 { color: #fff; padding: 0 0 10px; border-bottom: 1px solid #fff; }
+
+.home aside a { color: #fff; text-decoration: underline; }
+
+
+
+/* About
+
+-------------------------------------------------------------------------------*/
+
+.about-us #bkgd { background: url('images/HEADER-PHOTOS.jpg') no-repeat scroll center top; }
+
+.about-us aside { margin-top: 135px; background: #809b13; padding: 25px 25px 15px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; }
+
+.about-us aside a:link { text-decoration: underline; }
+
+.about-us h1 { letter-spacing: -.05em; margin: 30px 0 0 0; }
+
+.about-us h1:first-letter { color: #809b13; font-size: 1.15em; }
+
+.about-us hr { margin: 25px 0; }
+
+
+
+/* Booklists
+
+-------------------------------------------------------------------------------*/
+
+.christ-preparatory-academy-book-list #bkgd { background: url('images/HEADER-LIST.jpg') no-repeat scroll center top; }
+
+.brighton-academy-book-list #bkgd { background: url('images/HEADER-LIST.jpg') no-repeat scroll center top; }
+
+#schoolyard { margin-top: 150px; }
+
+.booklist #help-box { margin: 15px 50px 0 0; background: #1d3164; padding: 25px 25px 10px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; }
+
+.booklist aside h6 { color: #fff; }
+
+.booklist aside a:link { color: #fff; text-decoration: underline; }
+
+.booklist h1 { letter-spacing: -.05em; margin: 50px 0 0 0; }
+
+.booklist h2 { border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 15px; }
+
+a.button:hover span.symbol { text-decoration: none; }
+
+.booklist a.button { margin: 0 0 50px; }
+
+.booklist a.button:hover { background-color: #274bc1; }
+
+
+
+/* Bookstore
+
+-------------------------------------------------------------------------------*/
+
+.library #bkgd { background: url('images/HEADER-BOOK.jpg') no-repeat scroll center top; }
+
+.library h1 { font-size: 8em; line-height: 1em; letter-spacing: -.05em; margin: 75px 0 0 20px; }
+
+.library h1:first-letter { color: #ED8505; font-size: 1.15em; }
+
+#conferences { background: #ED8505; padding: 25px 25px 15px; color: #fff; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; }
+
+#conferences h4 { color: #fff; }
+
+#conferences a:link { color: #fff; text-decoration: underline; }
+
+.seobreadcrumbs sup { display: none; }
+
+.seobreadcrumbs { margin: 0 100px 25px 0; }
+
+.price { font-size: 1.15em; color: #ED8505; }
+
+.block-grid li { border: 1px solid #ccc; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; padding: 10px 15px 20px; margin-bottom: 25px; }
+
+.block-grid li:nth-child(3n+4) { clear: both; }
+
+.single .block-grid li:nth-child(3n+4), .library .block-grid li:nth-child(3n+4) { clear: none; }
+
+.block-grid li h6 { margin: 10px 0 5px 0; }
+
+
+
+/* Bookstore Home
+
+-------------------------------------------------------------------------------*/
+
+.single-bookstore #bkgd, .category #bkgd { background: url('images/HEADER-BOOK.jpg') no-repeat scroll center top; }
+
+.bookstore h2 { border-bottom: 1px solid #ccc; padding-bottom: 10px; margin: 0 0 15px 20px; }
+
+.bookstore aside h2 { font-family: "OpenSansBold", Arial, sans-serif; font-size: 1.25em; line-height: 1em; text-transform: uppercase; padding: 0 0 10px; border-bottom: 1px solid #fff; }
+
+.bookstore hr { margin: 25px 0; }
+
+.category #bookdetail h2 { font-family: "MatchbookMatchbook", Arial, sans-serif; font-weight: normal; text-transform: uppercase; font-size: 5em; line-height: 1em; letter-spacing: -.05em; }
+
+.category #bookdetail h2:first-letter { color: #ED8505; font-size: 1.15em; }
+
+#library ul { margin: 0 0  15px 10px; }
+
+#library li a:link { color: #999; }
+
+#library li a:hover { text-decoration: underline; color: #1d3164;  }
+
+#library li ul li a:link { font-family: "OpenSansRegular", Arial, sans-serif; }
+
+#library ul ul { margin-left: 10px; }
+
+#library ul { display: none; }
+
+#library .current-cat ul, #library .current-cat-parent ul { display: block; }
+
+#library .current-cat ul li { margin: 3px 0 0; }
+
+#library .current-cat a:link, #library .current-cat li a:link { font-family: "OpenSansBold", Arial, sans-serif; color: #1d3164; }
+
+#library .current-cat li ul a:link { font-family: "OpenSansRegular", Arial, sans-serif; }
+
+#library .current-cat-parent li ul a:link { font-family: "OpenSansRegular", Arial, sans-serif; }
+
+
+
+/* Order Response
+
+-------------------------------------------------------------------------------*/
+
+.response h1 { margin-bottom: 0; }
+
+.response #bookdetail h3 { margin-bottom: 10px; }
+
+.response fieldset { width: 75%; margin: 0 0 25px 0; }
+
+
+
+/* Contact
+
+-------------------------------------------------------------------------------*/
+
+.contact-us #bkgd { background: url('images/HEADER-LETTER.jpg') no-repeat scroll center top; }
+
+.contact-us aside { margin-top: 140px; }
+
+#addressbox { padding: 0 25px 30px 0; }
+
+.contact-us aside h4 { margin: 0 0 5px; }
+
+.contact-us aside a:link { color: #181818; text-decoration: underline; }
+
+.contact-us h1 { letter-spacing: -.05em; margin: 50px 0 0 0; line-height: .75em; }
+
+.contact-us h1:first-letter { color: #ffbc12; font-size: 1.15em; }
+
+#contactPhone1 { width: 11%; margin: 0 10px 0 0; }
+
+#contactPhone2 { width: 11%; margin: 0 10px 0 0; }
+
+#contactPhone3 { width: 20%; margin: 0 10px 0 0; }
+
+.contact-us button.button { background: #ffbc12; font-family: "OpenSansBold", Arial, sans-serif; color: #fff; }
+
+.contact-us button.button:hover { opacity: .75; color: #fff; }
+
+
+
+/* Sports
+
+-------------------------------------------------------------------------------*/
+
+.sports h1 { font-size: 8em; line-height: 1em; letter-spacing: -.05em; margin: 25px 0 0; }
+
+.sports h1:first-letter { color: #ED8505; font-size: 1.15em; }
+
+.sports h2 { font-size: 2em; font-family: "OpenSansSemibold", Arial, sans-serif; }
+
+
+
+
+
+/* Sitemap
+
+-------------------------------------------------------------------------------*/
+
+.site-map #bkgd { background: url('images/HEADER-MAP.jpg') no-repeat scroll center top; }
+
+.site-map h1 { line-height: .75em; }
+
+.site-map aside { margin-top: 135px; background: #1d3164; padding: 25px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; }
+
+.site-map aside h6 { color: #fff; }
+
+.site-map aside a:link { color: #fff; text-decoration: underline; }
+
+
+
+/* Search Results
+
+-------------------------------------------------------------------------------*/
+
+.search #bkgd { background: url('images/HEADER-ROBOT.jpg') no-repeat scroll center top; }
+
+.search h1 { line-height: .9em; }
+
+.search h1 span { color: #1d3164; }
+
+.search h2 { font-size: 2em; }
+
+.search h3 { margin: 15px 0 5px; }
+
+.search p { margin: 0; }
+
+.search #wrapper .button { margin-bottom: 15px; }
+
+.search #publisher-list { -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; border: 1px solid #ccc; padding: 2em 2em 4em 2em; }
+
+
+
+/* Publishers Results
+
+-------------------------------------------------------------------------------*/
+
+.publishers #bkgd { background: url('images/HEADER-ROBOT.jpg') no-repeat scroll center top; }
+
+.publishers h1 { line-height: .9em; }
+
+.publishers h1 span { color: #1d3164; }
+
+.publishers h2 { font-size: 1.5em; }
+
+.publishers aside { margin-top: 135px; background: #1d3164; padding: 25px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; }
+
+.publishers aside h6 { color: #fff; }
+
+.publishers aside a:link { color: #fff; text-decoration: underline; }
+
+.publishers p { margin: 0; }
+
+.publishers .price { font-size: 1em; color: #ED8505; }
+
+
+
+/* Bookstore Booklist
+
+-------------------------------------------------------------------------------*/
+
+table { border: none; background: #f9f9f9; }
+
+table tbody tr:nth-child(2n) { background: transparent; }
+
+.productListing-rowheading th { background: #1d3164; color; #fff; padding: 5px; text-align: center; }
+
+.productListing-rowheading a { color: #fff; }
+
+.itemTitle { margin: 5px 0; }
+
+.productListing-data img { display: none; }
+
+#breadcrumb { margin: 0 0 25px 0; }
+
+#cartAdd input[type="text"] { width: 55px; }
+
+
+
+/* Cart
+
+-------------------------------------------------------------------------------*/
+
+.bookbag #bkgd { background: url('images/HEADER-BOOKBAG.jpg') no-repeat scroll center top; }
+
+.bookbag h1:first-letter { color: #ED8505; font-size: 1.15em; }
+
+.quantity { float: left; line-height: 2em; }
+
+.notice { text-transform: none; font-family: "OpenSansRegular", Arial, sans-serif; color: #ED8505;  }
+
+
+
+/* Checkout
+
+-------------------------------------------------------------------------------*/
+
+.checkout h1 { margin-top: 85px; }
+
+.checkout h1:first-letter { color: #ED8505; font-size: 1.15em; }
+
+.checkout td { border-top: 1px solid #ccc; }
+
+td.checkout_quantity, th.checkout_quantity { text-align: center; }
+
+.calculate td { border-top: none; padding: 0; }
+
+#resource { width: 50%; }
+
+#condition { width: 20%; }
+
+#listprice { width: 15%; }
+
+#price { width: 15%; }
+
+#tax-disclaimer { float: right; margin: 0 5px 15px; }
+
+#shippingPhone1 { width: 11%; margin: 0 10px 0 0; }
+
+#shippingPhone2 { width: 11%; margin: 0 10px 0 0; }
+
+#shippingPhone3 { width: 20%; margin: 0 10px 0 0; }
+
+#AVSZIP { width: 75%; }
+
+#TRANSFIRST input[type="submit"] { margin: 25px 0 0; }
+
+
+
+.order h1 { line-height: 1em; letter-spacing: -.05em; margin: 75px 0 0 0; }
+
+.order h1:first-letter { color: #ED8505; font-size: 1.15em; }
+
+.order fieldset { padding: 10px 10px 0px 25px; margin-bottom: 10px; }
+
+.order legend { padding: 0 10px; }
+
+.order aside { margin-top: 135px; background: #ED8505; padding: 25px 25px 15px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; }
+
+.order aside h4 { color: #fff; padding: 0 0 10px; border-bottom: 1px solid #fff; }
+
+.order aside a { color: #fff; text-decoration: underline; }
+
+
+
+/* Classes
+
+-------------------------------------------------------------------------------*/
+
+.classes #bkgd, .single-classes #bkgd { background: url('images/HEADER-SPACEMAN.jpg') no-repeat scroll center top; }
+
+table.calendar { border-left: 1px solid #999; width: 100%; margin-bottom: 2em; }
+
+.classes h1 { margin-bottom: 0; }
+
+.classes h1:first-letter { color: #1d3164; font-size: 1.15em; }
+
+tr.calendar-row	{ }
+
+td.calendar-day	{ font-size: 11px; position: relative; } 
+
+td.calendar-day	p { margin-bottom: 5px; } 
+
+html div.calendar-day { }
+
+td.calendar-day-np { background: #eee; } 
+
+html div.calendar-day-np { }
+
+td.calendar-day-head { background: #1d3164; color: #fff; text-align: center; padding: 5px; border-bottom: 1px solid #999; border-top: 1px solid #999; border-right: 1px solid #999; }
+
+div.day-number { font-family: "OpenSansBold", Arial, sans-serif; padding: 5px; color: #1d3164; float: right; margin: -5px -5px 0 0; text-align: center; }
+
+td.calendar-day, td.calendar-day-np { min-width: 14.28%; min-height: 14.28%; height: 8em; padding: 5px; border-bottom: 1px solid #999; border-right: 1px solid #999; }
+
+td.calendar-day:hover { background: #eceff5; border-bottom: 4px solid #1d3164; border-right: 2px solid #999; }
+
+.month h2 { text-align: center; font-size: 1.5em; }
+
+.cprevious, .cnext, .disabled { font-family: "WebSymbolsRegular"; margin: 0 1em; cursor: pointer; color: #1d3164; }  
+
+.disabled { color: #ccc; cursor: default;}
+
+.cprevious:hover, .cnext:hover { text-decoration: none; color: #ED8505; }
+
+.disabled:hover { text-decoration: none; color: #ccc; }
+
+#next, #next2 { display: none; }
+
+
+
+#classdetail { margin-top: 7em; }
+
+#classtimes { background: #f2f2f2; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; padding: 20px; }
+
+#classtimes p { line-height: 2em; }
+
+#cpage { text-align: center; background: #f2f2f2; display: block; padding: 0 0 1.5em; margin: .5em auto; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; width: 75%; height: 75%; border: 1px solid #ccc; }
+
+#cpage h6 { background: #1d3164; color: #fff; display: block; padding: .75em 0 .5em; margin: 0 0 .5em; border-bottom: 3px double #999; }
+
+#cpage p { font-family: "OpenSansLight", Arial, sans-serif; font-size: 6em; color: #444; line-height: 1em; margin: 0; }
+
+.classes h3 { margin: .5em 0 .25em; }
+
+.classes h3 span { font-size: .75em; }
+
+.single-classes .fb-like { margin-bottom: 1em; }
+
+.class-description { width: 480px; }
+
+.class-description p { margin: 0 0 1em; }
+
+.single-classes .price { font-size: 2.5em; margin-top: .6em; }
+
+.single-classes .price small { color: #333; font-size: .45em; }
+
+.class-description .button { margin: 0 0 1.5em; }
+
+
+
+.classes aside { background: #1d3164; padding: 25px 25px 10px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; margin-top: -3em; }
+
+.classes aside h4 { color: #fff; margin-bottom: .5em; }
+
+.classes aside a { color: #fff; text-decoration: underline; }
+
+.upage { text-align: center; background: #f2f2f2; display: block; padding: 0 0 .5em; margin: .1em 0; -webkit-border-radius: 3px 3px 3px 3px; -moz-border-radius: 3px 3px 3px 3px; border-radius: 3px 3px 3px 3px; width: 85%; border: 1px solid #ccc; }
+
+.upage p { font-family: "OpenSansRegular", Arial, sans-serif; font-size: 1.25em; color: #444; line-height: 1em; margin: 0; padding: .25em 0 0; border-top: 7px solid #1d3164;}
+
+
+
+#instructor { margin-bottom: .25em; }
+
+.single-classes .button { margin: 1em 0 0; }
+
+.single-classes aside { margin-top: 150px; padding: 1em 0 0 2em; }
+
+#classForm { display: none; }
+
+.single-classes #contactPhone1 { width: 21%; margin: 0 10px 0 0; }
+
+.single-classes #contactPhone2 { width: 21%; margin: 0 10px 0 0; }
+
+.single-classes #contactPhone3 { width: 30%; margin: 0 10px 0 0; }
+
+.single-classes label + textarea, label { margin-top: 0; }
+
+
+
+/* OFFLINE
+
+-------------------------------------------------------------------------------*/
+
+.offline h1, h1#offline { line-height: .75em; margin-bottom: 5px; }
+
+.offline aside { margin-top: 0; background: #1d3164; padding: 25px 25px 15px; -webkit-border-radius: 7px 7px 7px 7px; -moz-border-radius: 7px 7px 7px 7px; border-radius: 7px 7px 7px 7px; color: #fff; }
+
+.offline aside h4 { color: #fff; padding: 0 0 10px; border-bottom: 1px solid #fff; }
+
+.offline aside a { color: #fff; text-decoration: underline; }
+
+
+
+
+
+/* MOBILE
+
+-------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+
+
+
+body { padding-bottom: 50%; }
+
 }

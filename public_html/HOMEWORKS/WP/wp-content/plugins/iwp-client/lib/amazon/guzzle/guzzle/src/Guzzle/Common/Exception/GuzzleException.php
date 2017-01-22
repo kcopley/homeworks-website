@@ -1,8 +1,16 @@
-<?php
-
-namespace Guzzle\Common\Exception;
-
-/**
- * Guzzle exception
- */
-interface GuzzleException {}
+<?php
+
+
+
+namespace Guzzle\Common\Exception;
+
+
+
+/**
+
+ * Guzzle exception
+
+ */
+
+interface GuzzleException {}
+

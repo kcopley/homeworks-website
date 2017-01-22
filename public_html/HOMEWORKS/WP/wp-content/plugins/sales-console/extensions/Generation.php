@@ -38,7 +38,7 @@ function GenerateSearchBox($props, $source, $title, $button) {
     $form->add_object($outsidetable);
 
     $counter = 0;
-    $table = new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100));
+    $table = new TableArr(border(0).cellpadding(0).cellspacing(0).id('formtable').width(100));
     $columns = array();
     $col = new Column(valign('top'),
         $table
@@ -100,7 +100,7 @@ function GenerateAddBox($props, $source, $title, $button) {
     $form->add_object($outsidetable);
 
     $counter = 0;
-    $table = new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100));
+    $table = new TableArr(border(0).cellpadding(0).cellspacing(0).id('formtable').width(100));
     $columns = array();
     $col = new Column(valign('top'),
         $table
