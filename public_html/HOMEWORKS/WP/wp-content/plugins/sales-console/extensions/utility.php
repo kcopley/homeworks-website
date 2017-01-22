@@ -59,8 +59,9 @@ class vars {
         return '';
     }
 
-    public static $conference_name = '_cmb_conference_name';
-    public static $shipping_margin = '_cmb_shipping_margin';
+    public static $conference_name_option = 'conference_name_option';
+    public static $shipping_margin_option = 'shipping_margin_option';
+    public static $allow_multiple_categories_option = 'allow_multiple_categories';
 }
 
 function get_next_invoice() {

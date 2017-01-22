@@ -66,7 +66,8 @@ class __input {
 
     public function SetSessionValue($prefix) {
         $val = $this->GetPostValue($prefix);
-        $_SESSION[$prefix.$this->name] = $val;
+        if (!$val) $val = $this->GetSessionValue($prefix);
+        if ($val) $_SESSION[$prefix.$this->name] = $val;
     }
 
     public function UnsetSessionValue($prefix) {
@@ -257,8 +258,14 @@ class Date extends __input  {
 
     public function SetSessionValue($prefix)
     {
-        $_SESSION[$prefix.$this->name.'_from'] = $_REQUEST[$prefix.$this->name.'_from'];
-        $_SESSION[$prefix.$this->name.'_to'] = $_REQUEST[$prefix.$this->name.'_to'];
+        $datefrom = $_REQUEST[$prefix.$this->name.'_from'];
+        if (!$datefrom) $datefrom = $_SESSION[$prefix.$this->name.'_from'];
+
+        $dateto = $_REQUEST[$prefix.$this->name.'_to'];
+        if (!$dateto) $dateto = $_SESSION[$prefix.$this->name.'_to'];
+
+        $_SESSION[$prefix.$this->name.'_from'] = $datefrom;
+        $_SESSION[$prefix.$this->name.'_to'] = $dateto;
     }
 
     public function UnsetSessionValue($prefix)
@@ -277,8 +284,8 @@ class Date extends __input  {
         if ($datefrom && $dateto)
             $args['meta_query'][] = array(
                 'key' => $this->db_value,
-                'value' => $datefrom,
-                'compare' => '>=',
+                'value' => array($datefrom, $dateto),
+                'compare' => 'BETWEEN',
                 'type' => 'DATE'
             );
         return $args;
@@ -339,8 +346,14 @@ class Decimal extends __input  {
 
     public function SetSessionValue($prefix)
     {
-        $_SESSION[$prefix.$this->name.'_from'] = $_REQUEST[$prefix.$this->name.'_from'];
-        $_SESSION[$prefix.$this->name.'_to'] = $_REQUEST[$prefix.$this->name.'_to'];
+        $valfrom = $_REQUEST[$prefix.$this->name.'_from'];
+        if (!$valfrom) $valfrom = $_SESSION[$prefix.$this->name.'_from'];
+
+        $valto = $_REQUEST[$prefix.$this->name.'_to'];
+        if (!$valto) $valto = $_SESSION[$prefix.$this->name.'_to'];
+
+        $_SESSION[$prefix.$this->name.'_from'] = $valfrom;
+        $_SESSION[$prefix.$this->name.'_to'] = $valto;
     }
 
     public function UnsetSessionValue($prefix)
@@ -353,9 +366,9 @@ class Decimal extends __input  {
         add_filter('get_meta_sql','cast_decimal_precision');
 
         $totalfrom = $_SESSION[$prefix.$this->name.'_from'];
-        if (!$totalfrom) $totalfrom = 0;
+        if (!$totalfrom) $totalfrom = -9999999.0;
         $totalto = $_SESSION[$prefix.$this->name.'_to'];
-        if (!$totalto) $totalto = 9999999;
+        if (!$totalto) $totalto = 9999999.0;
 
         if ($totalfrom) {
             $args['meta_query'][] = array(
@@ -601,6 +614,7 @@ class Text extends __input  {
                 }
             }
         }
+
         return $args;
     }
 
@@ -647,7 +661,8 @@ class Category extends __input  {
     public $exact = -1;
     public $display_prefix;
 
-    function get_dropdown($prefix, $form) {
+    function get_dropdown($prefix) {
+        /*
         $categories = get_categories(array('fields' => 'id=>slug'));
 
         $div = new Div(id('checkboxes').name('checkboxes').classType('checkboxes'));
@@ -686,9 +701,27 @@ class Category extends __input  {
             ),
             $div
         );
+        */
+        $text = wp_dropdown_categories(
+            array(
+                'hide_empty' => 0,
+                'name' => $prefix.$this->name,
+                'hierarchical' => true,
+                'show_option_all' => 'Choose one',
+                'echo' => 0,
+                'value_field' => 'term_id'
+            )
+        );
+        if (get_option(vars::$allow_multiple_categories_option) == 1) {
+            $text = str_replace('<select', '<select multiple ', $text);
+        }
+        return new TextRender(
+            $text
+        );
     }
 
     function get_dropdown_checked($val, $prefix, $form) {
+        /*
         $categories = get_categories(array('fields' => 'id=>slug'));
         $cats = wp_get_post_categories($val, array('fields' => 'ids'));
         $div = new Div(id('checkboxes').name('checkboxes').classType('checkboxes'));
@@ -725,13 +758,35 @@ class Category extends __input  {
             ),
             $div
         );
+        */
+
+        $text = wp_dropdown_categories(
+            array(
+                'hide_empty' => 0,
+                'name' => $prefix.$this->name,
+                'hierarchical' => true,
+                'show_option_all' => 'Choose one',
+                'echo' => 0,
+                'selected' => $val,
+                'value_field' => 'term_id'
+            )
+        );
+        if (get_option(vars::$allow_multiple_categories_option) == 1) {
+            $text = str_replace('<select', '<select '.form($form).' multiple ', $text);
+        }
+        else {
+            $text = str_replace('<select', '<select '.form($form), $text);
+        }
+        return new TextRender(
+            $text
+        );
     }
 
     public function GetInputSearch($leftWidth, $rightWidth, $prefix) {
         $row = new Row(
             new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))),
             new Column(width($rightWidth).style('padding-left: 5px;'),
-                $this->get_dropdown($prefix, -1)
+                $this->get_dropdown($prefix)
             )
         );
         return $row;
@@ -741,7 +796,7 @@ class Category extends __input  {
         $row = new Row(
             new Column(align('right').width($leftWidth), new Label(new TextRender($this->format.':'))),
             new Column(width($rightWidth).style('padding-left: 5px;'),
-                $this->get_dropdown($prefix, -1)
+                $this->get_dropdown($prefix)
             )
         );
         return $row;
@@ -749,6 +804,7 @@ class Category extends __input  {
 
     public function GetPostValue($prefix)
     {
+        /*
         $categories = get_categories(array('fields' => 'id=>slug'));
         $ret = array();
         foreach ($categories as $catID => $name) {
@@ -758,11 +814,15 @@ class Category extends __input  {
             }
         }
         return $ret;
+        */
+        return $_POST[$prefix.$this->name];
     }
 
     public function GetValue($id)
     {
-        return get_the_category($id);
+        $defaults = array('fields' => 'ids');
+        $ret = wp_get_post_categories($id, $defaults)[0];
+        return $ret;
     }
 
     public function SetValue($id, $value)
@@ -801,14 +861,68 @@ class Category extends __input  {
         return new Row(
             new Column(align('right').width($leftwidth), new Label(new TextRender($this->format.':'))),
             new Column(width($rightwidth).style('padding-left: 5px;'),
-                $this->get_dropdown_checked($id, vars::$edit_prefix, $form)
+                $this->get_dropdown_checked($val, vars::$edit_prefix, $form)
             )
         );
     }
 }
 
-class Checkbox {
+class Subtotal extends __input {
+    public function GetPostValue($prefix)
+    {
+    }
 
+    public function GetSessionValue($prefix)
+    {
+    }
+
+    public function GetValue($id)
+    {
+        return Transaction::get_subtotal($id) - Transaction::get_refund_total($id);
+    }
+
+    public function UnsetSessionValue($prefix)
+    {
+    }
+
+    public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
+        $val = $this->GetValue($id);
+        return new Row(
+            new Column(align('right').width($leftwidth), new Label(new TextRender($this->format.':'))),
+            new Column(width($rightwidth).style('padding-left: 5px; width: 90%;'),
+                new Strong(new TextRender('$'.number_format($val, 2)))
+            )
+        );
+    }
+}
+
+class TaxTotal extends __input {
+    public function GetPostValue($prefix)
+    {
+    }
+
+    public function GetSessionValue($prefix)
+    {
+    }
+
+    public function GetValue($id)
+    {
+        return Transaction::get_tax_total($id);
+    }
+
+    public function UnsetSessionValue($prefix)
+    {
+    }
+
+    public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
+        $val = $this->GetValue($id);
+        return new Row(
+            new Column(align('right').width($leftwidth), new Label(new TextRender($this->format.':'))),
+            new Column(width($rightwidth).style('padding-left: 5px; width: 90%;'),
+                new Strong(new TextRender('$'.number_format($val, 2)))
+            )
+        );
+    }
 }
 
 class BookButton {

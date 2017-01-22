@@ -140,11 +140,11 @@ class Consigner {
             new Row(
                 new Column(new Strong(new TextRender('Total Paid:'))),
                 new Column(
-                    new TextRender(self::get_total_paid($id))
+                    new TextRender('$'.number_format(self::get_total_paid($id), 2))
                 ),
                 new Column(new Strong(new TextRender('Total Owed:'))),
                 new Column(
-                    new TextRender(self::get_total_owed($id))
+                    new TextRender('$'.number_format(self::get_total_owed($id)))
                 ),
                 new Column(colspan(10).align('right'),
                     new Form(

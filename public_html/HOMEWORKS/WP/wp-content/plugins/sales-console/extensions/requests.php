@@ -36,6 +36,7 @@ class action_types {
     public static $edit_book = 'update_book_action';
     public static $delete_book = 'delete_book_action';
     public static $delete_book_sure = 'delete_book_sure_action';
+    public static $get_trans_search_totals = 'get_transaction_totals_action';
 
     public static $add_image_to_book_search = 'add_image_to_book_search';
     public static $add_image_to_book_edit = 'add_image_to_book_edit';

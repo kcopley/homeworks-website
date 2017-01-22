@@ -152,8 +152,11 @@ function GenerateQuery($props, $post_type, $display_post_num, $offset) {
         'order' => 'ASC',
         'orderby' => 'date',
         'post_type' => $post_type,
-        'offset' => $offset
     );
+    if ($offset != -1) {
+        $args['offset'] = $offset;
+    }
+
     if ($post_type == Transaction::$post_type) {
         $args['order'] = 'DESC';
     }
@@ -165,7 +168,9 @@ function GenerateQuery($props, $post_type, $display_post_num, $offset) {
 
     foreach ($props as $key => $prop) {
         if ($prop->search_param) {
-            $args = $prop->GetQuery($args, vars::$search_prefix);
+            if (method_exists($prop, 'GetQuery')) {
+                $args = $prop->GetQuery($args, vars::$search_prefix);
+            }
         }
     }
     return new WP_Query($args);
@@ -225,7 +230,7 @@ function GenerateSearch($props, $source, $post_type) {
     if ($offset < 0) $offset = 0;
 
     $query = GenerateQuery($props, $post_type, $display_post_num, $offset);
-    
+
     $toprow->add_object(new Column(new Strong(new TextRender('Search found '.$query->found_posts.' posts.'))));
     while ($query->have_posts()):
         $query->the_post();

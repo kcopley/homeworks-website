@@ -11,12 +11,15 @@ class verify {
     public static $verify_books = 'verify_books';
     public static $verify_consigners = 'verify_consigners';
     public static $verify_transactions = 'verify_transactions';
+    public static $delete_transactions = 'delete_transactions';
     public static $reset_counters = 'verify_reset_counters';
     public static $verify_radios = 'verify_radios';
     public static $get_book_totals = 'get_book_totals';
     public static $set_db_name = 'set_db_name';
+
     public static $set_conference_name = 'set_conference_name';
     public static $set_shipping_margin = 'set_shipping_margin';
+    public static $set_multiple_categories = 'set_multiple_categories';
 
     public static $set_bids = 'set_bids';
     public static $set_cids = 'set_cids';
@@ -29,6 +32,9 @@ switch (page_action::GetAction()){
         break;
     case verify::$verify_transactions:
         verify_transaction_database();
+        break;
+    case verify::$delete_transactions:
+        delete_transaction_database();
         break;
     case verify::$verify_radios:
         verify_radios();
@@ -54,13 +60,109 @@ switch (page_action::GetAction()){
     case verify::$set_shipping_margin:
         set_shipping_margin();
         break;
+    case verify::$set_multiple_categories:
+        set_multiple_categories_option();
+        break;
 }
 
 $list = new RenderList(
     new TableArr(
         new Row(
-            new Column(width(30),
-                new TableArr(width(100).cellpadding(0).cellspacing(5),
+            new Column(width(40),
+                new TableArr(width(100).cellpadding(0).cellspacing(2),
+                    new Row(
+                        new Column(align('right'),
+                            new TextRender('Set Last Barcode ID')
+                        ),
+                        new Column(
+                            new Form(
+                                page_action::InputAction(verify::$set_bids),
+                                new Input(style('margin: 6px;').type('text').name('bid').id('bid').value(get_option('_cmb_resource_lastBarcode'))),
+                                button('Set')
+                            )
+                        )
+                    ),
+                    new Row(
+                        new Column(align('right'),
+                            new TextRender('Set Last Consigner ID')
+                        ),
+                        new Column(
+                            new Form(
+                                page_action::InputAction(verify::$set_cids),
+                                new Input(style('margin: 6px;').type('text').name('cid').id('cid').value(get_option('_cmb_consigner_lastID'))),
+                                button('Set')
+                            )
+                        )
+                    ),
+                    new Row(
+                        new Column(align('right'),
+                            new TextRender('Set Last Transaction ID')
+                        ),
+                        new Column(
+                            new Form(
+                                page_action::InputAction(verify::$set_tids),
+                                new Input(style('margin: 6px;').type('text').name('tid').id('tid').value(get_option('_cmb_transaction_lastID'))),
+                                button('Set')
+                            )
+                        )
+                    ),
+                    new Row(
+                        new Column(align('right'),
+                            new TextRender('Set Conference Name')
+                        ),
+                        new Column(
+                            new Form(
+                                page_action::InputAction(verify::$set_conference_name),
+                                new Input(style('margin: 6px;').type('text').name(vars::$conference_name_option).id(vars::$conference_name_option).value(get_option(vars::$conference_name_option))),
+                                button('Set')
+                            )
+                        )
+                    ),
+                    new Row(
+                        new Column(align('right'),
+                            new TextRender('Set Shipping Margin')
+                        ),
+                        new Column(
+                            new Form(
+                                page_action::InputAction(verify::$set_shipping_margin),
+                                new Input(style('margin: 6px;').type('text').name(vars::$shipping_margin_option).id(vars::$shipping_margin_option).value(get_option(vars::$shipping_margin_option))),
+                                button('Set')
+                            )
+                        )
+                    ),
+                    new Row(
+                        new Column(align('right'),
+                            new TextRender('Set Multiple Categories')
+                        ),
+                        new Column(
+                            new Form(
+                                page_action::InputAction(verify::$set_multiple_categories),
+                                new Input(style('margin: 6px;').type('text').name(vars::$allow_multiple_categories_option).id(vars::$allow_multiple_categories_option).value(get_option(vars::$allow_multiple_categories_option))),
+                                button('Set')
+                            )
+                        ),
+                        new Column(
+                            new TextRender('True = 1; False = anything else')
+                        )
+                    ),
+                    new Row(
+                        new Column(align('right'),
+                            new TextRender('Get Book Totals')
+                        ),
+                        new Column(
+                            new Form(
+                                page_action::InputAction(verify::$get_book_totals),
+                                button('Start')
+                            )
+                        )
+                    )
+                )
+            ),
+            new Column(width(40)
+            ),
+            new Column(width(15).align('center'),
+                new Strong(new TextRender('Don\'t touch these lightly!')),
+                new TableArr(width(100).cellpadding(0).cellspacing(5).align('right'),
                     new Row(
                         new Column(width(10).align('right'),
                             new TextRender('Update Books')
@@ -107,11 +209,11 @@ $list = new RenderList(
                     ),
                     new Row(
                         new Column(width(10).align('right'),
-                            new TextRender('Get Book Totals')
+                            new TextRender('Delete Transactions')
                         ),
                         new Column(width(12),
                             new Form(
-                                page_action::InputAction(verify::$get_book_totals),
+                                page_action::InputAction(verify::$delete_transactions),
                                 button('Start')
                             )
                         )
@@ -126,74 +228,8 @@ $list = new RenderList(
                                 button('Start')
                             )
                         )
-                    ),
-                    new Row(
-                        new Column(width(10).align('right'),
-                            new TextRender('Set Conference Name')
-                        ),
-                        new Column(
-                            new Form(
-                                page_action::InputAction(verify::$set_conference_name),
-                                new Input(style('margin: 6px;').type('text').name('conf_name').id('conf_name')),
-                                button('Set')
-                            )
-                        )
-                    ),
-                    new Row(
-                        new Column(width(10).align('right'),
-                            new TextRender('Set Shipping Margin')
-                        ),
-                        new Column(
-                            new Form(
-                                page_action::InputAction(verify::$set_shipping_margin),
-                                new Input(style('margin: 6px;').type('text').name('shipping_margin').id('shipping_margin')),
-                                button('Set')
-                            )
-                        )
                     )
                 )
-            ),
-            new Column(width(20),
-                new TableArr(width(100).cellpadding(3).cellspacing(5),
-                    new Row(
-                        new Column(width(10).align('right'),
-                            new TextRender('Set Last Barcode ID')
-                        ),
-                        new Column(
-                            new Form(
-                                page_action::InputAction(verify::$set_bids),
-                                new Input(style('margin: 6px;').type('text').name('bid').id('bid')),
-                                button('Set')
-                            )
-                        )
-                    ),
-                    new Row(
-                        new Column(width(10).align('right'),
-                            new TextRender('Set Last Consigner ID')
-                        ),
-                        new Column(
-                            new Form(
-                                page_action::InputAction(verify::$set_cids),
-                                new Input(style('margin: 6px;').type('text').name('cid').id('cid')),
-                                button('Set')
-                            )
-                        )
-                    ),
-                    new Row(
-                        new Column(width(10).align('right'),
-                            new TextRender('Set Last Transaction ID')
-                        ),
-                        new Column(
-                            new Form(
-                                page_action::InputAction(verify::$set_tids),
-                                new Input(style('margin: 6px;').type('text').name('tid').id('tid')),
-                                button('Set')
-                            )
-                        )
-                    )
-                )
-            ),
-            new Column(width(50)
             )
         )
     )
@@ -430,8 +466,8 @@ function delete_transaction_database() {
 
 function verify_transaction_database() {
     $args = array(
-        'numberposts' => -1,
-        'posts_per_page' => -1,
+        'numberposts' => 1000,
+        'posts_per_page' => 1000,
         'post_type' => 'purchases',
         'cache_results' => false
     );
@@ -453,6 +489,7 @@ function verify_transaction($id) {
     if (Transaction::$props[Transaction::$complete]->GetValue($id)) {
         return;
     }
+
     $title = get_the_title($id);
     if (!$title){
         wp_delete_post($id);
@@ -504,38 +541,38 @@ function verify_transaction($id) {
     if ($org)
         Transaction::$props[Transaction::$schoolname]->SetValue($postid, $org);
 
-    $price = str_replace('$', '', get_post_meta($id, '_cmb_purchase_price', true));
-    Transaction::$props[Transaction::$total]->SetValue($postid, $price);
-
     date_default_timezone_set('America/Chicago');
     Transaction::$props[Transaction::$date]->SetValue($postid, get_the_date('Y-m-d', $id));
 
-    Transaction::add_payment($postid, checkout_payment::$payment_credit, str_replace('$', '', $price));
-    Transaction::$props[Transaction::$total]->SetValue($postid, $price);
-
     $summ = get_post_meta($id, '_cmb_order_summary', true);
     if ($summ) {
-        $books = explode(PHP_EOL, $summ);
+        $books = preg_split('/\((.*?)\)/', $summ, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
         if (!empty($books)) {
-            foreach ($books as $book) {
-                $str = trim($book);
+            $count = count($books);
+            for ($i = 0; $i < $count; $i += 2) {
+                $book = trim($books[$i]);
+                $qty = trim($books[$i + 1]);
+                if ($book == '' || $qty == '') continue;
 
-                $start = strpos($str, '(');
-                $end = strpos($str, ')', $start + 1);
-                if ($start !== false && $end !== false) {
-                    $length = $end - $start;
-                    $result = substr($str, $start + 1, $length - 1);
-
-                    $booktitle = trim(substr($str, 0, $start - 1));
-
-                    $bid = get_book_by_title($booktitle);
-                    if ($bid) {
-                        Transaction::add_book($postid, $bid, $result);
-                    }
+                $bid = get_book_by_title($book);
+                if ($bid && intval($qty)) {
+                    Transaction::add_book_fast($postid, $bid, intval($qty));
                 }
             }
         }
     }
+
+    $taxtotal = str_replace('$', '', get_post_meta($id, '_cmb_purchase_tax', true));
+    $price = str_replace('$', '', get_post_meta($id, '_cmb_purchase_price', true));
+    $total = $price + $taxtotal;
+    Transaction::$props[Transaction::$total]->SetValue($postid, $total);
+
+    Transaction::add_payment($postid, checkout_payment::$payment_credit, $total);
+
+    if ($taxtotal) {
+        update_post_meta($postid, Transaction::$old_taxedamount_location, $taxtotal);
+    }
+
     Transaction::$props[Transaction::$complete]->SetValue($id, 2);
 }
 
@@ -580,19 +617,27 @@ function set_db_website() {
 }
 
 function set_conference_name() {
-    $name = $_REQUEST['conf_name'];
+    $name = $_REQUEST[vars::$conference_name_option];
     if (!$name) {
         $name = '';
     }
-    update_option(vars::$conference_name, $name);
+    update_option(vars::$conference_name_option, $name);
+}
+
+function set_multiple_categories_option() {
+    $name = $_REQUEST[vars::$allow_multiple_categories_option];
+    if (!$name) {
+        $name = '';
+    }
+    update_option(vars::$allow_multiple_categories_option, $name);
 }
 
 function set_shipping_margin() {
-    $name = $_REQUEST['shipping_margin'];
+    $name = $_REQUEST[vars::$shipping_margin_option];
     if (!$name) {
         $name = '';
     }
-    update_option(vars::$shipping_margin, $name);
+    update_option(vars::$shipping_margin_option, $name);
 }
 
 $list->Render();

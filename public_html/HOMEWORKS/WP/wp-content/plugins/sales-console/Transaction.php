@@ -23,7 +23,10 @@ class Transaction
     public static $customer_address = 'transaction_cust_address';
     public static $transfirstid = 'transaction_transfirst';
     public static $taxrate = 'transaction_taxrate';
+
     public static $total = 'transaction_total';
+    public static $subtotal = 'transaction_subtotal';
+    public static $taxtotal = 'transaction_taxtotal';
     public static $complete = 'transaction_complete';
 
     public static $book_id = 'transaction_book';
@@ -37,6 +40,16 @@ class Transaction
     public static $payment_amount = 'payment_amount';
     public static $conference = 'conference_sale';
     public static $open_in_checkout = 'open_in_checkout';
+
+    public static $calculated_totals_array = 'calculated_totals_array';
+    public static $calculated_totals_old_array = 'calculated_totals_old_array';
+    public static $calc_total = 'calc_total';
+    public static $calc_refundtotal = 'calc_refundtotal';
+    public static $calc_taxtotal = 'calc_taxtotal';
+    public static $calc_subtotal = 'calc_subtotal';
+    public static $calc_booksubtotal = 'calc_booksubtotal';
+
+    public static $old_taxedamount_location = '_cmb_transaction_taxamount';
 
     static function init()
     {
@@ -94,6 +107,20 @@ class Transaction
         $openincheckout->add_param = false;
         $openincheckout->search_param = false;
 
+        $subtotal = new Subtotal(self::$subtotal, 'Subtotal', 'subtotal');
+        $subtotal->search_param = false;
+        $subtotal->display_in_search = false;
+        $subtotal->edit_param = false;
+        $subtotal->add_param = false;
+        $subtotal->display_in_add = false;
+
+        $taxtotal = new TaxTotal(self::$taxtotal, 'Tax Total', 'taxtotal');
+        $taxtotal->search_param = false;
+        $taxtotal->display_in_search = false;
+        $taxtotal->edit_param = false;
+        $taxtotal->add_param = false;
+        $taxtotal->display_in_add = false;
+
         self::$props = array(
             self::$id => $id,
             self::$invoiceid => $invoice,
@@ -104,6 +131,8 @@ class Transaction
             self::$customer_email => $email,
             self::$customer_address => $address,
             self::$schoolname => $schoolname,
+            self::$subtotal => $subtotal,
+            self::$taxtotal => $taxtotal,
             self::$total => $total,
             self::$taxrate => $taxrate,
             self::$transfirstid => $transfirst,
@@ -158,6 +187,15 @@ class Transaction
                         )
                     )
                 );
+        }
+        if (!empty(Transaction::get_credits($id))) {
+            $table->add_object(
+                new Row(
+                    new Column(style('padding-bottom: 8px;'),
+                        self::get_credit_list($id)
+                    )
+                )
+            );
         }
         return $table;
     }
@@ -221,6 +259,37 @@ class Transaction
         return $table;
     }
 
+    public static function get_credit_list($id) {
+        $titlewidth = 20;
+        $otherwidth = 10;
+        $table = new RenderList();
+        if (!empty(Transaction::get_credits($id))) {
+            $table = new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100).
+                style('padding: 10px; border: solid; border-width: 1px; border-color: #D0D0D0;'),
+                new Row(
+                    new Column(width($titlewidth), new H4(style('margin: 0px; font-size: 14px;'), new TextRender('Credits'))),
+                    new Column(width($otherwidth), new H4(style('margin: 0px;'), new TextRender(''))),
+                    new Column(width($otherwidth), new H4(style('margin: 0px;'), new TextRender(''))),
+                    new Column(width($otherwidth), new H4(style('margin: 0px;'), new TextRender(''))),
+                    new Column(width($otherwidth), new H4(style('margin: 0px;'), new TextRender(''))),
+                    new Column(width($otherwidth), new H4(style('margin: 0px;'), new TextRender(''))),
+                    new Column(width($otherwidth)),
+                    new Column()
+                )
+            );
+
+            $credits = Transaction::get_credits($id);
+            foreach ($credits as $credit) {
+                $table->add_object(self::credit_display_transaction($credit));
+                $table->add_object(
+                    new Row(style('border: none; padding: 0px; height: 1px;'),
+                        new Column(colspan(10) . style('padding-bottom: 0px;'),
+                            new HR(style('margin: 0px;')))));
+            }
+        }
+        return $table;
+    }
+
     function book_display_transaction($book) {
         $book_id = $book[self::$book_id];
         $quantity = $book[self::$book_quantity];
@@ -247,8 +316,7 @@ class Transaction
         $title = $book[self::$book_title];
 
         return new Row(
-            new Column(style('padding-top: 6px; padding-bottom: 6px;'),
-                Book::$props[Book::$name]->GetDisplay($book_id, Book::$source)),
+            Book::$props[Book::$name]->GetDisplay($book_id, Book::$source),
             new Column(style('padding-top: 6px; padding-bottom: 6px;'),
                 new TextRender($book_id)),
             new Column(style('padding-top: 6px; padding-bottom: 6px;'),
@@ -261,6 +329,18 @@ class Transaction
                 new TextRender($quantity)),
             new Column(style('padding-top: 6px; padding-bottom: 6px;'),
                 new TextRender('$'.number_format($price, 2)))
+        );
+    }
+
+    function credit_display_transaction($credit) {
+        $name = $credit[self::$credit_name];
+        $amount = $credit[self::$credit_amount];
+
+        return new Row(
+            new Column(style('padding-top: 6px; padding-bottom: 6px;'),
+                new TextRender($name)),
+            new Column(style('padding-top: 6px; padding-bottom: 6px;'),
+                new TextRender('$'.number_format($amount, 2)))
         );
     }
 
@@ -523,6 +603,183 @@ class Transaction
         return $list;
     }
 
+    public static function GenerateTransactionTotalsDisplay() {
+        $action = page_action::GetAction();
+        if ($action != action_types::get_search(Transaction::$source) && $action != action_types::get_delete_sure(Transaction::$source) && $action != action_types::$get_trans_search_totals){
+            return new RenderList();
+        }
+        $table = new TableArr();
+        $table->add_object(new Row(
+            new Column(
+                new Strong(new TextRender('Calculate Totals from Search Results')))
+        ));
+        $table->add_object(new Row(
+            new Column(
+                new Form(
+                    page_action::InputAction(action_types::$get_trans_search_totals),
+                    new Input(type('submit').classType('button-primary').name('button').value('Calculate'))
+                )
+            )
+        ));
+
+        $totalsArr = $_SESSION[self::$calculated_totals_array];
+        if ($totalsArr) {
+            $table->add_object(
+                new Row(
+                    new Column(align('right'),
+                        new Strong(new TextRender('Book Subtotal: '))
+                    ),
+                    new Column(align('left'),
+                        new Strong(new TextRender('$'.number_format($totalsArr[self::$calc_booksubtotal], 2)))
+                    )
+                )
+            );
+            $table->add_object(
+                new Row(
+                    new Column(align('right'),
+                        new Strong(new TextRender('Refunded Books Total: '))
+                    ),
+                    new Column(align('left'),
+                        new Strong(new TextRender('$'.number_format($totalsArr[self::$calc_refundtotal], 2)))
+                    )
+                )
+            );
+            $table->add_object(
+                new Row(
+                    new Column(align('right'),
+                        new Strong(new TextRender('Subtotal: '))
+                    ),
+                    new Column(align('left'),
+                        new Strong(new TextRender('$'.number_format($totalsArr[self::$calc_subtotal], 2)))
+                    )
+                )
+            );
+            $table->add_object(
+                new Row(
+                    new Column(align('right'),
+                        new Strong(new TextRender('Total Tax: '))
+                    ),
+                    new Column(align('left'),
+                        new Strong(new TextRender('$'.number_format($totalsArr[self::$calc_taxtotal], 2)))
+                    )
+                )
+            );
+            $table->add_object(
+                new Row(
+                    new Column(align('right'),
+                        new Strong(new TextRender('Final Total: '))
+                    ),
+                    new Column(align('left'),
+                        new Strong(new TextRender('$'.number_format($totalsArr[self::$calc_total], 2)))
+                    )
+                )
+            );
+        }
+
+        $oldTotalsArr = $_SESSION[self::$calculated_totals_old_array];
+        if ($oldTotalsArr) {
+            $table->add_object(
+                new Row(
+                    new Column(align('right').style('padding-top: 12px;'),
+                        new Strong(new TextRender('Old Book Values (Less Detailed)'))
+                    ),
+                    new Column(align('left').style('padding-top: 12px;')
+                    )
+                )
+            );
+            $table->add_object(
+                new Row(
+                    new Column(align('right'),
+                        new Strong(new TextRender('Sales Subtotal: '))
+                    ),
+                    new Column(align('left'),
+                        new Strong(new TextRender('$'.number_format($oldTotalsArr[self::$calc_subtotal], 2)))
+                    )
+                )
+            );
+            $table->add_object(
+                new Row(
+                    new Column(align('right'),
+                        new Strong(new TextRender('Total Tax: '))
+                    ),
+                    new Column(align('left'),
+                        new Strong(new TextRender('$'.number_format($oldTotalsArr[self::$calc_taxtotal], 2)))
+                    )
+                )
+            );
+            $table->add_object(
+                new Row(
+                    new Column(align('right'),
+                        new Strong(new TextRender('Total: '))
+                    ),
+                    new Column(align('left'),
+                        new Strong(new TextRender('$'.number_format($oldTotalsArr[self::$calc_total], 2)))
+                    )
+                )
+            );
+        }
+        return $table;
+    }
+
+    public static function CalculateTransactionTotals() {
+        $query = GenerateQuery(Transaction::$props, Transaction::$post_type, -1, -1);
+
+        $total = 0;
+        $booksubtotal = 0;
+        $refundtotal = 0;
+        $taxtotal = 0;
+        $subtotal = 0;
+
+        $oldprice = 0;
+        $oldsubprice = 0;
+        $oldtaxtotal = 0;
+
+        while ($query->have_posts()) {
+            $query->the_post();
+            global $post;
+            $id = $post->ID;
+
+            $oldtax = get_post_meta($id, self::$old_taxedamount_location, true);
+            if ($oldtax) {
+                $oldtotal = Transaction::$props[Transaction::$total]->GetValue($id);
+                $oldsubtotal = $oldtotal - $oldtax;
+
+                $oldsubprice = $oldsubprice + $oldsubtotal;
+                $oldtaxtotal = $oldtaxtotal + $oldtax;
+                $oldprice = $oldprice + $oldtotal;
+            }
+            else {
+                $idbooksubtotal = Transaction::get_subtotal($id);
+                $idrefundtotal = Transaction::get_refund_total($id);
+                $idcredittotal = Transaction::get_credit_total($id);
+                $idsubtotal = ($idbooksubtotal - $idrefundtotal);
+                //Calc these for speed
+                $taxpercent = Transaction::$props[Transaction::$taxrate]->GetValue($id);
+                $idtaxtotal = $idsubtotal * $taxpercent - $idrefundtotal * $taxpercent;
+                $idtotal = $idsubtotal + $idtaxtotal - $idcredittotal - $idrefundtotal;
+
+                $booksubtotal = $booksubtotal + $idbooksubtotal;
+                $refundtotal = $refundtotal + $idrefundtotal;
+                $taxtotal = $taxtotal + $idtaxtotal;
+                $subtotal = $subtotal + $idsubtotal;
+                $total = $total + $idtotal;
+            }
+        }
+
+        $_SESSION[self::$calculated_totals_array] = array(
+            self::$calc_total => $total,
+            self::$calc_booksubtotal => $booksubtotal,
+            self::$calc_refundtotal => $refundtotal,
+            self::$calc_taxtotal => $taxtotal,
+            self::$calc_subtotal => $subtotal
+        );
+        $_SESSION[self::$calculated_totals_old_array] = array(
+            self::$calc_total => $oldprice,
+            self::$calc_taxtotal => $oldtaxtotal,
+            self::$calc_subtotal => $oldsubprice
+        );
+    }
+
     public static function get_refund_amount($id) {
         $amountPaid = ceil(self::get_total_paid($id) * 100);
         $total = ceil(self::get_total($id) * 100);
@@ -658,6 +915,15 @@ class Transaction
         Transaction::$props[Transaction::$total]->SetValue($id, self::get_total($id));
     }
 
+    public static function add_book_fast($id, $book, $quantity) {
+        $books = self::get_books($id);
+        if (!$books){
+            $books = array();
+        }
+        $books[] = self::create_book_transaction($book, $quantity);
+        self::set_books($id, $books);
+    }
+
     public static function refund_book($id, $book, $quantity) {
         $books = self::get_refunds($id);
         if (array_key_exists($book, $books)) {
@@ -687,7 +953,8 @@ class Transaction
     }
 
     public static function get_total($id) {
-        return self::get_subtotal($id) + self::get_tax_total($id) - self::get_credit_total($id) - self::get_refund_total($id);
+        $ret = self::get_subtotal($id) + self::get_tax_total($id) - self::get_credit_total($id) - self::get_refund_total($id);
+        return $ret;
     }
 
     public static function get_refund_total($id) {
@@ -717,7 +984,8 @@ class Transaction
     public static function get_tax_total($id) {
         $taxpercent = Transaction::$props[Transaction::$taxrate]->GetValue($id);
         $subtotal = self::get_subtotal($id);
-        return $subtotal * $taxpercent - self::get_refund_total($id) * $taxpercent;
+        $tax = $subtotal * $taxpercent - self::get_refund_total($id) * $taxpercent;
+        return $tax;
     }
 
     public static function get_credits($id) {
