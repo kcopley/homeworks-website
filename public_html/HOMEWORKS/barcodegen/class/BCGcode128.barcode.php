@@ -14,12 +14,12 @@
  *
  *--------------------------------------------------------------------
  * Revision History
- * v2.1.0	8  nov	2009	Jean-Sébastien Goupil	Specify exact table for encoding
- * v2.0.1	8  mar	2009	Jean-Sébastien Goupil	Fix Code 128 C
- * v2.00	23 apr	2008	Jean-Sébastien Goupil	New Version Update
- * v1.2.3pl2	27 sep	2006	Jean-Sébastien Goupil	There were some errors dealing with C table
- * v1.2.3b	30 dec	2005	Jean-Sébastien Goupil	Checksum separated + PHP5.1 compatible
- * v1.2.1	27 jun	2005	Jean-Sébastien Goupil	Font support added + Correct bug if passing C to another code
+ * v2.1.0	8  nov	2009	Jean-Sï¿½bastien Goupil	Specify exact table for encoding
+ * v2.0.1	8  mar	2009	Jean-Sï¿½bastien Goupil	Fix Code 128 C
+ * v2.00	23 apr	2008	Jean-Sï¿½bastien Goupil	New Version Update
+ * v1.2.3pl2	27 sep	2006	Jean-Sï¿½bastien Goupil	There were some errors dealing with C table
+ * v1.2.3b	30 dec	2005	Jean-Sï¿½bastien Goupil	Checksum separated + PHP5.1 compatible
+ * v1.2.1	27 jun	2005	Jean-Sï¿½bastien Goupil	Font support added + Correct bug if passing C to another code
  * V1.00	17 jun	2004	Jean-Sebastien Goupil
  *--------------------------------------------------------------------
  * $Id: BCGcode128.barcode.php,v 1.18 2010/02/14 00:24:07 jsgoupil Exp $

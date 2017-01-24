@@ -60,7 +60,8 @@ $lang['datetimeformat_help'] = 'Click here for help on how to format the date/ti
 $lang['extraconfigtext'] = 'Extra configuration';
 $lang['extraconfighelp'] = 'One statement per line, no commas, please. Check TinyMCE-wiki for instructions.';
 $lang['customdropdowntext'] = 'Custom dropdown';
-$lang['customdropdownhelp'] = 'Inserts customizable snippets of code/text by selection in a dropdown menu. 
+$lang['customdropdownhelp'] = 'Inserts customizable snippets of code/text by selection in a dropdown menu. 
+
 Obvious uses are easy access to tag&#039;s etc. The menu is inserted into toolbar using &#039;customdropdown&#039;.';
 $lang['startenabledtext'] = 'Startup enabled';
 $lang['startenabledhelp'] = 'Unchecking this starts up Tiny-editors in a disabled state. Should be used together with the toggle button.';
@@ -82,11 +83,16 @@ $lang['usestaticconfigwarning'] = 'Warning! You have the static config-file opti
 $lang['showtogglebutton_text'] = 'Show checkbox to turn wysiwyg on/off';
 $lang['togglewysiwyg'] = 'Turn WYSIWYG on/off';
 $lang['styles_tab'] = 'CSS Styles';
-$lang['styles_help'] = '  If you leave the field empty, TinyMCE will parse your CSS file and list the class styles contained in it to the user. 
-  If you want only some styles presented to the user, specify them in the form &quot;CustomName1=style1; CustomName2=style2&quot;, 
-  &quot;style1&quot; being a class call in your stylesheet and you don&#039;t put the . 
-  normally used for class calls as it is already in your CSS, it will look like this <span class=&quot;style1&quot;>text</span>, 
-  in the first field below. 
+$lang['styles_help'] = '  If you leave the field empty, TinyMCE will parse your CSS file and list the class styles contained in it to the user. 
+
+  If you want only some styles presented to the user, specify them in the form &quot;CustomName1=style1; CustomName2=style2&quot;, 
+
+  &quot;style1&quot; being a class call in your stylesheet and you don&#039;t put the . 
+
+  normally used for class calls as it is already in your CSS, it will look like this <span class=&quot;style1&quot;>text</span>, 
+
+  in the first field below. 
+
 ';
 $lang['css_styles_text'] = 'Styles';
 $lang['accessdenied'] = 'Access Denied. Please check your permissions.';
@@ -141,22 +147,38 @@ $lang['thousanddelimiter'] = ',';
 $lang['size'] = 'Mida';
 $lang['dimensions'] = 'WxH';
 $lang['advanced_tab'] = 'Avan&ccedil;at';
-$lang['help'] = '	<h3>What does this do?</h3>
-	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
-	<h3>How do I use it?</h3>
-	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
-	<h3>Troubleshooting</h3>
-	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
-	things you can try before contacting me for further support.
-	<br/>
-	<ul>
-	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You&#039;d be amazed how many times this has helped people.</li>
-	<li>2. Try to switch on the Static Config option. Note that this requires your /tmp/-dir to be writable by the webserver</li>
-	<li>3. If upgrading, please try to reset all settings. Not nice if you&#039;ve done a lot of customization, I know, but a lot of things changes from 2.3.x to 2.4.x series of the module.
-	<li>4. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based)
-	</ul>
-	<br/>
-		
+$lang['help'] = '	<h3>What does this do?</h3>
+
+	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
+
+	<h3>Troubleshooting</h3>
+
+	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
+
+	things you can try before contacting me for further support.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You&#039;d be amazed how many times this has helped people.</li>
+
+	<li>2. Try to switch on the Static Config option. Note that this requires your /tmp/-dir to be writable by the webserver</li>
+
+	<li>3. If upgrading, please try to reset all settings. Not nice if you&#039;ve done a lot of customization, I know, but a lot of things changes from 2.3.x to 2.4.x series of the module.
+
+	<li>4. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based)
+
+	</ul>
+
+	<br/>
+
+		
+
 ';
 $lang['utma'] = '156861353.3109145977533247500.1225311312.1259216857.1259266070.48';
 $lang['utmz'] = '156861353.1254088757.35.2.utmccn=(referral)|utmcsr=66.147.244.155|utmcct=/~clubcocc/cmsmadesimple/install/index.php|utmcmd=referral';

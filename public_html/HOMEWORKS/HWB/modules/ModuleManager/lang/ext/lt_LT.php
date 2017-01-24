@@ -65,20 +65,33 @@ $lang['moddescription'] = 'A client for the ModuleRepository, this module allows
 $lang['error'] = 'Klaida!';
 $lang['admindescription'] = 'Įrankis modulių peržiūrėjimui ir įdiegimui i&scaron; nutolusio serverio.';
 $lang['accessdenied'] = 'Priėjimas uždraustas. Patikrinkite leidimus.';
-$lang['changelog'] = '<ul>
-<li>Version 1.0. 10 January 2006. Initial Release.</li>
-<li>Version 1.1. July, 2006. Released with the 1.0- beta</li>
-<li>Version 1.1.1 August, 2006.  Require 1.0.1 of nuSOAP</li>
+$lang['changelog'] = '<ul>
+
+<li>Version 1.0. 10 January 2006. Initial Release.</li>
+
+<li>Version 1.1. July, 2006. Released with the 1.0- beta</li>
+
+<li>Version 1.1.1 August, 2006.  Require 1.0.1 of nuSOAP</li>
+
 </ul>';
-$lang['help'] = '<h3>What Does This Do?</h3>
-<p>A client for the ModuleRepository, this module allows previewing, and installing modules from remote sites without the need for ftping, or unzipping archives.  Module XML files are downloaded using SOAP, integrity verified, and then expanded automatically.</p>
-<h3>How Do I Use It</h3>
-<p>In order to use this module, you will need the &#039;Modify Modules&#039; permission, and you will also need the complete, and full URL to a &#039;Module Repository&#039; installation.  You can specify this url in the &#039;Site Admin&#039; --> &#039;Global Settings&#039; page.</p><br/>
-<p>You can find the interface for this module under the &#039;Extensions&#039; menu.  When you select this module, the &#039;Module Repository&#039; installation will automatically be queried for a list of it&#039;s available xml modules.  This list will be cross referenced with the list of currently installed modules, and a summary page displayed.  From here, you can view the descriptive information, the help, and the about information for a module without physically installing it.  You can also choose to upgrade or install modules.</p>
-<h3>Support</h3>
-<p>As per the GPL, this software is provided as-is. Please read the text of the license for the full disclaimer.</p>
-<h3>Copyright and License</h3>
-<p>Copyright &copy; 2006, calguy1000 <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. All Rights Are Reserved.</p>
+$lang['help'] = '<h3>What Does This Do?</h3>
+
+<p>A client for the ModuleRepository, this module allows previewing, and installing modules from remote sites without the need for ftping, or unzipping archives.  Module XML files are downloaded using SOAP, integrity verified, and then expanded automatically.</p>
+
+<h3>How Do I Use It</h3>
+
+<p>In order to use this module, you will need the &#039;Modify Modules&#039; permission, and you will also need the complete, and full URL to a &#039;Module Repository&#039; installation.  You can specify this url in the &#039;Site Admin&#039; --> &#039;Global Settings&#039; page.</p><br/>
+
+<p>You can find the interface for this module under the &#039;Extensions&#039; menu.  When you select this module, the &#039;Module Repository&#039; installation will automatically be queried for a list of it&#039;s available xml modules.  This list will be cross referenced with the list of currently installed modules, and a summary page displayed.  From here, you can view the descriptive information, the help, and the about information for a module without physically installing it.  You can also choose to upgrade or install modules.</p>
+
+<h3>Support</h3>
+
+<p>As per the GPL, this software is provided as-is. Please read the text of the license for the full disclaimer.</p>
+
+<h3>Copyright and License</h3>
+
+<p>Copyright &copy; 2006, calguy1000 <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. All Rights Are Reserved.</p>
+
 <p>This module has been released under the <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a>. You must agree to this license before using the module.</p>';
 $lang['utmz'] = '156861353.1250297380.1752.42.utmccn=(referral)|utmcsr=helminsen.no|utmcct=/install/upgrade.php|utmcmd=referral';
 $lang['utma'] = '156861353.179052623084110100.1210423577.1259353230.1259355475.2152';

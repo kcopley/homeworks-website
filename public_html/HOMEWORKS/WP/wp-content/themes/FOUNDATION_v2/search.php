@@ -11,43 +11,24 @@
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 	$largs = array(
-
-		's' => get_search_query(), 
-
-		'posts_per_page' => -1, 
-
-		'order'=> 'ASC', 
-
-		'orderby' => 'title', 
-
+		's' => get_search_query(),
+		'posts_per_page' => 25,
+		'order'=> 'ASC',
+		'orderby' => 'title',
 		'post_type' => 'bookstore',
-
 		'paged' => $paged,
-
 		'meta_query' => array(
-
 			array(
-
 				'key' => '_cmb_resource_available',
-
 				'value' => 2,
-
 				'compare' => '='
-
 			),
-
 			array(
-
 				'key' => '_cmb_resource_online',
-
 				'value' => 2,
-
 				'compare' => '='
-
 			)
-
 		)
-
 	);
 
 	$lpostslist = new WP_Query( $largs );
@@ -84,9 +65,9 @@
 
 					<p>Publisher: <?php global $post; echo get_post_meta($post->ID, '_cmb_resource_publisher', true) ?><br />
 
-					Retail price: <strike><?php global $post; echo get_post_meta($post->ID, '_cmb_resource_MSRP', true) ?></strike><br />
+					Retail price: <strike><?php global $post; echo '$'.number_format(get_post_meta($post->ID, '_cmb_resource_MSRP', true), 2) ?></strike><br />
 
-					<strong>Price: <span class="price"><?php global $post; echo get_post_meta($post->ID, '_cmb_resource_price', true) ?></span></strong></p>
+					<strong>Price: <span class="price"><?php global $post; echo '$'.number_format(get_post_meta($post->ID, '_cmb_resource_price', true), 2) ?></span></strong></p>
 
 					<p><?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?></p>
 
@@ -125,58 +106,35 @@
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 	$pargs = array(
-
-		'posts_per_page' => -1, 
-
-		'order'=> 'ASC', 
-
-		'orderby' => 'title', 
-
+		'posts_per_page' => 25,
+		'order' => 'ASC',
+		'orderby' => 'title',
 		'post_type' => 'bookstore',
-
 		'paged' => $paged,
-
-		'meta_query' => array('relation' => 'AND',
-
+		'meta_query' => array(
 			array(
-
-			'key' => '_cmb_resource_publisher',
-
-			'value' => get_search_query(),
-
-			'compare' => 'LIKE'
-
+				'key' => '_cmb_resource_publisher',
+				'value' => get_search_query(),
+				'compare' => 'LIKE'
 			),
-
 			array(
-
 				'key' => '_cmb_resource_available',
-
 				'value' => 2,
-
 				'compare' => '='
-
 			),
-
 			array(
-
 				'key' => '_cmb_resource_online',
-
 				'value' => 2,
-
 				'compare' => '='
-
 			)
-
 		)
-
 	);
 
 	$ppostslist = new WP_Query( $pargs );
 
-   		while ( $ppostslist->have_posts() ) :
+	while ( $ppostslist->have_posts() ) :
 
-        	$ppostslist->the_post(); ?>
+		$ppostslist->the_post(); ?>
 
 		<div class="row">
 
@@ -186,77 +144,9 @@
 
 				<p>Publisher: <?php global $post; echo get_post_meta($post->ID, '_cmb_resource_publisher', true) ?><br />
 
-				Retail price: <strike><?php global $post; echo get_post_meta($post->ID, '_cmb_resource_MSRP', true) ?></strike><br />
+				Retail price: <strike><?php global $post; echo '$'.number_format(get_post_meta($post->ID, '_cmb_resource_MSRP', true), 2) ?></strike><br />
 
-				<strong>Price: <span class="price"><?php global $post; echo get_post_meta($post->ID, '_cmb_resource_price', true) ?></span></strong></p>
-
-			</div>
-
-		</div>
-
-    		<?php endwhile;
-
-		wp_reset_query(); ?>
-
-	<?php
-
-	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-	$pargs = array(
-
-		'posts_per_page' => -1, 
-
-		'order'=> 'ASC', 
-
-		'orderby' => 'title', 
-
-		'post_type' => 'bookstore',
-
-		'paged' => $paged,
-
-		'meta_query' => array('relation' => 'AND',
-
-			array(
-
-				'key' => '_cmb_resource_available',
-
-				'value' => 2,
-
-				'compare' => '='
-
-			),
-
-			array(
-
-				'key' => '_cmb_resource_online',
-
-				'value' => 2,
-
-				'compare' => '='
-
-			)
-
-		)
-
-	);
-
-	$ppostslist = new WP_Query( $pargs );
-
-   		while ( $ppostslist->have_posts() ) :
-
-        	$ppostslist->the_post(); ?>
-
-		<div class="row">
-
-			<div class="eleven columns">
-
-				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-
-				<p>Publisher: <?php global $post; echo get_post_meta($post->ID, '_cmb_resource_publisher', true) ?><br />
-
-				Retail price: <strike><?php global $post; echo get_post_meta($post->ID, '_cmb_resource_MSRP', true) ?></strike><br />
-
-				<strong>Price: <span class="price"><?php global $post; echo get_post_meta($post->ID, '_cmb_resource_price', true) ?></span></strong></p>
+				<strong>Price: <span class="price"><?php global $post; echo '$'.number_format(get_post_meta($post->ID, '_cmb_resource_price', true)) ?></span></strong></p>
 
 			</div>
 

@@ -53,31 +53,56 @@ $lang['help_class_img'] = 'Clase de tag <img> si se establece mostrar bot&oacute
 $lang['help_more'] = 'Ubicar opciones adicionales dentro del enlace <a>';
 $lang['help_onlyurl'] = 'Indicar s&oacute;lo la url, no un enlace completo';
 $lang['help_includetemplate'] = 'Si se activa esta opci&oacute;n, hace que se procese toda la plantilla para la impresion y PDF, no solamente el contenido principal. Es posible que se requiera un poco de trabajo en estilos especificos para impresora.';
-$lang['help'] = '<b>&iquest;Qu&eacute; hace este m&oacute;dulo?</b>
-<br/>
-Este m&oacute;dulo permite insertar un enlace en las p&aacute;ginas/plantillas que dirige a las visitas a una versi&oacute;n de la p&aacute;gina m&aacute;s amigable para ser impresa. Hay varios par&aacute;metros que se pueden establecer de forma de hacer el enlace y la p&aacute;gina amigable para imprimir, se ajusten a sus necesidades. A partir de la versi&oacute;n 0.2.0, se puede poner un par&aacute;metro para generar al toque un archivo PDF.
-<br/>
-Por el momento el m&oacute;dulo solo soporta p&aacute;ginas con contenido &quot;plano&quot;, no hay re-direcci&oacute;n de m&oacute;dulos, etc. Claro que tampoco lo hace la funcionalidad de impresi&oacute;n incluida en CMSms.
-<br/>
-Por favor observe que por el momento el m&oacute;dulo solo entrega como resultado el contenido principal, no se incluye contenidos alternativos que puedan estar definidos en la plantilla.
-
-<br/><br/>
-<b>&iquest;C&oacute;mo puedo usar este m&oacute;dulo?</b>
-<br/>
-B&aacute;sicamente debe instalar el m&oacute;dulo, acceder a la interfase de administraci&oacute;n y revisar/cambiar la plantilla para el enlace y la p&aacute;gina amigable de impresi&oacute;n.
-<br/>
-En su p&aacute;gina de contenido o bien en la plantilla del sitio usted deber&aacute; insertar algo as&iacute; como lo siguiente:
-<pre>
-{cms_module module=&#039;printing&#039; <i>params</i>}
-</pre>
-y un enlace va a aparecer en sus p&aacute;ginas. 
-<br/><br/>
-<b>Notas:</b>
-<br/>
-<ul>
-<li>La generaci&oacute;n de PDF por el momento es experimental.</li>
-<li>La Generaci&oacute;n de PDF puede que no funcione en servidores con php 4.x, se recomienda que induzca a su administrador de alojamiento a actualizar al php5 si desea tener soporte de PDF.</li>
-</ul>
+$lang['help'] = '<b>&iquest;Qu&eacute; hace este m&oacute;dulo?</b>
+
+<br/>
+
+Este m&oacute;dulo permite insertar un enlace en las p&aacute;ginas/plantillas que dirige a las visitas a una versi&oacute;n de la p&aacute;gina m&aacute;s amigable para ser impresa. Hay varios par&aacute;metros que se pueden establecer de forma de hacer el enlace y la p&aacute;gina amigable para imprimir, se ajusten a sus necesidades. A partir de la versi&oacute;n 0.2.0, se puede poner un par&aacute;metro para generar al toque un archivo PDF.
+
+<br/>
+
+Por el momento el m&oacute;dulo solo soporta p&aacute;ginas con contenido &quot;plano&quot;, no hay re-direcci&oacute;n de m&oacute;dulos, etc. Claro que tampoco lo hace la funcionalidad de impresi&oacute;n incluida en CMSms.
+
+<br/>
+
+Por favor observe que por el momento el m&oacute;dulo solo entrega como resultado el contenido principal, no se incluye contenidos alternativos que puedan estar definidos en la plantilla.
+
+
+
+<br/><br/>
+
+<b>&iquest;C&oacute;mo puedo usar este m&oacute;dulo?</b>
+
+<br/>
+
+B&aacute;sicamente debe instalar el m&oacute;dulo, acceder a la interfase de administraci&oacute;n y revisar/cambiar la plantilla para el enlace y la p&aacute;gina amigable de impresi&oacute;n.
+
+<br/>
+
+En su p&aacute;gina de contenido o bien en la plantilla del sitio usted deber&aacute; insertar algo as&iacute; como lo siguiente:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>params</i>}
+
+</pre>
+
+y un enlace va a aparecer en sus p&aacute;ginas. 
+
+<br/><br/>
+
+<b>Notas:</b>
+
+<br/>
+
+<ul>
+
+<li>La generaci&oacute;n de PDF por el momento es experimental.</li>
+
+<li>La Generaci&oacute;n de PDF puede que no funcione en servidores con php 4.x, se recomienda que induzca a su administrador de alojamiento a actualizar al php5 si desea tener soporte de PDF.</li>
+
+</ul>
+
 ';
 $lang['utma'] = '156861353.661434885.1227567621.1241554232.1242674634.67';
 $lang['utmz'] = '156861353.1241473702.63.28.utmccn=(referral)|utmcsr=forum.cmsmadesimple.org|utmcct=/index.php/board,30.0.html|utmcmd=referral';

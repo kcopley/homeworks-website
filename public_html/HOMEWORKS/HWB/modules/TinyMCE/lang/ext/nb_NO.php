@@ -78,7 +78,8 @@ $lang['datetimeformat_help'] = 'Klikk her for &aring; f&aring; hjelp om formatet
 $lang['extraconfigtext'] = 'Ekstra konfigurasjon';
 $lang['extraconfighelp2'] = '&Eacute;n uttalelse per linje, komma vil bli lagt til f&oslash;r og etter dette innholdet. Sjekk TinyMCE-wiki for instruksjoner.';
 $lang['customdropdowntext'] = 'Tilpasset nedtrekk';
-$lang['customdropdownhelp'] = 'Setter inn sm&aring; tilpassbare snutter av kode/tekst ved &aring; velge fra en nedtrekksmeny. 
+$lang['customdropdownhelp'] = 'Setter inn sm&aring; tilpassbare snutter av kode/tekst ved &aring; velge fra en nedtrekksmeny. 
+
 Mulig bruk er lett tilgang til tagger osv. Menyen settes inn i verkt&oslash;ylinjen ved &aring; bruke &#039;customdropdown&#039;.';
 $lang['startenabledtext'] = 'P&aring;sl&aring;tt ved start';
 $lang['startenabledhelp'] = 'Ved &aring; fjerne avkrysningen for denne vil Tiny-redigereren starte opp i avsl&aring;tt modus. Benyttes sammen med veksle-knappen.';
@@ -102,16 +103,22 @@ $lang['usestaticconfigtext'] = 'Benytt statisk config fil';
 $lang['usestaticconfighelp'] = 'Dette kan hjelpe med &aring; f&aring; din Tiny til &aring; fungere p&aring; systemer hvor vertsystemet legger til stoff som f.eks. statistikk til alle viste sider, som &oslash;delegger den dynamisk opprettede javascript config filen';
 $lang['usestaticconfigwarning'] = 'Advarsel! Du har sl&aring;tt p&aring; innstillingen for statisk config-fil men din /tmp/ katalog er ikke skrivbar. Dette vil forhindre modulen i &aring; lagre den statiske config-filen og vil mest sannsynlig rendere TinyMCE til ikke &aring; fungere.';
 $lang['ignoremodifyfilestext'] = 'Ignorer &#039;Modify Files&#039; tillatelsen for FilePicker';
-$lang['ignoremodifyfileshelp'] = 'Advarsel! Dette tillater noen filbehandlingsoperasjoner selv om
+$lang['ignoremodifyfileshelp'] = 'Advarsel! Dette tillater noen filbehandlingsoperasjoner selv om
+
 &#039;Modify Files&#039; tillatelsen ikke er satt for den aktuelle brukergruppen. Dette kan v&aelig;re kjekt &aring; benytte sammen med muligheten til &aring; begrense brukerens katalogtilgang.';
 $lang['showtogglebutton_text'] = 'Vis avkryssningsboks for &aring; sl&aring; wysiwyg p&aring;/av';
 $lang['togglewysiwyg'] = 'Sl&aring; WYSIWYG p&aring;/av';
 $lang['styles_tab'] = 'CSS stiler';
-$lang['styles_help'] = '  Hvis du lar dette feltet tomt, vil TinyMCE tolke dine CSS filer og vise stilene i disse til brukeren. 
-  Hvis du bare &oslash;nsker &aring; presentere noen stiler til brukerne, kan du spesifisere dem p&aring; formen
-&quot;CustomName1=style1; CustomName2=style2&quot;,
-  &quot;style1&quot; er et klasse kall i ditt stilark og du hopper over    .   
-  normalt benyttes dette for klasse kall(class calls) da dette allerede er i din CSS, det vil se slik ut < span class=&quot;style1&quot;>tekst< /span>, 
+$lang['styles_help'] = '  Hvis du lar dette feltet tomt, vil TinyMCE tolke dine CSS filer og vise stilene i disse til brukeren. 
+
+  Hvis du bare &oslash;nsker &aring; presentere noen stiler til brukerne, kan du spesifisere dem p&aring; formen
+
+&quot;CustomName1=style1; CustomName2=style2&quot;,
+
+  &quot;style1&quot; er et klasse kall i ditt stilark og du hopper over    .   
+
+  normalt benyttes dette for klasse kall(class calls) da dette allerede er i din CSS, det vil se slik ut < span class=&quot;style1&quot;>tekst< /span>, 
+
  i det f&oslash;rste feltet nedenfor.';
 $lang['css_styles_text'] = 'Stiler';
 $lang['accessdenied'] = 'Ikke tilgang. Sjekk om du har rettigheter til dette.';
@@ -172,25 +179,44 @@ $lang['thousanddelimiter'] = ' ';
 $lang['size'] = 'St&oslash;rrelse';
 $lang['dimensions'] = 'BxH';
 $lang['advanced_tab'] = 'Avansert';
-$lang['help'] = '	<h3>What does this do?</h3>
-	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
-	<h3>How do I use it?</h3>
-	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
-  <h3>Spellchecker</h3>
-  <p>As of version 2.6.0, TinyMCE includes an online spellchecker. Please notice that SSL must be turned on in your server-configuration in order for this to work. On some setups this option is called php_openssl but that may vary</p>
-	<h3>Troubleshooting</h3>
-	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
-	things you can try before contacting me for further support.
-	<br/>
-	<ul>
-	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You&#039;d be amazed how many times this has helped people.</li>	
-	<li>2. If upgrading, please try to reset all settings. Not nice if you&#039;ve done a lot of customization, I know, but a lot of things changed from 2.3.x to 2.4.x series of the module.
-	<li>3. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based), Note that this requires your /tmp/-dir to be writable by the webserver
-	</ul>
-	<br/>
-  <h3>Plugin development</h3>
-  As of version 2.7.0 the TinyMCE-module has the ability to allow other modules to register extensions for it. Could be a custom icon allowing you to insert
-  content from some module, like Gallery etc. How to do this is pretty tech stuff, but if you are a module developer and interested in checking it out
+$lang['help'] = '	<h3>What does this do?</h3>
+
+	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
+
+  <h3>Spellchecker</h3>
+
+  <p>As of version 2.6.0, TinyMCE includes an online spellchecker. Please notice that SSL must be turned on in your server-configuration in order for this to work. On some setups this option is called php_openssl but that may vary</p>
+
+	<h3>Troubleshooting</h3>
+
+	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
+
+	things you can try before contacting me for further support.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You&#039;d be amazed how many times this has helped people.</li>	
+
+	<li>2. If upgrading, please try to reset all settings. Not nice if you&#039;ve done a lot of customization, I know, but a lot of things changed from 2.3.x to 2.4.x series of the module.
+
+	<li>3. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based), Note that this requires your /tmp/-dir to be writable by the webserver
+
+	</ul>
+
+	<br/>
+
+  <h3>Plugin development</h3>
+
+  As of version 2.7.0 the TinyMCE-module has the ability to allow other modules to register extensions for it. Could be a custom icon allowing you to insert
+
+  content from some module, like Gallery etc. How to do this is pretty tech stuff, but if you are a module developer and interested in checking it out
+
   please look in the TinyMCE/docs-dir for further instructions.';
 $lang['utmz'] = '156861353.1288991067.3364.78.utmccn=(referral)|utmcsr=cmsmadesimple.org|utmcct=/about-link/special-fans-listing/|utmcmd=referral';
 $lang['utma'] = '156861353.179052623084110100.1210423577.1290337505.1290347334.3406';

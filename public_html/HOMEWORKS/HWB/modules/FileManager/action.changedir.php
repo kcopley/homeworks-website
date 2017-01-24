@@ -13,9 +13,11 @@ if ($newdir=="..") {
   $path=dirname($path);  
 } else {
 	$path=$this->Slash($path,$newdir);
-}
+}
+
 $path=$this->Slashes($path);
-$path=$this->Slash($path);
+$path=$this->Slash($path);
+
 
 //echo $params["path"];
 $this->Redirect($id, 'defaultadmin', $returnid,array("path"=>$path));

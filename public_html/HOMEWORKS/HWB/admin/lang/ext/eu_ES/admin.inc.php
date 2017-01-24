@@ -516,305 +516,557 @@ $lang['admin']['event_desc_contentpostcompile'] = 'Edukia smarty-k prozesatu ost
 $lang['admin']['event_desc_contentpostrender'] = 'Konbinaturiko HTML-a nabigatzailear bidali baino lehen bidalia';
 $lang['admin']['event_desc_smartyprecompile'] = 'Smarty-k prozesa dezan edozein eduki bidali baino lehen bidalia';
 $lang['admin']['event_desc_smartypostcompile'] = 'Smarty-k edukia prozesatu ondoren bidalia';
-$lang['admin']['event_help_loginpost'] = '<p>Erabiltzaile bat administrazio panelera sartzen denean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_loginpost'] = '<p>Erabiltzaile bat administrazio panelera sartzen denean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_logoutpost'] = '<p>Erabiltzaile bat administrazio paneletik irteten denean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
-</ul>
-
+$lang['admin']['event_help_logoutpost'] = '<p>Erabiltzaile bat administrazio paneletik irteten denean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
+
+</ul>
+
+
+
 ';
-$lang['admin']['event_help_adduserpre'] = '<p>Erabiltzaile berri bat sortu baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
-</ul>
-
+$lang['admin']['event_help_adduserpre'] = '<p>Erabiltzaile berri bat sortu baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
+
+</ul>
+
+
+
 ';
-$lang['admin']['event_help_adduserpost'] = '<p>Erabiltzaile berri bat sortu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
-</ul>
-
+$lang['admin']['event_help_adduserpost'] = '<p>Erabiltzaile berri bat sortu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
+
+</ul>
+
+
+
 ';
-$lang['admin']['event_help_edituserpre'] = '<p>Erabiltzaile bati egindako aldaketak gorde baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_edituserpre'] = '<p>Erabiltzaile bati egindako aldaketak gorde baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_edituserpost'] = '<p>Erabiltzaile bati egindako aldaketak gorde ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
-</ul>
-
+$lang['admin']['event_help_edituserpost'] = '<p>Erabiltzaile bati egindako aldaketak gorde ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
+
+</ul>
+
+
+
 ';
-$lang['admin']['event_help_deleteuserpre'] = '<p>Erabiltzaile bat sistematik ezabatu baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
-</ul>
-
+$lang['admin']['event_help_deleteuserpre'] = '<p>Erabiltzaile bat sistematik ezabatu baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
+
+</ul>
+
+
+
 ';
-$lang['admin']['event_help_deleteuserpost'] = '<p>Erabiltzaile bat sistematik ezabatu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
-</ul>
-
+$lang['admin']['event_help_deleteuserpost'] = '<p>Erabiltzaile bat sistematik ezabatu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Dagokion erabiltzaile objektuari erreferentzia.</li>
+
+</ul>
+
+
+
 ';
-$lang['admin']['event_help_addgrouppre'] = '<p>Talde berri bat sortu baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;group&#039; - Dagokion talde objektuari erreferentzia.</li>
-</ul>
-
+$lang['admin']['event_help_addgrouppre'] = '<p>Talde berri bat sortu baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Dagokion talde objektuari erreferentzia.</li>
+
+</ul>
+
+
+
 ';
-$lang['admin']['event_help_addgrouppost'] = '<p>Talde berri bat sortu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;group&#039; - Dagokion talde objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_addgrouppost'] = '<p>Talde berri bat sortu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Dagokion talde objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_changegroupassignpre'] = '<p>Talde esleipenak gorde baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;group&#039; - Dagokion talde objektuari referentzia.</li>
-<li>&#039;users&#039; - Taldearen barne dauden erabiltzaile objektuen erreferentzien array-a.</li>
+$lang['admin']['event_help_changegroupassignpre'] = '<p>Talde esleipenak gorde baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Dagokion talde objektuari referentzia.</li>
+
+<li>&#039;users&#039; - Taldearen barne dauden erabiltzaile objektuen erreferentzien array-a.</li>
+
 ';
-$lang['admin']['event_help_changegroupassignpost'] = '<p>Talde esleipenak gorde ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;group&#039; - Dagokion talde objektuari referentzia.</li>
-<li>&#039;users&#039; - Taldearen barne dauden erabiltzaile objektuen erreferentzien array-a.</li>
+$lang['admin']['event_help_changegroupassignpost'] = '<p>Talde esleipenak gorde ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Dagokion talde objektuari referentzia.</li>
+
+<li>&#039;users&#039; - Taldearen barne dauden erabiltzaile objektuen erreferentzien array-a.</li>
+
 ';
-$lang['admin']['event_help_editgrouppre'] = '<p>Talde bati egindako aldaketak gorde baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;group&#039; - Dagokion talde objektuari erreferentzia.</li>
-</ul>
-
+$lang['admin']['event_help_editgrouppre'] = '<p>Talde bati egindako aldaketak gorde baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Dagokion talde objektuari erreferentzia.</li>
+
+</ul>
+
+
+
 ';
-$lang['admin']['event_help_editgrouppost'] = '<p>Talde bati egindako aldaketak gorde ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;group&#039; - Dagokion talde objektuari erreferentzia.</li>
-</ul>
-
+$lang['admin']['event_help_editgrouppost'] = '<p>Talde bati egindako aldaketak gorde ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Dagokion talde objektuari erreferentzia.</li>
+
+</ul>
+
+
+
 ';
-$lang['admin']['event_help_deletegrouppre'] = '<p>Talde bat sistematik ezabatu baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;group&#039; - Dagokion talde objektuari erreferentzia.</li>
-</ul>
-
+$lang['admin']['event_help_deletegrouppre'] = '<p>Talde bat sistematik ezabatu baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Dagokion talde objektuari erreferentzia.</li>
+
+</ul>
+
+
+
 ';
-$lang['admin']['event_help_deletegrouppost'] = '<p>Talde bat sistematik ezabatu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;group&#039; - Dagokion talde objektuari erreferentzia.</li>
-</ul>
-
+$lang['admin']['event_help_deletegrouppost'] = '<p>Talde bat sistematik ezabatu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Dagokion talde objektuari erreferentzia.</li>
+
+</ul>
+
+
+
 ';
-$lang['admin']['event_help_addstylesheetpre'] = '<p>Estilo-orri berri bat sortu baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Dagokion estilo-orri objektuari erreferentzia.</li>
-</ul>
-
+$lang['admin']['event_help_addstylesheetpre'] = '<p>Estilo-orri berri bat sortu baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Dagokion estilo-orri objektuari erreferentzia.</li>
+
+</ul>
+
+
+
 ';
-$lang['admin']['event_help_addstylesheetpost'] = '<p>Estilo-orri berri bat sortu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Dagokion estilo-orri objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_addstylesheetpost'] = '<p>Estilo-orri berri bat sortu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Dagokion estilo-orri objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editstylesheetpre'] = '<p>Estilo-orri bati egindako aldaketak gorde baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Dagokion estilo-orri objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_editstylesheetpre'] = '<p>Estilo-orri bati egindako aldaketak gorde baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Dagokion estilo-orri objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editstylesheetpost'] = '<p>Estilo-orri bati egindako aldaketak gorde ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Dagokion estilo-orri objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_editstylesheetpost'] = '<p>Estilo-orri bati egindako aldaketak gorde ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Dagokion estilo-orri objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletestylesheetpre'] = '<p>Estilo-orri bat sistematik ezabatu baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Dagokion estilo-orri objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_deletestylesheetpre'] = '<p>Estilo-orri bat sistematik ezabatu baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Dagokion estilo-orri objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletestylesheetpost'] = '<p>Estilo-orri bat sistematik ezabatu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Dagokion estilo-orri objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_deletestylesheetpost'] = '<p>Estilo-orri bat sistematik ezabatu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Dagokion estilo-orri objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addtemplatepre'] = '<p>Txantiloi berri bat sortu baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_addtemplatepre'] = '<p>Txantiloi berri bat sortu baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addtemplatepost'] = '<p>Txantiloi berri bat sortu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_addtemplatepost'] = '<p>Txantiloi berri bat sortu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_edittemplatepre'] = '<p>Txantiloi bati egindako aldaketak gorde baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_edittemplatepre'] = '<p>Txantiloi bati egindako aldaketak gorde baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_edittemplatepost'] = '<p>Txantiloi bati egindako aldaketak gorde ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_edittemplatepost'] = '<p>Txantiloi bati egindako aldaketak gorde ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletetemplatepre'] = '<p>Txantiloi bat ezabatu baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_deletetemplatepre'] = '<p>Txantiloi bat ezabatu baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletetemplatepost'] = '<p>Txantiloi bat ezabatu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_deletetemplatepost'] = '<p>Txantiloi bat ezabatu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_templateprecompile'] = '<p>Smarty-k prozesa dezan edozein txantiloi bidali baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_templateprecompile'] = '<p>Smarty-k prozesa dezan edozein txantiloi bidali baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_templatepostcompile'] = '<p>Smarty-k txantiloi bat prozesatu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_templatepostcompile'] = '<p>Smarty-k txantiloi bat prozesatu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Dagokion txantiloi objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addglobalcontentpre'] = '<p>Bloke berri bat sortu baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_addglobalcontentpre'] = '<p>Bloke berri bat sortu baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addglobalcontentpost'] = '<p>Bloke berri bat sortu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_addglobalcontentpost'] = '<p>Bloke berri bat sortu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editglobalcontentpre'] = '<p>Bloke bati egindako aldaketak gorde baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_editglobalcontentpre'] = '<p>Bloke bati egindako aldaketak gorde baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editglobalcontentpost'] = '<p>Bloke bati egindako aldaketak gorde ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_editglobalcontentpost'] = '<p>Bloke bati egindako aldaketak gorde ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deleteglobalcontentpre'] = '<p>Bloke bat sistematik ezabatu baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_deleteglobalcontentpre'] = '<p>Bloke bat sistematik ezabatu baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deleteglobalcontentpost'] = '<p>Bloke bat sistematik ezabatu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_deleteglobalcontentpost'] = '<p>Bloke bat sistematik ezabatu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_globalcontentprecompile'] = '<p>Smarty-k prozesa dezan edozein bloke bidali baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_globalcontentprecompile'] = '<p>Smarty-k prozesa dezan edozein bloke bidali baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_globalcontentpostcompile'] = '<p>Smarty-k bloke bat prozesatu ostean bidalia</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_globalcontentpostcompile'] = '<p>Smarty-k bloke bat prozesatu ostean bidalia</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contenteditpre'] = '<p>Eduki bati egindako aldaketak gorde baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_contenteditpre'] = '<p>Eduki bati egindako aldaketak gorde baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Dagokion bloke objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contenteditpost'] = '<p>Eduki bati egindako aldaketak gorde ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_contenteditpost'] = '<p>Eduki bati egindako aldaketak gorde ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentdeletepre'] = '<p>Eduki bat sistematik ezabatu baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_contentdeletepre'] = '<p>Eduki bat sistematik ezabatu baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentdeletepost'] = '<p>Eduki bat sistematik ezabatu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_contentdeletepost'] = '<p>Eduki bat sistematik ezabatu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentstylesheet'] = '<p>Estilo-orri bat nabigatzailera bidali baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_contentstylesheet'] = '<p>Estilo-orri bat nabigatzailera bidali baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentprecompile'] = '<p>Smarty-k prozesa dezan edozein eduki bidali baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_contentprecompile'] = '<p>Smarty-k prozesa dezan edozein eduki bidali baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentpostcompile'] = '<p>Smarty-k edozein eduki prozesatu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_contentpostcompile'] = '<p>Smarty-k edozein eduki prozesatu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentpostrender'] = '<p>Konbinatutako html-a nabigatzailera bidali baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_contentpostrender'] = '<p>Konbinatutako html-a nabigatzailera bidali baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_smartyprecompile'] = '<p>Smarty-k prozesa dezan edozein eduki bidali baino lehen bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_smartyprecompile'] = '<p>Smarty-k prozesa dezan edozein eduki bidali baino lehen bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_smartypostcompile'] = '<p>Smarty-k edozein eduki prozesatu ostean bidalia.</p>
-<h4>Parametroak</h4>
-<ul>
-<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
-</ul>
+$lang['admin']['event_help_smartypostcompile'] = '<p>Smarty-k edozein eduki prozesatu ostean bidalia.</p>
+
+<h4>Parametroak</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Dagokion eduki objektuari erreferentzia.</li>
+
+</ul>
+
 ';
 $lang['admin']['filterbymodule'] = 'Moduluen Arabera Filtratu';
 $lang['admin']['showall'] = 'Dena Erakutsi';

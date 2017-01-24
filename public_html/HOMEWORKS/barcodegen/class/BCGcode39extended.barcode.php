@@ -7,7 +7,7 @@
  *
  *--------------------------------------------------------------------
  * Revision History
- * v2.0.0	23 apr	2008	Jean-Sébastien Goupil	New Version Update
+ * v2.0.0	23 apr	2008	Jean-Sï¿½bastien Goupil	New Version Update
  *--------------------------------------------------------------------
  * $Id: BCGcode39extended.barcode.php,v 1.3 2009/11/09 04:08:41 jsgoupil Exp $
  *--------------------------------------------------------------------

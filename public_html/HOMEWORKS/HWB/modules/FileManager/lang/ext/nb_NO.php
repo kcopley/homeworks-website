@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Bare brukt om avansert mode er p&aring;sl&aring;
 $lang['showhiddenfiles'] = 'Vis skjulte filer';
 $lang['settingsconfirmsingledelete'] = 'Bekreft sletting av en enkelt fil?';
 $lang['settingssaved'] = 'Innstillinger lagret';
-$lang['help'] = '		<h3>Hva gj&oslash;r denne?</h3>
-		<p>Denne modulen tilbyr filbehandlingsfunksjoner.</p>
-		<h3>Hvordan bruker jeg denne?</h3>
+$lang['help'] = '		<h3>Hva gj&oslash;r denne?</h3>
+
+		<p>Denne modulen tilbyr filbehandlingsfunksjoner.</p>
+
+		<h3>Hvordan bruker jeg denne?</h3>
+
 		<p>Velg den fra innholdsmenyen i  administrasjon.</p>';
 $lang['utmz'] = '156861353.1288991067.3364.78.utmccn=(referral)|utmcsr=cmsmadesimple.org|utmcct=/about-link/special-fans-listing/|utmcmd=referral';
 $lang['utma'] = '156861353.179052623084110100.1210423577.1290337505.1290347334.3406';

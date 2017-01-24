@@ -75,7 +75,8 @@ $lang['prompt_template'] = '&Scaron;ablono &scaron;altinis';
 $lang['title_form_sysdefault'] = 'Įprastas formos &scaron;ablonas ';
 $lang['title_summary_sysdefault'] = 'Įprastas santraukos &scaron;ablonas';
 $lang['title_detail_sysdefault'] = 'Įprastas detalus &scaron;ablonas';
-$lang['info_sysdefault2'] = '<strong>Dėmesio:</strong> &Scaron;ioje kortelėje esančios teksto sritys kuriose yra &scaron;ablonai kurie rodomi kai paspaudžiamas &#039;kurti naują&#039; santraukos, detalus, formos &scaron;ablonus. Turinio pakeitimas &scaron;ioje kortelėje  <strong>neturės jokios įtakos esamiems &scaron;ablonams</strong>
+$lang['info_sysdefault2'] = '<strong>Dėmesio:</strong> &Scaron;ioje kortelėje esančios teksto sritys kuriose yra &scaron;ablonai kurie rodomi kai paspaudžiamas &#039;kurti naują&#039; santraukos, detalus, formos &scaron;ablonus. Turinio pakeitimas &scaron;ioje kortelėje  <strong>neturės jokios įtakos esamiems &scaron;ablonams</strong>
+
 ';
 $lang['info_sysdefault'] = '<em>(turinys naudojamas kai kuriamas naujas &scaron;ablonas)</em>';
 $lang['template'] = '&Scaron;ablonas';
@@ -167,66 +168,116 @@ $lang['options'] = 'Nustatymai';
 $lang['optionsupdated'] = 'Nustaymai atnaujinti.';
 $lang['useexpiration'] = 'Naudoti galiojimo datą';
 $lang['eventdesc-NewsArticleAdded'] = 'Nusiųsti kai straipsnis įdėtas.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-<li>\&quot;category_id\&quot; - Id of the category for this article</li>
-<li>\&quot;title\&quot; - Title of the article</li>
-<li>\&quot;content\&quot; - Content of the article</li>
-<li>\&quot;summary\&quot; - Summary of the article</li>
-<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
-<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
-<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
-<li>\&quot;useexp\&quot; - Wether the expiration date should be ignored or not</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+<li>\&quot;category_id\&quot; - Id of the category for this article</li>
+
+<li>\&quot;title\&quot; - Title of the article</li>
+
+<li>\&quot;content\&quot; - Content of the article</li>
+
+<li>\&quot;summary\&quot; - Summary of the article</li>
+
+<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
+
+<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
+
+<li>\&quot;useexp\&quot; - Wether the expiration date should be ignored or not</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Nusiųsti kai straipsnis redaguotas.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-<li>\&quot;category_id\&quot; - Id of the category for this article</li>
-<li>\&quot;title\&quot; - Title of the article</li>
-<li>\&quot;content\&quot; - Content of the article</li>
-<li>\&quot;summary\&quot; - Summary of the article</li>
-<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
-<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
-<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
-<li>\&quot;useexp\&quot; - Wether the expiration date should be ignored or not</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+<li>\&quot;category_id\&quot; - Id of the category for this article</li>
+
+<li>\&quot;title\&quot; - Title of the article</li>
+
+<li>\&quot;content\&quot; - Content of the article</li>
+
+<li>\&quot;summary\&quot; - Summary of the article</li>
+
+<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
+
+<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
+
+<li>\&quot;useexp\&quot; - Wether the expiration date should be ignored or not</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Nusiųsti kai straipsnis i&scaron;trintas.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Nusiųsti kai kategorija pridėta.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news category</li>
-<li>\&quot;name\&quot; - Name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news category</li>
+
+<li>\&quot;name\&quot; - Name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Nusiųsti kai kategorija redaguota.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news category</li>
-<li>\&quot;name\&quot; - Name of the news category</li>
-<li>\&quot;origname\&quot; - The original name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news category</li>
+
+<li>\&quot;name\&quot; - Name of the news category</li>
+
+<li>\&quot;origname\&quot; - The original name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Nusiųsti kai kategorija i&scaron;trinta.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the deleted category </li>
-<li>\&quot;name\&quot; - Name of the deleted category</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the deleted category </li>
+
+<li>\&quot;name\&quot; - Name of the deleted category</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'This parameter is only applicable to the detail view.  It allows specifying which news article to display in detail mode.  If the special value -1 is used, the system will display the newest, published, non expired article.';
 $lang['helpnumber'] = 'Maximalus rodomų elementų skaičius =- palikite tu&scaron;čia, rodys visus.';
@@ -243,24 +294,42 @@ $lang['helpdetailpage'] = 'Page to display News details in.  This can either be 
 $lang['helpshowarchive'] = 'Rodyti tik pasibaigusio galiojimo naujienų straipsnius.';
 $lang['helpbrowsecat'] = 'Rodyti nar&scaron;oma kategorijų sąra&scaron;ą.';
 $lang['helpaction'] = 'Override the default action.  Possible values are &#039;default&#039; to display the summary view, and &#039;fesubmit&#039; to display the frontend form for allowing users to submit news articles on the front end.';
-$lang['help'] = '	<h3>Ką jis daro?</h3>
-	<p>Naujienų modulis rodo naujienas jūsų puslapyje, pana&scaron;iu kaip &#039;blog&#039; stiliumi, tik su daugiau galimybių. Kai meniu modulis įdiegtas, Naujienų administravimo puslapis yra įdedamas į meniu apačią, kuris jums leis parinkti ar pridėti naujienų kategoriją.</p>
-	<h3>Saugumas</h3>
-	<p>Vartotojas turi priklausyti grupei su prieiga &#039;Redaguoti Naujienas&#039; (&#039;Modify News&#039;), tam kad galėtu pridėti, redaguoti ar trinti naujienų įra&scaron;us.</p>
-	<h3>Kaip jį naudoti?</h3>
-	<p>Lengviausias būdas naudojant cms_module žymę. Bus įterptas modulis į jūsų &scaron;abloną ar puslapį ir rodys naujienų įra&scaron;us. Kodas turėtų būti pana&scaron;us kaip: <code>{cms_module module=&quot;news&quot; number=&quot;5&quot; category=&quot;beer&quot;}</code></p>
-	<h3>Kokie parametrai egzistuoja?</h3>
-	<p>
-	<ul>
-	<li><em>(optional)</em> number=&quot;5&quot; - Maksimalus rodomų įra&scaron;ų skaičius =- palikus tu&scaron;čią, bus rodomi visi įra&scaron;ai</li>
-	<li><em>(optional)</em> makerssbutton=&quot;true&quot; - Sukuriamas naujienų įra&scaron;ų RSSui mygtukas.</li>
-	<li><em>(optional)</em> category=&quot;category&quot; - Rodyti tik tos kategorijos įra&scaron;us ir jos vaikus. Palikus tu&scaron;čią, rodomos visos kategorijos.</li>
-	<li><em>(optional)</em> moretext=&quot;more...&quot; - Tekstas, kuris rodomas kai naujiena vir&scaron;iją santrauką. Nustatytas &quot;more...&quot;.</li>
-	<li><em>(optional}</em> summarytemplate=&quot;sometemplate.tpl&quot; - Naudokite atskirą &scaron;abloną rodyti naujienų santrauką. Jį reikia sukurti modules/News/templates.
-	<li><em>(optional}</em> detailtemplate=&quot;sometemplate.tpl&quot; - Naudokite atskirą &scaron;abloną rodyti visas naujienas. Jį reikia sukurti modules/News/templates.
-	<li><em>(optional)</em> sortby=&quot;news_date&quot; - Rū&scaron;iavimo laukas. Pasirinkimai: &quot;news_date&quot;, &quot;summary&quot;, &quot;news_data&quot;, &quot;news_category&quot;, &quot;news_title&quot;. Nustatyta: &quot;news_date&quot;.</li>
-	<li><em>(optional)</em> sortasc=&quot;true&quot; - Rū&scaron;iuoti naujienas didėjančia tvarka.</li>
-	</ul>
+$lang['help'] = '	<h3>Ką jis daro?</h3>
+
+	<p>Naujienų modulis rodo naujienas jūsų puslapyje, pana&scaron;iu kaip &#039;blog&#039; stiliumi, tik su daugiau galimybių. Kai meniu modulis įdiegtas, Naujienų administravimo puslapis yra įdedamas į meniu apačią, kuris jums leis parinkti ar pridėti naujienų kategoriją.</p>
+
+	<h3>Saugumas</h3>
+
+	<p>Vartotojas turi priklausyti grupei su prieiga &#039;Redaguoti Naujienas&#039; (&#039;Modify News&#039;), tam kad galėtu pridėti, redaguoti ar trinti naujienų įra&scaron;us.</p>
+
+	<h3>Kaip jį naudoti?</h3>
+
+	<p>Lengviausias būdas naudojant cms_module žymę. Bus įterptas modulis į jūsų &scaron;abloną ar puslapį ir rodys naujienų įra&scaron;us. Kodas turėtų būti pana&scaron;us kaip: <code>{cms_module module=&quot;news&quot; number=&quot;5&quot; category=&quot;beer&quot;}</code></p>
+
+	<h3>Kokie parametrai egzistuoja?</h3>
+
+	<p>
+
+	<ul>
+
+	<li><em>(optional)</em> number=&quot;5&quot; - Maksimalus rodomų įra&scaron;ų skaičius =- palikus tu&scaron;čią, bus rodomi visi įra&scaron;ai</li>
+
+	<li><em>(optional)</em> makerssbutton=&quot;true&quot; - Sukuriamas naujienų įra&scaron;ų RSSui mygtukas.</li>
+
+	<li><em>(optional)</em> category=&quot;category&quot; - Rodyti tik tos kategorijos įra&scaron;us ir jos vaikus. Palikus tu&scaron;čią, rodomos visos kategorijos.</li>
+
+	<li><em>(optional)</em> moretext=&quot;more...&quot; - Tekstas, kuris rodomas kai naujiena vir&scaron;iją santrauką. Nustatytas &quot;more...&quot;.</li>
+
+	<li><em>(optional}</em> summarytemplate=&quot;sometemplate.tpl&quot; - Naudokite atskirą &scaron;abloną rodyti naujienų santrauką. Jį reikia sukurti modules/News/templates.
+
+	<li><em>(optional}</em> detailtemplate=&quot;sometemplate.tpl&quot; - Naudokite atskirą &scaron;abloną rodyti visas naujienas. Jį reikia sukurti modules/News/templates.
+
+	<li><em>(optional)</em> sortby=&quot;news_date&quot; - Rū&scaron;iavimo laukas. Pasirinkimai: &quot;news_date&quot;, &quot;summary&quot;, &quot;news_data&quot;, &quot;news_category&quot;, &quot;news_title&quot;. Nustatyta: &quot;news_date&quot;.</li>
+
+	<li><em>(optional)</em> sortasc=&quot;true&quot; - Rū&scaron;iuoti naujienas didėjančia tvarka.</li>
+
+	</ul>
+
 	</p>';
 $lang['utmz'] = '156861353.1250297380.1752.42.utmccn=(referral)|utmcsr=helminsen.no|utmcct=/install/upgrade.php|utmcmd=referral';
 $lang['utma'] = '156861353.179052623084110100.1210423577.1259353230.1259355475.2152';

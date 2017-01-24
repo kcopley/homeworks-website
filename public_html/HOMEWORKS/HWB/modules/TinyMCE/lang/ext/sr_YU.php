@@ -78,7 +78,8 @@ $lang['datetimeformat_help'] = 'Kliknite ovde za pomoć kako da formatirate datu
 $lang['extraconfigtext'] = 'Dodatne konfiguracije';
 $lang['extraconfighelp2'] = 'Jedna izjava po redu, zarezi će biti dodait pre i posle ovog sadržaja. Proverite TinyMCE-Wiki za instrukcije.';
 $lang['customdropdowntext'] = 'Prilagođen dropdown';
-$lang['customdropdownhelp'] = 'Ubacuje prilagođene snipete koda/teksta s izborom iz dropdown menija.
+$lang['customdropdownhelp'] = 'Ubacuje prilagođene snipete koda/teksta s izborom iz dropdown menija.
+
 Očigledne koristi su za lak pristup tagova, itd. Meni se umetne u tollbar/alatkama s pomoću &#039;customdropdown&#039;.';
 $lang['startenabledtext'] = 'Pokretanje skripta omogućeno';
 $lang['startenabledhelp'] = 'Opozvati izbor pokreće Tiny-urednik u deaktiviranom stanju. Treba da se koristi zajedno sa toggle tasterom.';
@@ -106,11 +107,16 @@ $lang['ignoremodifyfileshelp'] = 'Upozorenje! Ovo omogućava neke fajl-izmene op
 $lang['showtogglebutton_text'] = 'Prikaži checkbox za wysiwyg on/off';
 $lang['togglewysiwyg'] = 'Uključi/Isključi WYSIWYG';
 $lang['styles_tab'] = 'CSS Stilovi';
-$lang['styles_help'] = ' Ukoliko ovo polje ostavite prazno, TinyMCE će parsirati Va&scaron; CSS fajl i izlistaće klase stilova koji su uneti za korisnika.
- Ukoliko želite da određeni stilovi budu vidljivi samo korisniku, navedite ih u formi &quot;CustomName1=style1; CustomName2=style2&quot;, 
-  &quot;style1&quot; being a class call in your stylesheet and you don&#039;t put the . 
-  normally used for class calls as it is already in your CSS, it will look like this <span class=&quot;style1&quot;>text</span>, 
-  in the first field below. 
+$lang['styles_help'] = ' Ukoliko ovo polje ostavite prazno, TinyMCE će parsirati Va&scaron; CSS fajl i izlistaće klase stilova koji su uneti za korisnika.
+
+ Ukoliko želite da određeni stilovi budu vidljivi samo korisniku, navedite ih u formi &quot;CustomName1=style1; CustomName2=style2&quot;, 
+
+  &quot;style1&quot; being a class call in your stylesheet and you don&#039;t put the . 
+
+  normally used for class calls as it is already in your CSS, it will look like this <span class=&quot;style1&quot;>text</span>, 
+
+  in the first field below. 
+
 ';
 $lang['css_styles_text'] = 'Stilovi';
 $lang['accessdenied'] = 'Pristup niJe dozvoljen. Molimo proverite dozvole.';
@@ -171,24 +177,42 @@ $lang['thousanddelimiter'] = '.';
 $lang['size'] = 'Veličina';
 $lang['dimensions'] = '&Scaron;xV';
 $lang['advanced_tab'] = 'Napredno';
-$lang['help'] = '	<h3>&Scaron;ta ovaj modul radi?</h3>
-	<p>Omogućava TinyMCE da se koristi kao WYSIWYG urednik.</p>
-	<h3>Kako da ga koristim?</h3>
-	<p>Instalirajte ga, a zatim idite na Pode&scaron;avanje korisnika i postavite TinyMCE WYSIWIG da bude va&scaron; izbor.</p>
-  <h3>Spellchecker</h3>
-  <p>Od verzije 2.6.0, TinyMCE uključuje online proveru pravopisa. Molimo vas da znate da mora biti uključen SSL na va&scaron;oj server konfiguraciji da bi taj mogao da radi. Na nekim serverima ova opcija se zove php_openssl, ali mogu i da se razlikuju</p>
-	<h3>Re&scaron;avanje problema</h3>
-	Neki ljudi imaju problem sa tiny da se ne prikaže nakon instalacije ili nadogradnje. Ovde je spisak stvari koje možete da isprobate pre nego &scaron;to mi se obratite za dalju podr&scaron;ku.
-	<br/>
-	<ul>
-	<li>1. Molim, molim vas, poku&scaron;ajte ponovo učitati modules/TinyMCE direktorij na serveru. Bili bi zaprepa&scaron;teni koliko puta je ovo pomoglo nekim ljudima.</li>	
-	<li>2. Ako ste ga nadogradili, poku&scaron;ajte da vratite sva pode&scaron;avanja. Nije lepo ako ste uradili dosta prilagođavanja, znam, ali puno stvari se je promenilo od 2.3.x do 2.4.x serije modula.
-	<li>3. Poku&scaron;ajte da omogućite statički config opciju u napredninm pode&scaron;avanjima. Ovo radi bolje na nekim sistemima (kao CGI baziranim) Imajte na umu da to zahteva va&scaron; /tmp/ direktorij da je writable na webserveru</li>
-	</ul>
-	<br/>
-  <h3>Plugin razvijanje</h3>
- Od verzije 2.7.0 TinyMCE modul ima mogućnost da dozvoli drugim modulima da se registruje ekstenzija za tog. Naprimer prilagođenu ikonu koja vam omogućava da umetnete sadržaj iz nekih modula, kao &scaron;to Je Gallery, itd kako se to radi je prilično tehnolog&scaron;ka stvara, ali ako ste modul programer i zainteresovani molimo da pogledate u TinyMCE /docs direktorij za dalja uputstva.
-		
+$lang['help'] = '	<h3>&Scaron;ta ovaj modul radi?</h3>
+
+	<p>Omogućava TinyMCE da se koristi kao WYSIWYG urednik.</p>
+
+	<h3>Kako da ga koristim?</h3>
+
+	<p>Instalirajte ga, a zatim idite na Pode&scaron;avanje korisnika i postavite TinyMCE WYSIWIG da bude va&scaron; izbor.</p>
+
+  <h3>Spellchecker</h3>
+
+  <p>Od verzije 2.6.0, TinyMCE uključuje online proveru pravopisa. Molimo vas da znate da mora biti uključen SSL na va&scaron;oj server konfiguraciji da bi taj mogao da radi. Na nekim serverima ova opcija se zove php_openssl, ali mogu i da se razlikuju</p>
+
+	<h3>Re&scaron;avanje problema</h3>
+
+	Neki ljudi imaju problem sa tiny da se ne prikaže nakon instalacije ili nadogradnje. Ovde je spisak stvari koje možete da isprobate pre nego &scaron;to mi se obratite za dalju podr&scaron;ku.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Molim, molim vas, poku&scaron;ajte ponovo učitati modules/TinyMCE direktorij na serveru. Bili bi zaprepa&scaron;teni koliko puta je ovo pomoglo nekim ljudima.</li>	
+
+	<li>2. Ako ste ga nadogradili, poku&scaron;ajte da vratite sva pode&scaron;avanja. Nije lepo ako ste uradili dosta prilagođavanja, znam, ali puno stvari se je promenilo od 2.3.x do 2.4.x serije modula.
+
+	<li>3. Poku&scaron;ajte da omogućite statički config opciju u napredninm pode&scaron;avanjima. Ovo radi bolje na nekim sistemima (kao CGI baziranim) Imajte na umu da to zahteva va&scaron; /tmp/ direktorij da je writable na webserveru</li>
+
+	</ul>
+
+	<br/>
+
+  <h3>Plugin razvijanje</h3>
+
+ Od verzije 2.7.0 TinyMCE modul ima mogućnost da dozvoli drugim modulima da se registruje ekstenzija za tog. Naprimer prilagođenu ikonu koja vam omogućava da umetnete sadržaj iz nekih modula, kao &scaron;to Je Gallery, itd kako se to radi je prilično tehnolog&scaron;ka stvara, ali ako ste modul programer i zainteresovani molimo da pogledate u TinyMCE /docs direktorij za dalja uputstva.
+
+		
+
 ';
 $lang['utma'] = '156861353.407104975.1290435219.1290435219.1290435219.1';
 $lang['utmb'] = '156861353.2.10.1290435219';

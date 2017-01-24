@@ -176,66 +176,116 @@ $lang['options'] = 'Options ';
 $lang['optionsupdated'] = 'Les options ont &eacute;t&eacute; mises &agrave; jour avec succ&egrave;s';
 $lang['useexpiration'] = 'Utiliser la date d&#039;expiration&nbsp;';
 $lang['eventdesc-NewsArticleAdded'] = 'Envoy&eacute; quand un article est ajout&eacute;';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Envoy&eacute; quand un article est ajout&eacute;</p>
-<h4>Param&egrave;tres</h4>
-<ul>
-<li>&quot;news_id&quot; - Id de l&#039;article</li>
-<li>&quot;category_id&quot; - Id de la cat&eacute;gorie de cet article</li>
-<li>&quot;title&quot; - Titre de l&#039;article</li>
-<li>&quot;content&quot; - Contenu de l&#039;article</li>
-<li>&quot;summary&quot; - Sommaire de l&#039;article</li>
-<li>&quot;status&quot; - Statut de l&#039;article (&quot;draft&quot; or &quot;published&quot;)</li>
-<li>&quot;start_time&quot; - Date de d&eacute;but de publication de l&#039;article</li>
-<li>&quot;end_time&quot; - Date de fin de publication de l&#039;article</li>
-<li>&quot;useexp&quot; - Si la date d&#039;expiration doit &ecirc;tre ignor&eacute;e ou pas</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Envoy&eacute; quand un article est ajout&eacute;</p>
+
+<h4>Param&egrave;tres</h4>
+
+<ul>
+
+<li>&quot;news_id&quot; - Id de l&#039;article</li>
+
+<li>&quot;category_id&quot; - Id de la cat&eacute;gorie de cet article</li>
+
+<li>&quot;title&quot; - Titre de l&#039;article</li>
+
+<li>&quot;content&quot; - Contenu de l&#039;article</li>
+
+<li>&quot;summary&quot; - Sommaire de l&#039;article</li>
+
+<li>&quot;status&quot; - Statut de l&#039;article (&quot;draft&quot; or &quot;published&quot;)</li>
+
+<li>&quot;start_time&quot; - Date de d&eacute;but de publication de l&#039;article</li>
+
+<li>&quot;end_time&quot; - Date de fin de publication de l&#039;article</li>
+
+<li>&quot;useexp&quot; - Si la date d&#039;expiration doit &ecirc;tre ignor&eacute;e ou pas</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Envoy&eacute; quand un article est &eacute;dit&eacute;';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Envoy&eacute; quand un article est &eacute;dit&eacute;</p>
-<h4>Param&egrave;tres</h4>
-<ul>
-<li>&quot;news_id&quot; - Id de l&#039;article</li>
-<li>&quot;category_id&quot; - Id de la cat&eacute;gorie de cet article</li>
-<li>&quot;title&quot; - Titre de l&#039;article</li>
-<li>&quot;content&quot; - Contenu de l&#039;article</li>
-<li>&quot;summary&quot; - Sommaire de l&#039;article</li>
-<li>&quot;status&quot; - Statut de l&#039;article (&quot;draft&quot; or &quot;published&quot;)</li>
-<li>&quot;start_time&quot; - Date de d&eacute;but de publication de l&#039;article</li>
-<li>&quot;end_time&quot; - Date de fin de publication de l&#039;article</li>
-<li>&quot;useexp&quot; - Si la date d&#039;expiration doit &ecirc;tre ignor&eacute;e ou pas</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Envoy&eacute; quand un article est &eacute;dit&eacute;</p>
+
+<h4>Param&egrave;tres</h4>
+
+<ul>
+
+<li>&quot;news_id&quot; - Id de l&#039;article</li>
+
+<li>&quot;category_id&quot; - Id de la cat&eacute;gorie de cet article</li>
+
+<li>&quot;title&quot; - Titre de l&#039;article</li>
+
+<li>&quot;content&quot; - Contenu de l&#039;article</li>
+
+<li>&quot;summary&quot; - Sommaire de l&#039;article</li>
+
+<li>&quot;status&quot; - Statut de l&#039;article (&quot;draft&quot; or &quot;published&quot;)</li>
+
+<li>&quot;start_time&quot; - Date de d&eacute;but de publication de l&#039;article</li>
+
+<li>&quot;end_time&quot; - Date de fin de publication de l&#039;article</li>
+
+<li>&quot;useexp&quot; - Si la date d&#039;expiration doit &ecirc;tre ignor&eacute;e ou pas</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Envoy&eacute; quand un article est supprim&eacute;';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Envoy&eacute; quand un article est supprim&eacute;</p>
-<h4>Param&egrave;tres</h4>
-<ul>
-<li>&quot;news_id&quot; - Id de l&#039;article</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Envoy&eacute; quand un article est supprim&eacute;</p>
+
+<h4>Param&egrave;tres</h4>
+
+<ul>
+
+<li>&quot;news_id&quot; - Id de l&#039;article</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Envoy&eacute; quand une cat&eacute;gorie est ajout&eacute;e';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Envoy&eacute; quand une cat&eacute;gorie est ajout&eacute;e</p>
-<h4>Param&egrave;tres</h4>
-<ul>
-<li>&quot;category_id&quot; - Id de la cat&eacute;gorie</li>
-<li>&quot;name&quot; - Nom de la cat&eacute;gorie</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Envoy&eacute; quand une cat&eacute;gorie est ajout&eacute;e</p>
+
+<h4>Param&egrave;tres</h4>
+
+<ul>
+
+<li>&quot;category_id&quot; - Id de la cat&eacute;gorie</li>
+
+<li>&quot;name&quot; - Nom de la cat&eacute;gorie</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Envoy&eacute; quand une cat&eacute;gorie est &eacute;dit&eacute;e';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Envoy&eacute; quand une cat&eacute;gorie est &eacute;dit&eacute;e</p>
-<h4>Param&egrave;tres</h4>
-<ul>
-<li>&quot;category_id&quot; - Id de la cat&eacute;gorie</li>
-<li>&quot;name&quot; - Nom de la cat&eacute;gorie</li>
-<li>&quot;origname&quot; - Nom original de la cat&eacute;gorie</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Envoy&eacute; quand une cat&eacute;gorie est &eacute;dit&eacute;e</p>
+
+<h4>Param&egrave;tres</h4>
+
+<ul>
+
+<li>&quot;category_id&quot; - Id de la cat&eacute;gorie</li>
+
+<li>&quot;name&quot; - Nom de la cat&eacute;gorie</li>
+
+<li>&quot;origname&quot; - Nom original de la cat&eacute;gorie</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Envoy&eacute; quand une cat&eacute;gorie est supprim&eacute;e';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Envoy&eacute; quand une cat&eacute;gorie est supprim&eacute;e</p>
-<h4>Param&egrave;tres</h4>
-<ul>
-<li>&quot;category_id&quot; - Id de la cat&eacute;gorie</li>
-<li>&quot;name&quot; - Nom de la cat&eacute;gorie supprim&eacute;e</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Envoy&eacute; quand une cat&eacute;gorie est supprim&eacute;e</p>
+
+<h4>Param&egrave;tres</h4>
+
+<ul>
+
+<li>&quot;category_id&quot; - Id de la cat&eacute;gorie</li>
+
+<li>&quot;name&quot; - Nom de la cat&eacute;gorie supprim&eacute;e</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'Ce param&egrave;tre est applicable uniquement &agrave; la vue de d&eacute;tail. Il permet de sp&eacute;cifier que l&#039;article sera afficher en mode d&eacute;tail. Si la valeur utilis&eacute;e est -1, le syst&egrave;me affichera l&#039;article le plus r&eacute;cemment, publi&eacute;, mais non expir&eacute;.';
 $lang['helpnumber'] = 'Le nombre maximal d&#039;articles &agrave; afficher -- laisser ce param&egrave;tre vide affichera tous les articles. C&#039;est identique au param&egrave;tre &quot;pagelimit&quot;.';
@@ -251,40 +301,73 @@ $lang['helpsortasc'] = 'Trie les articles dans un ordre de date ascendant plut&o
 $lang['helpdetailpage'] = 'Page dans laquelle afficher le d&eacute;tail des articles. Vous pouvez entrer soit un alias, soit un ID de page. Utile pour permettre d&#039;afficher le d&eacute;tail de l&#039;article dans un gabarit de page diff&eacute;rent de celui du sommaire.';
 $lang['helpshowarchive'] = 'Afficher seulement les articles expir&eacute;s.';
 $lang['helpbrowsecat'] = 'Afficher une liste navigable de cat&eacute;gories';
-$lang['helpaction'] = 'Outrepasse l&#039;action par d&eacute;faut. Les valeurs possibles sont :
-<ul>
-<li>&quot;detail&quot; - pour afficher l&#039;article en mode d&eacute;tail.</li>
-<li>&quot;default&quot; - pour afficher le sommaire de l&#039;article</li>
-<li>&quot;fesubmit&quot; - pour afficher le gabarit de soumission (frontend) d&#039;articles des utilisateurs dans les pages du site.</li>
-<li>&quot;browsecat&quot; - pour afficher une liste de cat&eacute;gories.</li>
-</ul>
-
+$lang['helpaction'] = 'Outrepasse l&#039;action par d&eacute;faut. Les valeurs possibles sont :
+
+<ul>
+
+<li>&quot;detail&quot; - pour afficher l&#039;article en mode d&eacute;tail.</li>
+
+<li>&quot;default&quot; - pour afficher le sommaire de l&#039;article</li>
+
+<li>&quot;fesubmit&quot; - pour afficher le gabarit de soumission (frontend) d&#039;articles des utilisateurs dans les pages du site.</li>
+
+<li>&quot;browsecat&quot; - pour afficher une liste de cat&eacute;gories.</li>
+
+</ul>
+
+
+
 ';
-$lang['help'] = '<h3>Notes Importantes</h3>
-<p>la Version 2.9 a supprim&eacute; le format &quot;formatpostdate&quot; des gabarits, et a &eacute;galement supprim&eacute; le param&egrave;tre &quot;dateformat&quot;. Vous devez utiliser le param&egrave;tre &quot;cms_date_format&quot; (comme indiqu&eacute; dans les gabarits par d&eacute;faut) pour les format des dates, et devrait utiliser entry->postdate au lieu de entry->formatpostdate dans vos gabarits.</p>
-<h3>Que fait ce module ?</h3>
-	<p>Articles (News en anglais) est un module qui sert &agrave; afficher des articles sur vos pages, de fa&ccedil;on similaire &agrave; un blog, mais avec plus de fonctions ! D&egrave;s que le module est install&eacute;, une page de gestion des articles est ajout&eacute;e au menu d&#039;administration qui vous permettra de s&eacute;lectionner ou ajouter des cat&eacute;gories d&#039;articles. D&egrave;s qu&#039;une cat&eacute;gorie d&#039;article est s&eacute;lectionn&eacute;e ou cr&eacute;&eacute;e, une liste des articles pour cette cat&eacute;gorie est affich&eacute;e. Depuis l&agrave;, vous pouvez ajouter, &eacute;diter ou supprimer les articles dans cette cat&eacute;gorie.</p>
-<h4>Champs personnalis&eacute;s</h4>
-<p>Le module permet de d&eacute;finir de nombreux champs personnalis&eacute;s (y compris les fichiers et images) qui vous permettront de joindre des fichiers PDF ou de nombreuses images &agrave; vos articles.</p>
-            <h4>Cat&eacute;gories</h4>
-	<p>Le module News (Articles) fournit un m&eacute;canisme de cat&eacute;gories hi&eacute;rarchiques de l&#039;organisation de vos articles. Un article ne peut &ecirc;tre qu&#039;en un seul endroit dans la hi&eacute;rarchie</p>
-	<h4>Expiration et le statut</h4>
-	<p>Chaque article peut avoir une option de date d&#039;expiration, qui n&#039;affichera plus l&#039;article sur votre page Web. En outre, les articles peuvent &ecirc;tre marqu&eacute;s comme <em>brouillon</em> pour les supprimer d&eacute;finitivement de l&#039;affichage votre page Web</p>
-	<h3>S&eacute;curit&eacute;</h3>
-	<p>L&#039;utilisateur doit faire partie d&#039;un groupe avec la permission &#039;Modify News&#039; pour pouvoir ajouter, &eacute;diter ou supprimer des articles.</p>
-<p>Pour supprimer les articles, l&#039;utilisateur doit faire partie d&#039;un groupe avec la permission &#039;Delete News Articles&#039;..</p>
-	<p>Pour modifier la pr&eacute;sentation des gabarits, l&#039;utilisateur doit faire partie d&#039;un groupe avec la permission &quot;Modify Templates&quot;</p>
-	<p>Pour modifier les pr&eacute;f&eacute;rences globales du module, l&#039;utilisateur doit faire partie d&#039;un groupe avec la permission &#039;Modify Site Preferences&#039;.</p>
-	<p>En plus, pour approuver les articles soumis par un visiteur sur la page du site (frontend) l&#039;utilisateur doit appartenir &agrave; un groupe avec la permission  &#039;Approve News&#039; .</p>
-	<h3>Comment l&#039;utiliser&nbsp;?</h3>
-	<p>La fa&ccedil;on la plus facile de l&#039;utiliser est avec la balise wrapper {news} (englobe le module dans une simple balise pour simplifier la syntaxe).  Cela ins&egrave;rera votre module dans votre gabarit ou votre page &agrave; l&#039;endroit d&eacute;sir&eacute;, et y affichera les articles.  Exemple de syntaxe : <code>{news number=&#039;5&#039;}</code></p>
-<h3>Gabarits</h3>
-	<p>Depuis la version 2.3 le module News peut utiliser diff&eacute;rentes bases de donn&eacute;es, et donc n&#039;utilise plus les fichiers de &quot;templates&quot;. Les utilisateurs qui avaient des anciens fichiers gabarits doivent faire les modifications suivantes (pour chaque fichier gabarits) :</p>
-<ul>
-<li>Copier le fichier dans le presse papier</li>
-<li>Cr&eacute;er un nouveau gabarit <em>(sommaire ou d&eacute;tail suivant le besoin)</em>. Donner le m&ecirc;me nom au gabarit que l&#039;ancien nom du gabarits (y compris l&#039;extension .tpl), et coller le contenu depuis le presse papier.</li>
-<li>Cliquer sur le bouton Envoyer</li>
-</ul>
+$lang['help'] = '<h3>Notes Importantes</h3>
+
+<p>la Version 2.9 a supprim&eacute; le format &quot;formatpostdate&quot; des gabarits, et a &eacute;galement supprim&eacute; le param&egrave;tre &quot;dateformat&quot;. Vous devez utiliser le param&egrave;tre &quot;cms_date_format&quot; (comme indiqu&eacute; dans les gabarits par d&eacute;faut) pour les format des dates, et devrait utiliser entry->postdate au lieu de entry->formatpostdate dans vos gabarits.</p>
+
+<h3>Que fait ce module ?</h3>
+
+	<p>Articles (News en anglais) est un module qui sert &agrave; afficher des articles sur vos pages, de fa&ccedil;on similaire &agrave; un blog, mais avec plus de fonctions ! D&egrave;s que le module est install&eacute;, une page de gestion des articles est ajout&eacute;e au menu d&#039;administration qui vous permettra de s&eacute;lectionner ou ajouter des cat&eacute;gories d&#039;articles. D&egrave;s qu&#039;une cat&eacute;gorie d&#039;article est s&eacute;lectionn&eacute;e ou cr&eacute;&eacute;e, une liste des articles pour cette cat&eacute;gorie est affich&eacute;e. Depuis l&agrave;, vous pouvez ajouter, &eacute;diter ou supprimer les articles dans cette cat&eacute;gorie.</p>
+
+<h4>Champs personnalis&eacute;s</h4>
+
+<p>Le module permet de d&eacute;finir de nombreux champs personnalis&eacute;s (y compris les fichiers et images) qui vous permettront de joindre des fichiers PDF ou de nombreuses images &agrave; vos articles.</p>
+
+            <h4>Cat&eacute;gories</h4>
+
+	<p>Le module News (Articles) fournit un m&eacute;canisme de cat&eacute;gories hi&eacute;rarchiques de l&#039;organisation de vos articles. Un article ne peut &ecirc;tre qu&#039;en un seul endroit dans la hi&eacute;rarchie</p>
+
+	<h4>Expiration et le statut</h4>
+
+	<p>Chaque article peut avoir une option de date d&#039;expiration, qui n&#039;affichera plus l&#039;article sur votre page Web. En outre, les articles peuvent &ecirc;tre marqu&eacute;s comme <em>brouillon</em> pour les supprimer d&eacute;finitivement de l&#039;affichage votre page Web</p>
+
+	<h3>S&eacute;curit&eacute;</h3>
+
+	<p>L&#039;utilisateur doit faire partie d&#039;un groupe avec la permission &#039;Modify News&#039; pour pouvoir ajouter, &eacute;diter ou supprimer des articles.</p>
+
+<p>Pour supprimer les articles, l&#039;utilisateur doit faire partie d&#039;un groupe avec la permission &#039;Delete News Articles&#039;..</p>
+
+	<p>Pour modifier la pr&eacute;sentation des gabarits, l&#039;utilisateur doit faire partie d&#039;un groupe avec la permission &quot;Modify Templates&quot;</p>
+
+	<p>Pour modifier les pr&eacute;f&eacute;rences globales du module, l&#039;utilisateur doit faire partie d&#039;un groupe avec la permission &#039;Modify Site Preferences&#039;.</p>
+
+	<p>En plus, pour approuver les articles soumis par un visiteur sur la page du site (frontend) l&#039;utilisateur doit appartenir &agrave; un groupe avec la permission  &#039;Approve News&#039; .</p>
+
+	<h3>Comment l&#039;utiliser&nbsp;?</h3>
+
+	<p>La fa&ccedil;on la plus facile de l&#039;utiliser est avec la balise wrapper {news} (englobe le module dans une simple balise pour simplifier la syntaxe).  Cela ins&egrave;rera votre module dans votre gabarit ou votre page &agrave; l&#039;endroit d&eacute;sir&eacute;, et y affichera les articles.  Exemple de syntaxe : <code>{news number=&#039;5&#039;}</code></p>
+
+<h3>Gabarits</h3>
+
+	<p>Depuis la version 2.3 le module News peut utiliser diff&eacute;rentes bases de donn&eacute;es, et donc n&#039;utilise plus les fichiers de &quot;templates&quot;. Les utilisateurs qui avaient des anciens fichiers gabarits doivent faire les modifications suivantes (pour chaque fichier gabarits) :</p>
+
+<ul>
+
+<li>Copier le fichier dans le presse papier</li>
+
+<li>Cr&eacute;er un nouveau gabarit <em>(sommaire ou d&eacute;tail suivant le besoin)</em>. Donner le m&ecirc;me nom au gabarit que l&#039;ancien nom du gabarits (y compris l&#039;extension .tpl), et coller le contenu depuis le presse papier.</li>
+
+<li>Cliquer sur le bouton Envoyer</li>
+
+</ul>
+
 <p>Ces diff&eacute;rentes &eacute;tapes r&eacute;solvent le probl&egrave;me de ces nouveaux gabarits afin d&#039;&eacute;viter les diff&eacute;rentes erreurs de Smarty quand vous mettez &agrave; jour vers une version de CMS avec un module de News version 2.3 ou sup&eacute;rieure.</p>';
 $lang['qca'] = 'P0-1532147203-1273233257739';
 $lang['utma'] = '156861353.1552570550.1277739492.1284456886.1284478759.4';

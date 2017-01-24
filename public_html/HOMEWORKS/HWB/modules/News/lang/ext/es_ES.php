@@ -166,63 +166,110 @@ $lang['options'] = 'Opciones';
 $lang['optionsupdated'] = 'Opciones actualizadas correctamente.';
 $lang['useexpiration'] = 'Usar Fecha de Caducidad';
 $lang['eventdesc-NewsArticleAdded'] = 'Se envia cuando a&ntilde;adimos un art&iacute;culo.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Se env&iacute;a cuando a&ntilde;adimos un art&iacute;culo.</p>
-<h4>Par&aacute;metros</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id del art&iacute;culo</li>
-<li>\&quot;category_id\&quot; - Id de la categor&iacute;a del art&iacute;culo</li>
-<li>\&quot;title\&quot; - T&iacute;tulo del art&iacute;culo</li>
-<li>\&quot;content\&quot; - Contenido del art&iacute;culo</li>
-<li>\&quot;summary\&quot; - Sumario del art&iacute;culo</li>
-<li>\&quot;status\&quot; - estado del art&iacute;culo (&quot;borrador&quot; o &quot;publicado&quot;)</li>
-<li>\&quot;start_time\&quot; - Fecha de inicio de publicaci&oacute;n del art&iacute;culo</li>
-<li>\&quot;end_time\&quot; - Fecha de caducidad del art&iacute;culo</li>
-<li>\&quot;useexp\&quot; - Define si la fecha de vencimiento se ignora o no</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Se env&iacute;a cuando a&ntilde;adimos un art&iacute;culo.</p>
+
+<h4>Par&aacute;metros</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id del art&iacute;culo</li>
+
+<li>\&quot;category_id\&quot; - Id de la categor&iacute;a del art&iacute;culo</li>
+
+<li>\&quot;title\&quot; - T&iacute;tulo del art&iacute;culo</li>
+
+<li>\&quot;content\&quot; - Contenido del art&iacute;culo</li>
+
+<li>\&quot;summary\&quot; - Sumario del art&iacute;culo</li>
+
+<li>\&quot;status\&quot; - estado del art&iacute;culo (&quot;borrador&quot; o &quot;publicado&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Fecha de inicio de publicaci&oacute;n del art&iacute;culo</li>
+
+<li>\&quot;end_time\&quot; - Fecha de caducidad del art&iacute;culo</li>
+
+<li>\&quot;useexp\&quot; - Define si la fecha de vencimiento se ignora o no</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Se envia cuando editamos un art&iacute;culo.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Se env&iacute;a cuando editamos un art&iacute;culo.</p>
-<h4>Par&aacute;metros</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id del art&iacute;culo</li>
-<li>\&quot;category_id\&quot; - Id de la categor&iacute;a del art&iacute;culo</li>
-<li>\&quot;title\&quot; - T&iacute;tulo del art&iacute;culo</li>
-<li>\&quot;content\&quot; - Contenido del art&iacute;culo</li>
-<li>\&quot;summary\&quot; - Sumario del art&iacute;culo</li>
-<li>\&quot;status\&quot; - estado del art&iacute;culo (&quot;borrador&quot; o &quot;publicado&quot;)</li>
-<li>\&quot;start_time\&quot; - Fecha de inicio de publicaci&oacute;n del art&iacute;culo</li>
-<li>\&quot;end_time\&quot; - Fecha de caducidad del art&iacute;culo</li>
-<li>\&quot;useexp\&quot; - Define si la fecha de vencimiento se ignora o no</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Se env&iacute;a cuando editamos un art&iacute;culo.</p>
+
+<h4>Par&aacute;metros</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id del art&iacute;culo</li>
+
+<li>\&quot;category_id\&quot; - Id de la categor&iacute;a del art&iacute;culo</li>
+
+<li>\&quot;title\&quot; - T&iacute;tulo del art&iacute;culo</li>
+
+<li>\&quot;content\&quot; - Contenido del art&iacute;culo</li>
+
+<li>\&quot;summary\&quot; - Sumario del art&iacute;culo</li>
+
+<li>\&quot;status\&quot; - estado del art&iacute;culo (&quot;borrador&quot; o &quot;publicado&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Fecha de inicio de publicaci&oacute;n del art&iacute;culo</li>
+
+<li>\&quot;end_time\&quot; - Fecha de caducidad del art&iacute;culo</li>
+
+<li>\&quot;useexp\&quot; - Define si la fecha de vencimiento se ignora o no</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Se env&iacute;a cuando eliminamos un art&iacute;culo.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Se env&iacute;a cuando eliminamos un art&iacute;culo.</p>
-<h4>Par&aacute;metros</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id del art&iacute;culo de noticias</li>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Se env&iacute;a cuando eliminamos un art&iacute;culo.</p>
+
+<h4>Par&aacute;metros</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id del art&iacute;culo de noticias</li>
+
 </ul>';
 $lang['eventdesc-NewsCategoryAdded'] = 'Se env&iacute;a cuando a&ntilde;adimos una categor&iacute;a.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Se env&iacute;a cuando a&ntilde;adimos una categor&iacute;a.</p>
-<h4>Par&aacute;metros</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id de la categor&iacute;a del art&iacute;culo</li>
-<li>\&quot;name\&quot; - Nombre de la categor&iacute;a</li>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Se env&iacute;a cuando a&ntilde;adimos una categor&iacute;a.</p>
+
+<h4>Par&aacute;metros</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id de la categor&iacute;a del art&iacute;culo</li>
+
+<li>\&quot;name\&quot; - Nombre de la categor&iacute;a</li>
+
 </ul>';
 $lang['eventdesc-NewsCategoryEdited'] = 'Se envia cuando editamos una categor&iacute;a.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Se env&iacute;a cuando editamos una categor&iacute;a.</p>
-<h4>Par&aacute;metros</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id de la categor&iacute;a de noticias</li>
-<li>\&quot;name\&quot; - Nombre de la categor&iacute;a de noticias</li>
-<li>\&quot;origname\&quot; - El nombre original de la categor&iacute;a de noticias</li>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Se env&iacute;a cuando editamos una categor&iacute;a.</p>
+
+<h4>Par&aacute;metros</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id de la categor&iacute;a de noticias</li>
+
+<li>\&quot;name\&quot; - Nombre de la categor&iacute;a de noticias</li>
+
+<li>\&quot;origname\&quot; - El nombre original de la categor&iacute;a de noticias</li>
+
 </ul>';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Se env&iacute;a cuando eliminamos una categor&iacute;a.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Se env&iacute;a cuando eliminamos una categor&iacute;a.</p>
-<h4>Par&aacute;metros</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id de la categor&iacute;a eliminada</li>
-<li>\&quot;name\&quot; - Nombre de la categor&iacute;a eliminada</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Se env&iacute;a cuando eliminamos una categor&iacute;a.</p>
+
+<h4>Par&aacute;metros</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id de la categor&iacute;a eliminada</li>
+
+<li>\&quot;name\&quot; - Nombre de la categor&iacute;a eliminada</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'Este parametro no aplica en la vista detallada. Permite especificar cuales de los articulos se despliegan en la vista detallada. Si el valor especial -1 es utilizado, el sistema desplegar&aacute; el articulo mas nuevo, publicado, que no ha expirado.';
 $lang['helpnumber'] = 'N&uacute;mero m&aacute;ximo de elementos a mostrar =- dej&aacute;ndolo blanco muestra todos.';
@@ -239,29 +286,52 @@ $lang['helpdetailpage'] = 'P&aacute;gina para las Noticias.  Puede ser un alias 
 $lang['helpshowarchive'] = 'Mostrar solo art&iacute;culos de noticias caducas.';
 $lang['helpbrowsecat'] = 'Muestra un listado de categor&iacute;as que se puede examinar.';
 $lang['helpaction'] = 'Hace a un lado la acci&oacute;n por defecto.  Los valores posibles son &#039;default&#039; para mostrar la vista resumen, y &#039;fesubmit&#039; para mostrar el formulario en el portal para permitir a los usuarios enviar art&iacute;culos desde all&iacute;.';
-$lang['help'] = '<h3>Notas Importantes</h3>
-<p>Esta versi&oacute;n de Noticias es mayor a la suministrada con la versi&oacute;n 1.1 de CMS Made Simple.  Si usted utiliza esta versi&oacute;n de Noticias debe tener cuidado extremo cuando hace una actualizaci&oacute;n de CMS Made Simple para asegurarse de que nada en el directorio de modules/News sea sobre escrito.</p>
-	<h3>&iquest;Qu&eacute; hace esto?</h3>
-	<p>Noticias es un m&oacute;dulo para mostrar noticias de acontecimientos en su p&aacute;gina, similar al estilo de un blog, pero &iexcl;con m&aacute;s posibilidades!.  Cuando el m&oacute;dulo est&aacute; instalado, se agrega una p&aacute;gina de Administraci&oacute;n de Noticias al men&uacute; de Administraci&oacute;n que le permitir&aacute;n seleccionar o agregar nuevas categor&iacute;as.  Una vez que una nueva categor&iacute;a es seleccionada o creada, una lista de nuevos items para esa categor&iacute;a se mostrar&aacute;n.  Desde aqu&iacute; en m&aacute;s, usted puede agregar, editar o eliminar items para esa categor&iacute;a.</p>
-	<h3>Variables de plantillas</h3>
-	<ul>
-		<li><b>itemcount</b> - El n&uacute;mero de nuevos art&iacute;culos a mostrar.</li>
-		<li><b>entry->authorname</b> - El nombre completo del autor, incluyendo Nombre y Apellido.</li>
-	</ul>
-	<h3>Seguridad</h3>
-	<p>El usuario debe pertenecer a un grupo que tenga el permiso &#039;Modificar Noticias&#039; con el fin de agregar, editar, o eliminar entradas de Noticias.</p>
-	<p>Con el fin de editar los layouts de las plantillas, el usuario debe pertenecer a un grupo con el permiso de &#039;Modificar Plantillas&#039;.</p>
-	<p>Con el fin de editar las preferencias globales de noticias, el usuario debe pertenecer a un grupo que tenga permiso para &#039;Modificar las Preferencias del Sitio&#039;.</p>
-	<p>Adem&aacute;s, para aprobar noticias que ser&aacute;n vistas en el portal, el usuario deber&aacute; pertenecer a un grupo con el permiso para &#039;Aprobar Noticias&#039;.</p>
-	<h3>&iquest;Como uso a &eacute;ste m&oacute;dulo?</h3>
-	<p>La forma m&aacute;s sencilla de utilizarlo es con el tag de envoltura {news} (esto hace funcionar al m&oacute;dulo dentro de un tag, para simplificar la sintaxis).  De esta forma el m&oacute;dulo ser&aacute; insertado y funcionar&aacute; en su plantilla o p&aacute;gina en cualquier lugar que usted lo desee, desplegando los items de noticias.  El c&oacute;digo ingresado se ver&aacute; aproximadamente as&iacute;: <code>{news number=&#039;5&#039;}</code></p>
-<h3>Plantillas</h3>
-	<p>Desde la versi&oacute;n 2.3 News soporta m&uacute;ltiples plantillas de base de datos, y ya no soporta m&aacute;s archivos adicionales de plantillas.  Los usuarios que ya han usado el viejo sistema de plantillas con archivos deber&aacute;n seguir estos pasos (para cada plantilla):
-<ul>
-<li>Copiar el archivo de plantilla en el sujetapapeles (clipboard)</li>
-<li>Crear una nueva plantilla en la base de datos <em>(puede ser de resumen o de detalles como es requerido)</em>.  De a la nueva plantilla el mismo nombre (incluyendo la extensi&oacute;n .tpl) como ten&iacute;a la vieja plantilla de archivo, pegar el contenido que tenemos guardado en el sujetapapeles.</li>
-<li>Hacer Click en Enviar</li>
-</ul>
+$lang['help'] = '<h3>Notas Importantes</h3>
+
+<p>Esta versi&oacute;n de Noticias es mayor a la suministrada con la versi&oacute;n 1.1 de CMS Made Simple.  Si usted utiliza esta versi&oacute;n de Noticias debe tener cuidado extremo cuando hace una actualizaci&oacute;n de CMS Made Simple para asegurarse de que nada en el directorio de modules/News sea sobre escrito.</p>
+
+	<h3>&iquest;Qu&eacute; hace esto?</h3>
+
+	<p>Noticias es un m&oacute;dulo para mostrar noticias de acontecimientos en su p&aacute;gina, similar al estilo de un blog, pero &iexcl;con m&aacute;s posibilidades!.  Cuando el m&oacute;dulo est&aacute; instalado, se agrega una p&aacute;gina de Administraci&oacute;n de Noticias al men&uacute; de Administraci&oacute;n que le permitir&aacute;n seleccionar o agregar nuevas categor&iacute;as.  Una vez que una nueva categor&iacute;a es seleccionada o creada, una lista de nuevos items para esa categor&iacute;a se mostrar&aacute;n.  Desde aqu&iacute; en m&aacute;s, usted puede agregar, editar o eliminar items para esa categor&iacute;a.</p>
+
+	<h3>Variables de plantillas</h3>
+
+	<ul>
+
+		<li><b>itemcount</b> - El n&uacute;mero de nuevos art&iacute;culos a mostrar.</li>
+
+		<li><b>entry->authorname</b> - El nombre completo del autor, incluyendo Nombre y Apellido.</li>
+
+	</ul>
+
+	<h3>Seguridad</h3>
+
+	<p>El usuario debe pertenecer a un grupo que tenga el permiso &#039;Modificar Noticias&#039; con el fin de agregar, editar, o eliminar entradas de Noticias.</p>
+
+	<p>Con el fin de editar los layouts de las plantillas, el usuario debe pertenecer a un grupo con el permiso de &#039;Modificar Plantillas&#039;.</p>
+
+	<p>Con el fin de editar las preferencias globales de noticias, el usuario debe pertenecer a un grupo que tenga permiso para &#039;Modificar las Preferencias del Sitio&#039;.</p>
+
+	<p>Adem&aacute;s, para aprobar noticias que ser&aacute;n vistas en el portal, el usuario deber&aacute; pertenecer a un grupo con el permiso para &#039;Aprobar Noticias&#039;.</p>
+
+	<h3>&iquest;Como uso a &eacute;ste m&oacute;dulo?</h3>
+
+	<p>La forma m&aacute;s sencilla de utilizarlo es con el tag de envoltura {news} (esto hace funcionar al m&oacute;dulo dentro de un tag, para simplificar la sintaxis).  De esta forma el m&oacute;dulo ser&aacute; insertado y funcionar&aacute; en su plantilla o p&aacute;gina en cualquier lugar que usted lo desee, desplegando los items de noticias.  El c&oacute;digo ingresado se ver&aacute; aproximadamente as&iacute;: <code>{news number=&#039;5&#039;}</code></p>
+
+<h3>Plantillas</h3>
+
+	<p>Desde la versi&oacute;n 2.3 News soporta m&uacute;ltiples plantillas de base de datos, y ya no soporta m&aacute;s archivos adicionales de plantillas.  Los usuarios que ya han usado el viejo sistema de plantillas con archivos deber&aacute;n seguir estos pasos (para cada plantilla):
+
+<ul>
+
+<li>Copiar el archivo de plantilla en el sujetapapeles (clipboard)</li>
+
+<li>Crear una nueva plantilla en la base de datos <em>(puede ser de resumen o de detalles como es requerido)</em>.  De a la nueva plantilla el mismo nombre (incluyendo la extensi&oacute;n .tpl) como ten&iacute;a la vieja plantilla de archivo, pegar el contenido que tenemos guardado en el sujetapapeles.</li>
+
+<li>Hacer Click en Enviar</li>
+
+</ul>
+
 Al seguir estos pasos se deber&iacute;an solucionar todos aquellos problemas de plantillas de noticias que no son encontradas y otros errores de smarty similares que aparecen cuando usted actualiza su versi&oacute;n de CMS MS a una que tiene el m&oacute;dulo News 2.3 o mayor.</p>';
 $lang['utma'] = '156861353.661434885.1227567621.1241502996.1241545688.65';
 $lang['utmz'] = '156861353.1241473702.63.28.utmccn=(referral)|utmcsr=forum.cmsmadesimple.org|utmcct=/index.php/board,30.0.html|utmcmd=referral';

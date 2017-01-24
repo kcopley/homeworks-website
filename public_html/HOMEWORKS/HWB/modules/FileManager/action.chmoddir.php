@@ -9,37 +9,65 @@ if(!isset($params["dirname"]) || !isset($params["path"])) {
 if ($this->IntruderCheck($params["path"])) {
 	$this->Redirect($id, 'defaultadmin',$returnid,array("module_error"=>$this->Lang("fileoutsideuploads")));
 }
-
-$config =& $gCms->GetConfig();
-$fullname=$this->Slash($params["path"],$params["dirname"]);
-$fullname=$this->Slash($config["root_path"],$fullname);
-
-function chmodRecursive($path,$newmode,&$module) {
-	$dir = opendir($path);
+
+
+$config =& $gCms->GetConfig();
+
+$fullname=$this->Slash($params["path"],$params["dirname"]);
+
+$fullname=$this->Slash($config["root_path"],$fullname);
+
+
+
+function chmodRecursive($path,$newmode,&$module) {
+
+	$dir = opendir($path);
+
 	while ($entry = readdir($dir)) {
 		if ($entry=="." || $entry=="..") continue;
-
-		if (is_file( "$path/$entry")) {
+
+
+		if (is_file( "$path/$entry")) {
+
 			$module->SetMode($newmode,$path,$entry);
-					//echo "hi";die();
-		} elseif (is_dir("$path/$entry") && $entry!='.' && $entry!='..') {
-			chmodRecursive("$path/$entry",$newmode,$module);
-		}
-	}
-	closedir($dir);
-	return $module->SetMode($newmode,$path);	
-}
-
-function isEmpty($path) {
-	$empty=true;
-	$dir = opendir($path) ;
-	while ($entry = readdir($dir)) {
-		if ($entry!="." && $entry!=".." && $entry!="\\" && $entry!="/") {
-			return false;
-		}
-	}
-	return true;
-}
+					//echo "hi";die();
+
+		} elseif (is_dir("$path/$entry") && $entry!='.' && $entry!='..') {
+
+			chmodRecursive("$path/$entry",$newmode,$module);
+
+		}
+
+	}
+
+	closedir($dir);
+
+	return $module->SetMode($newmode,$path);	
+
+}
+
+
+
+function isEmpty($path) {
+
+	$empty=true;
+
+	$dir = opendir($path) ;
+
+	while ($entry = readdir($dir)) {
+
+		if ($entry!="." && $entry!=".." && $entry!="\\" && $entry!="/") {
+
+			return false;
+
+		}
+
+	}
+
+	return true;
+
+}
+
 
 $emptydir=isEmpty($fullname);
 
@@ -51,19 +79,27 @@ if (isset($params["newmode"])) {
 		if (isset($params["quickmode"]) && ($params["quickmode"]!="")) {
 			$newmode=$params["quickmode"];
 		}
-		if (isset($params["recurse"]) && $params["recurse"]=="1" && !$emptydir) {			
-			if (chmodRecursive($fullname,$newmode,$this)) {				
-				$this->Redirect($id,"defaultadmin",$returnid,array("path"=>$params["path"],"module_message"=>$this->Lang("dirchmodsuccessmulti")));
-			} else {
-				$this->Redirect($id,"defaultadmin",$returnid,array("path"=>$params["path"],"module_error"=>$this->Lang("dirchmodfailmulti")));
-			}
-		} else {
+		if (isset($params["recurse"]) && $params["recurse"]=="1" && !$emptydir) {			
+
+			if (chmodRecursive($fullname,$newmode,$this)) {				
+
+				$this->Redirect($id,"defaultadmin",$returnid,array("path"=>$params["path"],"module_message"=>$this->Lang("dirchmodsuccessmulti")));
+
+			} else {
+
+				$this->Redirect($id,"defaultadmin",$returnid,array("path"=>$params["path"],"module_error"=>$this->Lang("dirchmodfailmulti")));
+
+			}
+
+		} else {
+
 			//No recursion
 			if ($this->SetMode($newmode,$fullname)) {
 				$this->Redirect($id,"defaultadmin",$returnid,array("path"=>$params["path"],"module_message"=>$this->Lang("dirchmodsuccess")));
 			} else {
 				$this->Redirect($id,"defaultadmin",$returnid,array("path"=>$params["path"],"module_error"=>$this->Lang("dirchmodfailure")));
-			}
+			}
+
 		}
 	}
 } else {

@@ -7,8 +7,8 @@
  *
  *--------------------------------------------------------------------
  * Revision History
- * v2.0.0	23 apr	2008	Jean-Sébastien Goupil	New Version Update
- * v1.2.1	27 jun	2005	Jean-Sébastien Goupil	New functionality
+ * v2.0.0	23 apr	2008	Jean-Sï¿½bastien Goupil	New Version Update
+ * v1.2.1	27 jun	2005	Jean-Sï¿½bastien Goupil	New functionality
  * V1.00	17 jun	2004	Jean-Sebastien Goupil
  *--------------------------------------------------------------------
  * $Id: BCGColor.php,v 1.6 2009/11/09 04:08:41 jsgoupil Exp $

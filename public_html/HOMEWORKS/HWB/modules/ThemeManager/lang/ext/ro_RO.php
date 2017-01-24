@@ -32,27 +32,48 @@ $lang['error'] = 'Eroare!';
 $lang['upgraded'] = 'Modul actualizat la versiunea %s.';
 $lang['moddescription'] = 'Un modul care permite importul si exportul de teme de continut (template-uri si stylesheet-uri)';
 $lang['import_succeeded'] = 'Tema a fost importatata cu succes';
-$lang['help'] = '<h3>Ce face aceasta?</h3>
-<p>Acest modul va permite sa importati si sa exportati template-uri si stylesheet-urile atasate ca &quot;teme&quot;. Astfel puteti sa impartiti aspectul sitului dumneavoastra cu alti utilizatori de cmsms.</p
-<h3>Cum se foloseste?</h3>
-<p>Acest modul nu are interfata frontend, numai una de admin. Va permite sa selectati un template existent (activ) si sa-l exportati.  Un fisier XML continand template-ul si stylesheet-urile atasate va fi creat si trimis catre dumneavoastra via download.</p>
-<h3>Permisiuni</h3>
-<p>odelul de permisiuni este strict pentru Managerul de Teme pentru asigurarea integritatii bazei de date. Permisiunea &quot;Management Teme&quot; este ceruta pentru export de teme, si aceste 3 permissions (&quot;Adaugare Stylesheet-uri&quot;, &quot;Adaugare Asocieri StyleSheet&quot;, si &quot;Adaugare Template-uri&quot;) sunt cerute pentru a putea uploada o tema.</p>
-<p>De asemenea, functionalitatea opusa exista, puteti uploada un fisier tema (format xml) si sa aveti template-urile si stylesheet-urile incluse instalate automat.</p>
-<h3>Suport</h3>
-<p>Acest modul nu include suport comercial. Totusi, sunt un numar de resurse disponiblie pentru a primi ajutor:</p>
-<ul>
-<li>For the latest version of this module, FAQs, or to file a Bug Report or buy commercial support, please visit the module homepage at <a href="http://dev.cmsmadesimple.org">dev.cmsmadesimple.org</a>.</li>
-<li>Additional discussion of this module may also be found in the <a href="http://forum.cmsmadesimple.org">CMS Made Simple Forums</a>.</li>
-<li>The author, calguy1000, can often be found in the <a href="irc://irc.freenode.net/#cms">CMS IRC Channel</a>.</li>
-<li>Lastly, you may have some success emailing the author directly.</li>  
-</ul>
-<p>As per the GPL, this software is provided as-is. Please read the text
-of the license for the full disclaimer.</p>
-
-<h3>Copyright and License</h3>
-<p>Copyright &copy; 2005, Robert Campbell <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. All Rights Are Reserved.</p>
-<p>This module has been released under the <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a>. You must agree to this license before using the module.</p>
+$lang['help'] = '<h3>Ce face aceasta?</h3>
+
+<p>Acest modul va permite sa importati si sa exportati template-uri si stylesheet-urile atasate ca &quot;teme&quot;. Astfel puteti sa impartiti aspectul sitului dumneavoastra cu alti utilizatori de cmsms.</p
+
+<h3>Cum se foloseste?</h3>
+
+<p>Acest modul nu are interfata frontend, numai una de admin. Va permite sa selectati un template existent (activ) si sa-l exportati.  Un fisier XML continand template-ul si stylesheet-urile atasate va fi creat si trimis catre dumneavoastra via download.</p>
+
+<h3>Permisiuni</h3>
+
+<p>odelul de permisiuni este strict pentru Managerul de Teme pentru asigurarea integritatii bazei de date. Permisiunea &quot;Management Teme&quot; este ceruta pentru export de teme, si aceste 3 permissions (&quot;Adaugare Stylesheet-uri&quot;, &quot;Adaugare Asocieri StyleSheet&quot;, si &quot;Adaugare Template-uri&quot;) sunt cerute pentru a putea uploada o tema.</p>
+
+<p>De asemenea, functionalitatea opusa exista, puteti uploada un fisier tema (format xml) si sa aveti template-urile si stylesheet-urile incluse instalate automat.</p>
+
+<h3>Suport</h3>
+
+<p>Acest modul nu include suport comercial. Totusi, sunt un numar de resurse disponiblie pentru a primi ajutor:</p>
+
+<ul>
+
+<li>For the latest version of this module, FAQs, or to file a Bug Report or buy commercial support, please visit the module homepage at <a href="http://dev.cmsmadesimple.org">dev.cmsmadesimple.org</a>.</li>
+
+<li>Additional discussion of this module may also be found in the <a href="http://forum.cmsmadesimple.org">CMS Made Simple Forums</a>.</li>
+
+<li>The author, calguy1000, can often be found in the <a href="irc://irc.freenode.net/#cms">CMS IRC Channel</a>.</li>
+
+<li>Lastly, you may have some success emailing the author directly.</li>  
+
+</ul>
+
+<p>As per the GPL, this software is provided as-is. Please read the text
+
+of the license for the full disclaimer.</p>
+
+
+
+<h3>Copyright and License</h3>
+
+<p>Copyright &copy; 2005, Robert Campbell <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. All Rights Are Reserved.</p>
+
+<p>This module has been released under the <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a>. You must agree to this license before using the module.</p>
+
 ';
 $lang['utmc'] = '156861353';
 $lang['utma'] = '156861353.3573843717708992500.1250056267.1250512405.1250517093.12';

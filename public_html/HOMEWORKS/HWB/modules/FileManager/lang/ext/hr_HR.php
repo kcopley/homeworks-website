@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Only effective with advanced mode on';
 $lang['showhiddenfiles'] = 'Show hidden files';
 $lang['settingsconfirmsingledelete'] = 'Confirm deletion of a single file?';
 $lang['settingssaved'] = 'Settings saved';
-$lang['help'] = '		<h3>What does this do?</h3>
-		<p>This module provides file management functions</p>
-		<h3>How do I use it?</h3>
+$lang['help'] = '		<h3>What does this do?</h3>
+
+		<p>This module provides file management functions</p>
+
+		<h3>How do I use it?</h3>
+
 		<p>Select it from the content-menu from in the admin. </p>';
 $lang['utma'] = '156861353.257390769.1275643143.1286107860.1286112331.112';
 $lang['utmz'] = '156861353.1285738088.98.14.utmcsr=feedburner|utmccn=Feed: cmsmadesimple/blog (CMS Made Simple)|utmcmd=feed';

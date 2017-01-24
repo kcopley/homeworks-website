@@ -44,49 +44,87 @@ $lang['eventdesc-SearchCompleted'] = 'Ausf&uuml;hren, wenn eine Suche beendet wu
 $lang['eventdesc-SearchItemAdded'] = 'Ausf&uuml;hren, wenn ein neuer Eintrag indiziert wurde.';
 $lang['eventdesc-SearchItemDeleted'] = 'Ausf&uuml;hren, wenn ein Eintrag aus dem Index gel&ouml;scht wurde.';
 $lang['eventdesc-SearchAllItemsDeleted'] = 'Ausf&uuml;hren, wenn alle Eintr&auml;ge aus dem Index gel&ouml;scht wurden.';
-$lang['eventhelp-SearchInitiated'] = '<p>Ausf&uuml;hren, wenn eine Suche gestartet wurde.</p>
-<h4>Parameter</h4>
-<ol>
-<li>Text, nach dem gesucht wurde.</li>
-</ol>
+$lang['eventhelp-SearchInitiated'] = '<p>Ausf&uuml;hren, wenn eine Suche gestartet wurde.</p>
+
+<h4>Parameter</h4>
+
+<ol>
+
+<li>Text, nach dem gesucht wurde.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchCompleted'] = '<p>Ausf&uuml;hren, wenn eine Suche beendet wurde.</p>
-<h4>Parameter</h4>
-<ol>
-<li>Text, nach dem gesucht wurde.</li>
-<li>Array mit den kompletten Ergebnissen.</li>
-</ol>
+$lang['eventhelp-SearchCompleted'] = '<p>Ausf&uuml;hren, wenn eine Suche beendet wurde.</p>
+
+<h4>Parameter</h4>
+
+<ol>
+
+<li>Text, nach dem gesucht wurde.</li>
+
+<li>Array mit den kompletten Ergebnissen.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemAdded'] = '<p>Ausf&uuml;hren, wenn ein neuer Eintrag indiziert wurde.</p>
-<h4>Parameter</h4>
-<ol>
-<li>Modulname.</li>
-<li>ID des Eintrags.</li>
-<li>Weitere Attribute.</li>
-<li>zu indizierender und hinzugef&uuml;gter Inhalt.</li>
-</ol>
+$lang['eventhelp-SearchItemAdded'] = '<p>Ausf&uuml;hren, wenn ein neuer Eintrag indiziert wurde.</p>
+
+<h4>Parameter</h4>
+
+<ol>
+
+<li>Modulname.</li>
+
+<li>ID des Eintrags.</li>
+
+<li>Weitere Attribute.</li>
+
+<li>zu indizierender und hinzugef&uuml;gter Inhalt.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemDeleted'] = '<p>Ausf&uuml;hren, wenn ein Eintrag aus dem Index gel&ouml;scht wurde.</p>
-<h4>Parameter</h4>
-<ol>
-<li>Modulname.</li>
-<li>ID des Eintrages.</li>
-<li>Weitere Attribute.</li>
-</ol>
+$lang['eventhelp-SearchItemDeleted'] = '<p>Ausf&uuml;hren, wenn ein Eintrag aus dem Index gel&ouml;scht wurde.</p>
+
+<h4>Parameter</h4>
+
+<ol>
+
+<li>Modulname.</li>
+
+<li>ID des Eintrages.</li>
+
+<li>Weitere Attribute.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Ausf&uuml;hren, wenn alle Eintr&auml;ge aus dem Index gel&ouml;scht wurden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>Keine</li>
-</ul>
+$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Ausf&uuml;hren, wenn alle Eintr&auml;ge aus dem Index gel&ouml;scht wurden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>Keine</li>
+
+</ul>
+
 ';
-$lang['help'] = '<h3>Was macht dieses Modul?</h3>
-<p>Search ist ein Modul f&uuml;r die Suche in den Inhalten der mit CMSms erstellten Seiten sowie denen aller registrierten Module. Sie geben ein oder zwei W&ouml;rter ein und erhalten die relevanten Ergebnisse zur&uuml;ck.</p>
-<h3>Wie wird es eingesetzt?</h3>
-<p>Am einfachsten l&auml;sst sich das Modul mit dem {search}-Tag verwenden, der den Aufruf des Moduls zur Vereinfachung des Syntax in einen Tag umformt. Damit k&ouml;nnen Sie das Modul entweder in Ihr Template oder eine Seite oder wo immer Sie wollen einf&uuml;gen und das Suchformular anzeigen. Der Aufruf des Moduls erfolgt mit:</p> <code>{search}</code>
-<h4>Wie kann ich Inhalte von der Indizierung ausschlie&szlig;en?</h4>
-<p>Das Search-Modul durchsucht grunds&auml;tzlich keine &quot;inaktiven&quot; Seiten. Wenn Sie (aus welchen Gr&uuml;nden auch immer) das CustomContent-Modul oder andere Smarty-Logik verwenden, um verschiedenen Nutzergruppen verschiedene Inhalte anzuzeigen, kann es erforderlich sein, die gesamte Seite von der Indizierung auszuschlie&szlig;en.</p>
-<p>Daf&uuml;r m&uuml;ssen Sie lediglich den folgenden Tag irgendwo in Ihrer Seite aufrufen <pre><!-- pageAttribute: NotSearchable --></pre></p>
+$lang['help'] = '<h3>Was macht dieses Modul?</h3>
+
+<p>Search ist ein Modul f&uuml;r die Suche in den Inhalten der mit CMSms erstellten Seiten sowie denen aller registrierten Module. Sie geben ein oder zwei W&ouml;rter ein und erhalten die relevanten Ergebnisse zur&uuml;ck.</p>
+
+<h3>Wie wird es eingesetzt?</h3>
+
+<p>Am einfachsten l&auml;sst sich das Modul mit dem {search}-Tag verwenden, der den Aufruf des Moduls zur Vereinfachung des Syntax in einen Tag umformt. Damit k&ouml;nnen Sie das Modul entweder in Ihr Template oder eine Seite oder wo immer Sie wollen einf&uuml;gen und das Suchformular anzeigen. Der Aufruf des Moduls erfolgt mit:</p> <code>{search}</code>
+
+<h4>Wie kann ich Inhalte von der Indizierung ausschlie&szlig;en?</h4>
+
+<p>Das Search-Modul durchsucht grunds&auml;tzlich keine &quot;inaktiven&quot; Seiten. Wenn Sie (aus welchen Gr&uuml;nden auch immer) das CustomContent-Modul oder andere Smarty-Logik verwenden, um verschiedenen Nutzergruppen verschiedene Inhalte anzuzeigen, kann es erforderlich sein, die gesamte Seite von der Indizierung auszuschlie&szlig;en.</p>
+
+<p>Daf&uuml;r m&uuml;ssen Sie lediglich den folgenden Tag irgendwo in Ihrer Seite aufrufen <pre><!-- pageAttribute: NotSearchable --></pre></p>
+
 <p>Wenn das Search-Modul diesen Tag auf einer Seite findet, wird deren Inhalt nicht indiziert. Dieser Tag kann auch in Templates eingesetzt werden. In diesem Fall werden diejenigen Seiten, die dieses Template verwenden, nicht indiziert. Wird der Tag entfernt, erfolgt eine Neuindizierung dieser Seiten.</p>';
 $lang['utma'] = '156861353.230875029.1281005888.1281005888.1281005888.1';
 $lang['utmb'] = '156861353';

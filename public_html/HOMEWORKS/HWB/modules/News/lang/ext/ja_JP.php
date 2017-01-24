@@ -176,62 +176,108 @@ $lang['options'] = 'オプション';
 $lang['optionsupdated'] = 'オプションは正常に更新されました。';
 $lang['useexpiration'] = '期限切れ日付を使用';
 $lang['eventdesc-NewsArticleAdded'] = '記事の追加時に送信';
-$lang['eventhelp-NewsArticleAdded'] = '<p>記事の追加時に送信</p>
-<h4>パラメーター</h4>
-<ul>
-<li>\\"news_id\\" - ニュース記事のID</li>
-<li>\\"category_id\\" -  該当記事に対するカテゴリーのID</li>
-<li>\\"title\\" - 記事のタイトル</li>
-<li>\\"content\\" - 記事の内容</li>
-<li>\\"summary\\" - 記事の要約</li>
-<li>\\"status\\" - 記事の状態 ("ドラフト" 又は "公開")</li>
-<li>\\"start_time\\" - 記事の公開開始日</li>
-<li>\\"end_time\\" - 記事の公開終了日</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>記事の追加時に送信</p>
+
+<h4>パラメーター</h4>
+
+<ul>
+
+<li>\\"news_id\\" - ニュース記事のID</li>
+
+<li>\\"category_id\\" -  該当記事に対するカテゴリーのID</li>
+
+<li>\\"title\\" - 記事のタイトル</li>
+
+<li>\\"content\\" - 記事の内容</li>
+
+<li>\\"summary\\" - 記事の要約</li>
+
+<li>\\"status\\" - 記事の状態 ("ドラフト" 又は "公開")</li>
+
+<li>\\"start_time\\" - 記事の公開開始日</li>
+
+<li>\\"end_time\\" - 記事の公開終了日</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = '記事の編集時に送信';
-$lang['eventhelp-NewsArticleEdited'] = '<p>記事の編集時に送信</p>
-<h4>パラメーター</h4>
-<ul>
-<li>\\"news_id\\" - ニュース記事のID</li>
-<li>\\"category_id\\" - 該当記事に対するカテゴリーのID</li>
-<li>\\"title\\" - 記事のタイトル</li>
-<li>\\"content\\" - 記事の内容</li>
-<li>\\"summary\\" - 記事の要約</li>
-<li>\\"status\\" - 記事の状態 ("ドラフト" 又は "公開")</li>
-<li>\\"start_time\\" - 記事の公開開始日</li>
-<li>\\"end_time\\" - 記事の公開終了日</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>記事の編集時に送信</p>
+
+<h4>パラメーター</h4>
+
+<ul>
+
+<li>\\"news_id\\" - ニュース記事のID</li>
+
+<li>\\"category_id\\" - 該当記事に対するカテゴリーのID</li>
+
+<li>\\"title\\" - 記事のタイトル</li>
+
+<li>\\"content\\" - 記事の内容</li>
+
+<li>\\"summary\\" - 記事の要約</li>
+
+<li>\\"status\\" - 記事の状態 ("ドラフト" 又は "公開")</li>
+
+<li>\\"start_time\\" - 記事の公開開始日</li>
+
+<li>\\"end_time\\" - 記事の公開終了日</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = '記事の削除時に送信';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>記事の削除時に送信</p>
-<h4>パラメーター</h4>
-<ul>
-<li>\\"news_id\\" - ニュース記事のID</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>記事の削除時に送信</p>
+
+<h4>パラメーター</h4>
+
+<ul>
+
+<li>\\"news_id\\" - ニュース記事のID</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'カテゴリーの追加時に送信';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>カテゴリーの追加時に送信</p>
-<h4>パラメーター</h4>
-<ul>
-<li>\\"category_id\\" - ニュースカテゴリーのID</li>
-<li>\\"name\\" - ニュースカテゴリーの名前</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>カテゴリーの追加時に送信</p>
+
+<h4>パラメーター</h4>
+
+<ul>
+
+<li>\\"category_id\\" - ニュースカテゴリーのID</li>
+
+<li>\\"name\\" - ニュースカテゴリーの名前</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'カテゴリの編集時に送信';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>カテゴリの編集時に送信</p>
-<h4>パラメーター</h4>
-<ul>
-<li>\\"category_id\\" - ニュースカテゴリーのID</li>
-<li>\\"name\\" - ニュースカテゴリーの名前</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>カテゴリの編集時に送信</p>
+
+<h4>パラメーター</h4>
+
+<ul>
+
+<li>\\"category_id\\" - ニュースカテゴリーのID</li>
+
+<li>\\"name\\" - ニュースカテゴリーの名前</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'カテゴリの削除時に送信';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>カテゴリの削除時に送信</p>
-<h4>パラメーター</h4>
-<ul>
-<li>\\"category_id\\" - ニュースのID</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>カテゴリの削除時に送信</p>
+
+<h4>パラメーター</h4>
+
+<ul>
+
+<li>\\"category_id\\" - ニュースのID</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'This parameter is only applicable to the detail view.  It allows specifying which news article to display in detail mode.  If the special value -1 is used, the system will display the newest, published, non expired article.';
 $lang['helpnumber'] = '表示できる項目の最大数の値 -- 空欄の場合は全項目を表示';
@@ -248,11 +294,16 @@ $lang['helpdetailpage'] = 'ニュース詳細を表示するページ。ペー�
 $lang['helpshowarchive'] = 'Show only expired news articles.';
 $lang['helpbrowsecat'] = 'Shows a browseable category list.';
 $lang['helpaction'] = 'Override the default action.  Possible values are \'default\' to display the summary view, and \'fesubmit\' to display the frontend form for allowing users to submit news articles on the front end.';
-$lang['help'] = '	<h3>何ができるのでしょうか?</h3>
-	<p>ニュースはページにニュースイベントを表示するモジュールで、多くの機能があり、例えばブログのような利用ができます。モジュールがインストールされると、ニュース管理ページが管理メニューに追加され、ニュースの管理はメニューから利用できます。ニュースカテゴリーが一旦作成、選択されると、該当カテゴリーのニュース項目がリスト表示されます。そこから、そのニュース項目の追加、編集、削除等が行えます。</p>
-	<h3>セキュリティ</h3>
-	<p>利用ユーザーは、入力や編集等の作業を行う為に、必ず\'ニュースの修正\'パーミッションを持ったグループに所属する必要があります。</p>
-	<h3>使用方法</h3>
+$lang['help'] = '	<h3>何ができるのでしょうか?</h3>
+
+	<p>ニュースはページにニュースイベントを表示するモジュールで、多くの機能があり、例えばブログのような利用ができます。モジュールがインストールされると、ニュース管理ページが管理メニューに追加され、ニュースの管理はメニューから利用できます。ニュースカテゴリーが一旦作成、選択されると、該当カテゴリーのニュース項目がリスト表示されます。そこから、そのニュース項目の追加、編集、削除等が行えます。</p>
+
+	<h3>セキュリティ</h3>
+
+	<p>利用ユーザーは、入力や編集等の作業を行う為に、必ず\'ニュースの修正\'パーミッションを持ったグループに所属する必要があります。</p>
+
+	<h3>使用方法</h3>
+
 	<p>もっとも簡単な利用方法はcms_moduleタグと合わて使うことです。この方法はモジュールをテンプレートやページのどこかニュース項目を表示したい場所に挿入することです。コードの形式は以下のようになります： <code>{cms_module module="news" number="5" category="beer"}</code></p>';
 $lang['utma'] = '156861353.1025915730.1283783986.1283783986.1283783986.1';
 $lang['utmb'] = '156861353.1.10.1283783986';

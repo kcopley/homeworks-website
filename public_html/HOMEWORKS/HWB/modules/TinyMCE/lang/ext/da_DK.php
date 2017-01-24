@@ -165,26 +165,46 @@ $lang['thousanddelimiter'] = ',';
 $lang['size'] = 'Str.';
 $lang['dimensions'] = 'BxH';
 $lang['advanced_tab'] = 'Avanceret';
-$lang['help'] = '	<h3>Hvad g&oslash;r dette modul?</h3>
-	<p>Tillader at TinyMCE kan bruges som WYSIWYG-editor.</p>
-	<h3>Hvordan bruger jeg det??</h3>
-	<p>Install&eacute;r det, g&aring; til bruger indstillinger og v&aelig;lg TinyMCE som det &oslash;nskede WYSIWYG-system.</p>
-  <h3>Spellchecker</h3>
-  <p>Fra og med version 2.6.0, har TinyMCE f&aring;et en online stavekontrol. Men bem&aelig;rk venligst at SSL skal v&aelig;re sl&aring;et til p&aring; serveren for at dette virker. P&aring; nogle installationer hedder denn konfiguration php_openssl men det kan v&aelig;re anderledes.</p>
-
-<h3>Probleml&oslash;sning</h3>
-	Nogle brugere har problemer med at Tiny ikke viser sig efter installation eller opgradering. Her er en liste af ting der kan pr&oslash;ves f&oslash;r udviklerne kontaktes.
-	<br/>
-	<ul>
-	<li>1. Pr&oslash;v venligst at upload&#039;e modules/TinyMCE-mappen til din server igen. I forbavsende mange tilf&aelig;lde har problemet v&aelig;ret manglende filer pga. fejl i upload.</li>
-	<li>2. Pr&oslash;v at sl&aring; Statisk konfiguration til. Bem&aelig;rk at dette kr&aelig;ver at du har skriverettigheder til /tmp/-mappen p&aring; serveren</li>
-	<li>3. Hvis du lige har opgraderet, s&aring; nulstil alle indstillinger. Dette er ikke rart, hvis du har konfigureret en masse, det ved jeg, men der er sket en v&aelig;ldig masse &aelig;ndringer fra 2.3.x til 2.4.x versionerne af modulet.
-<li>4. Pr&oslash;v at sl&aring; funktionen statisk konfiguration til. Dette virker bedre p&aring; nogle systemer (CGI-PHP f.eks.)
-	</ul>
-	<br/>
-		<h3>Udvidelses udvikling</h3>
-  Fra og med version 2.7.0 giver TinyMCE-modulet mulighed for at andre moduler kan registrere udvidelser i dette. Det kunne v&aelig;re en ny ikon til at inds&aelig;tte indhold fra module,  s&aring;som et galleri el. lign. Det er rimelig teknisk at f&aring; dette til at virke, men hvis du er modul-udvikler og kunne t&aelig;nke dig at kigge n&aelig;rmere p&aring; det, s&aring; kig venligst i TinyMCE/docs-dir for yderligere informationer.
-		
+$lang['help'] = '	<h3>Hvad g&oslash;r dette modul?</h3>
+
+	<p>Tillader at TinyMCE kan bruges som WYSIWYG-editor.</p>
+
+	<h3>Hvordan bruger jeg det??</h3>
+
+	<p>Install&eacute;r det, g&aring; til bruger indstillinger og v&aelig;lg TinyMCE som det &oslash;nskede WYSIWYG-system.</p>
+
+  <h3>Spellchecker</h3>
+
+  <p>Fra og med version 2.6.0, har TinyMCE f&aring;et en online stavekontrol. Men bem&aelig;rk venligst at SSL skal v&aelig;re sl&aring;et til p&aring; serveren for at dette virker. P&aring; nogle installationer hedder denn konfiguration php_openssl men det kan v&aelig;re anderledes.</p>
+
+
+
+<h3>Probleml&oslash;sning</h3>
+
+	Nogle brugere har problemer med at Tiny ikke viser sig efter installation eller opgradering. Her er en liste af ting der kan pr&oslash;ves f&oslash;r udviklerne kontaktes.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Pr&oslash;v venligst at upload&#039;e modules/TinyMCE-mappen til din server igen. I forbavsende mange tilf&aelig;lde har problemet v&aelig;ret manglende filer pga. fejl i upload.</li>
+
+	<li>2. Pr&oslash;v at sl&aring; Statisk konfiguration til. Bem&aelig;rk at dette kr&aelig;ver at du har skriverettigheder til /tmp/-mappen p&aring; serveren</li>
+
+	<li>3. Hvis du lige har opgraderet, s&aring; nulstil alle indstillinger. Dette er ikke rart, hvis du har konfigureret en masse, det ved jeg, men der er sket en v&aelig;ldig masse &aelig;ndringer fra 2.3.x til 2.4.x versionerne af modulet.
+
+<li>4. Pr&oslash;v at sl&aring; funktionen statisk konfiguration til. Dette virker bedre p&aring; nogle systemer (CGI-PHP f.eks.)
+
+	</ul>
+
+	<br/>
+
+		<h3>Udvidelses udvikling</h3>
+
+  Fra og med version 2.7.0 giver TinyMCE-modulet mulighed for at andre moduler kan registrere udvidelser i dette. Det kunne v&aelig;re en ny ikon til at inds&aelig;tte indhold fra module,  s&aring;som et galleri el. lign. Det er rimelig teknisk at f&aring; dette til at virke, men hvis du er modul-udvikler og kunne t&aelig;nke dig at kigge n&aelig;rmere p&aring; det, s&aring; kig venligst i TinyMCE/docs-dir for yderligere informationer.
+
+		
+
 ';
 $lang['utma'] = '156861353.2039886585.1231713618.1288347746.1288628456.167';
 $lang['utmz'] = '156861353.1286879837.162.50.utmcsr=forum.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php/board,64.0.html';

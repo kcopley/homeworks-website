@@ -8,8 +8,8 @@
  *
  *--------------------------------------------------------------------
  * Revision History
- * v2.0.1	09 mar	2009	Jean-Sébastien Goupil	Update for BCG classes
- * v1.2.3b	31 dec	2005	Jean-Sébastien Goupil
+ * v2.0.1	09 mar	2009	Jean-Sï¿½bastien Goupil	Update for BCG classes
+ * v1.2.3b	31 dec	2005	Jean-Sï¿½bastien Goupil
  *--------------------------------------------------------------------
  * $Id: JoinDraw.php,v 1.3 2009/03/08 23:12:27 jsgoupil Exp $
  *--------------------------------------------------------------------

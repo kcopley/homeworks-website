@@ -44,43 +44,75 @@ $lang['eventdesc-SearchCompleted'] = 'Spusten&eacute; po dokončen&iacute; vyhľ
 $lang['eventdesc-SearchItemAdded'] = 'Spusten&eacute; po zindexovan&iacute; novej položky.';
 $lang['eventdesc-SearchItemDeleted'] = 'Spusten&eacute; po zmazan&iacute; položky z indexu.';
 $lang['eventdesc-SearchAllItemsDeleted'] = 'Spusten&eacute; po zmazan&iacute; v&scaron;etk&yacute;ch položiek indexu.';
-$lang['eventhelp-SearchInitiated'] = '<p>Spusten&eacute; po inicializovan&iacute; vyhľad&aacute;vania.</p>
-<h4>Parametre</h4>
-<ol>
-<li>Vyhľad&aacute;van&yacute; text.</li>
+$lang['eventhelp-SearchInitiated'] = '<p>Spusten&eacute; po inicializovan&iacute; vyhľad&aacute;vania.</p>
+
+<h4>Parametre</h4>
+
+<ol>
+
+<li>Vyhľad&aacute;van&yacute; text.</li>
+
 </ol>';
-$lang['eventhelp-SearchCompleted'] = '<p>Spusten&eacute; po dokončen&iacute; vyhľad&aacute;vania.</p>
-<h4>Parametre</h4>
-<ol>
-<li>Vyhľad&aacute;van&yacute; text.</li>
-<li>Zoznam v&yacute;sledkov hľadania.</li>
+$lang['eventhelp-SearchCompleted'] = '<p>Spusten&eacute; po dokončen&iacute; vyhľad&aacute;vania.</p>
+
+<h4>Parametre</h4>
+
+<ol>
+
+<li>Vyhľad&aacute;van&yacute; text.</li>
+
+<li>Zoznam v&yacute;sledkov hľadania.</li>
+
 </ol>';
-$lang['eventhelp-SearchItemAdded'] = '<p>Spusten&eacute; po zindexovan&iacute; novej položky.</p>
-<h4>Parametre</h4>
-<ol>
-<li>N&aacute;zov modulu.</li>
-<li>Id položky.</li>
-<li>Dodatočn&yacute; atrib&uacute;t.</li>
-<li>Zindexovan&yacute; a pridan&yacute; obsah.</li>
+$lang['eventhelp-SearchItemAdded'] = '<p>Spusten&eacute; po zindexovan&iacute; novej položky.</p>
+
+<h4>Parametre</h4>
+
+<ol>
+
+<li>N&aacute;zov modulu.</li>
+
+<li>Id položky.</li>
+
+<li>Dodatočn&yacute; atrib&uacute;t.</li>
+
+<li>Zindexovan&yacute; a pridan&yacute; obsah.</li>
+
 </ol>';
-$lang['eventhelp-SearchItemDeleted'] = '<p>Spusten&eacute; po zmazan&iacute; položky z indexu.</p>
-<h4>Parametre</h4>
-<ol>
-<li>N&aacute;zov modulu.</li>
-<li>Id položky.</li>
-<li>Dodatočn&yacute; atrib&uacute;t.</li>
+$lang['eventhelp-SearchItemDeleted'] = '<p>Spusten&eacute; po zmazan&iacute; položky z indexu.</p>
+
+<h4>Parametre</h4>
+
+<ol>
+
+<li>N&aacute;zov modulu.</li>
+
+<li>Id položky.</li>
+
+<li>Dodatočn&yacute; atrib&uacute;t.</li>
+
 </ol>';
-$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Spusten&eacute; po zmazan&iacute; v&scaron;etk&yacute;ch položiek indexu.</p>
-<h4>Parametre</h4>
-<ul>
-<li>Žiadne</li>
+$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Spusten&eacute; po zmazan&iacute; v&scaron;etk&yacute;ch položiek indexu.</p>
+
+<h4>Parametre</h4>
+
+<ul>
+
+<li>Žiadne</li>
+
 </ul>';
-$lang['help'] = '<h3>Ako to funguje?</h3>
-<p>Vyhľad&aacute;vanie je modul pre prehľad&aacute;vanie obsahu &quot;jadra&quot; a určit&yacute;ch registrovan&yacute;ch modulov. Zad&aacute;te text a vr&aacute;tia sa relevantn&eacute;, zhoduj&uacute;ce sa v&yacute;sledky.</p>
-<h3>Ako to použ&iacute;vať?</h3>
-<p>Najjednoduch&scaron;&iacute; sp&ocirc;sob je s použit&iacute;m {search} tagu (zaobaľuje module tag pre zjednodu&scaron;enie z&aacute;pisu). T&yacute;mto sa umiestni modul buď do &scaron;abl&oacute;ny, alebo na str&aacute;nku a zobraz&iacute; vyhľad&aacute;vac&iacute; formul&aacute;r. K&oacute;d m&ocirc;že vyzerať takto: <code>{search}</code></p>
-<h4>Ako zak&aacute;zať indexovanie určit&eacute;ho obsahu?</h4>
-<p>Vyhľad&aacute;vac&iacute; modul nebude prehľad&aacute;vať &quot;neakt&iacute;vne&quot; str&aacute;nky. Napriek tomu, v pr&iacute;pade, že použ&iacute;vate modul CustomContent, alebo in&yacute; inteligentn&yacute; sp&ocirc;sob pre zobrazenie r&ocirc;zneho obsahu pre r&ocirc;zne skupiny použ&iacute;vateľov, je odpor&uacute;čan&eacute; zak&aacute;zať prehľad&aacute;vanie tak&yacute;chto živ&yacute;ch str&aacute;nok. M&ocirc;žete to spraviť použit&iacute;m tagu <em>&amp;lt;!-- pageAttribute: NotSearchable --&amp;gt;</em> hocikde na str&aacute;nke. Pokiaľ vyhľad&aacute;vac&iacute; modul n&aacute;jde tak&yacute;to tag na str&aacute;nke, nebude indexovať jej obsah.</p>
+$lang['help'] = '<h3>Ako to funguje?</h3>
+
+<p>Vyhľad&aacute;vanie je modul pre prehľad&aacute;vanie obsahu &quot;jadra&quot; a určit&yacute;ch registrovan&yacute;ch modulov. Zad&aacute;te text a vr&aacute;tia sa relevantn&eacute;, zhoduj&uacute;ce sa v&yacute;sledky.</p>
+
+<h3>Ako to použ&iacute;vať?</h3>
+
+<p>Najjednoduch&scaron;&iacute; sp&ocirc;sob je s použit&iacute;m {search} tagu (zaobaľuje module tag pre zjednodu&scaron;enie z&aacute;pisu). T&yacute;mto sa umiestni modul buď do &scaron;abl&oacute;ny, alebo na str&aacute;nku a zobraz&iacute; vyhľad&aacute;vac&iacute; formul&aacute;r. K&oacute;d m&ocirc;že vyzerať takto: <code>{search}</code></p>
+
+<h4>Ako zak&aacute;zať indexovanie určit&eacute;ho obsahu?</h4>
+
+<p>Vyhľad&aacute;vac&iacute; modul nebude prehľad&aacute;vať &quot;neakt&iacute;vne&quot; str&aacute;nky. Napriek tomu, v pr&iacute;pade, že použ&iacute;vate modul CustomContent, alebo in&yacute; inteligentn&yacute; sp&ocirc;sob pre zobrazenie r&ocirc;zneho obsahu pre r&ocirc;zne skupiny použ&iacute;vateľov, je odpor&uacute;čan&eacute; zak&aacute;zať prehľad&aacute;vanie tak&yacute;chto živ&yacute;ch str&aacute;nok. M&ocirc;žete to spraviť použit&iacute;m tagu <em>&amp;lt;!-- pageAttribute: NotSearchable --&amp;gt;</em> hocikde na str&aacute;nke. Pokiaľ vyhľad&aacute;vac&iacute; modul n&aacute;jde tak&yacute;to tag na str&aacute;nke, nebude indexovať jej obsah.</p>
+
 <p>Tag <em>&amp;lt;!-- pageAttribute: NotSearchable --&amp;gt;</em> m&ocirc;že byť umiestnen&yacute; aj v &scaron;abl&oacute;ne. V takomto pr&iacute;pade, žiadna zo str&aacute;nok použ&iacute;vaj&uacute;ca dan&uacute; &scaron;abl&oacute;nu nebude indexovan&aacute;. Po odstr&aacute;nen&iacute; tagu bud&uacute; tak&eacute;to str&aacute;nky preindexovan&eacute;.</p>';
 $lang['utma'] = '156861353.1423109725.1280259016.1283630846.1283679544.29';
 $lang['utmz'] = '156861353.1283630846.28.27.utmcsr=dev.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/';

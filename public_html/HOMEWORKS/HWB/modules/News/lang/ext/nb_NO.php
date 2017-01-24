@@ -176,65 +176,114 @@ $lang['options'] = 'Alternativer';
 $lang['optionsupdated'] = 'Valgene ble oppdaterte';
 $lang['useexpiration'] = 'Bruk utl&oslash;psdato';
 $lang['eventdesc-NewsArticleAdded'] = 'Sendt n&aring;r en artikkel er lagt til.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Sendt n&aring;r en artikkel er lagt til.</p>
-<h4>Parametere</h4>
-<ul>
-<li>&quot;news_id&quot; - Id for nyhets artikkelen</li>
-<li>&quot;category_id&quot; - Id for kategorien for denne artiklen</li>
-<li>&quot;title&quot; - Artikkel tittel</li>
-<li>&quot;content&quot; - Artikkelens innhold</li>
-<li>&quot;summary&quot; - Artikkel sammendrag</li>
-<li>&quot;status&quot; - Status for artikkelen (&quot;draft&quot; eller &quot;publish&quot;)</li>
-<li>&quot;start_time&quot; - Dato for n&aring;r artikkelen skal begynne &aring; vises</li>
-<li>&quot;end_time&quot; - Dato for n&aring;r artikkelen ikke skal vises lengre</li>
-<li>&quot;useexp&quot; - Om utl&oslash;psdatoen skal ignoreres eller ikke</li>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Sendt n&aring;r en artikkel er lagt til.</p>
+
+<h4>Parametere</h4>
+
+<ul>
+
+<li>&quot;news_id&quot; - Id for nyhets artikkelen</li>
+
+<li>&quot;category_id&quot; - Id for kategorien for denne artiklen</li>
+
+<li>&quot;title&quot; - Artikkel tittel</li>
+
+<li>&quot;content&quot; - Artikkelens innhold</li>
+
+<li>&quot;summary&quot; - Artikkel sammendrag</li>
+
+<li>&quot;status&quot; - Status for artikkelen (&quot;draft&quot; eller &quot;publish&quot;)</li>
+
+<li>&quot;start_time&quot; - Dato for n&aring;r artikkelen skal begynne &aring; vises</li>
+
+<li>&quot;end_time&quot; - Dato for n&aring;r artikkelen ikke skal vises lengre</li>
+
+<li>&quot;useexp&quot; - Om utl&oslash;psdatoen skal ignoreres eller ikke</li>
+
 </ul>';
 $lang['eventdesc-NewsArticleEdited'] = 'Sendt n&aring;r en artikkel er redigert.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Sendt n&aring;r en artikkel er redigert.</p>
-<h4>Parametere</h4>
-<ul>
-<li>&quot;news_id&quot; - Id for nyhetsartikkelen</li>
-<li>&quot;category_id&quot; - Id for kategorien for denne artikkelen</li>
-<li>&quot;title&quot; - Artikkeltittel</li>
-<li>&quot;content&quot; - Artikkel innhold</li>
-<li>&quot;summary&quot; - Artikkel sammedrag</li>
-<li>&quot;status&quot; - Artikkel status (&quot;draft&quot; eller &quot;publish&quot;)</li>
-<li>&quot;start_time&quot; - Dato artikkelen skal begynne &aring; vises</li>
-<li>&quot;end_time&quot; - Dato artikkelen ikke skal vises lengre</li>
-<li>&quot;useexp&quot; - Om utl&oslash;psdatoen skal ignoreres eller ikke</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Sendt n&aring;r en artikkel er redigert.</p>
+
+<h4>Parametere</h4>
+
+<ul>
+
+<li>&quot;news_id&quot; - Id for nyhetsartikkelen</li>
+
+<li>&quot;category_id&quot; - Id for kategorien for denne artikkelen</li>
+
+<li>&quot;title&quot; - Artikkeltittel</li>
+
+<li>&quot;content&quot; - Artikkel innhold</li>
+
+<li>&quot;summary&quot; - Artikkel sammedrag</li>
+
+<li>&quot;status&quot; - Artikkel status (&quot;draft&quot; eller &quot;publish&quot;)</li>
+
+<li>&quot;start_time&quot; - Dato artikkelen skal begynne &aring; vises</li>
+
+<li>&quot;end_time&quot; - Dato artikkelen ikke skal vises lengre</li>
+
+<li>&quot;useexp&quot; - Om utl&oslash;psdatoen skal ignoreres eller ikke</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Sendt n&aring;r en artikkel er slettet.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Sendt n&aring;r en artikkel er slettet.</p>
-<h4>Parametere</h4>
-<ul>
-<li>&quot;news_id&quot; - Id for nyhetsartikkelen</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Sendt n&aring;r en artikkel er slettet.</p>
+
+<h4>Parametere</h4>
+
+<ul>
+
+<li>&quot;news_id&quot; - Id for nyhetsartikkelen</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Sendt n&aring;r en kategori er lagt til.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Sendt n&aring;r en kategori er lagt til.</p>
-<h4>Parametere</h4>
-<ul>
-<li>&quot;category_id&quot; - Id for nyhetskategorien</li>
-<li>&quot;name&quot; - Navn p&aring; nyhetskategorien</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Sendt n&aring;r en kategori er lagt til.</p>
+
+<h4>Parametere</h4>
+
+<ul>
+
+<li>&quot;category_id&quot; - Id for nyhetskategorien</li>
+
+<li>&quot;name&quot; - Navn p&aring; nyhetskategorien</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Sendt n&aring;r en kategori er redigert.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Sendt n&aring;r en kategori er redigert.</p>
-<h4>Parametere</h4>
-<ul>
-<li>&quot;category_id&quot; - Id for nyhetskategorien</li>
-<li>&quot;name&quot; - Navn p&aring; nyhetskategorien</li>
-<li>&quot;origname&quot; - Det orginale navnet p&aring; nyhetskategorien</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Sendt n&aring;r en kategori er redigert.</p>
+
+<h4>Parametere</h4>
+
+<ul>
+
+<li>&quot;category_id&quot; - Id for nyhetskategorien</li>
+
+<li>&quot;name&quot; - Navn p&aring; nyhetskategorien</li>
+
+<li>&quot;origname&quot; - Det orginale navnet p&aring; nyhetskategorien</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Sendt n&aring;r en kategori er slettet.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sendt n&aring;r en kategori er slettet.</p>
-<h4>Parametere</h4>
-<ul>
-<li>&quot;category_id&quot; - Id for den slettede nyhetskategorien</li>
-<li>&quot;name&quot; - Navnet p&aring; den slettede kategorien</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sendt n&aring;r en kategori er slettet.</p>
+
+<h4>Parametere</h4>
+
+<ul>
+
+<li>&quot;category_id&quot; - Id for den slettede nyhetskategorien</li>
+
+<li>&quot;name&quot; - Navnet p&aring; den slettede kategorien</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'Denne parameter er kun gyldig i detaljvisning. Den tillater &aring; spesifisere hvilken nyhetsartikkel som skal vises i detaljmodus. Om den spesielle verdien -1 er benyttet vil systemet vise den nyeste, publiserte, ikke utl&oslash;pte artikkelen.';
 $lang['helpnumber'] = 'Maksimalt antall elementer som skal vises (per side) (ingen verdi vil medf&oslash;re at alle elementer vises). Denne er synonym for pagelimit parameteren.';
@@ -250,46 +299,85 @@ $lang['helpsortasc'] = 'Sorter nyhetselementer i stigende rekkef&oslash;lge i st
 $lang['helpdetailpage'] = 'Side hvor nyhetsdetaljer skal vises. Dette kan enten v&aelig;re et sidealias eller en id. Benyttes for &aring; tillate visning av detaljer i en annen mal enn sammendragsmalen.';
 $lang['helpshowarchive'] = 'Vis bare utdaterte nyhetsartikler.';
 $lang['helpbrowsecat'] = 'Viser en s&oslash;kbar kategoriliste';
-$lang['helpaction'] = 'Overstyrer standard handlingen. Mulige verdier er:
-<ul>
-<li>&quot;detail&quot; - for &aring; vise en spesifisert articleid i detaljvisningsmodus.</li>
-<li>&quot;default&quot; - for &aring; vise sammendragsvisningen</li>
-<li>&quot;fesubmit&quot; - for &aring; vise et forside skjema for &aring; tillate brukere &aring; bidra med nyhetsartikler fra nettsiden.</li>
-<li>&quot;browsecat&quot; - for &aring; vise en s&oslash;kbar kategoriliste.</li>
+$lang['helpaction'] = 'Overstyrer standard handlingen. Mulige verdier er:
+
+<ul>
+
+<li>&quot;detail&quot; - for &aring; vise en spesifisert articleid i detaljvisningsmodus.</li>
+
+<li>&quot;default&quot; - for &aring; vise sammendragsvisningen</li>
+
+<li>&quot;fesubmit&quot; - for &aring; vise et forside skjema for &aring; tillate brukere &aring; bidra med nyhetsartikler fra nettsiden.</li>
+
+<li>&quot;browsecat&quot; - for &aring; vise en s&oslash;kbar kategoriliste.</li>
+
 </ul>';
-$lang['help'] = '<h3>Viktige merknader</h3>
-<p>Versjon 2.9 av News og h&oslash;yere har fjernet formatpostdate medlemmet fra malene og har ogs&aring; fjernet dateformat parameteren. Du b&oslash;r benytte  cms_date_format  (slik det er vist i standard malene) for &aring; formatere datoer. Og du b&oslash;r benytte entry->postdate i stedet for entry->formatpostdate i dine maler. <br />Tips: For &aring; f&aring; norsk &aelig; og &oslash; p&aring; ukedag s&aring; kan det hende du ogs&aring; m&aring; tilf&oslash;ye  |htmlentities  bak  cms_date_format  som dette: {$entry->postdate|cms_date_format:&quot;%A %e. %B %Y&quot;|htmlentities}</p>
-
-<h3>Hva gj&oslash;r denne modulen?</h3>
-<p>News er en modul for visning av nyhetsartikler p&aring; din side. Den ligner en blogg, men har flere muligheter!.  
-N&aring;r modulen er installert, blir det lagt til en administrasjonsside for Nyheter i administrasjonsmenyen, som vil tillate deg &aring; velge og  legge til nyhetskategori. N&aring;r en nyhetskategori er opprettet eller valgt, vil det vises en liste med nyhetsartikler for den kategorien.  
-Herfra kan du legge til, redigere eller slette nyheter for kategorien.</p>
-        <h4>Mange visningsm&aring;ter</h4>
-	<p>Parameterne som er st&oslash;ttet av nyhets modulen, og st&oslash;tte for mange maler p&aring; en gang vil si at dine muligheter for &aring; vise nyhetsartikler er ubegrenset.</p>
-        <h4>Egendefinerte felter</h4>
-	<p>Nyhetsmodulen tillater definering av mange egendefinerte felter (inkludert filer og bilder) som vil tillate deg &aring; koble pdf filer eller flere bilder til dine artikler.</p>
-        <h4>Kategorier</h4>
-	<p>Nyheter st&oslash;tter en hierarkisk kategori mekanisme for &aring; organisere dine artikler. En nyhetsartikkel kan kun tilh&oslash;re en posisjon i hierarkiet.</p>
-	<h4>Utl&oslash;psdato og Status</h4>
-	<p>Hver nyhetsartikkel kan ha en utl&oslash;psdato(valgfritt) og n&aring;r denne utl&oslash;per vil artikkelen ikke vises p&aring; din nettside. I tillegg kan artikler ogs&aring; merkes som <em>kladd</em> for &aring; sette dem til &aring; ikke vises p&aring; din nettside.</p>
-	<h3>Sikkerhet</h3>
-	<p>Brukeren m&aring; tilh&oslash;re en gruppe med &#039;Modify News&#039; tillatelse for &aring; kunne legge til, redigere eller slette nyhetsartikler.</p>
-        <p>Og for &aring; slette nyhetsartikler m&aring; brukeren tilh&oslash;re en gruppe men &#039;Delete News Articles&#039; tillatelse.</p>
-<p>For &aring; endre layout malene, m&aring; brukeren tilh&oslash;re en gruppe med &#039;Modify Templates&#039; tillatelse.</p>
-<p>For &aring; redigere globale nyhets preferanser, m&aring; brukeren tilh&oslash;re en gruppe med &#039;Modify Site Preferences&#039; tillatelse.</p>
-<p>Og for &aring; godkjenne nyheter for forsidevisning m&aring; brukeren i tillegg tilh&oslash;re en gruppe med &#039;Approve News&#039; tillatelse.</p>
-
-<h3>Hvordan bruker jeg modulen?</h3>
-<p>Den enkleste m&aring;ten &aring; bruke den er med en {news} omslagstagg (lukker inn modulen i en tagg, for &aring; forenkle syntaksen). Dette vil sette inn modulen i din mal eller side hvor du m&aring;tte &oslash;nske, og vise nyhetsartikler.  Koden vil se ut noe slikt som: <code>{news number=&#039;5&#039;}</code></p>
-
-<h3>Maler</h3>
-<p>Fra og med versjon 2.3 st&oslash;tter News flere database maler, og st&oslash;tter ikke lenger filmaler. Brukere som brukte det gamle filmal systemet kan f&oslash;lge disse trinnene (for hver filmal):
-<ul>
-<li>Kopier filmalen til utklippstavla</li>
-<li>Opprett en ny databasemal <em>(enten sammendrag eller detalj)</em>.  Gi den nye malen samme navn (inkludert .tpl endelse) som den gamle filmalen, og lim inn innholdet.</li>
-<li>Trykk Oppdater</li>
-</ul>
-
+$lang['help'] = '<h3>Viktige merknader</h3>
+
+<p>Versjon 2.9 av News og h&oslash;yere har fjernet formatpostdate medlemmet fra malene og har ogs&aring; fjernet dateformat parameteren. Du b&oslash;r benytte  cms_date_format  (slik det er vist i standard malene) for &aring; formatere datoer. Og du b&oslash;r benytte entry->postdate i stedet for entry->formatpostdate i dine maler. <br />Tips: For &aring; f&aring; norsk &aelig; og &oslash; p&aring; ukedag s&aring; kan det hende du ogs&aring; m&aring; tilf&oslash;ye  |htmlentities  bak  cms_date_format  som dette: {$entry->postdate|cms_date_format:&quot;%A %e. %B %Y&quot;|htmlentities}</p>
+
+
+
+<h3>Hva gj&oslash;r denne modulen?</h3>
+
+<p>News er en modul for visning av nyhetsartikler p&aring; din side. Den ligner en blogg, men har flere muligheter!.  
+
+N&aring;r modulen er installert, blir det lagt til en administrasjonsside for Nyheter i administrasjonsmenyen, som vil tillate deg &aring; velge og  legge til nyhetskategori. N&aring;r en nyhetskategori er opprettet eller valgt, vil det vises en liste med nyhetsartikler for den kategorien.  
+
+Herfra kan du legge til, redigere eller slette nyheter for kategorien.</p>
+
+        <h4>Mange visningsm&aring;ter</h4>
+
+	<p>Parameterne som er st&oslash;ttet av nyhets modulen, og st&oslash;tte for mange maler p&aring; en gang vil si at dine muligheter for &aring; vise nyhetsartikler er ubegrenset.</p>
+
+        <h4>Egendefinerte felter</h4>
+
+	<p>Nyhetsmodulen tillater definering av mange egendefinerte felter (inkludert filer og bilder) som vil tillate deg &aring; koble pdf filer eller flere bilder til dine artikler.</p>
+
+        <h4>Kategorier</h4>
+
+	<p>Nyheter st&oslash;tter en hierarkisk kategori mekanisme for &aring; organisere dine artikler. En nyhetsartikkel kan kun tilh&oslash;re en posisjon i hierarkiet.</p>
+
+	<h4>Utl&oslash;psdato og Status</h4>
+
+	<p>Hver nyhetsartikkel kan ha en utl&oslash;psdato(valgfritt) og n&aring;r denne utl&oslash;per vil artikkelen ikke vises p&aring; din nettside. I tillegg kan artikler ogs&aring; merkes som <em>kladd</em> for &aring; sette dem til &aring; ikke vises p&aring; din nettside.</p>
+
+	<h3>Sikkerhet</h3>
+
+	<p>Brukeren m&aring; tilh&oslash;re en gruppe med &#039;Modify News&#039; tillatelse for &aring; kunne legge til, redigere eller slette nyhetsartikler.</p>
+
+        <p>Og for &aring; slette nyhetsartikler m&aring; brukeren tilh&oslash;re en gruppe men &#039;Delete News Articles&#039; tillatelse.</p>
+
+<p>For &aring; endre layout malene, m&aring; brukeren tilh&oslash;re en gruppe med &#039;Modify Templates&#039; tillatelse.</p>
+
+<p>For &aring; redigere globale nyhets preferanser, m&aring; brukeren tilh&oslash;re en gruppe med &#039;Modify Site Preferences&#039; tillatelse.</p>
+
+<p>Og for &aring; godkjenne nyheter for forsidevisning m&aring; brukeren i tillegg tilh&oslash;re en gruppe med &#039;Approve News&#039; tillatelse.</p>
+
+
+
+<h3>Hvordan bruker jeg modulen?</h3>
+
+<p>Den enkleste m&aring;ten &aring; bruke den er med en {news} omslagstagg (lukker inn modulen i en tagg, for &aring; forenkle syntaksen). Dette vil sette inn modulen i din mal eller side hvor du m&aring;tte &oslash;nske, og vise nyhetsartikler.  Koden vil se ut noe slikt som: <code>{news number=&#039;5&#039;}</code></p>
+
+
+
+<h3>Maler</h3>
+
+<p>Fra og med versjon 2.3 st&oslash;tter News flere database maler, og st&oslash;tter ikke lenger filmaler. Brukere som brukte det gamle filmal systemet kan f&oslash;lge disse trinnene (for hver filmal):
+
+<ul>
+
+<li>Kopier filmalen til utklippstavla</li>
+
+<li>Opprett en ny databasemal <em>(enten sammendrag eller detalj)</em>.  Gi den nye malen samme navn (inkludert .tpl endelse) som den gamle filmalen, og lim inn innholdet.</li>
+
+<li>Trykk Oppdater</li>
+
+</ul>
+
+
+
 <p>Dersom du f&oslash;lger disse trinnene skulle det l&oslash;se problemet med at dine nyhetsmaler ikke blir funnet og tilsvarende smarty feil, n&aring;r du oppgraderer til en versjon av CMS som har News 2.3 eller h&oslash;yere.</p>';
 $lang['utmz'] = '156861353.1288991067.3364.78.utmccn=(referral)|utmcsr=cmsmadesimple.org|utmcct=/about-link/special-fans-listing/|utmcmd=referral';
 $lang['utma'] = '156861353.179052623084110100.1210423577.1290337505.1290347334.3406';

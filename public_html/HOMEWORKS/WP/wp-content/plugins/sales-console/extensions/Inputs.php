@@ -996,6 +996,77 @@ class BookButton {
     }
 }
 
+class ConsignerRemoveButton {
+    public $button;
+    public $action;
+    public $custom;
+
+    public $search_param;
+    public $display_in_search;
+    public $edit_param;
+    public $display_in_edit;
+    public $add_param;
+    public $display_in_add;
+
+    function __construct($name)
+    {
+        $this->name = $name;
+
+        $this->search_param = true;
+        $this->display_in_search = true;
+        $this->add_param = true;
+        $this->display_in_add = true;
+        $this->edit_param = true;
+        $this->display_in_edit = true;
+    }
+
+    public function GetInputSearch($leftWidth, $rightWidth, $prefix) {
+    }
+
+    public function GetInputAdd($leftWidth, $rightWidth, $prefix) {
+    }
+
+    public function GetQuery($args, $prefix) {
+        return $args;
+    }
+
+    public function GetDisplay($id, $source) {
+        if ($this->custom) {
+            $button = $this->custom;
+        }
+        else {
+            $button = new Input(classType('button-primary').type('submit').name('button').value($this->button));
+        }
+        return
+            new Column(
+                new Form(
+                    page_action::InputAction($this->action),
+                    selection::SetID($id, Consigner::$source),
+                    $button
+                )
+            );
+    }
+
+    public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
+        if ($this->custom) {
+            $button = $this->custom;
+        }
+        else {
+            $button = new Input(classType('button-primary').type('submit').name('button').value($this->button));
+        }
+        return new Row(
+            new Column(width($leftwidth)),
+            new Column(width($rightwidth).align('left'),
+                new Form(
+                    page_action::InputAction($this->action),
+                    selection::SetID($id, Book::$source),
+                    $button
+                )
+            )
+        );
+    }
+}
+
 class TransactionButton {
     public $button;
     public $action;

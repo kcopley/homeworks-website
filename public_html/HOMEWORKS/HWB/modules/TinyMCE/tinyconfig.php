@@ -1,6 +1,12 @@
-<?php
-
-echo "nothing for you here";
-die();
-
-?>
+<?php
+
+
+
+echo "nothing for you here";
+
+die();
+
+
+
+?>
+

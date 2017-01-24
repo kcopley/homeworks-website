@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Vaikuttaa vain edistyneess&auml; moodissa';
 $lang['showhiddenfiles'] = 'N&auml;yt&auml; piilotiedostot';
 $lang['settingsconfirmsingledelete'] = 'Varmista yksitt&auml;isen tiedoston poisto';
 $lang['settingssaved'] = 'Asetukset talletettu';
-$lang['help'] = '		<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
-		<p>T&auml;m&auml; moduuli tarjoaa tiedostonhallinta toimintoja, joka korvaa toivottavasti vanhentuneen sis&auml;&auml;nrakennetun tiedostonhallinnan.</p>
-		<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
+$lang['help'] = '		<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
+
+		<p>T&auml;m&auml; moduuli tarjoaa tiedostonhallinta toimintoja, joka korvaa toivottavasti vanhentuneen sis&auml;&auml;nrakennetun tiedostonhallinnan.</p>
+
+		<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
+
 		<p>Valitse se sis&auml;lt&ouml;valikosta hallintapaneelissa. Vaikka vanhempi tiedostonhallinta on edelleen olemassa, sinun kannattaa valita valikon alimmainen.</p>';
 $lang['utma'] = '156861353.572491444.1274267548.1274275175.1274281846.4';
 $lang['utmc'] = '156861353';

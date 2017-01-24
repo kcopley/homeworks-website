@@ -13,21 +13,36 @@ $lang['default'] = 'Standard';
 $lang['templates'] = 'Maler';
 $lang['addtemplate'] = 'Legg til mal';
 $lang['areyousure'] = 'Er du sikker p&aring; at du vil slette dette?';
-$lang['changelog'] = '	<ul>
-<li>1.7 - Adds the possibility to cache menumanager output to a cache file, this will remove a bunch of queries from mostly static sites.</li>
-<li>1.6.3 - Adds usage column.</li>
-<li>1.6.2 - Can no longer delete default template, fix problem with default database templates.</li>
-<li>1.6.1 - Add created and modified entries on each node.</li>
-<li>1.6 - Re-design admin interface, allow setting the default menu manager template.</li>
-        <li>1.5.4 - Minor bugfix, now require CMS 1.5.3.</li>
-        <li>1.5.3 - Support for syntax hilighter.</li>
-        <li>1.5.2 - Added more fields available in each node in the template.</li>
-        <li>1.5 - Bump version to be compatible with 1.1 only, and add the SetParameterTypes calls</li>
-	<li>1.4.1 -- Fix a problem where menus would not show if includeprefix was not specified.
-	<li>1.4 -- Accept a comma separated list of includeprefixes or excludeprefixes</li>
-	<li>1.3 -- Added includeprefix and excludeprefix params</li>
-	<li>1.1 -- Added handling of target parameter, mainly for the Link content type</li>
-	<li>1.0 -- Initial Release</li>
+$lang['changelog'] = '	<ul>
+
+<li>1.7 - Adds the possibility to cache menumanager output to a cache file, this will remove a bunch of queries from mostly static sites.</li>
+
+<li>1.6.3 - Adds usage column.</li>
+
+<li>1.6.2 - Can no longer delete default template, fix problem with default database templates.</li>
+
+<li>1.6.1 - Add created and modified entries on each node.</li>
+
+<li>1.6 - Re-design admin interface, allow setting the default menu manager template.</li>
+
+        <li>1.5.4 - Minor bugfix, now require CMS 1.5.3.</li>
+
+        <li>1.5.3 - Support for syntax hilighter.</li>
+
+        <li>1.5.2 - Added more fields available in each node in the template.</li>
+
+        <li>1.5 - Bump version to be compatible with 1.1 only, and add the SetParameterTypes calls</li>
+
+	<li>1.4.1 -- Fix a problem where menus would not show if includeprefix was not specified.
+
+	<li>1.4 -- Accept a comma separated list of includeprefixes or excludeprefixes</li>
+
+	<li>1.3 -- Added includeprefix and excludeprefix params</li>
+
+	<li>1.1 -- Added handling of target parameter, mainly for the Link content type</li>
+
+	<li>1.0 -- Initial Release</li>
+
 	</ul> ';
 $lang['dbtemplates'] = 'Database maler';
 $lang['description'] = 'Behandle meny maler for &aring; vise menyer p&aring; alle tenkelige m&aring;ter';
@@ -46,51 +61,96 @@ $lang['help_start_level'] = 'Dette valget vil f&aring; menyen til kun &aring; vi
 $lang['help_start_element'] = 'Starter menyen med visning p&aring; den gitte start_element og viser kun det elementet og dets barn.  Tar en hierarki plassering (f.eks. 5.1.2).';
 $lang['help_start_page'] = 'Starter menyen med visning p&aring; en gitt start_page og viser kun det elementet og dets barn.  Tar en side alias.';
 $lang['help_template'] = 'Mal &aring; bruke for &aring; vise menyen. Maler vil komme fra databasemaler om ikke malens navn ender p&aring; .tpl - i s&aring; fall vill den komme fra en fil i MenuManager templates-mappen (standard er simple_navigation.tpl)';
-$lang['help'] = '	<h3>Hva gj&oslash;r denne?</h3>
-	<p>Menu Manager er en modul for &aring; sette menyer inn i et system som er lett &aring; bruke og lett &aring; tilpasse.  Den setter visnings delen av menyer inn i smarty maler som lett kan modifiseres for &aring; passe brukerens behov. Det vil si, menu manager er kun motoren som mater malen. Ved &aring; tilpasse malene, eller lage dine egne, kan du lage omtrent enhver meny du kan tenke deg.</p>
-	<h3>Hvordan bruker jeg den?</h3>
-	<p>Bare sett inn taggen i din mal/side som: <code>{menu}</code>.  Parameterne den godtar listes nedenfor.</p>
-	<h3>Hvorfor bry seg om maler?</h3>
-	<p>Menu Manager bruker maler for visningslogikk.  Den kommer med tre standard maler med navn cssmenu.tpl, minimal_menu.tpl og simple_navigation.tpl. I basis s&aring; lager de alle en enkel usortert liste med sider, ved &aring; bruke forskjellige classes og ID&#039;er for styling med CSS.</p>
-	<p>V&aelig;r oppmerksom p&aring; at du styler utssendet p&aring; menyene med CSS. Stilsett er ikke inkludert med Menu Manager, men m&aring; hektes p&aring; sidemalen separat. For &aring; f&aring; cssmenu.tpl malen til &aring; virke med IE m&aring; du ogs&aring; sette inn en link til JavaScript&#039;et i hode-seksjonen p&aring; sidens mal, noe som er n&oslash;dvendig for &aring; f&aring; hover effekten til &aring; virke i IE.</p>
-	<p>Om du vil lage en spesialisert versjon av en mal, kan du lett importere inn i databasen og deretter redigere den direkte i CMSMS admin.  For &aring; gj&oslash;re dette:
-		<ol>
-			<li>Klikk p&aring; Meny Behandler admin.</li>
-			<li>Clikk p&aring; Fil Mal fliken, og klikk s&aring; p&aring; Importer Mal til databasen knappen ved siden av bulletmenu.tpl.</li>
-			<li>Gi mal kopien et navn.  Vi kan kalle den &#039;Test Mal&#039;.</li>
-			<li>Du skal n&aring; se &#039;Test Mal&#039; i din liste over databasemaler.</li>
-		</ol>
-	</p>
-	<p>N&aring; kan du enkelt endre malen for dine behov for dette nettstedet.  Sett inn classes, id&#039;er og andre tagger s&aring; formateringen blir akkurat slik du vil. N&aring; kan du sette den inn p&aring; ditt nettsted med {menu&#039; template=&#039;Test Mal}. Husk at .tpl filendelsen m&aring; inkluderes om en filmal brukes.</p>
-	<p>Parametere for $node objektet brukt i malen er som f&oslash;lger:
-		<ul>
-			<li>$node->id -- Innholds ID</li>
-			<li>$node->url -- Link til innholdet</li>
-			<li>$node->accesskey -- Tilgangsn&oslash;kkel, om definert</li>
-			<li>$node->tabindex -- Tab Indeks, om definert</li>
-			<li>$node->titleattribute -- Beskrivelse av Tittel kjennetegn (title), om definert</li>
-			<li>$node->hierarchy -- Hierarki posisjon, (f.eks. 1.3.3)</li>
-			<li>$node->depth -- Dybde (niv&aring;) p&aring; denne klyngen i denne menyen</li>
-			<li>$node->prevdepth -- Dybde (niv&aring;) p&aring; klyngen som var rett f&oslash;r denne</li>
-			<li>$node->haschildren -- Returnerer sann om denne klyngen har barneklynger &aring; vise</li>
-			<li>$node->children_exist -- Returnerer sann on denne noden har barneklynger tilgjengelig i databasen som kan vises i menyen</li>
-			<li>$node->menutext -- Meny Tekst</li>
-			<li>$node->raw_menutext -- Menytekst uten konverterte html-entiteter</li>
-			<li>$node->alias -- Side alias</li>
-			<li>$node->extra1 -- Dette feltet inneholder verdien av extra1 side-egenskapen, om ikke loadprops-parameteren er satt til &aring; IKKE laste disse egenskapene.</li>
-			<li>$node->extra2 -- Dette feltet inneholder verdien av extra2 side-egenskapen, om ikke loadprops-parameteren er satt til &aring; IKKE laste disse egenskapene.</li>
-			<li>$node->extra3 -- Dette feltet inneholder verdien av extra3 side-egenskapen, om ikke loadprops-parameteren er satt til &aring; IKKE laste disse egenskapene.</li>
-			<li>$node->image -- Dette feltet inneholder verdien av image side-egenskapen (om den ikke er tom), om ikke loadprops-parameteren er satt til &aring; IKKE laste disse egenskapene.</li>
-			<li>$node->thumbnail -- Dette feltet inneholder verdien av thumbnail side-egenskapen (om den ikke er tom), om ikke loadprops-parameteren er satt til &aring; IKKE laste disse egenskapene.</li>
-			<li>$node->target -- Dette feltet inneholder Target for lenken (om den ikke er tom), om ikke loadprops-parameteren er satt til &aring; IKKE laste disse egenskapene.</li>
-			<li>$node->created -- Enhet opprettet dato</li>
-			<li>$node->modified -- Enhet endret dato</li>
-			<li>$node->index -- Nummer for denne klyngen i hele menyen</li>
-			<li>$node->parent -- Sann om denne klyngen ar foreldre til den n&aring; valgte side</li>
-		</ul>
-	</p>
-<p> Denne modulen har funksjoner for &aring; mellomlagre sine utdata inn i statiske filer for &aring; redusere krav til minne og sql sp&oslash;rringer, og for &aring; forbedre frontend-ytelsen. Dette gir alle fordelene med statiske menyer uten det tunge involvert n&aring;r du oppretter eller redigerer sider. </p>
-        <p> Hver menymal kan v&aelig;re merket som &quot;Kan mellomlagres&quot;. N&aring;r en mellomlagret menymal brukes p&aring; en innholdsside som kan mellomlagres, vil mellomlagrede menyvisninger som er tilgjengelig for denne siden vil bli brukt. Den ikke mellomlagres parameteren p&aring; menytaggen kan brukes til helt &aring; deaktivere hurtigbufring. </p>
+$lang['help'] = '	<h3>Hva gj&oslash;r denne?</h3>
+
+	<p>Menu Manager er en modul for &aring; sette menyer inn i et system som er lett &aring; bruke og lett &aring; tilpasse.  Den setter visnings delen av menyer inn i smarty maler som lett kan modifiseres for &aring; passe brukerens behov. Det vil si, menu manager er kun motoren som mater malen. Ved &aring; tilpasse malene, eller lage dine egne, kan du lage omtrent enhver meny du kan tenke deg.</p>
+
+	<h3>Hvordan bruker jeg den?</h3>
+
+	<p>Bare sett inn taggen i din mal/side som: <code>{menu}</code>.  Parameterne den godtar listes nedenfor.</p>
+
+	<h3>Hvorfor bry seg om maler?</h3>
+
+	<p>Menu Manager bruker maler for visningslogikk.  Den kommer med tre standard maler med navn cssmenu.tpl, minimal_menu.tpl og simple_navigation.tpl. I basis s&aring; lager de alle en enkel usortert liste med sider, ved &aring; bruke forskjellige classes og ID&#039;er for styling med CSS.</p>
+
+	<p>V&aelig;r oppmerksom p&aring; at du styler utssendet p&aring; menyene med CSS. Stilsett er ikke inkludert med Menu Manager, men m&aring; hektes p&aring; sidemalen separat. For &aring; f&aring; cssmenu.tpl malen til &aring; virke med IE m&aring; du ogs&aring; sette inn en link til JavaScript&#039;et i hode-seksjonen p&aring; sidens mal, noe som er n&oslash;dvendig for &aring; f&aring; hover effekten til &aring; virke i IE.</p>
+
+	<p>Om du vil lage en spesialisert versjon av en mal, kan du lett importere inn i databasen og deretter redigere den direkte i CMSMS admin.  For &aring; gj&oslash;re dette:
+
+		<ol>
+
+			<li>Klikk p&aring; Meny Behandler admin.</li>
+
+			<li>Clikk p&aring; Fil Mal fliken, og klikk s&aring; p&aring; Importer Mal til databasen knappen ved siden av bulletmenu.tpl.</li>
+
+			<li>Gi mal kopien et navn.  Vi kan kalle den &#039;Test Mal&#039;.</li>
+
+			<li>Du skal n&aring; se &#039;Test Mal&#039; i din liste over databasemaler.</li>
+
+		</ol>
+
+	</p>
+
+	<p>N&aring; kan du enkelt endre malen for dine behov for dette nettstedet.  Sett inn classes, id&#039;er og andre tagger s&aring; formateringen blir akkurat slik du vil. N&aring; kan du sette den inn p&aring; ditt nettsted med {menu&#039; template=&#039;Test Mal}. Husk at .tpl filendelsen m&aring; inkluderes om en filmal brukes.</p>
+
+	<p>Parametere for $node objektet brukt i malen er som f&oslash;lger:
+
+		<ul>
+
+			<li>$node->id -- Innholds ID</li>
+
+			<li>$node->url -- Link til innholdet</li>
+
+			<li>$node->accesskey -- Tilgangsn&oslash;kkel, om definert</li>
+
+			<li>$node->tabindex -- Tab Indeks, om definert</li>
+
+			<li>$node->titleattribute -- Beskrivelse av Tittel kjennetegn (title), om definert</li>
+
+			<li>$node->hierarchy -- Hierarki posisjon, (f.eks. 1.3.3)</li>
+
+			<li>$node->depth -- Dybde (niv&aring;) p&aring; denne klyngen i denne menyen</li>
+
+			<li>$node->prevdepth -- Dybde (niv&aring;) p&aring; klyngen som var rett f&oslash;r denne</li>
+
+			<li>$node->haschildren -- Returnerer sann om denne klyngen har barneklynger &aring; vise</li>
+
+			<li>$node->children_exist -- Returnerer sann on denne noden har barneklynger tilgjengelig i databasen som kan vises i menyen</li>
+
+			<li>$node->menutext -- Meny Tekst</li>
+
+			<li>$node->raw_menutext -- Menytekst uten konverterte html-entiteter</li>
+
+			<li>$node->alias -- Side alias</li>
+
+			<li>$node->extra1 -- Dette feltet inneholder verdien av extra1 side-egenskapen, om ikke loadprops-parameteren er satt til &aring; IKKE laste disse egenskapene.</li>
+
+			<li>$node->extra2 -- Dette feltet inneholder verdien av extra2 side-egenskapen, om ikke loadprops-parameteren er satt til &aring; IKKE laste disse egenskapene.</li>
+
+			<li>$node->extra3 -- Dette feltet inneholder verdien av extra3 side-egenskapen, om ikke loadprops-parameteren er satt til &aring; IKKE laste disse egenskapene.</li>
+
+			<li>$node->image -- Dette feltet inneholder verdien av image side-egenskapen (om den ikke er tom), om ikke loadprops-parameteren er satt til &aring; IKKE laste disse egenskapene.</li>
+
+			<li>$node->thumbnail -- Dette feltet inneholder verdien av thumbnail side-egenskapen (om den ikke er tom), om ikke loadprops-parameteren er satt til &aring; IKKE laste disse egenskapene.</li>
+
+			<li>$node->target -- Dette feltet inneholder Target for lenken (om den ikke er tom), om ikke loadprops-parameteren er satt til &aring; IKKE laste disse egenskapene.</li>
+
+			<li>$node->created -- Enhet opprettet dato</li>
+
+			<li>$node->modified -- Enhet endret dato</li>
+
+			<li>$node->index -- Nummer for denne klyngen i hele menyen</li>
+
+			<li>$node->parent -- Sann om denne klyngen ar foreldre til den n&aring; valgte side</li>
+
+		</ul>
+
+	</p>
+
+<p> Denne modulen har funksjoner for &aring; mellomlagre sine utdata inn i statiske filer for &aring; redusere krav til minne og sql sp&oslash;rringer, og for &aring; forbedre frontend-ytelsen. Dette gir alle fordelene med statiske menyer uten det tunge involvert n&aring;r du oppretter eller redigerer sider. </p>
+
+        <p> Hver menymal kan v&aelig;re merket som &quot;Kan mellomlagres&quot;. N&aring;r en mellomlagret menymal brukes p&aring; en innholdsside som kan mellomlagres, vil mellomlagrede menyvisninger som er tilgjengelig for denne siden vil bli brukt. Den ikke mellomlagres parameteren p&aring; menytaggen kan brukes til helt &aring; deaktivere hurtigbufring. </p>
+
         <p>Alle mellomlagrede menyfiler slettes n&aring;r et innholdselement er lagt til, redigert eller slettet ... og ogs&aring; n&aring;r en menymal blir lagt til/ redigert eller slettet. </p>';
 $lang['importtemplate'] = 'Importer mal til databasen';
 $lang['menumanager'] = 'Meny behandler';

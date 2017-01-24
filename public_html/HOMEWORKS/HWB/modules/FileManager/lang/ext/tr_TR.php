@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Only effective with advanced mode on';
 $lang['showhiddenfiles'] = 'Gizli Dosyaları G&ouml;ster';
 $lang['settingsconfirmsingledelete'] = 'Confirm deletion of a single file?';
 $lang['settingssaved'] = 'Ayarlar Kaydedildi';
-$lang['help'] = '		<h3>What does this do?</h3>
-		<p>This module provides file management functions</p>
-		<h3>How do I use it?</h3>
+$lang['help'] = '		<h3>What does this do?</h3>
+
+		<p>This module provides file management functions</p>
+
+		<h3>How do I use it?</h3>
+
 		<p>Select it from the content-menu from in the admin. </p>';
 $lang['utma'] = '156861353.1664897565.1272759163.1273489088.1273617025.8';
 $lang['utmz'] = '156861353.1273231691.2.2.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=cmsms';

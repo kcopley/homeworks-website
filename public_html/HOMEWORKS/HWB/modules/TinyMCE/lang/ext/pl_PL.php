@@ -78,7 +78,8 @@ $lang['datetimeformat_help'] = 'Click here for help on how to format the date/ti
 $lang['extraconfigtext'] = 'Extra configuration';
 $lang['extraconfighelp2'] = 'One statement per line, commas will be added before and after this content. Check TinyMCE-wiki for instructions.';
 $lang['customdropdowntext'] = 'Custom dropdown';
-$lang['customdropdownhelp'] = 'Inserts customizable snippets of code/text by selection in a dropdown menu. 
+$lang['customdropdownhelp'] = 'Inserts customizable snippets of code/text by selection in a dropdown menu. 
+
 Obvious uses are easy access to tag&#039;s etc. The menu is inserted into toolbar using &#039;customdropdown&#039;.';
 $lang['startenabledtext'] = 'Startup enabled';
 $lang['startenabledhelp'] = 'Unchecking this starts up Tiny-editors in a disabled state. Should be used together with the toggle button.';
@@ -166,9 +167,12 @@ $lang['thousanddelimiter'] = ',';
 $lang['size'] = 'Rozmiar';
 $lang['dimensions'] = 'WxH';
 $lang['advanced_tab'] = 'Zaawansowane';
-$lang['help'] = '	<h3>Do czego to służy?</h3>
-	<p>Zezwala na użycie TinyMCE jako edytora WYSIWYG.</p>
-	<h3>Jak się tego używa?</h3>
+$lang['help'] = '	<h3>Do czego to służy?</h3>
+
+	<p>Zezwala na użycie TinyMCE jako edytora WYSIWYG.</p>
+
+	<h3>Jak się tego używa?</h3>
+
 	<p>Zainstaluj TinyMCE, przejdź do Preferencji Użytkownika i ustaw TinyMCE jako edytor WYSIWYG. Ustaw odpowiednie uprawnienia.</p>';
 $lang['utma'] = '156861353.130117701.1281030249.1290439859.1290700279.22';
 $lang['utmz'] = '156861353.1290700279.22.18.utmccn=(referral)|utmcsr=dev.cmsmadesimple.org|utmcct=/projects/gallery|utmcmd=referral';

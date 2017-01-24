@@ -176,65 +176,114 @@ $lang['options'] = 'Inst&auml;llningar';
 $lang['optionsupdated'] = 'Inst&auml;llningarna har uppdaterats.';
 $lang['useexpiration'] = 'Anv&auml;nd stoppdatum';
 $lang['eventdesc-NewsArticleAdded'] = 'Skickas n&auml;r en artikel l&auml;ggs till.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Skickas n&auml;r en artikel l&auml;ggs till.</p>
-<h4>Parametrar</h4>
-<ul>
-<li>\&quot;news_id\&quot; - ID p&aring; nyhetsartikeln</li>
-<li>\&quot;category_id\&quot; - ID p&aring; kategorin f&ouml;r den h&auml;r artikeln</li>
-<li>\&quot;title\&quot; - Titel p&aring; artikeln</li>
-<li>\&quot;content\&quot; - Inneh&aring;llet i artikeln</li>
-<li>\&quot;summary\&quot; - Summering av artikeln</li>
-<li>\&quot;status\&quot; - Statusen p&aring; artikeln (&quot;skriven&quot; eller &quot;publicerad&quot;)</li>
-<li>\&quot;start_time\&quot; - Datumet d&aring; artikeln ska b&ouml;rja visas</li>
-<li>\&quot;end_time\&quot; - Om slutdatumet ska ignoreras eller inte</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Skickas n&auml;r en artikel l&auml;ggs till.</p>
+
+<h4>Parametrar</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - ID p&aring; nyhetsartikeln</li>
+
+<li>\&quot;category_id\&quot; - ID p&aring; kategorin f&ouml;r den h&auml;r artikeln</li>
+
+<li>\&quot;title\&quot; - Titel p&aring; artikeln</li>
+
+<li>\&quot;content\&quot; - Inneh&aring;llet i artikeln</li>
+
+<li>\&quot;summary\&quot; - Summering av artikeln</li>
+
+<li>\&quot;status\&quot; - Statusen p&aring; artikeln (&quot;skriven&quot; eller &quot;publicerad&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Datumet d&aring; artikeln ska b&ouml;rja visas</li>
+
+<li>\&quot;end_time\&quot; - Om slutdatumet ska ignoreras eller inte</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Skickas n&auml;r en artikel redigeras.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Skickas n&auml;r en artikel &auml;r &auml;ndrad.</p>
-<h4>Parametrar</h4>
-<ul>
-<li>\&quot;news_id\&quot; - ID p&aring; nyhetsartikeln</li>
-<li>\&quot;category_id\&quot; - ID p&aring; kategorin f&ouml;r den h&auml;r artikeln.</li>
-<li>\&quot;title\&quot; - Titel p&aring; artikeln</li>
-<li>\&quot;content\&quot; - Inneh&aring;llet i artikeln</li>
-<li>\&quot;summary\&quot; - Summering av artikeln</li>
-<li>\&quot;status\&quot; - Statusen p&aring; artikeln (&quot;skriven&quot; eller &quot;publicerad&quot;)</li>
-<li>\&quot;start_time\&quot; - Datumet d&aring; artikeln ska b&ouml;rja visas</li>
-<li>\&quot;end_time\&quot; - Datumet d&aring; artikeln ska sluta visas</li>
-<li>\&quot;useexp\&quot; - Om slutdatumet ska ignoreras eller inte</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Skickas n&auml;r en artikel &auml;r &auml;ndrad.</p>
+
+<h4>Parametrar</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - ID p&aring; nyhetsartikeln</li>
+
+<li>\&quot;category_id\&quot; - ID p&aring; kategorin f&ouml;r den h&auml;r artikeln.</li>
+
+<li>\&quot;title\&quot; - Titel p&aring; artikeln</li>
+
+<li>\&quot;content\&quot; - Inneh&aring;llet i artikeln</li>
+
+<li>\&quot;summary\&quot; - Summering av artikeln</li>
+
+<li>\&quot;status\&quot; - Statusen p&aring; artikeln (&quot;skriven&quot; eller &quot;publicerad&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Datumet d&aring; artikeln ska b&ouml;rja visas</li>
+
+<li>\&quot;end_time\&quot; - Datumet d&aring; artikeln ska sluta visas</li>
+
+<li>\&quot;useexp\&quot; - Om slutdatumet ska ignoreras eller inte</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Skickas n&auml;r en artikel tas bort.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Skickas n&auml;r en artikel &auml;r borttagen.</p>
-<h4>Parametrar</h4>
-<ul>
-<li>\&quot;news_id\&quot; - ID p&aring; nyhetsartikeln.</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Skickas n&auml;r en artikel &auml;r borttagen.</p>
+
+<h4>Parametrar</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - ID p&aring; nyhetsartikeln.</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Skickas n&auml;r en kategori l&auml;ggs till.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Skickas n&auml;r en kategori &auml;r tillagd.</p>
-<h4>Parametrar</h4>
-<ul>
-<li>\&quot;category_id\&quot; - ID p&aring; nyhetskategorin</li>
-<li>\&quot;name\&quot; - Namnet p&aring; nyhetskategorin</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Skickas n&auml;r en kategori &auml;r tillagd.</p>
+
+<h4>Parametrar</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - ID p&aring; nyhetskategorin</li>
+
+<li>\&quot;name\&quot; - Namnet p&aring; nyhetskategorin</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Skickas n&auml;r en kategori redigeras.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Skickas n&auml;r en kategori &auml;r &auml;ndrad.</p>
-<h4>Parametrar</h4>
-<ul>
-<li>\&quot;category_id\&quot; - ID p&aring; nyhetskategorin</li>
-<li>\&quot;name\&quot; - Namnet p&aring; nyhetakategorin.</li>
-<li>\&quot;origname\&quot; - Ursprungsnamnet p&aring; nyhetakategorin.</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Skickas n&auml;r en kategori &auml;r &auml;ndrad.</p>
+
+<h4>Parametrar</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - ID p&aring; nyhetskategorin</li>
+
+<li>\&quot;name\&quot; - Namnet p&aring; nyhetakategorin.</li>
+
+<li>\&quot;origname\&quot; - Ursprungsnamnet p&aring; nyhetakategorin.</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Skickas n&auml;r en kategori tas bort.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Skickas n&auml;r en kategori tas bort.</p>
-<h4>Parametrar</h4>
-<ul>
-<li>\&quot;category_id\&quot; - ID p&aring; kategorin som togs bort</li>
-<li>\&quot;name\&quot; - Namnet p&aring; kategorin som togs bort</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Skickas n&auml;r en kategori tas bort.</p>
+
+<h4>Parametrar</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - ID p&aring; kategorin som togs bort</li>
+
+<li>\&quot;name\&quot; - Namnet p&aring; kategorin som togs bort</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'Denna parameter fungerar endast i den detaljerade vyn. Den till&aring;ter att specificera vilken nyhetsartikel som visas i detaljerad vy. Om specialv&auml;rdet -1 anv&auml;nds, visar systemet den nyaste, publicerade, ej utg&aring;ngna artikeln.';
 $lang['helpnumber'] = 'Max antal artiklar att visa (om tomt visas alla artiklar).';
@@ -251,35 +300,64 @@ $lang['helpdetailpage'] = 'Sida att visa detaljerna f&ouml;r nyhetsartikeln p&ar
 $lang['helpshowarchive'] = 'Visa endast utg&aring;gna nyhetsartiklar.';
 $lang['helpbrowsecat'] = 'Visa en s&ouml;kbar kategorilista.';
 $lang['helpaction'] = 'Upph&auml;v f&ouml;rvald handling. M&ouml;jliga v&auml;rden &auml;r &#039;default&#039; f&ouml;r att visa summeringsvyn, och &#039;fesubmit&#039; f&ouml;r att visa Frontend-formul&auml;ret f&ouml;r att till&aring;ta anv&auml;ndare att skicka in nyheter via frontend.';
-$lang['help'] = '<h3>Important Notes</h3>
-<p>This version of News is greater than the one supplied with the 1.1 branch of CMS Made Simple.  If you use this version of News you must use extreme caution when upgrading CMS Made Simple to ensure that nothing in the modules/News directory is overwritten.</p>
-<h3>Vad g&ouml;r den h&auml;r modulen?</h3>
-	<p>Nyheter &auml;r en modul med vars hj&auml;lp man kan hantera och visa nyhetsartiklar p&aring; sin webbplats. Man kan j&auml;mf&ouml;ra modulen med weblog (blogg), fast nyhetsmodulen har fler funktioner. N&auml;r modulen installeras s&aring; ut&ouml;kas ocks&aring; administrationsgr&auml;nssnittet med verktyg f&ouml;r att hantera nyhetsartiklar. Man ges m&ouml;jlighet att skapa egna nyhetskategorier s&aring; att olika typer av nyheter kan placeras p&aring; olika st&auml;llen p&aring; webbplatsen.</p>
-        <h4>Numerous display methods</h4>
-	<p>The parameters supported by the news module, and support for numerous templates of each time mean that your options for displaying news articles are limitless.</p>
-        <h4>Custom Fields</h4>
-	<p>The News module allows defining numerous custom fields (including files and images) that will allow you to attach pdf files or numerous images to your articles.</p>
-        <h4>Categories</h4>
-	<p>News supplies a hierarchical category mechanism for organizing your articles.  A news article can only be in one place in the hierarchy.</p>
-        <h4>RSS Feeds</h4>
-        <p>News supports generating simple rss feeds from your news articles, so that your visitors can always be up to date with what is happening on your site.</p>
-	<h4>Expiry and Status</h4>
-	<p>Each news article can have an optional expiry date, after which it will not be shown on your web page.  As well, articles can be marked as <em>draft</em> to remove them permanently from your web page.</p>
-	<h3>S&auml;kerhet</h3>
-	<p>En anv&auml;ndare m&aring;ste tillh&ouml;ra gruppen &#039;Modify News&#039; f&ouml;r att kunna l&auml;gga till, redigera eller ta bort nyhetsartiklar.</p>
-<p>As well, In order to delete news entries, the user must belong to a group with the &#039;Delete News Articles&#039; permission.</p>
-	<p>F&ouml;r att redigera layoutmallarna m&aring;ste anv&auml;ndaren tillh&ouml;ra en grupp med r&auml;ttigheten &#039;Modify Templates&#039;.</p>
-	<p>F&ouml;r att redigera globala nyhetsinst&auml;llningar m&aring;ste anv&auml;ndaren tillh&ouml;ra en grupp med r&auml;ttigheten &#039;Modify Site Preferences&#039;.</p>
-<p>Additionally, to approve news for frontend display the user must belong to a group with the &#039;Approve News&#039; permission.</p>
-	<h3>Hur anv&auml;nder man modulen?</h3>
-	<p>Enklast &auml;r att anv&auml;nda taggen {news} (som &auml;r ett h&ouml;lje runt modultaggen, f&ouml;r att f&ouml;renkla syntaxet). Med denna tagg kan man l&auml;gga till och visa nyheter p&aring; valfri plats i en mall eller en sida. Koden f&ouml;r detta kan till exempel se ut s&aring; h&auml;r: <code>{news number=&quot;5&quot;}</code></p>
-<h3>Templates</h3>
-	<p>Since version 2.3 News supports multiple database templates, and no longer supports additional file templates.  Users who used the old file template system should follow these steps (for each file template):
-<ul>
-<li>Copy the file template into the clipboard</li>
-<li>Create a new database template <em>(either summary or detailed as required)</em>.  Give the new template the same name (including the .tpl extension) as the old file template, and paste the contents.</li>
-<li>Hit Submit</li>
-</ul>
+$lang['help'] = '<h3>Important Notes</h3>
+
+<p>This version of News is greater than the one supplied with the 1.1 branch of CMS Made Simple.  If you use this version of News you must use extreme caution when upgrading CMS Made Simple to ensure that nothing in the modules/News directory is overwritten.</p>
+
+<h3>Vad g&ouml;r den h&auml;r modulen?</h3>
+
+	<p>Nyheter &auml;r en modul med vars hj&auml;lp man kan hantera och visa nyhetsartiklar p&aring; sin webbplats. Man kan j&auml;mf&ouml;ra modulen med weblog (blogg), fast nyhetsmodulen har fler funktioner. N&auml;r modulen installeras s&aring; ut&ouml;kas ocks&aring; administrationsgr&auml;nssnittet med verktyg f&ouml;r att hantera nyhetsartiklar. Man ges m&ouml;jlighet att skapa egna nyhetskategorier s&aring; att olika typer av nyheter kan placeras p&aring; olika st&auml;llen p&aring; webbplatsen.</p>
+
+        <h4>Numerous display methods</h4>
+
+	<p>The parameters supported by the news module, and support for numerous templates of each time mean that your options for displaying news articles are limitless.</p>
+
+        <h4>Custom Fields</h4>
+
+	<p>The News module allows defining numerous custom fields (including files and images) that will allow you to attach pdf files or numerous images to your articles.</p>
+
+        <h4>Categories</h4>
+
+	<p>News supplies a hierarchical category mechanism for organizing your articles.  A news article can only be in one place in the hierarchy.</p>
+
+        <h4>RSS Feeds</h4>
+
+        <p>News supports generating simple rss feeds from your news articles, so that your visitors can always be up to date with what is happening on your site.</p>
+
+	<h4>Expiry and Status</h4>
+
+	<p>Each news article can have an optional expiry date, after which it will not be shown on your web page.  As well, articles can be marked as <em>draft</em> to remove them permanently from your web page.</p>
+
+	<h3>S&auml;kerhet</h3>
+
+	<p>En anv&auml;ndare m&aring;ste tillh&ouml;ra gruppen &#039;Modify News&#039; f&ouml;r att kunna l&auml;gga till, redigera eller ta bort nyhetsartiklar.</p>
+
+<p>As well, In order to delete news entries, the user must belong to a group with the &#039;Delete News Articles&#039; permission.</p>
+
+	<p>F&ouml;r att redigera layoutmallarna m&aring;ste anv&auml;ndaren tillh&ouml;ra en grupp med r&auml;ttigheten &#039;Modify Templates&#039;.</p>
+
+	<p>F&ouml;r att redigera globala nyhetsinst&auml;llningar m&aring;ste anv&auml;ndaren tillh&ouml;ra en grupp med r&auml;ttigheten &#039;Modify Site Preferences&#039;.</p>
+
+<p>Additionally, to approve news for frontend display the user must belong to a group with the &#039;Approve News&#039; permission.</p>
+
+	<h3>Hur anv&auml;nder man modulen?</h3>
+
+	<p>Enklast &auml;r att anv&auml;nda taggen {news} (som &auml;r ett h&ouml;lje runt modultaggen, f&ouml;r att f&ouml;renkla syntaxet). Med denna tagg kan man l&auml;gga till och visa nyheter p&aring; valfri plats i en mall eller en sida. Koden f&ouml;r detta kan till exempel se ut s&aring; h&auml;r: <code>{news number=&quot;5&quot;}</code></p>
+
+<h3>Templates</h3>
+
+	<p>Since version 2.3 News supports multiple database templates, and no longer supports additional file templates.  Users who used the old file template system should follow these steps (for each file template):
+
+<ul>
+
+<li>Copy the file template into the clipboard</li>
+
+<li>Create a new database template <em>(either summary or detailed as required)</em>.  Give the new template the same name (including the .tpl extension) as the old file template, and paste the contents.</li>
+
+<li>Hit Submit</li>
+
+</ul>
+
 Following these steps should solve the problem of your news templates not being found and other similar smarty errors when you upgrade to a version of CMS that has News 2.3 or greater.</p>';
 $lang['utma'] = '156861353.622613290.1282068801.1286133816.1286141542.24';
 $lang['utmz'] = '156861353.1284652314.14.4.utmcsr=feedburner|utmccn=Feed: cmsmadesimple/blog (CMS Made Simple)|utmcmd=feed';

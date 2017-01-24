@@ -44,48 +44,85 @@ $lang['eventdesc-SearchCompleted'] = 'L&auml;hetet&auml;&auml;n haun loputtua.';
 $lang['eventdesc-SearchItemAdded'] = 'L&auml;hetet&auml;&auml;n, kun uusi asia indeksoidaan.';
 $lang['eventdesc-SearchItemDeleted'] = 'L&auml;hetet&auml;&auml;n, kun jotain poistetaan indeksist&auml;.';
 $lang['eventdesc-SearchAllItemsDeleted'] = 'L&auml;hetet&auml;&auml;n, kun kaikki poistetaan indeksist&auml;.';
-$lang['eventhelp-SearchInitiated'] = '<p>L&auml;hetet&auml;&auml;n, kun haku on aloitettu.</p>
-<h4>Parametrit</h4>
-<ol>
-<li>Haettu teksti.</li>
-</ol>
+$lang['eventhelp-SearchInitiated'] = '<p>L&auml;hetet&auml;&auml;n, kun haku on aloitettu.</p>
+
+<h4>Parametrit</h4>
+
+<ol>
+
+<li>Haettu teksti.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchCompleted'] = '<p>L&auml;hetet&auml;&auml;n haun loputtua.</p>
-<h4>Parametrit</h4>
-<ol>
-<li>Haettu teksti.</li>
-<li>Taulukko tuloksista.</li>
-</ol>
+$lang['eventhelp-SearchCompleted'] = '<p>L&auml;hetet&auml;&auml;n haun loputtua.</p>
+
+<h4>Parametrit</h4>
+
+<ol>
+
+<li>Haettu teksti.</li>
+
+<li>Taulukko tuloksista.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemAdded'] = '<p>L&auml;hetet&auml;&auml;n, kun uusi asia indeksoidaan.</p>
-<h4>Parametrit</h4>
-<ol>
-<li>Moduulin nimi.</li>
-<li>Asian Id.</li>
-<li>Lis&auml;attribuutti.</li>
-<li>Sis&auml;lt&ouml;, joka indeksoidaan ja lis&auml;t&auml;&auml;n.</li>
-</ol>
+$lang['eventhelp-SearchItemAdded'] = '<p>L&auml;hetet&auml;&auml;n, kun uusi asia indeksoidaan.</p>
+
+<h4>Parametrit</h4>
+
+<ol>
+
+<li>Moduulin nimi.</li>
+
+<li>Asian Id.</li>
+
+<li>Lis&auml;attribuutti.</li>
+
+<li>Sis&auml;lt&ouml;, joka indeksoidaan ja lis&auml;t&auml;&auml;n.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemDeleted'] = '<p>L&auml;hetet&auml;&auml;n, kun jotain poistetaan indeksist&auml;.</p>
-<h4>Parametrit</h4>
-<ol>
-<li>Moduulin nimi.</li>
-<li>Asian Id.</li>
-<li>Lis&auml;attribuutti.</li>
-</ol>
+$lang['eventhelp-SearchItemDeleted'] = '<p>L&auml;hetet&auml;&auml;n, kun jotain poistetaan indeksist&auml;.</p>
+
+<h4>Parametrit</h4>
+
+<ol>
+
+<li>Moduulin nimi.</li>
+
+<li>Asian Id.</li>
+
+<li>Lis&auml;attribuutti.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchAllItemsDeleted'] = '<p>L&auml;hetet&auml;&auml;n, kun kaikki poistetaan indeksist&auml;.</p>
-<h4>Parametrit</h4>
-<ul>
-<li>Ei mit&auml;&auml;n</li>
-</ul>
+$lang['eventhelp-SearchAllItemsDeleted'] = '<p>L&auml;hetet&auml;&auml;n, kun kaikki poistetaan indeksist&auml;.</p>
+
+<h4>Parametrit</h4>
+
+<ul>
+
+<li>Ei mit&auml;&auml;n</li>
+
+</ul>
+
 ';
-$lang['help'] = '	<h3>Mit&auml; t&auml;m&auml; moduuli tekee?</h3>
-	<p>Hakumoduuli on ytimen ja tiettyjen rekister&ouml;ityjen moduulien sis&auml;ll&ouml;n hakemiseen. Moduuli ottaa sy&ouml;tteen&auml;&auml;n yksi tai kaksi sanaa ja palauttaa niihin sopivia tuloksia.</p>
-	<h3>Miten sit&auml; k&auml;ytet&auml;&auml;n?</h3>
-	<p>Helpoin tapa on {search} -k&auml;&auml;retagi (k&auml;&auml;rii moduulin tagiin, syntaksin yksinkertaistamiseksi). Se lis&auml;&auml; moduulin sivupohjaan tai sivulle minne halutaan ja n&auml;ytt&auml;&auml; hakulomakkeen. Koodi n&auml;ytt&auml;&auml; suunnilleen t&auml;lt&auml;: <code>{search}</code></p>
-<h4>Kuinka tietyn sis&auml;ll&ouml;n indeksointi estet&auml;&auml;n?</h4>
-<p>Search-moduuli ei hae &quot;ep&auml;aktiivisilta&quot; sivuilta. Esimerkiksi CustomContent-moduulia tai muuta smarty-logiikkaa k&auml;ytett&auml;ess&auml; siihen, ett&auml; eri sis&auml;lt&ouml;&auml; n&auml;ytet&auml;&auml;n eri k&auml;ytt&auml;jille, voi olla hyv&auml; est&auml;&auml; koko sivun indeksointi, vaikka sivu olisikin aktiivinen. T&auml;m&auml; tehd&auml;&auml;n lis&auml;&auml;m&auml;ll&auml; mihin tahansa sivulle seuraava tagi: <em>&amp;lt;!-- pageAttribute: NotSearchable --&amp;gt;</em> Kun hakumoduuli n&auml;kee t&auml;m&auml;n tagin sivulla, se ei indeksoi mit&auml;&auml;n sivun sis&auml;lt&ouml;&auml;.</p>
+$lang['help'] = '	<h3>Mit&auml; t&auml;m&auml; moduuli tekee?</h3>
+
+	<p>Hakumoduuli on ytimen ja tiettyjen rekister&ouml;ityjen moduulien sis&auml;ll&ouml;n hakemiseen. Moduuli ottaa sy&ouml;tteen&auml;&auml;n yksi tai kaksi sanaa ja palauttaa niihin sopivia tuloksia.</p>
+
+	<h3>Miten sit&auml; k&auml;ytet&auml;&auml;n?</h3>
+
+	<p>Helpoin tapa on {search} -k&auml;&auml;retagi (k&auml;&auml;rii moduulin tagiin, syntaksin yksinkertaistamiseksi). Se lis&auml;&auml; moduulin sivupohjaan tai sivulle minne halutaan ja n&auml;ytt&auml;&auml; hakulomakkeen. Koodi n&auml;ytt&auml;&auml; suunnilleen t&auml;lt&auml;: <code>{search}</code></p>
+
+<h4>Kuinka tietyn sis&auml;ll&ouml;n indeksointi estet&auml;&auml;n?</h4>
+
+<p>Search-moduuli ei hae &quot;ep&auml;aktiivisilta&quot; sivuilta. Esimerkiksi CustomContent-moduulia tai muuta smarty-logiikkaa k&auml;ytett&auml;ess&auml; siihen, ett&auml; eri sis&auml;lt&ouml;&auml; n&auml;ytet&auml;&auml;n eri k&auml;ytt&auml;jille, voi olla hyv&auml; est&auml;&auml; koko sivun indeksointi, vaikka sivu olisikin aktiivinen. T&auml;m&auml; tehd&auml;&auml;n lis&auml;&auml;m&auml;ll&auml; mihin tahansa sivulle seuraava tagi: <em>&amp;lt;!-- pageAttribute: NotSearchable --&amp;gt;</em> Kun hakumoduuli n&auml;kee t&auml;m&auml;n tagin sivulla, se ei indeksoi mit&auml;&auml;n sivun sis&auml;lt&ouml;&auml;.</p>
+
 <p><em>&amp;lt;!-- pageAttribute: NotSearchable --&amp;gt;</em> -tagin voi laittaa my&ouml;s sivupohjaan. Jos n&auml;in tehd&auml;&auml;n, mit&auml;&auml;n tuohon pohjaan liitetty&auml; sivua ei indeksoida. Jos tagi poistetaan, sivut on ideksoitava uudelleen.</p>';
 $lang['utma'] = '156861353.144823811.1251375439.1288623556.1288630766.361';
 $lang['utmz'] = '156861353.1285804076.330.37.utmcsr=feedburner|utmccn=Feed: cmsmadesimple/blog (CMS Made Simple)|utmcmd=feed';

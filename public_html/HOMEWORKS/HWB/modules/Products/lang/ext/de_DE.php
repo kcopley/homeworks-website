@@ -103,58 +103,110 @@ $lang['filters'] = 'Filter';
 $lang['firstpage'] = '<<';
 $lang['general_settings'] = 'Allgemeine Einstellungen';
 $lang['go'] = 'Los';
-$lang['help'] = '<h3>Was macht dieses Modul?</h3>
-<p>Dieses Modul bietet die M&ouml;glichkeit, Informationen &uuml;ber Produkte und deren Kategorien zu sammeln, organisieren und anzuzeigen. Dieses Modul kann allein eingesetzt werden oder als Teil einer E-Commerce L&ouml;sung. Das Modul unterst&uuml;tzt Produkte in mehreren Kategorien, Angaben zu Preis, Gewicht, etc. und individuelle Felder f&uuml;r jedes Produkt. Individuellen Produkt-Felder k&ouml;nnen eigene Preise zugeordnet werden. Die Umsatzsteuer kann global oder f&uuml;r jedes Produkt individuell aktiviert werden.</p>
-<p>Dieses Modul unterst&uuml;tzt mehrere Bilder je Produkt, individuelle Felder verschiedener Typen und auch interne (nicht &ouml;ffentliche) Felder.</p>
-<h3>Funktionen:</h3>
-<ul>
-  <li>Verschiedene Ansichten</li>
-    <ul>
-      <li>Produkt-Listenansicht</li>
-      <li>Kategorie-Listenansicht</li>
-      <li>Detail Ansicht</li> 
-      <li>Verzweigte Hierarchie Ansichten</li>
-    </ul>
-  <li>Komplett Datenbank-basierende Templates</li>
-  <p>Es k&ouml;nnen mehrere Templates f&uuml;r jede Ansicht gespeichert, f&uuml;r jede Ansicht ein Standard-Template festgelegt und das gew&uuml;nschte Template f&uuml;r eine Ansicht kann als Parameter im Platzhalter angegeben werden.</p>
-  <li>Sortierung und Bl&auml;tter-Funktion in der Listenansicht</li>
-  <li>Artikel k&ouml;nnen mehreren Kategorien zugeordnet werden</li>
-  <li>Mehrere individuelle Felder k&ouml;nnen definiert werden, dabei gibt es verschiedene Typen, inklusive Bilder</li>
-  <li>Automatische Thumbnail-Erzeugung</li>
-  <li>Interne Felder</li>
-  <li>Individuelle Produkt-Eigenschaften (mit eigenen Preisen)</li>
-  <li>Felder f&uuml;r Gewicht, Umsatzsteuer und anderes (f&uuml;r die Verwendung in E-Commerce L&ouml;sungen)</li>
-  <li>Artikel k&ouml;nnen den Status &quot;Ver&ouml;ffentlicht&quot; oder &quot;Entwurf&quot; haben.</li>
-  <li>Unterst&uuml;tzung von Pretty URLs</li>
-  <li><strong>Vieles mehr...</strong></li>
-</ul>
-
-<h3>Wie kann dieses Modul verwendet werden:</h3>
-<ul>
-<li>Einstellungen</li>
-<p>Dies ist normalerweise nur eine Formalit&auml;t. Hier werden das Preis-Symbol und -W&auml;hrung, die anzuzeigenden Felder u.v.m. eingestellt.</p>
-<li>Setup f&uuml;r Benutzer und Berechtigungen</li>
-<p>Dieses Modul nutzt die &#039;Modify Templates&#039; Berechtigung, um Nutzern das Bearbeiten der Templates zu erm&ouml;glichen. Ebenso wird die &#039;Modify Site Preferences&#039; Berechtigung verwendet f&uuml;r den Einstellungs-Reiter. Um Feld Definitionen, Artikel, Kategorien oder Hierarchien zu bearbeiten, ben&ouml;tigt der Benutzer die Berechtigung &#039;Modify Products&#039;.</p>
-<li>(optional) Erstellen von ein oder mehreren Kategorien</li>
-<p>Dieser Schritt ist optional, aber es ist sicher ratsam, dies so fr&uuml;h wie m&ouml;glich zu tun, um sp&auml;teren Mehraufwand zu vermeiden. Um eine Kategorie hinzuzuf&uuml;gen, klicken Sie auf den Reiter &quot;Kategorien&quot; und dort auf den Link &quot;Kategorie hinzuf&uuml;gen&quot;, wo schlie&szlig;lich der Name der Kategorie angegeben werden kann.</p>
-<li>(optional) Erstellen von ein oder mehreren individuellen Feldern</li>
-<p>Dieser Schritt ist optional. Individuelle Felder werden nocht ben&ouml;tigt, wenn dieses Modul das gew&uuml;nschte bietet. Wenn Sie jedoch zus&auml;tzliche Informationen zum Artikel ben&ouml;tigen, k&ouml;nnen Sie hier individuelle Felder erstellen. Ein individuelles Feld zu erstellen ist &auml;hnlich wie eine Kategorie zu erstellen, abgesehen davon, dass mehr Daten angegeben werden m&uuml;ssen.</p>
-<p>Derzeit sind sechs Typen von individuellen Feldern verf&uuml;gbar: &#039;textbox&#039;, &#039;checkbox&#039;, &#039;textarea&#039;, &#039;dropdown&#039; und &#039;file&#039;. W&auml;hlen Sie einen Typ aus, geben Sie dem Feld einen Namen und legen Sie fest, ob das Feld &ouml;ffentlich sein soll oder intern. Best&auml;tigen Sie schlie&szlig;lich mit &quot;Absenden&quot;.</p>
-<li>Erstellen von ein oder mehreren Artikeln</li>
-<p>Sie sollten ein oder mehrere Artikel erstellen, die auf der Webseite angezeigt werden sollen. Geben Sie jedem Artikel einen Namen, einen Preis und weitere Informationen.</p>
-<p>Wenn Kategorien erstellt wurden, wird f&uuml;r jede Kategorie eine Checkbox angezeigt. W&auml;hlen Sie, unter welchen Kategorien der Artikel angezeigt werden soll.</p>
-<p>Wenn individuelle Felder erstellt wurden, werden diese auch abgefragt. Geben Sie auch hier die vorhandenen Daten ein. Dies ist optional.</p>
-<li>Einf&uuml;gen der entsprechenden Tags in das Seiten Template oder den Seiten Inhalt</li>
-<p>Die einfachste Variante ist es, den <strong>{Products}</strong> Tag in den Inhalts-Textbereich oder in einem Template einzuf&uuml;gen.</p>
-<p>Wenn Sie das Verhalten dieses Moduls nach Ihren W&uuml;nschen anpassen wollen, k&ouml;nnen Sie verschiedene Parameter zum <strong>{Products}</strong> Tag hinzuf&uuml;gen. Die komplette Liste der Parameter finden Sie weiter unten im Text. Wenn Sie zum Beispiel eine Liste von Produkten einer Kategorie anzeigen wollen, k&ouml;nnen Sie den Tag wie folgt verwenden: <code>{Products category=&#039;categoryname&#039;}</code></p>
-</ul>
-<h3>Support</h3>
-<p>Dieses Modul beinhaltet keinen kommerziellen Support. Es existieren jedoch eine Reihe von Ressourcen, die Ihnen bei diesem Modul helfen k&ouml;nnen:</p>
-<ul>
-<li>F&uuml;r die neueste Version dieses Moduls, f&uuml;r FAQs oder Fehlerberichte, besuchen Sie die Entwickler-Webseite von CMS made simple: <a href="http://dev.cmsmadesimple.org">Developers Forge</a> und suchen Sie nach &#039;Products&#039;.</li>
-<li>Um kommerziellen Support zu erhalten, senden Sie eine EMail zum Author <a href="mailto:calguy1000@cmsmadesimple.org">Robert Campbell</a>.</li>
-<li>Zus&auml;tzliche Diskussionen &uuml;ber dieses Modul finden Sie im CMS made simple Forum: <a href="http://forum.cmsmadesimple.org">CMS Made Simple Forum</a>.</li>
-<li>F&uuml;r Fragen oder beschr&auml;nkten technischen Support kann der Author via IRC erreicht werden: <a href="irc://irc.freenode.net/#cms">CMS IRC Channel</a>.</li>
+$lang['help'] = '<h3>Was macht dieses Modul?</h3>
+
+<p>Dieses Modul bietet die M&ouml;glichkeit, Informationen &uuml;ber Produkte und deren Kategorien zu sammeln, organisieren und anzuzeigen. Dieses Modul kann allein eingesetzt werden oder als Teil einer E-Commerce L&ouml;sung. Das Modul unterst&uuml;tzt Produkte in mehreren Kategorien, Angaben zu Preis, Gewicht, etc. und individuelle Felder f&uuml;r jedes Produkt. Individuellen Produkt-Felder k&ouml;nnen eigene Preise zugeordnet werden. Die Umsatzsteuer kann global oder f&uuml;r jedes Produkt individuell aktiviert werden.</p>
+
+<p>Dieses Modul unterst&uuml;tzt mehrere Bilder je Produkt, individuelle Felder verschiedener Typen und auch interne (nicht &ouml;ffentliche) Felder.</p>
+
+<h3>Funktionen:</h3>
+
+<ul>
+
+  <li>Verschiedene Ansichten</li>
+
+    <ul>
+
+      <li>Produkt-Listenansicht</li>
+
+      <li>Kategorie-Listenansicht</li>
+
+      <li>Detail Ansicht</li> 
+
+      <li>Verzweigte Hierarchie Ansichten</li>
+
+    </ul>
+
+  <li>Komplett Datenbank-basierende Templates</li>
+
+  <p>Es k&ouml;nnen mehrere Templates f&uuml;r jede Ansicht gespeichert, f&uuml;r jede Ansicht ein Standard-Template festgelegt und das gew&uuml;nschte Template f&uuml;r eine Ansicht kann als Parameter im Platzhalter angegeben werden.</p>
+
+  <li>Sortierung und Bl&auml;tter-Funktion in der Listenansicht</li>
+
+  <li>Artikel k&ouml;nnen mehreren Kategorien zugeordnet werden</li>
+
+  <li>Mehrere individuelle Felder k&ouml;nnen definiert werden, dabei gibt es verschiedene Typen, inklusive Bilder</li>
+
+  <li>Automatische Thumbnail-Erzeugung</li>
+
+  <li>Interne Felder</li>
+
+  <li>Individuelle Produkt-Eigenschaften (mit eigenen Preisen)</li>
+
+  <li>Felder f&uuml;r Gewicht, Umsatzsteuer und anderes (f&uuml;r die Verwendung in E-Commerce L&ouml;sungen)</li>
+
+  <li>Artikel k&ouml;nnen den Status &quot;Ver&ouml;ffentlicht&quot; oder &quot;Entwurf&quot; haben.</li>
+
+  <li>Unterst&uuml;tzung von Pretty URLs</li>
+
+  <li><strong>Vieles mehr...</strong></li>
+
+</ul>
+
+
+
+<h3>Wie kann dieses Modul verwendet werden:</h3>
+
+<ul>
+
+<li>Einstellungen</li>
+
+<p>Dies ist normalerweise nur eine Formalit&auml;t. Hier werden das Preis-Symbol und -W&auml;hrung, die anzuzeigenden Felder u.v.m. eingestellt.</p>
+
+<li>Setup f&uuml;r Benutzer und Berechtigungen</li>
+
+<p>Dieses Modul nutzt die &#039;Modify Templates&#039; Berechtigung, um Nutzern das Bearbeiten der Templates zu erm&ouml;glichen. Ebenso wird die &#039;Modify Site Preferences&#039; Berechtigung verwendet f&uuml;r den Einstellungs-Reiter. Um Feld Definitionen, Artikel, Kategorien oder Hierarchien zu bearbeiten, ben&ouml;tigt der Benutzer die Berechtigung &#039;Modify Products&#039;.</p>
+
+<li>(optional) Erstellen von ein oder mehreren Kategorien</li>
+
+<p>Dieser Schritt ist optional, aber es ist sicher ratsam, dies so fr&uuml;h wie m&ouml;glich zu tun, um sp&auml;teren Mehraufwand zu vermeiden. Um eine Kategorie hinzuzuf&uuml;gen, klicken Sie auf den Reiter &quot;Kategorien&quot; und dort auf den Link &quot;Kategorie hinzuf&uuml;gen&quot;, wo schlie&szlig;lich der Name der Kategorie angegeben werden kann.</p>
+
+<li>(optional) Erstellen von ein oder mehreren individuellen Feldern</li>
+
+<p>Dieser Schritt ist optional. Individuelle Felder werden nocht ben&ouml;tigt, wenn dieses Modul das gew&uuml;nschte bietet. Wenn Sie jedoch zus&auml;tzliche Informationen zum Artikel ben&ouml;tigen, k&ouml;nnen Sie hier individuelle Felder erstellen. Ein individuelles Feld zu erstellen ist &auml;hnlich wie eine Kategorie zu erstellen, abgesehen davon, dass mehr Daten angegeben werden m&uuml;ssen.</p>
+
+<p>Derzeit sind sechs Typen von individuellen Feldern verf&uuml;gbar: &#039;textbox&#039;, &#039;checkbox&#039;, &#039;textarea&#039;, &#039;dropdown&#039; und &#039;file&#039;. W&auml;hlen Sie einen Typ aus, geben Sie dem Feld einen Namen und legen Sie fest, ob das Feld &ouml;ffentlich sein soll oder intern. Best&auml;tigen Sie schlie&szlig;lich mit &quot;Absenden&quot;.</p>
+
+<li>Erstellen von ein oder mehreren Artikeln</li>
+
+<p>Sie sollten ein oder mehrere Artikel erstellen, die auf der Webseite angezeigt werden sollen. Geben Sie jedem Artikel einen Namen, einen Preis und weitere Informationen.</p>
+
+<p>Wenn Kategorien erstellt wurden, wird f&uuml;r jede Kategorie eine Checkbox angezeigt. W&auml;hlen Sie, unter welchen Kategorien der Artikel angezeigt werden soll.</p>
+
+<p>Wenn individuelle Felder erstellt wurden, werden diese auch abgefragt. Geben Sie auch hier die vorhandenen Daten ein. Dies ist optional.</p>
+
+<li>Einf&uuml;gen der entsprechenden Tags in das Seiten Template oder den Seiten Inhalt</li>
+
+<p>Die einfachste Variante ist es, den <strong>{Products}</strong> Tag in den Inhalts-Textbereich oder in einem Template einzuf&uuml;gen.</p>
+
+<p>Wenn Sie das Verhalten dieses Moduls nach Ihren W&uuml;nschen anpassen wollen, k&ouml;nnen Sie verschiedene Parameter zum <strong>{Products}</strong> Tag hinzuf&uuml;gen. Die komplette Liste der Parameter finden Sie weiter unten im Text. Wenn Sie zum Beispiel eine Liste von Produkten einer Kategorie anzeigen wollen, k&ouml;nnen Sie den Tag wie folgt verwenden: <code>{Products category=&#039;categoryname&#039;}</code></p>
+
+</ul>
+
+<h3>Support</h3>
+
+<p>Dieses Modul beinhaltet keinen kommerziellen Support. Es existieren jedoch eine Reihe von Ressourcen, die Ihnen bei diesem Modul helfen k&ouml;nnen:</p>
+
+<ul>
+
+<li>F&uuml;r die neueste Version dieses Moduls, f&uuml;r FAQs oder Fehlerberichte, besuchen Sie die Entwickler-Webseite von CMS made simple: <a href="http://dev.cmsmadesimple.org">Developers Forge</a> und suchen Sie nach &#039;Products&#039;.</li>
+
+<li>Um kommerziellen Support zu erhalten, senden Sie eine EMail zum Author <a href="mailto:calguy1000@cmsmadesimple.org">Robert Campbell</a>.</li>
+
+<li>Zus&auml;tzliche Diskussionen &uuml;ber dieses Modul finden Sie im CMS made simple Forum: <a href="http://forum.cmsmadesimple.org">CMS Made Simple Forum</a>.</li>
+
+<li>F&uuml;r Fragen oder beschr&auml;nkten technischen Support kann der Author via IRC erreicht werden: <a href="irc://irc.freenode.net/#cms">CMS IRC Channel</a>.</li>
+
 </ul>';
 $lang['hierarchy'] = 'Hierarchie';
 $lang['hierarchy_position'] = 'Hierarchie-Position';
@@ -205,12 +257,18 @@ $lang['of'] = 'Von';
 $lang['page'] = 'Seite';
 $lang['page_of'] = 'Seite %s von %s';
 $lang['page_limit'] = 'Seiten-Anzahl';
-$lang['param_action'] = 'Legen Sie das Verhalten des Moduls fest. M&ouml;gliche Werte sind:
-<ul>
-  <li>hierarchy -- zeigt eine Artikel-Liste nach der Hierarchie an</li>
-  <li>categorylist - zeigt eine Liste der Produktkategorien an</li>
-  <li><em>default</em> - zeigt eine Zusammenfassung der Produkte an</li>
-  <li>details - zeigt die Detailansicht eines einzelnen Artikels an</li>
+$lang['param_action'] = 'Legen Sie das Verhalten des Moduls fest. M&ouml;gliche Werte sind:
+
+<ul>
+
+  <li>hierarchy -- zeigt eine Artikel-Liste nach der Hierarchie an</li>
+
+  <li>categorylist - zeigt eine Liste der Produktkategorien an</li>
+
+  <li><em>default</em> - zeigt eine Zusammenfassung der Produkte an</li>
+
+  <li>details - zeigt die Detailansicht eines einzelnen Artikels an</li>
+
 </ul>';
 $lang['param_category'] = 'Wenn dieser Parameter in der <em>default</em> Listenansicht verwendet wird, werden nur Artikel zur angegebenen Kategorie angezeigt. Mehrere Kategorien k&ouml;nnen durch Kommas getrennt angegeben werden. Der Parameter-Name sollte nicht &uuml;bereinstimmen mit dem Namen einer existierenden Kategorie.';
 $lang['param_categorylisttemplate'] = 'Dieser Parameter ist nur in der Kategorie-Ausgabe sinnvoll. Er wird benutzt, um das Template anzugeben, welches verwendet werden soll. Wenn kein Wert angegeben ist, wird das Default-Template verwendet.';
@@ -228,21 +286,35 @@ $lang['param_resultpage'] = 'Applicable only to the search, and category list ac
 $lang['param_searchfield'] = 'Applicable only to the search action, this parameter may contain a comma separated list of field names to include in the search';
 $lang['param_searchformtemplate'] = 'Applicable only to the search action, thisparameter allows specifying a non default search form template';
 $lang['param_showall'] = 'Dieser Parameter ist nur in der <em>categorylist</em> Kategorielistenansicht sinnvoll. Ist dieser Wert gr&ouml;&szlig;er als 0, werden alle Kategien angezeigt (au&szlig;er denen, die noch keine Artikel enthalten).';
-$lang['param_sortorder'] = 'Legt die Reihenfolge der Feld-Sortierung in der Listenansicht fest. M&ouml;gliche Werte sind:
-<ul>
-  <li><strong>asc</strong> -- Aufsteigende Reihenfolge</li>
-  <li>desc -- Absteigende Reihenfolge</li>
+$lang['param_sortorder'] = 'Legt die Reihenfolge der Feld-Sortierung in der Listenansicht fest. M&ouml;gliche Werte sind:
+
+<ul>
+
+  <li><strong>asc</strong> -- Aufsteigende Reihenfolge</li>
+
+  <li>desc -- Absteigende Reihenfolge</li>
+
 </ul>';
-$lang['param_sortby'] = 'Dieser Parameter ist nur in der Listenansicht sinnvoll. Er legt die Sortierung der Artikel fest. M&ouml;gliche Werte sind:
-<ul>
-  <li><strong>product_name</strong> -- der Artikelname</li>
-  <li>id -- die Artikel-ID</li>
-  <li>weight -- das Gewicht des Artikels</li>
-  <li>price -- der Preis des Artikels</li>
-  <li>status -- Status (Entwurf oder Ver&ouml;ffentlicht)</li>
-  <li>random -- verwendet bei jeder Anfrage eine zuf&auml;llige Reihenfolge</li>
-  <li>created -- das Erstellungsdatum des Artikels/li>
-  <li>modified -- das &Auml;nderungsdatum des Artikels</li>
+$lang['param_sortby'] = 'Dieser Parameter ist nur in der Listenansicht sinnvoll. Er legt die Sortierung der Artikel fest. M&ouml;gliche Werte sind:
+
+<ul>
+
+  <li><strong>product_name</strong> -- der Artikelname</li>
+
+  <li>id -- die Artikel-ID</li>
+
+  <li>weight -- das Gewicht des Artikels</li>
+
+  <li>price -- der Preis des Artikels</li>
+
+  <li>status -- Status (Entwurf oder Ver&ouml;ffentlicht)</li>
+
+  <li>random -- verwendet bei jeder Anfrage eine zuf&auml;llige Reihenfolge</li>
+
+  <li>created -- das Erstellungsdatum des Artikels/li>
+
+  <li>modified -- das &Auml;nderungsdatum des Artikels</li>
+
 </ul>';
 $lang['param_sorttype'] = 'Applicable only to the default summary view, this parameter is used to convert the values to another type for sorting.  valid values are STRING,SIGNED and UNSIGNED.  If not supplied the default STRING type is assumed.';
 $lang['param_summarypage'] = 'Applicable only to the action=hierarchy, allows specifying a page id or alias that will be used for any links to summary view';

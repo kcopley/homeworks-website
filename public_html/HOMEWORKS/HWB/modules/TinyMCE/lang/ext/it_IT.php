@@ -78,7 +78,8 @@ $lang['datetimeformat_help'] = 'Cliccate qui per l&#039;aiuto su come formattare
 $lang['extraconfigtext'] = 'Configurazione Extra';
 $lang['extraconfighelp2'] = 'Una frase per linea, le virgole saranno aggiunte prima e dopo questo commento. Per le istruzioni consultate il TinyMCE-wiki.';
 $lang['customdropdowntext'] = 'Tendina personalizzata';
-$lang['customdropdownhelp'] = 'Inserisce snippets di codice/testo personalizzati in un menu a tendina. 
+$lang['customdropdownhelp'] = 'Inserisce snippets di codice/testo personalizzati in un menu a tendina. 
+
 Utilizzi consueti possono essere un accesso rapido a tag, plugin, etc. Il menu &egrave; inserito nella barra degli strumenti usando &#039;customdropdown&#039;.';
 $lang['startenabledtext'] = 'Avvio abilitato';
 $lang['startenabledhelp'] = 'Deselezionare questa casella causer&agrave; l&#039;avvio degli editor Tiny in modalilt&agrave; &quot;disabilitato&quot;. Dovrebbe essere utilizzato in congiunzione con il pulsante di attivazione.';
@@ -106,10 +107,14 @@ $lang['ignoremodifyfileshelp'] = 'Attenzione! Questo parametro permetter&agrave;
 $lang['showtogglebutton_text'] = 'Mostra casella per attivare/disattivare l&#039;editor WYSIWYG';
 $lang['togglewysiwyg'] = 'Attiva/disattiva editor WYSIWYG';
 $lang['styles_tab'] = 'Stili CSS';
-$lang['styles_help'] = 'Se lasciate il primo campo vuoto, TinyMCE esaminer&agrave; il vostro Foglio di Stile ed elencher&agrave; all&#039;utente gli stili contenuti.
-Se volete che vengano visualizzati all&#039;utente solo alcuni stili, specificateli nella forma &quot;MioStile1=style1; MioStile2=style2&quot; nel primo campo sotto.
-Nota bene: MioStile1=style1 significa UnVostroNomedelloStileCSS = NomeVEROdelloStileCSS.
-Nei campi rimanenti potete specificare stili CSS per Tabelle, Righe e Celle che vengono utilizzate nelle caselle corrispondenti. 
+$lang['styles_help'] = 'Se lasciate il primo campo vuoto, TinyMCE esaminer&agrave; il vostro Foglio di Stile ed elencher&agrave; all&#039;utente gli stili contenuti.
+
+Se volete che vengano visualizzati all&#039;utente solo alcuni stili, specificateli nella forma &quot;MioStile1=style1; MioStile2=style2&quot; nel primo campo sotto.
+
+Nota bene: MioStile1=style1 significa UnVostroNomedelloStileCSS = NomeVEROdelloStileCSS.
+
+Nei campi rimanenti potete specificare stili CSS per Tabelle, Righe e Celle che vengono utilizzate nelle caselle corrispondenti. 
+
 Per i campi vuoti verranno utilizzati gli stili generici.';
 $lang['css_styles_text'] = 'Stili';
 $lang['accessdenied'] = 'Accesso Negato. Si prega di controllare i vostri permessi.';
@@ -170,25 +175,44 @@ $lang['thousanddelimiter'] = ',';
 $lang['size'] = 'Dimensione';
 $lang['dimensions'] = 'Larghezza x Altezza';
 $lang['advanced_tab'] = 'Avanzate';
-$lang['help'] = '	<h3>What does this do?</h3>
-	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
-	<h3>How do I use it?</h3>
-	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
-  <h3>Spellchecker</h3>
-  <p>As of version 2.6.0, TinyMCE includes an online spellchecker. Please notice that SSL must be turned on in your server-configuration in order for this to work. On some setups this option is called php_openssl but that may vary</p>
-	<h3>Troubleshooting</h3>
-	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
-	things you can try before contacting me for further support.
-	<br/>
-	<ul>
-	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You&#039;d be amazed how many times this has helped people.</li>	
-	<li>2. If upgrading, please try to reset all settings. Not nice if you&#039;ve done a lot of customization, I know, but a lot of things changed from 2.3.x to 2.4.x series of the module.
-	<li>3. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based), Note that this requires your /tmp/-dir to be writable by the webserver
-	</ul>
-	<br/>
-  <h3>Plugin development</h3>
-  As of version 2.7.0 the TinyMCE-module has the ability to allow other modules to register extensions for it. Could be a custom icon allowing you to insert
-  content from some module, like Gallery etc. How to do this is pretty tech stuff, but if you are a module developer and interested in checking it out
+$lang['help'] = '	<h3>What does this do?</h3>
+
+	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
+
+  <h3>Spellchecker</h3>
+
+  <p>As of version 2.6.0, TinyMCE includes an online spellchecker. Please notice that SSL must be turned on in your server-configuration in order for this to work. On some setups this option is called php_openssl but that may vary</p>
+
+	<h3>Troubleshooting</h3>
+
+	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
+
+	things you can try before contacting me for further support.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You&#039;d be amazed how many times this has helped people.</li>	
+
+	<li>2. If upgrading, please try to reset all settings. Not nice if you&#039;ve done a lot of customization, I know, but a lot of things changed from 2.3.x to 2.4.x series of the module.
+
+	<li>3. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based), Note that this requires your /tmp/-dir to be writable by the webserver
+
+	</ul>
+
+	<br/>
+
+  <h3>Plugin development</h3>
+
+  As of version 2.7.0 the TinyMCE-module has the ability to allow other modules to register extensions for it. Could be a custom icon allowing you to insert
+
+  content from some module, like Gallery etc. How to do this is pretty tech stuff, but if you are a module developer and interested in checking it out
+
   please look in the TinyMCE/docs-dir for further instructions.';
 $lang['utma'] = '156861353.2077070488.1283419442.1289218840.1289222159.18';
 $lang['utmz'] = '156861353.1289165992.16.14.utmcsr=forum.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php/topic,48753.0.html';

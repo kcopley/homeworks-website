@@ -41,49 +41,87 @@ $lang['eventdesc-SearchCompleted'] = 'Siųsti kai paie&scaron;ka baigėsi.';
 $lang['eventdesc-SearchItemAdded'] = 'Siųsti kai naujas elematas indexuotas.';
 $lang['eventdesc-SearchItemDeleted'] = 'Siųsti kai elemtas i&scaron;trintas i&scaron; indexo.';
 $lang['eventdesc-SearchAllItemsDeleted'] = 'Siųsti kai visi elemtai i&scaron;trinti i&scaron; indexo.';
-$lang['eventhelp-SearchInitiated'] = '<p>Siųsti kai paie&scaron;ka prasidėjo.</p>
-<h4>Parametrai</h4>
-<ol>
-<li>Tekstas kurio ie&scaron;kojo.</li>
-</ol>
+$lang['eventhelp-SearchInitiated'] = '<p>Siųsti kai paie&scaron;ka prasidėjo.</p>
+
+<h4>Parametrai</h4>
+
+<ol>
+
+<li>Tekstas kurio ie&scaron;kojo.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchCompleted'] = '<p>Siųsti kai paie&scaron;ka baigėsi..</p>
-<h4>Parametrai</h4>
-<ol>
-<li>Tekstas kurio ie&scaron;kojo.</li>
-<li>Rezultatai</li>
-</ol>
+$lang['eventhelp-SearchCompleted'] = '<p>Siųsti kai paie&scaron;ka baigėsi..</p>
+
+<h4>Parametrai</h4>
+
+<ol>
+
+<li>Tekstas kurio ie&scaron;kojo.</li>
+
+<li>Rezultatai</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemAdded'] = '<p>Siųsti kai naujas elematas indexuotas..</p>
-<h4>Parametrai</h4>
-<ol>
-<li>Modulio pavadinimas.</li>
-<li>elemento ID</li>
-<li>Papildomi atributai.</li>
-<li>Priėtas turinys į indexą.</li>
-</ol>
+$lang['eventhelp-SearchItemAdded'] = '<p>Siųsti kai naujas elematas indexuotas..</p>
+
+<h4>Parametrai</h4>
+
+<ol>
+
+<li>Modulio pavadinimas.</li>
+
+<li>elemento ID</li>
+
+<li>Papildomi atributai.</li>
+
+<li>Priėtas turinys į indexą.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemDeleted'] = '<p>Siųsti kai elemtas i&scaron;trintas i&scaron; indexo.</p>
-<h4>Parametrai</h4>
-<ol>
-<li>Modulio pavadinimas.</li>
-<li>elemento ID.</li>
-<li>Papildomi atributai.</li>
-</ol>
+$lang['eventhelp-SearchItemDeleted'] = '<p>Siųsti kai elemtas i&scaron;trintas i&scaron; indexo.</p>
+
+<h4>Parametrai</h4>
+
+<ol>
+
+<li>Modulio pavadinimas.</li>
+
+<li>elemento ID.</li>
+
+<li>Papildomi atributai.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Sent when all items are deleted from the index.</p>
-<h4>Parametrai</h4>
-<ul>
-<li>Nėra</li>
-</ul>
+$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Sent when all items are deleted from the index.</p>
+
+<h4>Parametrai</h4>
+
+<ul>
+
+<li>Nėra</li>
+
+</ul>
+
 ';
-$lang['help'] = '<h3>What does this do?</h3>
-<p>Search is a module for searching &quot;core&quot; content along with certain registered modules.  You put in a word or two and it gives you back matching, relevent results.</p>
-<h3>How do I use it?</h3>
-<p>The easiest way to use it is with the {search} wrapper tag (wraps the module in a tag, to simplify the syntax). This will insert the module into your template or page anywhere you wish, and display the search form.  The code would look something like: <code>{search}</code></p>
-<h4>How do i prevent certain content from being indexed</h4>
-<p>The search module will not search any &quot;inactive&quot; pages. However on occasion, when you are using the CustomContent module, or other smarty logic to show different content to different groups of users, it may be advisiable to prevent the entire page from being indexed even when it is live.  To do this include the following tag anywhere on the page <em><!-- pageAttribute: NotSearchable --></em> When the search module sees this tag in the page it will not index any content for that page.</p>
-<p>The <em><!-- pageAttribute: NotSearchable --></em> tag can be placed in the template as well.  if this is done, none of the pages attached to that template will be indexed.  Those pages will be re-indexed if the tag is removed</p>
+$lang['help'] = '<h3>What does this do?</h3>
+
+<p>Search is a module for searching &quot;core&quot; content along with certain registered modules.  You put in a word or two and it gives you back matching, relevent results.</p>
+
+<h3>How do I use it?</h3>
+
+<p>The easiest way to use it is with the {search} wrapper tag (wraps the module in a tag, to simplify the syntax). This will insert the module into your template or page anywhere you wish, and display the search form.  The code would look something like: <code>{search}</code></p>
+
+<h4>How do i prevent certain content from being indexed</h4>
+
+<p>The search module will not search any &quot;inactive&quot; pages. However on occasion, when you are using the CustomContent module, or other smarty logic to show different content to different groups of users, it may be advisiable to prevent the entire page from being indexed even when it is live.  To do this include the following tag anywhere on the page <em><!-- pageAttribute: NotSearchable --></em> When the search module sees this tag in the page it will not index any content for that page.</p>
+
+<p>The <em><!-- pageAttribute: NotSearchable --></em> tag can be placed in the template as well.  if this is done, none of the pages attached to that template will be indexed.  Those pages will be re-indexed if the tag is removed</p>
+
 ';
 $lang['utmz'] = '156861353.1250297380.1752.42.utmccn=(referral)|utmcsr=helminsen.no|utmcct=/install/upgrade.php|utmcmd=referral';
 $lang['utma'] = '156861353.179052623084110100.1210423577.1259353230.1259355475.2152';

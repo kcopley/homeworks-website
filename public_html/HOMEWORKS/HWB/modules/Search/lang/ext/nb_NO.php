@@ -44,48 +44,85 @@ $lang['eventdesc-SearchCompleted'] = 'Sendt n&aring;r et s&oslash;k er ferdig.';
 $lang['eventdesc-SearchItemAdded'] = 'Sendt n&aring;r en ny artikkel er indeksert.';
 $lang['eventdesc-SearchItemDeleted'] = 'Sendt n&aring;r en artikkel ble slettet fra indeksen.';
 $lang['eventdesc-SearchAllItemsDeleted'] = 'Sendt n&aring;r alle artikler er slettet fra indeksen.';
-$lang['eventhelp-SearchInitiated'] = '<p>Sendt n&aring;r et s&oslash;k startes.</p>
-<h4>Parametere</h4>
-<ol>
-<li>Tekst det ble s&oslash;kt etter.</li>
-</ol>
+$lang['eventhelp-SearchInitiated'] = '<p>Sendt n&aring;r et s&oslash;k startes.</p>
+
+<h4>Parametere</h4>
+
+<ol>
+
+<li>Tekst det ble s&oslash;kt etter.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchCompleted'] = '<p>Sendt n&aring;r et s&oslash;k er ferdig.</p>
-<h4>Parametere</h4>
-<ol>
-<li>Tekst det ble s&oslash;kt etter.</li>
-<li>Listing av det ferdige resultatet.</li>
-</ol>
+$lang['eventhelp-SearchCompleted'] = '<p>Sendt n&aring;r et s&oslash;k er ferdig.</p>
+
+<h4>Parametere</h4>
+
+<ol>
+
+<li>Tekst det ble s&oslash;kt etter.</li>
+
+<li>Listing av det ferdige resultatet.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemAdded'] = '<p>Sendt n&aring;r en ny artikkel er indeksert.</p>
-<h4>Parametere</h4>
-<ol>
-<li>Modul navn.</li>
-<li>ID for artikkelen.</li>
-<li>Tilleggsattributt.</li>
-<li>Innhold til indeks og tillegg.</li>
-</ol>
+$lang['eventhelp-SearchItemAdded'] = '<p>Sendt n&aring;r en ny artikkel er indeksert.</p>
+
+<h4>Parametere</h4>
+
+<ol>
+
+<li>Modul navn.</li>
+
+<li>ID for artikkelen.</li>
+
+<li>Tilleggsattributt.</li>
+
+<li>Innhold til indeks og tillegg.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemDeleted'] = '<p>Sendt n&aring;r en artikkel ble slettet fra indeksen.</p>
-<h4>Parametere</h4>
-<ol>
-<li>Modul navn.</li>
-<li>ID for artikkelen.</li>
-<li>Tilleggsattributt.</li>
-</ol>
+$lang['eventhelp-SearchItemDeleted'] = '<p>Sendt n&aring;r en artikkel ble slettet fra indeksen.</p>
+
+<h4>Parametere</h4>
+
+<ol>
+
+<li>Modul navn.</li>
+
+<li>ID for artikkelen.</li>
+
+<li>Tilleggsattributt.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Sendt n&aring;r et s&oslash;k startes.</p>
-<h4>Parametere</h4>
-<ul>
-<li>Ingen</li>
-</ul>
+$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Sendt n&aring;r et s&oslash;k startes.</p>
+
+<h4>Parametere</h4>
+
+<ul>
+
+<li>Ingen</li>
+
+</ul>
+
 ';
-$lang['help'] = '	<h3>Hva gj&oslash;r denne?</h3>
-	<p>S&oslash;k er en modul for &aring; s&oslash;ke i &#039;core&#039; innhold og bestemte registrerte moduler.  Du skriver inn et ord eller to og den gir deg passende, relevante resultater.</p>
-	<h3>Hvordan bruker jeg den?</h3>
-<p>Den enkleste m&aring;ten er &aring; bruke den med {search} innpaknings taggen (pakker modulen i en tagg, for &aring; forenkle syntaksen). Dette vil sette modulen inn i din mal eller side hvor du &oslash;nsker, og vise s&oslash;ke skjemaet.  Koden vil se ut som dette: <code>{search}</code></p>
-<h4>Hvordan unng&aring;r jeg at noe innhold blir indeksert</h4>
-<p>S&oslash;k modulen vill ikke s&oslash;ke i inaktive sider. Men i tilfelle, n&aring;r du benytter CustomContent modulen, eller andre smarty logikker for &aring; vise forskjellig innhold til ulike grupper med brukere, kan det vare anbefalt &aring; hindre hele siden fra &aring; bli indeksert selv om den er live.  For &aring; gj&oslash;re dette  - inkluder f&oslash;lgende tagg hvor som helst p&aring; siden <em>&amp;lt;!-- pageAttribute: NotSearchable --&amp;gt; (&amp;lt; = tegnet mindre enn, &amp;gt; = tegnet st&oslash;rre enn) </em> N&aring;r s&oslash;kemodulen ser denne taggen p&aring; siden vil den ikke indeksere noe innhold fra den siden.</p>
+$lang['help'] = '	<h3>Hva gj&oslash;r denne?</h3>
+
+	<p>S&oslash;k er en modul for &aring; s&oslash;ke i &#039;core&#039; innhold og bestemte registrerte moduler.  Du skriver inn et ord eller to og den gir deg passende, relevante resultater.</p>
+
+	<h3>Hvordan bruker jeg den?</h3>
+
+<p>Den enkleste m&aring;ten er &aring; bruke den med {search} innpaknings taggen (pakker modulen i en tagg, for &aring; forenkle syntaksen). Dette vil sette modulen inn i din mal eller side hvor du &oslash;nsker, og vise s&oslash;ke skjemaet.  Koden vil se ut som dette: <code>{search}</code></p>
+
+<h4>Hvordan unng&aring;r jeg at noe innhold blir indeksert</h4>
+
+<p>S&oslash;k modulen vill ikke s&oslash;ke i inaktive sider. Men i tilfelle, n&aring;r du benytter CustomContent modulen, eller andre smarty logikker for &aring; vise forskjellig innhold til ulike grupper med brukere, kan det vare anbefalt &aring; hindre hele siden fra &aring; bli indeksert selv om den er live.  For &aring; gj&oslash;re dette  - inkluder f&oslash;lgende tagg hvor som helst p&aring; siden <em>&amp;lt;!-- pageAttribute: NotSearchable --&amp;gt; (&amp;lt; = tegnet mindre enn, &amp;gt; = tegnet st&oslash;rre enn) </em> N&aring;r s&oslash;kemodulen ser denne taggen p&aring; siden vil den ikke indeksere noe innhold fra den siden.</p>
+
 <p>Taggen <em>&amp;lt;!-- pageAttribute: NotSearchable --&amp;gt;</em> kan ogs&aring; plasseres i malen.  Om dette gj&oslash;res, ingen av sidene som er tilknyttet denne malen vil bli indeksert.  Disse sidene vil bli reindeksert om taggen fjernes.</p>';
 $lang['utmz'] = '156861353.1279922282.3039.70.utmcsr=forum.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php';
 $lang['utma'] = '156861353.179052623084110100.1210423577.1280440939.1280442901.3072';

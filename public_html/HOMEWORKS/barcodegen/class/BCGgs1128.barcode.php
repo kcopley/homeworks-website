@@ -7,7 +7,7 @@
  *
  *--------------------------------------------------------------------
  * Revision History
- * V2.2.0	10 feb	2010	Kevin Gilbert, reviewed by Jean-Sébastien Goupil, new version
+ * V2.2.0	10 feb	2010	Kevin Gilbert, reviewed by Jean-Sï¿½bastien Goupil, new version
  *--------------------------------------------------------------------
  * $Id: BCGgs1128.barcode.php,v 1.1 2010/02/14 00:24:07 jsgoupil Exp $
  *--------------------------------------------------------------------

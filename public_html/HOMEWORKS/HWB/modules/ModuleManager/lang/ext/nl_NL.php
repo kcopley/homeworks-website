@@ -91,65 +91,123 @@ $lang['back_to_module_manager'] = '&laquo; Terug naar de Module Manager';
 $lang['error'] = 'Fout!';
 $lang['admindescription'] = 'Een module, om andere modules vanaf andere servers op te halen en te installeren.';
 $lang['accessdenied'] = 'Toegang geweigerd. Controleer uw rechten.';
-$lang['changelog'] = '<ul>
-<li>Version 1.0. 10 January 2006. Initial Release. </li>
-<li>Version 1.1. July, 2006. Released with the 1.0- beta</li>
-<li>Version 1.1.1 August, 2006.  Require 1.0.1 of nuSOAP</li>
-<li>Version 1.1.2 September, 2006.  Fixed a mistake that resulted in upgrade not not working at all</li>
-<li>Version 1.1.3 September, 2006.
-  <ul>
-  <li>Bumped minimum CMS Version to 1.0</li>
-  <li>Now use 1 request to get the complete list of modules from the repository</li>
-  <li>Added some missing lang strings</li>
-  <li>Added the ability to reset the local cache of repository information</li>
-  <li>Added the ability to restore the repository url to factory defaults</li>
-  </ul>
-</li>
-<li>Version 1.1.4 February, 2007.  Now handles the safe mode check, and disables upgrading or installing modules if the permissions are wrong.</li>
-<li>Version 1.1.5 September, 2007. New preference to make only latest module version show. Added nice message after saving preferences</li>
-</li>
-<li>Version 1.1.6 May, 2008. Now show if available modules are incompatible with the current CMS_VERSION.</li>
-</li>
-<li>Version 1.2 June, 2008.<br/>
-This version should reduce the memory requirements of this module, and trade it off for performance on the server, and mroe requests to the server.
-   <ul>
-    <li>Bumped Minimum CMS Version to 1.3</li>
-    <li>Bumped Minimum repository version to 1.1</li>
-    <li>Get rid of all of the session stuff</li>
-    <li>Add support for requesting modules beginning with a prefix (usually a single letter)</li>
-    <li>Add support for requestion only the newest versions of the modules</li>
-   </ul>
-</li>
-<li>Version 1.2.1 August, 2008.<br/>
-Added a warning message to the top of the admin display.
-</li>
-<li>Version 1.3 May, 2009.<br/>
-Added dependency checking.
-</li>
-<li>Version 1.3.3 March, 2010.<br/>
-<ul>
-  <li>PHP 5.x improvements (specifically remove warnings for PHP 5.3)
-  <li>Minor bug fixes.</li>
-</ul>
-</li>
-<li>Version 1.4 June, 2010.<br/>
-<ul>
-  <li>Implemented automatic dependency calculation, and one-click installation.</li>
-  <li>Assorted usability improvements.</li>
-  <li>Minor bug fixes.</li>
-</ul>
-</li>
-
+$lang['changelog'] = '<ul>
+
+<li>Version 1.0. 10 January 2006. Initial Release. </li>
+
+<li>Version 1.1. July, 2006. Released with the 1.0- beta</li>
+
+<li>Version 1.1.1 August, 2006.  Require 1.0.1 of nuSOAP</li>
+
+<li>Version 1.1.2 September, 2006.  Fixed a mistake that resulted in upgrade not not working at all</li>
+
+<li>Version 1.1.3 September, 2006.
+
+  <ul>
+
+  <li>Bumped minimum CMS Version to 1.0</li>
+
+  <li>Now use 1 request to get the complete list of modules from the repository</li>
+
+  <li>Added some missing lang strings</li>
+
+  <li>Added the ability to reset the local cache of repository information</li>
+
+  <li>Added the ability to restore the repository url to factory defaults</li>
+
+  </ul>
+
+</li>
+
+<li>Version 1.1.4 February, 2007.  Now handles the safe mode check, and disables upgrading or installing modules if the permissions are wrong.</li>
+
+<li>Version 1.1.5 September, 2007. New preference to make only latest module version show. Added nice message after saving preferences</li>
+
+</li>
+
+<li>Version 1.1.6 May, 2008. Now show if available modules are incompatible with the current CMS_VERSION.</li>
+
+</li>
+
+<li>Version 1.2 June, 2008.<br/>
+
+This version should reduce the memory requirements of this module, and trade it off for performance on the server, and mroe requests to the server.
+
+   <ul>
+
+    <li>Bumped Minimum CMS Version to 1.3</li>
+
+    <li>Bumped Minimum repository version to 1.1</li>
+
+    <li>Get rid of all of the session stuff</li>
+
+    <li>Add support for requesting modules beginning with a prefix (usually a single letter)</li>
+
+    <li>Add support for requestion only the newest versions of the modules</li>
+
+   </ul>
+
+</li>
+
+<li>Version 1.2.1 August, 2008.<br/>
+
+Added a warning message to the top of the admin display.
+
+</li>
+
+<li>Version 1.3 May, 2009.<br/>
+
+Added dependency checking.
+
+</li>
+
+<li>Version 1.3.3 March, 2010.<br/>
+
+<ul>
+
+  <li>PHP 5.x improvements (specifically remove warnings for PHP 5.3)
+
+  <li>Minor bug fixes.</li>
+
+</ul>
+
+</li>
+
+<li>Version 1.4 June, 2010.<br/>
+
+<ul>
+
+  <li>Implemented automatic dependency calculation, and one-click installation.</li>
+
+  <li>Assorted usability improvements.</li>
+
+  <li>Minor bug fixes.</li>
+
+</ul>
+
+</li>
+
+
+
 </ul>';
-$lang['help'] = '<h3>Wat doet het?</h3>
-<p>Module Manager is een client voor de ModuleRepository-module en maakt het mogelijk modules te bekijken en te installeren van andere sites zonder de noodzaak te ftp-en of archieven te decomprimeren.  Module XML-bestanden worden gedownload met behulp van SOAP, de integriteit gecontroleerd en vervolgens automatisch uitgepakt.</p>
-<h3>Hoe gebruik ik het?</h3>
-<p>Om deze module te kunnen gebruiken heeft u &#039;Modify Modules&#039; rechten nodig en een volledige url naar een &#039;Modulebron&#039;. U kunt deze url opgeven in &#039;Websitebeheer&#039; -> &#039;Algemene instellingen&#039;.</p><br/>
-<p>De interface met deze module vindt u onder &#039;Uitbreidingen&#039;. Selecteren van deze module levert een lijst met beschikbare XML-modules. Deze lijst wordt vergeleken met de huidige, ge&iuml;nstalleerde modules en het resultaat wordt getoond in een nieuw scherm. Vanaf dit scherm kunt u informatie over de modules bekijken, modules installeren of upgraden.</p>
-<h3>Ondersteuning</h3>
-<p>As per the GPL, this software is provided as-is. Please read the text of the license for the full disclaimer.</p>
-<h3>Copyright and License</h3>
-<p>Copyright &copy; 2006, calguy1000 <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. All Rights Are Reserved.</p>
+$lang['help'] = '<h3>Wat doet het?</h3>
+
+<p>Module Manager is een client voor de ModuleRepository-module en maakt het mogelijk modules te bekijken en te installeren van andere sites zonder de noodzaak te ftp-en of archieven te decomprimeren.  Module XML-bestanden worden gedownload met behulp van SOAP, de integriteit gecontroleerd en vervolgens automatisch uitgepakt.</p>
+
+<h3>Hoe gebruik ik het?</h3>
+
+<p>Om deze module te kunnen gebruiken heeft u &#039;Modify Modules&#039; rechten nodig en een volledige url naar een &#039;Modulebron&#039;. U kunt deze url opgeven in &#039;Websitebeheer&#039; -> &#039;Algemene instellingen&#039;.</p><br/>
+
+<p>De interface met deze module vindt u onder &#039;Uitbreidingen&#039;. Selecteren van deze module levert een lijst met beschikbare XML-modules. Deze lijst wordt vergeleken met de huidige, ge&iuml;nstalleerde modules en het resultaat wordt getoond in een nieuw scherm. Vanaf dit scherm kunt u informatie over de modules bekijken, modules installeren of upgraden.</p>
+
+<h3>Ondersteuning</h3>
+
+<p>As per the GPL, this software is provided as-is. Please read the text of the license for the full disclaimer.</p>
+
+<h3>Copyright and License</h3>
+
+<p>Copyright &copy; 2006, calguy1000 <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. All Rights Are Reserved.</p>
+
 <p>This module has been released under the <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a>. You must agree to this license before using the module.</p>';
 $lang['utma'] = '156861353.1335698708.1284586217.1288728143.1288778289.272';
 $lang['utmz'] = '156861353.1288551918.260.31.utmcsr=forum.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php';

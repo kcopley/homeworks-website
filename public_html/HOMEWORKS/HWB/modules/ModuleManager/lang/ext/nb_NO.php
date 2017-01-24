@@ -91,64 +91,121 @@ $lang['back_to_module_manager'] = '&laquo; Tilbake til Modulebehandleren';
 $lang['error'] = 'Feil!';
 $lang['admindescription'] = 'Et verkt&oslash;y for &aring; hente og installere moduler fra fjern-servere.';
 $lang['accessdenied'] = 'Tilgang nektet. Vennligst sjekk dinne rettigheter.';
-$lang['changelog'] = '<ul>
-<li>Version 1.0. 10 January 2006. Initial Release.</li>
-<li>Version 1.1. July, 2006. Released with the 1.0- beta</li>
-<li>Version 1.1.1 August, 2006.  Require 1.0.1 of nuSOAP</li>
-<li>Version 1.1.2 September, 2006.  Fixed a mistake that resulted in upgrade not not working at all</li>
-<li>Version 1.1.3 September, 2006.
-  <ul>
-  <li>Bumped minimum CMS Version to 1.0</li>
-  <li>Now use 1 request to get the complete list of modules from the repository</li>
-  <li>Added some missing lang strings</li>
-  <li>Added the ability to reset the local cache of repository information</li>
-  <li>Added the ability to restore the repository url to factory defaults</li>
-  </ul>
-</li>
-<li>Version 1.1.4 February, 2007.  Now handles the safe mode check, and disables upgrading or installing modules if the permissions are wrong.</li>
-<li>Version 1.1.5 September, 2007. New preference to make only latest module version show. Added nice message after saving preferences</li>
-</li>
-<li>Version 1.1.6 May, 2008. Now show if available modules are incompatible with the current CMS_VERSION.</li>
-</li>
-<li>Version 1.2 June, 2008.<br/>
-This version should reduce the memory requirements of this module, and trade it off for performance on the server, and more requests to the server.
-   <ul>
-    <li>Bumped Minimum CMS Version to 1.3</li>
-    <li>Bumped Minimum repository version to 1.1</li>
-    <li>Get rid of all of the session stuff</li>
-    <li>Add support for requesting modules beginning with a prefix (usually a single letter)</li>
-    <li>Add support for requesting only the newest versions of the modules</li>
-   </ul>
-</li>
-<li>Version 1.2.1 August, 2008.<br/>
-Added a warning message to the top of the admin display.
-</li>
-<li>Version 1.3 May, 2009.<br/>
-Added dependency checking.
-</li>
-<li>Version 1.3.3 March, 2010.<br/>
-<ul>
-  <li>PHP 5.x improvements (specifically remove warnings for PHP 5.3)</li>
-  <li>Minor bug fixes.</li>
-</ul>
-</li>
-<li>Version 1.4 June, 2010.<br/>
-<ul>
-  <li>Implemented automatic dependency calculation, and one-click installation.</li>
-  <li>Assorted usability improvements.</li>
-  <li>Minor bug fixes.</li>
-</ul>
-</li>
+$lang['changelog'] = '<ul>
+
+<li>Version 1.0. 10 January 2006. Initial Release.</li>
+
+<li>Version 1.1. July, 2006. Released with the 1.0- beta</li>
+
+<li>Version 1.1.1 August, 2006.  Require 1.0.1 of nuSOAP</li>
+
+<li>Version 1.1.2 September, 2006.  Fixed a mistake that resulted in upgrade not not working at all</li>
+
+<li>Version 1.1.3 September, 2006.
+
+  <ul>
+
+  <li>Bumped minimum CMS Version to 1.0</li>
+
+  <li>Now use 1 request to get the complete list of modules from the repository</li>
+
+  <li>Added some missing lang strings</li>
+
+  <li>Added the ability to reset the local cache of repository information</li>
+
+  <li>Added the ability to restore the repository url to factory defaults</li>
+
+  </ul>
+
+</li>
+
+<li>Version 1.1.4 February, 2007.  Now handles the safe mode check, and disables upgrading or installing modules if the permissions are wrong.</li>
+
+<li>Version 1.1.5 September, 2007. New preference to make only latest module version show. Added nice message after saving preferences</li>
+
+</li>
+
+<li>Version 1.1.6 May, 2008. Now show if available modules are incompatible with the current CMS_VERSION.</li>
+
+</li>
+
+<li>Version 1.2 June, 2008.<br/>
+
+This version should reduce the memory requirements of this module, and trade it off for performance on the server, and more requests to the server.
+
+   <ul>
+
+    <li>Bumped Minimum CMS Version to 1.3</li>
+
+    <li>Bumped Minimum repository version to 1.1</li>
+
+    <li>Get rid of all of the session stuff</li>
+
+    <li>Add support for requesting modules beginning with a prefix (usually a single letter)</li>
+
+    <li>Add support for requesting only the newest versions of the modules</li>
+
+   </ul>
+
+</li>
+
+<li>Version 1.2.1 August, 2008.<br/>
+
+Added a warning message to the top of the admin display.
+
+</li>
+
+<li>Version 1.3 May, 2009.<br/>
+
+Added dependency checking.
+
+</li>
+
+<li>Version 1.3.3 March, 2010.<br/>
+
+<ul>
+
+  <li>PHP 5.x improvements (specifically remove warnings for PHP 5.3)</li>
+
+  <li>Minor bug fixes.</li>
+
+</ul>
+
+</li>
+
+<li>Version 1.4 June, 2010.<br/>
+
+<ul>
+
+  <li>Implemented automatic dependency calculation, and one-click installation.</li>
+
+  <li>Assorted usability improvements.</li>
+
+  <li>Minor bug fixes.</li>
+
+</ul>
+
+</li>
+
 </ul>';
-$lang['help'] = '<h3>Hva gj&oslash;r denne?</h3>
-<p> En klient for ModuleRepository, gir denne modulen forh&aring;ndsvisning, og installere moduler fra eksterne nettsteder uten behov for ft eller unzipping av arkiver. Modul XML-filer lastes ned ved hjelp av SOAP, integritet bekreftet, og deretter pakkes ut automatisk. </p>
-<h3> Hvordan bruker jeg denne </h3>
-<p> For &aring; kunne bruke denne modulen, trenger du &#039;Endre moduler&#039; tillatelse, og du vil ogs&aring; trenge komplett og fullstendig webadresse til en &#039;Modul Repository&#039; installasjon. Du kan spesifisere denne url i &quot;Utvidelser&quot; -> &quot;Module Manager&quot; -> &quot;Innstillinger&quot;-siden. </p> <br/>
-<p> Du kan finne grensesnittet for denne modulen under menyen &#039;Utvidelser&#039;. N&aring;r du velger denne modulen, &#039;Modul Repository&#039; installasjonen vil automatisk bli spurt for en liste over tilgjengelige xml moduler. Denne listen vil bli kryssrefereres med listen over installerte moduler, og en sammendragsside vises. Herfra kan du vise beskrivende informasjon, hjelp, og om informasjon for en modul uten &aring; fysisk installere den. Du kan ogs&aring; velge &aring; oppgradere eller installere moduler. </p>
-<h3>Support</h3>
-<p> Pr GPL, er denne programvaren leveres som det er. Les teksten av lisensen for full ansvarsfraskrivelse. </p>
-<h3>Opphavsrett og lisens</h3>
-<p> Copyright &copy; 2006, calguy1000 <a href="mailto:calguy1000@hotmail.com"> <calguy1000@hotmail.com> </a>. Alle rettigheter er reservert. </p>
+$lang['help'] = '<h3>Hva gj&oslash;r denne?</h3>
+
+<p> En klient for ModuleRepository, gir denne modulen forh&aring;ndsvisning, og installere moduler fra eksterne nettsteder uten behov for ft eller unzipping av arkiver. Modul XML-filer lastes ned ved hjelp av SOAP, integritet bekreftet, og deretter pakkes ut automatisk. </p>
+
+<h3> Hvordan bruker jeg denne </h3>
+
+<p> For &aring; kunne bruke denne modulen, trenger du &#039;Endre moduler&#039; tillatelse, og du vil ogs&aring; trenge komplett og fullstendig webadresse til en &#039;Modul Repository&#039; installasjon. Du kan spesifisere denne url i &quot;Utvidelser&quot; -> &quot;Module Manager&quot; -> &quot;Innstillinger&quot;-siden. </p> <br/>
+
+<p> Du kan finne grensesnittet for denne modulen under menyen &#039;Utvidelser&#039;. N&aring;r du velger denne modulen, &#039;Modul Repository&#039; installasjonen vil automatisk bli spurt for en liste over tilgjengelige xml moduler. Denne listen vil bli kryssrefereres med listen over installerte moduler, og en sammendragsside vises. Herfra kan du vise beskrivende informasjon, hjelp, og om informasjon for en modul uten &aring; fysisk installere den. Du kan ogs&aring; velge &aring; oppgradere eller installere moduler. </p>
+
+<h3>Support</h3>
+
+<p> Pr GPL, er denne programvaren leveres som det er. Les teksten av lisensen for full ansvarsfraskrivelse. </p>
+
+<h3>Opphavsrett og lisens</h3>
+
+<p> Copyright &copy; 2006, calguy1000 <a href="mailto:calguy1000@hotmail.com"> <calguy1000@hotmail.com> </a>. Alle rettigheter er reservert. </p>
+
 <p> Denne modulen har blitt utgitt under <a href="http://www.gnu.org/licenses/licenses.html#GPL"> GNU Public License </a>. Du m&aring; godta denne lisensavtalen f&oslash;r du bruker modulen. </p>';
 $lang['utma'] = '156861353.4516254727077762000.1214829895.1290588378.1291365970.277';
 $lang['utmz'] = '156861353.1290182173.274.25.utmcsr=feedburner|utmccn=Feed: cmsmadesimple/blog (CMS Made Simple)|utmcmd=feed';

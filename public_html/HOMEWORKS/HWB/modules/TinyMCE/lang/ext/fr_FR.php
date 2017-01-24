@@ -105,7 +105,8 @@ $lang['ignoremodifyfileshelp'] = 'Avertissement : Cela permet des op&eacute;rati
 $lang['showtogglebutton_text'] = 'Montrer la case &agrave; cocher pour afficher l&#039;&eacute;diteur WYSIWYG Oui/Non&nbsp;';
 $lang['togglewysiwyg'] = 'Afficher &eacute;diteur WYSIWYG Oui/Non';
 $lang['styles_tab'] = 'Styles CSS';
-$lang['styles_help'] = 'Si vous laissez le premier champ vide, TinyMCE utilisera votre fichier CSS et listera pour l&#039;utilisateur les styles contenus dans ce fichier.
+$lang['styles_help'] = 'Si vous laissez le premier champ vide, TinyMCE utilisera votre fichier CSS et listera pour l&#039;utilisateur les styles contenus dans ce fichier.
+
 Si vous voulez seulement certains styles pr&eacute;sent&eacute;s &agrave; l&#039;utilisateur, pr&eacute;ciser dans le formulaire ci-dessous :  &quot;mon_style1=style1; mon_style2=style2&quot;, &quot;style1&quot; &eacute;tant une classe appel&eacute;e dans la feuille de style d&eacute;finie pour le gabarit de la page. Cela se traduira par exemple par < span class=&quot;style1&quot; >text< /span >.';
 $lang['css_styles_text'] = 'G&eacute;n&eacute;ral&nbsp;';
 $lang['accessdenied'] = 'Acc&egrave;s refus&eacute;. Veuillez v&eacute;rifier vos permissions.';
@@ -166,25 +167,44 @@ $lang['thousanddelimiter'] = '.';
 $lang['size'] = 'Taille';
 $lang['dimensions'] = 'LargxHaut';
 $lang['advanced_tab'] = 'Avanc&eacute;';
-$lang['help'] = '	<h3>Que fait ce module&nbsp;?</h3>
-	<p>Active TinyMCE pour &ecirc;tre utilis&eacute; en tant que WYSIWYG.</p>
-	<h3>Comment l&#039;utiliser?</h3>
-	<p>Installez le module, puis allez &agrave; &quot;Mes pr&eacute;f&eacute;rences / Pr&eacute;f&eacute;rences de l&#039;utilisateur&quot; et d&eacute;finissez TinyMCE comme WYSIWYG de votre choix.</p>
-<p>Modifier les permissions des groupes afin d&#039;autoriser les pr&eacute;f&eacute;rences pour TinyMCE.</p>
-
-  <h3>Correcteur orthographique</h3>
-  <p>Depuis la version 2.6.0, TinyMCE inclut un correcteur orthographique en ligne. S&#039;il vous pla&icirc;t notez que SSL doit &ecirc;tre activ&eacute; dans la configuration de votre serveur pour que cela fonctionne. Sur certaines configurations de cette option peut &ecirc;tre appel&eacute;e php_openssl</p>
-
-<h3>D&eacute;pannage</h3>
-	Certaines personnes ont des probl&egrave;mes avec Tiny lors de l&#039;installation ou de la mise &agrave; niveau. Voici une liste de choses &agrave; essayer avant de me contacter pour obtenir une aide suppl&eacute;mentaire.
-	<br/>
-	<ul>
-	<li>1. S&rsquo;il vous pla&icirc;t, s&rsquo;il vous pla&icirc;t, essayez &agrave; nouveau de renvoyer les fichiers du module TinyMCE vers votre serveur. Cela est une chose qui a aid&eacute; de nombreux utilisateurs.</li>
-	<li>2. Si vous faites une mise &agrave; jour, essayer de r&eacute;initialiser tous les param&egrave;tres. Pas &eacute;vident si vous avez personnalis&eacute; plusieurs options, je le sais, mais il y a de nombreuses modifications entre les versions 2.3.x &agrave; 2.4.x du module.</li>
-	<li>3. Essayez d&#039;activer l&#039;option de configuration statique dans les param&egrave;tres avanc&eacute;s. Cela fonctionne mieux sur certains syst&egrave;mes (bas&eacute;s sur CGI). Notez que cela n&eacute;cessite que le dossier /tmp ait des permissions en &eacute;criture.</li>
-	</ul>
-	<br/>
-<h3> Plugin de d&eacute;veloppement </h3> 
+$lang['help'] = '	<h3>Que fait ce module&nbsp;?</h3>
+
+	<p>Active TinyMCE pour &ecirc;tre utilis&eacute; en tant que WYSIWYG.</p>
+
+	<h3>Comment l&#039;utiliser?</h3>
+
+	<p>Installez le module, puis allez &agrave; &quot;Mes pr&eacute;f&eacute;rences / Pr&eacute;f&eacute;rences de l&#039;utilisateur&quot; et d&eacute;finissez TinyMCE comme WYSIWYG de votre choix.</p>
+
+<p>Modifier les permissions des groupes afin d&#039;autoriser les pr&eacute;f&eacute;rences pour TinyMCE.</p>
+
+
+
+  <h3>Correcteur orthographique</h3>
+
+  <p>Depuis la version 2.6.0, TinyMCE inclut un correcteur orthographique en ligne. S&#039;il vous pla&icirc;t notez que SSL doit &ecirc;tre activ&eacute; dans la configuration de votre serveur pour que cela fonctionne. Sur certaines configurations de cette option peut &ecirc;tre appel&eacute;e php_openssl</p>
+
+
+
+<h3>D&eacute;pannage</h3>
+
+	Certaines personnes ont des probl&egrave;mes avec Tiny lors de l&#039;installation ou de la mise &agrave; niveau. Voici une liste de choses &agrave; essayer avant de me contacter pour obtenir une aide suppl&eacute;mentaire.
+
+	<br/>
+
+	<ul>
+
+	<li>1. S&rsquo;il vous pla&icirc;t, s&rsquo;il vous pla&icirc;t, essayez &agrave; nouveau de renvoyer les fichiers du module TinyMCE vers votre serveur. Cela est une chose qui a aid&eacute; de nombreux utilisateurs.</li>
+
+	<li>2. Si vous faites une mise &agrave; jour, essayer de r&eacute;initialiser tous les param&egrave;tres. Pas &eacute;vident si vous avez personnalis&eacute; plusieurs options, je le sais, mais il y a de nombreuses modifications entre les versions 2.3.x &agrave; 2.4.x du module.</li>
+
+	<li>3. Essayez d&#039;activer l&#039;option de configuration statique dans les param&egrave;tres avanc&eacute;s. Cela fonctionne mieux sur certains syst&egrave;mes (bas&eacute;s sur CGI). Notez que cela n&eacute;cessite que le dossier /tmp ait des permissions en &eacute;criture.</li>
+
+	</ul>
+
+	<br/>
+
+<h3> Plugin de d&eacute;veloppement </h3> 
+
   Depuis la version 2.7.0 du module TinyMCE  donne la possibilit&eacute; d&#039;avoir votre propre plugin TinyMCE l&#039;int&eacute;rieur de vos modules. Une ic&ocirc;ne personnalis&eacute;e vous permettra d&#039;ins&eacute;rer du contenu dans certains modules, comme Gallery etc... Pour cela c&#039;est une affaire assez technique, mais si vous &ecirc;tes un d&eacute;veloppeur int&eacute;ress&eacute; par ce plugin, regardez s&#039;il vous pla&icirc;t dans le dossier TinyMCE/docs pour d&#039;autres instructions.';
 $lang['utma'] = '156861353.232585807.1290104021.1290104021.1290104021.1';
 $lang['utmc'] = '156861353';

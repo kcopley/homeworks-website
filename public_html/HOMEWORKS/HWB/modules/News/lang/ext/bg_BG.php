@@ -168,62 +168,108 @@ $lang['options'] = 'Опции';
 $lang['optionsupdated'] = 'Опциите бяха успешно обновени.';
 $lang['useexpiration'] = 'Използва крайна дата';
 $lang['eventdesc-NewsArticleAdded'] = 'Sent when an article is added.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\\"news_id\\" - Id of the news article</li>
-<li>\\"category_id\\" - Id of the category for this article</li>
-<li>\\"title\\" - Title of the article</li>
-<li>\\"content\\" - Content of the article</li>
-<li>\\"summary\\" - Summary of the article</li>
-<li>\\"status\\" - Status of the article ("draft" or "publish")</li>
-<li>\\"start_time\\" - Date the article should start being displayed</li>
-<li>\\"end_time\\" - Date the article should stop being displayed</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\\"news_id\\" - Id of the news article</li>
+
+<li>\\"category_id\\" - Id of the category for this article</li>
+
+<li>\\"title\\" - Title of the article</li>
+
+<li>\\"content\\" - Content of the article</li>
+
+<li>\\"summary\\" - Summary of the article</li>
+
+<li>\\"status\\" - Status of the article ("draft" or "publish")</li>
+
+<li>\\"start_time\\" - Date the article should start being displayed</li>
+
+<li>\\"end_time\\" - Date the article should stop being displayed</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Sent when an article is edited.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\\"news_id\\" - Id of the news article</li>
-<li>\\"category_id\\" - Id of the category for this article</li>
-<li>\\"title\\" - Title of the article</li>
-<li>\\"content\\" - Content of the article</li>
-<li>\\"summary\\" - Summary of the article</li>
-<li>\\"status\\" - Status of the article ("draft" or "publish")</li>
-<li>\\"start_time\\" - Date the article should start being displayed</li>
-<li>\\"end_time\\" - Date the article should stop being displayed</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\\"news_id\\" - Id of the news article</li>
+
+<li>\\"category_id\\" - Id of the category for this article</li>
+
+<li>\\"title\\" - Title of the article</li>
+
+<li>\\"content\\" - Content of the article</li>
+
+<li>\\"summary\\" - Summary of the article</li>
+
+<li>\\"status\\" - Status of the article ("draft" or "publish")</li>
+
+<li>\\"start_time\\" - Date the article should start being displayed</li>
+
+<li>\\"end_time\\" - Date the article should stop being displayed</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Sent when an article is deleted.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\\"news_id\\" - Id of the news article</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\\"news_id\\" - Id of the news article</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Sent when a category is added.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\\"category_id\\" - Id of the news categpry</li>
-<li>\\"name\\" - Name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\\"category_id\\" - Id of the news categpry</li>
+
+<li>\\"name\\" - Name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Sent when a category is edited.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\\"category_id\\" - Id of the news categpry</li>
-<li>\\"name\\" - Name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\\"category_id\\" - Id of the news categpry</li>
+
+<li>\\"name\\" - Name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Sent when a category is deleted.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\\"category_id\\" - Id of the news categpry</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\\"category_id\\" - Id of the news categpry</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'This parameter is only applicable to the detail view.  It allows specifying which news article to display in detail mode.  If the special value -1 is used, the system will display the newest, published, non expired article.';
 $lang['helpnumber'] = 'Максимален брой статии за покзване =- оставяйки празно показва всички.';
@@ -239,18 +285,29 @@ $lang['helpsortasc'] = 'Сортира в ред абв а не в яюь.';
 $lang['helpdetailpage'] = 'Страница където да показва детайлите за новина. Тази страница може да бъде или псевдоним или id. Използва се за да може цялата новина да се покаже в различен шаблон от този за резюмето.';
 $lang['helpshowarchive'] = 'Show only expired news articles.';
 $lang['helpbrowsecat'] = 'Shows a browseable category list.';
-$lang['helpaction'] = '\'Override the default action.  Possible values are:
-<ul>
-<li>"detail" - to display a specified articleid in detail mode.</li>
-<li>"default" - to display the summary view</li>
-<li>"fesubmit" - to display the frontend form for allowing users to submit news articles on the front end.</li>
-<li>"browsecat" - to display a browseable category list.</li>
+$lang['helpaction'] = '\'Override the default action.  Possible values are:
+
+<ul>
+
+<li>"detail" - to display a specified articleid in detail mode.</li>
+
+<li>"default" - to display the summary view</li>
+
+<li>"fesubmit" - to display the frontend form for allowing users to submit news articles on the front end.</li>
+
+<li>"browsecat" - to display a browseable category list.</li>
+
 </ul>';
-$lang['help'] = '	<h3>What does this do?</h3>
-	<p>News is a module for displaying news events on your page, similar to a blog style, except with more features!.  When the module is installed, a News admin page is added to administration menu that will allow you to select or add a news category.  Once a news category is created or selected, a list of news items for that category will be displayed.  From here, you can add, edit or delete news items for that category.</p>
-	<h3>Security</h3>
-	<p>The user must belong to a group with the \'Modify News\' permission in order to add, edit, or delete News entries.</p>
-	<h3>How do I use it?</h3>
+$lang['help'] = '	<h3>What does this do?</h3>
+
+	<p>News is a module for displaying news events on your page, similar to a blog style, except with more features!.  When the module is installed, a News admin page is added to administration menu that will allow you to select or add a news category.  Once a news category is created or selected, a list of news items for that category will be displayed.  From here, you can add, edit or delete news items for that category.</p>
+
+	<h3>Security</h3>
+
+	<p>The user must belong to a group with the \'Modify News\' permission in order to add, edit, or delete News entries.</p>
+
+	<h3>How do I use it?</h3>
+
 	<p>The easiest way to use it is in conjunction with the cms_module tag.  This will insert the module into your template or page anywhere you wish, and display news items.  The code would look something like: <code>{cms_module module="news" number="5" category="beer"}</code></p>';
 $lang['qca'] = 'P0-1600326190-1250328322211';
 $lang['utma'] = '156861353.487976746.1245680672.1271768136.1271838201.32';

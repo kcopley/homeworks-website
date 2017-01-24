@@ -11,9 +11,9 @@
  *
  *--------------------------------------------------------------------
  * Revision History
- * v2.0.0	23 apr	2008	Jean-Sébastien Goupil	New Version Update
- * v1.2.3b	2  jan	2006	Jean-Sébastien Goupil	Correct error if $textfont was empty
- * v1.2.1	27 jun	2005	Jean-Sébastien Goupil	Font support added
+ * v2.0.0	23 apr	2008	Jean-Sï¿½bastien Goupil	New Version Update
+ * v1.2.3b	2  jan	2006	Jean-Sï¿½bastien Goupil	Correct error if $textfont was empty
+ * v1.2.1	27 jun	2005	Jean-Sï¿½bastien Goupil	Font support added
  * V1.00	17 jun	2004	Jean-Sebastien Goupil
  *--------------------------------------------------------------------
  * $Id: BCGothercode.barcode.php,v 1.10 2009/11/09 04:08:41 jsgoupil Exp $

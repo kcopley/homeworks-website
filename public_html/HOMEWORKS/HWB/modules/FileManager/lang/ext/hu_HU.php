@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Csak halad&oacute; m&oacute;dban van hat&aacute;
 $lang['showhiddenfiles'] = 'Rejtett f&aacute;jlok mutat&aacute;sa';
 $lang['settingsconfirmsingledelete'] = 'Megerős&iacute;ted egy f&aacute;jl t&ouml;rl&eacute;s&eacute;t?';
 $lang['settingssaved'] = 'A be&aacute;ll&iacute;t&aacute;sokat mentett&uuml;k';
-$lang['help'] = '		<h3>Mit csin&aacute;l ez tulajdonk&eacute;ppen ?</h3>
-		<p>Ez a modul f&aacute;jlkezelő funkci&oacute;kkal l&aacute;t el, amely rem&eacute;lhetőleg lev&aacute;ltja majd az elavult, r&eacute;gi, be&eacute;p&iacute;tett modult</p>
-		<h3>Hogyan haszn&aacute;ljam??</h3>
+$lang['help'] = '		<h3>Mit csin&aacute;l ez tulajdonk&eacute;ppen ?</h3>
+
+		<p>Ez a modul f&aacute;jlkezelő funkci&oacute;kkal l&aacute;t el, amely rem&eacute;lhetőleg lev&aacute;ltja majd az elavult, r&eacute;gi, be&eacute;p&iacute;tett modult</p>
+
+		<h3>Hogyan haszn&aacute;ljam??</h3>
+
 		<p>V&aacute;laszd ki az admin oldalon a tartalom men&uuml;ben. Ha a r&eacute;gebbi f&aacute;jlkezelő m&eacute;g mindig a men&uuml;ben van, akkor a t&aacute;volabb l&eacute;vőt jel&ouml;ld ki.</p>';
 $lang['utma'] = '156861353.1540689137.1263375773.1264530718.1264963723.6';
 $lang['utmz'] = '156861353.1264530718.5.2.utmcsr=users.atw.hu|utmccn=(referral)|utmcmd=referral|utmcct=/lisolinux/admin/moduleinterface.php';

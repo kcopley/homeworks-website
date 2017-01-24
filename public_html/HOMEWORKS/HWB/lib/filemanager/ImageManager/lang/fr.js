@@ -1,4 +1,4 @@
-﻿// I18N constants // modif JCE  EDITEUR D'IMAGE     \lib\filemanager\ImageManager\lang
+// I18N constants // modif JCE  EDITEUR D'IMAGE     \lib\filemanager\ImageManager\lang
 //http://xinha.python-hosting.com/browser/branches/unified_backend/plugins/ImageManager/?rev=121
 
 

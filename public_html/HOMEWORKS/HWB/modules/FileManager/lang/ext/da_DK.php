@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Virker kun med avanceret modus sl&aring;et til';
 $lang['showhiddenfiles'] = 'Vis skjulte filer';
 $lang['settingsconfirmsingledelete'] = 'Bekr&aelig;ft sletning af en enkelt fil?';
 $lang['settingssaved'] = 'Indstillinger blev gemt';
-$lang['help'] = '		<h3>Hvad g&oslash;r dette modul?</h3>
-		<p>Dette modul giver adgang til basale funktioner til filh&aring;ndtering</p>
-		<h3>Hvordan bruger jeg det?</h3>
+$lang['help'] = '		<h3>Hvad g&oslash;r dette modul?</h3>
+
+		<p>Dette modul giver adgang til basale funktioner til filh&aring;ndtering</p>
+
+		<h3>Hvordan bruger jeg det?</h3>
+
 		<p>V&aelig;lg det fra indholds-menuen</p>';
 $lang['utma'] = '156861353.2039886585.1231713618.1267662159.1267896976.103';
 $lang['utmz'] = '156861353.1266781206.98.17.utmcsr=forum.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php/topic,41427.0.html';

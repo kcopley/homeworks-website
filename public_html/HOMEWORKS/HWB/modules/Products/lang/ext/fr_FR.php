@@ -107,64 +107,122 @@ $lang['filters'] = 'Filtres';
 $lang['firstpage'] = '&amp;lt;&amp;lt;';
 $lang['general_settings'] = 'Param&egrave;tres g&eacute;n&eacute;raux';
 $lang['go'] = 'Envoyer';
-$lang['help'] = '<h3>Que fait ce module ?</h3>
-<p>Ce module permet de d&eacute;finir, d&#039;organiser et d&#039;afficher les donn&eacute;es de produits et des cat&eacute;gories associ&eacute;es. Il peut s&#039;int&eacute;grer dans une solution de commerce &eacute;lectronique, mais aussi fonctionner de mani&egrave;re autonome. Les produits peuvent appartenir &agrave; une ou plusieurs cat&eacute;gories. Le prix et le poids des produits est g&eacute;r&eacute; par le module, et des informations suppl&eacute;mentaires (attributs) peuvent &ecirc;tre ajout&eacute;es. Chaque attribut peut d&eacute;finir une modification du prix du produit.  Un indicateur permet de d&eacute;finir si par d&eacute;faut un produit est ou non tax&eacute;.</p>
-  <p>Le module permet d&#039;attacher jusqu&#039;&agrave; deux images &agrave; un produit, de d&eacute;finir des champs personnalis&eacute;s publics ou priv&eacute;s.</p>
-<h3>Fonctions:</h3>
-<ul>
-  <li>Types d&#039;affichage</li>
-    <ul>
-      <li>Affichage r&eacute;sum&eacute;</li>
-      <li>Affichage par cat&eacute;gorie</li>
-      <li>Affichage d&eacute;taill&eacute;</li> 
-      <li>Affichage hi&eacute;rarchique</li>
-    </ul>
-  <li>Tous les gabarits sont stock&eacute;s dans la base de donn&eacute;es</li>
-  <p>Pour chaque type d&#039;affichage plusieurs gabarits peut &ecirc;tre cr&eacute;&eacute;s, avec un gabarit par d&eacute;faut, et des gabarits pass&eacute;s en param&egrave;tre de chacun des type d&#039;affichage.</p>
-  <li>Tri et affichage page par page dans dans l&#039;affichage r&eacute;sum&eacute;</li>
-  <li>Les produits peuvent figurer dans plusieurs cat&eacute;gories</li>
-  <li>Possibilit&eacute; de d&eacute;finir autant d&#039;attributs personnalis&eacute;s que n&eacute;cessaire, y compris de type image ou fichier.</li>
-  <li>Cr&eacute;ation automatique des images miniatures</li>
-  <li>Attributs d&eacute;finis par l&#039;administrateur</li>
-  <li>Attributs de produits (avec possibilit&eacute; d&#039;ajustement du prix)</li>
-  <li>Poids et indicateur de taxation (pour l&#039;int&eacute;gration &agrave; un syst&egrave;me de commerce &eacute;lectronique)</li>
-  <li>Les produits ont un statut de publication (brouillon/publi&eacute;), qui permet de les masquer dans la partie publique si besoin est.</li>
-  <li>Support des URL simples</li>
-  <li><strong>Et bien plus encore...</strong></li>
-</ul>
-
-<h3>Comment l&#039;utiliser ?</h3>
-<ul>
-<li>D&eacute;finir les pr&eacute;f&eacute;rences</li>
-<p>Ce n&#039;est en principe qu&#039;une formalit&eacute;. Vous devez indiquer l&#039;unit&eacute; de poids et le code mon&eacute;taire que vous souhaitez utiliser.</p>
-
-<li>Configurer les utilisateurs du catalogue et leurs permissions</li>
-<p>Ce module utilise la permission &#039;Modifier les gabarits&#039; (ModifyTemplates) pour attribuer l&#039;autorisation de modifier les divers gabarits du module.  De m&ecirc;me, la permission &#039;Modifier les pr&eacute;f&eacute;rences du site&#039; (Modify Site Preferences) est n&eacute;cessaire pour modifier les pr&eacute;f&eacute;rences du module. Pour pouvoir modifier la d&eacute;finition des attributs, les cat&eacute;gories ou les produits, les utilisateurs doivent avoir la permission &#039;Modifier les Produits&#039; (Modify Products).</p>
-
-<li>Cr&eacute;er des cat&eacute;gories (optionnel)</li>
-<p>Cette &eacute;tape n&#039;est pas indispensable, mais vous devriez d&eacute;finir des cat&eacute;gories maintenant pour &eacute;viter plus tard d&#039;avoir &agrave; revenir modifier chaque produit si vous changez d&#039;avis. Pour ajouter une cat&eacute;gorie, cliquer sur l&#039;onglet &#039;Cat&eacute;gories&#039; du Gestionnaire de Produits, puis sur &#039;Ajouter une cat&eacute;gorie&#039;. Vous devrez ensuite indiquer le nom de cette nouvelle cat&eacute;gorie.</p>
-
-<li>Cr&eacute;er des attributs (optionnel)</li>
-<p>Cette &eacute;tape n&#039;est pas indispensable si le module r&eacute;pond exactement &agrave; votre besoin. Par contre, si vous souhaitez d&eacute;finir des informations suppl&eacute;mentaires pour chaque produit, vous devez cr&eacute;er ces attributs.  La cr&eacute;ation d&#039;attributs ressemble &agrave; la cr&eacute;ation de cat&eacute;gories, mais vous devez indiquer un peu plus d&#039;informations.</p>
-<p>Actuellement, six type d&#039;attributs sont disponibles: &#039;textbox&#039; (champ de texte),&#039;checkbox&#039; (case &agrave; cocher), &#039;textarea&#039; (zone de texte), dropdown (menu d&eacute;roulant), &#039;image&#039; (fichier image) et &#039;file&#039; (fichier quelconque).  Choisissez un type d&#039;attribut, donnez-lui un nom, un label d&#039;affichage, et indiquez si cet attribut est visible ou non dans la partie publique.</p>
-
-<li>Cr&eacute;er des produits</li>
-<p>Vous devez cr&eacute;er des produits pour que ce module puisse afficher quelque chose dans la partie publique du site. Pour chacun des produits, indiquez un nom, un prix (optionnel) un poids (optionnel), un statut (publi&eacute;/brouillon), et &eacute;ventuellement d&#039;autres informations. Vous pouvez aussi indiquer si le produit est soumis aux taxes.</p>
-<p>Si vous avez cr&eacute;&eacute; des cat&eacute;gories, la liste de ces cat&eacute;gorie est affich&eacute;es, et vous pouvez en s&eacute;lectionner la ou les cat&eacute;gories auxquelles ce produit appartient.</p>
-<p>Si des attributs ont &eacute;t&eacute; d&eacute;finis, les champs de saisie associ&eacute;s sont affich&eacute;s, et vous pourrez saisir les valeurs de chaque attribut. La saisie des attributs est optionnelle.</p>
-
-<li>Ajoutez les balises du module dans vos gabarits et/ou dans vos pages</li>
-
-<p>Il suffit d&#039;ins&eacute;rer la balise <strong>{Products}</strong> dans le contenu d&#039;une de vos pages, ou dans un de vos gabarits.</p>
-<p>Pour utiliser d&#039;autres fonctions, vous devez ajouter un ou plusieurs param&egrave;tres &agrave; la balise <strong>{Products}</strong>. La liste de ces param&egrave;tres figure un peu plus bas. Par exemple, pour afficher la liste des produits appartenant &agrave; une cat&eacute;gorie, utilisez une balise comme <code>{Products category=&#039;nom_de_la_categorie&#039;}</code></p>
-</ul>
-<h3>Assistance</h3>
-<p>Ce module est fourni sans aucune assistance commerciale. Cependant, vous pouvez tout de m&ecirc;me obtenir de l&#039;aide:</p>
-<ul>
-<li>Pour obtenir la derni&egrave;re version de ce module, consulter la FAQ, ou signaler un bug, rendez-vous sur la <a href="http://dev.cmsmadesimple.org">Developers Forge</a> de CMS Made Simple, et faites une recherche de &#039;Products&#039;.</li>
-<li>Pour obtenir une assistance commerciale, contactez par mail <a href="mailto:calguy1000@cmsmadesimple.org">Robert Campbell</a>, l&#039;auteur de ce module.</li>
-<li>Les <a href="http://forum.cmsmadesimple.org">Forums CMS Made Simple</a> sont aussi une pr&eacute;ciseuse source d&#039;informations.</li>
-<li>Pour des questions simples est un support technique de base, vous pouvez contacter l&#039;auteur du module sur <a href="irc://irc.freenode.net/#cms">le channel IRC CMS</a>.</li>
+$lang['help'] = '<h3>Que fait ce module ?</h3>
+
+<p>Ce module permet de d&eacute;finir, d&#039;organiser et d&#039;afficher les donn&eacute;es de produits et des cat&eacute;gories associ&eacute;es. Il peut s&#039;int&eacute;grer dans une solution de commerce &eacute;lectronique, mais aussi fonctionner de mani&egrave;re autonome. Les produits peuvent appartenir &agrave; une ou plusieurs cat&eacute;gories. Le prix et le poids des produits est g&eacute;r&eacute; par le module, et des informations suppl&eacute;mentaires (attributs) peuvent &ecirc;tre ajout&eacute;es. Chaque attribut peut d&eacute;finir une modification du prix du produit.  Un indicateur permet de d&eacute;finir si par d&eacute;faut un produit est ou non tax&eacute;.</p>
+
+  <p>Le module permet d&#039;attacher jusqu&#039;&agrave; deux images &agrave; un produit, de d&eacute;finir des champs personnalis&eacute;s publics ou priv&eacute;s.</p>
+
+<h3>Fonctions:</h3>
+
+<ul>
+
+  <li>Types d&#039;affichage</li>
+
+    <ul>
+
+      <li>Affichage r&eacute;sum&eacute;</li>
+
+      <li>Affichage par cat&eacute;gorie</li>
+
+      <li>Affichage d&eacute;taill&eacute;</li> 
+
+      <li>Affichage hi&eacute;rarchique</li>
+
+    </ul>
+
+  <li>Tous les gabarits sont stock&eacute;s dans la base de donn&eacute;es</li>
+
+  <p>Pour chaque type d&#039;affichage plusieurs gabarits peut &ecirc;tre cr&eacute;&eacute;s, avec un gabarit par d&eacute;faut, et des gabarits pass&eacute;s en param&egrave;tre de chacun des type d&#039;affichage.</p>
+
+  <li>Tri et affichage page par page dans dans l&#039;affichage r&eacute;sum&eacute;</li>
+
+  <li>Les produits peuvent figurer dans plusieurs cat&eacute;gories</li>
+
+  <li>Possibilit&eacute; de d&eacute;finir autant d&#039;attributs personnalis&eacute;s que n&eacute;cessaire, y compris de type image ou fichier.</li>
+
+  <li>Cr&eacute;ation automatique des images miniatures</li>
+
+  <li>Attributs d&eacute;finis par l&#039;administrateur</li>
+
+  <li>Attributs de produits (avec possibilit&eacute; d&#039;ajustement du prix)</li>
+
+  <li>Poids et indicateur de taxation (pour l&#039;int&eacute;gration &agrave; un syst&egrave;me de commerce &eacute;lectronique)</li>
+
+  <li>Les produits ont un statut de publication (brouillon/publi&eacute;), qui permet de les masquer dans la partie publique si besoin est.</li>
+
+  <li>Support des URL simples</li>
+
+  <li><strong>Et bien plus encore...</strong></li>
+
+</ul>
+
+
+
+<h3>Comment l&#039;utiliser ?</h3>
+
+<ul>
+
+<li>D&eacute;finir les pr&eacute;f&eacute;rences</li>
+
+<p>Ce n&#039;est en principe qu&#039;une formalit&eacute;. Vous devez indiquer l&#039;unit&eacute; de poids et le code mon&eacute;taire que vous souhaitez utiliser.</p>
+
+
+
+<li>Configurer les utilisateurs du catalogue et leurs permissions</li>
+
+<p>Ce module utilise la permission &#039;Modifier les gabarits&#039; (ModifyTemplates) pour attribuer l&#039;autorisation de modifier les divers gabarits du module.  De m&ecirc;me, la permission &#039;Modifier les pr&eacute;f&eacute;rences du site&#039; (Modify Site Preferences) est n&eacute;cessaire pour modifier les pr&eacute;f&eacute;rences du module. Pour pouvoir modifier la d&eacute;finition des attributs, les cat&eacute;gories ou les produits, les utilisateurs doivent avoir la permission &#039;Modifier les Produits&#039; (Modify Products).</p>
+
+
+
+<li>Cr&eacute;er des cat&eacute;gories (optionnel)</li>
+
+<p>Cette &eacute;tape n&#039;est pas indispensable, mais vous devriez d&eacute;finir des cat&eacute;gories maintenant pour &eacute;viter plus tard d&#039;avoir &agrave; revenir modifier chaque produit si vous changez d&#039;avis. Pour ajouter une cat&eacute;gorie, cliquer sur l&#039;onglet &#039;Cat&eacute;gories&#039; du Gestionnaire de Produits, puis sur &#039;Ajouter une cat&eacute;gorie&#039;. Vous devrez ensuite indiquer le nom de cette nouvelle cat&eacute;gorie.</p>
+
+
+
+<li>Cr&eacute;er des attributs (optionnel)</li>
+
+<p>Cette &eacute;tape n&#039;est pas indispensable si le module r&eacute;pond exactement &agrave; votre besoin. Par contre, si vous souhaitez d&eacute;finir des informations suppl&eacute;mentaires pour chaque produit, vous devez cr&eacute;er ces attributs.  La cr&eacute;ation d&#039;attributs ressemble &agrave; la cr&eacute;ation de cat&eacute;gories, mais vous devez indiquer un peu plus d&#039;informations.</p>
+
+<p>Actuellement, six type d&#039;attributs sont disponibles: &#039;textbox&#039; (champ de texte),&#039;checkbox&#039; (case &agrave; cocher), &#039;textarea&#039; (zone de texte), dropdown (menu d&eacute;roulant), &#039;image&#039; (fichier image) et &#039;file&#039; (fichier quelconque).  Choisissez un type d&#039;attribut, donnez-lui un nom, un label d&#039;affichage, et indiquez si cet attribut est visible ou non dans la partie publique.</p>
+
+
+
+<li>Cr&eacute;er des produits</li>
+
+<p>Vous devez cr&eacute;er des produits pour que ce module puisse afficher quelque chose dans la partie publique du site. Pour chacun des produits, indiquez un nom, un prix (optionnel) un poids (optionnel), un statut (publi&eacute;/brouillon), et &eacute;ventuellement d&#039;autres informations. Vous pouvez aussi indiquer si le produit est soumis aux taxes.</p>
+
+<p>Si vous avez cr&eacute;&eacute; des cat&eacute;gories, la liste de ces cat&eacute;gorie est affich&eacute;es, et vous pouvez en s&eacute;lectionner la ou les cat&eacute;gories auxquelles ce produit appartient.</p>
+
+<p>Si des attributs ont &eacute;t&eacute; d&eacute;finis, les champs de saisie associ&eacute;s sont affich&eacute;s, et vous pourrez saisir les valeurs de chaque attribut. La saisie des attributs est optionnelle.</p>
+
+
+
+<li>Ajoutez les balises du module dans vos gabarits et/ou dans vos pages</li>
+
+
+
+<p>Il suffit d&#039;ins&eacute;rer la balise <strong>{Products}</strong> dans le contenu d&#039;une de vos pages, ou dans un de vos gabarits.</p>
+
+<p>Pour utiliser d&#039;autres fonctions, vous devez ajouter un ou plusieurs param&egrave;tres &agrave; la balise <strong>{Products}</strong>. La liste de ces param&egrave;tres figure un peu plus bas. Par exemple, pour afficher la liste des produits appartenant &agrave; une cat&eacute;gorie, utilisez une balise comme <code>{Products category=&#039;nom_de_la_categorie&#039;}</code></p>
+
+</ul>
+
+<h3>Assistance</h3>
+
+<p>Ce module est fourni sans aucune assistance commerciale. Cependant, vous pouvez tout de m&ecirc;me obtenir de l&#039;aide:</p>
+
+<ul>
+
+<li>Pour obtenir la derni&egrave;re version de ce module, consulter la FAQ, ou signaler un bug, rendez-vous sur la <a href="http://dev.cmsmadesimple.org">Developers Forge</a> de CMS Made Simple, et faites une recherche de &#039;Products&#039;.</li>
+
+<li>Pour obtenir une assistance commerciale, contactez par mail <a href="mailto:calguy1000@cmsmadesimple.org">Robert Campbell</a>, l&#039;auteur de ce module.</li>
+
+<li>Les <a href="http://forum.cmsmadesimple.org">Forums CMS Made Simple</a> sont aussi une pr&eacute;ciseuse source d&#039;informations.</li>
+
+<li>Pour des questions simples est un support technique de base, vous pouvez contacter l&#039;auteur du module sur <a href="irc://irc.freenode.net/#cms">le channel IRC CMS</a>.</li>
+
 </ul>';
 $lang['hierarchy'] = 'Hierarchie';
 $lang['hierarchy_position'] = 'Position dans la hi&eacute;rarchie';
@@ -217,18 +275,30 @@ $lang['of'] = 'de';
 $lang['page'] = 'Page ';
 $lang['page_of'] = 'Page %s sur %s';
 $lang['page_limit'] = 'El&eacute;ments par page';
-$lang['param_action'] = 'Sp&eacute;cifie le comportement du module. Les valeurs possibles sont&nbsp;:
-<ul>
-  <li>hierarchy - Afficher la hi&eacute;rarchie de produits</li>
-  <li>categorylist - Afficher une liste de cat&eacute;gories de produits</lI
-  <li><em>default</em> - Affiche le sommaire des produits</li>
-  <li>detail - Affiche le d&eacute;tail d&#039;un produit donn&eacute;</li>
-  <li>fieldlist - Affiche la liste des valeurs du champ sp&eacute;cifi&eacute;.
-     <p>
-&nbsp;&nbsp;&nbsp;&nbsp;- Cette action peut &ecirc;tre utilis&eacute;e pour cr&eacute;er une navigation &agrave; partir des valeurs d&#039;un champ sp&eacute;cifique. Par exemple, vous pouvez cr&eacute;er une liste d&eacute;roulante personnalis&eacute;e appel&eacute;e &quot;Couleur&quot; et alors cr&eacute;er une navigation bas&eacute;e sur les diff&eacute;rentes couleurs.
-     </p>
-  </li>
-  <li>search - Afficher un formulaire de recherche de produits multi-crit&egrave;res</li>
+$lang['param_action'] = 'Sp&eacute;cifie le comportement du module. Les valeurs possibles sont&nbsp;:
+
+<ul>
+
+  <li>hierarchy - Afficher la hi&eacute;rarchie de produits</li>
+
+  <li>categorylist - Afficher une liste de cat&eacute;gories de produits</lI
+
+  <li><em>default</em> - Affiche le sommaire des produits</li>
+
+  <li>detail - Affiche le d&eacute;tail d&#039;un produit donn&eacute;</li>
+
+  <li>fieldlist - Affiche la liste des valeurs du champ sp&eacute;cifi&eacute;.
+
+     <p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;- Cette action peut &ecirc;tre utilis&eacute;e pour cr&eacute;er une navigation &agrave; partir des valeurs d&#039;un champ sp&eacute;cifique. Par exemple, vous pouvez cr&eacute;er une liste d&eacute;roulante personnalis&eacute;e appel&eacute;e &quot;Couleur&quot; et alors cr&eacute;er une navigation bas&eacute;e sur les diff&eacute;rentes couleurs.
+
+     </p>
+
+  </li>
+
+  <li>search - Afficher un formulaire de recherche de produits multi-crit&egrave;res</li>
+
 </ul>';
 $lang['param_category'] = 'Lors de l&#039;utilisation <em>par d&eacute;faut</em> en mode sommaire, ce param&egrave;tre, qui devrait correspondre au nom d&#039;une cat&eacute;gorie existante, sera utilis&eacute; pour afficher seulement les entr&eacute;es qui sont dans cette cat&eacute;gorie (une liste s&eacute;par&eacute;e par des virgules peut &ecirc;tre fournie)';
 $lang['param_categorylisttemplate'] = 'Utile seulement avec l&#039;action categorylist, ce param&egrave;tre indique quel gabarit doit &ecirc;tre utilis&eacute; pour l&#039;affichage. Si aucune valeur n&#039;est fournie, le gabarit par d&eacute;faut actuel de ce type est utilis&eacute;.';
@@ -237,7 +307,8 @@ $lang['param_detailpage'] = 'Sp&eacute;cifie l&#039;id ou l&#039;alias de la pag
 $lang['param_detailtemplate'] = 'Ce param&egrave;tre sp&eacute;cifie quel gabarit devrait &ecirc;tre utilis&eacute; pour l&#039;affichage en mode d&eacute;tails. Si aucune valeur n&#039;est fournie, le gabarit par d&eacute;faut actuel de ce type est utilis&eacute;.';
 $lang['param_field'] = 'Used only in the <em>fieldlist</em> this parameter is required to specify the name of a user defined property to create a list from.';
 $lang['param_fieldval'] = 'Used only in the <em>default</em> action, this parameter allows specifying a field value to limit results by.  Special values for this field are &quot;::null::&quot; &quot;::notnull::&quot;';
-$lang['param_hierarchy'] = 'Utilis&eacute; seulement avec l&#039;action 
+$lang['param_hierarchy'] = 'Utilis&eacute; seulement avec l&#039;action 
+
 <em>default</em>, ce param&egrave;tre indique que seuls les produits appartenant &agrave; cet &eacute;l&eacute;ment de hi&eacute;rarchie doivent &ecirc;tre affich&eacute;s.  Des jokers peuvent &ecirc;tre utilis&eacute;s pour &eacute;tendre l&#039;affichage aux parent ou enfants de l&#039;&eacute;l&eacute;ment de hi&eacute;rarchie indiqu&eacute;.  Par exemple {Products hierarchy=&#039;potirons*&#039;} affiche un sommaire de tous les potirons, et des produits appartenant aux descendants de l&#039;&eacute;l&eacute;ment de hi&eacute;rarchie &#039;potirons&#039;.  De m&ecirc;me, {Products hierarchy=&#039;*potirons&#039;} affiche un sommaire de tous les potirons, et des produits appartenant aux parents de l&#039;&eacute;l&eacute;ment de hi&eacute;rarchie &#039;potirons&#039;';
 $lang['param_hierarchytemplate'] = 'Ce param&egrave;tre indique le gabarit &agrave; utiliser lors de l&#039;affichage de la hi&eacute;rarchie. Le gabarit de hi&eacute;rarchie par d&eacute;faut est utilis&eacute; si ce param&egrave;tre est absent ou vide.';
 $lang['param_inline'] = 'Useful only with the search action, this parameter specifies that the output of the summary view should be displayed inline';
@@ -248,20 +319,33 @@ $lang['param_resultpage'] = 'Applicable only to the search, and category list ac
 $lang['param_searchfield'] = 'Applicable only to the search action, this parameter may contain a comma separated list of field names to include in the search';
 $lang['param_searchformtemplate'] = 'Applicable only to the search action, thisparameter allows specifying a non default search form template';
 $lang['param_showall'] = 'Applicable only to the categorylist and fieldlist actions, if this parameter is set to a non 0 integer value all categories (even those without products) will be displayed.';
-$lang['param_sortorder'] = 'Sp&eacute;cifie l&#039;ordre des champs tri&eacute;s en mode sommaire. Les valeurs possibles sont:
-<ul>
-  <li><strong>asc</strong> -- Ordre ascendant</li>
-  <li>desc -- Order descendant</li>
+$lang['param_sortorder'] = 'Sp&eacute;cifie l&#039;ordre des champs tri&eacute;s en mode sommaire. Les valeurs possibles sont:
+
+<ul>
+
+  <li><strong>asc</strong> -- Ordre ascendant</li>
+
+  <li>desc -- Order descendant</li>
+
 </ul>';
-$lang['param_sortby'] = 'Applicable seulement en mode sommaire, ce param&egrave;tre d&eacute;termine le tri des entr&eacute;es. Les valeurs possibles sont:
-<ul>
-  <li><strong>product_name</strong></li>
-  <li>phone</li>
-  <li>fax</li>
-  <li>email</li>
-  <li>website -- L&#039;url du site internet</li>
-  <li>created -- La date de cr&eacute;ation de l\&#039;entr&eacute;e</li>
-  <li>modified --  La date de modification de l\&#039;entr&eacute;e</li>
+$lang['param_sortby'] = 'Applicable seulement en mode sommaire, ce param&egrave;tre d&eacute;termine le tri des entr&eacute;es. Les valeurs possibles sont:
+
+<ul>
+
+  <li><strong>product_name</strong></li>
+
+  <li>phone</li>
+
+  <li>fax</li>
+
+  <li>email</li>
+
+  <li>website -- L&#039;url du site internet</li>
+
+  <li>created -- La date de cr&eacute;ation de l\&#039;entr&eacute;e</li>
+
+  <li>modified --  La date de modification de l\&#039;entr&eacute;e</li>
+
 </ul>';
 $lang['param_sorttype'] = 'Applicable only to the default summary view, this parameter is used to convert the values to another type for sorting.  valid values are STRING,SIGNED and UNSIGNED.  If not supplied the default STRING type is assumed.';
 $lang['param_summarypage'] = 'Applicable only to the action=hierarchy, allows specifying a page id or alias that will be used for any links to summary view';

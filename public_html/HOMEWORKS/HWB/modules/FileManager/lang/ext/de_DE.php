@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Ist nur bei Aktivierung des erweiterten Modus si
 $lang['showhiddenfiles'] = 'Verborgene Dateien anzeigen';
 $lang['settingsconfirmsingledelete'] = 'Das L&ouml;schen einzelner Datei best&auml;tigen?';
 $lang['settingssaved'] = 'Einstellungen gespeichert';
-$lang['help'] = '		<h3>Was macht das Modul?</h3>
-		<p>Dieses Modul bietet verschiedene Funktionen zur Dateiverwaltung.</p>
-		<h3>Wie wird es eingesetzt?</h3>
+$lang['help'] = '		<h3>Was macht das Modul?</h3>
+
+		<p>Dieses Modul bietet verschiedene Funktionen zur Dateiverwaltung.</p>
+
+		<h3>Wie wird es eingesetzt?</h3>
+
 		<p>W&auml;hlen Sie das Modul in der Administration im Men&uuml; &quot;Inhalte&quot; aus.</p>';
 $lang['qca'] = 'P0-180715755-1255429031955';
 $lang['utma'] = '156861353.631674314.1255431066.1255431066.1255431066.1';

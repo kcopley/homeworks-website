@@ -44,49 +44,87 @@ $lang['eventdesc-SearchCompleted'] = 'Skickas n&auml;r en s&ouml;kning &auml;r a
 $lang['eventdesc-SearchItemAdded'] = 'Skickas n&auml;r en ny post indexeras.';
 $lang['eventdesc-SearchItemDeleted'] = 'Skickas n&auml;r en ny post tas bort fr&aring;n indexet.';
 $lang['eventdesc-SearchAllItemsDeleted'] = 'Skickas n&auml;r alla poster tas bort fr&aring;n indexet.';
-$lang['eventhelp-SearchInitiated'] = '<p>Skickas n&auml;r en s&ouml;kning p&aring;b&ouml;rjas.</p>
-<h4>Parametrar</h4>
-<ol>
-<li>Text som s&ouml;ktes efter.</li>
-</ol>
+$lang['eventhelp-SearchInitiated'] = '<p>Skickas n&auml;r en s&ouml;kning p&aring;b&ouml;rjas.</p>
+
+<h4>Parametrar</h4>
+
+<ol>
+
+<li>Text som s&ouml;ktes efter.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchCompleted'] = '<p>Skickas n&auml;r en s&ouml;kning &auml;r avslutad.</p>
-<h4>Parametrar</h4>
-<ol>
-<li>Text som s&ouml;ktes efter.</li>
-<li>Array med de f&auml;rdiga resultaten av s&ouml;kningen.</li>
-</ol>
+$lang['eventhelp-SearchCompleted'] = '<p>Skickas n&auml;r en s&ouml;kning &auml;r avslutad.</p>
+
+<h4>Parametrar</h4>
+
+<ol>
+
+<li>Text som s&ouml;ktes efter.</li>
+
+<li>Array med de f&auml;rdiga resultaten av s&ouml;kningen.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemAdded'] = '<p>Skickas n&auml;r en ny post indexeras.</p>
-<h4>Parametrar</h4>
-<ol>
-<li>Modulnamn.</li>
-<li>Pstens ID.</li>
-<li>&Ouml;vriga attribut.</li>
-<li>Inneh&aring;ll att indexera och l&auml;gga till.</li>
-</ol>
+$lang['eventhelp-SearchItemAdded'] = '<p>Skickas n&auml;r en ny post indexeras.</p>
+
+<h4>Parametrar</h4>
+
+<ol>
+
+<li>Modulnamn.</li>
+
+<li>Pstens ID.</li>
+
+<li>&Ouml;vriga attribut.</li>
+
+<li>Inneh&aring;ll att indexera och l&auml;gga till.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemDeleted'] = '<p>Skickas n&auml;r en ny post tas bort fr&aring;n indexet.</p>
-<h4>Parametrar</h4>
-<ol>
-<li>Modulnamn.</li>
-<li>Postens ID.</li>
-<li>&Ouml;vriga attribut.</li>
-</ol>
+$lang['eventhelp-SearchItemDeleted'] = '<p>Skickas n&auml;r en ny post tas bort fr&aring;n indexet.</p>
+
+<h4>Parametrar</h4>
+
+<ol>
+
+<li>Modulnamn.</li>
+
+<li>Postens ID.</li>
+
+<li>&Ouml;vriga attribut.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Skickas n&auml;r en s&ouml;kning p&aring;b&ouml;rjas.</p>
-<h4>Parametrar</h4>
-<ul>
-<li>Inga</li>
-</ul>
+$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Skickas n&auml;r en s&ouml;kning p&aring;b&ouml;rjas.</p>
+
+<h4>Parametrar</h4>
+
+<ul>
+
+<li>Inga</li>
+
+</ul>
+
 ';
-$lang['help'] = '<h3>Vad g&ouml;r den h&auml;r modulen?</h3>
-<p>S&ouml;k &auml;r en modul f&ouml;r att s&ouml;ka inneh&aring;ll p&aring; sidor, samt vissa registrerade moduler. Du skriver in ett ord eller tv&aring; och du f&aring;r upp matchande, relevanta resultat.</p>
-<h3>Hur anv&auml;nder jag den?</h3>
-<p>Det enklaste s&auml;ttet att anv&auml;nda modulen &auml;r med &quot;omslagstaggen&quot; {search} (omger modulen i en tagg, f&ouml;r att g&ouml;ra syntaxet enklare). Denna tagg l&auml;gger till din modul i mallen eller p&aring; sidan, d&auml;r du vill, och visar s&ouml;kformul&auml;ret. Koden kan t.ex. se ut s&aring; h&auml;r: <code>{search}</code></p>
-<h4>Hur f&ouml;rhindrar jag visst inneh&aring;ll fr&aring;n att indexeras?</h4>
-<p>S&ouml;kmodulen s&ouml;ker inte n&aring;gra &quot;inaktiva&quot; sidor. Men ibland, om du anv&auml;nder modulen CustomContent, eller annan smarty-logik f&ouml;r att visa olika inneh&aring;ll f&ouml;r olika grupper av anv&auml;ndare, rekommenderas att f&ouml;rhindra hela sidan fr&aring;n att indexeras &auml;ven n&auml;r den &auml;r aktiv. F&ouml;r att g&ouml;ra detta, l&auml;gg till f&ouml;ljande tagg var som helst p&aring; sidan: <em><!-- pageAttribute: NotSearchable --></em>. N&auml;r s&ouml;kmodulen ser den taggen p&aring; sidan kommer den inte att indexera n&aring;got inneh&aring;ll f&ouml;r den sidan.</p>
-<p>Taggen <em><!-- pageAttribute: NotSearchable --></em> kan &auml;ven anv&auml;ndas i mallen. I s&aring; fall kommer inga sidor som anv&auml;nder den mallen att indexeras. De sidorna omindexeras om taggen tas bort.</p>
+$lang['help'] = '<h3>Vad g&ouml;r den h&auml;r modulen?</h3>
+
+<p>S&ouml;k &auml;r en modul f&ouml;r att s&ouml;ka inneh&aring;ll p&aring; sidor, samt vissa registrerade moduler. Du skriver in ett ord eller tv&aring; och du f&aring;r upp matchande, relevanta resultat.</p>
+
+<h3>Hur anv&auml;nder jag den?</h3>
+
+<p>Det enklaste s&auml;ttet att anv&auml;nda modulen &auml;r med &quot;omslagstaggen&quot; {search} (omger modulen i en tagg, f&ouml;r att g&ouml;ra syntaxet enklare). Denna tagg l&auml;gger till din modul i mallen eller p&aring; sidan, d&auml;r du vill, och visar s&ouml;kformul&auml;ret. Koden kan t.ex. se ut s&aring; h&auml;r: <code>{search}</code></p>
+
+<h4>Hur f&ouml;rhindrar jag visst inneh&aring;ll fr&aring;n att indexeras?</h4>
+
+<p>S&ouml;kmodulen s&ouml;ker inte n&aring;gra &quot;inaktiva&quot; sidor. Men ibland, om du anv&auml;nder modulen CustomContent, eller annan smarty-logik f&ouml;r att visa olika inneh&aring;ll f&ouml;r olika grupper av anv&auml;ndare, rekommenderas att f&ouml;rhindra hela sidan fr&aring;n att indexeras &auml;ven n&auml;r den &auml;r aktiv. F&ouml;r att g&ouml;ra detta, l&auml;gg till f&ouml;ljande tagg var som helst p&aring; sidan: <em><!-- pageAttribute: NotSearchable --></em>. N&auml;r s&ouml;kmodulen ser den taggen p&aring; sidan kommer den inte att indexera n&aring;got inneh&aring;ll f&ouml;r den sidan.</p>
+
+<p>Taggen <em><!-- pageAttribute: NotSearchable --></em> kan &auml;ven anv&auml;ndas i mallen. I s&aring; fall kommer inga sidor som anv&auml;nder den mallen att indexeras. De sidorna omindexeras om taggen tas bort.</p>
+
 ';
 $lang['utma'] = '156861353.397033920.1281357884.1286814578.1286820501.35';
 $lang['utmz'] = '156861353.1281357884.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)';

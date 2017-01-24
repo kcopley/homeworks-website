@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'S&oacute;lo efectivo con el modo avanzado habili
 $lang['showhiddenfiles'] = 'Mostrar archivos escondidos';
 $lang['settingsconfirmsingledelete'] = '&iquest;Confirmar la eliminaci&oacute;n de un archivo?';
 $lang['settingssaved'] = 'Configuraci&oacute;n guardada';
-$lang['help'] = '		<h3>&iquest;Qu&eacute; hace esto?</h3>
-		<p>Este m&oacute;dulo provee funciones de manejo de archivos, eventualmente y con expectativas de reemplazar al ya viejo sistema de manejo de archivos</p>
-		<h3>&iquest;C&oacute;mo se usa?</h3>
+$lang['help'] = '		<h3>&iquest;Qu&eacute; hace esto?</h3>
+
+		<p>Este m&oacute;dulo provee funciones de manejo de archivos, eventualmente y con expectativas de reemplazar al ya viejo sistema de manejo de archivos</p>
+
+		<h3>&iquest;C&oacute;mo se usa?</h3>
+
 		<p>Seleccione al mismo en el men&uacute; de contenido del &aacute;rea de administraci&oacute;n. Seguramente el viejo sistema de archivos est&aacute; a&uacute;n all&iacute;, elija el que est&aacute; m&aacute;s abajo dentro del men&uacute;.</p>';
 $lang['utma'] = '156861353.1791238199.1256157318.1256620466.1256855476.6';
 $lang['utmz'] = '156861353.1256620490.5.5.utmccn=(organic)|utmcsr=google|utmctr=cms made simple pretty urls|utmcmd=organic';

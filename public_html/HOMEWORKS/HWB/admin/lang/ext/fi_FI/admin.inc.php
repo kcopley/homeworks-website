@@ -1,15 +1,26 @@
 <?php
-$lang['admin']['help_function_browser_lang'] = '<h3>What does this do?</h3>
-  <p>This plugin detects and outputs the language that the users browser accepts, and cross references it with a list of allowed languages to determine a language value for the session.</p>
-<h3>How do I use it?</h3>
-<p>Insert the tag early into your page template <em>(it can go above the <head> section if you want)</em> and provide it the name of the default language, and the accepted languages (only two character language names are accepted), then do something with the result.  i.e:</p>
-<pre><code>{browser_lang accept=de,fr,en,es default=en assign=tmp}{session_put var=lang val=$tmp}</code></pre>
-<p><em>({session_put} is a plugin provided by the CGSimpleSmarty module)</em></p>
-<h3>What Parameters does it Take?</h3>
-<ul>
-<li><strong>accepted <em>(required)</em></strong><br/> - A comma separated list of two character language names that are accepted.</li>
-<li>default<br/>- <em>(optional)</em> A default language to output if no accepted language was supported by the browser.  en is used if no other value is specified.</li>
-<li>assign<br/>- <em>(optional)</em> The name of the smarty variable to assign the results to.  If not specified the results of this function are returned.</li>
+$lang['admin']['help_function_browser_lang'] = '<h3>What does this do?</h3>
+
+  <p>This plugin detects and outputs the language that the users browser accepts, and cross references it with a list of allowed languages to determine a language value for the session.</p>
+
+<h3>How do I use it?</h3>
+
+<p>Insert the tag early into your page template <em>(it can go above the <head> section if you want)</em> and provide it the name of the default language, and the accepted languages (only two character language names are accepted), then do something with the result.  i.e:</p>
+
+<pre><code>{browser_lang accept=de,fr,en,es default=en assign=tmp}{session_put var=lang val=$tmp}</code></pre>
+
+<p><em>({session_put} is a plugin provided by the CGSimpleSmarty module)</em></p>
+
+<h3>What Parameters does it Take?</h3>
+
+<ul>
+
+<li><strong>accepted <em>(required)</em></strong><br/> - A comma separated list of two character language names that are accepted.</li>
+
+<li>default<br/>- <em>(optional)</em> A default language to output if no accepted language was supported by the browser.  en is used if no other value is specified.</li>
+
+<li>assign<br/>- <em>(optional)</em> The name of the smarty variable to assign the results to.  If not specified the results of this function are returned.</li>
+
 </ul>';
 $lang['admin']['info_target'] = 'T&auml;m&auml;n asetuksen avulla valikkojen hallinnassa voidaan m&auml;&auml;ritell&auml; milloin ja miten avataan uusia ikkunoita. Osa valikkojen hallinnan sivupohjista voivat j&auml;tt&auml;&auml; t&auml;m&auml;n asetuksen huomioimatta.';
 $lang['admin']['close'] = 'Sulje';
@@ -60,38 +71,67 @@ $lang['admin']['stylesheetcopied'] = 'Tyylitiedosto kopioitu';
 $lang['admin']['templatecopied'] = 'Sivupohja kopioitu';
 $lang['admin']['ecommerce_desc'] = 'Verkkokauppatoimintoja tarjoavat moduulit';
 $lang['admin']['ecommerce'] = 'Verkkokauppa';
-$lang['admin']['help_function_content_module'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
-<p>T&auml;m&auml; sis&auml;lt&ouml;lohko sallii muiden moduulien toimintaan vaikuttamisen, jolloin voidaan luoda erilaisia sis&auml;lt&ouml;lohkotyyppej&auml;.</p>
-<p>Jotkin moduulit voivat m&auml;&auml;ritell&auml; sis&auml;lt&ouml;lohkotyyppej&auml;, joita k&auml;ytet&auml;&auml;n moduulin sivupohjissa. Esimerkiksi: FrontEndUsers-moduuli voi m&auml;&auml;ritell&auml; ryhm&auml;lista-sis&auml;lt&ouml;lohkotyypin. Se voi sen j&auml;lkeen n&auml;ytt&auml;&auml;, kuinka voit k&auml;ytt&auml;&auml; content_module tagia sivupohjissasi.</p>
+$lang['admin']['help_function_content_module'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
+
+<p>T&auml;m&auml; sis&auml;lt&ouml;lohko sallii muiden moduulien toimintaan vaikuttamisen, jolloin voidaan luoda erilaisia sis&auml;lt&ouml;lohkotyyppej&auml;.</p>
+
+<p>Jotkin moduulit voivat m&auml;&auml;ritell&auml; sis&auml;lt&ouml;lohkotyyppej&auml;, joita k&auml;ytet&auml;&auml;n moduulin sivupohjissa. Esimerkiksi: FrontEndUsers-moduuli voi m&auml;&auml;ritell&auml; ryhm&auml;lista-sis&auml;lt&ouml;lohkotyypin. Se voi sen j&auml;lkeen n&auml;ytt&auml;&auml;, kuinka voit k&auml;ytt&auml;&auml; content_module tagia sivupohjissasi.</p>
+
 <p><strong>Huomaa:</strong> T&auml;t&auml; lohkotyyppi&auml; t&auml;ytyy k&auml;ytt&auml;&auml; yhteensopivien moduulien kanssa. &Auml;l&auml; k&auml;yt&auml; t&auml;t&auml; muutoin kuin moduulin ohjeiden mukaisesti.</p>';
 $lang['admin']['error_parsing_content_blocks'] = 'Sis&auml;lt&ouml;lohkon j&auml;sent&auml;misess&auml; tapahtui virhe (ehk&auml; lohkon nimi esiintyy useammin kuin kerran)';
 $lang['admin']['error_no_default_content_block'] = 'Sivupohjasta ei l&ouml;ytynyt oletus sis&auml;lt&ouml;lohkoa. Tarkista, ett&auml; sivupohjasta l&ouml;ytyy {content} tagi.';
-$lang['admin']['help_function_cms_stylesheet'] = '	<h3>What does this do?</h3>
-  <p>A replacement for the {stylesheet} tag, this tag provides caching of css files by generating static files in the tmp/cache directory, and smarty processing of the individual stylesheets.</p>
-  <p>This plugin retrieves stylesheet information from the system.  By default, it grabs all of the stylesheets attached to the current template in the order specified by the designer, and generates stylesheet tags.</p>
-  <p>Generated stylesheets are uniquely named according to the last modification date in the database, and are only generated if the stylesheet has changed.</p>
-  <p>This tag is the replacement for the {stylesheet} tag.</p>
-  <h3>How do I use it?</h3>
-  <p>Just insert the tag into your template/page&#039;s head section like: <code>{cms_stylesheet}</code></p>
-  <h3>What parameters does it take?</h3>
-  <ul>
-  <li><em>(optional)</em>name - Instead of getting all stylesheets for the given page, it will only get one specifically named one, whether it&#039;s attached to the current template or not.</li>
-  <li><em>(optional)</em>templateid - If templateid is defined, this will return stylesheets associated with that template instead of the current one.</li>
-  <li><em>(optional)</em>media - When used in conjunction with the name parameter this parameter will allow you to override the media type for that stylesheet.  When used in conjunction with the templateid parameter, the media parameter will only output stylesheet tags for those stylesheets that arer marked as compatible with the specified media type.</li>
-  </ul>
-  <h3>Smarty Processing</h3>
-  <p>When generating css files this system passes the stylesheets retrieved from the database through smarty.  The smarty delimiters have been changed from the CMSMS standard { and } to [[ and ]] respectively to ease transition in stylesheets.  This allows creating smarty variables i.e.: [[assign var=&#039;red&#039; value=&#039;#900&#039;]] at the top of the stylesheet, and then using these variables later in the stylesheet, i.e:</p>
-<pre>
-<code>
-h3 .error { color: [[$red]]; }<br/>
-</code>
-</pre>
-<p>Because the cached files are generated in the tmp/cache directory of the CMSMS installation, the CSS relative working directory is not the root of the website.  Therefore any images, or other tags that require a url should use the [[root_url]] tag to force it to be an absolute url. i.e:</p>
-<pre>
-<code>
-h3 .error { background: url([[root_url]]/uploads/images/error_background.gif); }<br/>
-</code>
-</pre>
+$lang['admin']['help_function_cms_stylesheet'] = '	<h3>What does this do?</h3>
+
+  <p>A replacement for the {stylesheet} tag, this tag provides caching of css files by generating static files in the tmp/cache directory, and smarty processing of the individual stylesheets.</p>
+
+  <p>This plugin retrieves stylesheet information from the system.  By default, it grabs all of the stylesheets attached to the current template in the order specified by the designer, and generates stylesheet tags.</p>
+
+  <p>Generated stylesheets are uniquely named according to the last modification date in the database, and are only generated if the stylesheet has changed.</p>
+
+  <p>This tag is the replacement for the {stylesheet} tag.</p>
+
+  <h3>How do I use it?</h3>
+
+  <p>Just insert the tag into your template/page&#039;s head section like: <code>{cms_stylesheet}</code></p>
+
+  <h3>What parameters does it take?</h3>
+
+  <ul>
+
+  <li><em>(optional)</em>name - Instead of getting all stylesheets for the given page, it will only get one specifically named one, whether it&#039;s attached to the current template or not.</li>
+
+  <li><em>(optional)</em>templateid - If templateid is defined, this will return stylesheets associated with that template instead of the current one.</li>
+
+  <li><em>(optional)</em>media - When used in conjunction with the name parameter this parameter will allow you to override the media type for that stylesheet.  When used in conjunction with the templateid parameter, the media parameter will only output stylesheet tags for those stylesheets that arer marked as compatible with the specified media type.</li>
+
+  </ul>
+
+  <h3>Smarty Processing</h3>
+
+  <p>When generating css files this system passes the stylesheets retrieved from the database through smarty.  The smarty delimiters have been changed from the CMSMS standard { and } to [[ and ]] respectively to ease transition in stylesheets.  This allows creating smarty variables i.e.: [[assign var=&#039;red&#039; value=&#039;#900&#039;]] at the top of the stylesheet, and then using these variables later in the stylesheet, i.e:</p>
+
+<pre>
+
+<code>
+
+h3 .error { color: [[$red]]; }<br/>
+
+</code>
+
+</pre>
+
+<p>Because the cached files are generated in the tmp/cache directory of the CMSMS installation, the CSS relative working directory is not the root of the website.  Therefore any images, or other tags that require a url should use the [[root_url]] tag to force it to be an absolute url. i.e:</p>
+
+<pre>
+
+<code>
+
+h3 .error { background: url([[root_url]]/uploads/images/error_background.gif); }<br/>
+
+</code>
+
+</pre>
+
 <p><strong>Note:</strong> Due to the caching nature of the plugin, smarty variables should be placed at the top of EACH stylesheet that is attached to a template.</p>';
 $lang['admin']['pseudocron_granularity'] = 'Pseudocron Granularity';
 $lang['admin']['info_pseudocron_granularity'] = 'T&auml;m&auml; asetus m&auml;&auml;rittelee kuinka usein j&auml;rjestelm&auml; yritt&auml;&auml; k&auml;sitell&auml; toistuvia ajastettuja toimenpiteit&auml;.';
@@ -138,80 +178,138 @@ $lang['admin']['bulk_success'] = 'Perusoperaatio p&auml;ivitettiin onnistuneesti
 $lang['admin']['no_bulk_performed'] = 'Perusoperaatiota ei suoritettu.';
 $lang['admin']['info_preview_notice'] = 'Varoitus: T&auml;m&auml; esikatselupaneeli toimii hyvin samankaltaisesti kuin selainikkuna, joten voit my&ouml;s siirty&auml; pois sivulta, jota aluksi esikatselit. T&auml;m&auml; voi aiheuttaa odottamattomia tapahtumia. Jos siirryt pois alkuper&auml;isest&auml; n&auml;kym&auml;st&auml; ja palaat, voi olla ettet n&auml;e tallentamattomia muutoksia ennen kuin teet muutoksen sis&auml;lt&ouml;&ouml;n p&auml;&auml;v&auml;lilehdess&auml; ja lataat t&auml;m&auml;n v&auml;lilehden uudelleen. Kun lis&auml;&auml;t sis&auml;lt&ouml;&auml;, jos siirryt pois t&auml;lt&auml; sivulta, et voi en&auml;&auml; palata takaisin ja sinun t&auml;ytyy ladata t&auml;m&auml; paneeli uudelleen.';
 $lang['admin']['sitedownexcludes'] = 'J&auml;t&auml; n&auml;m&auml; osoitteet pois huoltokatkosviesteist&auml;.';
-$lang['admin']['info_sitedownexcludes'] = 'T&auml;m&auml; parametri sallii sinun listata pilkulla erotetun listan IP-osoitteista tai verkoista, jotka eiv&auml;t ole mukana huoltomekanismissa. T&auml;m&auml; sallii sivuston yll&auml;pit&auml;j&auml;n ty&ouml;st&auml;&auml; sivustoa ja samaan aikaan vierailijat saavat virheilmoituksen huoltokatkoksesta.<br/>
-1. xxx.xxx.xxx.xxx -- (koko IP-osoite)<br/>
-2. xxx.xxx.xxx.[yyy-zzz] -- (IP-osoitteen alue)<br/>
+$lang['admin']['info_sitedownexcludes'] = 'T&auml;m&auml; parametri sallii sinun listata pilkulla erotetun listan IP-osoitteista tai verkoista, jotka eiv&auml;t ole mukana huoltomekanismissa. T&auml;m&auml; sallii sivuston yll&auml;pit&auml;j&auml;n ty&ouml;st&auml;&auml; sivustoa ja samaan aikaan vierailijat saavat virheilmoituksen huoltokatkoksesta.<br/>
+
+1. xxx.xxx.xxx.xxx -- (koko IP-osoite)<br/>
+
+2. xxx.xxx.xxx.[yyy-zzz] -- (IP-osoitteen alue)<br/>
+
 3. xxx.xxx.xxx.xxx/nn -- (nnn = bittien lukum&auml;&auml;r&auml;, ciscon tyyliin.  esimerkiksi:  192.168.0.100/24 = koko 192.168.0 luokan C aliverkko)';
 $lang['admin']['setup'] = 'Monipuoliset asetukset';
 $lang['admin']['handle_404'] = 'Mukautettu 404 k&auml;sittely';
 $lang['admin']['sitedown_settings'] = 'Sivuston huoltoasetukset';
 $lang['admin']['general_settings'] = 'Yleiset asetukset';
-$lang['admin']['help_function_page_attr'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
-<p>T&auml;t&auml; attribuuttia voidaan k&auml;ytt&auml;&auml;, jos halutaan saada tietyn sivun attribuuttien arvot.</p>
-<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
-<p>Lis&auml;&auml; sivupohjaan tagi: <code>{page_attr key=&quot;extra1&quot;}</code>.</p>
-<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
-<ul>
-  <li><strong>key [pakollinen]</strong> Avain, joka palauttaa attribuutin.</li>
+$lang['admin']['help_function_page_attr'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
+
+<p>T&auml;t&auml; attribuuttia voidaan k&auml;ytt&auml;&auml;, jos halutaan saada tietyn sivun attribuuttien arvot.</p>
+
+<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
+
+<p>Lis&auml;&auml; sivupohjaan tagi: <code>{page_attr key=&quot;extra1&quot;}</code>.</p>
+
+<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
+
+<ul>
+
+  <li><strong>key [pakollinen]</strong> Avain, joka palauttaa attribuutin.</li>
+
 </ul>';
 $lang['admin']['forge'] = 'S&auml;il&ouml;';
 $lang['admin']['disable_wysiwyg'] = 'Ota WYSIWYG-editori pois p&auml;&auml;lt&auml; t&auml;ll&auml; sivulla (huolimatta sivupohjan tai k&auml;ytt&auml;j&auml;n asetuksista)';
-$lang['admin']['help_function_page_image'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
-<p>T&auml;m&auml; tagi palauttaa kuvien tai pienoiskuvien arvot tietyll&auml; sivulla.</p>
-<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
-<p>Lis&auml;&auml; sivupohjaan tagi: <code>{page_image}</code>.</p>
-<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
-<ul>
-  <li>thumbnail - Vaihtoehtoisesti n&auml;yt&auml; pienoiskuvien tiedot kuvien sijasta.</li>
+$lang['admin']['help_function_page_image'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
+
+<p>T&auml;m&auml; tagi palauttaa kuvien tai pienoiskuvien arvot tietyll&auml; sivulla.</p>
+
+<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
+
+<p>Lis&auml;&auml; sivupohjaan tagi: <code>{page_image}</code>.</p>
+
+<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
+
+<ul>
+
+  <li>thumbnail - Vaihtoehtoisesti n&auml;yt&auml; pienoiskuvien tiedot kuvien sijasta.</li>
+
 </ul>';
 $lang['admin']['pagelink_circular'] = 'Sivulinkki ei voi listata toista sivulinkki&auml; sen m&auml;&auml;r&auml;np&auml;&auml;ksi';
 $lang['admin']['destinationnotfound'] = 'Valittua sivua ei l&ouml;ytynyt tai se oli virheellinen';
-$lang['admin']['help_function_dump'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
-<p>T&auml;t&auml; tagia voidaan k&auml;ytt&auml;&auml;, jos halutaan palauttaa mik&auml; tahansa smartymuuttuja luettavaan muotoon. T&auml;m&auml; on hy&ouml;dyllist&auml; virheiden l&ouml;yt&auml;miseksi ja sivupohjien muokkaamiseksi, jos halutaan tiet&auml;&auml; saatavilla olevien tietojen muodot ja tyypit.</p>
-<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
-<p>Lis&auml;&auml; tagi sivupohjaan: <code>{dump item=&#039;the_smarty_variable_to_dump&#039;}</code>.</p>
-<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
-<ul>
-<li><strong>item (pakollinen)</strong> - Smartymuuttuja, jonka tiedot halutaan palauttaa.</li>
-<li>maxlevel - Maksimim&auml;&auml;r&auml; tasoja, jotka rekursoidaan (tarpeellinen vain, jos annetaan my&ouml;s rekursio. Oletusarvo t&auml;lle parametrille on 3.</li>
-<li>nomethods - J&auml;t&auml; v&auml;list&auml; metodien tulostaminen objekteista.</li>
-<li>novars - J&auml;t&auml; v&auml;list&auml; objektien j&auml;senten tulostaminen.</li>
-<li>recurse - Rekursoi maksimim&auml;&auml;r&auml; tasoja objekteista, joista palautuu tuloksia, kunnes maksimim&auml;&auml;r&auml; tasoja on saavutettu.</li>
+$lang['admin']['help_function_dump'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
+
+<p>T&auml;t&auml; tagia voidaan k&auml;ytt&auml;&auml;, jos halutaan palauttaa mik&auml; tahansa smartymuuttuja luettavaan muotoon. T&auml;m&auml; on hy&ouml;dyllist&auml; virheiden l&ouml;yt&auml;miseksi ja sivupohjien muokkaamiseksi, jos halutaan tiet&auml;&auml; saatavilla olevien tietojen muodot ja tyypit.</p>
+
+<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
+
+<p>Lis&auml;&auml; tagi sivupohjaan: <code>{dump item=&#039;the_smarty_variable_to_dump&#039;}</code>.</p>
+
+<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
+
+<ul>
+
+<li><strong>item (pakollinen)</strong> - Smartymuuttuja, jonka tiedot halutaan palauttaa.</li>
+
+<li>maxlevel - Maksimim&auml;&auml;r&auml; tasoja, jotka rekursoidaan (tarpeellinen vain, jos annetaan my&ouml;s rekursio. Oletusarvo t&auml;lle parametrille on 3.</li>
+
+<li>nomethods - J&auml;t&auml; v&auml;list&auml; metodien tulostaminen objekteista.</li>
+
+<li>novars - J&auml;t&auml; v&auml;list&auml; objektien j&auml;senten tulostaminen.</li>
+
+<li>recurse - Rekursoi maksimim&auml;&auml;r&auml; tasoja objekteista, joista palautuu tuloksia, kunnes maksimim&auml;&auml;r&auml; tasoja on saavutettu.</li>
+
 </ul>';
 $lang['admin']['sqlerror'] = 'SQL-virhe kohdassa %s';
 $lang['admin']['image'] = 'Kuva';
 $lang['admin']['thumbnail'] = 'Pienoiskuva';
 $lang['admin']['searchable'] = 'T&auml;m&auml; sivu on haettavissa';
-$lang['admin']['help_function_content_image'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
-<p>T&auml;m&auml; lis&auml;osa sallii sivupohjien suunnittelijoiden kysy&auml; k&auml;ytt&auml;ji&auml; valitsemaan kuvan, kun he muokkaavat sivun sis&auml;lt&ouml;&auml;. Se toimii samalla tavoin kuin sis&auml;lt&ouml;lis&auml;osa lis&auml;sis&auml;lt&ouml;lohkoille.</p>
-<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
-<p>Lis&auml;&auml; tagi sivupohjaasi: <code>{content_image block=&#039;image1&#039;}</code>.</p>
-<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
-<ul>
-  <li><strong>(vaadittu)</strong> block - Lis&auml;sis&auml;lt&ouml;lohkon nimi.
-  <p>Esimerkiksi:</p>
-  <pre>{content_image block=&#039;image1&#039;}</pre><br/>
-  </li>
-
-  <li><em>(vapaaehtoinen)</em> label - Nimike tai kehoitus t&auml;lle sis&auml;lt&ouml;lohkolle sis&auml;ll&ouml;n muokkaussivulla. Jos t&auml;t&auml; ei m&auml;&auml;ritell&auml;, k&auml;ytet&auml;&auml;n lohkon nime&auml;.</li>
- 
-  <li><em>(vapaaehtoinen)</em> dir - Hakemiston nimi (suhteessa uploads-hakemistoon, josta valitaan kuvatiedostot. Jos t&auml;t&auml; ei m&auml;&auml;ritell&auml;, k&auml;ytet&auml;&auml;n uploads-hakemistoa.
-  <p>Esimerkiksi: k&auml;yt&auml; kuvia uploads/images-hakemistosta.</p>
-  <pre>{content_image block=&#039;image1&#039; dir=&#039;images&#039;}</pre><br/>
-  </li>
-
-  <li><em>(vapaaehtoinen)</em> class - CSS-luokka, jota k&auml;ytet&auml;&auml;n img-tagissa julkisella sivustolla.</li>
-
-  <li><em>(vapaaehtoinen)</em> id - ID, jota k&auml;ytet&auml;&auml;n img-tagissa julkisella sivustolla.</li> 
-
-  <li><em>(vapaaehtoinen)</em> name - nimi-tagi, jota k&auml;ytet&auml;&auml;n img-tagissa julkisella sivustolla.</li> 
-
-  <li><em>(vapaaehtoinen)</em> width -  Kuvan haluttu leveys.</li>
-
-  <li><em>(vapaaehtoinen)</em> height - Kuvan haluttu korkeus.</li>
-
-  <li><em>(vapaaehtoinen)</em> alt - Vaihtoehtoinen teksti, jos kuvaa ei l&ouml;ydy.</li>
-  <li><em>(vapaaehtoinen)</em> urlonly - Pelkk&auml; kuvan url-osoite, jossa j&auml;tet&auml;&auml;n huomiotta kaikki parametrit kuten id, name, width, height jne.</li>
+$lang['admin']['help_function_content_image'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
+
+<p>T&auml;m&auml; lis&auml;osa sallii sivupohjien suunnittelijoiden kysy&auml; k&auml;ytt&auml;ji&auml; valitsemaan kuvan, kun he muokkaavat sivun sis&auml;lt&ouml;&auml;. Se toimii samalla tavoin kuin sis&auml;lt&ouml;lis&auml;osa lis&auml;sis&auml;lt&ouml;lohkoille.</p>
+
+<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
+
+<p>Lis&auml;&auml; tagi sivupohjaasi: <code>{content_image block=&#039;image1&#039;}</code>.</p>
+
+<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
+
+<ul>
+
+  <li><strong>(vaadittu)</strong> block - Lis&auml;sis&auml;lt&ouml;lohkon nimi.
+
+  <p>Esimerkiksi:</p>
+
+  <pre>{content_image block=&#039;image1&#039;}</pre><br/>
+
+  </li>
+
+
+
+  <li><em>(vapaaehtoinen)</em> label - Nimike tai kehoitus t&auml;lle sis&auml;lt&ouml;lohkolle sis&auml;ll&ouml;n muokkaussivulla. Jos t&auml;t&auml; ei m&auml;&auml;ritell&auml;, k&auml;ytet&auml;&auml;n lohkon nime&auml;.</li>
+
+ 
+
+  <li><em>(vapaaehtoinen)</em> dir - Hakemiston nimi (suhteessa uploads-hakemistoon, josta valitaan kuvatiedostot. Jos t&auml;t&auml; ei m&auml;&auml;ritell&auml;, k&auml;ytet&auml;&auml;n uploads-hakemistoa.
+
+  <p>Esimerkiksi: k&auml;yt&auml; kuvia uploads/images-hakemistosta.</p>
+
+  <pre>{content_image block=&#039;image1&#039; dir=&#039;images&#039;}</pre><br/>
+
+  </li>
+
+
+
+  <li><em>(vapaaehtoinen)</em> class - CSS-luokka, jota k&auml;ytet&auml;&auml;n img-tagissa julkisella sivustolla.</li>
+
+
+
+  <li><em>(vapaaehtoinen)</em> id - ID, jota k&auml;ytet&auml;&auml;n img-tagissa julkisella sivustolla.</li> 
+
+
+
+  <li><em>(vapaaehtoinen)</em> name - nimi-tagi, jota k&auml;ytet&auml;&auml;n img-tagissa julkisella sivustolla.</li> 
+
+
+
+  <li><em>(vapaaehtoinen)</em> width -  Kuvan haluttu leveys.</li>
+
+
+
+  <li><em>(vapaaehtoinen)</em> height - Kuvan haluttu korkeus.</li>
+
+
+
+  <li><em>(vapaaehtoinen)</em> alt - Vaihtoehtoinen teksti, jos kuvaa ei l&ouml;ydy.</li>
+
+  <li><em>(vapaaehtoinen)</em> urlonly - Pelkk&auml; kuvan url-osoite, jossa j&auml;tet&auml;&auml;n huomiotta kaikki parametrit kuten id, name, width, height jne.</li>
+
 </ul>';
 $lang['admin']['error_udt_name_chars'] = 'Sallittu UDT-nimi alkaa kirjaimella tai alaviivalla, jonka j&auml;lkeen tulee mit&auml; tahansa kirjaimia, numeroita tai alaviivoja.';
 $lang['admin']['errorupdatetemplateallpages'] = 'Sivupohja ei ole aktiivinen';
@@ -267,15 +365,24 @@ $lang['admin']['checksum_passed'] = 'Kaikki tarkistesummat vastaavat l&auml;hete
 $lang['admin']['error_retrieving_file_list'] = 'Virhe noudettaessa tiedostolistaa';
 $lang['admin']['files_checksum_failed'] = 'Tiedostojen tarkistesummia ei voitu laskea';
 $lang['admin']['failure'] = 'Virhe';
-$lang['admin']['help_function_process_pagedata'] = '<h3>Mit&auml; t&auml;m&auml; tekee</h3>
-<p>T&auml;m&auml; lis&auml;osa prosessoi tiedot &amp;quot;pagedata&amp;quot; -kappaleessa smartyn l&auml;pi sallien sivuriippuvaisen tiedon sy&ouml;tt&auml;misen smartylle ilman eri pohjaa jokaiselle sivulla.</p>
-<h3>Kuinka k&auml;yt&auml;n t&auml;t&auml;?</h3>
-<ol>
-  <li>Lis&auml;&auml; smarty assign -muuttujat ja muuta smarty-logiikkaa pagedata-kentt&auml;&auml; sis&auml;lt&ouml;sivuilla.</li>
-  <li>Lis&auml;&auml; <code>{process_pagedata}</code> -tagi ensimm&auml;iseksi sivupohjiin.</li>
-</ol>
-<br/>
-<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
+$lang['admin']['help_function_process_pagedata'] = '<h3>Mit&auml; t&auml;m&auml; tekee</h3>
+
+<p>T&auml;m&auml; lis&auml;osa prosessoi tiedot &amp;quot;pagedata&amp;quot; -kappaleessa smartyn l&auml;pi sallien sivuriippuvaisen tiedon sy&ouml;tt&auml;misen smartylle ilman eri pohjaa jokaiselle sivulla.</p>
+
+<h3>Kuinka k&auml;yt&auml;n t&auml;t&auml;?</h3>
+
+<ol>
+
+  <li>Lis&auml;&auml; smarty assign -muuttujat ja muuta smarty-logiikkaa pagedata-kentt&auml;&auml; sis&auml;lt&ouml;sivuilla.</li>
+
+  <li>Lis&auml;&auml; <code>{process_pagedata}</code> -tagi ensimm&auml;iseksi sivupohjiin.</li>
+
+</ol>
+
+<br/>
+
+<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
+
 <p>T&auml;ll&auml; hetkell&auml; ei ole parametrej&auml;</p>';
 $lang['admin']['page_metadata'] = 'Sivun metatiedot';
 $lang['admin']['pagedata_codeblock'] = 'Smarty-tiedot tai logiikka, joka on tarkoitettu vain t&auml;lle sivulle';
@@ -350,541 +457,1029 @@ $lang['admin']['contenttype_pagelink'] = 'Sis&auml;inen linkki';
 $lang['admin']['nogcbwysiwyg'] = 'Est&auml; WYSIWYGin k&auml;ytt&ouml; yleisiss&auml; sis&auml;lt&ouml;lohkoissa (gcb)';
 $lang['admin']['destination_page'] = 'Kohdesivu';
 $lang['admin']['additional_params'] = 'Lis&auml;parametrit';
-$lang['admin']['help_function_current_date'] = '        <h3 style=&quot;color: red;&quot;>Poistunut k&auml;yt&ouml;st&auml;</h3>
-	 <p>k&auml;yt&auml; <code>{$smarty.now|cms_date_format}</code></p>
-	<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
-	<p>Tulostaa nykyisen p&auml;iv&auml;m&auml;&auml;r&auml;n ja kellonajan. Jos p&auml;iv&auml;m&auml;&auml;r&auml;n muotoa ei ole m&auml;&auml;ritelty, palautetaan oletusarvo  &#039;Jan 01, 2004&#039;.</p>
-	<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
-	<p>Lis&auml;&auml; tagi sivupohjaan tai sivulle: <code>{current_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code></p>
-	<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
-	<ul>
-		<li><em>(vapaaehtoinen)</em>format - P&auml;iv&auml;m&auml;&auml;r&auml;- ja aikamuodot k&auml;ytt&auml;en PHP:n strftime funktiota.  Katso <a href="http://php.net/strftime" target="_blank">t&auml;&auml;lt&auml;</a> parametrilista ja lis&auml;tietoja.</li>
-		<li><em>(vapaaehtoinen)</em>ucword - Jos p&auml;&auml;ll&auml;, palautetaan jokaisen sanan ensimm&auml;inen kirjain isolla kirjaimella.</li>
+$lang['admin']['help_function_current_date'] = '        <h3 style=&quot;color: red;&quot;>Poistunut k&auml;yt&ouml;st&auml;</h3>
+
+	 <p>k&auml;yt&auml; <code>{$smarty.now|cms_date_format}</code></p>
+
+	<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
+
+	<p>Tulostaa nykyisen p&auml;iv&auml;m&auml;&auml;r&auml;n ja kellonajan. Jos p&auml;iv&auml;m&auml;&auml;r&auml;n muotoa ei ole m&auml;&auml;ritelty, palautetaan oletusarvo  &#039;Jan 01, 2004&#039;.</p>
+
+	<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
+
+	<p>Lis&auml;&auml; tagi sivupohjaan tai sivulle: <code>{current_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code></p>
+
+	<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
+
+	<ul>
+
+		<li><em>(vapaaehtoinen)</em>format - P&auml;iv&auml;m&auml;&auml;r&auml;- ja aikamuodot k&auml;ytt&auml;en PHP:n strftime funktiota.  Katso <a href="http://php.net/strftime" target="_blank">t&auml;&auml;lt&auml;</a> parametrilista ja lis&auml;tietoja.</li>
+
+		<li><em>(vapaaehtoinen)</em>ucword - Jos p&auml;&auml;ll&auml;, palautetaan jokaisen sanan ensimm&auml;inen kirjain isolla kirjaimella.</li>
+
 	</ul>';
-$lang['admin']['help_function_valid_xhtml'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
-<p>Palauttaa linkin w3c HTML-tarkistukseen.</p>
-<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
-<p>Lis&auml;&auml; tagi sivupohjaan tai sivulle: <code>{valid_xhtml}</code></p>
-<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
-<p>
-    <ul>
-	<li><em>(vapaaehtoinen)</em> url         (merkkijono)     - Tarkistukseen k&auml;ytetty url-osoite, jos sit&auml; ei m&auml;&auml;ritell&auml; k&auml;ytet&auml;&auml;n osoitetta http://validator.w3.org/check/referer.</li>
-	<li><em>(vapaaehtoinen)</em> class       (merkkijono)     - Jos asetettu, t&auml;t&auml; k&auml;ytet&auml;&auml;n class-attribuuttina linki (a) elementeille</li>
-	<li><em>(vapaaehtoinen)</em> target      (merkkijono)     - Jos asetettu, t&auml;t&auml; k&auml;ytet&auml;&auml;n target-attribuuttina linkki (a) elementeilleIf set, this will be used as target attribute for the link (a) element</li>
-	<li><em>(vapaaehtoinen</em> image       (true/false) - Jos asetettu, n&auml;ytet&auml;&auml;n tekstilinkki kuvalinkin sijasta.</li>
-	<li><em>(vapaaehtoinen)</em> text        (merkkijono)     - Jos asetettu, t&auml;t&auml; k&auml;ytet&auml;&auml;n linkkien tekstin&auml; tai kuvien vaihtoehtoisena tekstin&auml;. Oletus on &#039;valid XHTML 1.0 Transitional&#039;.<br /> Kun k&auml;ytet&auml;&auml;n kuvaa, annettua teksti&auml; k&auml;ytet&auml;&auml;n my&ouml;s kuvien alt-attribuuttina (oletusarvoisesti t&auml;m&auml; voidaan ylitt&auml;&auml; k&auml;ytt&auml;m&auml;ll&auml; &#039;alt&#039; parametria).</li>
-	<li><em>(vapaaehtoinen)</em> image_class (merkkijono)     - Only if &#039;image&#039; is not set to false. If set, this will be used as class attribute for the image (img) element</li>
-	<li><em>(vapaaehtoinen)</em> src         (merkkijono)     - Only if &#039;image&#039; is not set to false. The icon to show. Default is http://www.w3.org/Icons/valid-xhtml10</li>
-	<li><em>(vapaaehtoinen)</em> width       (merkkijono)     - Only if &#039;image&#039; is not set to false. The image width. Default is 88 (width of http://www.w3.org/Icons/valid-xhtml10)</li>
-	<li><em>(vapaaehtoinen)</em> height      (merkkijono)     - Only if &#039;image&#039; is not set to false. The image height. Default is 31 (height of http://www.w3.org/Icons/valid-xhtml10)</li>
-	<li><em>(vapaaehtoinen)</em> alt         (merkkijono)     - Only if &#039;image&#039; is not set to false. The alternate text (&#039;alt&#039; attribute) for the image (element). If none is given the link text will be used.</li>
-    </ul>
+$lang['admin']['help_function_valid_xhtml'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
+
+<p>Palauttaa linkin w3c HTML-tarkistukseen.</p>
+
+<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
+
+<p>Lis&auml;&auml; tagi sivupohjaan tai sivulle: <code>{valid_xhtml}</code></p>
+
+<h3>Mit&auml; parametreja voin k&auml;ytt&auml;&auml;?</h3>
+
+<p>
+
+    <ul>
+
+	<li><em>(vapaaehtoinen)</em> url         (merkkijono)     - Tarkistukseen k&auml;ytetty url-osoite, jos sit&auml; ei m&auml;&auml;ritell&auml; k&auml;ytet&auml;&auml;n osoitetta http://validator.w3.org/check/referer.</li>
+
+	<li><em>(vapaaehtoinen)</em> class       (merkkijono)     - Jos asetettu, t&auml;t&auml; k&auml;ytet&auml;&auml;n class-attribuuttina linki (a) elementeille</li>
+
+	<li><em>(vapaaehtoinen)</em> target      (merkkijono)     - Jos asetettu, t&auml;t&auml; k&auml;ytet&auml;&auml;n target-attribuuttina linkki (a) elementeilleIf set, this will be used as target attribute for the link (a) element</li>
+
+	<li><em>(vapaaehtoinen</em> image       (true/false) - Jos asetettu, n&auml;ytet&auml;&auml;n tekstilinkki kuvalinkin sijasta.</li>
+
+	<li><em>(vapaaehtoinen)</em> text        (merkkijono)     - Jos asetettu, t&auml;t&auml; k&auml;ytet&auml;&auml;n linkkien tekstin&auml; tai kuvien vaihtoehtoisena tekstin&auml;. Oletus on &#039;valid XHTML 1.0 Transitional&#039;.<br /> Kun k&auml;ytet&auml;&auml;n kuvaa, annettua teksti&auml; k&auml;ytet&auml;&auml;n my&ouml;s kuvien alt-attribuuttina (oletusarvoisesti t&auml;m&auml; voidaan ylitt&auml;&auml; k&auml;ytt&auml;m&auml;ll&auml; &#039;alt&#039; parametria).</li>
+
+	<li><em>(vapaaehtoinen)</em> image_class (merkkijono)     - Only if &#039;image&#039; is not set to false. If set, this will be used as class attribute for the image (img) element</li>
+
+	<li><em>(vapaaehtoinen)</em> src         (merkkijono)     - Only if &#039;image&#039; is not set to false. The icon to show. Default is http://www.w3.org/Icons/valid-xhtml10</li>
+
+	<li><em>(vapaaehtoinen)</em> width       (merkkijono)     - Only if &#039;image&#039; is not set to false. The image width. Default is 88 (width of http://www.w3.org/Icons/valid-xhtml10)</li>
+
+	<li><em>(vapaaehtoinen)</em> height      (merkkijono)     - Only if &#039;image&#039; is not set to false. The image height. Default is 31 (height of http://www.w3.org/Icons/valid-xhtml10)</li>
+
+	<li><em>(vapaaehtoinen)</em> alt         (merkkijono)     - Only if &#039;image&#039; is not set to false. The alternate text (&#039;alt&#039; attribute) for the image (element). If none is given the link text will be used.</li>
+
+    </ul>
+
 </p>';
-$lang['admin']['help_function_valid_css'] = '<h3>What does this do?</h3>
-<p>Returns a link to the w3c CSS validator.</p>
-<h3>How do I use it?</h3>
-<p>Just insert the tag into your template/page like: <code>{valid_css}</code></p>
-<h3>What parameters does it take?</h3>
-<p>
-    <ul>
-        <li><em>(optional)</em> url         (string)     - The URL used for validation, if none is given http://jigsaw.w3.org/css-validator/check/referer is used.</li>
-	<li><em>(optional)</em> class       (string)     - If set, this will be used as class attribute for the link (a) element</li>
-	<li><em>(optional)</em> target      (string)     - If set, this will be used as target attribute for the link (a) element</li>
-	<li><em>(optional)</em> image       (true/false) - If set to false, a text link will be used instead of an image/icon.</li>
-	<li><em>(optional)</em> text        (string)     - If set, this will be used for the link text or alternate text for the image. Default is &#039;Valid CSS 2.1&#039;.<br /> When an image is used, the given string will also be used for the image alt attribute (by default, this can be overridden by using the &#039;alt&#039; parameter).</li>
-	<li><em>(optional)</em> image_class (string)     - Only if &#039;image&#039; is not set to false. If set, this will be used as class attribute for the image (img) element</li>
-        <li><em>(optional)</em> src         (string)     - Only if &#039;image&#039; is not set to false. The icon to show. Default is http://jigsaw.w3.org/css-validator/images/vcss</li>
-        <li><em>(optional)</em> width       (string)     - Only if &#039;image&#039; is not set to false. The image width. Default is 88 (width of http://jigsaw.w3.org/css-validator/images/vcss)</li>
-        <li><em>(optional)</em> height      (string)     - Only if &#039;image&#039; is not set to false. The image height. Default is 31 (height of http://jigsaw.w3.org/css-validator/images/vcss)</li>
-	<li><em>(optional)</em> alt         (string)     - Only if &#039;image&#039; is not set to false. The alternate text (&#039;alt&#039; attribute) for the image (element). If none is given the link text will be used.</li>
-    </ul>
+$lang['admin']['help_function_valid_css'] = '<h3>What does this do?</h3>
+
+<p>Returns a link to the w3c CSS validator.</p>
+
+<h3>How do I use it?</h3>
+
+<p>Just insert the tag into your template/page like: <code>{valid_css}</code></p>
+
+<h3>What parameters does it take?</h3>
+
+<p>
+
+    <ul>
+
+        <li><em>(optional)</em> url         (string)     - The URL used for validation, if none is given http://jigsaw.w3.org/css-validator/check/referer is used.</li>
+
+	<li><em>(optional)</em> class       (string)     - If set, this will be used as class attribute for the link (a) element</li>
+
+	<li><em>(optional)</em> target      (string)     - If set, this will be used as target attribute for the link (a) element</li>
+
+	<li><em>(optional)</em> image       (true/false) - If set to false, a text link will be used instead of an image/icon.</li>
+
+	<li><em>(optional)</em> text        (string)     - If set, this will be used for the link text or alternate text for the image. Default is &#039;Valid CSS 2.1&#039;.<br /> When an image is used, the given string will also be used for the image alt attribute (by default, this can be overridden by using the &#039;alt&#039; parameter).</li>
+
+	<li><em>(optional)</em> image_class (string)     - Only if &#039;image&#039; is not set to false. If set, this will be used as class attribute for the image (img) element</li>
+
+        <li><em>(optional)</em> src         (string)     - Only if &#039;image&#039; is not set to false. The icon to show. Default is http://jigsaw.w3.org/css-validator/images/vcss</li>
+
+        <li><em>(optional)</em> width       (string)     - Only if &#039;image&#039; is not set to false. The image width. Default is 88 (width of http://jigsaw.w3.org/css-validator/images/vcss)</li>
+
+        <li><em>(optional)</em> height      (string)     - Only if &#039;image&#039; is not set to false. The image height. Default is 31 (height of http://jigsaw.w3.org/css-validator/images/vcss)</li>
+
+	<li><em>(optional)</em> alt         (string)     - Only if &#039;image&#039; is not set to false. The alternate text (&#039;alt&#039; attribute) for the image (element). If none is given the link text will be used.</li>
+
+    </ul>
+
 </p>';
-$lang['admin']['help_function_title'] = '	<h3>What does this do?</h3>
-	<p>Prints the title of the page.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{title}</code></p>
-	<h3>What parameters does it take?</h3>
+$lang['admin']['help_function_title'] = '	<h3>What does this do?</h3>
+
+	<p>Prints the title of the page.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{title}</code></p>
+
+	<h3>What parameters does it take?</h3>
+
 	<p><em>(optional)</em> assign (string) - Assign the results to a smarty variable with that name.</p>';
-$lang['admin']['help_function_stylesheet'] = '	<h3>What does this do?</h3>
-	<p>Gets stylesheet information from the system.  By default, it grabs all of the stylesheets attached to the current template.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page&#039;s head section like: <code>{stylesheet}</code></p>
-	<h3>What parameters does it take?</h3>
-	<ul>
-		<li><em>(optional)</em>name - Instead of getting all stylesheets for the given page, it will only get one spefically named one, whether it&#039;s attached to the current template or not.</li>
-		<li><em>(optional)</em>media - If name is defined, this allows you set a different media type for that stylesheet.</li>
-	</ul>
+$lang['admin']['help_function_stylesheet'] = '	<h3>What does this do?</h3>
+
+	<p>Gets stylesheet information from the system.  By default, it grabs all of the stylesheets attached to the current template.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page&#039;s head section like: <code>{stylesheet}</code></p>
+
+	<h3>What parameters does it take?</h3>
+
+	<ul>
+
+		<li><em>(optional)</em>name - Instead of getting all stylesheets for the given page, it will only get one spefically named one, whether it&#039;s attached to the current template or not.</li>
+
+		<li><em>(optional)</em>media - If name is defined, this allows you set a different media type for that stylesheet.</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['help_function_stopexpandcollapse'] = '	<h3>What does this do?</h3>
-	<p>Enables content to be expandable and collapsable. Like the following:<br />
-	<a href="#expand1" onClick="expandcontent(&#039;expand1&#039;)" style="cursor:hand; cursor:pointer">Click here for more info</a><span id=&quot;expand1&quot; class=&quot;expand&quot;><a name="help"></a> - Here is all the info you will ever need...</a></span></p>
-
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like:<br />
-	<br />
-	<code>{startExpandCollapse id=&quot;name&quot; title=&quot;Click Here&quot;}<br />
-	This is all the content the user will see when they click the title &quot;Click Here&quot; above. It will display all the content that is between the {startExpandCollapse} and {stopExpandCollapse} when clicked.<br />
-	{stopExpandCollapse}
-	</code>
-	<br />
-	<br />
-	Note: If you intend to use this multiple times on a single page each startExpandCollapse tag must have a unique id.</p>
-	<h3>What if I want to change the look of the title?</h3>
-	<p>The look of the title can be changed via css. The title is wrapped in a div with the id you specify.</p>
-
-	<h3>What parameters does it take?</h3>
-	<p>
-	<i>startExpandCollapse takes the following parameters</i><br />
-	&nbsp; &nbsp;id - A unique id for the expand/collapse section.<br />
-	&nbsp; &nbsp;title - The text that will be displayed to expand/collapse the content.<br />
-	<i>stopExpandCollapse takes no parameters</i><br />
+$lang['admin']['help_function_stopexpandcollapse'] = '	<h3>What does this do?</h3>
+
+	<p>Enables content to be expandable and collapsable. Like the following:<br />
+
+	<a href="#expand1" onClick="expandcontent(&#039;expand1&#039;)" style="cursor:hand; cursor:pointer">Click here for more info</a><span id=&quot;expand1&quot; class=&quot;expand&quot;><a name="help"></a> - Here is all the info you will ever need...</a></span></p>
+
+
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like:<br />
+
+	<br />
+
+	<code>{startExpandCollapse id=&quot;name&quot; title=&quot;Click Here&quot;}<br />
+
+	This is all the content the user will see when they click the title &quot;Click Here&quot; above. It will display all the content that is between the {startExpandCollapse} and {stopExpandCollapse} when clicked.<br />
+
+	{stopExpandCollapse}
+
+	</code>
+
+	<br />
+
+	<br />
+
+	Note: If you intend to use this multiple times on a single page each startExpandCollapse tag must have a unique id.</p>
+
+	<h3>What if I want to change the look of the title?</h3>
+
+	<p>The look of the title can be changed via css. The title is wrapped in a div with the id you specify.</p>
+
+
+
+	<h3>What parameters does it take?</h3>
+
+	<p>
+
+	<i>startExpandCollapse takes the following parameters</i><br />
+
+	&nbsp; &nbsp;id - A unique id for the expand/collapse section.<br />
+
+	&nbsp; &nbsp;title - The text that will be displayed to expand/collapse the content.<br />
+
+	<i>stopExpandCollapse takes no parameters</i><br />
+
 	</p>';
-$lang['admin']['help_function_startexpandcollapse'] = '	<h3>What does this do?</h3>
-	<p>Enables content to be expandable and collapsable. Like the following:<br />
-	<a href="#expand1" onClick="expandcontent(&#039;expand1&#039;)" style="cursor:hand; cursor:pointer">Click here for more info</a><span id=&quot;expand1&quot; class=&quot;expand&quot;><a name="help"></a> - Here is all the info you will ever need...</a></span></p>
-
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{startExpandCollapse id=&quot;name&quot; title=&quot;Click Here&quot;}</code>. Also, you must use the {stopExpandCollapse} at the end of the collapseable content. Here is an example:<br />
-	<br />
-	<code>{startExpandCollapse id=&quot;name&quot; title=&quot;Click Here&quot;}<br />
-	This is all the content the user will see when they click the title &quot;Click Here&quot; above. It will display all the content that is between the {startExpandCollapse} and {stopExpandCollapse} when clicked.<br />
-	{stopExpandCollapse}
-	</code>
-	<br />
-	<br />
-	Note: If you intend to use this multiple times on a single page each startExpandCollapse tag must have a unique id.</p>
-	<h3>What if I want to change the look of the title?</h3>
-	<p>The look of the title can be changed via css. The title is wrapped in a div with the id you specify.</p>
-
-	<h3>What parameters does it take?</h3>
-	<p>
-	<i>startExpandCollapse takes the following parameters</i><br />
-	&nbsp; &nbsp;id - A unique id for the expand/collapse section.<br />
-	&nbsp; &nbsp;title - The text that will be displayed to expand/collapse the content.<br />
-	<i>stopExpandCollapse takes no parameters</i><br />
+$lang['admin']['help_function_startexpandcollapse'] = '	<h3>What does this do?</h3>
+
+	<p>Enables content to be expandable and collapsable. Like the following:<br />
+
+	<a href="#expand1" onClick="expandcontent(&#039;expand1&#039;)" style="cursor:hand; cursor:pointer">Click here for more info</a><span id=&quot;expand1&quot; class=&quot;expand&quot;><a name="help"></a> - Here is all the info you will ever need...</a></span></p>
+
+
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{startExpandCollapse id=&quot;name&quot; title=&quot;Click Here&quot;}</code>. Also, you must use the {stopExpandCollapse} at the end of the collapseable content. Here is an example:<br />
+
+	<br />
+
+	<code>{startExpandCollapse id=&quot;name&quot; title=&quot;Click Here&quot;}<br />
+
+	This is all the content the user will see when they click the title &quot;Click Here&quot; above. It will display all the content that is between the {startExpandCollapse} and {stopExpandCollapse} when clicked.<br />
+
+	{stopExpandCollapse}
+
+	</code>
+
+	<br />
+
+	<br />
+
+	Note: If you intend to use this multiple times on a single page each startExpandCollapse tag must have a unique id.</p>
+
+	<h3>What if I want to change the look of the title?</h3>
+
+	<p>The look of the title can be changed via css. The title is wrapped in a div with the id you specify.</p>
+
+
+
+	<h3>What parameters does it take?</h3>
+
+	<p>
+
+	<i>startExpandCollapse takes the following parameters</i><br />
+
+	&nbsp; &nbsp;id - A unique id for the expand/collapse section.<br />
+
+	&nbsp; &nbsp;title - The text that will be displayed to expand/collapse the content.<br />
+
+	<i>stopExpandCollapse takes no parameters</i><br />
+
 	</p>';
-$lang['admin']['help_function_adsense'] = '	<h3>What does this do?</h3>
-	<p>Google adsense is a popular advertising program for websites.  This tag will take the basic parameters that would be provided by the adsense program and puts them in a easy to use tag that makes your templates look much cleaner.  See <a href="http://www.google.com/adsense" target="_blank">here</a> for more details on adsense.</p>
-	<h3>How do I use it?</h3>
-	<p>First, sign up for a google adsense account and get the parameters for your ad.  Then just use the tag in your page/template like so: <code>{adsense ad_client=&quot;pub-random#&quot; ad_width=&quot;120&quot; ad_height=&quot;600&quot; ad_format=&quot;120x600_as&quot;}</code>
-	<h3>What parameters does it take?</h3>
-	<p>All parameters are optional, though skipping one might not necessarily made the ad work right.  Options are:
-	<ul>
-		<li>ad_client - This would be the pub_random# id that would represent your adsense account number</li>
-		<li>ad_width - width of the ad</li>
-		<li>ad_height - height of the ad</li>
-		<li>ad_format - &quot;format&quot; of the ad <em>e.g. 120x600_as</em></li>
-		<li>ad_channel - channels are an advanced feature of adsense.  Put it here if you use it.</li>
-		<li>ad_type - possible options are text, image or text_image.</li>
-		<li>color_border - the color of the border. Use HEX color or type the color name (Ex. Red)</li>
-		<li>color_link - the color of the linktext. Use HEX color or type the color name (Ex. Red)</li>
-		<li>color_url - the color of the URL. Use HEX color or type the color name (Ex. Red)</li>
-		<li>color_text - the color of the text. Use HEX color or type the color name (Ex. Red)</li>
-	</ul>
+$lang['admin']['help_function_adsense'] = '	<h3>What does this do?</h3>
+
+	<p>Google adsense is a popular advertising program for websites.  This tag will take the basic parameters that would be provided by the adsense program and puts them in a easy to use tag that makes your templates look much cleaner.  See <a href="http://www.google.com/adsense" target="_blank">here</a> for more details on adsense.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>First, sign up for a google adsense account and get the parameters for your ad.  Then just use the tag in your page/template like so: <code>{adsense ad_client=&quot;pub-random#&quot; ad_width=&quot;120&quot; ad_height=&quot;600&quot; ad_format=&quot;120x600_as&quot;}</code>
+
+	<h3>What parameters does it take?</h3>
+
+	<p>All parameters are optional, though skipping one might not necessarily made the ad work right.  Options are:
+
+	<ul>
+
+		<li>ad_client - This would be the pub_random# id that would represent your adsense account number</li>
+
+		<li>ad_width - width of the ad</li>
+
+		<li>ad_height - height of the ad</li>
+
+		<li>ad_format - &quot;format&quot; of the ad <em>e.g. 120x600_as</em></li>
+
+		<li>ad_channel - channels are an advanced feature of adsense.  Put it here if you use it.</li>
+
+		<li>ad_type - possible options are text, image or text_image.</li>
+
+		<li>color_border - the color of the border. Use HEX color or type the color name (Ex. Red)</li>
+
+		<li>color_link - the color of the linktext. Use HEX color or type the color name (Ex. Red)</li>
+
+		<li>color_url - the color of the URL. Use HEX color or type the color name (Ex. Red)</li>
+
+		<li>color_text - the color of the text. Use HEX color or type the color name (Ex. Red)</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['help_function_sitename'] = '        <h3>What does this do?</h3>
-        <p>Shows the name of the site.  This is defined during install and can be modified in the Global Settings section of the admin panel.</p>
-        <h3>How do I use it?</h3>
-        <p>Just insert the tag into your template/page like: <code>{sitename}</code></p>
-        <h3>What parameters does it take?</h3>
+$lang['admin']['help_function_sitename'] = '        <h3>What does this do?</h3>
+
+        <p>Shows the name of the site.  This is defined during install and can be modified in the Global Settings section of the admin panel.</p>
+
+        <h3>How do I use it?</h3>
+
+        <p>Just insert the tag into your template/page like: <code>{sitename}</code></p>
+
+        <h3>What parameters does it take?</h3>
+
 	<p><em>(optional)</em> assign (string) - Assign the results to a smarty variable with that name.</p>';
-$lang['admin']['help_function_search'] = '	<h3>What does this do?</h3>
-	<p>This is actually just a wrapper tag for the <a href="listmodules.php?action=showmodulehelp&amp;module=Search">Search module</a> to make the tag syntax easier. 
-	Instead of having to use <code>{cms_module module=&#039;Search&#039;}</code> you can now just use <code>{search}</code> to insert the module in a template.
-	</p>
-	<h3>How do I use it?</h3>
+$lang['admin']['help_function_search'] = '	<h3>What does this do?</h3>
+
+	<p>This is actually just a wrapper tag for the <a href="listmodules.php?action=showmodulehelp&amp;module=Search">Search module</a> to make the tag syntax easier. 
+
+	Instead of having to use <code>{cms_module module=&#039;Search&#039;}</code> you can now just use <code>{search}</code> to insert the module in a template.
+
+	</p>
+
+	<h3>How do I use it?</h3>
+
 	<p>Just put <code>{search}</code> in a template where you want the search input box to appear. For help about the Search module, please refer to the <a href="listmodules.php?action=showmodulehelp&amp;module=Search">Search module help</a>.';
-$lang['admin']['help_function_root_url'] = '	<h3>What does this do?</h3>
-	<p>Prints the root url location for the site.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{root_url}</code></p>
-	<h3>What parameters does it take?</h3>
+$lang['admin']['help_function_root_url'] = '	<h3>What does this do?</h3>
+
+	<p>Prints the root url location for the site.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{root_url}</code></p>
+
+	<h3>What parameters does it take?</h3>
+
 	<p>None at this time.</p>';
-$lang['admin']['help_function_repeat'] = '  <h3>What does this do?</h3>
-  <p>Repeats a specified sequence of characters, a specified number of times</p>
-  <h3>How do I use it?</h3>
-  <p>Insert a tag similar to the following into your template/page, like this: <code>{repeat string=&#039;repeat this &#039; times=&#039;3&#039;}</code>
-  <h3>What parameters does it take?</h3>
-  <ul>
-  <li>string=&#039;text&#039; - The string to repeat</li>
-  <li>times=&#039;num&#039; - The number of times to repeat it.</li>
+$lang['admin']['help_function_repeat'] = '  <h3>What does this do?</h3>
+
+  <p>Repeats a specified sequence of characters, a specified number of times</p>
+
+  <h3>How do I use it?</h3>
+
+  <p>Insert a tag similar to the following into your template/page, like this: <code>{repeat string=&#039;repeat this &#039; times=&#039;3&#039;}</code>
+
+  <h3>What parameters does it take?</h3>
+
+  <ul>
+
+  <li>string=&#039;text&#039; - The string to repeat</li>
+
+  <li>times=&#039;num&#039; - The number of times to repeat it.</li>
+
   </ul>';
-$lang['admin']['help_function_recently_updated'] = '	<h3>What does this do?</h3>
-	<p>Outputs a list of recently updated pages.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{recently_updated}</code></p>
-	<h3>What parameters does it take?</h3>
-	<ul>
-	 <li><p><em>(optional)</em> number=&#039;10&#039; - Number of updated pages to show.</p><p>Example: <pre>{recently_updated number=&#039;15&#039;}</pre></p></li>
- 	 <li><p><em>(optional)</em> leadin=&#039;Last changed&#039; - Text to show left of the modified date.</p><p>Example: <pre>{recently_updated leadin=&#039;Last Changed&#039;}</pre></p></li>
- 	 <li><p><em>(optional)</em> showtitle=&#039;true&#039; - Shows the titleattribute if it exists as well (true|false).</p><p>Example: <pre>{recently_updated showtitle=&#039;true&#039;}</pre></p></li>											 	
-	 <li><p><em>(optional)</em> css_class=&#039;some_name&#039; - Warp a div tag with this class around the list.</p><p>Example: <pre>{recently_updated css_class=&#039;some_name&#039;}</pre></p></li>											 	
-	 <li><p><em>(optional)</em> dateformat=&#039;d.m.y h:m&#039; - default is d.m.y h:m , use the format you whish (php -date- format)</p><p>Example: <pre>{recently_updated dateformat=&#039;D M j G:i:s T Y&#039;}</pre></p></li>											 	
-	</ul>
-	<p>or combined:</p>
+$lang['admin']['help_function_recently_updated'] = '	<h3>What does this do?</h3>
+
+	<p>Outputs a list of recently updated pages.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{recently_updated}</code></p>
+
+	<h3>What parameters does it take?</h3>
+
+	<ul>
+
+	 <li><p><em>(optional)</em> number=&#039;10&#039; - Number of updated pages to show.</p><p>Example: <pre>{recently_updated number=&#039;15&#039;}</pre></p></li>
+
+ 	 <li><p><em>(optional)</em> leadin=&#039;Last changed&#039; - Text to show left of the modified date.</p><p>Example: <pre>{recently_updated leadin=&#039;Last Changed&#039;}</pre></p></li>
+
+ 	 <li><p><em>(optional)</em> showtitle=&#039;true&#039; - Shows the titleattribute if it exists as well (true|false).</p><p>Example: <pre>{recently_updated showtitle=&#039;true&#039;}</pre></p></li>											 	
+
+	 <li><p><em>(optional)</em> css_class=&#039;some_name&#039; - Warp a div tag with this class around the list.</p><p>Example: <pre>{recently_updated css_class=&#039;some_name&#039;}</pre></p></li>											 	
+
+	 <li><p><em>(optional)</em> dateformat=&#039;d.m.y h:m&#039; - default is d.m.y h:m , use the format you whish (php -date- format)</p><p>Example: <pre>{recently_updated dateformat=&#039;D M j G:i:s T Y&#039;}</pre></p></li>											 	
+
+	</ul>
+
+	<p>or combined:</p>
+
 	<pre>{recently_updated number=&#039;15&#039; showtitle=&#039;false&#039; leadin=&#039;Last Change: &#039; css_class=&#039;my_changes&#039; dateformat=&#039;D M j G:i:s T Y&#039;}</pre>';
-$lang['admin']['help_function_print'] = '	<h3>What does this do?</h3>
-	<p>This is actually just a wrapper tag for the <a href="listmodules.php?action=showmodulehelp&amp;module=Printing">Printing module</a> to make the tag syntax easier. 
-	Instead of having to use <code>{cms_module module=&#039;Printing&#039;}</code> you can now just use <code>{print}</code> to insert the module on pages and templates.
-	</p>
-	<h3>How do I use it?</h3>
+$lang['admin']['help_function_print'] = '	<h3>What does this do?</h3>
+
+	<p>This is actually just a wrapper tag for the <a href="listmodules.php?action=showmodulehelp&amp;module=Printing">Printing module</a> to make the tag syntax easier. 
+
+	Instead of having to use <code>{cms_module module=&#039;Printing&#039;}</code> you can now just use <code>{print}</code> to insert the module on pages and templates.
+
+	</p>
+
+	<h3>How do I use it?</h3>
+
 	<p>Just put <code>{print}</code> on a page or in a template. For help about the Printing module, what parameters it takes etc., please refer to the <a href="listmodules.php?action=showmodulehelp&amp;module=Printing">Printing module help</a>.';
-$lang['admin']['help_function_oldprint'] = '	<h3>What does this do?</h3>
-	<p>Creates a link to only the content of the page.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{oldprint}</code><br></p>
-        <h3>What parameters does it take?</h3>
-        <ul>
-                <li><em>(optional)</em> goback - Set to &quot;true&quot; to show a &quot;Go Back&quot; link on the page to print.</li>
-                <li><em>(optional)</em> popup - Set to &quot;true&quot; and page for printing will by opened in new window.</li>
-                <li><em>(optional)</em> script - Set to &quot;true&quot; and in print page will by used java script for run print of page.</li>
-                <li><em>(optional)</em> showbutton - Set to &quot;true&quot; and will show a printer graphic instead of a text link.</li>
-                <li><em>(optional)</em> class - class for the link, defaults to &quot;noprint&quot;.</li>
-                <li><em>(optional)</em> text - Text to use instead of &quot;Print This Page&quot; for the print link.
-                <li><em>(optional)</em> title - Text to show for title attribute. If blank show text parameter.</li>
-                <li><em>(optional)</em> more - Place additional options inside the <a> link.</li>
-                <li><em>(optional)</em> src_img - Show this image file. Default images/cms/printbutton.gif.</li>
-                <li><em>(optional)</em> class_img - Class of <img> tag if showbutton is sets.</li>
-
-                    <p>Example:</p>
-                     <pre>{oldprint text=&quot;Printable Page&quot;}</pre>      
-                     </li>
+$lang['admin']['help_function_oldprint'] = '	<h3>What does this do?</h3>
+
+	<p>Creates a link to only the content of the page.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{oldprint}</code><br></p>
+
+        <h3>What parameters does it take?</h3>
+
+        <ul>
+
+                <li><em>(optional)</em> goback - Set to &quot;true&quot; to show a &quot;Go Back&quot; link on the page to print.</li>
+
+                <li><em>(optional)</em> popup - Set to &quot;true&quot; and page for printing will by opened in new window.</li>
+
+                <li><em>(optional)</em> script - Set to &quot;true&quot; and in print page will by used java script for run print of page.</li>
+
+                <li><em>(optional)</em> showbutton - Set to &quot;true&quot; and will show a printer graphic instead of a text link.</li>
+
+                <li><em>(optional)</em> class - class for the link, defaults to &quot;noprint&quot;.</li>
+
+                <li><em>(optional)</em> text - Text to use instead of &quot;Print This Page&quot; for the print link.
+
+                <li><em>(optional)</em> title - Text to show for title attribute. If blank show text parameter.</li>
+
+                <li><em>(optional)</em> more - Place additional options inside the <a> link.</li>
+
+                <li><em>(optional)</em> src_img - Show this image file. Default images/cms/printbutton.gif.</li>
+
+                <li><em>(optional)</em> class_img - Class of <img> tag if showbutton is sets.</li>
+
+
+
+                    <p>Example:</p>
+
+                     <pre>{oldprint text=&quot;Printable Page&quot;}</pre>      
+
+                     </li>
+
         </ul>';
 $lang['admin']['login_info_title'] = 'Tietoja';
 $lang['admin']['login_info'] = 'T&auml;st&auml; eteenp&auml;in seuraavat parametrit otetaan huomioon';
-$lang['admin']['login_info_params'] = '<ol> 
-  <li>Cookies enabled in your browser</li> 
-  <li>Javascript enabled in your browser </li> 
-  <li>Windows popup active to the following address:</li> 
+$lang['admin']['login_info_params'] = '<ol> 
+
+  <li>Cookies enabled in your browser</li> 
+
+  <li>Javascript enabled in your browser </li> 
+
+  <li>Windows popup active to the following address:</li> 
+
 </ol>';
-$lang['admin']['help_function_news'] = '	<h3>What does this do?</h3>
-	<p>This is actually just a wrapper tag for the <a href="listmodules.php?action=showmodulehelp&amp;module=News">News module</a> to make the tag syntax easier. 
-	Instead of having to use <code>{cms_module module=&#039;News&#039;}</code> you can now just use <code>{news}</code> to insert the module on pages and templates.
-	</p>
-	<h3>How do I use it?</h3>
+$lang['admin']['help_function_news'] = '	<h3>What does this do?</h3>
+
+	<p>This is actually just a wrapper tag for the <a href="listmodules.php?action=showmodulehelp&amp;module=News">News module</a> to make the tag syntax easier. 
+
+	Instead of having to use <code>{cms_module module=&#039;News&#039;}</code> you can now just use <code>{news}</code> to insert the module on pages and templates.
+
+	</p>
+
+	<h3>How do I use it?</h3>
+
 	<p>Just put <code>{news}</code> on a page or in a template. For help about the News module, what parameters it takes etc., please refer to the <a href="listmodules.php?action=showmodulehelp&amp;module=News">News module help</a>.';
-$lang['admin']['help_function_modified_date'] = '        <h3>What does this do?</h3>
-        <p>Prints the date and time the page was last modified.  If no format is given, it will default to a format similar to &#039;Jan 01, 2004&#039;.</p>
-        <h3>How do I use it?</h3>
-        <p>Just insert the tag into your template/page like: <code>{modified_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code></p>
-        <h3>What parameters does it take?</h3>
-        <ul>
-                <li><em>(optional)</em>format - Date/Time format using parameters from php&#039;s strftime function.  See <a href="http://php.net/strftime" target="_blank">here</a> for a parameter list and information.</li>
+$lang['admin']['help_function_modified_date'] = '        <h3>What does this do?</h3>
+
+        <p>Prints the date and time the page was last modified.  If no format is given, it will default to a format similar to &#039;Jan 01, 2004&#039;.</p>
+
+        <h3>How do I use it?</h3>
+
+        <p>Just insert the tag into your template/page like: <code>{modified_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code></p>
+
+        <h3>What parameters does it take?</h3>
+
+        <ul>
+
+                <li><em>(optional)</em>format - Date/Time format using parameters from php&#039;s strftime function.  See <a href="http://php.net/strftime" target="_blank">here</a> for a parameter list and information.</li>
+
         </ul>';
-$lang['admin']['help_function_metadata'] = '	<h3>What does this do?</h3>
-	<p>Displays the metadata for this page. Both global metdata from the global settings page and metadata for each page will be shown.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template like: <code>{metadata}</code></p>
-	<h3>What parameters does it take?</h3>
-	<ul>
-		<li><em>(optional)</em>showbase (true/false) - If set to false, the base tag will not be sent to the browser.  Defaults to true if use_hierarchy is set to true in config.php.</li>
+$lang['admin']['help_function_metadata'] = '	<h3>What does this do?</h3>
+
+	<p>Displays the metadata for this page. Both global metdata from the global settings page and metadata for each page will be shown.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template like: <code>{metadata}</code></p>
+
+	<h3>What parameters does it take?</h3>
+
+	<ul>
+
+		<li><em>(optional)</em>showbase (true/false) - If set to false, the base tag will not be sent to the browser.  Defaults to true if use_hierarchy is set to true in config.php.</li>
+
 	</ul>';
-$lang['admin']['help_function_menu_text'] = '	<h3>What does this do?</h3>
-	<p>Prints the menu text of the page.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{menu_text}</code></p>
-	<h3>What parameters does it take?</h3>
+$lang['admin']['help_function_menu_text'] = '	<h3>What does this do?</h3>
+
+	<p>Prints the menu text of the page.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{menu_text}</code></p>
+
+	<h3>What parameters does it take?</h3>
+
 	<p>None at this time.</p>';
-$lang['admin']['help_function_menu'] = '	<h3>What does this do?</h3>
-	<p>This is actually just a wrapper tag for the <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">Menu Manager module</a> to make the tag syntax easier. 
-	Instead of having to use <code>{cms_module module=&#039;MenuManager&#039;}</code> you can now just use <code>{menu}</code> to insert the module on pages and templates.
-	</p>
-	<h3>How do I use it?</h3>
+$lang['admin']['help_function_menu'] = '	<h3>What does this do?</h3>
+
+	<p>This is actually just a wrapper tag for the <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">Menu Manager module</a> to make the tag syntax easier. 
+
+	Instead of having to use <code>{cms_module module=&#039;MenuManager&#039;}</code> you can now just use <code>{menu}</code> to insert the module on pages and templates.
+
+	</p>
+
+	<h3>How do I use it?</h3>
+
 	<p>Just put <code>{menu}</code> on a page or in a template. For help about the Menu Manager module, what parameters it takes etc., please refer to the <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">Menu Manager module help</a>.';
-$lang['admin']['help_function_last_modified_by'] = '        <h3>What does this do?</h3>
-        <p>Prints last person that edited this page.  If no format is given, it will default to a ID number of user .</p>
-        <h3>How do I use it?</h3>
-        <p>Just insert the tag into your template/page like: <code>{last_modified_by format=&quot;fullname&quot;}</code></p>
-        <h3>What parameters does it take?</h3>
-        <ul>
-                <li><em>(optional)</em>format - id, username, fullname</li>
+$lang['admin']['help_function_last_modified_by'] = '        <h3>What does this do?</h3>
+
+        <p>Prints last person that edited this page.  If no format is given, it will default to a ID number of user .</p>
+
+        <h3>How do I use it?</h3>
+
+        <p>Just insert the tag into your template/page like: <code>{last_modified_by format=&quot;fullname&quot;}</code></p>
+
+        <h3>What parameters does it take?</h3>
+
+        <ul>
+
+                <li><em>(optional)</em>format - id, username, fullname</li>
+
         </ul>';
-$lang['admin']['help_function_image'] = '  <h3>What does this do?</h3>
-  <p>Creates an image tag to an image stored within your images directory</p>
-  <h3>How do I use it?</h3>
-  <p>Just insert the tag into your template/page like: <code>{image src=&quot;something.jpg&quot;}</code></p>
-  <h3>What parameters does it take?</h3>
-  <ul>
-     <li><em>(required)</em>  <tt>src</tt> - Image filename within your images directory.</li>
-     <li><em>(optional)</em>  <tt>width</tt> - Width of the image within the page. Defaults to true size.</li>
-     <li><em>(optional)</em>  <tt>height</tt> - Height of the image within the page. Defaults to true size.</li>
-     <li><em>(optional)</em>  <tt>alt</tt> - Alt text for the image -- needed for xhtml compliance. Defaults to filename.</li>
-     <li><em>(optional)</em>  <tt>class</tt> - CSS class for the image.</li>
-     <li><em>(optional)</em>  <tt>title</tt> - Mouse over text for the image. Defaults to Alt text.</li>
-     <li><em>(optional)</em>  <tt>addtext</tt> - Additional text to put into the tag</li>
+$lang['admin']['help_function_image'] = '  <h3>What does this do?</h3>
+
+  <p>Creates an image tag to an image stored within your images directory</p>
+
+  <h3>How do I use it?</h3>
+
+  <p>Just insert the tag into your template/page like: <code>{image src=&quot;something.jpg&quot;}</code></p>
+
+  <h3>What parameters does it take?</h3>
+
+  <ul>
+
+     <li><em>(required)</em>  <tt>src</tt> - Image filename within your images directory.</li>
+
+     <li><em>(optional)</em>  <tt>width</tt> - Width of the image within the page. Defaults to true size.</li>
+
+     <li><em>(optional)</em>  <tt>height</tt> - Height of the image within the page. Defaults to true size.</li>
+
+     <li><em>(optional)</em>  <tt>alt</tt> - Alt text for the image -- needed for xhtml compliance. Defaults to filename.</li>
+
+     <li><em>(optional)</em>  <tt>class</tt> - CSS class for the image.</li>
+
+     <li><em>(optional)</em>  <tt>title</tt> - Mouse over text for the image. Defaults to Alt text.</li>
+
+     <li><em>(optional)</em>  <tt>addtext</tt> - Additional text to put into the tag</li>
+
   </ul>';
-$lang['admin']['help_function_html_blob'] = '	<h3>What does this do?</h3>
+$lang['admin']['help_function_html_blob'] = '	<h3>What does this do?</h3>
+
 	<p>See the help for global_content for a description.</p>';
-$lang['admin']['help_function_google_search'] = '	<h3>What does this do?</h3>
-	<p>Search&#039;s your website using Google&#039;s search engine.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{google_search}</code><br>
-	<br>
-	Note: Google needs to have your website indexed for this to work. You can submit your website to google <a href="http://www.google.com/addurl.html">here</a>.</p>
-	<h3>What if I want to change the look of the textbox or button?</h3>
-	<p>The look of the textbox and button can be changed via css. The textbox is given an id of textSearch and the button is given an id of buttonSearch.</p>
-
-	<h3>What parameters does it take?</h3>
-	<ul>
-		<li><em>(optional)</em> domain - This tells google the website domain to search. This script tries to determine this automatically.</li>
-		<li><em>(optional)</em> buttonText - The text you want to display on the search button. The default is &quot;Search Site&quot;.</li>
-	</ul>
+$lang['admin']['help_function_google_search'] = '	<h3>What does this do?</h3>
+
+	<p>Search&#039;s your website using Google&#039;s search engine.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{google_search}</code><br>
+
+	<br>
+
+	Note: Google needs to have your website indexed for this to work. You can submit your website to google <a href="http://www.google.com/addurl.html">here</a>.</p>
+
+	<h3>What if I want to change the look of the textbox or button?</h3>
+
+	<p>The look of the textbox and button can be changed via css. The textbox is given an id of textSearch and the button is given an id of buttonSearch.</p>
+
+
+
+	<h3>What parameters does it take?</h3>
+
+	<ul>
+
+		<li><em>(optional)</em> domain - This tells google the website domain to search. This script tries to determine this automatically.</li>
+
+		<li><em>(optional)</em> buttonText - The text you want to display on the search button. The default is &quot;Search Site&quot;.</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['help_function_global_content'] = '	<h3>What does this do?</h3>
-	<p>Inserts a global content block into your template or page.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{global_content name=&#039;myblob&#039;}</code>, where name is the name given to the block when it was created.</p>
-	<h3>What parameters does it take?</h3>
-	<ul>
-		<li>name - The name of the global content block to display.</li>
+$lang['admin']['help_function_global_content'] = '	<h3>What does this do?</h3>
+
+	<p>Inserts a global content block into your template or page.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{global_content name=&#039;myblob&#039;}</code>, where name is the name given to the block when it was created.</p>
+
+	<h3>What parameters does it take?</h3>
+
+	<ul>
+
+		<li>name - The name of the global content block to display.</li>
+
 	</ul>';
-$lang['admin']['help_function_get_template_vars'] = '	<h3>What does this do?</h3>
-	<p>Dumps all the known smarty variables into your page</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{get_template_vars}</code></p>
-	<h3>What parameters does it take?</h3>
+$lang['admin']['help_function_get_template_vars'] = '	<h3>What does this do?</h3>
+
+	<p>Dumps all the known smarty variables into your page</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{get_template_vars}</code></p>
+
+	<h3>What parameters does it take?</h3>
+
 											  <p>None at this time</p>';
-$lang['admin']['help_function_embed'] = '	<h3>What does this do?</h3>
-	<p>Enable inclusion (embeding) of any other application into the CMS. The most usual use could be a forum. 
-	This implementation is using IFRAMES so older browsers can have problems. Sorry bu this is the only known way 
-	that works without modifing the embeded application.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{embed url=http://www.google.com/}</code><br></p>
-        <h4>Example to make the iframe larger</h4>
-	<p>Add the following to your style sheet:</p>
-        <pre>#myframe { height: 600px; }</pre>
-        <h3>What parameters does it take?</h3>
-        <ul>
-               <li><em>(required)</em>url - the url to be included 
-               <li><em>(optional)</em>header=true - this will generate the header code for good resizing of the IFRAME.</li>
-
-        </ul>
+$lang['admin']['help_function_embed'] = '	<h3>What does this do?</h3>
+
+	<p>Enable inclusion (embeding) of any other application into the CMS. The most usual use could be a forum. 
+
+	This implementation is using IFRAMES so older browsers can have problems. Sorry bu this is the only known way 
+
+	that works without modifing the embeded application.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{embed url=http://www.google.com/}</code><br></p>
+
+        <h4>Example to make the iframe larger</h4>
+
+	<p>Add the following to your style sheet:</p>
+
+        <pre>#myframe { height: 600px; }</pre>
+
+        <h3>What parameters does it take?</h3>
+
+        <ul>
+
+               <li><em>(required)</em>url - the url to be included 
+
+               <li><em>(optional)</em>header=true - this will generate the header code for good resizing of the IFRAME.</li>
+
+
+
+        </ul>
+
        <p>You must include in your page content {embed url=..} and in the &quot;Metadata:&quot; section (advanced tab) you must put {embed header=true}. Also be sure to put this in between the &quot;head&quot; tags of your template: {metadata}</p>';
-$lang['admin']['help_function_edit'] = '	<h3>What does this do?</h3>
-	<p>Creates a link to edit the page</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{edit}</code><br></p>
-        <h3>What parameters does it take?</h3>
-        <ul>
-                <li><em>(optional)</em>showbutton - Set to &quot;true&quot; and will show a edit graphic instead of a text link.</li>
+$lang['admin']['help_function_edit'] = '	<h3>What does this do?</h3>
+
+	<p>Creates a link to edit the page</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{edit}</code><br></p>
+
+        <h3>What parameters does it take?</h3>
+
+        <ul>
+
+                <li><em>(optional)</em>showbutton - Set to &quot;true&quot; and will show a edit graphic instead of a text link.</li>
+
         </ul>';
-$lang['admin']['help_function_description'] = '	<h3>What does this do?</h3>
-	<p>Prints the description (title attribute) of the page.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{description}</code></p>
-	<h3>What parameters does it take?</h3>
+$lang['admin']['help_function_description'] = '	<h3>What does this do?</h3>
+
+	<p>Prints the description (title attribute) of the page.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{description}</code></p>
+
+	<h3>What parameters does it take?</h3>
+
 	<p>None at this time.</p>';
-$lang['admin']['help_function_created_date'] = '        <h3>What does this do?</h3>
-        <p>Prints the date and time the page was created.  If no format is given, it will default to a format similar to &#039;Jan 01, 2004&#039;.</p>
-        <h3>How do I use it?</h3>
-        <p>Just insert the tag into your template/page like: <code>{created_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code></p>
-        <h3>What parameters does it take?</h3>
-        <ul>
-                <li><em>(optional)</em>format - Date/Time format using parameters from php&#039;s strftime function.  See <a href="http://php.net/strftime" target="_blank">here</a> for a parameter list and information.</li>
+$lang['admin']['help_function_created_date'] = '        <h3>What does this do?</h3>
+
+        <p>Prints the date and time the page was created.  If no format is given, it will default to a format similar to &#039;Jan 01, 2004&#039;.</p>
+
+        <h3>How do I use it?</h3>
+
+        <p>Just insert the tag into your template/page like: <code>{created_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code></p>
+
+        <h3>What parameters does it take?</h3>
+
+        <ul>
+
+                <li><em>(optional)</em>format - Date/Time format using parameters from php&#039;s strftime function.  See <a href="http://php.net/strftime" target="_blank">here</a> for a parameter list and information.</li>
+
         </ul>';
-$lang['admin']['help_function_content'] = '	<h3>What does this do?</h3>
-	<p>This is where the content for your page will be displayed.  It&#039;s inserted into the template and changed based on the current page being displayed.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template like: <code>{content}</code>.</p>
-	<h3>What parameters does it take?</h3>
-	<ul>
-		<li><em>(optional)</em>block - Allows you to have more than one content block per page.  When multiple content tags are put on a template, that number of edit boxes will be displayed when the page is edited.
-<p>Example:</p>
-<pre>{content block=&quot;Second Content Block&quot;}</pre>
-<p>Now, when you edit a page there will a textarea called &quot;Second Content Block&quot;.</li>
-		<li><em>(optional)</em>wysiwyg (true/false) - If set to false, then a wysiwyg will never be used while editing this block.  If true, then it acts as normal.  Only works when block parameter is used.</li>
-		<li><em>(optional)</em>oneline (true/false) - If set to true, then only one edit line will be shown while editing this block.  If false, then it acts as normal.  Only works when block parameter is used.</li>
-		<li><em>(optional)</em>default - Allows you to specify default content content for this content blocks (additional content blocks only).</li>
-		<li><em>(optional)</em>assign - Assigns the content to a smarty parameter, which you can then use in other areas of the page, or use to test whether content exists in it or not.
-<p>Example of passing page content to a User Defined Tag as a parameter:</p>
-<pre>
-         {content assign=pagecontent}
-         {table_of_contents thepagecontent=&quot;$pagecontent&quot;}
-</pre>
-</li>
+$lang['admin']['help_function_content'] = '	<h3>What does this do?</h3>
+
+	<p>This is where the content for your page will be displayed.  It&#039;s inserted into the template and changed based on the current page being displayed.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template like: <code>{content}</code>.</p>
+
+	<h3>What parameters does it take?</h3>
+
+	<ul>
+
+		<li><em>(optional)</em>block - Allows you to have more than one content block per page.  When multiple content tags are put on a template, that number of edit boxes will be displayed when the page is edited.
+
+<p>Example:</p>
+
+<pre>{content block=&quot;Second Content Block&quot;}</pre>
+
+<p>Now, when you edit a page there will a textarea called &quot;Second Content Block&quot;.</li>
+
+		<li><em>(optional)</em>wysiwyg (true/false) - If set to false, then a wysiwyg will never be used while editing this block.  If true, then it acts as normal.  Only works when block parameter is used.</li>
+
+		<li><em>(optional)</em>oneline (true/false) - If set to true, then only one edit line will be shown while editing this block.  If false, then it acts as normal.  Only works when block parameter is used.</li>
+
+		<li><em>(optional)</em>default - Allows you to specify default content content for this content blocks (additional content blocks only).</li>
+
+		<li><em>(optional)</em>assign - Assigns the content to a smarty parameter, which you can then use in other areas of the page, or use to test whether content exists in it or not.
+
+<p>Example of passing page content to a User Defined Tag as a parameter:</p>
+
+<pre>
+
+         {content assign=pagecontent}
+
+         {table_of_contents thepagecontent=&quot;$pagecontent&quot;}
+
+</pre>
+
+</li>
+
 	</ul>';
-$lang['admin']['help_function_contact_form'] = '  <h2>NOTE: This plugin is deprecated</h2>
-    <p>This smarty plugin is deprecated, and may not be included with further versions of CMS Made Simple.  We recommend you use the formbuilder module and it&#039;s included contact form.</p>
-	<h3>What does this do?</h3>
-	<p>Display&#039;s a contact form. This can be used to allow others to send an email message to the address specified.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{contact_form email=&quot;yourname@yourdomain.com&quot;}</code><br>
-	<br>
-	If you would like to send an email to multiple adresses, seperate each address with a comma.</p>
-	<h3>What parameters does it take?</h3>
-	<ul>
-		<li>email - The email address that the message will be sent to.</li>
-		<li><em>(optional)</em>style - true/false, use the predefined styles. Default is true.</li>
-		<li><em>(optional)</em>subject_get_var - string, allows you to specify which _GET var to use as the default value for subject.
-               <p>Example:</p>
-               <pre>{contact_form email=&quot;yourname@yourdomain.com&quot; subject_get_var=&quot;subject&quot;}</pre>
-             <p>Then call the page with the form on it like this: /index.php?page=contact&amp;subject=test+subject</p>
-             <p>And the following will appear in the &quot;Subject&quot; box: &quot;test subject&quot;
-           </li>
-		<li><em>(optional)</em>captcha - true/false, use Captcha response test (Captcha module must be installed). Default is false.</li>
-	</ul>
+$lang['admin']['help_function_contact_form'] = '  <h2>NOTE: This plugin is deprecated</h2>
+
+    <p>This smarty plugin is deprecated, and may not be included with further versions of CMS Made Simple.  We recommend you use the formbuilder module and it&#039;s included contact form.</p>
+
+	<h3>What does this do?</h3>
+
+	<p>Display&#039;s a contact form. This can be used to allow others to send an email message to the address specified.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{contact_form email=&quot;yourname@yourdomain.com&quot;}</code><br>
+
+	<br>
+
+	If you would like to send an email to multiple adresses, seperate each address with a comma.</p>
+
+	<h3>What parameters does it take?</h3>
+
+	<ul>
+
+		<li>email - The email address that the message will be sent to.</li>
+
+		<li><em>(optional)</em>style - true/false, use the predefined styles. Default is true.</li>
+
+		<li><em>(optional)</em>subject_get_var - string, allows you to specify which _GET var to use as the default value for subject.
+
+               <p>Example:</p>
+
+               <pre>{contact_form email=&quot;yourname@yourdomain.com&quot; subject_get_var=&quot;subject&quot;}</pre>
+
+             <p>Then call the page with the form on it like this: /index.php?page=contact&amp;subject=test+subject</p>
+
+             <p>And the following will appear in the &quot;Subject&quot; box: &quot;test subject&quot;
+
+           </li>
+
+		<li><em>(optional)</em>captcha - true/false, use Captcha response test (Captcha module must be installed). Default is false.</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['help_function_cms_versionname'] = '	<h3>What does this do?</h3>
-	<p>This tag is used to insert the current version name of CMS into your template or page.  It doesn&#039;t display any extra besides the version name.</p>
-	<h3>How do I use it?</h3>
-	<p>This is just a basic tag plugin.  You would insert it into your template or page like so: <code>{cms_versionname}</code>
-	<h3>What parameters does it take?</h3>
+$lang['admin']['help_function_cms_versionname'] = '	<h3>What does this do?</h3>
+
+	<p>This tag is used to insert the current version name of CMS into your template or page.  It doesn&#039;t display any extra besides the version name.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>This is just a basic tag plugin.  You would insert it into your template or page like so: <code>{cms_versionname}</code>
+
+	<h3>What parameters does it take?</h3>
+
 	<p>It takes no parameters.</p>';
-$lang['admin']['help_function_cms_version'] = '	<h3>What does this do?</h3>
-	<p>This tag is used to insert the current version number of CMS into your template or page.  It doesn&#039;t display any extra besides the version number.</p>
-	<h3>How do I use it?</h3>
-	<p>This is just a basic tag plugin.  You would insert it into your template or page like so: <code>{cms_version}</code>
-	<h3>What parameters does it take?</h3>
+$lang['admin']['help_function_cms_version'] = '	<h3>What does this do?</h3>
+
+	<p>This tag is used to insert the current version number of CMS into your template or page.  It doesn&#039;t display any extra besides the version number.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>This is just a basic tag plugin.  You would insert it into your template or page like so: <code>{cms_version}</code>
+
+	<h3>What parameters does it take?</h3>
+
 	<p>It takes no parameters.</p>';
-$lang['admin']['about_function_cms_selflink'] = '		<p>Author: Ted Kulp <tedkulp@users.sf.net></p>
-		<p>Version: 1.1</p>
-		<p>Modified: Martin B. Vestergaard <mbv@nospam.dk></p>
-		<p>Version: 1.41</p>
-		<p>Modified: Russ Baldwin</p>
-		<p>Version: 1.42</p>
-		<p>Modified: Marcus Bointon <coolbru@users.sf.net></p>
-		<p>Version: 1.43</p>
-		<p>Modified: Tatu Wikman <tsw@backspace.fi></p>
-		<p>Version: 1.44</p>
-		<p>Modified: Hans Mogren <http://hans.bymarken.net/></p>
-		<p>Version: 1.45</p>
-
-		<p>
-		Change History:<br/>
-		1.46 - Fixes a problem with too many queries when using the dir=start option.<br/>
-		1.45 - Added a new option for &quot;dir&quot;, &quot;up&quot;, for links to the parent page e.g. dir=&quot;up&quot; (Hans Mogren).<br />
-		1.44 - Added new parameters &quot;ext&quot; and &quot;ext_info&quot; to allow external links with class=&quot;external&quot; and info text after the link, ugly hack but works thinking about rewriting this(Tatu Wikman)<br />
-		1.43 - Added new parameters &quot;image&quot; and &quot;imageonly&quot; to allow attachment of images to be used for page links, either instead of or in addition to text links. (Marcus Bointon)<br />
-		1.42 - Added new parameter &quot;anchorlink&quot; and a new option for &quot;dir&quot; namely, &quot;anchor&quot;, for internal page links. e.g. dir=&quot;anchor&quot; anchorlink=&quot;internal_link&quot;. (Russ)<br />
-		1.41 - added new parameter &quot;href&quot; (LeisureLarry)<br />
-		1.4 - fixed bug next/prev linking to non-content pages. (Thanks Teemu Koistinen for this fix)<br />
-		1.3 - added option &quot;more&quot;<br />
-		1.2 - by Martin B. Vestergaard
-		<ul>
-		<li>changed default text to Page Name (was Page Alias)</li>
-		<li>added option dir=next/prev to display next or previous item in the hirachy - thanks to 100rk</li>
-		<li>added option class to add a class= statement to the a-tag.</li>
-		<li>added option menu to display menu-text in sted of Page Name</li>
-		<li>added option lang to display link-labels in different languages</li>
-		</ul>
-		1.1 - Changed to new content system<br />
-		1.0 - Initial release
+$lang['admin']['about_function_cms_selflink'] = '		<p>Author: Ted Kulp <tedkulp@users.sf.net></p>
+
+		<p>Version: 1.1</p>
+
+		<p>Modified: Martin B. Vestergaard <mbv@nospam.dk></p>
+
+		<p>Version: 1.41</p>
+
+		<p>Modified: Russ Baldwin</p>
+
+		<p>Version: 1.42</p>
+
+		<p>Modified: Marcus Bointon <coolbru@users.sf.net></p>
+
+		<p>Version: 1.43</p>
+
+		<p>Modified: Tatu Wikman <tsw@backspace.fi></p>
+
+		<p>Version: 1.44</p>
+
+		<p>Modified: Hans Mogren <http://hans.bymarken.net/></p>
+
+		<p>Version: 1.45</p>
+
+
+
+		<p>
+
+		Change History:<br/>
+
+		1.46 - Fixes a problem with too many queries when using the dir=start option.<br/>
+
+		1.45 - Added a new option for &quot;dir&quot;, &quot;up&quot;, for links to the parent page e.g. dir=&quot;up&quot; (Hans Mogren).<br />
+
+		1.44 - Added new parameters &quot;ext&quot; and &quot;ext_info&quot; to allow external links with class=&quot;external&quot; and info text after the link, ugly hack but works thinking about rewriting this(Tatu Wikman)<br />
+
+		1.43 - Added new parameters &quot;image&quot; and &quot;imageonly&quot; to allow attachment of images to be used for page links, either instead of or in addition to text links. (Marcus Bointon)<br />
+
+		1.42 - Added new parameter &quot;anchorlink&quot; and a new option for &quot;dir&quot; namely, &quot;anchor&quot;, for internal page links. e.g. dir=&quot;anchor&quot; anchorlink=&quot;internal_link&quot;. (Russ)<br />
+
+		1.41 - added new parameter &quot;href&quot; (LeisureLarry)<br />
+
+		1.4 - fixed bug next/prev linking to non-content pages. (Thanks Teemu Koistinen for this fix)<br />
+
+		1.3 - added option &quot;more&quot;<br />
+
+		1.2 - by Martin B. Vestergaard
+
+		<ul>
+
+		<li>changed default text to Page Name (was Page Alias)</li>
+
+		<li>added option dir=next/prev to display next or previous item in the hirachy - thanks to 100rk</li>
+
+		<li>added option class to add a class= statement to the a-tag.</li>
+
+		<li>added option menu to display menu-text in sted of Page Name</li>
+
+		<li>added option lang to display link-labels in different languages</li>
+
+		</ul>
+
+		1.1 - Changed to new content system<br />
+
+		1.0 - Initial release
+
 		</p>';
-$lang['admin']['help_function_cms_selflink'] = '		<h3>What does this do?</h3>
-		<p>Creates a link to another CMSMS content page inside your template or content. Can also be used for external links with the ext parameter.</p>
-		<h3>How do I use it?</h3>
-		<p>Just insert the tag into your template/page like: <code>{cms_selflink page=&quot;1&quot;}</code> or  <code>{cms_selflink page=&quot;alias&quot;}</code></p>
-		<h3>What parameters does it take?</h3>
-		<p>
-		<ul>
-		<li><em>(optional)</em> <tt>page</tt> - Page ID or alias to link to.</li>
-		<li><em>(optional)</em> <tt>dir anchor (internal links)</tt> - New option for an internal page link. If this is used then <tt>anchorlink</tt> should be set to your link. </li> <!-- Russ - 25-04-2006 -->
-		<li><em>(optional)</em> <tt>anchorlink</tt> - New paramater for an internal page link. If this is used then <tt>dir =&quot;anchor&quot;</tt> should also be set. No need to add the #, because it is added automatically.</li> <!-- Russ - 25-04-2006 -->
-		<li><em>(optional)</em> <tt>urlparam</tt> - Specify additional parameters to the URL.  <strong>Do not use this in conjunction with the <em>anchorlink</em> parameter</em></strong>
-		<li><em>(optional)</em> <tt>tabindex =&quot;a value&quot;</tt> - Set a tabindex for the link.</li> <!-- Russ - 22-06-2005 -->
-		<li><em>(optional)</em> <tt>dir start/next/prev/up (previous)</tt> - Links to the default start page or the next or previous page, or the parent page (up). If this is used <tt>page</tt> should not be set.</li> <!-- mbv - 21-06-2005 -->
-		<B>Note!</B> Only one of the above may be used in the same cms_selflink statement!!
-		<li><em>(optional)</em> <tt>text</tt> - Text to show for the link.  If not given, the Page Name is used instead.</li>
-		<li><em>(optional)</em> <tt>menu 1/0</tt> - If 1 the Menu Text is used for the link text instead of the Page Name</li> <!-- mbv - 21-06-2005 -->
-		<li><em>(optional)</em> <tt>target</tt> - Optional target for the a link to point to.  Useful for frame and javascript situations.</li>
-		<li><em>(optional)</em> <tt>class</tt> - Class for the <a> link. Useful for styling the link.</li> <!-- mbv - 21-06-2005 -->
-		<li><em>(optional)</em> <tt>lang</tt> - Display link-labels  (&quot;Next Page&quot;/&quot;Previous Page&quot;) in different languages (0 for no label.) Danish (dk), English (en) or French (fr), for now.</li> <!-- mbv - 21-06-2005 -->
-		<li><em>(optional)</em> <tt>id</tt> - Optional css_id for the <a> link.</li> <!-- mbv - 29-06-2005 -->
-		<li><em>(optional)</em> <tt>more</tt> - place additional options inside the <a> link.</li> <!-- mbv - 29-06-2005 -->
-		<li><em>(optional)</em> <tt>label</tt> - Label to use in with the link if applicable.</li>
-		<li><em>(optional)</em> <tt>label_side left/right</tt> - Side of link to place the label (defaults to &quot;left&quot;).</li>
-		<li><em>(optional)</em> <tt>title</tt> - Text to use in the title attribute.  If none is given, then the title of the page will be used for the title.</li>
-		<li><em>(optional)</em> <tt>rellink 1/0</tt> - Make a relational link for accessible navigation.  Only works if the dir parameter is set and should only go in the head section of a template.</li>
-		<li><em>(optional)</em> <tt>href</tt> - If href is used only the href value is generated (no other parameters possible). <strong>Example:</strong> <a href="{cms_selflink href="alias"}"><img src=&quot;&quot;></a></li>
-		<li><em>(optional)</em> <tt>image</tt> - A url of an image to use in the link. <strong>Example:</strong> {cms_selflink dir=&quot;next&quot; image=&quot;next.png&quot; text=&quot;Next&quot;}</li>
-		<li><em>(optional)</em> <tt>alt</tt> - Alternative text to be used with image (alt=&quot;&quot; will be used if no alt parameter is given).</li>
-		<li><em>(optional)</em> <tt>imageonly</tt> - If using an image, whether to suppress display of text links. If you want no text in the link at all, also set lang=0 to suppress the label. <B>Example:</B> {cms_selflink dir=&quot;next&quot; image=&quot;next.png&quot; text=&quot;Next&quot; imageonly=1}</li>
-		<li><em>(optional)</em> <tt>ext</tt> - For external links, will add class=&quot;external and info text. <strong>warning:</strong> only text, target and title parameters are compatible with this parameter</li>
-		<li><em>(optional)</em> <tt>ext_info</tt> - Used together with &quot;ext&quot; defaults to (external link)</li>
-		</ul>
+$lang['admin']['help_function_cms_selflink'] = '		<h3>What does this do?</h3>
+
+		<p>Creates a link to another CMSMS content page inside your template or content. Can also be used for external links with the ext parameter.</p>
+
+		<h3>How do I use it?</h3>
+
+		<p>Just insert the tag into your template/page like: <code>{cms_selflink page=&quot;1&quot;}</code> or  <code>{cms_selflink page=&quot;alias&quot;}</code></p>
+
+		<h3>What parameters does it take?</h3>
+
+		<p>
+
+		<ul>
+
+		<li><em>(optional)</em> <tt>page</tt> - Page ID or alias to link to.</li>
+
+		<li><em>(optional)</em> <tt>dir anchor (internal links)</tt> - New option for an internal page link. If this is used then <tt>anchorlink</tt> should be set to your link. </li> <!-- Russ - 25-04-2006 -->
+
+		<li><em>(optional)</em> <tt>anchorlink</tt> - New paramater for an internal page link. If this is used then <tt>dir =&quot;anchor&quot;</tt> should also be set. No need to add the #, because it is added automatically.</li> <!-- Russ - 25-04-2006 -->
+
+		<li><em>(optional)</em> <tt>urlparam</tt> - Specify additional parameters to the URL.  <strong>Do not use this in conjunction with the <em>anchorlink</em> parameter</em></strong>
+
+		<li><em>(optional)</em> <tt>tabindex =&quot;a value&quot;</tt> - Set a tabindex for the link.</li> <!-- Russ - 22-06-2005 -->
+
+		<li><em>(optional)</em> <tt>dir start/next/prev/up (previous)</tt> - Links to the default start page or the next or previous page, or the parent page (up). If this is used <tt>page</tt> should not be set.</li> <!-- mbv - 21-06-2005 -->
+
+		<B>Note!</B> Only one of the above may be used in the same cms_selflink statement!!
+
+		<li><em>(optional)</em> <tt>text</tt> - Text to show for the link.  If not given, the Page Name is used instead.</li>
+
+		<li><em>(optional)</em> <tt>menu 1/0</tt> - If 1 the Menu Text is used for the link text instead of the Page Name</li> <!-- mbv - 21-06-2005 -->
+
+		<li><em>(optional)</em> <tt>target</tt> - Optional target for the a link to point to.  Useful for frame and javascript situations.</li>
+
+		<li><em>(optional)</em> <tt>class</tt> - Class for the <a> link. Useful for styling the link.</li> <!-- mbv - 21-06-2005 -->
+
+		<li><em>(optional)</em> <tt>lang</tt> - Display link-labels  (&quot;Next Page&quot;/&quot;Previous Page&quot;) in different languages (0 for no label.) Danish (dk), English (en) or French (fr), for now.</li> <!-- mbv - 21-06-2005 -->
+
+		<li><em>(optional)</em> <tt>id</tt> - Optional css_id for the <a> link.</li> <!-- mbv - 29-06-2005 -->
+
+		<li><em>(optional)</em> <tt>more</tt> - place additional options inside the <a> link.</li> <!-- mbv - 29-06-2005 -->
+
+		<li><em>(optional)</em> <tt>label</tt> - Label to use in with the link if applicable.</li>
+
+		<li><em>(optional)</em> <tt>label_side left/right</tt> - Side of link to place the label (defaults to &quot;left&quot;).</li>
+
+		<li><em>(optional)</em> <tt>title</tt> - Text to use in the title attribute.  If none is given, then the title of the page will be used for the title.</li>
+
+		<li><em>(optional)</em> <tt>rellink 1/0</tt> - Make a relational link for accessible navigation.  Only works if the dir parameter is set and should only go in the head section of a template.</li>
+
+		<li><em>(optional)</em> <tt>href</tt> - If href is used only the href value is generated (no other parameters possible). <strong>Example:</strong> <a href="{cms_selflink href="alias"}"><img src=&quot;&quot;></a></li>
+
+		<li><em>(optional)</em> <tt>image</tt> - A url of an image to use in the link. <strong>Example:</strong> {cms_selflink dir=&quot;next&quot; image=&quot;next.png&quot; text=&quot;Next&quot;}</li>
+
+		<li><em>(optional)</em> <tt>alt</tt> - Alternative text to be used with image (alt=&quot;&quot; will be used if no alt parameter is given).</li>
+
+		<li><em>(optional)</em> <tt>imageonly</tt> - If using an image, whether to suppress display of text links. If you want no text in the link at all, also set lang=0 to suppress the label. <B>Example:</B> {cms_selflink dir=&quot;next&quot; image=&quot;next.png&quot; text=&quot;Next&quot; imageonly=1}</li>
+
+		<li><em>(optional)</em> <tt>ext</tt> - For external links, will add class=&quot;external and info text. <strong>warning:</strong> only text, target and title parameters are compatible with this parameter</li>
+
+		<li><em>(optional)</em> <tt>ext_info</tt> - Used together with &quot;ext&quot; defaults to (external link)</li>
+
+		</ul>
+
 		</p>';
-$lang['admin']['about_function_cms_module'] = '	<p>Author: Ted Kulp<tedkulp@users.sf.net></p>
-	<p>Version: 1.0</p>
-	<p>
-	Change History:<br/>
-	None
+$lang['admin']['about_function_cms_module'] = '	<p>Author: Ted Kulp<tedkulp@users.sf.net></p>
+
+	<p>Version: 1.0</p>
+
+	<p>
+
+	Change History:<br/>
+
+	None
+
 	</p>';
-$lang['admin']['help_function_cms_module'] = '	<h3>What does this do?</h3>
-	<p>This tag is used to insert modules into your templates and pages.  If a module is created to be used as a tag plugin (check it&#039;s help for details), then you should be able to insert it with this tag.</p>
-	<h3>How do I use it?</h3>
-	<p>It&#039;s just a basic tag plugin.  You would insert it into your template or page like so: <code>{cms_module module=&quot;somemodulename&quot;}</code>
-	<h3>What parameters does it take?</h3>
-	<p>There is only one required parameter.  All other parameters are passed on to the module.
-	<ul>
-		<li>module - Name of the module to insert.  This is not case sensitive.</li>
-	</ul>
+$lang['admin']['help_function_cms_module'] = '	<h3>What does this do?</h3>
+
+	<p>This tag is used to insert modules into your templates and pages.  If a module is created to be used as a tag plugin (check it&#039;s help for details), then you should be able to insert it with this tag.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>It&#039;s just a basic tag plugin.  You would insert it into your template or page like so: <code>{cms_module module=&quot;somemodulename&quot;}</code>
+
+	<h3>What parameters does it take?</h3>
+
+	<p>There is only one required parameter.  All other parameters are passed on to the module.
+
+	<ul>
+
+		<li>module - Name of the module to insert.  This is not case sensitive.</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['about_function_breadcrumbs'] = '<p>Author: Marcus Deglos <<a href="mailto:md@zioncore.com">md@zioncore.com</a>></p>
-<p>Version: 1.7</p>
-<p>
-Change History:<br/>
-1.1 - Modified to use new content rewrite (wishy)<br />
-1.2 - Added parameters: delimiter, initial, and root (arl)<br />
-1.3 - Added parameter: classid (tdh / perl4ever)<br />
-1.4 - Added parameter currentclassid and fixed some bugs (arl)<br />
-1.5 - Modified to use new hierarchy manager<br />
-1.6 - Modified to skip any parents that are marked to be &quot;not shown in menu&quot; except for root<br />
-1.7 - Added root_url parameter (elijahlofgren)<br />
+$lang['admin']['about_function_breadcrumbs'] = '<p>Author: Marcus Deglos <<a href="mailto:md@zioncore.com">md@zioncore.com</a>></p>
+
+<p>Version: 1.7</p>
+
+<p>
+
+Change History:<br/>
+
+1.1 - Modified to use new content rewrite (wishy)<br />
+
+1.2 - Added parameters: delimiter, initial, and root (arl)<br />
+
+1.3 - Added parameter: classid (tdh / perl4ever)<br />
+
+1.4 - Added parameter currentclassid and fixed some bugs (arl)<br />
+
+1.5 - Modified to use new hierarchy manager<br />
+
+1.6 - Modified to skip any parents that are marked to be &quot;not shown in menu&quot; except for root<br />
+
+1.7 - Added root_url parameter (elijahlofgren)<br />
+
 </p>';
-$lang['admin']['help_function_breadcrumbs'] = '<h3>What does this do?</h3>
-<p>Prints a breadcrumb trail .</p>
-<h3>How do I use it?</h3>
-<p>Just insert the tag into your template/page like: <code>{breadcrumbs}</code></p>
-<h3>What parameters does it take?</h3>
-<p>
-<ul>
-<li><em>(optional)</em> <tt>delimiter</tt> - Text to seperate entries in the list (default &quot;>>&quot;).</li>
-<li><em>(optional)</em> <tt>initial</tt> - 1/0 If set to 1 start the breadcrumbs with a delimiter (default 0).</li>
-<li><em>(optional)</em> <tt>root</tt> - Page alias of a page you want to always appear as the first page in
-    the list. Can be used to make a page (e.g. the front page) appear to be the root of everything even though it is not.</li>
-<li><em>(optional)</em> <tt>root_url</tt> - Override the URL of the root page. Useful for making link be to &#039;/&#039; instead of &#039;/home/&#039;. This requires that the root page be set as the default page.</li>
-<li><em>(optional)</em> <tt>classid</tt> - The CSS class for the non current page names, i.e. the first n-1 pages in the list. If the name is a link it is added to the <a href> tags, otherwise it is added to the <span> tags.</li>
-<li><em>(optional)</em> <tt>currentclassid</tt> - The CSS class for the <span> tag surrounding the current page name.</li>
-<li><em>(optional)</em> <tt>starttext</tt> - Text to append to the front of the breadcrumbs list, something like &quot;You are here&quot;.</li>
-</ul>
+$lang['admin']['help_function_breadcrumbs'] = '<h3>What does this do?</h3>
+
+<p>Prints a breadcrumb trail .</p>
+
+<h3>How do I use it?</h3>
+
+<p>Just insert the tag into your template/page like: <code>{breadcrumbs}</code></p>
+
+<h3>What parameters does it take?</h3>
+
+<p>
+
+<ul>
+
+<li><em>(optional)</em> <tt>delimiter</tt> - Text to seperate entries in the list (default &quot;>>&quot;).</li>
+
+<li><em>(optional)</em> <tt>initial</tt> - 1/0 If set to 1 start the breadcrumbs with a delimiter (default 0).</li>
+
+<li><em>(optional)</em> <tt>root</tt> - Page alias of a page you want to always appear as the first page in
+
+    the list. Can be used to make a page (e.g. the front page) appear to be the root of everything even though it is not.</li>
+
+<li><em>(optional)</em> <tt>root_url</tt> - Override the URL of the root page. Useful for making link be to &#039;/&#039; instead of &#039;/home/&#039;. This requires that the root page be set as the default page.</li>
+
+<li><em>(optional)</em> <tt>classid</tt> - The CSS class for the non current page names, i.e. the first n-1 pages in the list. If the name is a link it is added to the <a href> tags, otherwise it is added to the <span> tags.</li>
+
+<li><em>(optional)</em> <tt>currentclassid</tt> - The CSS class for the <span> tag surrounding the current page name.</li>
+
+<li><em>(optional)</em> <tt>starttext</tt> - Text to append to the front of the breadcrumbs list, something like &quot;You are here&quot;.</li>
+
+</ul>
+
 </p>';
-$lang['admin']['about_function_anchor'] = '	<p>Author: Ted Kulp<tedkulp@users.sf.net></p>
-	<p>Version: 1.1</p>
-	<p>
-	Change History:<br/>
-	<strong>Update to version 1.1 from 1.0</strong> <em>2006/07/19</em><br/>
-	Russ added the means to insert a title, a tabindex and a class for the anchor link. Westis added accesskey and changed parameter names to not include &#039;anchorlink&#039;.<br/>
-	</hr>
+$lang['admin']['about_function_anchor'] = '	<p>Author: Ted Kulp<tedkulp@users.sf.net></p>
+
+	<p>Version: 1.1</p>
+
+	<p>
+
+	Change History:<br/>
+
+	<strong>Update to version 1.1 from 1.0</strong> <em>2006/07/19</em><br/>
+
+	Russ added the means to insert a title, a tabindex and a class for the anchor link. Westis added accesskey and changed parameter names to not include &#039;anchorlink&#039;.<br/>
+
+	</hr>
+
 	</p>';
-$lang['admin']['help_function_anchor'] = '	<h3>What does this do?</h3>
-	<p>Makes a proper anchor link.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{anchor anchor=&#039;here&#039; text=&#039;Scroll Down&#039;}</code></p>
-	<h3>What parameters does it take?</h3>
-	<p>
-	<ul>
-	<li><tt>anchor</tt> - Where we are linking to.  The part after the #.</li>
-	<li><tt>text</tt> - The text to display in the link.</li>
-	<li><tt>class</tt> - The class for the link, if any</li>
-	<li><tt>title</tt> - The title to display for the link, if any.</li>
-	<li><tt>tabindex</tt> - The numeric tabindex for the link, if any.</li>
-	<li><tt>accesskey</tt> - The accesskey for the link, if any.</li>
-	<li><em>(optional)</em> <tt>onlyhref</tt> - Only display the href and not the entire link. No other options will work</li>
-	</ul>
+$lang['admin']['help_function_anchor'] = '	<h3>What does this do?</h3>
+
+	<p>Makes a proper anchor link.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{anchor anchor=&#039;here&#039; text=&#039;Scroll Down&#039;}</code></p>
+
+	<h3>What parameters does it take?</h3>
+
+	<p>
+
+	<ul>
+
+	<li><tt>anchor</tt> - Where we are linking to.  The part after the #.</li>
+
+	<li><tt>text</tt> - The text to display in the link.</li>
+
+	<li><tt>class</tt> - The class for the link, if any</li>
+
+	<li><tt>title</tt> - The title to display for the link, if any.</li>
+
+	<li><tt>tabindex</tt> - The numeric tabindex for the link, if any.</li>
+
+	<li><tt>accesskey</tt> - The accesskey for the link, if any.</li>
+
+	<li><em>(optional)</em> <tt>onlyhref</tt> - Only display the href and not the entire link. No other options will work</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['help_function_site_mapper'] = '<h3>What does this do?</h3>
-  <p>This is actually just a wrapper tag for the <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">Menu Manager module</a> to make the tag syntax easier, and to simplify creating a sitemap.</p>
-<h3>How do I use it?</h3>
-  <p>Just put <code>{site_mapper}</code> on a page or in a template. For help about the Menu Manager module, what parameters it takes etc., please refer to the <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">Menu Manager module help</a>.</p>
-  <p>By default, if no template option is specified the minimal_menu.tpl file will be used.</p>
+$lang['admin']['help_function_site_mapper'] = '<h3>What does this do?</h3>
+
+  <p>This is actually just a wrapper tag for the <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">Menu Manager module</a> to make the tag syntax easier, and to simplify creating a sitemap.</p>
+
+<h3>How do I use it?</h3>
+
+  <p>Just put <code>{site_mapper}</code> on a page or in a template. For help about the Menu Manager module, what parameters it takes etc., please refer to the <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">Menu Manager module help</a>.</p>
+
+  <p>By default, if no template option is specified the minimal_menu.tpl file will be used.</p>
+
   <p>Any parameters used in the tag are available in the menumanager template as <code>{$menuparams.paramname}</code></p>';
-$lang['admin']['help_function_redirect_url'] = '<h3>What does this do?</h3>
-  <p>This plugin allows you to easily redirect to a specified url.  It is handy inside of smarty conditional logic (for example, redirect to a splash page if the site is not live yet).</p>
-<h3>How do I use it?</h3>
+$lang['admin']['help_function_redirect_url'] = '<h3>What does this do?</h3>
+
+  <p>This plugin allows you to easily redirect to a specified url.  It is handy inside of smarty conditional logic (for example, redirect to a splash page if the site is not live yet).</p>
+
+<h3>How do I use it?</h3>
+
 <p>Simply insert this tage into your page or template: <code>{redirect_url urle=&#039;www.cmsmadesimple.org&#039;}</code></p>';
-$lang['admin']['help_function_redirect_page'] = '<h3>What does this do?</h3>
- <p>This plugin allows you to easily redirect to another page.  It is handy inside of smarty conditional logic (for example, redirect to a login page if the user is not logged in.)</p>
-<h3>How do I use it?</h3>
+$lang['admin']['help_function_redirect_page'] = '<h3>What does this do?</h3>
+
+ <p>This plugin allows you to easily redirect to another page.  It is handy inside of smarty conditional logic (for example, redirect to a login page if the user is not logged in.)</p>
+
+<h3>How do I use it?</h3>
+
 <p>Simply insert this tage into your page or template: <code>{redirect_page page=&#039;some-page-alias&#039;}</code></p>';
 $lang['admin']['of'] = '/';
 $lang['admin']['first'] = 'Ensimm&auml;inen';
@@ -954,7 +1549,8 @@ $lang['admin']['active'] = 'Aktiivinen';
 $lang['admin']['addcontent'] = 'Lis&auml;&auml; uutta sis&auml;lt&ouml;&auml;';
 $lang['admin']['cantremove'] = 'Ei voi poistaa';
 $lang['admin']['changepermissions'] = 'Vaihda k&auml;ytt&ouml;oikeuksia';
-$lang['admin']['changepermissionsconfirm'] = 'Varoitus\n\n
+$lang['admin']['changepermissionsconfirm'] = 'Varoitus\n\n
+
 T&auml;m&auml; toiminto yritt&auml;&auml; varmistaa, ett&auml; moduulin kaikki tiedostot ovat www-palvelimen k&auml;ytett&auml;viss&auml; (luku- ja kirjoitusoikeudet).\nOletko varma ett&auml; haluat jatkaa?';
 $lang['admin']['contentadded'] = 'Sis&auml;lt&ouml; lis&auml;tty onnistuneesti tietokantaan.';
 $lang['admin']['contentupdated'] = 'Sis&auml;lt&ouml; p&auml;ivitetty onnistuneesti.';
@@ -1423,293 +2019,533 @@ $lang['admin']['event_desc_contentpostcompile'] = 'L&auml;hetet&auml;&auml;n sis
 $lang['admin']['event_desc_contentpostrender'] = 'L&auml;hetet&auml;&auml;n ennen yhdistetyn html:n l&auml;hett&auml;mist&auml; selaimelle';
 $lang['admin']['event_desc_smartyprecompile'] = 'L&auml;hetet&auml;&auml;n ennen kun mit&auml;&auml;n smartylle tarkoitettua sis&auml;lt&ouml;&auml; l&auml;hetet&auml;&auml;n prosessoitavaksi';
 $lang['admin']['event_desc_smartypostcompile'] = 'L&auml;hetet&auml;&auml;n sen j&auml;lkeen kun smartylle tarkoitettu sis&auml;lt&ouml; on prosessoitu';
-$lang['admin']['event_help_loginpost'] = '<p>L&auml;hetet&auml;&auml;n k&auml;ytt&auml;j&auml;n kirjautuessa hallintapaneeliin</p>
-<h4>Parametrit</h4>
-<ul>
-<li>\&#039;user\&#039; - Reference to the affected user object.</li>
-</ul>
+$lang['admin']['event_help_loginpost'] = '<p>L&auml;hetet&auml;&auml;n k&auml;ytt&auml;j&auml;n kirjautuessa hallintapaneeliin</p>
+
+<h4>Parametrit</h4>
+
+<ul>
+
+<li>\&#039;user\&#039; - Reference to the affected user object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_logoutpost'] = '<p>L&auml;hetet&auml;&auml;n k&auml;ytt&auml;j&auml;n kirjautuessa ulos hallintapaneelista.</p>
-<h4>Parametrit</h4>
-<ul>
-<li>\&#039;user\&#039; - Reference to the affected user object.</li>
-</ul>
+$lang['admin']['event_help_logoutpost'] = '<p>L&auml;hetet&auml;&auml;n k&auml;ytt&auml;j&auml;n kirjautuessa ulos hallintapaneelista.</p>
+
+<h4>Parametrit</h4>
+
+<ul>
+
+<li>\&#039;user\&#039; - Reference to the affected user object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_adduserpre'] = '<p>L&auml;hetet&auml;&auml;n ennen uuden k&auml;ytt&auml;j&auml;n luomista.</p>
-<h4>Parametrit</h4>
-<ul>
-<li>\&#039;user\&#039; - Reference to the affected user object.</li>
-</ul>
+$lang['admin']['event_help_adduserpre'] = '<p>L&auml;hetet&auml;&auml;n ennen uuden k&auml;ytt&auml;j&auml;n luomista.</p>
+
+<h4>Parametrit</h4>
+
+<ul>
+
+<li>\&#039;user\&#039; - Reference to the affected user object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_adduserpost'] = '<p>L&auml;hetet&auml;&auml;n uuden k&auml;ytt&auml;j&auml;n luomisen j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;user\&#039; - Reference to the affected user object.</li>
-</ul>
+$lang['admin']['event_help_adduserpost'] = '<p>L&auml;hetet&auml;&auml;n uuden k&auml;ytt&auml;j&auml;n luomisen j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;user\&#039; - Reference to the affected user object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_edituserpre'] = '<p>L&auml;hetet&auml;&auml;n ennen k&auml;ytt&auml;j&auml;n tietojen muokkausta.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;user\&#039; - Reference to the affected user object.</li>
-</ul>
+$lang['admin']['event_help_edituserpre'] = '<p>L&auml;hetet&auml;&auml;n ennen k&auml;ytt&auml;j&auml;n tietojen muokkausta.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;user\&#039; - Reference to the affected user object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_edituserpost'] = '<p>L&auml;hetet&auml;&auml;n k&auml;ytt&auml;j&auml;n tietojen muokkauksen j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;user\&#039; - Reference to the affected user object.</li>
-</ul>
+$lang['admin']['event_help_edituserpost'] = '<p>L&auml;hetet&auml;&auml;n k&auml;ytt&auml;j&auml;n tietojen muokkauksen j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;user\&#039; - Reference to the affected user object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deleteuserpre'] = '<p>L&auml;hetet&auml;&auml;n ennen k&auml;ytt&auml;j&auml;n poistamista.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;user\&#039; - Reference to the affected user object.</li>
-</ul>
+$lang['admin']['event_help_deleteuserpre'] = '<p>L&auml;hetet&auml;&auml;n ennen k&auml;ytt&auml;j&auml;n poistamista.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;user\&#039; - Reference to the affected user object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deleteuserpost'] = '<p>L&auml;hetet&auml;&auml;n k&auml;ytt&auml;j&auml;n poistamisen j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;user\&#039; - Reference to the affected user object.</li>
-</ul>
+$lang['admin']['event_help_deleteuserpost'] = '<p>L&auml;hetet&auml;&auml;n k&auml;ytt&auml;j&auml;n poistamisen j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;user\&#039; - Reference to the affected user object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addgrouppre'] = '<p>L&auml;hetet&auml;&auml;n ennen uuden ryhm&auml;n luontia.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;group\&#039; - Reference to the affected group object.</li>
-</ul>
+$lang['admin']['event_help_addgrouppre'] = '<p>L&auml;hetet&auml;&auml;n ennen uuden ryhm&auml;n luontia.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;group\&#039; - Reference to the affected group object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addgrouppost'] = '<p>L&auml;hetet&auml;&auml;n uuden ryhm&auml;n luonnin j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;group\&#039; - Reference to the affected group object.</li>
-</ul>
+$lang['admin']['event_help_addgrouppost'] = '<p>L&auml;hetet&auml;&auml;n uuden ryhm&auml;n luonnin j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;group\&#039; - Reference to the affected group object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_changegroupassignpre'] = '<p>L&auml;hetet&auml;&auml;n ennen ryhm&auml;liitosten tallentamista.</p>
-<h4>Parameters></h4>
-<ul>
-<li>\&#039;group\&#039; - Reference to the group object.</li>
-<li>\&#039;users\&#039; - Array of references to user objects belonging to the group.</li>
+$lang['admin']['event_help_changegroupassignpre'] = '<p>L&auml;hetet&auml;&auml;n ennen ryhm&auml;liitosten tallentamista.</p>
+
+<h4>Parameters></h4>
+
+<ul>
+
+<li>\&#039;group\&#039; - Reference to the group object.</li>
+
+<li>\&#039;users\&#039; - Array of references to user objects belonging to the group.</li>
+
 ';
-$lang['admin']['event_help_changegroupassignpost'] = '<p>L&auml;hetet&auml;&auml;n ryhm&auml;liitosten tallentamisen j&auml;lkeen.</p>
-<h4>Parameters></h4>
-<ul>
-<li>\&#039;group\&#039; - Reference to the affected group object.</li>
-<li>\&#039;users\&#039; - Array of references to user objects now belonging to the affected group.</li>
+$lang['admin']['event_help_changegroupassignpost'] = '<p>L&auml;hetet&auml;&auml;n ryhm&auml;liitosten tallentamisen j&auml;lkeen.</p>
+
+<h4>Parameters></h4>
+
+<ul>
+
+<li>\&#039;group\&#039; - Reference to the affected group object.</li>
+
+<li>\&#039;users\&#039; - Array of references to user objects now belonging to the affected group.</li>
+
 ';
-$lang['admin']['event_help_editgrouppre'] = '<p>L&auml;hetet&auml;&auml;n ennen ryhm&auml;n muokkausta.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;group\&#039; - Reference to the affected group object.</li>
-</ul>
+$lang['admin']['event_help_editgrouppre'] = '<p>L&auml;hetet&auml;&auml;n ennen ryhm&auml;n muokkausta.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;group\&#039; - Reference to the affected group object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editgrouppost'] = '<p>L&auml;hetet&auml;&auml;n ryhm&auml;n muokkauksen j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;group\&#039; - Reference to the affected group object.</li>
-</ul>
+$lang['admin']['event_help_editgrouppost'] = '<p>L&auml;hetet&auml;&auml;n ryhm&auml;n muokkauksen j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;group\&#039; - Reference to the affected group object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletegrouppre'] = '<p>L&auml;hetet&auml;&auml;n ennen ryhm&auml;n poistoa.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;group\&#039; - Reference to the affected group object.</li>
-</ul>
+$lang['admin']['event_help_deletegrouppre'] = '<p>L&auml;hetet&auml;&auml;n ennen ryhm&auml;n poistoa.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;group\&#039; - Reference to the affected group object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletegrouppost'] = '<p>L&auml;hetet&auml;&auml;n ryhm&auml;n poiston j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;group\&#039; - Reference to the affected group object.</li>
-</ul>
+$lang['admin']['event_help_deletegrouppost'] = '<p>L&auml;hetet&auml;&auml;n ryhm&auml;n poiston j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;group\&#039; - Reference to the affected group object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addstylesheetpre'] = '<p>L&auml;hetet&auml;&auml;n ennen uuden tyylisivun luontia.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;stylesheet\&#039; - Reference to the affected stylesheet object.</li>
-</ul>
+$lang['admin']['event_help_addstylesheetpre'] = '<p>L&auml;hetet&auml;&auml;n ennen uuden tyylisivun luontia.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;stylesheet\&#039; - Reference to the affected stylesheet object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addstylesheetpost'] = '<p>L&auml;hetet&auml;&auml;n uuden tyylisivun luonnin j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;stylesheet\&#039; - Reference to the affected stylesheet object.</li>
-</ul>
+$lang['admin']['event_help_addstylesheetpost'] = '<p>L&auml;hetet&auml;&auml;n uuden tyylisivun luonnin j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;stylesheet\&#039; - Reference to the affected stylesheet object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editstylesheetpre'] = '<p>L&auml;hetet&auml;&auml;n ennen tyylisivun muokkausta.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;stylesheet\&#039; - Reference to the affected stylesheet object.</li>
-</ul>
+$lang['admin']['event_help_editstylesheetpre'] = '<p>L&auml;hetet&auml;&auml;n ennen tyylisivun muokkausta.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;stylesheet\&#039; - Reference to the affected stylesheet object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editstylesheetpost'] = '<p>L&auml;hetet&auml;&auml;n tyylisivun muokkauksen j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;stylesheet\&#039; - Reference to the affected stylesheet object.</li>
-</ul>
+$lang['admin']['event_help_editstylesheetpost'] = '<p>L&auml;hetet&auml;&auml;n tyylisivun muokkauksen j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;stylesheet\&#039; - Reference to the affected stylesheet object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletestylesheetpre'] = '<p>L&auml;hetet&auml;&auml;n ennen tyylisivun poistoa.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;stylesheet\&#039; - Reference to the affected stylesheet object.</li>
-</ul>
+$lang['admin']['event_help_deletestylesheetpre'] = '<p>L&auml;hetet&auml;&auml;n ennen tyylisivun poistoa.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;stylesheet\&#039; - Reference to the affected stylesheet object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletestylesheetpost'] = '<p>L&auml;hetet&auml;&auml;n tyylisivun poiston j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;stylesheet\&#039; - Reference to the affected stylesheet object.</li>
-</ul>
+$lang['admin']['event_help_deletestylesheetpost'] = '<p>L&auml;hetet&auml;&auml;n tyylisivun poiston j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;stylesheet\&#039; - Reference to the affected stylesheet object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addtemplatepre'] = '<p>L&auml;hetet&auml;&auml;n ennen uuden pohjan luontia.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;template\&#039; - Reference to the affected template object.</li>
-</ul>
+$lang['admin']['event_help_addtemplatepre'] = '<p>L&auml;hetet&auml;&auml;n ennen uuden pohjan luontia.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;template\&#039; - Reference to the affected template object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addtemplatepost'] = '<p>L&auml;hetet&auml;&auml;n uuden pohjan luonnin j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;template\&#039; - Reference to the affected template object.</li>
-</ul>
+$lang['admin']['event_help_addtemplatepost'] = '<p>L&auml;hetet&auml;&auml;n uuden pohjan luonnin j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;template\&#039; - Reference to the affected template object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_edittemplatepre'] = '<p>L&auml;hetet&auml;&auml;n ennen pohjan muokkausta.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;template\&#039; - Reference to the affected template object.</li>
-</ul>
+$lang['admin']['event_help_edittemplatepre'] = '<p>L&auml;hetet&auml;&auml;n ennen pohjan muokkausta.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;template\&#039; - Reference to the affected template object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_edittemplatepost'] = '<p>L&auml;hetet&auml;&auml;n pohjan muokkauksen j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;template\&#039; - Reference to the affected template object.</li>
-</ul>
+$lang['admin']['event_help_edittemplatepost'] = '<p>L&auml;hetet&auml;&auml;n pohjan muokkauksen j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;template\&#039; - Reference to the affected template object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletetemplatepre'] = '<p>L&auml;hetet&auml;&auml;n ennen pohjan poistoa.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;template\&#039; - Reference to the affected template object.</li>
-</ul>
+$lang['admin']['event_help_deletetemplatepre'] = '<p>L&auml;hetet&auml;&auml;n ennen pohjan poistoa.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;template\&#039; - Reference to the affected template object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletetemplatepost'] = '<p>L&auml;hetet&auml;&auml;n pohjan poiston j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;template\&#039; - Reference to the affected template object.</li>
-</ul>
+$lang['admin']['event_help_deletetemplatepost'] = '<p>L&auml;hetet&auml;&auml;n pohjan poiston j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;template\&#039; - Reference to the affected template object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_templateprecompile'] = '<p>L&auml;hetet&auml;&auml;n ennen pohjan smarty-prosessointia.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;template\&#039; - Reference to the affected template text.</li>
-</ul>
+$lang['admin']['event_help_templateprecompile'] = '<p>L&auml;hetet&auml;&auml;n ennen pohjan smarty-prosessointia.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;template\&#039; - Reference to the affected template text.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_templatepostcompile'] = '<p>L&auml;hetet&auml;&auml;n pohjan smarty-prosessoinnin j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;template\&#039; - Reference to the affected template text.</li>
-</ul>
+$lang['admin']['event_help_templatepostcompile'] = '<p>L&auml;hetet&auml;&auml;n pohjan smarty-prosessoinnin j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;template\&#039; - Reference to the affected template text.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addglobalcontentpre'] = '<p>L&auml;hetet&auml;&auml;n ennen yleisen sis&auml;lt&ouml;lohkon luontia.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;global_content\&#039; - Reference to the affected global content block object.</li>
-</ul>
+$lang['admin']['event_help_addglobalcontentpre'] = '<p>L&auml;hetet&auml;&auml;n ennen yleisen sis&auml;lt&ouml;lohkon luontia.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;global_content\&#039; - Reference to the affected global content block object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addglobalcontentpost'] = '<p>L&auml;hetet&auml;&auml;n yleisen sis&auml;lt&ouml;lohkon luonnin j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;global_content\&#039; - Reference to the affected global content block object.</li>
-</ul>
+$lang['admin']['event_help_addglobalcontentpost'] = '<p>L&auml;hetet&auml;&auml;n yleisen sis&auml;lt&ouml;lohkon luonnin j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;global_content\&#039; - Reference to the affected global content block object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editglobalcontentpre'] = '<p>L&auml;hetet&auml;&auml;n ennen yleisen sis&auml;lt&ouml;lohkon muutosten tallentamista.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;global_content\&#039; - Reference to the affected global content block object.</li>
-</ul>
+$lang['admin']['event_help_editglobalcontentpre'] = '<p>L&auml;hetet&auml;&auml;n ennen yleisen sis&auml;lt&ouml;lohkon muutosten tallentamista.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;global_content\&#039; - Reference to the affected global content block object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editglobalcontentpost'] = '<p>L&auml;hetet&auml;&auml;n yleisen sis&auml;lt&ouml;lohkon muutosten tallentamisen j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;global_content\&#039; - Reference to the affected global content block object.</li>
-</ul>
+$lang['admin']['event_help_editglobalcontentpost'] = '<p>L&auml;hetet&auml;&auml;n yleisen sis&auml;lt&ouml;lohkon muutosten tallentamisen j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;global_content\&#039; - Reference to the affected global content block object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deleteglobalcontentpre'] = '<p>L&auml;hetet&auml;&auml;n ennen yleisen sis&auml;lt&ouml;lohkon poistamista.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;global_content\&#039; - Reference to the affected global content block object.</li>
-</ul>
+$lang['admin']['event_help_deleteglobalcontentpre'] = '<p>L&auml;hetet&auml;&auml;n ennen yleisen sis&auml;lt&ouml;lohkon poistamista.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;global_content\&#039; - Reference to the affected global content block object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deleteglobalcontentpost'] = '<p>L&auml;hetet&auml;&auml;n yleisen sis&auml;lt&ouml;lohkon poistamisen j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;global_content\&#039; - Reference to the affected global content block object.</li>
-</ul>
+$lang['admin']['event_help_deleteglobalcontentpost'] = '<p>L&auml;hetet&auml;&auml;n yleisen sis&auml;lt&ouml;lohkon poistamisen j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;global_content\&#039; - Reference to the affected global content block object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_globalcontentprecompile'] = '<p>L&auml;hetet&auml;&auml;n ennen yleisen sis&auml;lt&ouml;lohkon smarty-prosessointia.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;global_content\&#039; - Reference to the affected global content block text.</li>
-</ul>
+$lang['admin']['event_help_globalcontentprecompile'] = '<p>L&auml;hetet&auml;&auml;n ennen yleisen sis&auml;lt&ouml;lohkon smarty-prosessointia.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;global_content\&#039; - Reference to the affected global content block text.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_globalcontentpostcompile'] = '<p>L&auml;hetet&auml;&auml;n yleisen sis&auml;lt&ouml;lohkon smarty-prosessoinnin j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;global_content\&#039; - Reference to the affected global content block text.</li>
-</ul>
+$lang['admin']['event_help_globalcontentpostcompile'] = '<p>L&auml;hetet&auml;&auml;n yleisen sis&auml;lt&ouml;lohkon smarty-prosessoinnin j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;global_content\&#039; - Reference to the affected global content block text.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contenteditpre'] = '<p>L&auml;hetet&auml;&auml;n ennen sis&auml;lt&ouml;&ouml;n tehtyjen muutosten tallentamista.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;global_content\&#039; - Reference to the affected content object.</li>
-</ul>
+$lang['admin']['event_help_contenteditpre'] = '<p>L&auml;hetet&auml;&auml;n ennen sis&auml;lt&ouml;&ouml;n tehtyjen muutosten tallentamista.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;global_content\&#039; - Reference to the affected content object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contenteditpost'] = '<p>L&auml;hetet&auml;&auml;n sis&auml;lt&ouml;&ouml;n tehtyjen muutosten tallentamisen j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;content\&#039; - Reference to the affected content object.</li>
-</ul>
+$lang['admin']['event_help_contenteditpost'] = '<p>L&auml;hetet&auml;&auml;n sis&auml;lt&ouml;&ouml;n tehtyjen muutosten tallentamisen j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;content\&#039; - Reference to the affected content object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentdeletepre'] = '<p>L&auml;hetet&auml;&auml;n ennen sis&auml;ll&ouml;n poistamista.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;content\&#039; - Reference to the affected content object.</li>
-</ul>
+$lang['admin']['event_help_contentdeletepre'] = '<p>L&auml;hetet&auml;&auml;n ennen sis&auml;ll&ouml;n poistamista.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;content\&#039; - Reference to the affected content object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentdeletepost'] = '<p>L&auml;hetet&auml;&auml;n sis&auml;ll&ouml;n poistamisen j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;content\&#039; - Reference to the affected content object.</li>
-</ul>
+$lang['admin']['event_help_contentdeletepost'] = '<p>L&auml;hetet&auml;&auml;n sis&auml;ll&ouml;n poistamisen j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;content\&#039; - Reference to the affected content object.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentstylesheet'] = '<p>L&auml;hetet&auml;&auml;n ennen tyylitiedoston l&auml;hett&auml;mist&auml; selaimelle.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;content\&#039; - Reference to the affected stylesheet text.</li>
-</ul>
+$lang['admin']['event_help_contentstylesheet'] = '<p>L&auml;hetet&auml;&auml;n ennen tyylitiedoston l&auml;hett&auml;mist&auml; selaimelle.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;content\&#039; - Reference to the affected stylesheet text.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentprecompile'] = '<p>L&auml;hetet&auml;&auml;n ennen sis&auml;ll&ouml;n smarty-prosessointia.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;content\&#039; - Reference to the affected content text.</li>
-</ul>
+$lang['admin']['event_help_contentprecompile'] = '<p>L&auml;hetet&auml;&auml;n ennen sis&auml;ll&ouml;n smarty-prosessointia.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;content\&#039; - Reference to the affected content text.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentpostcompile'] = '<p>L&auml;hetet&auml;&auml;n sis&auml;ll&ouml;n smarty-prosessoinnin j&auml;lkeen.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;content\&#039; - Reference to the affected content text.</li>
-</ul>
+$lang['admin']['event_help_contentpostcompile'] = '<p>L&auml;hetet&auml;&auml;n sis&auml;ll&ouml;n smarty-prosessoinnin j&auml;lkeen.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;content\&#039; - Reference to the affected content text.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentpostrender'] = '<p>L&auml;hetet&auml;&auml;n ennen yhdistetyn html:n l&auml;hett&auml;mist&auml; selaimelle.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;content\&#039; - Reference to the html text.</li>
-</ul>
+$lang['admin']['event_help_contentpostrender'] = '<p>L&auml;hetet&auml;&auml;n ennen yhdistetyn html:n l&auml;hett&auml;mist&auml; selaimelle.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;content\&#039; - Reference to the html text.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_smartyprecompile'] = '<p>L&auml;hetet&auml;&auml;n ennen kun mit&auml;&auml;n smartylle tarkoitettua sis&auml;lt&ouml;&auml; l&auml;hetet&auml;&auml;n prosessoitavaksi.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;content\&#039; - Reference to the affected text.</li>
-</ul>
+$lang['admin']['event_help_smartyprecompile'] = '<p>L&auml;hetet&auml;&auml;n ennen kun mit&auml;&auml;n smartylle tarkoitettua sis&auml;lt&ouml;&auml; l&auml;hetet&auml;&auml;n prosessoitavaksi.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;content\&#039; - Reference to the affected text.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_smartypostcompile'] = '<p>L&auml;hetet&auml;&auml;n sen j&auml;lkeen kun smartylle tarkoitettu sis&auml;lt&ouml; on prosessoitu.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&#039;content\&#039; - Reference to the affected text.</li>
-</ul>
+$lang['admin']['event_help_smartypostcompile'] = '<p>L&auml;hetet&auml;&auml;n sen j&auml;lkeen kun smartylle tarkoitettu sis&auml;lt&ouml; on prosessoitu.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&#039;content\&#039; - Reference to the affected text.</li>
+
+</ul>
+
 ';
 $lang['admin']['filterbymodule'] = 'Suodata moduulin mukaan';
 $lang['admin']['showall'] = 'N&auml;yt&auml; kaikki';
@@ -1739,9 +2575,12 @@ $lang['admin']['passwordchangedlogin'] = 'Salasana vaihdettu. Kirjaudu sis&auml;
 $lang['admin']['nopasswordforrecovery'] = 'K&auml;ytt&auml;j&auml;lle ei ole asetettu salasanaa. Salasanan palauttaminen ei ole mahdollista. Ota yhteytt&auml; yll&auml;pit&auml;j&auml;&auml;n.';
 $lang['admin']['lostpw'] = 'Unohditko salasanasi?';
 $lang['admin']['lostpwemailsubject'] = '[%s] Salasanan palautus';
-$lang['admin']['lostpwemail'] = 'Saat t&auml;m&auml;n s&auml;hk&ouml;postin, koska vastaanotimme pyynn&ouml;n vaihtaa salasana (%s) k&auml;ytt&auml;j&auml;tunnukselle (%s). Jos haluat asettaa salasanan uudelleen t&auml;lle k&auml;ytt&auml;j&auml;tunnukselle, klikkaa alla olevaa linkki&auml; tai liit&auml; se selaimesi osoitekentt&auml;&auml;n:
-%s
-
+$lang['admin']['lostpwemail'] = 'Saat t&auml;m&auml;n s&auml;hk&ouml;postin, koska vastaanotimme pyynn&ouml;n vaihtaa salasana (%s) k&auml;ytt&auml;j&auml;tunnukselle (%s). Jos haluat asettaa salasanan uudelleen t&auml;lle k&auml;ytt&auml;j&auml;tunnukselle, klikkaa alla olevaa linkki&auml; tai liit&auml; se selaimesi osoitekentt&auml;&auml;n:
+
+%s
+
+
+
 Jos t&auml;m&auml; pyynt&ouml; on virheellinen tai v&auml;&auml;r&auml;, ole hyv&auml; ja j&auml;t&auml; t&auml;m&auml; viesti huomiotta. Muutoksia ei tehd&auml;. ';
 $lang['admin']['qca'] = 'P0-143593381-1287469720325';
 $lang['admin']['utmz'] = '156861353.1289907526.70.3.utmcsr=forum.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php/topic,48780.0.html';

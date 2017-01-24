@@ -48,27 +48,48 @@ $lang['help_src_img'] = 'Show this image file instead of the default';
 $lang['help_class_img'] = 'Class of <img> tag if showbutton is set';
 $lang['help_more'] = 'Place additional options inside the <a> link';
 $lang['help_onlyurl'] = 'Outputs just the url, not a complete link';
-$lang['help'] = '<b>What does this module do?</b>
-<br/>
-This allow you to insert a link in pages/templates which directs the 
-visitor to a version of the page better suited for printing. It can also link
-to an on-the-fly-generated pdf version of the page
-<br/>
-Please note that the module currently only outputs the main content, not alternate content 
-blocks defined in the templates, nor output from modules. This will be implemented in a later version.
-
-<br/><br/>
-<b>How do I use this module?</b>
-<br/>
-Basically you install the module, access it&#039;s administration interface and review/change the templates for the
-link and for the printable page
-<br/>
-In you page content or template you then insert something like:
-<pre>
-{cms_module module=&#039;printing&#039; <i>params</i>}
-</pre>
-and a link should emerge on your pages. 
-<br/>
+$lang['help'] = '<b>What does this module do?</b>
+
+<br/>
+
+This allow you to insert a link in pages/templates which directs the 
+
+visitor to a version of the page better suited for printing. It can also link
+
+to an on-the-fly-generated pdf version of the page
+
+<br/>
+
+Please note that the module currently only outputs the main content, not alternate content 
+
+blocks defined in the templates, nor output from modules. This will be implemented in a later version.
+
+
+
+<br/><br/>
+
+<b>How do I use this module?</b>
+
+<br/>
+
+Basically you install the module, access it&#039;s administration interface and review/change the templates for the
+
+link and for the printable page
+
+<br/>
+
+In you page content or template you then insert something like:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>params</i>}
+
+</pre>
+
+and a link should emerge on your pages. 
+
+<br/>
+
 ';
 $lang['utmz'] = '156861353.1228691676.223.15.utmccn=(referral)|utmcsr=burner.kuzmany.biz|utmcct=/install/upgrade.php|utmcmd=referral';
 $lang['utma'] = '156861353.158291335300466100.1221906470.1229195154.1229197788.231';

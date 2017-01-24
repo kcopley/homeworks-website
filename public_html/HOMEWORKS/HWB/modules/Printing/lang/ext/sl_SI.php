@@ -51,27 +51,48 @@ $lang['help_class_img'] = 'Razred (class) <img> oznake, če je nastavljen showbu
 $lang['help_more'] = 'Vstavi dodatne možnosti znotraj <a> povezave';
 $lang['help_onlyurl'] = 'Izpi&scaron;e samo URL in ne celotne povezave';
 $lang['help_includetemplate'] = 'Če je omogočeno, bo natisnjena celotna predloga, ne samo osnovna vsebina. To najverjetneje zahteva nekaj dela na stilskih predlogah za tisk.';
-$lang['help'] = '<b>What does this module do?</b>
-<br/>
-This allow you to insert a link in pages/templates which directs the 
-visitor to a version of the page better suited for printing. It can also link
-to an on-the-fly-generated pdf version of the page
-<br/>
-Please note that the module currently only outputs the main content, not alternate content 
-blocks defined in the templates, nor output from modules. This will be implemented in a later version.
-
-<br/><br/>
-<b>How do I use this module?</b>
-<br/>
-Basically you install the module, access it&#039;s administration interface and review/change the templates for the
-link and for the printable page
-<br/>
-In you page content or template you then insert something like:
-<pre>
-{cms_module module=&#039;printing&#039; <i>params</i>}
-</pre>
-and a link should emerge on your pages. 
-<br/>
+$lang['help'] = '<b>What does this module do?</b>
+
+<br/>
+
+This allow you to insert a link in pages/templates which directs the 
+
+visitor to a version of the page better suited for printing. It can also link
+
+to an on-the-fly-generated pdf version of the page
+
+<br/>
+
+Please note that the module currently only outputs the main content, not alternate content 
+
+blocks defined in the templates, nor output from modules. This will be implemented in a later version.
+
+
+
+<br/><br/>
+
+<b>How do I use this module?</b>
+
+<br/>
+
+Basically you install the module, access it&#039;s administration interface and review/change the templates for the
+
+link and for the printable page
+
+<br/>
+
+In you page content or template you then insert something like:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>params</i>}
+
+</pre>
+
+and a link should emerge on your pages. 
+
+<br/>
+
 ';
 $lang['utma'] = '156861353.1722464354432002000.1251370098.1268214497.1270023141.28';
 $lang['utmz'] = '156861353.1270023141.28.22.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=cms made simple';

@@ -51,23 +51,40 @@ $lang['help_class_img'] = 'Tř&iacute;da <img> tagu při nastaven&eacute;m showb
 $lang['help_more'] = 'Vložit dodatečn&eacute; volby do odkazu <a>';
 $lang['help_onlyurl'] = 'Vytvoř&iacute; pouze url, ne kompletn&iacute; odkaz';
 $lang['help_includetemplate'] = 'Pokud je nastaveno &#039;true&#039;, proces tisku/vytv&aacute;řen&iacute; pdf zpracuje kompletn&iacute; &scaron;ablonu, ne pouze obsah. Toto pravděpodobně potřebuje &uacute;pravu stylu tisku s povolen&yacute;m typem media &#039;print&#039;.';
-$lang['help'] = '<b>Co děl&aacute; tento modul?</b>
-<br/>
-Tento modul umožňuje vložen&iacute; odkazu do str&aacute;nek/&scaron;ablon, kter&yacute; naviguje n&aacute;v&scaron;těvn&iacute;ky na verzi vhodněj&scaron;&iacute; pro tisk. Může b&yacute;t nastaveno mnoho parametrů pro &uacute;pravu vzhledu odkazů a str&aacute;nek tisku podle va&scaron;ich představ. Od verze 0.2.0 může b&yacute;t nastaven parametr on-the-fly vytv&aacute;řen&iacute; PDF souborů.
-<br/>
-Moment&aacute;lně modul podporuje pouze &quot;plain&quot; obsahov&eacute; str&aacute;nky, bez redirekc&iacute; modulů atd. Stejně tak pracuje vestavěn&aacute; funkcionalita tisku v CMSms.
-
-<br/><br/>
-<b>Jak se použ&iacute;v&aacute; tento modul?</b>
-<br/>
-Nainstalovat modul, a v administračn&iacute;m rozhran&iacute; přezkou&scaron;et/změnit &scaron;ablony pro odkaz a str&aacute;nky tisku
-<br/>
-Ve Va&scaron;em obsahu nebo &scaron;abloně vložit něco jako:
-<pre>
-{cms_module module=&#039;printing&#039; <i>params</i>}
-</pre>
-a pot&eacute; se odkaz objev&iacute; na str&aacute;nk&aacute;ch.
-<br/>
+$lang['help'] = '<b>Co děl&aacute; tento modul?</b>
+
+<br/>
+
+Tento modul umožňuje vložen&iacute; odkazu do str&aacute;nek/&scaron;ablon, kter&yacute; naviguje n&aacute;v&scaron;těvn&iacute;ky na verzi vhodněj&scaron;&iacute; pro tisk. Může b&yacute;t nastaveno mnoho parametrů pro &uacute;pravu vzhledu odkazů a str&aacute;nek tisku podle va&scaron;ich představ. Od verze 0.2.0 může b&yacute;t nastaven parametr on-the-fly vytv&aacute;řen&iacute; PDF souborů.
+
+<br/>
+
+Moment&aacute;lně modul podporuje pouze &quot;plain&quot; obsahov&eacute; str&aacute;nky, bez redirekc&iacute; modulů atd. Stejně tak pracuje vestavěn&aacute; funkcionalita tisku v CMSms.
+
+
+
+<br/><br/>
+
+<b>Jak se použ&iacute;v&aacute; tento modul?</b>
+
+<br/>
+
+Nainstalovat modul, a v administračn&iacute;m rozhran&iacute; přezkou&scaron;et/změnit &scaron;ablony pro odkaz a str&aacute;nky tisku
+
+<br/>
+
+Ve Va&scaron;em obsahu nebo &scaron;abloně vložit něco jako:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>params</i>}
+
+</pre>
+
+a pot&eacute; se odkaz objev&iacute; na str&aacute;nk&aacute;ch.
+
+<br/>
+
 ';
 $lang['utma'] = '156861353.3769824904990279700.1249913289.1263200482.1263203305.17';
 $lang['utmz'] = '156861353.1249913289.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)';

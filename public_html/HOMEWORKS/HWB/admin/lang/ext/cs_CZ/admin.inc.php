@@ -45,38 +45,67 @@ $lang['admin']['stylesheetcopied'] = 'Stylesheet Copied';
 $lang['admin']['templatecopied'] = 'Template Copied';
 $lang['admin']['ecommerce_desc'] = 'Modules for providing E-commerce capabilities';
 $lang['admin']['ecommerce'] = 'E-Commerce';
-$lang['admin']['help_function_content_module'] = '<h3>What does this do?</h3>
-<p>This content block type allows interfacing with different modules to create different content block types.</p>
-<p>Some modules can define content block types for use in module templates.  i.e: The FrontEndUsers module may define a group list content block type.  It will then indicate how you can use the content_module tag to utilize that block type within your templates.</p>
+$lang['admin']['help_function_content_module'] = '<h3>What does this do?</h3>
+
+<p>This content block type allows interfacing with different modules to create different content block types.</p>
+
+<p>Some modules can define content block types for use in module templates.  i.e: The FrontEndUsers module may define a group list content block type.  It will then indicate how you can use the content_module tag to utilize that block type within your templates.</p>
+
 <p><strong>Note:</strong> This block type must be used only with compatible modules.  You should not use this in any way except for as guided by addon modules.</p>';
 $lang['admin']['error_parsing_content_blocks'] = 'An error occurred parsing content blocks (perhaps duplicated block names)';
 $lang['admin']['error_no_default_content_block'] = 'No default content block was detected in this template.  Please ensure that you have a {content} tag in the page template.';
-$lang['admin']['help_function_cms_stylesheet'] = '	<h3>What does this do?</h3>
-  <p>A replacement for the {stylesheet} tag, this tag provides caching of css files by generating static files in the tmp/cache directory, and smarty processing of the individual stylesheets.</p>
-  <p>This plugin retrieves stylesheet information from the system.  By default, it grabs all of the stylesheets attached to the current template in the order specified by the designer, and generates stylesheet tags.</p>
-  <p>Generated stylesheets are uniquely named according to the last modification date in the database, and are only generated if the stylesheet has changed.</p>
-  <p>This tag is the replacement for the {stylesheet} tag.</p>
-  <h3>How do I use it?</h3>
-  <p>Just insert the tag into your template/page&#039;s head section like: <code>{cms_stylesheet}</code></p>
-  <h3>What parameters does it take?</h3>
-  <ul>
-  <li><em>(optional)</em>name - Instead of getting all stylesheets for the given page, it will only get one specifically named one, whether it&#039;s attached to the current template or not.</li>
-  <li><em>(optional)</em>templateid - If templateid is defined, this will return stylesheets associated with that template instead of the current one.</li>
-  <li><em>(optional)</em>media - When used in conjunction with the name parameter this parameter will allow you to override the media type for that stylesheet.  When used in conjunction with the templateid parameter, the media parameter will only output stylesheet tags for those stylesheets that arer marked as compatible with the specified media type.</li>
-  </ul>
-  <h3>Smarty Processing</h3>
-  <p>When generating css files this system passes the stylesheets retrieved from the database through smarty.  The smarty delimiters have been changed from the CMSMS standard { and } to [[ and ]] respectively to ease transition in stylesheets.  This allows creating smarty variables i.e.: [[assign var=&#039;red&#039; value=&#039;#900&#039;]] at the top of the stylesheet, and then using these variables later in the stylesheet, i.e:</p>
-<pre>
-<code>
-h3 .error { color: [[$red]]; }<br/>
-</code>
-</pre>
-<p>Because the cached files are generated in the tmp/cache directory of the CMSMS installation, the CSS relative working directory is not the root of the website.  Therefore any images, or other tags that require a url should use the [[root_url]] tag to force it to be an absolute url. i.e:</p>
-<pre>
-<code>
-h3 .error { background: url([[root_url]]/uploads/images/error_background.gif); }<br/>
-</code>
-</pre>
+$lang['admin']['help_function_cms_stylesheet'] = '	<h3>What does this do?</h3>
+
+  <p>A replacement for the {stylesheet} tag, this tag provides caching of css files by generating static files in the tmp/cache directory, and smarty processing of the individual stylesheets.</p>
+
+  <p>This plugin retrieves stylesheet information from the system.  By default, it grabs all of the stylesheets attached to the current template in the order specified by the designer, and generates stylesheet tags.</p>
+
+  <p>Generated stylesheets are uniquely named according to the last modification date in the database, and are only generated if the stylesheet has changed.</p>
+
+  <p>This tag is the replacement for the {stylesheet} tag.</p>
+
+  <h3>How do I use it?</h3>
+
+  <p>Just insert the tag into your template/page&#039;s head section like: <code>{cms_stylesheet}</code></p>
+
+  <h3>What parameters does it take?</h3>
+
+  <ul>
+
+  <li><em>(optional)</em>name - Instead of getting all stylesheets for the given page, it will only get one specifically named one, whether it&#039;s attached to the current template or not.</li>
+
+  <li><em>(optional)</em>templateid - If templateid is defined, this will return stylesheets associated with that template instead of the current one.</li>
+
+  <li><em>(optional)</em>media - When used in conjunction with the name parameter this parameter will allow you to override the media type for that stylesheet.  When used in conjunction with the templateid parameter, the media parameter will only output stylesheet tags for those stylesheets that arer marked as compatible with the specified media type.</li>
+
+  </ul>
+
+  <h3>Smarty Processing</h3>
+
+  <p>When generating css files this system passes the stylesheets retrieved from the database through smarty.  The smarty delimiters have been changed from the CMSMS standard { and } to [[ and ]] respectively to ease transition in stylesheets.  This allows creating smarty variables i.e.: [[assign var=&#039;red&#039; value=&#039;#900&#039;]] at the top of the stylesheet, and then using these variables later in the stylesheet, i.e:</p>
+
+<pre>
+
+<code>
+
+h3 .error { color: [[$red]]; }<br/>
+
+</code>
+
+</pre>
+
+<p>Because the cached files are generated in the tmp/cache directory of the CMSMS installation, the CSS relative working directory is not the root of the website.  Therefore any images, or other tags that require a url should use the [[root_url]] tag to force it to be an absolute url. i.e:</p>
+
+<pre>
+
+<code>
+
+h3 .error { background: url([[root_url]]/uploads/images/error_background.gif); }<br/>
+
+</code>
+
+</pre>
+
 <p><strong>Note:</strong> Due to the caching nature of the plugin, smarty variables should be placed at the top of EACH stylesheet that is attached to a template.</p>';
 $lang['admin']['pseudocron_granularity'] = 'Pseudocron Granularity';
 $lang['admin']['info_pseudocron_granularity'] = 'This setting indicates how often the system will attempt to handle regularly scheduled tasks';
@@ -123,81 +152,140 @@ $lang['admin']['bulk_success'] = 'Operace byla &uacute;spě&scaron;ně aktualizo
 $lang['admin']['no_bulk_performed'] = 'Operace neprovedena.';
 $lang['admin']['info_preview_notice'] = 'Varov&aacute;n&iacute;: Tento n&aacute;hledov&yacute; panel se chov&aacute; v&iacute;ce jako okno prohl&iacute;žeče a umožňuje navigaci z původně prohl&iacute;žen&eacute; str&aacute;nky. Pokud tak uděl&aacute;te, může nastat nepředv&iacute;dan&eacute; chov&aacute;n&iacute;. Pokud v n&aacute;hledu odejdete na jinou str&aacute;nku a pot&eacute; se vr&aacute;t&iacute;te, neuvid&iacute;te neodeslan&eacute; změny dokud neprovedete změny obsahu v hlavn&iacute; z&aacute;ložce a pot&eacute; neobnov&iacute;te tuto z&aacute;ložku. Pokud odejdete na jinou str&aacute;nku během přid&aacute;v&aacute;n&iacute; obsahu, nelze se navr&aacute;tit a je třeba obnovit tento panel.';
 $lang['admin']['sitedownexcludes'] = 'Vyjmout tyto adresy z hl&aacute;&scaron;en&iacute; mimo provoz';
-$lang['admin']['info_sitedownexcludes'] = 'Tento parametr dovoluje v&yacute;pis č&aacute;rkou oddělen&yacute;ch ip adres nebo s&iacute;t&iacute;, kter&eacute; maj&iacute; b&yacute;t vyřazeny z mechanizmu mimo provoz. To dovoluje administr&aacute;torům pracovat na str&aacute;nk&aacute;ch, ale anonymn&iacute; n&aacute;v&scaron;těvn&iacute;ci obdrž&iacute; zpr&aacute;vu mimo provoz.<br/><br/>Adresy mohou b&yacute;t zad&aacute;ny v n&aacute;sleduj&iacute;c&iacute;ch form&aacute;tech:<br/>
-1. xxx.xxx.xxx.xxx -- (přesn&aacute; IP adresa)<br/>
-2. xxx.xxx.xxx.[yyy-zzz] -- (rozsah IP adres)<br/>
+$lang['admin']['info_sitedownexcludes'] = 'Tento parametr dovoluje v&yacute;pis č&aacute;rkou oddělen&yacute;ch ip adres nebo s&iacute;t&iacute;, kter&eacute; maj&iacute; b&yacute;t vyřazeny z mechanizmu mimo provoz. To dovoluje administr&aacute;torům pracovat na str&aacute;nk&aacute;ch, ale anonymn&iacute; n&aacute;v&scaron;těvn&iacute;ci obdrž&iacute; zpr&aacute;vu mimo provoz.<br/><br/>Adresy mohou b&yacute;t zad&aacute;ny v n&aacute;sleduj&iacute;c&iacute;ch form&aacute;tech:<br/>
+
+1. xxx.xxx.xxx.xxx -- (přesn&aacute; IP adresa)<br/>
+
+2. xxx.xxx.xxx.[yyy-zzz] -- (rozsah IP adres)<br/>
+
 3. xxx.xxx.xxx.xxx/nn -- (nn = počet bitů, styl cisco.  např.:  192.168.0.100/24 = cel&yacute; subnet 192.168.0 tř&iacute;dy C)';
 $lang['admin']['setup'] = 'Pokročil&aacute; nastaven&iacute;';
 $lang['admin']['handle_404'] = 'Vlastn&iacute; 404 manipulace';
 $lang['admin']['sitedown_settings'] = 'Nastaven&iacute; zpr&aacute;v mimo provoz';
 $lang['admin']['general_settings'] = 'Hlavn&iacute; nastaven&iacute;';
-$lang['admin']['help_function_page_attr'] = '<h3>Co to děl&aacute;?</h3>
-<p>Tento tag může b&yacute;t použit pro navr&aacute;cen&iacute; hodnot atributů určit&eacute; str&aacute;nky.</p>
-<h3>Jak se použ&iacute;v&aacute;?</h3>
-<p>Stač&iacute; vložit tento tag do &scaron;ablony: <code>{page_attr key=&quot;extra1&quot;}</code>.</p>
-<h3>Jak&eacute; m&aacute; parametry?</h3>
-<ul>
-  <li><strong>key [vyžadov&aacute;no]</strong> Kl&iacute;č pro navr&aacute;cen&iacute; atributu.</li>
+$lang['admin']['help_function_page_attr'] = '<h3>Co to děl&aacute;?</h3>
+
+<p>Tento tag může b&yacute;t použit pro navr&aacute;cen&iacute; hodnot atributů určit&eacute; str&aacute;nky.</p>
+
+<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+<p>Stač&iacute; vložit tento tag do &scaron;ablony: <code>{page_attr key=&quot;extra1&quot;}</code>.</p>
+
+<h3>Jak&eacute; m&aacute; parametry?</h3>
+
+<ul>
+
+  <li><strong>key [vyžadov&aacute;no]</strong> Kl&iacute;č pro navr&aacute;cen&iacute; atributu.</li>
+
 </ul>';
 $lang['admin']['forge'] = 'Forge';
 $lang['admin']['disable_wysiwyg'] = 'WYSIWYG nen&iacute; povoleno pro tuto str&aacute;nku';
-$lang['admin']['help_function_page_image'] = '<h3>Co to děl&aacute;?</h3>
-<p>Tento tag se použ&iacute;v&aacute; pro n&aacute;vratovou hodnotu pole obr&aacute;zku nebo n&aacute;hledu určit&eacute; str&aacute;nky.</p>
-<h3>Jak se použ&iacute;v&aacute;?</h3>
-<p>Vložte do &scaron;ablony tag: <code>{page_image}</code>.</p>
-<h3>Jak&eacute; m&aacute; parametry??</h3>
-<ul>
-  <li>thumbnail - Volitelně zobraz&iacute; hodnotu n&aacute;hledu m&iacute;sto obr&aacute;zku.</li>
+$lang['admin']['help_function_page_image'] = '<h3>Co to děl&aacute;?</h3>
+
+<p>Tento tag se použ&iacute;v&aacute; pro n&aacute;vratovou hodnotu pole obr&aacute;zku nebo n&aacute;hledu určit&eacute; str&aacute;nky.</p>
+
+<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+<p>Vložte do &scaron;ablony tag: <code>{page_image}</code>.</p>
+
+<h3>Jak&eacute; m&aacute; parametry??</h3>
+
+<ul>
+
+  <li>thumbnail - Volitelně zobraz&iacute; hodnotu n&aacute;hledu m&iacute;sto obr&aacute;zku.</li>
+
 </ul>';
 $lang['admin']['pagelink_circular'] = 'Odkaz na str&aacute;nku nemůže m&iacute;t jin&yacute; odkaz jako svůj c&iacute;l';
 $lang['admin']['destinationnotfound'] = 'Vybran&aacute; str&aacute;nka nenalezena nebo nen&iacute; platn&aacute;';
-$lang['admin']['help_function_dump'] = '<h3>Co to děl&aacute;?</h3>
-  <p>Tento  tag se použ&iacute;v&aacute; pro z&iacute;sk&aacute;n&iacute; obsahu proměnn&eacute; smarty v l&eacute;pe čiteln&eacute;m form&aacute;tu.  Toto je vhodn&eacute; pro debugov&aacute;n&iacute;, editaci &scaron;ablon pro z&iacute;sk&aacute;n&iacute; form&aacute;tů a typů dostupn&yacute;ch dat..</p>
-<h3>Jak se použ&iacute;v&aacute;?</h3>
-<p>Vložte do &scaron;ablony tag <code>{dump item=&#039;the_smarty_variable_to_dump&#039;}</code>.</p>
-<h3>Jak&eacute; m&aacute; parametry?</h3>
-<ul>
-<li><strong>item (vyžadov&aacute;no)</strong> - Proměnn&aacute; smarty k z&iacute;sk&aacute;n&iacute; jej&iacute;ho obsahu.</li>
-<li>maxlevel - Maxim&aacute;ln&iacute; počet &uacute;rovn&iacute; pro rekurzi (použiteln&eacute; použe při dod&aacute;n&iacute; rekurze.  V&yacute;choz&iacute; hodnota tohoto parametru je 3</li>
-<li>nomethods - Přeskočit v&yacute;stup metod z objektu.</li>
-<li>novars - Přeskočit v&yacute;stup členů objektu.</li>
-<li>recurse - Maxim&aacute;ln&iacute; počet &uacute;rovn&iacute; objektů poskytuj&iacute;c&iacute;ch detailn&iacute; v&yacute;stup pro každou položku.</li>
+$lang['admin']['help_function_dump'] = '<h3>Co to děl&aacute;?</h3>
+
+  <p>Tento  tag se použ&iacute;v&aacute; pro z&iacute;sk&aacute;n&iacute; obsahu proměnn&eacute; smarty v l&eacute;pe čiteln&eacute;m form&aacute;tu.  Toto je vhodn&eacute; pro debugov&aacute;n&iacute;, editaci &scaron;ablon pro z&iacute;sk&aacute;n&iacute; form&aacute;tů a typů dostupn&yacute;ch dat..</p>
+
+<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+<p>Vložte do &scaron;ablony tag <code>{dump item=&#039;the_smarty_variable_to_dump&#039;}</code>.</p>
+
+<h3>Jak&eacute; m&aacute; parametry?</h3>
+
+<ul>
+
+<li><strong>item (vyžadov&aacute;no)</strong> - Proměnn&aacute; smarty k z&iacute;sk&aacute;n&iacute; jej&iacute;ho obsahu.</li>
+
+<li>maxlevel - Maxim&aacute;ln&iacute; počet &uacute;rovn&iacute; pro rekurzi (použiteln&eacute; použe při dod&aacute;n&iacute; rekurze.  V&yacute;choz&iacute; hodnota tohoto parametru je 3</li>
+
+<li>nomethods - Přeskočit v&yacute;stup metod z objektu.</li>
+
+<li>novars - Přeskočit v&yacute;stup členů objektu.</li>
+
+<li>recurse - Maxim&aacute;ln&iacute; počet &uacute;rovn&iacute; objektů poskytuj&iacute;c&iacute;ch detailn&iacute; v&yacute;stup pro každou položku.</li>
+
 </ul>';
 $lang['admin']['sqlerror'] = 'Chyba SQL v %s';
 $lang['admin']['image'] = 'Obr&aacute;zek';
 $lang['admin']['thumbnail'] = 'N&aacute;hled';
 $lang['admin']['searchable'] = 'Tato str&aacute;nka je prohled&aacute;vateln&aacute;';
-$lang['admin']['help_function_content_image'] = '<h3>Co děl&aacute; tento modul?</h3>
-<p>Tento modul povoluje v&yacute;voj&aacute;řům &scaron;ablon vyzvat uživatele k v&yacute;běru obr&aacute;zku při editaci obsahu str&aacute;nky. Chov&aacute; se stejně jako obsahov&yacute; modul pro doplňuj&iacute;c&iacute; obsahov&eacute; bloky..</p>
-<h3>Jak tento modul použ&iacute;t??</h3>
-<p>Pouze vložte tag do &scaron;ablony: <code>{content_image block=&#039;image1&#039;}</code>.</p>
-<h3>Jak&eacute; jsou parametry?</h3>
-<ul>
-  <li><strong>(vyžadov&aacute;no)</strong> block - Jm&eacute;no tohoto doplňuj&iacute;c&iacute;ho obsahov&eacute;ho bloku.
-  <p>Př&iacute;klad:</p>
-  <pre>{content_image block=&#039;image1&#039;}</pre><br/>
-  </li>
-
-  <li><em>(voliteln&eacute;)</em> label - Jmenovka nebo v&yacute;zva na tento blok v editaci obsahu str&aacute;nky.  Pokud nen&iacute; zad&aacute;n, použije se jm&eacute;no bloku.</li>
- 
-  <li><em>(voliteln&eacute;)</em> dir - Jm&eacute;no adres&aacute;ře, ze kter&eacute;ho vyb&iacute;rat soubory obr&aacute;zků  (relativn&iacute; k adres&aacute;ři uploads). Pokud nen&iacute; zad&aacute;n, použije se adres&aacute;ř uploads.
-  <p>Př&iacute;klad: Použ&iacute;vat obr&aacute;zky z adres&aacute;ře uploads/image.</p>
-  <pre>{content_image block=&#039;image1&#039; dir=&#039;images&#039;}</pre><br/>
-  </li>
-
-  <li><em>(voliteln&eacute;)</em> class - Jm&eacute;no css tř&iacute;dy pro použit&iacute; v tagu img.</li>
-
-  <li><em>(voliteln&eacute;)</em> id - Jm&eacute;no id pro použit&iacute; v tagu img.</li> 
-
-  <li><em>(voliteln&eacute;)</em> name - Jm&eacute;no tagu pro použit&iacute; v tagu img.</li> 
-
-  <li><em>(voliteln&eacute;)</em> width - Ž&aacute;dan&aacute; &scaron;&iacute;řka obr&aacute;zku.</li>
-
-  <li><em>(voliteln&eacute;)</em> height - Ž&aacute;dan&aacute; v&yacute;&scaron;ka obr&aacute;zku.</li>
-
-  <li><em>(voliteln&eacute;)</em> alt - Alternativn&iacute; text při nenalezen&iacute; obr&aacute;zku.</li>
-
-
+$lang['admin']['help_function_content_image'] = '<h3>Co děl&aacute; tento modul?</h3>
+
+<p>Tento modul povoluje v&yacute;voj&aacute;řům &scaron;ablon vyzvat uživatele k v&yacute;běru obr&aacute;zku při editaci obsahu str&aacute;nky. Chov&aacute; se stejně jako obsahov&yacute; modul pro doplňuj&iacute;c&iacute; obsahov&eacute; bloky..</p>
+
+<h3>Jak tento modul použ&iacute;t??</h3>
+
+<p>Pouze vložte tag do &scaron;ablony: <code>{content_image block=&#039;image1&#039;}</code>.</p>
+
+<h3>Jak&eacute; jsou parametry?</h3>
+
+<ul>
+
+  <li><strong>(vyžadov&aacute;no)</strong> block - Jm&eacute;no tohoto doplňuj&iacute;c&iacute;ho obsahov&eacute;ho bloku.
+
+  <p>Př&iacute;klad:</p>
+
+  <pre>{content_image block=&#039;image1&#039;}</pre><br/>
+
+  </li>
+
+
+
+  <li><em>(voliteln&eacute;)</em> label - Jmenovka nebo v&yacute;zva na tento blok v editaci obsahu str&aacute;nky.  Pokud nen&iacute; zad&aacute;n, použije se jm&eacute;no bloku.</li>
+
+ 
+
+  <li><em>(voliteln&eacute;)</em> dir - Jm&eacute;no adres&aacute;ře, ze kter&eacute;ho vyb&iacute;rat soubory obr&aacute;zků  (relativn&iacute; k adres&aacute;ři uploads). Pokud nen&iacute; zad&aacute;n, použije se adres&aacute;ř uploads.
+
+  <p>Př&iacute;klad: Použ&iacute;vat obr&aacute;zky z adres&aacute;ře uploads/image.</p>
+
+  <pre>{content_image block=&#039;image1&#039; dir=&#039;images&#039;}</pre><br/>
+
+  </li>
+
+
+
+  <li><em>(voliteln&eacute;)</em> class - Jm&eacute;no css tř&iacute;dy pro použit&iacute; v tagu img.</li>
+
+
+
+  <li><em>(voliteln&eacute;)</em> id - Jm&eacute;no id pro použit&iacute; v tagu img.</li> 
+
+
+
+  <li><em>(voliteln&eacute;)</em> name - Jm&eacute;no tagu pro použit&iacute; v tagu img.</li> 
+
+
+
+  <li><em>(voliteln&eacute;)</em> width - Ž&aacute;dan&aacute; &scaron;&iacute;řka obr&aacute;zku.</li>
+
+
+
+  <li><em>(voliteln&eacute;)</em> height - Ž&aacute;dan&aacute; v&yacute;&scaron;ka obr&aacute;zku.</li>
+
+
+
+  <li><em>(voliteln&eacute;)</em> alt - Alternativn&iacute; text při nenalezen&iacute; obr&aacute;zku.</li>
+
+
+
+
+
 </ul>';
 $lang['admin']['error_udt_name_chars'] = 'Platn&eacute; UDT jm&eacute;no zač&iacute;n&aacute; p&iacute;smenem nebo podtrž&iacute;tkem, n&aacute;sleduje libovoln&yacute; počet p&iacute;smen, č&iacute;sel nebo podtrž&iacute;tek';
 $lang['admin']['errorupdatetemplateallpages'] = '&Scaron;ablona nen&iacute; aktivn&iacute;';
@@ -253,15 +341,24 @@ $lang['admin']['checksum_passed'] = 'V&scaron;echny kontroln&iacute; součty odp
 $lang['admin']['error_retrieving_file_list'] = 'Chyba při z&iacute;sk&aacute;v&aacute;n&iacute; seznamu souborů';
 $lang['admin']['files_checksum_failed'] = 'Kontroln&iacute; součet souborů nemůže b&yacute;t zkontrolov&aacute;n';
 $lang['admin']['failure'] = 'Chyba';
-$lang['admin']['help_function_process_pagedata'] = '<h3>Co děl&aacute; tento modul?</h3>
-<p>Tento modul zpracov&aacute;v&aacute; data v bloku &quot;pagedata&quot; obsahov&yacute;ch str&aacute;nek skrz smarty. Povoluje zadat smarty specifick&aacute; data str&aacute;nky bez změny &scaron;ablony pro každou str&aacute;nku.</p>
-<h3>Jak se použ&iacute;v&aacute;?</h3>
-<ol>
-  <li>Vložte smarty proměnn&eacute; a jinou smarty logiku do pole pagedata někter&yacute;ch Va&scaron;ich obsahov&yacute;ch str&aacute;nek.</li>
-  <li>Vložte <code>{process_pagedata}</code> tag co možn&aacute; nejv&yacute;&scaron;e do Va&scaron;&iacute; &scaron;ablony str&aacute;nek.</li>
-</ol>
-<br/>
-<h3>Jak&eacute; použ&iacute;v&aacute; parametry?</h3>
+$lang['admin']['help_function_process_pagedata'] = '<h3>Co děl&aacute; tento modul?</h3>
+
+<p>Tento modul zpracov&aacute;v&aacute; data v bloku &quot;pagedata&quot; obsahov&yacute;ch str&aacute;nek skrz smarty. Povoluje zadat smarty specifick&aacute; data str&aacute;nky bez změny &scaron;ablony pro každou str&aacute;nku.</p>
+
+<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+<ol>
+
+  <li>Vložte smarty proměnn&eacute; a jinou smarty logiku do pole pagedata někter&yacute;ch Va&scaron;ich obsahov&yacute;ch str&aacute;nek.</li>
+
+  <li>Vložte <code>{process_pagedata}</code> tag co možn&aacute; nejv&yacute;&scaron;e do Va&scaron;&iacute; &scaron;ablony str&aacute;nek.</li>
+
+</ol>
+
+<br/>
+
+<h3>Jak&eacute; použ&iacute;v&aacute; parametry?</h3>
+
 <p>Moment&aacute;lně ž&aacute;dn&eacute;</p>';
 $lang['admin']['page_metadata'] = 'Metadata specifick&aacute; pro str&aacute;nku';
 $lang['admin']['pagedata_codeblock'] = 'Data SMARTY nebo logika, př&iacute;slu&scaron;n&aacute; dan&eacute; str&aacute;nce';
@@ -337,714 +434,1373 @@ $lang['admin']['contenttype_pagelink'] = 'Odkaz na jinou str&aacute;nku webu';
 $lang['admin']['nogcbwysiwyg'] = 'Zak&aacute;zat WYSIWYG editaci HTML bloků';
 $lang['admin']['destination_page'] = 'C&iacute;lov&aacute; str&aacute;nka';
 $lang['admin']['additional_params'] = 'Dal&scaron;&iacute; parametry';
-$lang['admin']['help_function_current_date'] = '	<h3>Co děl&aacute; tato funkce?</h3>
-	<p>Tato funkce bude při vložen&iacute; nahrazena aktu&aacute;ln&iacute;m datem a časem. Pokud nen&iacute; ud&aacute;n ž&aacute;dn&yacute; form&aacute;t, bude v&yacute;stup vypadat podobně jako: &#039;Jan 01, 2004&#039;.</p>
-	<h3>Jak tuto funkci použ&iacute;t??</h3>
-	<p>Vložte tag do Va&scaron;&iacute; &scaron;ablony/str&aacute;nky: <code>{current_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code></p>
-	<h3>Jak&eacute; m&aacute; parametry?</h3>
-	<ul>
-		<li><em>(voliteln&eacute;)</em>format - form&aacute;t data/času použ&iacute;vaj&iacute;c&iacute; parametry ze strftime funkce php.  Viz. <a href="http://php.net/strftime" target="_blank">zde</a> pro seznam parametrů a informace.</li>
-		<li><em>(voliteln&eacute;)</em>ucword - Při true nastavuje velk&eacute; p&iacute;smeno u každ&eacute;ho slova.</li>
-	</ul>
+$lang['admin']['help_function_current_date'] = '	<h3>Co děl&aacute; tato funkce?</h3>
+
+	<p>Tato funkce bude při vložen&iacute; nahrazena aktu&aacute;ln&iacute;m datem a časem. Pokud nen&iacute; ud&aacute;n ž&aacute;dn&yacute; form&aacute;t, bude v&yacute;stup vypadat podobně jako: &#039;Jan 01, 2004&#039;.</p>
+
+	<h3>Jak tuto funkci použ&iacute;t??</h3>
+
+	<p>Vložte tag do Va&scaron;&iacute; &scaron;ablony/str&aacute;nky: <code>{current_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code></p>
+
+	<h3>Jak&eacute; m&aacute; parametry?</h3>
+
+	<ul>
+
+		<li><em>(voliteln&eacute;)</em>format - form&aacute;t data/času použ&iacute;vaj&iacute;c&iacute; parametry ze strftime funkce php.  Viz. <a href="http://php.net/strftime" target="_blank">zde</a> pro seznam parametrů a informace.</li>
+
+		<li><em>(voliteln&eacute;)</em>ucword - Při true nastavuje velk&eacute; p&iacute;smeno u každ&eacute;ho slova.</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['help_function_valid_xhtml'] = '<h3>Co děl&aacute; tato funkce?</h3>
-<p>Vyp&iacute;&scaron;e odkaz na W3C valid&aacute;tor.</p>
-<h3>Jak tuto funkci použ&iacute;t?</h3>
-<p>Vložte tento k&oacute;d do str&aacute;nky či &scaron;ablony: <code>{valid_xhtml}</code></p>
-<h3>Jak&eacute; parametry lze použ&iacute;t?</h3>
-<p>
-    <ul>
-	<li><em>(voliteln&eacute;)</em> url         (string)     - URL použit&eacute; pro validaci, pokud nen&iacute; zad&aacute;no, použije se http://validator.w3.org/check/referer.</li>
-	<li><em>(voliteln&eacute;)</em> class       (string)     - Pokud je nastaven, bude použit jako atribut tř&iacute;dy pro odkazov&yacute; (a) element</li>
-	<li><em>(voliteln&eacute;)</em> target      (string)     - Pokud je nastaven, bude použit jako c&iacute;lov&yacute; atribut pro odkazov&yacute; (a) element</li>
-	<li><em>(voliteln&eacute;)</em> image       (true/false) - Pokud je nastaven na false, bude použit textov&yacute; odkaz m&iacute;sto obr&aacute;zku/ikony.</li>
-	<li><em>(voliteln&eacute;)</em> text        (string)     - Pokud je nastaven, bude použit pro text odkazu nebo alternativn&iacute; text u obr&aacute;zku. V&yacute;choz&iacute; je &#039;valid XHTML 1.0 Transitional&#039;.<br /> Při použit&iacute; obr&aacute;zku, zadan&yacute; string bude použit pro alt atribut obr&aacute;zku (v&yacute;choz&iacute;, lze potlačit použit&iacute;m parametru &#039;alt&#039;).</li>
-	<li><em>(voliteln&eacute;)</em> image_class (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. Pokud je nastaven, bude použit jako atribut tř&iacute;dy pro element obr&aacute;zku (img)</li>
-	<li><em>(voliteln&eacute;)</em> src         (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. Ikona pro zobrazen&iacute;. V&yacute;choz&iacute; je http://www.w3.org/Icons/valid-xhtml10</li>
-	<li><em>(voliteln&eacute;)</em> width       (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. &Scaron;&iacute;řka obr&aacute;zku. V&yacute;choz&iacute; je 88 (&scaron;&iacute;řka http://www.w3.org/Icons/valid-xhtml10)</li>
-	<li><em>(voliteln&eacute;)</em> height      (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. V&yacute;&scaron;ka obr&aacute;zku. V&yacute;choz&iacute; je 31 (v&yacute;&scaron;ka http://www.w3.org/Icons/valid-xhtml10)</li>
-	<li><em>(voliteln&eacute;)</em> alt         (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. Alternativn&iacute; text (atribut &#039;alt&#039;) pro image (element). Pokud nen&iacute; zad&aacute;no je použit text odkazu.</li>
-    </ul>
+$lang['admin']['help_function_valid_xhtml'] = '<h3>Co děl&aacute; tato funkce?</h3>
+
+<p>Vyp&iacute;&scaron;e odkaz na W3C valid&aacute;tor.</p>
+
+<h3>Jak tuto funkci použ&iacute;t?</h3>
+
+<p>Vložte tento k&oacute;d do str&aacute;nky či &scaron;ablony: <code>{valid_xhtml}</code></p>
+
+<h3>Jak&eacute; parametry lze použ&iacute;t?</h3>
+
+<p>
+
+    <ul>
+
+	<li><em>(voliteln&eacute;)</em> url         (string)     - URL použit&eacute; pro validaci, pokud nen&iacute; zad&aacute;no, použije se http://validator.w3.org/check/referer.</li>
+
+	<li><em>(voliteln&eacute;)</em> class       (string)     - Pokud je nastaven, bude použit jako atribut tř&iacute;dy pro odkazov&yacute; (a) element</li>
+
+	<li><em>(voliteln&eacute;)</em> target      (string)     - Pokud je nastaven, bude použit jako c&iacute;lov&yacute; atribut pro odkazov&yacute; (a) element</li>
+
+	<li><em>(voliteln&eacute;)</em> image       (true/false) - Pokud je nastaven na false, bude použit textov&yacute; odkaz m&iacute;sto obr&aacute;zku/ikony.</li>
+
+	<li><em>(voliteln&eacute;)</em> text        (string)     - Pokud je nastaven, bude použit pro text odkazu nebo alternativn&iacute; text u obr&aacute;zku. V&yacute;choz&iacute; je &#039;valid XHTML 1.0 Transitional&#039;.<br /> Při použit&iacute; obr&aacute;zku, zadan&yacute; string bude použit pro alt atribut obr&aacute;zku (v&yacute;choz&iacute;, lze potlačit použit&iacute;m parametru &#039;alt&#039;).</li>
+
+	<li><em>(voliteln&eacute;)</em> image_class (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. Pokud je nastaven, bude použit jako atribut tř&iacute;dy pro element obr&aacute;zku (img)</li>
+
+	<li><em>(voliteln&eacute;)</em> src         (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. Ikona pro zobrazen&iacute;. V&yacute;choz&iacute; je http://www.w3.org/Icons/valid-xhtml10</li>
+
+	<li><em>(voliteln&eacute;)</em> width       (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. &Scaron;&iacute;řka obr&aacute;zku. V&yacute;choz&iacute; je 88 (&scaron;&iacute;řka http://www.w3.org/Icons/valid-xhtml10)</li>
+
+	<li><em>(voliteln&eacute;)</em> height      (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. V&yacute;&scaron;ka obr&aacute;zku. V&yacute;choz&iacute; je 31 (v&yacute;&scaron;ka http://www.w3.org/Icons/valid-xhtml10)</li>
+
+	<li><em>(voliteln&eacute;)</em> alt         (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. Alternativn&iacute; text (atribut &#039;alt&#039;) pro image (element). Pokud nen&iacute; zad&aacute;no je použit text odkazu.</li>
+
+    </ul>
+
 </p>';
-$lang['admin']['help_function_valid_css'] = '<h3>Co děl&aacute; tato funkce?</h3>
-<p>Vyp&iacute;&scaron;e odkaz na W3C CSS valid&aacute;tor.</p>
-<h3>Jak tuto funkci použ&iacute;t?</h3>
-<p>Vložte tento k&oacute;d do &scaron;ablony/str&aacute;nky: <code>{valid_css}</code></p>
-<h3>Jak&eacute; parametry lze použ&iacute;t?</h3>
-<p>
-    <ul>
-        <li><em>(voliteln&eacute;)</em> url         (string)     - URL použit&aacute; pro kontrolu, pokud nen&iacute; zad&aacute;na, použije se http://jigsaw.w3.org/css-validator/check/referer .</li>
-	<li><em>(voliteln&eacute;)</em> class       (string)     - Pokud je nastaven, bude použit jako atribut tř&iacute;dy pro odkazov&yacute; (a) element</li>
-	<li><em>(voliteln&eacute;)</em> target      (string)     - Pokud je nastaven, bude použit jako c&iacute;lov&yacute; atribut pro odkazov&yacute; (a) element</li>
-	<li><em>(voliteln&eacute;)</em> image       (true/false) - Pokud je nastaven na false, bude použit textov&yacute; odkaz m&iacute;sto obr&aacute;zku/ikony.</li>
-	<li><em>(voliteln&eacute;)</em> text        (string)     - Pokud je nastaven, bude použit pro text odkazu nebo alternativn&iacute; text u obr&aacute;zku. V&yacute;choz&iacute; je &#039;Valid CSS 2.1&#039;.<br /> Při použit&iacute; obr&aacute;zku, zadan&yacute; string bude použit pro alt atribut obr&aacute;zku (v&yacute;choz&iacute;, lze potlačit použit&iacute;m parametru &#039;alt&#039;).</li>
-	<li><em>(voliteln&eacute;)</em> image_class (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. Pokud je nastaven, bude použit jako atribut tř&iacute;dy pro element obr&aacute;zku (img)</li>
-	<li><em>(voliteln&eacute;)</em> src         (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. Ikona pro zobrazen&iacute;. V&yacute;choz&iacute; je http://jigsaw.w3.org/css-validator/images/vcss</li>
-	<li><em>(voliteln&eacute;)</em> width       (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. &Scaron;&iacute;řka obr&aacute;zku. V&yacute;choz&iacute; je 88 (&scaron;&iacute;řka http://jigsaw.w3.org/css-validator/images/vcss)</li>
-	<li><em>(voliteln&eacute;)</em> height      (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. V&yacute;&scaron;ka obr&aacute;zku. V&yacute;choz&iacute; je 31 (v&yacute;&scaron;ka http://jigsaw.w3.org/css-validator/images/vcss)</li>
-	<li><em>(voliteln&eacute;)</em> alt         (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. Alternativn&iacute; text (atribut &#039;alt&#039;) pro image (element). Pokud nen&iacute; zad&aacute;no je použit text odkazu.</li>
-    </ul>
+$lang['admin']['help_function_valid_css'] = '<h3>Co děl&aacute; tato funkce?</h3>
+
+<p>Vyp&iacute;&scaron;e odkaz na W3C CSS valid&aacute;tor.</p>
+
+<h3>Jak tuto funkci použ&iacute;t?</h3>
+
+<p>Vložte tento k&oacute;d do &scaron;ablony/str&aacute;nky: <code>{valid_css}</code></p>
+
+<h3>Jak&eacute; parametry lze použ&iacute;t?</h3>
+
+<p>
+
+    <ul>
+
+        <li><em>(voliteln&eacute;)</em> url         (string)     - URL použit&aacute; pro kontrolu, pokud nen&iacute; zad&aacute;na, použije se http://jigsaw.w3.org/css-validator/check/referer .</li>
+
+	<li><em>(voliteln&eacute;)</em> class       (string)     - Pokud je nastaven, bude použit jako atribut tř&iacute;dy pro odkazov&yacute; (a) element</li>
+
+	<li><em>(voliteln&eacute;)</em> target      (string)     - Pokud je nastaven, bude použit jako c&iacute;lov&yacute; atribut pro odkazov&yacute; (a) element</li>
+
+	<li><em>(voliteln&eacute;)</em> image       (true/false) - Pokud je nastaven na false, bude použit textov&yacute; odkaz m&iacute;sto obr&aacute;zku/ikony.</li>
+
+	<li><em>(voliteln&eacute;)</em> text        (string)     - Pokud je nastaven, bude použit pro text odkazu nebo alternativn&iacute; text u obr&aacute;zku. V&yacute;choz&iacute; je &#039;Valid CSS 2.1&#039;.<br /> Při použit&iacute; obr&aacute;zku, zadan&yacute; string bude použit pro alt atribut obr&aacute;zku (v&yacute;choz&iacute;, lze potlačit použit&iacute;m parametru &#039;alt&#039;).</li>
+
+	<li><em>(voliteln&eacute;)</em> image_class (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. Pokud je nastaven, bude použit jako atribut tř&iacute;dy pro element obr&aacute;zku (img)</li>
+
+	<li><em>(voliteln&eacute;)</em> src         (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. Ikona pro zobrazen&iacute;. V&yacute;choz&iacute; je http://jigsaw.w3.org/css-validator/images/vcss</li>
+
+	<li><em>(voliteln&eacute;)</em> width       (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. &Scaron;&iacute;řka obr&aacute;zku. V&yacute;choz&iacute; je 88 (&scaron;&iacute;řka http://jigsaw.w3.org/css-validator/images/vcss)</li>
+
+	<li><em>(voliteln&eacute;)</em> height      (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. V&yacute;&scaron;ka obr&aacute;zku. V&yacute;choz&iacute; je 31 (v&yacute;&scaron;ka http://jigsaw.w3.org/css-validator/images/vcss)</li>
+
+	<li><em>(voliteln&eacute;)</em> alt         (string)     - Pouze pokud &#039;image&#039; nen&iacute; nastaven na false. Alternativn&iacute; text (atribut &#039;alt&#039;) pro image (element). Pokud nen&iacute; zad&aacute;no je použit text odkazu.</li>
+
+    </ul>
+
 </p>';
-$lang['admin']['help_function_title'] = '	<h3>Co děl&aacute; tato funkce?</h3>
-	<p>Vytiskne titulek str&aacute;nky.</p>
-	<h3>Jak tuto funkci použ&iacute;t?</h3>
-	<p>Pouze vložte tak do Va&scaron;&iacute; &scaron;ablony/str&aacute;nky jako: <code>{title}</code></p>
-	<h3>Jak&eacute; parametry lze použ&iacute;t?</h3>
+$lang['admin']['help_function_title'] = '	<h3>Co děl&aacute; tato funkce?</h3>
+
+	<p>Vytiskne titulek str&aacute;nky.</p>
+
+	<h3>Jak tuto funkci použ&iacute;t?</h3>
+
+	<p>Pouze vložte tak do Va&scaron;&iacute; &scaron;ablony/str&aacute;nky jako: <code>{title}</code></p>
+
+	<h3>Jak&eacute; parametry lze použ&iacute;t?</h3>
+
 	<p><em>(voliteln&eacute;)</em> assign (string) - Přiřad&iacute; v&yacute;sledky smarty proměnn&eacute; s t&iacute;mto jm&eacute;nem.</p>';
-$lang['admin']['help_function_stylesheet'] = '	<h3>Co děl&aacute; tato funkce?</h3>
-	<p>Z&iacute;sk&aacute; ze syst&eacute;mu informace o stylu. V&yacute;choz&iacute; je stažen&iacute; v&scaron;ech stylů připojen&yacute;ch do aktu&aacute;ln&iacute; &scaron;ablony.</p>
-	<h3>Jak tuto funkci použ&iacute;t?</h3>
-	<p>Pouze vložte tag do Va&scaron;&iacute; &scaron;ablony/head sekce str&aacute;nky jako: <code>{stylesheet}</code></p>
-	<h3>Jak&eacute; parametry lze použ&iacute;t?</h3>
-	<ul>
-		<li><em>(voliteln&eacute;)</em>name - M&iacute;sto z&iacute;sk&aacute;n&iacute; v&scaron;ech stylů pro danou str&aacute;nku, z&iacute;sk&aacute; jen jeden tohoto jm&eacute;na, ať je k dan&eacute; &scaron;abloně připojen nebo ne.</li>
-		<li><em>(voliteln&eacute;)</em>media - Pokud je zadan&eacute; jm&eacute;no, povol&iacute; nastavit jin&yacute; typ media pro tento styl.</li>
-	</ul>
+$lang['admin']['help_function_stylesheet'] = '	<h3>Co děl&aacute; tato funkce?</h3>
+
+	<p>Z&iacute;sk&aacute; ze syst&eacute;mu informace o stylu. V&yacute;choz&iacute; je stažen&iacute; v&scaron;ech stylů připojen&yacute;ch do aktu&aacute;ln&iacute; &scaron;ablony.</p>
+
+	<h3>Jak tuto funkci použ&iacute;t?</h3>
+
+	<p>Pouze vložte tag do Va&scaron;&iacute; &scaron;ablony/head sekce str&aacute;nky jako: <code>{stylesheet}</code></p>
+
+	<h3>Jak&eacute; parametry lze použ&iacute;t?</h3>
+
+	<ul>
+
+		<li><em>(voliteln&eacute;)</em>name - M&iacute;sto z&iacute;sk&aacute;n&iacute; v&scaron;ech stylů pro danou str&aacute;nku, z&iacute;sk&aacute; jen jeden tohoto jm&eacute;na, ať je k dan&eacute; &scaron;abloně připojen nebo ne.</li>
+
+		<li><em>(voliteln&eacute;)</em>media - Pokud je zadan&eacute; jm&eacute;no, povol&iacute; nastavit jin&yacute; typ media pro tento styl.</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['help_function_stopexpandcollapse'] = '	<h3>Co děl&aacute; tato funkce?</h3>
-	<p>Umožňuje rozbaliteln&yacute; a sbaliteln&yacute; obsah. Jako n&aacute;sleduj&iacute;c&iacute;:<br />
-	<a href="#expand1" onClick="expandcontent(&#039;expand1&#039;)" style="cursor:hand; cursor:pointer">Klikněte zde pro v&iacute;ce informac&iacute;</a><span id=&quot;expand1&quot; class=&quot;expand&quot;><a name="help"></a> - Zde jsou v&scaron;echny informace, kter&eacute; budete kdy potřebovat...</a></span></p>
-
-	<h3>Jak tuto funkci použ&iacute;t?</h3>
-	<p>Pouze vložte tag do Va&scaron;&iacute; &scaron;ablony/str&aacute;nky, jako např.:<br />
-	<br />
-	<code>{startExpandCollapse id=&quot;name&quot; title=&quot;Klikněte zde&quot;}<br />
-	Tento obsah uživatel uvid&iacute;  po kliknut&iacute; na titulek &quot;Klikněte zde&quot; v&yacute;&scaron;e. Zobraz&iacute; se ve&scaron;ker&yacute; obsah mezi {startExpandCollapse} a {stopExpandCollapse}.<br />
-	{stopExpandCollapse}
-	</code>
-	<br />
-	<br />
-	Pozn&aacute;mka: Pokud zam&yacute;&scaron;l&iacute;te použ&iacute;t tuto funkci v&iacute;cekr&aacute;t na jedn&eacute; str&aacute;nce, každ&yacute; tag startExpandCollapse mus&iacute; m&iacute;t jedinečn&eacute; id.</p>
-	<h3>Co kdyz chci změnit vzhled titulku?</h3>
-	<p>Vzhled titulku může b&yacute;t měněn pomoc&iacute; css. Titulek je zabalen do div s v&aacute;mi specifikovan&yacute;m id.</p>
-
-	<h3>Jak&eacute; lze použ&iacute;t parametry?</h3>
-	<p>
-	<i>startExpandCollapse použ&iacute;v&aacute; n&aacute;sleduj&iacute;c&iacute; parametry</i><br />
-	&nbsp; &nbsp;id - Unik&aacute;tn&iacute; id pro č&aacute;st rozbalen&iacute;/sbalen&iacute;.<br />
-	&nbsp; &nbsp;title - Text zobrazen&yacute; pro rozbalen&iacute;/sbalen&iacute; obsahu.<br />
-	<i>stopExpandCollapse nem&aacute; ž&aacute;dn&eacute; parametry</i><br />
+$lang['admin']['help_function_stopexpandcollapse'] = '	<h3>Co děl&aacute; tato funkce?</h3>
+
+	<p>Umožňuje rozbaliteln&yacute; a sbaliteln&yacute; obsah. Jako n&aacute;sleduj&iacute;c&iacute;:<br />
+
+	<a href="#expand1" onClick="expandcontent(&#039;expand1&#039;)" style="cursor:hand; cursor:pointer">Klikněte zde pro v&iacute;ce informac&iacute;</a><span id=&quot;expand1&quot; class=&quot;expand&quot;><a name="help"></a> - Zde jsou v&scaron;echny informace, kter&eacute; budete kdy potřebovat...</a></span></p>
+
+
+
+	<h3>Jak tuto funkci použ&iacute;t?</h3>
+
+	<p>Pouze vložte tag do Va&scaron;&iacute; &scaron;ablony/str&aacute;nky, jako např.:<br />
+
+	<br />
+
+	<code>{startExpandCollapse id=&quot;name&quot; title=&quot;Klikněte zde&quot;}<br />
+
+	Tento obsah uživatel uvid&iacute;  po kliknut&iacute; na titulek &quot;Klikněte zde&quot; v&yacute;&scaron;e. Zobraz&iacute; se ve&scaron;ker&yacute; obsah mezi {startExpandCollapse} a {stopExpandCollapse}.<br />
+
+	{stopExpandCollapse}
+
+	</code>
+
+	<br />
+
+	<br />
+
+	Pozn&aacute;mka: Pokud zam&yacute;&scaron;l&iacute;te použ&iacute;t tuto funkci v&iacute;cekr&aacute;t na jedn&eacute; str&aacute;nce, každ&yacute; tag startExpandCollapse mus&iacute; m&iacute;t jedinečn&eacute; id.</p>
+
+	<h3>Co kdyz chci změnit vzhled titulku?</h3>
+
+	<p>Vzhled titulku může b&yacute;t měněn pomoc&iacute; css. Titulek je zabalen do div s v&aacute;mi specifikovan&yacute;m id.</p>
+
+
+
+	<h3>Jak&eacute; lze použ&iacute;t parametry?</h3>
+
+	<p>
+
+	<i>startExpandCollapse použ&iacute;v&aacute; n&aacute;sleduj&iacute;c&iacute; parametry</i><br />
+
+	&nbsp; &nbsp;id - Unik&aacute;tn&iacute; id pro č&aacute;st rozbalen&iacute;/sbalen&iacute;.<br />
+
+	&nbsp; &nbsp;title - Text zobrazen&yacute; pro rozbalen&iacute;/sbalen&iacute; obsahu.<br />
+
+	<i>stopExpandCollapse nem&aacute; ž&aacute;dn&eacute; parametry</i><br />
+
 	</p>';
-$lang['admin']['help_function_startexpandcollapse'] = '	<h3>Co děl&aacute; tato funkce?</h3>
-	<p>Umožňuje rozbaliteln&yacute; a sbaliteln&yacute; obsah. Jako n&aacute;sleduj&iacute;c&iacute;:<br />
-	<a href="#expand1" onClick="expandcontent(&#039;expand1&#039;)" style="cursor:hand; cursor:pointer">Klikněte zde pro v&iacute;ce info</a><span id=&quot;expand1&quot; class=&quot;expand&quot;><a name="help"></a> - Zde jsou v&scaron;echny informace, kter&eacute; budete kdy potřebovat...</a></span></p>
-
-	<h3>Jak tuto funkci použ&iacute;t?</h3>
-	<p>Pouze vložte tag do Va&scaron;&iacute; &scaron;ablony/str&aacute;nky, jako např.: <code>{startExpandCollapse id=&quot;name&quot; title=&quot;Klikněte zde&quot;}</code>. Mus&iacute;te tak&eacute; použ&iacute;t {stopExpandCollapse} na konci sbaliteln&eacute;ho obsahu. Zde je př&iacute;klad:<br />
-	<br />
-	<code>{startExpandCollapse id=&quot;name&quot; title=&quot;Klikněte zde&quot;}<br />
-	Tento obsah uživatel uvid&iacute;  po kliknut&iacute; na titulek &quot;Klikněte zde&quot; v&yacute;&scaron;e. Zobraz&iacute; se ve&scaron;ker&yacute; obsah mezi {startExpandCollapse} a {stopExpandCollapse}.<br />
-	{stopExpandCollapse}
-	</code>
-	<br />
-	<br />
-	Pozn&aacute;mka: Pokud zam&yacute;&scaron;l&iacute;te použ&iacute;t tuto funkci v&iacute;cekr&aacute;t na jedn&eacute; str&aacute;nce, každ&yacute; tag startExpandCollapse mus&iacute; m&iacute;t jedinečn&eacute; id.</p>
-	<h3>Co kdyz chci změnit vzhled titulku?</h3>
-	<p>Vzhled titulku může b&yacute;t měněn pomoc&iacute; css. Titulek je zabalen do div s v&aacute;mi specifikovan&yacute;m id.</p>
-
-	<h3>Jak&eacute; lze použ&iacute;t parametry?</h3>
-	<p>
-	<i>startExpandCollapse použ&iacute;v&aacute; n&aacute;sleduj&iacute;c&iacute; parametry</i><br />
-	&nbsp; &nbsp;id - Unik&aacute;tn&iacute; id pro č&aacute;st rozbalen&iacute;/sbalen&iacute;.<br />
-	&nbsp; &nbsp;title - Text zobrazen&yacute; pro rozbalen&iacute;/sbalen&iacute; obsahu..<br />
-	<i>stopExpandCollapse nem&aacute; ž&aacute;dn&eacute; parametry</i><br />
+$lang['admin']['help_function_startexpandcollapse'] = '	<h3>Co děl&aacute; tato funkce?</h3>
+
+	<p>Umožňuje rozbaliteln&yacute; a sbaliteln&yacute; obsah. Jako n&aacute;sleduj&iacute;c&iacute;:<br />
+
+	<a href="#expand1" onClick="expandcontent(&#039;expand1&#039;)" style="cursor:hand; cursor:pointer">Klikněte zde pro v&iacute;ce info</a><span id=&quot;expand1&quot; class=&quot;expand&quot;><a name="help"></a> - Zde jsou v&scaron;echny informace, kter&eacute; budete kdy potřebovat...</a></span></p>
+
+
+
+	<h3>Jak tuto funkci použ&iacute;t?</h3>
+
+	<p>Pouze vložte tag do Va&scaron;&iacute; &scaron;ablony/str&aacute;nky, jako např.: <code>{startExpandCollapse id=&quot;name&quot; title=&quot;Klikněte zde&quot;}</code>. Mus&iacute;te tak&eacute; použ&iacute;t {stopExpandCollapse} na konci sbaliteln&eacute;ho obsahu. Zde je př&iacute;klad:<br />
+
+	<br />
+
+	<code>{startExpandCollapse id=&quot;name&quot; title=&quot;Klikněte zde&quot;}<br />
+
+	Tento obsah uživatel uvid&iacute;  po kliknut&iacute; na titulek &quot;Klikněte zde&quot; v&yacute;&scaron;e. Zobraz&iacute; se ve&scaron;ker&yacute; obsah mezi {startExpandCollapse} a {stopExpandCollapse}.<br />
+
+	{stopExpandCollapse}
+
+	</code>
+
+	<br />
+
+	<br />
+
+	Pozn&aacute;mka: Pokud zam&yacute;&scaron;l&iacute;te použ&iacute;t tuto funkci v&iacute;cekr&aacute;t na jedn&eacute; str&aacute;nce, každ&yacute; tag startExpandCollapse mus&iacute; m&iacute;t jedinečn&eacute; id.</p>
+
+	<h3>Co kdyz chci změnit vzhled titulku?</h3>
+
+	<p>Vzhled titulku může b&yacute;t měněn pomoc&iacute; css. Titulek je zabalen do div s v&aacute;mi specifikovan&yacute;m id.</p>
+
+
+
+	<h3>Jak&eacute; lze použ&iacute;t parametry?</h3>
+
+	<p>
+
+	<i>startExpandCollapse použ&iacute;v&aacute; n&aacute;sleduj&iacute;c&iacute; parametry</i><br />
+
+	&nbsp; &nbsp;id - Unik&aacute;tn&iacute; id pro č&aacute;st rozbalen&iacute;/sbalen&iacute;.<br />
+
+	&nbsp; &nbsp;title - Text zobrazen&yacute; pro rozbalen&iacute;/sbalen&iacute; obsahu..<br />
+
+	<i>stopExpandCollapse nem&aacute; ž&aacute;dn&eacute; parametry</i><br />
+
 	</p>';
-$lang['admin']['help_function_adsense'] = '	<h3>Co děl&aacute; tento modul?</h3>
-	<p>Google adsense je popul&aacute;rn&iacute; reklamn&iacute; program na webov&yacute;ch str&aacute;nk&aacute;ch. Tento tag přeb&iacute;r&aacute; z&aacute;kladn&iacute; parametry poskytovan&eacute; adsense programem a vkl&aacute;d&aacute; je do jednodu&scaron;e použiteln&eacute;ho tagu, kter&yacute; děl&aacute; vzhled Va&scaron;ich &scaron;ablon mnohem přehledněj&scaron;&iacute;..  Pro v&iacute;ce detailů jděte <a href="http://www.google.com/adsense" target="_blank">sem</a>.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Nejprve si zaregistrujte adsense &uacute;čet a st&aacute;hněte paramety pro Va&scaron;e reklamy.  Pot&eacute; jen vložte tag do &scaron;ablony/str&aacute;nky jako: <code>{adsense ad_client=&quot;pub-random#&quot; ad_width=&quot;120&quot; ad_height=&quot;600&quot; ad_format=&quot;120x600_as&quot;}</code>
-	<h3>Jak&eacute; parametry se daj&iacute; použ&iacute;t?</h3>
-	<p>V&scaron;echny parametry jsou voliteln&eacute;, ale jejich vynech&aacute;n&iacute; nemus&iacute; znamenat, že reklamy budou fungovat spr&aacute;vně. Volby jsou:
-	<ul>
-		<li>ad_client - Toto bude pub_random# id, kter&eacute; reprezentuje V&aacute;&scaron;e adsence č&iacute;slo &uacute;čtu</li>
-		<li>ad_width - &scaron;&iacute;řka reklamy</li>
-		<li>ad_height - v&yacute;&scaron;ka reklamy</li>
-		<li>ad_format - &quot;format&quot; reklamy <em>např. 120x600_as</em></li>
-		<li>ad_channel - kan&aacute;ly jsou roz&scaron;&iacute;řen&eacute; vlastnosti adsense. Vložte je zde pokud je použ&iacute;v&aacute;te.</li>
-		<li>ad_type - možn&eacute; volby jsou text, image or text_image.</li>
-		<li>color_border - barva ohraničen&iacute;. Použijte HEX barvu nebo jm&eacute;no barvy (např. Red)</li>
-		<li>color_link - barva textu odkazu. Použijte HEX barvu nebo jm&eacute;no barvy (např. Red)</li>
-		<li>color_url - barva URL.Použijte HEX barvu nebo jm&eacute;no barvy (např. Red)</li>
-		<li>color_text - barva textu. Použijte HEX barvu nebo jm&eacute;no barvy (např. Red)</li>
-	</ul>
+$lang['admin']['help_function_adsense'] = '	<h3>Co děl&aacute; tento modul?</h3>
+
+	<p>Google adsense je popul&aacute;rn&iacute; reklamn&iacute; program na webov&yacute;ch str&aacute;nk&aacute;ch. Tento tag přeb&iacute;r&aacute; z&aacute;kladn&iacute; parametry poskytovan&eacute; adsense programem a vkl&aacute;d&aacute; je do jednodu&scaron;e použiteln&eacute;ho tagu, kter&yacute; děl&aacute; vzhled Va&scaron;ich &scaron;ablon mnohem přehledněj&scaron;&iacute;..  Pro v&iacute;ce detailů jděte <a href="http://www.google.com/adsense" target="_blank">sem</a>.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Nejprve si zaregistrujte adsense &uacute;čet a st&aacute;hněte paramety pro Va&scaron;e reklamy.  Pot&eacute; jen vložte tag do &scaron;ablony/str&aacute;nky jako: <code>{adsense ad_client=&quot;pub-random#&quot; ad_width=&quot;120&quot; ad_height=&quot;600&quot; ad_format=&quot;120x600_as&quot;}</code>
+
+	<h3>Jak&eacute; parametry se daj&iacute; použ&iacute;t?</h3>
+
+	<p>V&scaron;echny parametry jsou voliteln&eacute;, ale jejich vynech&aacute;n&iacute; nemus&iacute; znamenat, že reklamy budou fungovat spr&aacute;vně. Volby jsou:
+
+	<ul>
+
+		<li>ad_client - Toto bude pub_random# id, kter&eacute; reprezentuje V&aacute;&scaron;e adsence č&iacute;slo &uacute;čtu</li>
+
+		<li>ad_width - &scaron;&iacute;řka reklamy</li>
+
+		<li>ad_height - v&yacute;&scaron;ka reklamy</li>
+
+		<li>ad_format - &quot;format&quot; reklamy <em>např. 120x600_as</em></li>
+
+		<li>ad_channel - kan&aacute;ly jsou roz&scaron;&iacute;řen&eacute; vlastnosti adsense. Vložte je zde pokud je použ&iacute;v&aacute;te.</li>
+
+		<li>ad_type - možn&eacute; volby jsou text, image or text_image.</li>
+
+		<li>color_border - barva ohraničen&iacute;. Použijte HEX barvu nebo jm&eacute;no barvy (např. Red)</li>
+
+		<li>color_link - barva textu odkazu. Použijte HEX barvu nebo jm&eacute;no barvy (např. Red)</li>
+
+		<li>color_url - barva URL.Použijte HEX barvu nebo jm&eacute;no barvy (např. Red)</li>
+
+		<li>color_text - barva textu. Použijte HEX barvu nebo jm&eacute;no barvy (např. Red)</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['help_function_sitename'] = '        <h3>Co děl&aacute; tato funkce?</h3>
-        <p>Zobraz&iacute; jm&eacute;no str&aacute;nek.  Je definov&aacute;no během instalace a může b&yacute;t změněno v sekci Hlavn&iacute; nastaven&iacute; v administračn&iacute;m panelu.</p>
-        <h3>Jak ji použ&iacute;t?</h3>
-        <p>Pouze vložte tad do &scaron;ablony/str&aacute;nky, jako např.: <code>{sitename}</code></p>
-        <h3>Jak&eacute; jsou parametry?</h3>
+$lang['admin']['help_function_sitename'] = '        <h3>Co děl&aacute; tato funkce?</h3>
+
+        <p>Zobraz&iacute; jm&eacute;no str&aacute;nek.  Je definov&aacute;no během instalace a může b&yacute;t změněno v sekci Hlavn&iacute; nastaven&iacute; v administračn&iacute;m panelu.</p>
+
+        <h3>Jak ji použ&iacute;t?</h3>
+
+        <p>Pouze vložte tad do &scaron;ablony/str&aacute;nky, jako např.: <code>{sitename}</code></p>
+
+        <h3>Jak&eacute; jsou parametry?</h3>
+
 	<p><em>(voliteln&eacute;)</em> assign (string) - Přiřadit v&yacute;sledek ke smarty proměnn&eacute; dan&eacute;ho jm&eacute;na.</p>';
-$lang['admin']['help_function_search'] = '	<h3>Co děl&aacute; tato funkce?</h3>
-	<p>Toto je pouze obalovac&iacute; tag pro <a href="listmodules.php?action=showmodulehelp&amp;module=Search">Modul vyhled&aacute;v&aacute;n&iacute;</a> pro zjednodu&scaron;en&iacute; syntaxe. 
-	M&iacute;sto nutnosti použit&iacute; <code>{cms_module module=&#039;Search&#039;}</code> můžete použ&iacute;t pouze <code>{search}</code> pro vložen&iacute; modulu do &scaron;ablony.
-	</p>
-	<h3>Jak ji použ&iacute;t?</h3>
+$lang['admin']['help_function_search'] = '	<h3>Co děl&aacute; tato funkce?</h3>
+
+	<p>Toto je pouze obalovac&iacute; tag pro <a href="listmodules.php?action=showmodulehelp&amp;module=Search">Modul vyhled&aacute;v&aacute;n&iacute;</a> pro zjednodu&scaron;en&iacute; syntaxe. 
+
+	M&iacute;sto nutnosti použit&iacute; <code>{cms_module module=&#039;Search&#039;}</code> můžete použ&iacute;t pouze <code>{search}</code> pro vložen&iacute; modulu do &scaron;ablony.
+
+	</p>
+
+	<h3>Jak ji použ&iacute;t?</h3>
+
 	<p>Pouze vložte <code>{search}</code> do &scaron;ablony tak, kde chcete m&iacute;t vyhled&aacute;vac&iacute; ok&eacute;nko. Pro pomoc s vyhled&aacute;vac&iacute;m modulem, jděte na <a href="listmodules.php?action=showmodulehelp&amp;module=Search">N&aacute;pověda modulu Vyhled&aacute;v&aacute;n&iacute;</a>.';
-$lang['admin']['help_function_root_url'] = '	<h3>Co děl&aacute; tato funkce?</h3>
-	<p>Vyp&iacute;&scaron;e kořenov&yacute; url pro str&aacute;nky.</p>
-	<h3>Jak ji použ&iacute;t?</h3>
-	<p>Pouze vložte tag do &scaron;ablony/str&aacute;nky, jako např.: <code>{root_url}</code></p>
-	<h3>Jak&eacute; jsou parametry?</h3>
+$lang['admin']['help_function_root_url'] = '	<h3>Co děl&aacute; tato funkce?</h3>
+
+	<p>Vyp&iacute;&scaron;e kořenov&yacute; url pro str&aacute;nky.</p>
+
+	<h3>Jak ji použ&iacute;t?</h3>
+
+	<p>Pouze vložte tag do &scaron;ablony/str&aacute;nky, jako např.: <code>{root_url}</code></p>
+
+	<h3>Jak&eacute; jsou parametry?</h3>
+
 	<p>Zat&iacute;m ž&aacute;dn&eacute;.</p>';
-$lang['admin']['help_function_repeat'] = '  <h3>Co děl&aacute; tato funkce?</h3>
-  <p>Opakuje zadan&eacute; pořad&iacute; znaků po zadan&yacute; počet opakov&aacute;n&iacute;</p>
-  <h3>Jak ji použ&iacute;t?</h3>
-  <p>Vložte do &scaron;ablony/str&aacute;nky podobn&yacute; n&aacute;sleduj&iacute;c&iacute;mu: <code>{repeat string=&#039;opakuj toto &#039; times=&#039;3&#039;}</code>
-  <h3>Jak&eacute; použ&iacute;v&aacute; parametry?</h3>
-  <ul>
-  <li>string=&#039;text&#039; - Text pro opakov&aacute;n&iacute;</li>
-  <li>times=&#039;num&#039; - Počet opakov&aacute;n&iacute;.</li>
+$lang['admin']['help_function_repeat'] = '  <h3>Co děl&aacute; tato funkce?</h3>
+
+  <p>Opakuje zadan&eacute; pořad&iacute; znaků po zadan&yacute; počet opakov&aacute;n&iacute;</p>
+
+  <h3>Jak ji použ&iacute;t?</h3>
+
+  <p>Vložte do &scaron;ablony/str&aacute;nky podobn&yacute; n&aacute;sleduj&iacute;c&iacute;mu: <code>{repeat string=&#039;opakuj toto &#039; times=&#039;3&#039;}</code>
+
+  <h3>Jak&eacute; použ&iacute;v&aacute; parametry?</h3>
+
+  <ul>
+
+  <li>string=&#039;text&#039; - Text pro opakov&aacute;n&iacute;</li>
+
+  <li>times=&#039;num&#039; - Počet opakov&aacute;n&iacute;.</li>
+
   </ul>';
-$lang['admin']['help_function_recently_updated'] = '	<h3>Co děl&aacute; tato funkce?</h3>
-	<p>Vyp&iacute;&scaron;e seznam naposledy upraven&yacute;ch str&aacute;nek.</p>
-	<h3>Jak ji použ&iacute;t?</h3>
-	<p>Pouze vložte do &scaron;ablony/str&aacute;nky tag: <code>{recently_updated}</code></p>
-	<h3>Jak&eacute; použ&iacute;v&aacute; parametry?</h3>
-	<ul>
-	 <li><p><em>(voliteln&eacute;)</em> number=&#039;10&#039; - Počet aktualizovan&yacute;ch str&aacute;nek k zobrazen&iacute;.</p><p>Př&iacute;klad: <pre>{recently_updated number=&#039;15&#039;}</pre></p></li>
- 	 <li><p><em>(voliteln&eacute;)</em> leadin=&#039;Naposledy upraveno&#039; - Text zobrazen&yacute; vlevo od data &uacute;pravy.</p><p>Př&iacute;klad: <pre>{recently_updated leadin=&#039;Naposledy změněno&#039;}</pre></p></li>
- 	 <li><p><em>(voliteln&eacute;)</em> showtitle=&#039;true&#039; - Zobraz&iacute; titleattribute pokud existuje (true|false).</p><p>Př&iacute;klad: <pre>{recently_updated showtitle=&#039;true&#039;}</pre></p></li>											 	
-	 <li><p><em>(voliteln&eacute;)</em> css_class=&#039;some_name&#039; - Obal&iacute; div tag tohoto seznamu.</p><p>Př&iacute;klad: <pre>{recently_updated css_class=&#039;some_name&#039;}</pre></p></li>											 	
-	 <li><p><em>(voliteln&eacute;)</em> dateformat=&#039;d.m.y h:m&#039; - default is d.m.y h:m , použije form&aacute;t, jak&yacute; si přejete (php -date- format)</p><p>Př&iacute;klad: <pre>{recently_updated dateformat=&#039;D M j G:i:s T Y&#039;}</pre></p></li>											 	
-	</ul>
-	<p>nebo kombinace:</p>
+$lang['admin']['help_function_recently_updated'] = '	<h3>Co děl&aacute; tato funkce?</h3>
+
+	<p>Vyp&iacute;&scaron;e seznam naposledy upraven&yacute;ch str&aacute;nek.</p>
+
+	<h3>Jak ji použ&iacute;t?</h3>
+
+	<p>Pouze vložte do &scaron;ablony/str&aacute;nky tag: <code>{recently_updated}</code></p>
+
+	<h3>Jak&eacute; použ&iacute;v&aacute; parametry?</h3>
+
+	<ul>
+
+	 <li><p><em>(voliteln&eacute;)</em> number=&#039;10&#039; - Počet aktualizovan&yacute;ch str&aacute;nek k zobrazen&iacute;.</p><p>Př&iacute;klad: <pre>{recently_updated number=&#039;15&#039;}</pre></p></li>
+
+ 	 <li><p><em>(voliteln&eacute;)</em> leadin=&#039;Naposledy upraveno&#039; - Text zobrazen&yacute; vlevo od data &uacute;pravy.</p><p>Př&iacute;klad: <pre>{recently_updated leadin=&#039;Naposledy změněno&#039;}</pre></p></li>
+
+ 	 <li><p><em>(voliteln&eacute;)</em> showtitle=&#039;true&#039; - Zobraz&iacute; titleattribute pokud existuje (true|false).</p><p>Př&iacute;klad: <pre>{recently_updated showtitle=&#039;true&#039;}</pre></p></li>											 	
+
+	 <li><p><em>(voliteln&eacute;)</em> css_class=&#039;some_name&#039; - Obal&iacute; div tag tohoto seznamu.</p><p>Př&iacute;klad: <pre>{recently_updated css_class=&#039;some_name&#039;}</pre></p></li>											 	
+
+	 <li><p><em>(voliteln&eacute;)</em> dateformat=&#039;d.m.y h:m&#039; - default is d.m.y h:m , použije form&aacute;t, jak&yacute; si přejete (php -date- format)</p><p>Př&iacute;klad: <pre>{recently_updated dateformat=&#039;D M j G:i:s T Y&#039;}</pre></p></li>											 	
+
+	</ul>
+
+	<p>nebo kombinace:</p>
+
 	<pre>{recently_updated number=&#039;15&#039; showtitle=&#039;false&#039; leadin=&#039;Naposledy změněno: &#039; css_class=&#039;my_changes&#039; dateformat=&#039;D M j G:i:s T Y&#039;}</pre>';
-$lang['admin']['help_function_print'] = '	<h3>Co děl&aacute; tento modul?</h3>
-	<p>Je to v podstatě jen obalovac&iacute; tag pro <a href="listmodules.php?action=showmodulehelp&amp;module=Printing">modul Tisk</a> pro zjednodu&scaron;en&iacute; syntaxe. 
-	M&iacute;sto nutnosti použit&iacute; <code>{cms_module module=&#039;Printing&#039;}</code> můžete nyn&iacute; použ&iacute;t <code>{print}</code> pro vložen&iacute; modulu do str&aacute;nek a &scaron;ablon.
-	</p>
-	<h3>Jak ho použ&iacute;t?</h3>
+$lang['admin']['help_function_print'] = '	<h3>Co děl&aacute; tento modul?</h3>
+
+	<p>Je to v podstatě jen obalovac&iacute; tag pro <a href="listmodules.php?action=showmodulehelp&amp;module=Printing">modul Tisk</a> pro zjednodu&scaron;en&iacute; syntaxe. 
+
+	M&iacute;sto nutnosti použit&iacute; <code>{cms_module module=&#039;Printing&#039;}</code> můžete nyn&iacute; použ&iacute;t <code>{print}</code> pro vložen&iacute; modulu do str&aacute;nek a &scaron;ablon.
+
+	</p>
+
+	<h3>Jak ho použ&iacute;t?</h3>
+
 	<p>Pouze vložte <code>{print}</code> do str&aacute;nky nebo &scaron;ablony. Pro n&aacute;povědu k modulu Tisk jděte na <a href="listmodules.php?action=showmodulehelp&amp;module=Printing">N&aacute;pověda modulu Tisk</a>.';
-$lang['admin']['help_function_oldprint'] = '	<h3>Co děl&aacute; tento modul?</h3>
-	<p>Vytv&aacute;ř&iacute; odkaz pouze na obsah str&aacute;nky.</p>
-	<h3>Jak ho použ&iacute;t?</h3>
-	<p>Pouze vložte tag do do &scaron;ablony/str&aacute;nky: <code>{oldprint}</code><br></p>
-        <h3>Jak&eacute; jsou parametry?</h3>
-        <ul>
-                <li><em>(voliteln&eacute;)</em> goback - Nastavte na &quot;true&quot; pro zobrazen&iacute; odkazu &quot;J&iacute;t zpět&quot; na str&aacute;nce.</li>
-                <li><em>(voliteln&eacute;)</em> popup - Nastavte na &quot;true&quot; a str&aacute;nka pro tisk bude otevřena v nov&eacute;m okně.</li>
-                <li><em>(voliteln&eacute;)</em> script - Nastavte na &quot;true&quot; a ve str&aacute;nce pro tisk bude použit javascript pro vyti&scaron;těn&iacute; str&aacute;nky.</li>
-                <li><em>(voliteln&eacute;)</em> showbutton - Nastavte na &quot;true&quot; a bude zobrazena grafika tisk&aacute;rny m&iacute;sto textov&eacute;ho odkazu.</li>
-                <li><em>(voliteln&eacute;)</em> class - tř&iacute;da pro odkaz, v&yacute;choz&iacute; je &quot;noprint&quot;.</li>
-                <li><em>(voliteln&eacute;)</em> text - Text odkazu na tisk pro použit&iacute; m&iacute;sto &quot;Vytisknout tuto str&aacute;nku&quot;.
-                <li><em>(voliteln&eacute;)</em> title - Text pro zobrazen&iacute; atributu titulku. Pokud je pr&aacute;zdn&yacute;, zobraz&iacute; se parametry textu.</li>
-                <li><em>(voliteln&eacute;)</em> more - Vložit dodatečn&eacute; volby do <a> odkazu.</li>
-                <li><em>(voliteln&eacute;)</em> src_img - Zobrazit tento obr&aacute;zek. V&yacute;choz&iacute; images/cms/printbutton.gif.</li>
-                <li><em>(voliteln&eacute;)</em> class_img - Tř&iacute;da <img> tagu pokud je nastaven showbutton.</li>
-
-                    <p>Př&iacute;klad:</p>
-                     <pre>{oldprint text=&quot;Tisknuteln&aacute; str&aacute;nka&quot;}</pre>      
-                     </li>
+$lang['admin']['help_function_oldprint'] = '	<h3>Co děl&aacute; tento modul?</h3>
+
+	<p>Vytv&aacute;ř&iacute; odkaz pouze na obsah str&aacute;nky.</p>
+
+	<h3>Jak ho použ&iacute;t?</h3>
+
+	<p>Pouze vložte tag do do &scaron;ablony/str&aacute;nky: <code>{oldprint}</code><br></p>
+
+        <h3>Jak&eacute; jsou parametry?</h3>
+
+        <ul>
+
+                <li><em>(voliteln&eacute;)</em> goback - Nastavte na &quot;true&quot; pro zobrazen&iacute; odkazu &quot;J&iacute;t zpět&quot; na str&aacute;nce.</li>
+
+                <li><em>(voliteln&eacute;)</em> popup - Nastavte na &quot;true&quot; a str&aacute;nka pro tisk bude otevřena v nov&eacute;m okně.</li>
+
+                <li><em>(voliteln&eacute;)</em> script - Nastavte na &quot;true&quot; a ve str&aacute;nce pro tisk bude použit javascript pro vyti&scaron;těn&iacute; str&aacute;nky.</li>
+
+                <li><em>(voliteln&eacute;)</em> showbutton - Nastavte na &quot;true&quot; a bude zobrazena grafika tisk&aacute;rny m&iacute;sto textov&eacute;ho odkazu.</li>
+
+                <li><em>(voliteln&eacute;)</em> class - tř&iacute;da pro odkaz, v&yacute;choz&iacute; je &quot;noprint&quot;.</li>
+
+                <li><em>(voliteln&eacute;)</em> text - Text odkazu na tisk pro použit&iacute; m&iacute;sto &quot;Vytisknout tuto str&aacute;nku&quot;.
+
+                <li><em>(voliteln&eacute;)</em> title - Text pro zobrazen&iacute; atributu titulku. Pokud je pr&aacute;zdn&yacute;, zobraz&iacute; se parametry textu.</li>
+
+                <li><em>(voliteln&eacute;)</em> more - Vložit dodatečn&eacute; volby do <a> odkazu.</li>
+
+                <li><em>(voliteln&eacute;)</em> src_img - Zobrazit tento obr&aacute;zek. V&yacute;choz&iacute; images/cms/printbutton.gif.</li>
+
+                <li><em>(voliteln&eacute;)</em> class_img - Tř&iacute;da <img> tagu pokud je nastaven showbutton.</li>
+
+
+
+                    <p>Př&iacute;klad:</p>
+
+                     <pre>{oldprint text=&quot;Tisknuteln&aacute; str&aacute;nka&quot;}</pre>      
+
+                     </li>
+
         </ul>';
 $lang['admin']['login_info_title'] = 'Informace';
 $lang['admin']['login_info'] = 'Pro spr&aacute;vnou funkci administr&aacute;torsk&eacute; konzole';
-$lang['admin']['login_info_params'] = '<ol> 
-  <li>Cookies povoleny ve Va&scaron;em prohl&iacute;žeči</li> 
-  <li>Javascript povolen&yacute; ve Va&scaron;em prohl&iacute;žeči</li> 
-  <li>Popup okna aktivn&iacute; pro n&aacute;sleduj&iacute;c&iacute; adresy:</li> 
+$lang['admin']['login_info_params'] = '<ol> 
+
+  <li>Cookies povoleny ve Va&scaron;em prohl&iacute;žeči</li> 
+
+  <li>Javascript povolen&yacute; ve Va&scaron;em prohl&iacute;žeči</li> 
+
+  <li>Popup okna aktivn&iacute; pro n&aacute;sleduj&iacute;c&iacute; adresy:</li> 
+
 </ol>';
-$lang['admin']['help_function_news'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Aktu&aacute;lně obaluje <a href="listmodules.php?action=showmodulehelp&amp;module=News">modul Novinky</a> pro jednodu&scaron;&scaron;&iacute; syntaxi. 
-	M&iacute;sto k&oacute;du <code>{cms_module module=&#039;News&#039;}</code> nyn&iacute; můžete použ&iacute;vat pouze <code>{news}</code> pro vložen&iacute; modulu do str&aacute;nky nebo &scaron;ablony.
-	</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
+$lang['admin']['help_function_news'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Aktu&aacute;lně obaluje <a href="listmodules.php?action=showmodulehelp&amp;module=News">modul Novinky</a> pro jednodu&scaron;&scaron;&iacute; syntaxi. 
+
+	M&iacute;sto k&oacute;du <code>{cms_module module=&#039;News&#039;}</code> nyn&iacute; můžete použ&iacute;vat pouze <code>{news}</code> pro vložen&iacute; modulu do str&aacute;nky nebo &scaron;ablony.
+
+	</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
 	<p>Stač&iacute; vložit <code>{news}</code> do str&aacute;nky nebo &scaron;ablony. Pro pomoc s t&iacute;mto modulem, jak&eacute; bere parametry atd. nav&scaron;tivte pros&iacute;m <a href="listmodules.php?action=showmodulehelp&amp;module=News">n&aacute;povědu modulu Novinky</a>.';
-$lang['admin']['help_function_modified_date'] = '        <h3>Co to děl&aacute;?</h3>
-        <p>Vypisuje datum a čas posledn&iacute; &uacute;pravy str&aacute;nky.  Když nen&iacute; zad&aacute;n form&aacute;t, je použit v&yacute;choz&iacute;, podobn&yacute; jako &#039;Jan 01, 2004&#039;.</p>
-        <h3>Jak se použ&iacute;v&aacute;?</h3>
-        <p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{modified_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code></p>
-        <h3>Jak&eacute; m&aacute; parametry?</h3>
-        <ul>
-                <li><em>(voliteln&eacute;)</em>format - Form&aacute;t data/času použ&iacute;vaj&iacute;c&iacute; parametry php funkce strftime.  Viz. <a href="http://php.net/strftime" target="_blank">zde</a> pro seznam parametrů a informace.</li>
+$lang['admin']['help_function_modified_date'] = '        <h3>Co to děl&aacute;?</h3>
+
+        <p>Vypisuje datum a čas posledn&iacute; &uacute;pravy str&aacute;nky.  Když nen&iacute; zad&aacute;n form&aacute;t, je použit v&yacute;choz&iacute;, podobn&yacute; jako &#039;Jan 01, 2004&#039;.</p>
+
+        <h3>Jak se použ&iacute;v&aacute;?</h3>
+
+        <p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{modified_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code></p>
+
+        <h3>Jak&eacute; m&aacute; parametry?</h3>
+
+        <ul>
+
+                <li><em>(voliteln&eacute;)</em>format - Form&aacute;t data/času použ&iacute;vaj&iacute;c&iacute; parametry php funkce strftime.  Viz. <a href="http://php.net/strftime" target="_blank">zde</a> pro seznam parametrů a informace.</li>
+
        </ul>';
-$lang['admin']['help_function_metadata'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Zobrazuje metadata t&eacute;to str&aacute;nky. Budou zobrazena jak metadata glob&aacute;ln&iacute;ho nastaven&iacute;, tak metadata pro každou str&aacute;nku.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Stač&iacute; vložit tag do &scaron;ablony: <code>{metadata}</code></p>
-	<h3>Jak&eacute; m&aacute; parametry?</h3>
-	<ul>
-		<li><em>(voliteln&eacute;)</em>showbase (true/false) - Při nastaven&iacute; na false, z&aacute;kladn&iacute; tag nen&iacute; zasl&aacute;n do prohl&iacute;žeče. v&yacute;choz&iacute; je true, pokud je nastaveno use_hierarchy na true v config.php.</li>
+$lang['admin']['help_function_metadata'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Zobrazuje metadata t&eacute;to str&aacute;nky. Budou zobrazena jak metadata glob&aacute;ln&iacute;ho nastaven&iacute;, tak metadata pro každou str&aacute;nku.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Stač&iacute; vložit tag do &scaron;ablony: <code>{metadata}</code></p>
+
+	<h3>Jak&eacute; m&aacute; parametry?</h3>
+
+	<ul>
+
+		<li><em>(voliteln&eacute;)</em>showbase (true/false) - Při nastaven&iacute; na false, z&aacute;kladn&iacute; tag nen&iacute; zasl&aacute;n do prohl&iacute;žeče. v&yacute;choz&iacute; je true, pokud je nastaveno use_hierarchy na true v config.php.</li>
+
 	</ul>';
-$lang['admin']['help_function_menu_text'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Vypisuje text menu do str&aacute;nky.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{menu_text}</code></p>
-	<h3>Jak&eacute; m&aacute; parametry?</h3>
+$lang['admin']['help_function_menu_text'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Vypisuje text menu do str&aacute;nky.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{menu_text}</code></p>
+
+	<h3>Jak&eacute; m&aacute; parametry?</h3>
+
 	<p>Zat&iacute;m ž&aacute;dn&eacute;.</p>';
-$lang['admin']['help_function_menu'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Aktu&aacute;lně pouze obaluje <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">modul Menu Manager</a> pro jednodu&scaron;&scaron;&iacute; syntaxi. 
-	M&iacute;sto použ&iacute;v&aacute;n&iacute; <code>{cms_module module=&#039;MenuManager&#039;}</code> stač&iacute; zadat <code>{menu}</code> pro vložen&iacute; modulu do str&aacute;nky nebo &scaron;ablony.
-	</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
+$lang['admin']['help_function_menu'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Aktu&aacute;lně pouze obaluje <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">modul Menu Manager</a> pro jednodu&scaron;&scaron;&iacute; syntaxi. 
+
+	M&iacute;sto použ&iacute;v&aacute;n&iacute; <code>{cms_module module=&#039;MenuManager&#039;}</code> stač&iacute; zadat <code>{menu}</code> pro vložen&iacute; modulu do str&aacute;nky nebo &scaron;ablony.
+
+	</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
 	<p>Stač&iacute; vložit <code>{menu}</code> do str&aacute;nky nebo &scaron;ablony. Pro n&aacute;povědu k modulu Menu Manager, jak&eacute; bere parametry atd. nav&scaron;tivte pros&iacute;m <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">n&aacute;povědu modulu Menu Manager</a>.';
-$lang['admin']['help_function_last_modified_by'] = '        <h3>Co to děl&aacute;?</h3>
-        <p>Vyp&iacute;&scaron;e osobu naposledy upravuj&iacute;c&iacute; danou str&aacute;nku.  Když nen&iacute; zad&aacute;n form&aacute;t, použije se v&yacute;choz&iacute; - ID č&iacute;slo uživatele.</p>
-        <h3>Jak se použ&iacute;v&aacute;?</h3>
-        <p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{last_modified_by format=&quot;fullname&quot;}</code></p>
-        <h3>Jak&eacute; m&aacute; parametry?</h3>
-        <ul>
-                <li><em>(voliteln&eacute;)</em>format - id, username, fullname</li>
+$lang['admin']['help_function_last_modified_by'] = '        <h3>Co to děl&aacute;?</h3>
+
+        <p>Vyp&iacute;&scaron;e osobu naposledy upravuj&iacute;c&iacute; danou str&aacute;nku.  Když nen&iacute; zad&aacute;n form&aacute;t, použije se v&yacute;choz&iacute; - ID č&iacute;slo uživatele.</p>
+
+        <h3>Jak se použ&iacute;v&aacute;?</h3>
+
+        <p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{last_modified_by format=&quot;fullname&quot;}</code></p>
+
+        <h3>Jak&eacute; m&aacute; parametry?</h3>
+
+        <ul>
+
+                <li><em>(voliteln&eacute;)</em>format - id, username, fullname</li>
+
         </ul>';
-$lang['admin']['help_function_image'] = '  <h3>Co to děl&aacute;?</h3>
-  <p>Vytv&aacute;ř&iacute; image tag pro obr&aacute;zek uložen&yacute; v adres&aacute;ři images</p>
-  <h3>Jak se použ&iacute;v&aacute;?</h3>
-  <p>Stač&iacute; vložit tag do &scaron;ablony str&aacute;nky: <code>{image src=&quot;something.jpg&quot;}</code></p>
-  <h3>Jak&eacute; m&aacute; parametry?</h3>
-  <ul>
-     <li><em>(vyžadov&aacute;no)</em>  <tt>src</tt> - Jm&eacute;no souboru obr&aacute;zku v adres&aacute;ři images.</li>
-     <li><em>(voliteln&eacute;)</em>  <tt>width</tt> - &Scaron;&iacute;řka obr&aacute;zku na str&aacute;nce. V&yacute;choz&iacute; je re&aacute;ln&aacute; velikost.</li>
-     <li><em>(voliteln&eacute;)</em>  <tt>height</tt> - V&yacute;&scaron;ka obr&aacute;zku na str&aacute;nce. V&yacute;choz&iacute; je re&aacute;ln&aacute; velikost.</li>
-     <li><em>(voliteln&eacute;)</em>  <tt>alt</tt> - Popiska obr&aacute;zku (alt text) -- potřebn&eacute; pro vyhověn&iacute; xhtml. V&yacute;choz&iacute; je jm&eacute;no souboru.</li>
-     <li><em>(voliteln&eacute;)</em>  <tt>class</tt> - CSS tř&iacute;da pro obr&aacute;zek.</li>
-     <li><em>(voliteln&eacute;)</em>  <tt>title</tt> - Text při přejet&iacute; my&scaron;&iacute;. V&yacute;choz&iacute; je popiska - alt text.</li>
-     <li><em>(voliteln&eacute;)</em>  <tt>addtext</tt> - Dodatečn&yacute; text pro vložen&iacute; do tagu</li>
+$lang['admin']['help_function_image'] = '  <h3>Co to děl&aacute;?</h3>
+
+  <p>Vytv&aacute;ř&iacute; image tag pro obr&aacute;zek uložen&yacute; v adres&aacute;ři images</p>
+
+  <h3>Jak se použ&iacute;v&aacute;?</h3>
+
+  <p>Stač&iacute; vložit tag do &scaron;ablony str&aacute;nky: <code>{image src=&quot;something.jpg&quot;}</code></p>
+
+  <h3>Jak&eacute; m&aacute; parametry?</h3>
+
+  <ul>
+
+     <li><em>(vyžadov&aacute;no)</em>  <tt>src</tt> - Jm&eacute;no souboru obr&aacute;zku v adres&aacute;ři images.</li>
+
+     <li><em>(voliteln&eacute;)</em>  <tt>width</tt> - &Scaron;&iacute;řka obr&aacute;zku na str&aacute;nce. V&yacute;choz&iacute; je re&aacute;ln&aacute; velikost.</li>
+
+     <li><em>(voliteln&eacute;)</em>  <tt>height</tt> - V&yacute;&scaron;ka obr&aacute;zku na str&aacute;nce. V&yacute;choz&iacute; je re&aacute;ln&aacute; velikost.</li>
+
+     <li><em>(voliteln&eacute;)</em>  <tt>alt</tt> - Popiska obr&aacute;zku (alt text) -- potřebn&eacute; pro vyhověn&iacute; xhtml. V&yacute;choz&iacute; je jm&eacute;no souboru.</li>
+
+     <li><em>(voliteln&eacute;)</em>  <tt>class</tt> - CSS tř&iacute;da pro obr&aacute;zek.</li>
+
+     <li><em>(voliteln&eacute;)</em>  <tt>title</tt> - Text při přejet&iacute; my&scaron;&iacute;. V&yacute;choz&iacute; je popiska - alt text.</li>
+
+     <li><em>(voliteln&eacute;)</em>  <tt>addtext</tt> - Dodatečn&yacute; text pro vložen&iacute; do tagu</li>
+
   </ul>';
-$lang['admin']['help_function_imagegallery'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Vytv&aacute;ř&iacute; galerii z adres&aacute;ře s obr&aacute;zky (.gif, .jpg or .png). 
-	Lze kliknout na n&aacute;hled pro zobrazen&iacute; vět&scaron;&iacute;ho obr&aacute;zku. Lze použ&iacute;t titulky založen&eacute; na jm&eacute;ně obr&aacute;zku bez př&iacute;pony. Dovoluje webov&eacute; standardy a použit&iacute; CSS pro form&aacute;tov&aacute;n&iacute;. Jsou dostupn&eacute; tř&iacute;dy a různ&eacute; elementy včetně obl&eacute;haj&iacute;c&iacute;ho &#039;div&#039;. Koukněte na CSS n&iacute;že pro v&iacute;ce informac&iacute;.</p>
-
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Stač&iacute; vložit tag do &scaron;ablony nebo str&aacute;nky: </p>
-	<code>{ImageGallery picFolder=&quot;uploads/images/yourfolder/&quot;}</code>
-	<p>Kde picFolder je adres&aacute;ř s Va&scaron;imi obr&aacute;zky.</p>
-	
-    <h3>Jak&eacute; m&aacute; parametry?</h3>
-    <p>Lze použ&iacute;t p&aacute;r parametrů, ale př&iacute;klad v&yacute;&scaron;e je vhodn&yacute; pro vět&scaron;inu uživatelů :) </p>
-        <ol>
-		<li><strong>picFolder e.g. picFolder=&quot;uploads/images/yourfolder/&quot;</strong><br/>
-		je cesta ke galerii (yourfolder) konč&iacute;c&iacute; na &#039;/&#039;. Tak můžete m&iacute;t mnoho adres&aacute;řů a mnoho galeri&iacute;.</li>
-
-		<li><strong>vložte např. type=&quot;click&quot; or type=&quot;popup&quot;</strong><br/>
-		pro funguj&iacute;c&iacute; funkci &quot;popup&quot; je potřeba vložit popup javascript do hlavičky &scaron;ablony, např. &quot;<head></head>&quot;. Javascript je na konci t&eacute;to str&aacute;nky! <em>V&yacute;choz&iacute; je &#039;click&#039;.</em></li>
-
-		<li><strong>divID e.g. divID =&quot;imagegallery&quot;</strong><br/>
-		nastav&iacute; obaluj&iacute;c&iacute; &#039;div id&#039; okolo Va&scaron;&iacute; galerie, tak můžete m&iacute;t jin&yacute; styl CSS pro každou galerii. <em>V&yacute;choz&iacute; je &#039;imagegallery&#039;.</em></li>
-
-		<li><strong>sortBy e.g. sortBy = &quot;name&quot; or sortBy = &quot;date&quot;</strong><br/>
-		tř&iacute;dit obr&aacute;zky podle jm&eacute;na nebo data. <em>Nen&iacute; nastavena v&yacute;choz&iacute; hodnota.</em></li>
-
-		<li><strong>sortByOrder e.g. sortByOrder = &quot;asc&quot; or sortByOrder = &quot;desc&quot;</strong><br/> 
-		 <em>Nen&iacute; nastavena v&yacute;choz&iacute; hodnota.</em>.</li>
-
-		<li>Toto nastav&iacute; titulek nad velk&yacute; (rozkliknut&yacute;) obr&aacute;zek<br/>
-		<strong>bigPicCaption = &quot;name&quot; </strong>(jm&eacute;no souboru bez př&iacute;pony)<em> nebo </em><br/>
-		<strong>bigPicCaption = &quot;file&quot; </strong>(jm&eacute;no souboru s př&iacute;ponou)<em> nebo </em><br/>
-		<strong>bigPicCaption = &quot;number&quot; </strong>(č&iacute;slo sekvence)<em> nebo </em><br/>
-		<strong>bigPicCaption = &quot;none&quot; </strong>(bez titulku)<br/>
-		<em>V&yacute;choz&iacute; je &quot;name&quot;. </em></li>
-
-		<li>Toto nastav&iacute; titulek pod n&aacute;hled<br/>
-		<strong>thumbPicCaption = &quot;name&quot;</strong> (jm&eacute;no souboru bez př&iacute;pony)<em> nebo </em><br/>
-		<strong>thumbPicCaption = &quot;file&quot;</strong> (jm&eacute;no souboru s př&iacute;ponou)<em> nebo </em><br/>
-		<strong>thumbPicCaption = &quot;number&quot; </strong>(č&iacute;slo sekvence)<em> nebo </em><br/>
-		<strong>thumbPicCaption = &quot;none&quot; </strong>(bez titulku)<br/>
-		<em>V&yacute;choz&iacute; je &quot;name&quot;.</em></li>
-
-		<li>Nastav&iacute; tag &#039;alt&#039; pro velk&yacute; obr&aacute;zek - povinn&eacute;.<br/>
-		<strong>bigPicAltTag = &quot;name&quot; </strong>(jm&eacute;no souboru bez př&iacute;pony)<em> nebo </em><br/>
-		<strong>bigPicAltTag = &quot;file&quot; </strong>(jm&eacute;no souboru s př&iacute;ponou)<em> nebo </em><br/>
-		<strong>bigPicAltTag = &quot;number&quot; </strong>(č&iacute;slo sekvence)<br/>
-		<em>V&yacute;choz&iacute; je &quot;name&quot;.</em></li>
-
-		<li> Nastav&iacute; tag &#039;title&#039; pro velk&yacute; obr&aacute;zek. <br/>
-		<strong>bigPicTitleTag = &quot;name&quot; </strong>(jm&eacute;no souboru bez př&iacute;pony)<em> nebo </em><br/>
-		<strong>bigPicTitleTag = &quot;file&quot; </strong>(jm&eacute;no souboru s př&iacute;ponou)<em> nebo </em><br/>
-		<strong>bigPicTitleTag = &quot;number&quot; </strong>(č&iacute;slo sekvence)<em> nebo </em><br/>
-		<strong>bigPicTitleTag = &quot;none&quot; </strong>(Bez titulku)<br/>
-		<em>V&yacute;choz&iacute; je &quot;name&quot;.</em></li>
-
-		<li><strong>thumbPicAltTag</strong><br/>
-		<em>je stejn&eacute; jako bigPicAltTag, ale pro n&aacute;hledy.<em></li>
-
-		<li><strong>thumbPicTitleTag *</strong><br/>
-		<em>je stejn&eacute; jako bigPicTitleTag, ale pro n&aacute;hledy.<br/>
-		<strong>*s t&iacute;m rozd&iacute;lem, že za volbou je &#039;... klikněte pro vět&scaron;&iacute; obr&aacute;zek&#039; 
-		nebo když nezad&aacute;te tuto volbu, použije se v&yacute;choz&iacute; 
-		&#039;Klikněte pro vět&scaron;&iacute; obr&aacute;zek...&#039;</em></strong></li>
-        </ol>
-  <p>Komplexněj&scaron;&iacute; př&iacute;klad</p>
-        <p>&#039;div id&#039; je &#039;cdcovers&#039;, bet titulku na velk&yacute;ch obr&aacute;zc&iacute;ch, n&aacute;hledy maj&iacute; v&yacute;choz&iacute; titulek. 
-        &#039;alt&#039; tagy pro velk&yacute; obr&aacute;zek jsou nastaveny na jm&eacute;no souboru bez př&iacute;pony 
-        a &#039;title&#039; tag velk&eacute;ho obr&aacute;zku je nastaven&yacute; stejně, ale s př&iacute;ponou. 
-        N&aacute;hledy maj&iacute; v&yacute;choz&iacute; &#039;alt&#039; a &#039;title&#039; tagy. Pro &#039;alt&#039; je v&yacute;choz&iacute; jm&eacute;no obr&aacute;zku bez př&iacute;pony a pro &#039;title&#039; je v&yacute;choz&iacute;  &#039;Klikněte pro vět&scaron;&iacute; obr&aacute;zek:</p>
-		<code>{ImageGallery picFolder=&quot;uploads/images/cdcovers/&quot; divID=&quot;cdcovers&quot; bigPicCaption=&quot;none&quot;  bigPicAltTag=&quot;name&quot; bigPicTitleTag=&quot;file&quot;}</code>
-        <br/>
-		<p>M&aacute; to mnoho možnost&iacute;, ale snažil jsem se to držet pružn&eacute;, proto nemus&iacute;te v&scaron;echny nastavovat, v&yacute;choz&iacute; hodnoty jsou rozumn&eacute;.</p>
-		
-  <br/>
-	<h4>Př&iacute;klad CSS</h4>
-<pre>
-	/* Image Gallery - Small Thumbnail Images */
-	.thumb {
-		margin: 1em 1em 1.6em 0; /* Space between images */
-		padding: 0;
-		float: left;
-		text-decoration: none;
-		line-height: normal;
-		text-align: left;
-	}
-
-	.thumb img, .thumb a img, .thumb a:link img{ /* Set link formatting*/
-		width: 100px; /* Image width*/
-		height: 100px; /* Image height*/
-		display: inline;
-		padding: 12px; /* Image padding to form photo frame */
-		/* You can set the above to 0px = no frame - but no hover indication! Adjust other widths ot text!*/
-		margin: 0;
-		background-color: white; /*Background of photo */ 
-		border-top: 1px solid #eee; /* Borders of photo frame */
-		border-right: 2px solid #ccc;
-		border-bottom: 2px solid #ccc;
-		border-left: 1px solid #eee;
-		text-decoration: none;
-	}
-
-	.thumb a:visited img {
-		background-color: #eee; /*Background of photo on hover - sort of a light grey */
-	}
-
-	.thumb a:hover img {
-		background-color: #dae6e4; /*Background of photo on hover - sort of light blue/green */
-	}
-
-	.thumbPicCaption {
-		text-align: center;
-		font-size: smaller;
-		margin: 0 1px 0 0;
-		padding: 0;
-		width: 124px; /* Image width plus 2 x padding for image (photo frame) - to center text on image */
-		/* display: none;  if you do not want to display this text */
-	}
-
-	/* Image Gallery - Big Images */
-	.bigPic {
-		margin: 10px 0 5px 0;
-		padding: 0;
-		line-height: normal;
-	}
-
-	.bigPicCaption { /*Big Image Name - above image above .bigpicImageFileName (Without extension) */
-		text-align: center;
-		font-weight: bold;
-		font-variant: small-caps;
-		font-weight: bold;
-		margin: 0 1px 0 0;
-		padding: 0;
-		width: 386px; /* Image width plus 2 x padding for image (photo frame) - to center text on image */
-		/* display: none;  if you do not want to display this text */
-	}
-
-	.bigPic img{ /* Big Image settings */
-		width: 350px; /* Width of Big Image */
-			height: auto;
-		display: inline;
-		padding: 18px; /* Image padding to form photo frame. */
-		/* You can set the above to 0px = no frame - but no hover indication! Adjust other widths ot text!*/
-		margin: 0;
-		background-color: white; /* Background of photo */ 
-		border-top: 1px solid #eee; /* Borders of photo frame */
-		border-right: 2px solid #ccc; 
-		border-bottom: 2px solid #ccc;
-		border-left: 1px solid #eee;
-		text-decoration: none; 
-		text-align: left;
-	}
-
-	.bigPicNav { /* Big Image information: &#039;Image 1 of 4&#039; and gallery navigation */
-		margin: 0;
-		width: 386px; /* Image width plus 2 x padding for image (photo frame) - to center text on image */
-		padding: 0;
-		color: #000;
-		font-size: smaller;
-		line-height: normal;
-		text-align: center;
-		/* display: none;  if you do not want to display this text. Why? You Lose Navigation! */
-	}
-
-</pre>
-<br/>
-
+$lang['admin']['help_function_imagegallery'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Vytv&aacute;ř&iacute; galerii z adres&aacute;ře s obr&aacute;zky (.gif, .jpg or .png). 
+
+	Lze kliknout na n&aacute;hled pro zobrazen&iacute; vět&scaron;&iacute;ho obr&aacute;zku. Lze použ&iacute;t titulky založen&eacute; na jm&eacute;ně obr&aacute;zku bez př&iacute;pony. Dovoluje webov&eacute; standardy a použit&iacute; CSS pro form&aacute;tov&aacute;n&iacute;. Jsou dostupn&eacute; tř&iacute;dy a různ&eacute; elementy včetně obl&eacute;haj&iacute;c&iacute;ho &#039;div&#039;. Koukněte na CSS n&iacute;že pro v&iacute;ce informac&iacute;.</p>
+
+
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Stač&iacute; vložit tag do &scaron;ablony nebo str&aacute;nky: </p>
+
+	<code>{ImageGallery picFolder=&quot;uploads/images/yourfolder/&quot;}</code>
+
+	<p>Kde picFolder je adres&aacute;ř s Va&scaron;imi obr&aacute;zky.</p>
+
+	
+
+    <h3>Jak&eacute; m&aacute; parametry?</h3>
+
+    <p>Lze použ&iacute;t p&aacute;r parametrů, ale př&iacute;klad v&yacute;&scaron;e je vhodn&yacute; pro vět&scaron;inu uživatelů :) </p>
+
+        <ol>
+
+		<li><strong>picFolder e.g. picFolder=&quot;uploads/images/yourfolder/&quot;</strong><br/>
+
+		je cesta ke galerii (yourfolder) konč&iacute;c&iacute; na &#039;/&#039;. Tak můžete m&iacute;t mnoho adres&aacute;řů a mnoho galeri&iacute;.</li>
+
+
+
+		<li><strong>vložte např. type=&quot;click&quot; or type=&quot;popup&quot;</strong><br/>
+
+		pro funguj&iacute;c&iacute; funkci &quot;popup&quot; je potřeba vložit popup javascript do hlavičky &scaron;ablony, např. &quot;<head></head>&quot;. Javascript je na konci t&eacute;to str&aacute;nky! <em>V&yacute;choz&iacute; je &#039;click&#039;.</em></li>
+
+
+
+		<li><strong>divID e.g. divID =&quot;imagegallery&quot;</strong><br/>
+
+		nastav&iacute; obaluj&iacute;c&iacute; &#039;div id&#039; okolo Va&scaron;&iacute; galerie, tak můžete m&iacute;t jin&yacute; styl CSS pro každou galerii. <em>V&yacute;choz&iacute; je &#039;imagegallery&#039;.</em></li>
+
+
+
+		<li><strong>sortBy e.g. sortBy = &quot;name&quot; or sortBy = &quot;date&quot;</strong><br/>
+
+		tř&iacute;dit obr&aacute;zky podle jm&eacute;na nebo data. <em>Nen&iacute; nastavena v&yacute;choz&iacute; hodnota.</em></li>
+
+
+
+		<li><strong>sortByOrder e.g. sortByOrder = &quot;asc&quot; or sortByOrder = &quot;desc&quot;</strong><br/> 
+
+		 <em>Nen&iacute; nastavena v&yacute;choz&iacute; hodnota.</em>.</li>
+
+
+
+		<li>Toto nastav&iacute; titulek nad velk&yacute; (rozkliknut&yacute;) obr&aacute;zek<br/>
+
+		<strong>bigPicCaption = &quot;name&quot; </strong>(jm&eacute;no souboru bez př&iacute;pony)<em> nebo </em><br/>
+
+		<strong>bigPicCaption = &quot;file&quot; </strong>(jm&eacute;no souboru s př&iacute;ponou)<em> nebo </em><br/>
+
+		<strong>bigPicCaption = &quot;number&quot; </strong>(č&iacute;slo sekvence)<em> nebo </em><br/>
+
+		<strong>bigPicCaption = &quot;none&quot; </strong>(bez titulku)<br/>
+
+		<em>V&yacute;choz&iacute; je &quot;name&quot;. </em></li>
+
+
+
+		<li>Toto nastav&iacute; titulek pod n&aacute;hled<br/>
+
+		<strong>thumbPicCaption = &quot;name&quot;</strong> (jm&eacute;no souboru bez př&iacute;pony)<em> nebo </em><br/>
+
+		<strong>thumbPicCaption = &quot;file&quot;</strong> (jm&eacute;no souboru s př&iacute;ponou)<em> nebo </em><br/>
+
+		<strong>thumbPicCaption = &quot;number&quot; </strong>(č&iacute;slo sekvence)<em> nebo </em><br/>
+
+		<strong>thumbPicCaption = &quot;none&quot; </strong>(bez titulku)<br/>
+
+		<em>V&yacute;choz&iacute; je &quot;name&quot;.</em></li>
+
+
+
+		<li>Nastav&iacute; tag &#039;alt&#039; pro velk&yacute; obr&aacute;zek - povinn&eacute;.<br/>
+
+		<strong>bigPicAltTag = &quot;name&quot; </strong>(jm&eacute;no souboru bez př&iacute;pony)<em> nebo </em><br/>
+
+		<strong>bigPicAltTag = &quot;file&quot; </strong>(jm&eacute;no souboru s př&iacute;ponou)<em> nebo </em><br/>
+
+		<strong>bigPicAltTag = &quot;number&quot; </strong>(č&iacute;slo sekvence)<br/>
+
+		<em>V&yacute;choz&iacute; je &quot;name&quot;.</em></li>
+
+
+
+		<li> Nastav&iacute; tag &#039;title&#039; pro velk&yacute; obr&aacute;zek. <br/>
+
+		<strong>bigPicTitleTag = &quot;name&quot; </strong>(jm&eacute;no souboru bez př&iacute;pony)<em> nebo </em><br/>
+
+		<strong>bigPicTitleTag = &quot;file&quot; </strong>(jm&eacute;no souboru s př&iacute;ponou)<em> nebo </em><br/>
+
+		<strong>bigPicTitleTag = &quot;number&quot; </strong>(č&iacute;slo sekvence)<em> nebo </em><br/>
+
+		<strong>bigPicTitleTag = &quot;none&quot; </strong>(Bez titulku)<br/>
+
+		<em>V&yacute;choz&iacute; je &quot;name&quot;.</em></li>
+
+
+
+		<li><strong>thumbPicAltTag</strong><br/>
+
+		<em>je stejn&eacute; jako bigPicAltTag, ale pro n&aacute;hledy.<em></li>
+
+
+
+		<li><strong>thumbPicTitleTag *</strong><br/>
+
+		<em>je stejn&eacute; jako bigPicTitleTag, ale pro n&aacute;hledy.<br/>
+
+		<strong>*s t&iacute;m rozd&iacute;lem, že za volbou je &#039;... klikněte pro vět&scaron;&iacute; obr&aacute;zek&#039; 
+
+		nebo když nezad&aacute;te tuto volbu, použije se v&yacute;choz&iacute; 
+
+		&#039;Klikněte pro vět&scaron;&iacute; obr&aacute;zek...&#039;</em></strong></li>
+
+        </ol>
+
+  <p>Komplexněj&scaron;&iacute; př&iacute;klad</p>
+
+        <p>&#039;div id&#039; je &#039;cdcovers&#039;, bet titulku na velk&yacute;ch obr&aacute;zc&iacute;ch, n&aacute;hledy maj&iacute; v&yacute;choz&iacute; titulek. 
+
+        &#039;alt&#039; tagy pro velk&yacute; obr&aacute;zek jsou nastaveny na jm&eacute;no souboru bez př&iacute;pony 
+
+        a &#039;title&#039; tag velk&eacute;ho obr&aacute;zku je nastaven&yacute; stejně, ale s př&iacute;ponou. 
+
+        N&aacute;hledy maj&iacute; v&yacute;choz&iacute; &#039;alt&#039; a &#039;title&#039; tagy. Pro &#039;alt&#039; je v&yacute;choz&iacute; jm&eacute;no obr&aacute;zku bez př&iacute;pony a pro &#039;title&#039; je v&yacute;choz&iacute;  &#039;Klikněte pro vět&scaron;&iacute; obr&aacute;zek:</p>
+
+		<code>{ImageGallery picFolder=&quot;uploads/images/cdcovers/&quot; divID=&quot;cdcovers&quot; bigPicCaption=&quot;none&quot;  bigPicAltTag=&quot;name&quot; bigPicTitleTag=&quot;file&quot;}</code>
+
+        <br/>
+
+		<p>M&aacute; to mnoho možnost&iacute;, ale snažil jsem se to držet pružn&eacute;, proto nemus&iacute;te v&scaron;echny nastavovat, v&yacute;choz&iacute; hodnoty jsou rozumn&eacute;.</p>
+
+		
+
+  <br/>
+
+	<h4>Př&iacute;klad CSS</h4>
+
+<pre>
+
+	/* Image Gallery - Small Thumbnail Images */
+
+	.thumb {
+
+		margin: 1em 1em 1.6em 0; /* Space between images */
+
+		padding: 0;
+
+		float: left;
+
+		text-decoration: none;
+
+		line-height: normal;
+
+		text-align: left;
+
+	}
+
+
+
+	.thumb img, .thumb a img, .thumb a:link img{ /* Set link formatting*/
+
+		width: 100px; /* Image width*/
+
+		height: 100px; /* Image height*/
+
+		display: inline;
+
+		padding: 12px; /* Image padding to form photo frame */
+
+		/* You can set the above to 0px = no frame - but no hover indication! Adjust other widths ot text!*/
+
+		margin: 0;
+
+		background-color: white; /*Background of photo */ 
+
+		border-top: 1px solid #eee; /* Borders of photo frame */
+
+		border-right: 2px solid #ccc;
+
+		border-bottom: 2px solid #ccc;
+
+		border-left: 1px solid #eee;
+
+		text-decoration: none;
+
+	}
+
+
+
+	.thumb a:visited img {
+
+		background-color: #eee; /*Background of photo on hover - sort of a light grey */
+
+	}
+
+
+
+	.thumb a:hover img {
+
+		background-color: #dae6e4; /*Background of photo on hover - sort of light blue/green */
+
+	}
+
+
+
+	.thumbPicCaption {
+
+		text-align: center;
+
+		font-size: smaller;
+
+		margin: 0 1px 0 0;
+
+		padding: 0;
+
+		width: 124px; /* Image width plus 2 x padding for image (photo frame) - to center text on image */
+
+		/* display: none;  if you do not want to display this text */
+
+	}
+
+
+
+	/* Image Gallery - Big Images */
+
+	.bigPic {
+
+		margin: 10px 0 5px 0;
+
+		padding: 0;
+
+		line-height: normal;
+
+	}
+
+
+
+	.bigPicCaption { /*Big Image Name - above image above .bigpicImageFileName (Without extension) */
+
+		text-align: center;
+
+		font-weight: bold;
+
+		font-variant: small-caps;
+
+		font-weight: bold;
+
+		margin: 0 1px 0 0;
+
+		padding: 0;
+
+		width: 386px; /* Image width plus 2 x padding for image (photo frame) - to center text on image */
+
+		/* display: none;  if you do not want to display this text */
+
+	}
+
+
+
+	.bigPic img{ /* Big Image settings */
+
+		width: 350px; /* Width of Big Image */
+
+			height: auto;
+
+		display: inline;
+
+		padding: 18px; /* Image padding to form photo frame. */
+
+		/* You can set the above to 0px = no frame - but no hover indication! Adjust other widths ot text!*/
+
+		margin: 0;
+
+		background-color: white; /* Background of photo */ 
+
+		border-top: 1px solid #eee; /* Borders of photo frame */
+
+		border-right: 2px solid #ccc; 
+
+		border-bottom: 2px solid #ccc;
+
+		border-left: 1px solid #eee;
+
+		text-decoration: none; 
+
+		text-align: left;
+
+	}
+
+
+
+	.bigPicNav { /* Big Image information: &#039;Image 1 of 4&#039; and gallery navigation */
+
+		margin: 0;
+
+		width: 386px; /* Image width plus 2 x padding for image (photo frame) - to center text on image */
+
+		padding: 0;
+
+		color: #000;
+
+		font-size: smaller;
+
+		line-height: normal;
+
+		text-align: center;
+
+		/* display: none;  if you do not want to display this text. Why? You Lose Navigation! */
+
+	}
+
+
+
+</pre>
+
+<br/>
+
+
+
 	<h4>Popup javascript je nyn&iacute; obsažen v k&oacute;du modulu a bude generov&aacute;n automaticky, pokud m&aacute;te st&aacute;le dan&yacute; javascript v &scaron;abloně, odstraňtě ho.</h4>';
-$lang['admin']['help_function_html_blob'] = '	<h3>Co to děl&aacute;?</h3>
+$lang['admin']['help_function_html_blob'] = '	<h3>Co to děl&aacute;?</h3>
+
 	<p>Pod&iacute;vejte se do n&aacute;povědy global_content pro popis.</p>';
-$lang['admin']['help_function_googlepr'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Zobrazuje č&iacute;slo reprezentuj&iacute;c&iacute; V&aacute;&scaron; google pagerank.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{googlepr}</code><br>
-	<br>
-
-	<h3>Jak&eacute; m&aacute; parametry?</h3>
-	<ul>
-		<li><em>(voliteln&eacute;)</em> domain - Jm&eacute;no str&aacute;nek pro zobrazen&iacute; pageranku.</li>
-	</ul>
+$lang['admin']['help_function_googlepr'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Zobrazuje č&iacute;slo reprezentuj&iacute;c&iacute; V&aacute;&scaron; google pagerank.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{googlepr}</code><br>
+
+	<br>
+
+
+
+	<h3>Jak&eacute; m&aacute; parametry?</h3>
+
+	<ul>
+
+		<li><em>(voliteln&eacute;)</em> domain - Jm&eacute;no str&aacute;nek pro zobrazen&iacute; pageranku.</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['help_function_google_search'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Prohled&aacute;v&aacute; Va&scaron;e str&aacute;nky pomoc&iacute; vyhled&aacute;vac&iacute;ho engine Google.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{google_search}</code><br>
-	<br>
-	Pozn&aacute;mka: Google vyžaduje m&iacute;t Va&scaron;e str&aacute;nky indexovan&eacute; pro to, aby toto fungovalo. Sv&eacute; str&aacute;nky můžete odeslat do google <a href="http://www.google.com/addurl.html">zde</a>.</p>
-	<h3>Co když chci změnit vzhled textboxu nebo tlač&iacute;tka?</h3>
-	<p>Vzhled textboxu nebo tlač&iacute;tka může b&yacute;t změněn pomoc&iacute; css. Textboxu je d&aacute;no id textSearch a tlač&iacute;tku buttonSearch.</p>
-
-	<h3>Jak&eacute; m&aacute; parametry?</h3>
-	<ul>
-		<li><em>(voliteln&eacute;)</em> domain - Řekne google jakou dom&eacute;nu prohled&aacute;vat. Tento script se pokou&scaron;&iacute; ji rozpoznat automaticky.</li>
-		<li><em>(voliteln&eacute;)</em> buttonText - Text tlač&iacute;tka. V&yacute;choz&iacute; je &quot;Search Site&quot;.</li>
-	</ul>
+$lang['admin']['help_function_google_search'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Prohled&aacute;v&aacute; Va&scaron;e str&aacute;nky pomoc&iacute; vyhled&aacute;vac&iacute;ho engine Google.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{google_search}</code><br>
+
+	<br>
+
+	Pozn&aacute;mka: Google vyžaduje m&iacute;t Va&scaron;e str&aacute;nky indexovan&eacute; pro to, aby toto fungovalo. Sv&eacute; str&aacute;nky můžete odeslat do google <a href="http://www.google.com/addurl.html">zde</a>.</p>
+
+	<h3>Co když chci změnit vzhled textboxu nebo tlač&iacute;tka?</h3>
+
+	<p>Vzhled textboxu nebo tlač&iacute;tka může b&yacute;t změněn pomoc&iacute; css. Textboxu je d&aacute;no id textSearch a tlač&iacute;tku buttonSearch.</p>
+
+
+
+	<h3>Jak&eacute; m&aacute; parametry?</h3>
+
+	<ul>
+
+		<li><em>(voliteln&eacute;)</em> domain - Řekne google jakou dom&eacute;nu prohled&aacute;vat. Tento script se pokou&scaron;&iacute; ji rozpoznat automaticky.</li>
+
+		<li><em>(voliteln&eacute;)</em> buttonText - Text tlač&iacute;tka. V&yacute;choz&iacute; je &quot;Search Site&quot;.</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['help_function_global_content'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Vlož&iacute; hlavn&iacute; obsahov&yacute; blok do &scaron;ablony nebo str&aacute;nky.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{global_content name=&#039;myblob&#039;}</code>, kde jm&eacute;no je jm&eacute;no zadan&eacute; bloku při jeho vytvořen&iacute;.</p>
-	<h3>Jak&eacute; m&aacute; parametry?</h3>
-	<ul>
-		<li>name - Jm&eacute;no hlavn&iacute;ho obsahov&eacute;ho bloku pro zobrazen&iacute;.</li>
+$lang['admin']['help_function_global_content'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Vlož&iacute; hlavn&iacute; obsahov&yacute; blok do &scaron;ablony nebo str&aacute;nky.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{global_content name=&#039;myblob&#039;}</code>, kde jm&eacute;no je jm&eacute;no zadan&eacute; bloku při jeho vytvořen&iacute;.</p>
+
+	<h3>Jak&eacute; m&aacute; parametry?</h3>
+
+	<ul>
+
+		<li>name - Jm&eacute;no hlavn&iacute;ho obsahov&eacute;ho bloku pro zobrazen&iacute;.</li>
+
 	</ul>';
-$lang['admin']['help_function_get_template_vars'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Vyt&aacute;hne v&scaron;echny zn&aacute;me proměnn&eacute; smarty do Va&scaron;&iacute; str&aacute;nky</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{get_template_vars}</code></p>
-	<h3>Jak&eacute; m&aacute; parametry?</h3>
+$lang['admin']['help_function_get_template_vars'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Vyt&aacute;hne v&scaron;echny zn&aacute;me proměnn&eacute; smarty do Va&scaron;&iacute; str&aacute;nky</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{get_template_vars}</code></p>
+
+	<h3>Jak&eacute; m&aacute; parametry?</h3>
+
 	  <p>Zat&iacute;m ž&aacute;dn&eacute;</p>';
-$lang['admin']['help_function_embed'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Slouž&iacute; k vložen&iacute; jin&eacute; aplikace do CMS. Nejobvyklej&scaron;&iacute; je to pro f&oacute;rum. 
-	Tato implementace použ&iacute;v&aacute; IFRAMES, takže star&scaron;&iacute; prohl&iacute;žeče mohou m&iacute;t probl&eacute;my. Bohužel to je jedin&aacute; možn&aacute; cesta, kter&aacute; funguje bez &uacute;pravy vkl&aacute;dan&eacute; aplikace.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{embed url=http://www.google.com/}</code><br></p>
-        <h4>Př&iacute;klad pro zvět&scaron;en&iacute; iframe</h4>
-	<p>Vložte n&aacute;sleduj&iacute;c&iacute; do stylu:</p>
-        <pre>#myframe { height: 600px; }</pre>
-        <h3>Jak&eacute; m&aacute; parametry?</h3>
-        <ul>
-               <li><em>(vyžadov&aacute;no)</em>url - adresa url, kter&aacute; m&aacute; b&yacute;t vložena
-               <li><em>(voliteln&eacute;)</em>header=true - vygeneruje hlavičkov&yacute; k&oacute;d pro dobrou &uacute;pravu velikosti IFRAME.</li>
-
-        </ul>
+$lang['admin']['help_function_embed'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Slouž&iacute; k vložen&iacute; jin&eacute; aplikace do CMS. Nejobvyklej&scaron;&iacute; je to pro f&oacute;rum. 
+
+	Tato implementace použ&iacute;v&aacute; IFRAMES, takže star&scaron;&iacute; prohl&iacute;žeče mohou m&iacute;t probl&eacute;my. Bohužel to je jedin&aacute; možn&aacute; cesta, kter&aacute; funguje bez &uacute;pravy vkl&aacute;dan&eacute; aplikace.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{embed url=http://www.google.com/}</code><br></p>
+
+        <h4>Př&iacute;klad pro zvět&scaron;en&iacute; iframe</h4>
+
+	<p>Vložte n&aacute;sleduj&iacute;c&iacute; do stylu:</p>
+
+        <pre>#myframe { height: 600px; }</pre>
+
+        <h3>Jak&eacute; m&aacute; parametry?</h3>
+
+        <ul>
+
+               <li><em>(vyžadov&aacute;no)</em>url - adresa url, kter&aacute; m&aacute; b&yacute;t vložena
+
+               <li><em>(voliteln&eacute;)</em>header=true - vygeneruje hlavičkov&yacute; k&oacute;d pro dobrou &uacute;pravu velikosti IFRAME.</li>
+
+
+
+        </ul>
+
        <p>Mus&iacute;te vložit do str&aacute;nky {embed url=..} a do sekce &quot;Metadata:&quot; (z&aacute;ložka Roz&scaron;&iacute;řen&eacute;) {embed header=true}. Tak&eacute; se ujistěte, že jste vložili do tagu &quot;head&quot; Va&scaron;&iacute; &scaron;ablony {metadata}</p>';
-$lang['admin']['help_function_edit'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Vytvoř&iacute; odkaz pro editaci str&aacute;nky</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{edit}</code><br></p>
-        <h3>Jak&eacute; m&aacute; parametry?</h3>
-        <ul>
-                <li><em>(voliteln&eacute;)</em>showbutton - Při &quot;true&quot; zobraz&iacute; grafiku m&iacute;sto textov&eacute;ho odkazu.</li>
+$lang['admin']['help_function_edit'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Vytvoř&iacute; odkaz pro editaci str&aacute;nky</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{edit}</code><br></p>
+
+        <h3>Jak&eacute; m&aacute; parametry?</h3>
+
+        <ul>
+
+                <li><em>(voliteln&eacute;)</em>showbutton - Při &quot;true&quot; zobraz&iacute; grafiku m&iacute;sto textov&eacute;ho odkazu.</li>
+
         </ul>';
-$lang['admin']['help_function_description'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Vyp&iacute;&scaron;e popis (title atribut) str&aacute;nky.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{description}</code></p>
-	<h3>Jak&eacute; m&aacute; parametry?</h3>
+$lang['admin']['help_function_description'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Vyp&iacute;&scaron;e popis (title atribut) str&aacute;nky.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{description}</code></p>
+
+	<h3>Jak&eacute; m&aacute; parametry?</h3>
+
 	<p>Zat&iacute;m ž&aacute;dn&eacute;.</p>';
-$lang['admin']['help_function_created_date'] = '        <h3>Co to děl&aacute;?</h3>
-        <p>Vyp&iacute;&scaron;e datum a čas vytvořen&iacute; str&aacute;nky.  Pokud nen&iacute; zad&aacute;n form&aacute;t, bude použit v&yacute;choz&iacute; ve tvaru &#039;Jan 01, 2004&#039;.</p>
-        <h3>Jak se použ&iacute;v&aacute;?</h3>
-        <p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{created_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code></p>
-        <h3>Jak&eacute; m&aacute; parametry?</h3>
-        <ul>
-                <li><em>(voliteln&eacute;)</em>format - Form&aacute;t data/času použ&iacute;vaj&iacute;c&iacute; parametry php funkce strftime.  Viz. <a href="http://php.net/strftime" target="_blank">zde</a> pro seznam parametrů a informac&iacute;.</li>
+$lang['admin']['help_function_created_date'] = '        <h3>Co to děl&aacute;?</h3>
+
+        <p>Vyp&iacute;&scaron;e datum a čas vytvořen&iacute; str&aacute;nky.  Pokud nen&iacute; zad&aacute;n form&aacute;t, bude použit v&yacute;choz&iacute; ve tvaru &#039;Jan 01, 2004&#039;.</p>
+
+        <h3>Jak se použ&iacute;v&aacute;?</h3>
+
+        <p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{created_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code></p>
+
+        <h3>Jak&eacute; m&aacute; parametry?</h3>
+
+        <ul>
+
+                <li><em>(voliteln&eacute;)</em>format - Form&aacute;t data/času použ&iacute;vaj&iacute;c&iacute; parametry php funkce strftime.  Viz. <a href="http://php.net/strftime" target="_blank">zde</a> pro seznam parametrů a informac&iacute;.</li>
+
         </ul>';
-$lang['admin']['help_function_content'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Ud&aacute;v&aacute; kde bude zobrazen obsah str&aacute;nek.  Je vložen do &scaron;ablony a nahrazen v z&aacute;vislosti na aktu&aacute;ln&iacute; str&aacute;nce pro zobrazen&iacute;.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Stač&iacute; vložit tag do &scaron;ablony: <code>{content}</code>.</p>
-	<h3>Jak&eacute; m&aacute; parametry?</h3>
-	<ul>
-		<li><em>(voliteln&eacute;)</em>block - Povoluje m&iacute;t v&iacute;ce jak jeden obsahov&yacute; blok na str&aacute;nku.  Když je vloženo v&iacute;ce obsahov&yacute;ch tagů do &scaron;ablony, tolik editovateln&yacute;ch boxů bude zobrazeno při editaci str&aacute;nky.
-<p>Př&iacute;klad:</p>
-<pre>{content block=&quot;Druh&yacute; obsahov&yacute; blok&quot;}</pre>
-<p>Nyn&iacute; při editaci str&aacute;nky zde bude textov&eacute; pole nazvan&eacute; &quot;Druh&yacute; obsahov&yacute; blok&quot;.</li>
-		<li><em>(voliteln&eacute;)</em>wysiwyg (true/false) - Při nastaven&iacute; na false, wisiwig nebude nikdy zobrazen při editaci tohoto bloku.  Při true to vypad&aacute; jako norm&aacute;lně. Funguje pouze když je použit parametr block.</li>
-		<li><em>(voliteln&eacute;)</em>oneline (true/false) - Při nastaven&iacute; na true je zobrazen jen jeden ř&aacute;dek při editaci tohoto bloku.  Při false to vypad&aacute; jako norm&aacute;lně.  Funguje pouze když je použit parametr block.</li>
-		<li><em>(voliteln&eacute;)</em>assign - Přiřad&iacute; obsah smarty parametru, kter&yacute; pot&eacute; můžete použ&iacute;t v jin&yacute;ch č&aacute;stech str&aacute;nky nebo použ&iacute;t při testov&aacute;n&iacute; zda obsah existuje.
-<p>Př&iacute;klad přiřazen&iacute; obsahu str&aacute;nky uživatelsky definovan&eacute;mu tagu jako parametr:</p>
-<pre>
-         {content assign=pagecontent}
-         {table_of_contents thepagecontent=&quot;$pagecontent&quot;}
-</pre>
-</li>
+$lang['admin']['help_function_content'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Ud&aacute;v&aacute; kde bude zobrazen obsah str&aacute;nek.  Je vložen do &scaron;ablony a nahrazen v z&aacute;vislosti na aktu&aacute;ln&iacute; str&aacute;nce pro zobrazen&iacute;.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Stač&iacute; vložit tag do &scaron;ablony: <code>{content}</code>.</p>
+
+	<h3>Jak&eacute; m&aacute; parametry?</h3>
+
+	<ul>
+
+		<li><em>(voliteln&eacute;)</em>block - Povoluje m&iacute;t v&iacute;ce jak jeden obsahov&yacute; blok na str&aacute;nku.  Když je vloženo v&iacute;ce obsahov&yacute;ch tagů do &scaron;ablony, tolik editovateln&yacute;ch boxů bude zobrazeno při editaci str&aacute;nky.
+
+<p>Př&iacute;klad:</p>
+
+<pre>{content block=&quot;Druh&yacute; obsahov&yacute; blok&quot;}</pre>
+
+<p>Nyn&iacute; při editaci str&aacute;nky zde bude textov&eacute; pole nazvan&eacute; &quot;Druh&yacute; obsahov&yacute; blok&quot;.</li>
+
+		<li><em>(voliteln&eacute;)</em>wysiwyg (true/false) - Při nastaven&iacute; na false, wisiwig nebude nikdy zobrazen při editaci tohoto bloku.  Při true to vypad&aacute; jako norm&aacute;lně. Funguje pouze když je použit parametr block.</li>
+
+		<li><em>(voliteln&eacute;)</em>oneline (true/false) - Při nastaven&iacute; na true je zobrazen jen jeden ř&aacute;dek při editaci tohoto bloku.  Při false to vypad&aacute; jako norm&aacute;lně.  Funguje pouze když je použit parametr block.</li>
+
+		<li><em>(voliteln&eacute;)</em>assign - Přiřad&iacute; obsah smarty parametru, kter&yacute; pot&eacute; můžete použ&iacute;t v jin&yacute;ch č&aacute;stech str&aacute;nky nebo použ&iacute;t při testov&aacute;n&iacute; zda obsah existuje.
+
+<p>Př&iacute;klad přiřazen&iacute; obsahu str&aacute;nky uživatelsky definovan&eacute;mu tagu jako parametr:</p>
+
+<pre>
+
+         {content assign=pagecontent}
+
+         {table_of_contents thepagecontent=&quot;$pagecontent&quot;}
+
+</pre>
+
+</li>
+
 	</ul>';
-$lang['admin']['help_function_contact_form'] = '  <h2>POZN&Aacute;MKA: Tento modul je zastaral&yacute;</h2>
-    <p>This smarty plugin is deprecated, and may not be included with further versions of CMS Made Simple.  We recommend you use the formbuilder module and it&#039;s included contact form.</p>
-	<h3>What does this do?</h3>
-	<p>Display&#039;s a contact form. This can be used to allow others to send an email message to the address specified.</p>
-	<h3>How do I use it?</h3>
-	<p>Just insert the tag into your template/page like: <code>{contact_form email=&quot;yourname@yourdomain.com&quot;}</code><br>
-	<br>
-	If you would like to send an email to multiple adresses, seperate each address with a comma.</p>
-	<h3>What parameters does it take?</h3>
-	<ul>
-		<li>email - The email address that the message will be sent to.</li>
-		<li><em>(optional)</em>style - true/false, use the predefined styles. Default is true.</li>
-		<li><em>(optional)</em>subject_get_var - string, allows you to specify which _GET var to use as the default value for subject.
-               <p>Example:</p>
-               <pre>{contact_form email=&quot;yourname@yourdomain.com&quot; subject_get_var=&quot;subject&quot;}</pre>
-             <p>Then call the page with the form on it like this: /index.php?page=contact&amp;subject=test+subject</p>
-             <p>And the following will appear in the &quot;Subject&quot; box: &quot;test subject&quot;
-           </li>
-		<li><em>(optional)</em>captcha - true/false, use Captcha response test (Captcha module must be installed). Default is false.</li>
-	</ul>
+$lang['admin']['help_function_contact_form'] = '  <h2>POZN&Aacute;MKA: Tento modul je zastaral&yacute;</h2>
+
+    <p>This smarty plugin is deprecated, and may not be included with further versions of CMS Made Simple.  We recommend you use the formbuilder module and it&#039;s included contact form.</p>
+
+	<h3>What does this do?</h3>
+
+	<p>Display&#039;s a contact form. This can be used to allow others to send an email message to the address specified.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Just insert the tag into your template/page like: <code>{contact_form email=&quot;yourname@yourdomain.com&quot;}</code><br>
+
+	<br>
+
+	If you would like to send an email to multiple adresses, seperate each address with a comma.</p>
+
+	<h3>What parameters does it take?</h3>
+
+	<ul>
+
+		<li>email - The email address that the message will be sent to.</li>
+
+		<li><em>(optional)</em>style - true/false, use the predefined styles. Default is true.</li>
+
+		<li><em>(optional)</em>subject_get_var - string, allows you to specify which _GET var to use as the default value for subject.
+
+               <p>Example:</p>
+
+               <pre>{contact_form email=&quot;yourname@yourdomain.com&quot; subject_get_var=&quot;subject&quot;}</pre>
+
+             <p>Then call the page with the form on it like this: /index.php?page=contact&amp;subject=test+subject</p>
+
+             <p>And the following will appear in the &quot;Subject&quot; box: &quot;test subject&quot;
+
+           </li>
+
+		<li><em>(optional)</em>captcha - true/false, use Captcha response test (Captcha module must be installed). Default is false.</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['help_function_cms_versionname'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Tento tag se použ&iacute;v&aacute; pro vložen&iacute; jm&eacute;na aktu&aacute;ln&iacute; verze CMS do &scaron;ablony nebo str&aacute;nky.  Nezobraz&iacute; nav&iacute;c nic mimo jm&eacute;na verze.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Toto je pouze z&aacute;kladn&iacute; tag modul.  Stač&iacute; ho vložit do &scaron;ablony nebo str&aacute;nky: <code>{cms_versionname}</code>
-	<h3>Jak&eacute; m&aacute; parametry?</h3>
+$lang['admin']['help_function_cms_versionname'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Tento tag se použ&iacute;v&aacute; pro vložen&iacute; jm&eacute;na aktu&aacute;ln&iacute; verze CMS do &scaron;ablony nebo str&aacute;nky.  Nezobraz&iacute; nav&iacute;c nic mimo jm&eacute;na verze.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Toto je pouze z&aacute;kladn&iacute; tag modul.  Stač&iacute; ho vložit do &scaron;ablony nebo str&aacute;nky: <code>{cms_versionname}</code>
+
+	<h3>Jak&eacute; m&aacute; parametry?</h3>
+
 	<p>Nem&aacute; ž&aacute;dn&eacute; parametry.</p>';
-$lang['admin']['help_function_cms_version'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Tento tag se použ&iacute;v&aacute; pro vložen&iacute; č&iacute;sla aktu&aacute;ln&iacute; verze CMS do &scaron;ablony nebo str&aacute;nky. Nezobraz&iacute; nav&iacute;c nic mimo č&iacute;sla verze.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Toto je pouze z&aacute;kladn&iacute; tag modul.  Stač&iacute; ho vložit do &scaron;ablony nebo str&aacute;nky: <code>{cms_version}</code>
-	<h3>Jak&eacute; m&aacute; parametry?</h3>
+$lang['admin']['help_function_cms_version'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Tento tag se použ&iacute;v&aacute; pro vložen&iacute; č&iacute;sla aktu&aacute;ln&iacute; verze CMS do &scaron;ablony nebo str&aacute;nky. Nezobraz&iacute; nav&iacute;c nic mimo č&iacute;sla verze.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Toto je pouze z&aacute;kladn&iacute; tag modul.  Stač&iacute; ho vložit do &scaron;ablony nebo str&aacute;nky: <code>{cms_version}</code>
+
+	<h3>Jak&eacute; m&aacute; parametry?</h3>
+
 	<p>Nem&aacute; ž&aacute;dn&eacute; parametry.</p>';
-$lang['admin']['about_function_cms_selflink'] = '		<p>Author: Ted Kulp <tedkulp@users.sf.net></p>
-		<p>Version: 1.1</p>
-		<p>Modified: Martin B. Vestergaard <mbv@nospam.dk></p>
-		<p>Version: 1.41</p>
-		<p>Modified: Russ Baldwin</p>
-		<p>Version: 1.42</p>
-		<p>Modified: Marcus Bointon <coolbru@users.sf.net></p>
-		<p>Version: 1.43</p>
-		<p>Modified: Tatu Wikman <tsw@backspace.fi></p>
-		<p>Version: 1.44</p>
-		<p>Modified: Hans Mogren <http://hans.bymarken.net/></p>
-		<p>Version: 1.45</p>
-
-		<p>
-		Change History:<br/>
-		1.46 - Fixes a problem with too many queries when using the dir=start option.<br/>
-		1.45 - Added a new option for &quot;dir&quot;, &quot;up&quot;, for links to the parent page e.g. dir=&quot;up&quot; (Hans Mogren).<br />
-		1.44 - Added new parameters &quot;ext&quot; and &quot;ext_info&quot; to allow external links with class=&quot;external&quot; and info text after the link, ugly hack but works thinking about rewriting this(Tatu Wikman)<br />
-		1.43 - Added new parameters &quot;image&quot; and &quot;imageonly&quot; to allow attachment of images to be used for page links, either instead of or in addition to text links. (Marcus Bointon)<br />
-		1.42 - Added new parameter &quot;anchorlink&quot; and a new option for &quot;dir&quot; namely, &quot;anchor&quot;, for internal page links. e.g. dir=&quot;anchor&quot; anchorlink=&quot;internal_link&quot;. (Russ)<br />
-		1.41 - added new parameter &quot;href&quot; (LeisureLarry)<br />
-		1.4 - fixed bug next/prev linking to non-content pages. (Thanks Teemu Koistinen for this fix)<br />
-		1.3 - added option &quot;more&quot;<br />
-		1.2 - by Martin B. Vestergaard
-		<ul>
-		<li>changed default text to Page Name (was Page Alias)</li>
-		<li>added option dir=next/prev to display next or previous item in the hirachy - thanks to 100rk</li>
-		<li>added option class to add a class= statement to the a-tag.</li>
-		<li>added option menu to display menu-text in sted of Page Name</li>
-		<li>added option lang to display link-labels in different languages</li>
-		</ul>
-		1.1 - Changed to new content system<br />
-		1.0 - Initial release
+$lang['admin']['about_function_cms_selflink'] = '		<p>Author: Ted Kulp <tedkulp@users.sf.net></p>
+
+		<p>Version: 1.1</p>
+
+		<p>Modified: Martin B. Vestergaard <mbv@nospam.dk></p>
+
+		<p>Version: 1.41</p>
+
+		<p>Modified: Russ Baldwin</p>
+
+		<p>Version: 1.42</p>
+
+		<p>Modified: Marcus Bointon <coolbru@users.sf.net></p>
+
+		<p>Version: 1.43</p>
+
+		<p>Modified: Tatu Wikman <tsw@backspace.fi></p>
+
+		<p>Version: 1.44</p>
+
+		<p>Modified: Hans Mogren <http://hans.bymarken.net/></p>
+
+		<p>Version: 1.45</p>
+
+
+
+		<p>
+
+		Change History:<br/>
+
+		1.46 - Fixes a problem with too many queries when using the dir=start option.<br/>
+
+		1.45 - Added a new option for &quot;dir&quot;, &quot;up&quot;, for links to the parent page e.g. dir=&quot;up&quot; (Hans Mogren).<br />
+
+		1.44 - Added new parameters &quot;ext&quot; and &quot;ext_info&quot; to allow external links with class=&quot;external&quot; and info text after the link, ugly hack but works thinking about rewriting this(Tatu Wikman)<br />
+
+		1.43 - Added new parameters &quot;image&quot; and &quot;imageonly&quot; to allow attachment of images to be used for page links, either instead of or in addition to text links. (Marcus Bointon)<br />
+
+		1.42 - Added new parameter &quot;anchorlink&quot; and a new option for &quot;dir&quot; namely, &quot;anchor&quot;, for internal page links. e.g. dir=&quot;anchor&quot; anchorlink=&quot;internal_link&quot;. (Russ)<br />
+
+		1.41 - added new parameter &quot;href&quot; (LeisureLarry)<br />
+
+		1.4 - fixed bug next/prev linking to non-content pages. (Thanks Teemu Koistinen for this fix)<br />
+
+		1.3 - added option &quot;more&quot;<br />
+
+		1.2 - by Martin B. Vestergaard
+
+		<ul>
+
+		<li>changed default text to Page Name (was Page Alias)</li>
+
+		<li>added option dir=next/prev to display next or previous item in the hirachy - thanks to 100rk</li>
+
+		<li>added option class to add a class= statement to the a-tag.</li>
+
+		<li>added option menu to display menu-text in sted of Page Name</li>
+
+		<li>added option lang to display link-labels in different languages</li>
+
+		</ul>
+
+		1.1 - Changed to new content system<br />
+
+		1.0 - Initial release
+
 		</p>';
-$lang['admin']['help_function_cms_selflink'] = '		<h3>Co to děl&aacute;?</h3>
-		<p>Vytv&aacute;ř&iacute; odkaz na jinou CMSMS str&aacute;nku uvnitř &scaron;ablony nebo obsahu. Může b&yacute;t tak&eacute; použit pro extern&iacute; odkazy.</p>
-		<h3>Jak se použ&iacute;v&aacute;?</h3>
-		<p>Stač&iacute; vložit tag do Va&scaron;&iacute; &scaron;ablony/str&aacute;nky: <code>{cms_selflink page=&quot;1&quot;}</code> nebo  <code>{cms_selflink page=&quot;alias&quot;}</code></p>
-		<h3>Jak&eacute; m&aacute; parametry?</h3>
-		<p>
-		<ul>
-		<li><em>(voliteln&eacute;)</em> <tt>page</tt> - ID str&aacute;nky nebo alias pro odkaz.</li>
-		<li><em>(voliteln&eacute;)</em> <tt>dir anchor (internal links)</tt> - Nov&aacute; volba pro intern&iacute; odkaz. Pokud je to použito, potom by měl b&yacute;t nastaven&yacute; <tt>anchorlink</tt>. </li> <!-- Russ - 25-04-2006 -->
-		<li><em>(voliteln&eacute;)</em> <tt>anchorlink</tt> - Nov&yacute; parametr pro intern&iacute; odkaz. Pokud je to použito, potom by měl b&yacute;t tak&eacute; nastaven <tt>dir =&quot;anchor&quot;</tt>. nen&iacute; třeba #, protože je to vkl&aacute;d&aacute;no automaticky.</li> <!-- Russ - 25-04-2006 -->
-		<li><em>(voliteln&eacute;)</em> <tt>urlparam</tt> - Specifikuje dodatečn&eacute; parametry URL.  <strong>Nepouž&iacute;vejte současně s parametrem <em>anchorlink</em></strong></em>
-		<li><em>(voliteln&eacute;)</em> <tt>tabindex =&quot;hodnota&quot;</tt> - Nastavit tabindex na hodnotu.</li> <!-- Russ - 22-06-2005 -->
-		<li><em>(voliteln&eacute;)</em> <tt>dir start/next/prev/up (předchoz&iacute;)</tt> - Vede na v&yacute;choz&iacute; str&aacute;nku nebo na dal&scaron;&iacute;, předchoz&iacute; nebo na rodičovskou str&aacute;nku (nahoru (up). Pokud je to použito, <tt>page</tt> by nemělo b&yacute;t nastaveno.</li> <!-- mbv - 21-06-2005 -->
-		<B>Pozn&aacute;mka!</B> Pouze jedno z předchoz&iacute;ho může b&yacute;t použito v jednom cms_selflink!!
-		<li><em>(voliteln&eacute;)</em> <tt>text</tt> - Text odkazu. Pokud nen&eacute;&iacute; zad&aacute;n, je použito jm&eacute;no str&aacute;nky.</li>
-		<li><em>(voliteln&eacute;)</em> <tt>menu 1/0</tt> - Zda m&aacute; b&yacute;t použit text menu v odkazu m&iacute;sto jm&eacute;na str&aacute;nky</li> <!-- mbv - 21-06-2005 -->
-		<li><em>(voliteln&eacute;)</em> <tt>target</tt> - Voliteln&yacute; c&iacute;l pro odkaz. Užitečn&eacute; pro framy nebo javascript.</li>
-		<li><em>(voliteln&eacute;)</em> <tt>class</tt> - Tř&iacute;da pro <a> tag. Užitečn&eacute; pro nastylov&aacute;n&iacute; odkazu.</li> <!-- mbv - 21-06-2005 -->
-		<li><em>(voliteln&eacute;)</em> <tt>lang</tt> - Zobrazovat popisky  (&quot;N&aacute;sleduj&iacute;c&iacute; str&aacute;nka&quot;/&quot;Předchoz&iacute; str&aacute;nka&quot;) v jin&eacute;m jazyce (0 pro pr&aacute;zdn&yacute; popisek.) D&aacute;nsky (dk), Anglicky (en) nebo Francouzsky (fr), zat&iacute;m.</li> <!-- mbv - 21-06-2005 -->
-		<li><em>(voliteln&eacute;)</em> <tt>id</tt> - Voliteln&eacute;  css_id pro <a> odkaz.</li> <!-- mbv - 29-06-2005 -->
-		<li><em>(voliteln&eacute;)</em> <tt>more</tt> - vlož&iacute; dodatečn&eacute; volby do  <a> odkazu.</li> <!-- mbv - 29-06-2005 -->
-		<li><em>(voliteln&eacute;)</em> <tt>label</tt> - Popisek pro použit&iacute; v odkazu, pokud je to aplikovateln&eacute;.</li>
-		<li><em>(voliteln&eacute;)</em> <tt>label_side left/right</tt> - Strana pro um&iacute;stěn&iacute; popisku odkazu (v&yacute;choz&iacute; je &quot;left&quot;).</li>
-		<li><em>(voliteln&eacute;)</em> <tt>title</tt> - Text titulku atributu.  Pokud nebude nastaven, použije se titulek str&aacute;nky.</li>
-		<li><em>(voliteln&eacute;l)</em> <tt>rellink 1/0</tt> - Vytvoř&iacute; relational link pro př&iacute;stupnou navigaci. Pracuje pouze s nastaven&yacute;m parametrem dir a je vložen do sekce head &scaron;ablony.</li>
-		<li><em>(voliteln&eacute;l)</em> <tt>href</tt> - Generuje pouze href parametr (ostatn&iacute; parametry nejsou možn&eacute;). <strong>Př&iacute;klad:</strong> <a href="{cms_selflink href="alias"}"><img src=&quot;&quot;></a></li>
-		<li><em>(voliteln&eacute;)</em> <tt>image</tt> - Adresa url obr&aacute;zku pro použit&iacute; v odkazu. <strong>Př&iacute;klad:</strong> {cms_selflink dir=&quot;next&quot; image=&quot;next.png&quot; text=&quot;Next&quot;}</li>
-		<li><em>(voliteln&eacute;)</em> <tt>alt</tt> - Alternativn&iacute; text pro použit&iacute; s obr&aacute;zkem (použije se alt=&quot;&quot; pokud tento parametr nen&iacute; zad&aacute;n).</li>
-		<li><em>(voliteln&eacute;)</em> <tt>imageonly</tt> - Pro potlačen&iacute; zobrazen&iacute; textov&yacute;ch odkazů při použit&iacute; obr&aacute;zků v odkazu. Pokud nechcete ž&aacute;dn&yacute; text v odkazech, nastavte lang=0 pro potlačen&iacute; popisku. <B>Př&iacute;klad:</B> {cms_selflink dir=&quot;next&quot; image=&quot;next.png&quot; text=&quot;Next&quot; imageonly=1}</li>
-		<li><em>(voliteln&eacute;)</em> <tt>ext</tt> - Pro extern&iacute; odkazy, vlož&iacute; add class=&quot;external&quot; a informativn&iacute; text. <strong>Varov&aacute;n&iacute;:</strong> Pouze parametry text, target a title jsou s t&iacute;m to parametrem kompatibiln&iacute;.</li>
-		<li><em>(voliteln&eacute;)</em> <tt>ext_info</tt> - Použ&iacute;v&aacute; se současně s &quot;ext&quot;, v&yacute;choz&iacute; je (external link)</li>
-		</ul>
+$lang['admin']['help_function_cms_selflink'] = '		<h3>Co to děl&aacute;?</h3>
+
+		<p>Vytv&aacute;ř&iacute; odkaz na jinou CMSMS str&aacute;nku uvnitř &scaron;ablony nebo obsahu. Může b&yacute;t tak&eacute; použit pro extern&iacute; odkazy.</p>
+
+		<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+		<p>Stač&iacute; vložit tag do Va&scaron;&iacute; &scaron;ablony/str&aacute;nky: <code>{cms_selflink page=&quot;1&quot;}</code> nebo  <code>{cms_selflink page=&quot;alias&quot;}</code></p>
+
+		<h3>Jak&eacute; m&aacute; parametry?</h3>
+
+		<p>
+
+		<ul>
+
+		<li><em>(voliteln&eacute;)</em> <tt>page</tt> - ID str&aacute;nky nebo alias pro odkaz.</li>
+
+		<li><em>(voliteln&eacute;)</em> <tt>dir anchor (internal links)</tt> - Nov&aacute; volba pro intern&iacute; odkaz. Pokud je to použito, potom by měl b&yacute;t nastaven&yacute; <tt>anchorlink</tt>. </li> <!-- Russ - 25-04-2006 -->
+
+		<li><em>(voliteln&eacute;)</em> <tt>anchorlink</tt> - Nov&yacute; parametr pro intern&iacute; odkaz. Pokud je to použito, potom by měl b&yacute;t tak&eacute; nastaven <tt>dir =&quot;anchor&quot;</tt>. nen&iacute; třeba #, protože je to vkl&aacute;d&aacute;no automaticky.</li> <!-- Russ - 25-04-2006 -->
+
+		<li><em>(voliteln&eacute;)</em> <tt>urlparam</tt> - Specifikuje dodatečn&eacute; parametry URL.  <strong>Nepouž&iacute;vejte současně s parametrem <em>anchorlink</em></strong></em>
+
+		<li><em>(voliteln&eacute;)</em> <tt>tabindex =&quot;hodnota&quot;</tt> - Nastavit tabindex na hodnotu.</li> <!-- Russ - 22-06-2005 -->
+
+		<li><em>(voliteln&eacute;)</em> <tt>dir start/next/prev/up (předchoz&iacute;)</tt> - Vede na v&yacute;choz&iacute; str&aacute;nku nebo na dal&scaron;&iacute;, předchoz&iacute; nebo na rodičovskou str&aacute;nku (nahoru (up). Pokud je to použito, <tt>page</tt> by nemělo b&yacute;t nastaveno.</li> <!-- mbv - 21-06-2005 -->
+
+		<B>Pozn&aacute;mka!</B> Pouze jedno z předchoz&iacute;ho může b&yacute;t použito v jednom cms_selflink!!
+
+		<li><em>(voliteln&eacute;)</em> <tt>text</tt> - Text odkazu. Pokud nen&eacute;&iacute; zad&aacute;n, je použito jm&eacute;no str&aacute;nky.</li>
+
+		<li><em>(voliteln&eacute;)</em> <tt>menu 1/0</tt> - Zda m&aacute; b&yacute;t použit text menu v odkazu m&iacute;sto jm&eacute;na str&aacute;nky</li> <!-- mbv - 21-06-2005 -->
+
+		<li><em>(voliteln&eacute;)</em> <tt>target</tt> - Voliteln&yacute; c&iacute;l pro odkaz. Užitečn&eacute; pro framy nebo javascript.</li>
+
+		<li><em>(voliteln&eacute;)</em> <tt>class</tt> - Tř&iacute;da pro <a> tag. Užitečn&eacute; pro nastylov&aacute;n&iacute; odkazu.</li> <!-- mbv - 21-06-2005 -->
+
+		<li><em>(voliteln&eacute;)</em> <tt>lang</tt> - Zobrazovat popisky  (&quot;N&aacute;sleduj&iacute;c&iacute; str&aacute;nka&quot;/&quot;Předchoz&iacute; str&aacute;nka&quot;) v jin&eacute;m jazyce (0 pro pr&aacute;zdn&yacute; popisek.) D&aacute;nsky (dk), Anglicky (en) nebo Francouzsky (fr), zat&iacute;m.</li> <!-- mbv - 21-06-2005 -->
+
+		<li><em>(voliteln&eacute;)</em> <tt>id</tt> - Voliteln&eacute;  css_id pro <a> odkaz.</li> <!-- mbv - 29-06-2005 -->
+
+		<li><em>(voliteln&eacute;)</em> <tt>more</tt> - vlož&iacute; dodatečn&eacute; volby do  <a> odkazu.</li> <!-- mbv - 29-06-2005 -->
+
+		<li><em>(voliteln&eacute;)</em> <tt>label</tt> - Popisek pro použit&iacute; v odkazu, pokud je to aplikovateln&eacute;.</li>
+
+		<li><em>(voliteln&eacute;)</em> <tt>label_side left/right</tt> - Strana pro um&iacute;stěn&iacute; popisku odkazu (v&yacute;choz&iacute; je &quot;left&quot;).</li>
+
+		<li><em>(voliteln&eacute;)</em> <tt>title</tt> - Text titulku atributu.  Pokud nebude nastaven, použije se titulek str&aacute;nky.</li>
+
+		<li><em>(voliteln&eacute;l)</em> <tt>rellink 1/0</tt> - Vytvoř&iacute; relational link pro př&iacute;stupnou navigaci. Pracuje pouze s nastaven&yacute;m parametrem dir a je vložen do sekce head &scaron;ablony.</li>
+
+		<li><em>(voliteln&eacute;l)</em> <tt>href</tt> - Generuje pouze href parametr (ostatn&iacute; parametry nejsou možn&eacute;). <strong>Př&iacute;klad:</strong> <a href="{cms_selflink href="alias"}"><img src=&quot;&quot;></a></li>
+
+		<li><em>(voliteln&eacute;)</em> <tt>image</tt> - Adresa url obr&aacute;zku pro použit&iacute; v odkazu. <strong>Př&iacute;klad:</strong> {cms_selflink dir=&quot;next&quot; image=&quot;next.png&quot; text=&quot;Next&quot;}</li>
+
+		<li><em>(voliteln&eacute;)</em> <tt>alt</tt> - Alternativn&iacute; text pro použit&iacute; s obr&aacute;zkem (použije se alt=&quot;&quot; pokud tento parametr nen&iacute; zad&aacute;n).</li>
+
+		<li><em>(voliteln&eacute;)</em> <tt>imageonly</tt> - Pro potlačen&iacute; zobrazen&iacute; textov&yacute;ch odkazů při použit&iacute; obr&aacute;zků v odkazu. Pokud nechcete ž&aacute;dn&yacute; text v odkazech, nastavte lang=0 pro potlačen&iacute; popisku. <B>Př&iacute;klad:</B> {cms_selflink dir=&quot;next&quot; image=&quot;next.png&quot; text=&quot;Next&quot; imageonly=1}</li>
+
+		<li><em>(voliteln&eacute;)</em> <tt>ext</tt> - Pro extern&iacute; odkazy, vlož&iacute; add class=&quot;external&quot; a informativn&iacute; text. <strong>Varov&aacute;n&iacute;:</strong> Pouze parametry text, target a title jsou s t&iacute;m to parametrem kompatibiln&iacute;.</li>
+
+		<li><em>(voliteln&eacute;)</em> <tt>ext_info</tt> - Použ&iacute;v&aacute; se současně s &quot;ext&quot;, v&yacute;choz&iacute; je (external link)</li>
+
+		</ul>
+
 		</p>';
-$lang['admin']['about_function_cms_module'] = '	<p>Author: Ted Kulp<tedkulp@users.sf.net></p>
-	<p>Version: 1.0</p>
-	<p>
-	Change History:<br/>
-	None
+$lang['admin']['about_function_cms_module'] = '	<p>Author: Ted Kulp<tedkulp@users.sf.net></p>
+
+	<p>Version: 1.0</p>
+
+	<p>
+
+	Change History:<br/>
+
+	None
+
 	</p>';
-$lang['admin']['help_function_cms_module'] = '	<h3>Co to děl&aacute;?</h3>
-	<p>Tento tag se použ&iacute;v&aacute; pro vkl&aacute;d&aacute;n&iacute; modulů do &scaron;ablon a str&aacute;nek.  Když je modul vytvořen pro použit&iacute; jako tag modul (zkontrolujete jeho n&aacute;povědu pro detaily), může b&yacute;t vložen t&iacute;mto tagem.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Je to z&aacute;kladn&iacute; tag modul. Vlož&iacute;te ho do &scaron;ablony nebo str&aacute;nky n&aacute;sledovně: <code>{cms_module module=&quot;somemodulename&quot;}</code>
-	<h3>Jak&eacute; m&aacute; parametry?</h3>
-	<p>Je zde pouze jeden vyžadovan&yacute; parametr. Ostatn&iacute; parametry proch&aacute;zej&iacute; modulem.
-	<ul>
-		<li>module - Jm&eacute;no vkl&aacute;dan&eacute;ho modulu. Nen&iacute; to citliv&eacute; na na velikost p&iacute;smen.</li>
-	</ul>
+$lang['admin']['help_function_cms_module'] = '	<h3>Co to děl&aacute;?</h3>
+
+	<p>Tento tag se použ&iacute;v&aacute; pro vkl&aacute;d&aacute;n&iacute; modulů do &scaron;ablon a str&aacute;nek.  Když je modul vytvořen pro použit&iacute; jako tag modul (zkontrolujete jeho n&aacute;povědu pro detaily), může b&yacute;t vložen t&iacute;mto tagem.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Je to z&aacute;kladn&iacute; tag modul. Vlož&iacute;te ho do &scaron;ablony nebo str&aacute;nky n&aacute;sledovně: <code>{cms_module module=&quot;somemodulename&quot;}</code>
+
+	<h3>Jak&eacute; m&aacute; parametry?</h3>
+
+	<p>Je zde pouze jeden vyžadovan&yacute; parametr. Ostatn&iacute; parametry proch&aacute;zej&iacute; modulem.
+
+	<ul>
+
+		<li>module - Jm&eacute;no vkl&aacute;dan&eacute;ho modulu. Nen&iacute; to citliv&eacute; na na velikost p&iacute;smen.</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['about_function_breadcrumbs'] = '<p>Author: Marcus Deglos <<a href="mailto:md@zioncore.com">md@zioncore.com</a>></p>
-<p>Version: 1.7</p>
-<p>
-Change History:<br/>
-1.1 - Modified to use new content rewrite (wishy)<br />
-1.2 - Added parameters: delimiter, initial, and root (arl)<br />
-1.3 - Added parameter: classid (tdh / perl4ever)<br />
-1.4 - Added parameter currentclassid and fixed some bugs (arl)<br />
-1.5 - Modified to use new hierarchy manager<br />
-1.6 - Modified to skip any parents that are marked to be &quot;not shown in menu&quot; except for root<br />
-1.7 - Added root_url parameter (elijahlofgren)<br />
+$lang['admin']['about_function_breadcrumbs'] = '<p>Author: Marcus Deglos <<a href="mailto:md@zioncore.com">md@zioncore.com</a>></p>
+
+<p>Version: 1.7</p>
+
+<p>
+
+Change History:<br/>
+
+1.1 - Modified to use new content rewrite (wishy)<br />
+
+1.2 - Added parameters: delimiter, initial, and root (arl)<br />
+
+1.3 - Added parameter: classid (tdh / perl4ever)<br />
+
+1.4 - Added parameter currentclassid and fixed some bugs (arl)<br />
+
+1.5 - Modified to use new hierarchy manager<br />
+
+1.6 - Modified to skip any parents that are marked to be &quot;not shown in menu&quot; except for root<br />
+
+1.7 - Added root_url parameter (elijahlofgren)<br />
+
 </p>';
-$lang['admin']['help_function_breadcrumbs'] = '<h3>Co to děl&aacute;?</h3>
-<p>Vytiskne breadcrumb.</p>
-<h3>Jak se použ&iacute;v&aacute;?</h3>
-<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{breadcrumbs}</code></p>
-<h3>Jak&eacute; m&aacute; parametry?</h3>
-<p>
-<ul>
-<li><em>(voliteln&eacute;)</em> <tt>delimiter</tt> - Text pro oddělen&iacute; položek v seznamu (v&yacute;choz&iacute; je &quot;>>&quot;).</li>
-<li><em>(voliteln&eacute;)</em> <tt>initial</tt> - 1/0 Při nastaven&eacute; 1 zač&iacute;n&aacute; breadcrumbs oddělovačem (v&yacute;choz&iacute; je 0).</li>
-<li><em>(voliteln&eacute;)</em> <tt>root</tt> - Alias str&aacute;nky, kterou chcete vždy zobrazit jako prvn&iacute; str&aacute;nku v seznamu. Použ&iacute;v&aacute; se pro zobrazen&iacute; str&aacute;nky (např. &uacute;vodn&iacute; str&aacute;nky) jako kořen nad v&scaron;&iacute;m i když tomu tak nen&iacute;.</li>
-<li><em>(voliteln&eacute;)</em> <tt>root_url</tt> - Překlyje URL kořenov&eacute; str&aacute;nky. Užitečn&eacute; pro vytvořen&iacute; odkazu  &#039;/&#039; m&iacute;sto &#039;/home/&#039;. Vyžaduje, aby kořenov&aacute;nstr&aacute;nka byla nastavena jako v&yacute;choz&iacute;.</li>
-<li><em>(voliteln&eacute;)</em> <tt>classid</tt> - CSS tř&iacute;da pro nesoučasn&eacute; str&aacute;nky, např. prvn&iacute;ch n-1 str&aacute;nek v seznamu. Pokud je jm&eacute;no odkazem, je vloženo do <a href> tagu, jinak je vloženo do tagu <span>.</li>
-<li><em>(voliteln&eacute;)</em> <tt>currentclassid</tt> - CSS tř&iacute;da tagu <span> ohraničuj&iacute;c&iacute;ho jm&eacute;no současn&eacute; str&aacute;nky.</li>
-<li><em>(voliteln&eacute;)</em> <tt>starttext</tt> - Text zobrazovan&yacute; na zač&aacute;tku seznamu, něco jako &quot;Jste zde&quot;.</li>
-</ul>
+$lang['admin']['help_function_breadcrumbs'] = '<h3>Co to děl&aacute;?</h3>
+
+<p>Vytiskne breadcrumb.</p>
+
+<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+<p>Stač&iacute; vložit tag do &scaron;ablony/str&aacute;nky: <code>{breadcrumbs}</code></p>
+
+<h3>Jak&eacute; m&aacute; parametry?</h3>
+
+<p>
+
+<ul>
+
+<li><em>(voliteln&eacute;)</em> <tt>delimiter</tt> - Text pro oddělen&iacute; položek v seznamu (v&yacute;choz&iacute; je &quot;>>&quot;).</li>
+
+<li><em>(voliteln&eacute;)</em> <tt>initial</tt> - 1/0 Při nastaven&eacute; 1 zač&iacute;n&aacute; breadcrumbs oddělovačem (v&yacute;choz&iacute; je 0).</li>
+
+<li><em>(voliteln&eacute;)</em> <tt>root</tt> - Alias str&aacute;nky, kterou chcete vždy zobrazit jako prvn&iacute; str&aacute;nku v seznamu. Použ&iacute;v&aacute; se pro zobrazen&iacute; str&aacute;nky (např. &uacute;vodn&iacute; str&aacute;nky) jako kořen nad v&scaron;&iacute;m i když tomu tak nen&iacute;.</li>
+
+<li><em>(voliteln&eacute;)</em> <tt>root_url</tt> - Překlyje URL kořenov&eacute; str&aacute;nky. Užitečn&eacute; pro vytvořen&iacute; odkazu  &#039;/&#039; m&iacute;sto &#039;/home/&#039;. Vyžaduje, aby kořenov&aacute;nstr&aacute;nka byla nastavena jako v&yacute;choz&iacute;.</li>
+
+<li><em>(voliteln&eacute;)</em> <tt>classid</tt> - CSS tř&iacute;da pro nesoučasn&eacute; str&aacute;nky, např. prvn&iacute;ch n-1 str&aacute;nek v seznamu. Pokud je jm&eacute;no odkazem, je vloženo do <a href> tagu, jinak je vloženo do tagu <span>.</li>
+
+<li><em>(voliteln&eacute;)</em> <tt>currentclassid</tt> - CSS tř&iacute;da tagu <span> ohraničuj&iacute;c&iacute;ho jm&eacute;no současn&eacute; str&aacute;nky.</li>
+
+<li><em>(voliteln&eacute;)</em> <tt>starttext</tt> - Text zobrazovan&yacute; na zač&aacute;tku seznamu, něco jako &quot;Jste zde&quot;.</li>
+
+</ul>
+
 </p>';
-$lang['admin']['about_function_anchor'] = '	<p>Autor: Ted Kulp<tedkulp@users.sf.net></p>
-	<p>Verze: 1.1</p>
-	<p>
-	Historie změn:<br/>
-	<strong>Update to version 1.1 from 1.0</strong> <em>2006/07/19</em><br/>
-	Russ added the means to insert a title, a tabindex and a class for the anchor link. Westis added accesskey and changed parameter names to not include &#039;anchorlink&#039;.<br/>
-	</hr>
+$lang['admin']['about_function_anchor'] = '	<p>Autor: Ted Kulp<tedkulp@users.sf.net></p>
+
+	<p>Verze: 1.1</p>
+
+	<p>
+
+	Historie změn:<br/>
+
+	<strong>Update to version 1.1 from 1.0</strong> <em>2006/07/19</em><br/>
+
+	Russ added the means to insert a title, a tabindex and a class for the anchor link. Westis added accesskey and changed parameter names to not include &#039;anchorlink&#039;.<br/>
+
+	</hr>
+
 	</p>';
-$lang['admin']['help_function_anchor'] = '	<h3>Co děl&aacute; tato funkce?</h3>
-	<p>Vytv&aacute;ř&iacute; n&aacute;ležit&eacute; ukotven&eacute; odkazy.</p>
-	<h3>Jak ji použ&iacute;t?</h3>
-	<p>Pouze vložte tag do &scaron;ablony/str&aacute;nky: <code>{anchor anchor=&#039;here&#039; text=&#039;Posunout dolů&#039;}</code></p>
-	<h3>Jak&eacute; jsou parametry?</h3>
-	<p>
-	<ul>
-	<li><tt>anchor</tt> - Kam odkazujeme.  Č&aacute;st za #.</li>
-	<li><tt>text</tt> - Text k zobrazen&iacute; v odkazu.</li>
-	<li><tt>class</tt> - Tř&iacute;da pro odkaz, pokud je nějak&yacute;</li>
-	<li><tt>title</tt> - Titulek pro zobrazen&iacute; odkazu, pokud je nějak&yacute;.</li>
-	<li><tt>tabindex</tt> - Č&iacute;seln&yacute; tabindex odkazu, pokud je nějak&yacute;.</li>
-	<li><tt>accesskey</tt> - Př&iacute;stupov&aacute; kl&aacute;vesa odkazu, pokud je nějak&aacute;.</li>
-	<li><em>(voliteln&eacute;)</em> <tt>onlyhref</tt> - Zobrazit pouze href, ne cel&yacute; odkaz. Jin&eacute; volby nebudou fungovat</li>
-	</ul>
+$lang['admin']['help_function_anchor'] = '	<h3>Co děl&aacute; tato funkce?</h3>
+
+	<p>Vytv&aacute;ř&iacute; n&aacute;ležit&eacute; ukotven&eacute; odkazy.</p>
+
+	<h3>Jak ji použ&iacute;t?</h3>
+
+	<p>Pouze vložte tag do &scaron;ablony/str&aacute;nky: <code>{anchor anchor=&#039;here&#039; text=&#039;Posunout dolů&#039;}</code></p>
+
+	<h3>Jak&eacute; jsou parametry?</h3>
+
+	<p>
+
+	<ul>
+
+	<li><tt>anchor</tt> - Kam odkazujeme.  Č&aacute;st za #.</li>
+
+	<li><tt>text</tt> - Text k zobrazen&iacute; v odkazu.</li>
+
+	<li><tt>class</tt> - Tř&iacute;da pro odkaz, pokud je nějak&yacute;</li>
+
+	<li><tt>title</tt> - Titulek pro zobrazen&iacute; odkazu, pokud je nějak&yacute;.</li>
+
+	<li><tt>tabindex</tt> - Č&iacute;seln&yacute; tabindex odkazu, pokud je nějak&yacute;.</li>
+
+	<li><tt>accesskey</tt> - Př&iacute;stupov&aacute; kl&aacute;vesa odkazu, pokud je nějak&aacute;.</li>
+
+	<li><em>(voliteln&eacute;)</em> <tt>onlyhref</tt> - Zobrazit pouze href, ne cel&yacute; odkaz. Jin&eacute; volby nebudou fungovat</li>
+
+	</ul>
+
 	</p>';
-$lang['admin']['help_function_site_mapper'] = '<h3>Co děl&aacute; tato funkce?</h3>
-  <p>Toto je pouze obalovac&iacute; tag pro <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">modul Menu Manager</a> pro zjednodu&scaron;en&iacute; syntaxe a vytv&aacute;řen&iacute; mapy str&aacute;nek.</p>
-<h3>Jak ji použ&iacute;t?</h3>
-  <p>Vložte <code>{site_mapper}</code> do str&aacute;nky nebo &scaron;ablony. Pro n&aacute;povědu k modulu Menu Manager jděte na <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">N&aacute;pověda modulu Menu Manager</a>.</p>
-  <p>Pokud nen&iacute; vybr&aacute;na &scaron;ablona, je použit minimal_menu.tpl.</p>
+$lang['admin']['help_function_site_mapper'] = '<h3>Co děl&aacute; tato funkce?</h3>
+
+  <p>Toto je pouze obalovac&iacute; tag pro <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">modul Menu Manager</a> pro zjednodu&scaron;en&iacute; syntaxe a vytv&aacute;řen&iacute; mapy str&aacute;nek.</p>
+
+<h3>Jak ji použ&iacute;t?</h3>
+
+  <p>Vložte <code>{site_mapper}</code> do str&aacute;nky nebo &scaron;ablony. Pro n&aacute;povědu k modulu Menu Manager jděte na <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">N&aacute;pověda modulu Menu Manager</a>.</p>
+
+  <p>Pokud nen&iacute; vybr&aacute;na &scaron;ablona, je použit minimal_menu.tpl.</p>
+
   <p>Jak&eacute;koliv parametry použit&eacute; v tagu jsou dostupn&eacute; v &scaron;abloně menumanager <code>{$menuparams.paramname}</code></p>';
-$lang['admin']['help_function_redirect_url'] = '<h3>Co děl&aacute; tento modul?</h3>
-  <p>Tento modul povoluje jednoduch&eacute; přesměrov&aacute;n&iacute; na zadanou url.  Je to vhodn&eacute; např&iacute;klad uvnitř smarty podm&iacute;nkov&eacute; logiky (např&iacute;klad přesměrov&aacute;n&iacute; na &uacute;vodn&iacute; str&aacute;nku, pokud je&scaron;tě str&aacute;nky neexistuj&iacute;).</p>
-<h3>Jak ho použ&iacute;t?</h3>
+$lang['admin']['help_function_redirect_url'] = '<h3>Co děl&aacute; tento modul?</h3>
+
+  <p>Tento modul povoluje jednoduch&eacute; přesměrov&aacute;n&iacute; na zadanou url.  Je to vhodn&eacute; např&iacute;klad uvnitř smarty podm&iacute;nkov&eacute; logiky (např&iacute;klad přesměrov&aacute;n&iacute; na &uacute;vodn&iacute; str&aacute;nku, pokud je&scaron;tě str&aacute;nky neexistuj&iacute;).</p>
+
+<h3>Jak ho použ&iacute;t?</h3>
+
 <p>Pouze vložt tag do &scaron;ablony: <code>{redirect_url urle=&#039;www.cmsmadesimple.org&#039;}</code></p>';
-$lang['admin']['help_function_redirect_page'] = '<h3>Co děl&aacute; tento modul?</h3>
- <p>Tento mod povol&iacute; jednoduch&eacute; přesměrov&aacute;n&iacute; na jinou str&aacute;nku.  To je užitečn&eacute; uvnitř smarty podm&iacute;nkov&eacute; logiky (např&iacute;klad přesměrov&aacute;n&iacute; na přihla&scaron;ovac&iacute; str&aacute;nku pokud uživatel nen&iacute; přihl&aacute;&scaron;en.)</p>
-<h3>Jak ho použ&iacute;t?</h3>
+$lang['admin']['help_function_redirect_page'] = '<h3>Co děl&aacute; tento modul?</h3>
+
+ <p>Tento mod povol&iacute; jednoduch&eacute; přesměrov&aacute;n&iacute; na jinou str&aacute;nku.  To je užitečn&eacute; uvnitř smarty podm&iacute;nkov&eacute; logiky (např&iacute;klad přesměrov&aacute;n&iacute; na přihla&scaron;ovac&iacute; str&aacute;nku pokud uživatel nen&iacute; přihl&aacute;&scaron;en.)</p>
+
+<h3>Jak ho použ&iacute;t?</h3>
+
 <p>Pouze vložte do str&aacute;nky tento tag: <code>{redirect_page page=&#039;some-page-alias&#039;}</code></p>';
 $lang['admin']['of'] = 'z';
 $lang['admin']['first'] = 'Prvn&iacute;';
@@ -1573,292 +2329,531 @@ $lang['admin']['event_desc_contentpostcompile'] = 'Odesl&aacute;no po zpracov&aa
 $lang['admin']['event_desc_contentpostrender'] = 'Odesl&aacute;no před odesl&aacute;n&iacute;m kombinovan&eacute;ho html prohl&iacute;žeči';
 $lang['admin']['event_desc_smartyprecompile'] = 'Odesl&aacute;no před zpracov&aacute;n&iacute;m jak&eacute;hokoliv obsahu určen&eacute;ho pro smarty syst&eacute;m';
 $lang['admin']['event_desc_smartypostcompile'] = 'Odesl&aacute;no po zpracov&aacute;n&iacute; jak&eacute;hokoliv obsahu určen&eacute;ho pro smarty syst&eacute;m';
-$lang['admin']['event_help_loginpost'] = '<p>Odesl&aacute;na po přihl&aacute;&scaron;eni uživatele do administračn&iacute;ho panelu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
+$lang['admin']['event_help_loginpost'] = '<p>Odesl&aacute;na po přihl&aacute;&scaron;eni uživatele do administračn&iacute;ho panelu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
+
 </ul>';
-$lang['admin']['event_help_logoutpost'] = '<p>Odesl&aacute;na po odhl&aacute;&scaron;eni uživatele z administračn&iacute;ho panelu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
-</ul>
+$lang['admin']['event_help_logoutpost'] = '<p>Odesl&aacute;na po odhl&aacute;&scaron;eni uživatele z administračn&iacute;ho panelu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_adduserpre'] = '<p>Odesl&aacute;na před vytvořen&iacute;m nov&eacute;ho uživatele.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
-</ul>
+$lang['admin']['event_help_adduserpre'] = '<p>Odesl&aacute;na před vytvořen&iacute;m nov&eacute;ho uživatele.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_adduserpost'] = '<p>Odesl&aacute;na po vytvořen&iacute; nov&eacute;ho uživatele.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
-</ul>
+$lang['admin']['event_help_adduserpost'] = '<p>Odesl&aacute;na po vytvořen&iacute; nov&eacute;ho uživatele.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_edituserpre'] = '<p>Odesl&aacute;na před uložen&iacute;m změn vlastnost&iacute; uživatele.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
-</ul>
+$lang['admin']['event_help_edituserpre'] = '<p>Odesl&aacute;na před uložen&iacute;m změn vlastnost&iacute; uživatele.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_edituserpost'] = '<p>Odesl&aacute;na po uložen&iacute; změn vlastnost&iacute; uživatele.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
-</ul>
+$lang['admin']['event_help_edituserpost'] = '<p>Odesl&aacute;na po uložen&iacute; změn vlastnost&iacute; uživatele.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deleteuserpre'] = '<p>Odesl&aacute;na před vymaz&aacute;n&iacute;m uživatele ze syst&eacute;mu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
-</ul>
+$lang['admin']['event_help_deleteuserpre'] = '<p>Odesl&aacute;na před vymaz&aacute;n&iacute;m uživatele ze syst&eacute;mu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deleteuserpost'] = '<p>Odesl&aacute;na po vymaz&aacute;n&iacute; uživatele ze syst&eacute;mu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
-</ul>
+$lang['admin']['event_help_deleteuserpost'] = '<p>Odesl&aacute;na po vymaz&aacute;n&iacute; uživatele ze syst&eacute;mu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Odkaz na ovlivněn&yacute; uživatelsk&yacute; objekt.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addgrouppre'] = '<p>Odesl&aacute;na před vytvořen&iacute;m nov&eacute; skupiny.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;group&#039; - Odkaz na ovlivněn&yacute; objekt skupiny.</li>
-</ul>
+$lang['admin']['event_help_addgrouppre'] = '<p>Odesl&aacute;na před vytvořen&iacute;m nov&eacute; skupiny.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Odkaz na ovlivněn&yacute; objekt skupiny.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addgrouppost'] = '<p>Odesl&aacute;na po vytvořen&iacute; nov&eacute; skupiny.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;group&#039; - Odkaz na ovlivněn&yacute; objekt skupiny.</li>
-</ul>
+$lang['admin']['event_help_addgrouppost'] = '<p>Odesl&aacute;na po vytvořen&iacute; nov&eacute; skupiny.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Odkaz na ovlivněn&yacute; objekt skupiny.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_changegroupassignpre'] = '<p>Odesl&aacute;na před uložen&iacute;m přiřazen&iacute; skupiny.</p>
-<h4>Parametry></h4>
-<ul>
-<li>&#039;group&#039; - Odkaz na objekt skupiny.</li>
-<li>&#039;users&#039; - Pole odkazů na uživatelsk&eacute; objekty patř&iacute;c&iacute; do skupiny.</li>
+$lang['admin']['event_help_changegroupassignpre'] = '<p>Odesl&aacute;na před uložen&iacute;m přiřazen&iacute; skupiny.</p>
+
+<h4>Parametry></h4>
+
+<ul>
+
+<li>&#039;group&#039; - Odkaz na objekt skupiny.</li>
+
+<li>&#039;users&#039; - Pole odkazů na uživatelsk&eacute; objekty patř&iacute;c&iacute; do skupiny.</li>
+
 ';
-$lang['admin']['event_help_changegroupassignpost'] = '<p>Odesl&aacute;na po uložen&iacute; přiřazen&iacute; skupiny.</p>
-<h4>Parametry></h4>
-<ul>
-<li>&#039;group&#039; - Odkaz na ovlivněnou skupinu objektů.</li>
-<li>&#039;users&#039; - Pole odkazů na uživatelsk&eacute; objekty patř&iacute;c&iacute; do ovlivněn&eacute; skupiny.</li>
+$lang['admin']['event_help_changegroupassignpost'] = '<p>Odesl&aacute;na po uložen&iacute; přiřazen&iacute; skupiny.</p>
+
+<h4>Parametry></h4>
+
+<ul>
+
+<li>&#039;group&#039; - Odkaz na ovlivněnou skupinu objektů.</li>
+
+<li>&#039;users&#039; - Pole odkazů na uživatelsk&eacute; objekty patř&iacute;c&iacute; do ovlivněn&eacute; skupiny.</li>
+
 ';
-$lang['admin']['event_help_editgrouppre'] = '<p>Odesl&aacute;na před uložen&iacute;m změny vlastnost&iacute; skupiny.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;group&#039; - Odkaz na ovlivněn&yacute; objekt skupiny.</li>
-</ul>
+$lang['admin']['event_help_editgrouppre'] = '<p>Odesl&aacute;na před uložen&iacute;m změny vlastnost&iacute; skupiny.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Odkaz na ovlivněn&yacute; objekt skupiny.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editgrouppost'] = '<p>Odesl&aacute;na po uložen&iacute; změn vlastnost&iacute; skupiny.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;group&#039; - Odkaz na ovlivněn&yacute; objekt skupiny.</li>
-</ul>
+$lang['admin']['event_help_editgrouppost'] = '<p>Odesl&aacute;na po uložen&iacute; změn vlastnost&iacute; skupiny.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Odkaz na ovlivněn&yacute; objekt skupiny.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletegrouppre'] = '<p>Odesl&aacute;na před vymaz&aacute;n&iacute;m skupiny ze syst&eacute;mu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;group&#039; - Odkaz na ovlivněn&yacute; objekt skupiny.</li>
-</ul>
+$lang['admin']['event_help_deletegrouppre'] = '<p>Odesl&aacute;na před vymaz&aacute;n&iacute;m skupiny ze syst&eacute;mu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Odkaz na ovlivněn&yacute; objekt skupiny.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletegrouppost'] = '<p>Odesl&aacute;na po vymaz&aacute;n&iacute; skupiny ze syst&eacute;mu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;group&#039; - Odkaz na ovlivněn&yacute; objekt skupiny.</li>
-</ul>
+$lang['admin']['event_help_deletegrouppost'] = '<p>Odesl&aacute;na po vymaz&aacute;n&iacute; skupiny ze syst&eacute;mu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Odkaz na ovlivněn&yacute; objekt skupiny.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addstylesheetpre'] = '<p>Odesl&aacute;na před vytvořen&iacute;m nov&eacute;ho stylu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Odkaz na ovlivněn&yacute; objekt stylu.</li>
-</ul>
+$lang['admin']['event_help_addstylesheetpre'] = '<p>Odesl&aacute;na před vytvořen&iacute;m nov&eacute;ho stylu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Odkaz na ovlivněn&yacute; objekt stylu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addstylesheetpost'] = '<p>Odesl&aacute;na po vytvořen&iacute; nov&eacute;ho stylu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Odkaz na ovlivněn&yacute; objekt stylu.</li>
-</ul>
+$lang['admin']['event_help_addstylesheetpost'] = '<p>Odesl&aacute;na po vytvořen&iacute; nov&eacute;ho stylu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Odkaz na ovlivněn&yacute; objekt stylu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editstylesheetpre'] = '<p>Odesl&aacute;na před uložen&iacute;m změn stylu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Odkaz na ovlivněn&yacute; objekt stylu.</li>
-</ul>
+$lang['admin']['event_help_editstylesheetpre'] = '<p>Odesl&aacute;na před uložen&iacute;m změn stylu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Odkaz na ovlivněn&yacute; objekt stylu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editstylesheetpost'] = '<p>Odesl&aacute;na po uložen&iacute; změn stylu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Odkaz na ovlivněn&yacute; objekt stylu.</li>
-</ul>
+$lang['admin']['event_help_editstylesheetpost'] = '<p>Odesl&aacute;na po uložen&iacute; změn stylu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Odkaz na ovlivněn&yacute; objekt stylu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletestylesheetpre'] = '<p>Odesl&aacute;na před vymaz&aacute;n&iacute;m stylu ze syst&eacute;mu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Odkaz na ovlivněn&yacute; objekt stylu.</li>
-</ul>
+$lang['admin']['event_help_deletestylesheetpre'] = '<p>Odesl&aacute;na před vymaz&aacute;n&iacute;m stylu ze syst&eacute;mu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Odkaz na ovlivněn&yacute; objekt stylu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletestylesheetpost'] = '<p>Odesl&aacute;na po vymaz&aacute;n&iacute; stylu ze syst&eacute;mu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Odkaz na ovlivněn&yacute; objekt stylu.</li>
-</ul>
+$lang['admin']['event_help_deletestylesheetpost'] = '<p>Odesl&aacute;na po vymaz&aacute;n&iacute; stylu ze syst&eacute;mu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Odkaz na ovlivněn&yacute; objekt stylu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addtemplatepre'] = '<p>Odesl&aacute;na před vytvořen&iacute;m nov&eacute; &scaron;ablony.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; objekt &scaron;ablony.</li>
-</ul>
+$lang['admin']['event_help_addtemplatepre'] = '<p>Odesl&aacute;na před vytvořen&iacute;m nov&eacute; &scaron;ablony.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; objekt &scaron;ablony.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addtemplatepost'] = '<p>Odesl&aacute;na po vytvořen&iacute; nov&eacute; &scaron;ablony.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; objekt &scaron;ablony.</li>
-</ul>
+$lang['admin']['event_help_addtemplatepost'] = '<p>Odesl&aacute;na po vytvořen&iacute; nov&eacute; &scaron;ablony.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; objekt &scaron;ablony.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_edittemplatepre'] = '<p>Odesl&aacute;na před uložen&iacute;m změn v &scaron;abloně.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; objekt &scaron;ablony.</li>
-</ul>
+$lang['admin']['event_help_edittemplatepre'] = '<p>Odesl&aacute;na před uložen&iacute;m změn v &scaron;abloně.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; objekt &scaron;ablony.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_edittemplatepost'] = '<p>Odesl&aacute;na po uložen&iacute; změn v &scaron;abloně.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; objekt &scaron;ablony.</li>
-</ul>
+$lang['admin']['event_help_edittemplatepost'] = '<p>Odesl&aacute;na po uložen&iacute; změn v &scaron;abloně.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; objekt &scaron;ablony.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletetemplatepre'] = '<p>Odesl&aacute;na před vymaz&aacute;n&iacute;m &scaron;ablony ze syst&eacute;mu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; objekt &scaron;ablony.</li>
-</ul>
+$lang['admin']['event_help_deletetemplatepre'] = '<p>Odesl&aacute;na před vymaz&aacute;n&iacute;m &scaron;ablony ze syst&eacute;mu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; objekt &scaron;ablony.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deletetemplatepost'] = '<p>Odesl&aacute;na po vymaz&aacute;n&iacute; &scaron;ablony ze syst&eacute;mu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; objekt &scaron;ablony.</li>
-</ul>
+$lang['admin']['event_help_deletetemplatepost'] = '<p>Odesl&aacute;na po vymaz&aacute;n&iacute; &scaron;ablony ze syst&eacute;mu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; objekt &scaron;ablony.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_templateprecompile'] = '<p>Odesl&aacute;na před před&aacute;n&iacute;m &scaron;ablony ke zpracov&aacute;n&iacute; pomoc&iacute; Smarty.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; text &scaron;ablony.</li>
-</ul>
+$lang['admin']['event_help_templateprecompile'] = '<p>Odesl&aacute;na před před&aacute;n&iacute;m &scaron;ablony ke zpracov&aacute;n&iacute; pomoc&iacute; Smarty.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; text &scaron;ablony.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_templatepostcompile'] = '<p>Odesl&aacute;na po zpracov&aacute;n&iacute; &scaron;ablony pomoc&iacute; Smarty.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; text &scaron;ablony.</li>
-</ul>
+$lang['admin']['event_help_templatepostcompile'] = '<p>Odesl&aacute;na po zpracov&aacute;n&iacute; &scaron;ablony pomoc&iacute; Smarty.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Odkaz na ovlivněn&yacute; text &scaron;ablony.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addglobalcontentpre'] = '<p>Odesl&aacute;na před vytvořen&iacute;m nov&eacute;ho obsahov&eacute;ho bloku.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt obsahov&eacute;ho bloku.</li>
-</ul>
+$lang['admin']['event_help_addglobalcontentpre'] = '<p>Odesl&aacute;na před vytvořen&iacute;m nov&eacute;ho obsahov&eacute;ho bloku.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt obsahov&eacute;ho bloku.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_addglobalcontentpost'] = '<p>Odesl&aacute;na po vytvořen&iacute; nov&eacute;ho obsahov&eacute;ho bloku.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt obsahov&eacute;ho bloku.</li>
-</ul>
+$lang['admin']['event_help_addglobalcontentpost'] = '<p>Odesl&aacute;na po vytvořen&iacute; nov&eacute;ho obsahov&eacute;ho bloku.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt obsahov&eacute;ho bloku.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editglobalcontentpre'] = '<p>Odesl&aacute;na před uložen&iacute;m změn obsahov&eacute;ho bloku.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt obsahov&eacute;ho bloku.</li>
-</ul>
+$lang['admin']['event_help_editglobalcontentpre'] = '<p>Odesl&aacute;na před uložen&iacute;m změn obsahov&eacute;ho bloku.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt obsahov&eacute;ho bloku.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_editglobalcontentpost'] = '<p>Odesl&aacute;na před uložen&iacute;m změn obsahov&eacute;ho bloku.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt tobsahov&eacute;ho bloku.</li>
-</ul>
+$lang['admin']['event_help_editglobalcontentpost'] = '<p>Odesl&aacute;na před uložen&iacute;m změn obsahov&eacute;ho bloku.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt tobsahov&eacute;ho bloku.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deleteglobalcontentpre'] = '<p>Odesl&aacute;na před smaz&aacute;n&iacute;m obsahov&eacute;ho bloku ze syst&eacute;mu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt obsahov&eacute;ho bloku.</li>
-</ul>
+$lang['admin']['event_help_deleteglobalcontentpre'] = '<p>Odesl&aacute;na před smaz&aacute;n&iacute;m obsahov&eacute;ho bloku ze syst&eacute;mu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt obsahov&eacute;ho bloku.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_deleteglobalcontentpost'] = '<p>Odesl&aacute;na po smaz&aacute;n&iacute; obsahov&eacute;ho bloku ze syst&eacute;mu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt obsahov&eacute;ho bloku.</li>
-</ul>
+$lang['admin']['event_help_deleteglobalcontentpost'] = '<p>Odesl&aacute;na po smaz&aacute;n&iacute; obsahov&eacute;ho bloku ze syst&eacute;mu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt obsahov&eacute;ho bloku.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_globalcontentprecompile'] = '<p>Odesl&aacute;na před před&aacute;n&iacute;m obsahov&eacute;ho bloku ke zpracov&aacute;n&iacute; pomoc&iacute; Smarty.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; text obsahov&eacute;ho bloku.</li>
-</ul>
+$lang['admin']['event_help_globalcontentprecompile'] = '<p>Odesl&aacute;na před před&aacute;n&iacute;m obsahov&eacute;ho bloku ke zpracov&aacute;n&iacute; pomoc&iacute; Smarty.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; text obsahov&eacute;ho bloku.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_globalcontentpostcompile'] = '<p>Odesl&aacute;na po zpracov&aacute;n&iacute; obsahov&eacute;ho bloku pomoc&iacute; Smarty.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; text obsahov&eacute;ho bloku.</li>
-</ul>
+$lang['admin']['event_help_globalcontentpostcompile'] = '<p>Odesl&aacute;na po zpracov&aacute;n&iacute; obsahov&eacute;ho bloku pomoc&iacute; Smarty.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; text obsahov&eacute;ho bloku.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contenteditpre'] = '<p>Odesl&aacute;na před uložen&iacute;m změn obsahu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt obsahu.</li>
-</ul>
+$lang['admin']['event_help_contenteditpre'] = '<p>Odesl&aacute;na před uložen&iacute;m změn obsahu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Odkaz na ovlivněn&yacute; objekt obsahu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contenteditpost'] = '<p>Odesl&aacute;na po uložen&iacute; změn obsahu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; objekt obsahu.</li>
-</ul>
+$lang['admin']['event_help_contenteditpost'] = '<p>Odesl&aacute;na po uložen&iacute; změn obsahu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; objekt obsahu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentdeletepre'] = '<p>Odesl&aacute;na před vymaz&aacute;n&iacute;m obsahu ze syst&eacute;mu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; objekt obsahu.</li>
-</ul>
+$lang['admin']['event_help_contentdeletepre'] = '<p>Odesl&aacute;na před vymaz&aacute;n&iacute;m obsahu ze syst&eacute;mu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; objekt obsahu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentdeletepost'] = '<p>Odesl&aacute;na po vymaz&aacute;n&iacute; obsahu ze syst&eacute;mu.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; objekt obsahu.</li>
-</ul>
+$lang['admin']['event_help_contentdeletepost'] = '<p>Odesl&aacute;na po vymaz&aacute;n&iacute; obsahu ze syst&eacute;mu.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; objekt obsahu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentstylesheet'] = '<p>Odesl&aacute;na před před&aacute;n&iacute;m stylu prohl&iacute;žeči.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; text stylu.</li>
-</ul>
+$lang['admin']['event_help_contentstylesheet'] = '<p>Odesl&aacute;na před před&aacute;n&iacute;m stylu prohl&iacute;žeči.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; text stylu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentprecompile'] = '<p>Odesl&aacute;na před před&aacute;n&iacute;m obsahu ke zpracov&aacute;n&iacute; pomoc&iacute; Smarty.</p>
-<h4>Parametry/h4>
-<ul>
-<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; text obsahu.</li>
-</ul>
+$lang['admin']['event_help_contentprecompile'] = '<p>Odesl&aacute;na před před&aacute;n&iacute;m obsahu ke zpracov&aacute;n&iacute; pomoc&iacute; Smarty.</p>
+
+<h4>Parametry/h4>
+
+<ul>
+
+<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; text obsahu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentpostcompile'] = '<p>Odesl&aacute;na po zpracov&aacute;n&iacute; obsahu pomoc&iacute; Smarty.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; text obsahu.</li>
-</ul>
+$lang['admin']['event_help_contentpostcompile'] = '<p>Odesl&aacute;na po zpracov&aacute;n&iacute; obsahu pomoc&iacute; Smarty.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; text obsahu.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_contentpostrender'] = '<p>Odesl&aacute;na před před&aacute;n&iacute;m kombinovan&eacute;ho html prohl&iacute;žeči.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;content&#039; - Odkaz na html text.</li>
-</ul>
+$lang['admin']['event_help_contentpostrender'] = '<p>Odesl&aacute;na před před&aacute;n&iacute;m kombinovan&eacute;ho html prohl&iacute;žeči.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Odkaz na html text.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_smartyprecompile'] = '<p>Odesl&aacute;na před před&aacute;n&iacute;m jak&eacute;hokoliv obsahu ke zpracov&aacute;n&iacute; pomoc&iacute; Smarty.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; text.</li>
-</ul>
+$lang['admin']['event_help_smartyprecompile'] = '<p>Odesl&aacute;na před před&aacute;n&iacute;m jak&eacute;hokoliv obsahu ke zpracov&aacute;n&iacute; pomoc&iacute; Smarty.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; text.</li>
+
+</ul>
+
 ';
-$lang['admin']['event_help_smartypostcompile'] = '<p>Odesl&aacute;na po zpracov&aacute;n&iacute; jak&eacute;hokoliv obsahu pomoc&iacute; Smarty.</p>
-<h4>Parametry</h4>
-<ul>
-<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; text.</li>
-</ul>
+$lang['admin']['event_help_smartypostcompile'] = '<p>Odesl&aacute;na po zpracov&aacute;n&iacute; jak&eacute;hokoliv obsahu pomoc&iacute; Smarty.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Odkaz na ovlivněn&yacute; text.</li>
+
+</ul>
+
 ';
 $lang['admin']['filterbymodule'] = 'Tř&iacute;dit podle modulů';
 $lang['admin']['showall'] = 'Zobrazit v&scaron;e';
@@ -1888,9 +2883,12 @@ $lang['admin']['passwordchangedlogin'] = 'Heslo změněno. Přihla&scaron;te se 
 $lang['admin']['nopasswordforrecovery'] = 'Tento uživatel nem&aacute; nastavenou emailovou adresu. Obnova hesla nen&iacute; možn&aacute;. Kontaktujte pros&iacute;m administr&aacute;tora.';
 $lang['admin']['lostpw'] = 'Zapomněli jste sv&eacute; heslo?';
 $lang['admin']['lostpwemailsubject'] = '[%s] obnova hesla';
-$lang['admin']['lostpwemail'] = 'Byl V&aacute;m doručen tento email, protože bylo zaž&aacute;d&aacute;no o změnu (%s) hesla pro uživatelsk&yacute; &uacute;čet (%s).  Pokud chcete resetovat heslo k tomuto &uacute;čtu, klikněte na odkaz n&iacute;že nebo vložte toto do adresn&iacute;ho ř&aacute;dku Va&scaron;eho obl&iacute;ben&eacute;ho prohl&iacute;žeče:
-%s
-
+$lang['admin']['lostpwemail'] = 'Byl V&aacute;m doručen tento email, protože bylo zaž&aacute;d&aacute;no o změnu (%s) hesla pro uživatelsk&yacute; &uacute;čet (%s).  Pokud chcete resetovat heslo k tomuto &uacute;čtu, klikněte na odkaz n&iacute;že nebo vložte toto do adresn&iacute;ho ř&aacute;dku Va&scaron;eho obl&iacute;ben&eacute;ho prohl&iacute;žeče:
+
+%s
+
+
+
 Pokud se domn&iacute;v&aacute;te, že tento požadavek je nespr&aacute;vn&yacute; nebo vykon&aacute;n chybně, jednodu&scaron;e tento email ignorujte a nic nebude změněno.';
 $lang['admin']['qca'] = 'P0-390133276-1275213321958';
 $lang['admin']['utma'] = '156861353.71659362.1275223702.1283762759.1283772004.21';

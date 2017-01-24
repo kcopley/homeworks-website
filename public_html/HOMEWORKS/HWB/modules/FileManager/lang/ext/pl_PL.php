@@ -121,9 +121,12 @@ $lang['showhiddenfileshelp'] = 'Ta opcja działa tylko gdy Zaawansowane Zarządz
 $lang['showhiddenfiles'] = 'Pokaż ukryte pliki';
 $lang['settingsconfirmsingledelete'] = 'Potwierdzać kasowanie pojedyńczego pliku?';
 $lang['settingssaved'] = 'Ustawienia zapisane';
-$lang['help'] = '		<h3>Do czego to służy?</h3>
-		<p>TTen moduł posiada funkcje zarządzania plikami, ewentualnie i mamy nadzieję zastąpi raczej wiekowy wbudowany menadżer plik&oacute;w</p>
-		<h3>Jak się tego używa?</h3>
+$lang['help'] = '		<h3>Do czego to służy?</h3>
+
+		<p>TTen moduł posiada funkcje zarządzania plikami, ewentualnie i mamy nadzieję zastąpi raczej wiekowy wbudowany menadżer plik&oacute;w</p>
+
+		<h3>Jak się tego używa?</h3>
+
 		<p>Wybierz go z menu treści w administratorze. Dop&oacute;ki stary menadżer plik&oacute;w wciąż tam jest, powinieneś wybierać ten nowy z dolnej części menu.</p>';
 $lang['utma'] = '156861353.2359145497878676500.1213200278.1218754589.1218883974.83';
 $lang['utmz'] = '156861353.1218883974.83.14.utmccn=(referral)|utmcsr=forum.cmsmadesimple.org|utmcct=/index.php|utmcmd=referral';

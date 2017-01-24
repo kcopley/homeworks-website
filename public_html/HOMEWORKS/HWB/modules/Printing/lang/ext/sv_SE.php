@@ -51,25 +51,44 @@ $lang['help_class_img'] = 'Klass f&ouml;r &amp;lt;img&amp;gt;-taggen om showbutt
 $lang['help_more'] = 'L&auml;gg till ytterligare tillval i &amp;lt;a&amp;gt;-l&auml;nken';
 $lang['help_onlyurl'] = 'Ger bara en URL, inte hela l&auml;nken';
 $lang['help_includetemplate'] = 'If set to &#039;true&#039; this options makes the print/pdf process the whole template, not just the main content. This probably requires some work on print-specific styles with the mediatype &#039;print&#039; enabled.';
-$lang['help'] = '<b>Vad g&ouml;r den h&auml;r modulen?</b>
-<br/>
-Den h&auml;r modulen l&aring;ter dig l&auml;gga till en l&auml;nk p&aring; sidor/mallar som vidarebefordrar bes&ouml;karen till en version av sidan som &auml;r b&auml;ttre anpassad f&ouml;r utskrift. Flera parametrar kan st&auml;llas in s&aring; att l&auml;nken och den utskriftsv&auml;nliga sidan kan se ut precis som du vill. Fr&aring;n version 0.2.2 kan en parameter st&auml;llas in f&ouml;r att automatiskt skapa en PDF-fil ist&auml;llet.
-<br/>
-Tills vidare st&ouml;der modulen bara &quot;rena&quot; inneh&aring;llssidor, inte modul-omdirigeringar osv. Men det g&ouml;r inte heller den inbyggda utskriftsfunktionen i CMSMS.
-<br/>
-V&auml;nligen observera att modulen f&ouml;r n&auml;rvarande bara matar ut huvudinneh&aring;llet, inte &ouml;vriga inneh&aring;llsblock som &auml;r definierade i mallarna.
-
-<br/><br/>
-<b>Hur anv&auml;nder jag modulen?</b>
-<br/>
-Du installerar modulen, g&aring;r till administrationsgr&auml;nssnittet och kontrollerar/&auml;ndrar mallarna f&ouml;r l&auml;nken och f&ouml;r utskriftssidan.
-<br/>
-I sidans inneh&aring;ll eller i mallen l&auml;gger till till n&aring;got i stil med:
-<pre>
-{cms_module module=&#039;printing&#039; <i>parametrar</i>}
-</pre>
-och en l&auml;nk ska synas p&aring; dina sidor.
-<br/>
+$lang['help'] = '<b>Vad g&ouml;r den h&auml;r modulen?</b>
+
+<br/>
+
+Den h&auml;r modulen l&aring;ter dig l&auml;gga till en l&auml;nk p&aring; sidor/mallar som vidarebefordrar bes&ouml;karen till en version av sidan som &auml;r b&auml;ttre anpassad f&ouml;r utskrift. Flera parametrar kan st&auml;llas in s&aring; att l&auml;nken och den utskriftsv&auml;nliga sidan kan se ut precis som du vill. Fr&aring;n version 0.2.2 kan en parameter st&auml;llas in f&ouml;r att automatiskt skapa en PDF-fil ist&auml;llet.
+
+<br/>
+
+Tills vidare st&ouml;der modulen bara &quot;rena&quot; inneh&aring;llssidor, inte modul-omdirigeringar osv. Men det g&ouml;r inte heller den inbyggda utskriftsfunktionen i CMSMS.
+
+<br/>
+
+V&auml;nligen observera att modulen f&ouml;r n&auml;rvarande bara matar ut huvudinneh&aring;llet, inte &ouml;vriga inneh&aring;llsblock som &auml;r definierade i mallarna.
+
+
+
+<br/><br/>
+
+<b>Hur anv&auml;nder jag modulen?</b>
+
+<br/>
+
+Du installerar modulen, g&aring;r till administrationsgr&auml;nssnittet och kontrollerar/&auml;ndrar mallarna f&ouml;r l&auml;nken och f&ouml;r utskriftssidan.
+
+<br/>
+
+I sidans inneh&aring;ll eller i mallen l&auml;gger till till n&aring;got i stil med:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>parametrar</i>}
+
+</pre>
+
+och en l&auml;nk ska synas p&aring; dina sidor.
+
+<br/>
+
 ';
 $lang['utma'] = '156861353.622613290.1282068801.1286133816.1286141542.24';
 $lang['utmz'] = '156861353.1284652314.14.4.utmcsr=feedburner|utmccn=Feed: cmsmadesimple/blog (CMS Made Simple)|utmcmd=feed';

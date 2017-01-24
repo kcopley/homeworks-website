@@ -83,7 +83,8 @@ $lang['template'] = 'Szablon';
 $lang['prompt_name'] = 'Nazwa';
 $lang['prompt_default'] = 'Domyślny';
 $lang['prompt_newtemplate'] = 'Utw&oacute;rz nowy szablon';
-$lang['help_pagelimit'] = 'Maksymalna liczba artykuł&oacute;w do wyświetlenia (na stronę)<br />
+$lang['help_pagelimit'] = 'Maksymalna liczba artykuł&oacute;w do wyświetlenia (na stronę)<br />
+
 If this parameter is not supplied all matching items will be displayed.  If it is, and there are more items available than specified in the pararamter, text and links will be supplied to allow scrolling through the results';
 $lang['prompt_page'] = 'Strona';
 $lang['firstpage'] = '<<';
@@ -173,66 +174,116 @@ $lang['useexpiration'] = 'Użyj daty wygaśnięcia';
 $lang['showautodiscovery'] = 'Pokaż link zasilania Auto-Discovery';
 $lang['autodiscoverylink'] = 'URL zasilania Auto-Discovery (zostaw puste dla domyślnego)';
 $lang['eventdesc-NewsArticleAdded'] = 'Wyślij, gdy dodano artykuł.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-<li>\&quot;category_id\&quot; - Id of the category for this article</li>
-<li>\&quot;title\&quot; - Title of the article</li>
-<li>\&quot;content\&quot; - Content of the article</li>
-<li>\&quot;summary\&quot; - Summary of the article</li>
-<li>\&quot;status\&quot; - Status of the article (\&quot;draft\&quot; or \&quot;publish\&quot;)</li>
-<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
-<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
-<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+<li>\&quot;category_id\&quot; - Id of the category for this article</li>
+
+<li>\&quot;title\&quot; - Title of the article</li>
+
+<li>\&quot;content\&quot; - Content of the article</li>
+
+<li>\&quot;summary\&quot; - Summary of the article</li>
+
+<li>\&quot;status\&quot; - Status of the article (\&quot;draft\&quot; or \&quot;publish\&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
+
+<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
+
+<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Wyślij, gdy zmieniono artykuł.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-<li>\&quot;category_id\&quot; - Id of the category for this article</li>
-<li>\&quot;title\&quot; - Title of the article</li>
-<li>\&quot;content\&quot; - Content of the article</li>
-<li>\&quot;summary\&quot; - Summary of the article</li>
-<li>\&quot;status\&quot; - Status of the article (\&quot;draft\&quot; or \&quot;publish\&quot;)</li>
-<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
-<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
-<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+<li>\&quot;category_id\&quot; - Id of the category for this article</li>
+
+<li>\&quot;title\&quot; - Title of the article</li>
+
+<li>\&quot;content\&quot; - Content of the article</li>
+
+<li>\&quot;summary\&quot; - Summary of the article</li>
+
+<li>\&quot;status\&quot; - Status of the article (\&quot;draft\&quot; or \&quot;publish\&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
+
+<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
+
+<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Wyślij, gdy usunięto artykuł.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Wyślij, gdy dodano kategorię.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news category</li>
-<li>\&quot;name\&quot; - Name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news category</li>
+
+<li>\&quot;name\&quot; - Name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Wyślij, gdy zmieniono kategorię.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news category</li>
-<li>\&quot;name\&quot; - Name of the news category</li>
-<li>\&quot;origname\&quot; - The original name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news category</li>
+
+<li>\&quot;name\&quot; - Name of the news category</li>
+
+<li>\&quot;origname\&quot; - The original name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Wyślij, gdy usunięto kategorię.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the deleted category </li>
-<li>\&quot;name\&quot; - Name of the deleted category</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the deleted category </li>
+
+<li>\&quot;name\&quot; - Name of the deleted category</li>
+
+</ul>
+
 ';
 $lang['helpnumber'] = 'Maksymalna ilość element&oacute;w do wyświetlenia =- pozostawienie pustego spowoduje wyświetlenie wszystkich element&oacute;w';
 $lang['helpstart'] = 'Rozpocznij od n-tego elementu -- pozostawienie pustego spowoduje rozpoczęcie od pierwszego.';
@@ -249,24 +300,42 @@ $lang['helpdetailpage'] = 'Strona, na kt&oacute;rej będą widoczne szczeg&oacut
 $lang['helpshowarchive'] = 'Pokaż tylko aktualności, kt&oacute;re wygasły.';
 $lang['helpbrowsecat'] = 'Pokazuje i umożliwia przeglądanie listy kategorii.';
 $lang['helpaction'] = 'Override the default action.  Possible values are &#039;default&#039; to display the summary view, and &#039;fesubmit&#039; to display the frontend form for allowing users to submit news articles on the front end.';
-$lang['help'] = '	<h3>Do czego to służy?</h3>
-	<p>News jest modułem do wyświetlania aktualności na Twojej stronie. Podobnie jak blog, tylko że posiada więcej funkcji. Jeśli moduł News jest zainstalowany, strona administracji News jest dodana do menu administracyjnego i pozwala Ci wybrać lub dodać kategorię aktualności. Jeśli kategoria aktualności zostanie stworzona lub wybrana, zostanie wyświetlona lista aktualności dla danej kategorii. W tym miejscu możesz dodawać, edytować i usuwać aktualności z wybranej kategorii.</p>
-	<h3>Bezpieczeństwo</h3>
-	<p>Użytkownik musi należeć do grupy z uprawnieniami do modyfikacji aktualności aby dodawać, edytować lub usuwać wpisy aktualności.</p>
-	<h3>Jak się tego używa?</h3>
-	<p>Najprostszą drogą jest użycie w połączeniu ze znacznikiem cms_module. To pozwala na wstawienie modułu w szablon lub lub stronę tam gdzie chcesz i wyświetla elementy news. Kod powinien wyglądać mniej więcej tak: <code>{cms_module module=\&quot;news\&quot; number=\&quot;5\&quot; category=\&quot;beer\&quot;}</code></p>
-	<h3>Jakie przyjmuje parametry?</h3>
-	<p>
-	<ul>
-	<li><em>(opcjonalny)</em> number=\&quot;5\&quot; - Maksymalna ilość element&oacute;w do wyświetlenia - pozostawienie pustego parametru wyświetla wszystkie</li>
-	<li><em>(opcjonalny)</em> makerssbutton=\&quot;true\&quot; - Stworzenie przycisku do kanału RSS element&oacute;w news.</li>
-	<li><em>(opcjonalny)</em> category=\&quot;category\&quot; - Wyświetla tylko elementy dla wybranej kategorii i podrzędnych. Pozostawienie pustego wyświetli wszystkie kategorie.</li>
-	<li><em>(opcjonalny)</em> moretext=\&quot;more...\&quot; - Tekst do wyświetlenia na końcu elementu news, jeśli jego długość wykroczy ponad długość podsumowania. Domyślnie \&quot;more...\&quot;.</li>
-	<li><em>(opcjonalny}</em> summarytemplate=\&quot;sometemplate.tpl\&quot; - Użycie oddzielnego szablonu do wyświetlania podsumowania artykułu. Szablon zostanie umieszczony w katalogu modules/News/templates.
-	<li><em>(opcjonalny}</em> detailtemplate=\&quot;sometemplate.tpl\&quot; - Użycie oddzielnego szablonu do wyświetlania szczeg&oacute;ł&oacute;w artykułu. Szablon zostanie umieszczony w katalogu modules/News/templates.
-	<li><em>(opcjonalny)</em> sortby=\&quot;news_date\&quot; - Pole po kt&oacute;rym nastąpi sortowanie. Możliwe opcje to: \&quot;news_date\&quot;, \&quot;summary\&quot;, \&quot;news_data\&quot;, \&quot;news_category\&quot;, \&quot;news_title\&quot;.  Domyślnie \&quot;news_date\&quot;.</li>
-	<li><em>(opcjonalny)</em> sortasc=\&quot;true\&quot; - Sortowanie element&oacute;w aktualności w porządku rosnącym zamiast malejącym.</li>
-	</ul>
+$lang['help'] = '	<h3>Do czego to służy?</h3>
+
+	<p>News jest modułem do wyświetlania aktualności na Twojej stronie. Podobnie jak blog, tylko że posiada więcej funkcji. Jeśli moduł News jest zainstalowany, strona administracji News jest dodana do menu administracyjnego i pozwala Ci wybrać lub dodać kategorię aktualności. Jeśli kategoria aktualności zostanie stworzona lub wybrana, zostanie wyświetlona lista aktualności dla danej kategorii. W tym miejscu możesz dodawać, edytować i usuwać aktualności z wybranej kategorii.</p>
+
+	<h3>Bezpieczeństwo</h3>
+
+	<p>Użytkownik musi należeć do grupy z uprawnieniami do modyfikacji aktualności aby dodawać, edytować lub usuwać wpisy aktualności.</p>
+
+	<h3>Jak się tego używa?</h3>
+
+	<p>Najprostszą drogą jest użycie w połączeniu ze znacznikiem cms_module. To pozwala na wstawienie modułu w szablon lub lub stronę tam gdzie chcesz i wyświetla elementy news. Kod powinien wyglądać mniej więcej tak: <code>{cms_module module=\&quot;news\&quot; number=\&quot;5\&quot; category=\&quot;beer\&quot;}</code></p>
+
+	<h3>Jakie przyjmuje parametry?</h3>
+
+	<p>
+
+	<ul>
+
+	<li><em>(opcjonalny)</em> number=\&quot;5\&quot; - Maksymalna ilość element&oacute;w do wyświetlenia - pozostawienie pustego parametru wyświetla wszystkie</li>
+
+	<li><em>(opcjonalny)</em> makerssbutton=\&quot;true\&quot; - Stworzenie przycisku do kanału RSS element&oacute;w news.</li>
+
+	<li><em>(opcjonalny)</em> category=\&quot;category\&quot; - Wyświetla tylko elementy dla wybranej kategorii i podrzędnych. Pozostawienie pustego wyświetli wszystkie kategorie.</li>
+
+	<li><em>(opcjonalny)</em> moretext=\&quot;more...\&quot; - Tekst do wyświetlenia na końcu elementu news, jeśli jego długość wykroczy ponad długość podsumowania. Domyślnie \&quot;more...\&quot;.</li>
+
+	<li><em>(opcjonalny}</em> summarytemplate=\&quot;sometemplate.tpl\&quot; - Użycie oddzielnego szablonu do wyświetlania podsumowania artykułu. Szablon zostanie umieszczony w katalogu modules/News/templates.
+
+	<li><em>(opcjonalny}</em> detailtemplate=\&quot;sometemplate.tpl\&quot; - Użycie oddzielnego szablonu do wyświetlania szczeg&oacute;ł&oacute;w artykułu. Szablon zostanie umieszczony w katalogu modules/News/templates.
+
+	<li><em>(opcjonalny)</em> sortby=\&quot;news_date\&quot; - Pole po kt&oacute;rym nastąpi sortowanie. Możliwe opcje to: \&quot;news_date\&quot;, \&quot;summary\&quot;, \&quot;news_data\&quot;, \&quot;news_category\&quot;, \&quot;news_title\&quot;.  Domyślnie \&quot;news_date\&quot;.</li>
+
+	<li><em>(opcjonalny)</em> sortasc=\&quot;true\&quot; - Sortowanie element&oacute;w aktualności w porządku rosnącym zamiast malejącym.</li>
+
+	</ul>
+
 	</p>';
 $lang['utma'] = '156861353.1882434963962363600.1229976343.1231325641.1232240799.4';
 $lang['utmz'] = '156861353.1232240799.4.3.utmcsr=forum.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php';

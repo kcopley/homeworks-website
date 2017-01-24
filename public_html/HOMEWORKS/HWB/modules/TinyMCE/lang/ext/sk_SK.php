@@ -72,7 +72,8 @@ $lang['datetimeformat_help'] = 'Kliknite pre ďal&scaron;ie inform&aacute;cie k 
 $lang['extraconfigtext'] = 'Extra nastavenia';
 $lang['extraconfighelp2'] = 'One statement per line, commas will be added before and after this content. Check TinyMCE-wiki for instructions.';
 $lang['customdropdowntext'] = 'Vlastn&yacute; dropdown';
-$lang['customdropdownhelp'] = 'Inserts customizable snippets of code/text by selection in a dropdown menu. 
+$lang['customdropdownhelp'] = 'Inserts customizable snippets of code/text by selection in a dropdown menu. 
+
 Obvious uses are easy access to tag&#039;s etc. The menu is inserted into toolbar using &#039;customdropdown&#039;.';
 $lang['startenabledtext'] = 'Po spusten&iacute;';
 $lang['startenabledhelp'] = 'Unchecking this starts up Tiny-editors in a disabled state. Should be used together with the toggle button.';
@@ -155,9 +156,12 @@ $lang['thousanddelimiter'] = ',';
 $lang['size'] = 'Veľkosť';
 $lang['dimensions'] = 'V&yacute;&scaron;kaxdĺžka';
 $lang['advanced_tab'] = 'Pokročil&eacute;';
-$lang['help'] = '	<h3>Čo rob&iacute; tento modul?</h3>
-	<p>Umožňuje použ&iacute;vať TinyMCE WYSIWYG editor na &uacute;pravu obsahu.</p>
-	<h3>Ako sa použ&iacute;va?</h3>
+$lang['help'] = '	<h3>Čo rob&iacute; tento modul?</h3>
+
+	<p>Umožňuje použ&iacute;vať TinyMCE WYSIWYG editor na &uacute;pravu obsahu.</p>
+
+	<h3>Ako sa použ&iacute;va?</h3>
+
 	<p>Nain&scaron;talovať, potom &iacute;sť do Uživateľsk&yacute;ch nastaven&iacute; a zvoliť TinyMCE ako V&aacute;&scaron; wysiwyg editor.</p>';
 $lang['utmc'] = '156861353';
 $lang['utma'] = '156861353.1423109725.1280259016.1283375824.1283463956.27';

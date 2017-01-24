@@ -28,7 +28,7 @@ Change Log
 28/Mar/2005: 1.0.1
 	* Gracefully handle the case when there is no container id.
 21/Dec/2005: 1.0.2
-	* Patch from Imobach González Sosa to allow for multiple tab containers
+	* Patch from Imobach Gonzï¿½lez Sosa to allow for multiple tab containers
 17/Jan/2006: 1.0.3
 	* Fixed version number at top of file
 	* Added this Change Log

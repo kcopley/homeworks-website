@@ -40,7 +40,8 @@ switch ($params["selectedaction"]) {
 					//$errors.=$filename;
 					$fullname=$this->Slash($params["path"],$filename);
 					$fullname=$this->Slash($config["root_path"],$fullname);
-					//$errors.=$fullname."<br/>";
+					//$errors.=$fullname."<br/>";
+
 						
 					if (@unlink($fullname)) $messages.="<span class='fm-messages'>".$filename." ".$this->Lang("filedeletesuccess")."</span>";
 					else $errors.="<span class='fm-messages'>".$filename." ".$this->Lang("filedeletefail")."</span>";
@@ -104,7 +105,8 @@ switch ($params["selectedaction"]) {
 					$newpathfullname = $this->Slash($params["targetdir"],$filename);
 					$newpathfullname=$this->Slash($config["root_path"],$newpathfullname);
 					//$newpathfullname=str_replace('//','/',$newpathfullname);
-					//echo $fullname." - ".$newpathfullname;die();
+					//echo $fullname." - ".$newpathfullname;die();
+
 						
 					if ($params["selectedaction"]=="moveselected") {
 						if(@rename($fullname,$newpathfullname)) {

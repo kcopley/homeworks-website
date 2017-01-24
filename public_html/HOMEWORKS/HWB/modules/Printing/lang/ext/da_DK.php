@@ -51,27 +51,48 @@ $lang['help_class_img'] = 'CSS-klassen <img>-tagged skal have hvis showbutton er
 $lang['help_more'] = 'Inds&aelig;tter flere ting i <a> linket';
 $lang['help_onlyurl'] = 'Returnerer kun adressen, ikke det komplette link';
 $lang['help_includetemplate'] = 'Hvis denne s&aelig;ttes til &#039;true&#039; vil print/pdf medtage hele skabelonen, ikke bare det prim&aelig;re indhold. Dette vil sandsynligvis kr&aelig;ve nogle print-specifikke styles som har medietypen &#039;print&#039; sl&aring;et til.';
-$lang['help'] = '<b>Hvad g&oslash;r dette modul?</b>
-Dette modul giver dig mulighed for at inds&aelig;tte et link i dine sider/skabeloner som leder til en version af siden bedre egnet til udskrivning. Det kan ogs&aring; link&#039;e til en pdf-version af siden.
-<br/>
-Bem&aelig;rk at med mindre parametret <i>includetemplate=true</i> benyttes vil kun hoved-indholdet af siden vises.
-
-<br/>
-<b>Hvordan bruges dette modul?</b>
-<br/>
-Du kan ops&aelig;tte moduler gennem administrationen og definere skabeloner til de udskriftsvenlige sider og/eller PDF-genereringen.
-<br/>
-I din side/skabelon inds&aelig;ttes s&aring; nogen i stil med:
-<pre>
-{cms_module module=&#039;printing&#039; <i>params</i>}
-</pre>
-eller simpelthen
-<pre>
-{print <i>params</i>}
-</pre>
-using the print plugin.
-
-
+$lang['help'] = '<b>Hvad g&oslash;r dette modul?</b>
+
+Dette modul giver dig mulighed for at inds&aelig;tte et link i dine sider/skabeloner som leder til en version af siden bedre egnet til udskrivning. Det kan ogs&aring; link&#039;e til en pdf-version af siden.
+
+<br/>
+
+Bem&aelig;rk at med mindre parametret <i>includetemplate=true</i> benyttes vil kun hoved-indholdet af siden vises.
+
+
+
+<br/>
+
+<b>Hvordan bruges dette modul?</b>
+
+<br/>
+
+Du kan ops&aelig;tte moduler gennem administrationen og definere skabeloner til de udskriftsvenlige sider og/eller PDF-genereringen.
+
+<br/>
+
+I din side/skabelon inds&aelig;ttes s&aring; nogen i stil med:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>params</i>}
+
+</pre>
+
+eller simpelthen
+
+<pre>
+
+{print <i>params</i>}
+
+</pre>
+
+using the print plugin.
+
+
+
+
+
 ';
 $lang['utma'] = '156861353.2039886585.1231713618.1243589099.1243841032.38';
 $lang['utmz'] = '156861353.1242780463.35.8.utmcsr=forum.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php/board,9.0.html';

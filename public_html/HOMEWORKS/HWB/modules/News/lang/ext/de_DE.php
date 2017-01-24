@@ -176,60 +176,104 @@ $lang['options'] = 'Optionen';
 $lang['optionsupdated'] = 'Die Einstellungen wurden gespeichert.';
 $lang['useexpiration'] = 'Zeitsteuerung aktivieren';
 $lang['eventdesc-NewsArticleAdded'] = 'Ausf&uuml;hren, wenn ein Artikel hinzugef&uuml;gt wurde.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Ausf&uuml;hren, wenn ein Artikel hinzugef&uuml;gt wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&quot;news_id&quot; - ID des News-Artikels</li>
-<li>&quot;category_id&quot; - ID der Kategorie f&uuml;r diesen Artikel</li>
-<li>&quot;title&quot; - Titel des Artikels</li>
-<li>&quot;content&quot; - Inhalt des Artikels</li>
-<li>&quot;summary&quot; - Zusammenfassung des Artikels</li>
-<li>&quot;status&quot; - Status des Artikels (&bdquo;Entwurf/draft&ldquo; oder &bdquo;Ver&ouml;ffentlicht/publish&ldquo;)</li>
-<li>&quot;start_time&quot; - Datum, ab dem der Artikel angezeigt werden soll</li>
-<li>&quot;end_time&quot; - Datum, ab dem der Artikel nicht mehr angezeigt werden soll</li>
-<li>&quot;useexp&quot; - die Zeitsteuerung soll ignoriert werden oder auch nicht</li>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Ausf&uuml;hren, wenn ein Artikel hinzugef&uuml;gt wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&quot;news_id&quot; - ID des News-Artikels</li>
+
+<li>&quot;category_id&quot; - ID der Kategorie f&uuml;r diesen Artikel</li>
+
+<li>&quot;title&quot; - Titel des Artikels</li>
+
+<li>&quot;content&quot; - Inhalt des Artikels</li>
+
+<li>&quot;summary&quot; - Zusammenfassung des Artikels</li>
+
+<li>&quot;status&quot; - Status des Artikels (&bdquo;Entwurf/draft&ldquo; oder &bdquo;Ver&ouml;ffentlicht/publish&ldquo;)</li>
+
+<li>&quot;start_time&quot; - Datum, ab dem der Artikel angezeigt werden soll</li>
+
+<li>&quot;end_time&quot; - Datum, ab dem der Artikel nicht mehr angezeigt werden soll</li>
+
+<li>&quot;useexp&quot; - die Zeitsteuerung soll ignoriert werden oder auch nicht</li>
+
 </ul>';
 $lang['eventdesc-NewsArticleEdited'] = 'Ausf&uuml;hren, wenn ein Artikel bearbeitet wurde.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Ausf&uuml;hren, wenn ein Artikel bearbeitet wurde.</p>
-<h4>Parameter</h4>
-<ul>
- <li>&quot;news_id&quot; - ID des News-Artikels</li>
-<li>&quot;category_id&quot; - ID der Kategorie f&uuml;r diesen Artikel</li>
-<li>&quot;title&quot; - Titel des Artikels</li>
-<li>&quot;content&quot; - Inhalt des Artikels</li>
-<li>&quot;summary&quot; - Zusammenfassung des Artikels</li>
-<li>&quot;status&quot; - Status des Artikels (&bdquo;Entwurf/draft&ldquo; oder &bdquo;Ver&ouml;ffentlicht/publish&ldquo;)</li>
-<li>&quot;start_time&quot; - Datum, ab dem der Artikel angezeigt werden soll</li>
-<li>&quot;end_time&quot; - Datum, ab dem der Artikel nicht mehr angezeigt werden soll</li>
-<li>&quot;useexp&quot; - die Zeitsteuerung soll ignoriert werden oder auch nicht</li>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Ausf&uuml;hren, wenn ein Artikel bearbeitet wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+ <li>&quot;news_id&quot; - ID des News-Artikels</li>
+
+<li>&quot;category_id&quot; - ID der Kategorie f&uuml;r diesen Artikel</li>
+
+<li>&quot;title&quot; - Titel des Artikels</li>
+
+<li>&quot;content&quot; - Inhalt des Artikels</li>
+
+<li>&quot;summary&quot; - Zusammenfassung des Artikels</li>
+
+<li>&quot;status&quot; - Status des Artikels (&bdquo;Entwurf/draft&ldquo; oder &bdquo;Ver&ouml;ffentlicht/publish&ldquo;)</li>
+
+<li>&quot;start_time&quot; - Datum, ab dem der Artikel angezeigt werden soll</li>
+
+<li>&quot;end_time&quot; - Datum, ab dem der Artikel nicht mehr angezeigt werden soll</li>
+
+<li>&quot;useexp&quot; - die Zeitsteuerung soll ignoriert werden oder auch nicht</li>
+
 </ul>';
 $lang['eventdesc-NewsArticleDeleted'] = 'Ausf&uuml;hren, wenn ein Artikel gel&ouml;scht wurde.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Ausf&uuml;hren, wenn ein Artikel gel&ouml;scht wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&quot;news_id&quot; - ID des News-Artikels</li>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Ausf&uuml;hren, wenn ein Artikel gel&ouml;scht wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&quot;news_id&quot; - ID des News-Artikels</li>
+
 </ul>';
 $lang['eventdesc-NewsCategoryAdded'] = 'Ausf&uuml;hren, wenn eine Kategorie hinzugef&uuml;gt wurde.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Ausf&uuml;hren, wenn eine Kategorie hinzugef&uuml;gt wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&quot;category_id&quot; - ID der News-Kategorie</li>
-<li>&quot;name&quot; - Name der News-Kategorie</li>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Ausf&uuml;hren, wenn eine Kategorie hinzugef&uuml;gt wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&quot;category_id&quot; - ID der News-Kategorie</li>
+
+<li>&quot;name&quot; - Name der News-Kategorie</li>
+
 </ul>';
 $lang['eventdesc-NewsCategoryEdited'] = 'Ausf&uuml;hren, wenn eine Kategorie bearbeitet wurde.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Ausf&uuml;hren, wenn eine Kategorie bearbeitet wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&quot;category_id&quot; - ID der News-Kategorie</li>
-<li>&quot;name&quot; - Name der News-Kategorie</li>
-<li>&quot;origname&quot; - urspr&uuml;nglicher Name der News-Kategorie</li>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Ausf&uuml;hren, wenn eine Kategorie bearbeitet wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&quot;category_id&quot; - ID der News-Kategorie</li>
+
+<li>&quot;name&quot; - Name der News-Kategorie</li>
+
+<li>&quot;origname&quot; - urspr&uuml;nglicher Name der News-Kategorie</li>
+
 </ul>';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Ausf&uuml;hren, wenn eine Kategorie gel&ouml;scht wurde.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Ausf&uuml;hren, wenn eine Kategorie gel&ouml;scht wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&quot;category_id&quot; - ID der gel&ouml;schten News-Kategorie</li>
-<li>&quot;name&quot; - Name der gel&ouml;schten News-Kategorie</li>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Ausf&uuml;hren, wenn eine Kategorie gel&ouml;scht wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&quot;category_id&quot; - ID der gel&ouml;schten News-Kategorie</li>
+
+<li>&quot;name&quot; - Name der gel&ouml;schten News-Kategorie</li>
+
 </ul>';
 $lang['help_articleid'] = 'Dieser Parameter funktioniert nur in der Detailansicht. Mit ihm kann vorgegeben werden, welcher Artikel im Detail-Modus angezeigt werden soll. Wird an dieser Stelle der Wert -1 verwendet, wird der neueste ver&ouml;ffentlichte, nicht abgelaufene Artikel angezeigt.';
 $lang['helpnumber'] = 'Anzahl der maximal anzuzeigenden Eintr&auml;ge (pro Seite) &ndash; ohne Parameter werden alle Eintr&auml;ge angezeigt. Dies ist ein Synonym f&uuml;r den Parameter <tt>pagelimit</tt>.';
@@ -245,47 +289,87 @@ $lang['helpsortasc'] = 'Sortiert Eintr&auml;ge in aufsteigender Folge anstatt in
 $lang['helpdetailpage'] = 'Seite, auf der die Nachrichtendetails angezeigt werden. Das kann entweder ein Seiten-Alias oder eine Seiten-ID sein. Damit k&ouml;nnen die Nachrichtendetails in einem anderen Template als die Nachrichtenzusammenfassung angezeigt werden.';
 $lang['helpshowarchive'] = 'Mit diesem Parameter werden nur die Artikel angezeigt, deren Anzeigedauer au&szlig;erhalb des aktuellen Datums liegt.';
 $lang['helpbrowsecat'] = 'Mit diesem Parameter wird eine Liste der Kategorien angezeigt (browsecat=&#039;1&#039;). Kann NICHT zusammen mit dem Parameter &bdquo;category&ldquo; verwendet werden.';
-$lang['helpaction'] = '&Uuml;berschreibt die vorgegebene Aktion. M&ouml;gliche Werte sind:
-<ul>
-<li>&quot;detail&quot; - einen bestimmten Artikel im Detail-Modus anzeigen</li>
-<li>&quot;default&quot; - die Zusammenfassungansicht anzeigen</li>
-<li>&quot;fesubmit&quot; - auf der Webseite ein Formular zum &Uuml;bermitteln neuer Artikel anzeigen</li>
-<li>&quot;browsecat&quot; - eine Kategorienliste anzeigen.</li>
+$lang['helpaction'] = '&Uuml;berschreibt die vorgegebene Aktion. M&ouml;gliche Werte sind:
+
+<ul>
+
+<li>&quot;detail&quot; - einen bestimmten Artikel im Detail-Modus anzeigen</li>
+
+<li>&quot;default&quot; - die Zusammenfassungansicht anzeigen</li>
+
+<li>&quot;fesubmit&quot; - auf der Webseite ein Formular zum &Uuml;bermitteln neuer Artikel anzeigen</li>
+
+<li>&quot;browsecat&quot; - eine Kategorienliste anzeigen.</li>
+
 </ul>';
-$lang['help'] = '<h3>Wichtiger Hinweis</h3>
-<p>In der News-Modul-Version 2.9 und h&ouml;her wurde sowohl das Variablenelement <code>$entry->formatpostdate</code> als auch der Parameter &bdquo;dateformat&ldquo; entfernt. Sie sollten daher anstatt <code>$entry->formatpostdate</code> jetzt <code>$entry->postdate</code> verwenden. Das Datum kann dann mit dem Modifikator &bdquo;cms_date_format&ldquo; formatiert werden (wie in den mitgelieferten Muster-Templates gezeigt).</p>
-<h3>Was macht dieses Modul?</h3>
-<p>&bdquo;News&ldquo; ist ein Modul, um Artikel/Neuigkeiten Blog-&auml;hnlich auf Ihrer Seite anzuzeigen, jedoch mit mehr M&ouml;glichkeiten. Nach der Modulinstallation wird dem Men&uuml;punkt &bdquo;Inhalte&ldquo; ein Link zur Administration des News-Moduls hinzugef&uuml;gt, &uuml;ber den Sie Nachrichtenkategorien ausw&auml;hlen oder hinzuf&uuml;gen k&ouml;nnen. Wurde eine Kategorie angelegt oder ausgew&auml;hlt, wird eine Liste der vorhandenen Eintr&auml;ge dieser Kategorie angezeigt. Von hier aus k&ouml;nnen Sie dieser Kategorie Eintr&auml;ge hinzuf&uuml;gen, bearbeiten oder l&ouml;schen.</p>
-<h4>Verschiedene Anzeigemethoden</h4>
-<p>Aufgrund der verf&uuml;gbaren Parameter und die Unterst&uuml;tzung f&uuml;r verschiedene Templates sind die Verwendungsm&ouml;glichkeiten des Moduls extrem vielf&auml;ltig.</p>
-<h4>Benutzerdefinierte Felder</h4>
-<p>Im News-Modul k&ouml;nnen auch benutzerdefinierte Felder erstellt werden (einschlie&szlig;lich f&uuml;r Dateien und Bilder). Dies macht es m&ouml;glich, dass Sie den Artikeln auch PDF-Dateien oder Bilder o. &auml;. anh&auml;ngen k&ouml;nnen.</p>
-<h4>Kategorien</h4>
-<p>F&uuml;r die Verwaltung der Nachrichtenartikel bietet das Modul einen hierarchischen Kategorie-Mechanismus. Ein Nachrichtenartikel kann jedoch nicht mehreren Kategorien zugeordnet werden.</p>
-<h4>Verfallsdatum und Status</h4>
-<p>Jeder News-Artikel kann optional mit einem Verfallsdatum versehen werden, nach dem er nicht mehr auf der Webseite angezeigt werden soll. Au&szlig;erdem kann der Status des News-Artikels auf <em>&bdquo;Entwurf&ldquo;</em> gesetzt werden, um ihn dauerhaft von der Webseite zu entfernen.</p>
-<h3>Sicherheit</h3>
-<p>Um News-Eintr&auml;ge hinzuf&uuml;gen oder bearbeiten zu k&ouml;nnen, muss der Benutzer einer Gruppe angeh&ouml;ren, die die Berechtigung &bdquo;Modify News&ldquo; hat.</p>
-<p>Um News-Eintr&auml;ge l&ouml;schen zu k&ouml;nnen, muss der Benutzer einer Gruppe angeh&ouml;ren, die die Berechtigung &bdquo;Delete News Articles&ldquo; hat.</p>
-<p>Um die Templates bearbeiten zu k&ouml;nnen, muss der Benutzer einer Gruppe angeh&ouml;ren, die die Berechtigung &bdquo;Modify Templates&ldquo; hat.</p>
-<p>Um die globalen News-Einstellungen zu &auml;ndern, muss der Benutzer einer Gruppe angeh&ouml;ren, die die Berechtigung &bdquo;Modify Site Preferences&ldquo; hat.</p>
-<p>Um News-Eintr&auml;ge f&uuml;r die Anzeige auf der Website freizugeben, muss der Benutzer zus&auml;tzlich einer Gruppe angeh&ouml;ren, die die Berechtigung &bdquo;Approve News&ldquo; hat.</p>
-<h3>Wie wird es eingesetzt?</h3>
-<p>Am einfachsten kann das Modul mit dem {news}-Tag verwendet werden. Dieser f&uuml;gt die Ausgabe des Moduls in Ihr Template oder Seite ein und zeigt die News-Eintr&auml;ge an. Der einzuf&uuml;gende Code sollte so aussehen: <code>{news number=&#039;5&#039;}</code></p>
-<h3>Templates</h3>
-<p>Seit Version 2.3 werden die Templates des News-Moduls in der Datenbank gespeichert. Dateibasierte Templates werden nicht mehr unterst&uuml;tzt. Wenn Sie noch dateibasierte Templates verwenden, sollten Sie mit der folgenden Anleitung jedes verwendete (dateibasierte) Template importieren:</p>
-<ul>
-<li>Kopieren Sie den Inhalt Ihrer Template-Datei in den Zwischenspeicher Ihres Rechners.</li>
-<li>Erstellen Sie eins neues Datenbank-Template <em>(je nach Bedarf f&uuml;r die Zusammenfassungs- oder Detailansicht)</em>. Geben Sie dem neuen Template den gleichen Namen wie dem alten Template (einschlie&szlig;lich der Endung .tpl). F&uuml;gen Sie den Inhalt des Zwischenspeichers ein.</li>
-<li>Klicken Sie auf &bdquo;Absenden&ldquo;</li>
-</ul>
-<p>Mit diesem Ablauf sollte sichergestellt sein, dass Fehlermeldungen &uuml;ber Templates, die nicht gefunden werden oder &auml;hnliche Smarty-Fehler, nicht auftreten, wenn auf eine CMSms-Version aktualisiert wird, die das News-Modul 2.3 oder h&ouml;her verwendet.</p>
-<h4>Template-Variablen</h4>
-<ul>
-	<li><strong>itemcount</strong> - maximale Anzahl der anzuzeigenden News-Artikel
-	<li><strong>entry->authorname</strong> - vollst&auml;ndiger Name des News-Autors (Vor-/Nachname), wie er in der Benutzer-Verwaltung gespeichert ist</li>
-</ul>
-<p>Auch die Variablen der Extra-Felder k&ouml;nnen in den Templates separat verwendet werden. So l&auml;sst sich zum Beispiel das Extrafeld mit dem Namen &quot;musterfeld&quot; &uuml;ber die Variable entry->musterfeld abfragen.</p>
+$lang['help'] = '<h3>Wichtiger Hinweis</h3>
+
+<p>In der News-Modul-Version 2.9 und h&ouml;her wurde sowohl das Variablenelement <code>$entry->formatpostdate</code> als auch der Parameter &bdquo;dateformat&ldquo; entfernt. Sie sollten daher anstatt <code>$entry->formatpostdate</code> jetzt <code>$entry->postdate</code> verwenden. Das Datum kann dann mit dem Modifikator &bdquo;cms_date_format&ldquo; formatiert werden (wie in den mitgelieferten Muster-Templates gezeigt).</p>
+
+<h3>Was macht dieses Modul?</h3>
+
+<p>&bdquo;News&ldquo; ist ein Modul, um Artikel/Neuigkeiten Blog-&auml;hnlich auf Ihrer Seite anzuzeigen, jedoch mit mehr M&ouml;glichkeiten. Nach der Modulinstallation wird dem Men&uuml;punkt &bdquo;Inhalte&ldquo; ein Link zur Administration des News-Moduls hinzugef&uuml;gt, &uuml;ber den Sie Nachrichtenkategorien ausw&auml;hlen oder hinzuf&uuml;gen k&ouml;nnen. Wurde eine Kategorie angelegt oder ausgew&auml;hlt, wird eine Liste der vorhandenen Eintr&auml;ge dieser Kategorie angezeigt. Von hier aus k&ouml;nnen Sie dieser Kategorie Eintr&auml;ge hinzuf&uuml;gen, bearbeiten oder l&ouml;schen.</p>
+
+<h4>Verschiedene Anzeigemethoden</h4>
+
+<p>Aufgrund der verf&uuml;gbaren Parameter und die Unterst&uuml;tzung f&uuml;r verschiedene Templates sind die Verwendungsm&ouml;glichkeiten des Moduls extrem vielf&auml;ltig.</p>
+
+<h4>Benutzerdefinierte Felder</h4>
+
+<p>Im News-Modul k&ouml;nnen auch benutzerdefinierte Felder erstellt werden (einschlie&szlig;lich f&uuml;r Dateien und Bilder). Dies macht es m&ouml;glich, dass Sie den Artikeln auch PDF-Dateien oder Bilder o. &auml;. anh&auml;ngen k&ouml;nnen.</p>
+
+<h4>Kategorien</h4>
+
+<p>F&uuml;r die Verwaltung der Nachrichtenartikel bietet das Modul einen hierarchischen Kategorie-Mechanismus. Ein Nachrichtenartikel kann jedoch nicht mehreren Kategorien zugeordnet werden.</p>
+
+<h4>Verfallsdatum und Status</h4>
+
+<p>Jeder News-Artikel kann optional mit einem Verfallsdatum versehen werden, nach dem er nicht mehr auf der Webseite angezeigt werden soll. Au&szlig;erdem kann der Status des News-Artikels auf <em>&bdquo;Entwurf&ldquo;</em> gesetzt werden, um ihn dauerhaft von der Webseite zu entfernen.</p>
+
+<h3>Sicherheit</h3>
+
+<p>Um News-Eintr&auml;ge hinzuf&uuml;gen oder bearbeiten zu k&ouml;nnen, muss der Benutzer einer Gruppe angeh&ouml;ren, die die Berechtigung &bdquo;Modify News&ldquo; hat.</p>
+
+<p>Um News-Eintr&auml;ge l&ouml;schen zu k&ouml;nnen, muss der Benutzer einer Gruppe angeh&ouml;ren, die die Berechtigung &bdquo;Delete News Articles&ldquo; hat.</p>
+
+<p>Um die Templates bearbeiten zu k&ouml;nnen, muss der Benutzer einer Gruppe angeh&ouml;ren, die die Berechtigung &bdquo;Modify Templates&ldquo; hat.</p>
+
+<p>Um die globalen News-Einstellungen zu &auml;ndern, muss der Benutzer einer Gruppe angeh&ouml;ren, die die Berechtigung &bdquo;Modify Site Preferences&ldquo; hat.</p>
+
+<p>Um News-Eintr&auml;ge f&uuml;r die Anzeige auf der Website freizugeben, muss der Benutzer zus&auml;tzlich einer Gruppe angeh&ouml;ren, die die Berechtigung &bdquo;Approve News&ldquo; hat.</p>
+
+<h3>Wie wird es eingesetzt?</h3>
+
+<p>Am einfachsten kann das Modul mit dem {news}-Tag verwendet werden. Dieser f&uuml;gt die Ausgabe des Moduls in Ihr Template oder Seite ein und zeigt die News-Eintr&auml;ge an. Der einzuf&uuml;gende Code sollte so aussehen: <code>{news number=&#039;5&#039;}</code></p>
+
+<h3>Templates</h3>
+
+<p>Seit Version 2.3 werden die Templates des News-Moduls in der Datenbank gespeichert. Dateibasierte Templates werden nicht mehr unterst&uuml;tzt. Wenn Sie noch dateibasierte Templates verwenden, sollten Sie mit der folgenden Anleitung jedes verwendete (dateibasierte) Template importieren:</p>
+
+<ul>
+
+<li>Kopieren Sie den Inhalt Ihrer Template-Datei in den Zwischenspeicher Ihres Rechners.</li>
+
+<li>Erstellen Sie eins neues Datenbank-Template <em>(je nach Bedarf f&uuml;r die Zusammenfassungs- oder Detailansicht)</em>. Geben Sie dem neuen Template den gleichen Namen wie dem alten Template (einschlie&szlig;lich der Endung .tpl). F&uuml;gen Sie den Inhalt des Zwischenspeichers ein.</li>
+
+<li>Klicken Sie auf &bdquo;Absenden&ldquo;</li>
+
+</ul>
+
+<p>Mit diesem Ablauf sollte sichergestellt sein, dass Fehlermeldungen &uuml;ber Templates, die nicht gefunden werden oder &auml;hnliche Smarty-Fehler, nicht auftreten, wenn auf eine CMSms-Version aktualisiert wird, die das News-Modul 2.3 oder h&ouml;her verwendet.</p>
+
+<h4>Template-Variablen</h4>
+
+<ul>
+
+	<li><strong>itemcount</strong> - maximale Anzahl der anzuzeigenden News-Artikel
+
+	<li><strong>entry->authorname</strong> - vollst&auml;ndiger Name des News-Autors (Vor-/Nachname), wie er in der Benutzer-Verwaltung gespeichert ist</li>
+
+</ul>
+
+<p>Auch die Variablen der Extra-Felder k&ouml;nnen in den Templates separat verwendet werden. So l&auml;sst sich zum Beispiel das Extrafeld mit dem Namen &quot;musterfeld&quot; &uuml;ber die Variable entry->musterfeld abfragen.</p>
+
 <p><strong>ACHTUNG:</strong> Leerzeichen m&uuml;ssen dabei durch den Unterstrich (&quot;_&quot;) ersetzt werden.</p> ';
 $lang['utma'] = '156861353.1501881392.1291891280.1291891280.1291891280.1';
 $lang['utmb'] = '156861353';

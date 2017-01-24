@@ -165,22 +165,38 @@ $lang['thousanddelimiter'] = ',';
 $lang['size'] = 'Koko';
 $lang['dimensions'] = 'LxK';
 $lang['advanced_tab'] = 'Monipuolinen';
-$lang['help'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
-	<p>Asettaa k&auml;ytt&ouml;&ouml;n TinyMCE:n k&auml;ytt&auml;misen WYSIWYG-editorina.</p>
-	<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
-	<p>Asenna se, mene sen j&auml;lkeen k&auml;ytt&auml;j&auml;n asetuksiin ja valitse onko TinyMCE k&auml;yt&ouml;ss&auml;.</p>
-  <h3>Kielentarkistus</h3>
-  <p>Versiosta 2.6.0 l&auml;htien TinyMCE sis&auml;lt&auml;&auml; verkossa olevan kielentarkistuksen. Huomaa, ett&auml; palvelimen asetuksissa t&auml;ytyy olla SSL p&auml;&auml;lle, jotta t&auml;m&auml; toimisi. Joissain asennuksissa on vaihtoehto nimelt&auml; php_openssl, mutta se voi vaihdella</p>
-	<h3>Ongelmien etsiminen</h3>
-	Osalla ihmisist&auml; on ongelmia saada TinyMCE n&auml;kym&auml;&auml;n asennuksen tai p&auml;ivityksen j&auml;lkeen. T&auml;ss&auml; on tarkistuslista, jonka voit k&auml;yd&auml; l&auml;pi ennen kuin kysyt apua.
-	<br/>
-	<ul>
-	<li>1. Ole kiltti ja yrit&auml; l&auml;hett&auml;&auml; modules/TinyMCE hakemisto palvelimellesi. Et usko, kuinka usein t&auml;m&auml; on auttanut ihmisi&auml;..</li>	
-	<li>2. Jos p&auml;ivitit uuteen versioon, yrit&auml; palauttaa oletusasetukset. T&auml;m&auml; ei ole mukavaa, jos olet tehnyt paljon muutoksia, mutta versioiden 2.3.x ja 2.4.x v&auml;lill&auml; on tapahtunut paljon muutoksia moduuliin.
-	<li>3. Yrit&auml; laittaa p&auml;&auml;lle staattinen konfiguraatiotiedosto monipuolisissa asetuksssa. T&auml;m&auml; toimii osassa j&auml;rjestelmist&auml; paremmin (kuten CGI-pohjaisissa). Huomaa, ett&auml; /tmp/-hakemistoon t&auml;ytyy pysty&auml; kirjoittamaan.
-	</ul>
-	<br/>
-  <h3>Lis&auml;osan kehitt&auml;minen</h3>
+$lang['help'] = '<h3>Mit&auml; t&auml;m&auml; tekee?</h3>
+
+	<p>Asettaa k&auml;ytt&ouml;&ouml;n TinyMCE:n k&auml;ytt&auml;misen WYSIWYG-editorina.</p>
+
+	<h3>Kuinka k&auml;yt&auml;n sit&auml;?</h3>
+
+	<p>Asenna se, mene sen j&auml;lkeen k&auml;ytt&auml;j&auml;n asetuksiin ja valitse onko TinyMCE k&auml;yt&ouml;ss&auml;.</p>
+
+  <h3>Kielentarkistus</h3>
+
+  <p>Versiosta 2.6.0 l&auml;htien TinyMCE sis&auml;lt&auml;&auml; verkossa olevan kielentarkistuksen. Huomaa, ett&auml; palvelimen asetuksissa t&auml;ytyy olla SSL p&auml;&auml;lle, jotta t&auml;m&auml; toimisi. Joissain asennuksissa on vaihtoehto nimelt&auml; php_openssl, mutta se voi vaihdella</p>
+
+	<h3>Ongelmien etsiminen</h3>
+
+	Osalla ihmisist&auml; on ongelmia saada TinyMCE n&auml;kym&auml;&auml;n asennuksen tai p&auml;ivityksen j&auml;lkeen. T&auml;ss&auml; on tarkistuslista, jonka voit k&auml;yd&auml; l&auml;pi ennen kuin kysyt apua.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Ole kiltti ja yrit&auml; l&auml;hett&auml;&auml; modules/TinyMCE hakemisto palvelimellesi. Et usko, kuinka usein t&auml;m&auml; on auttanut ihmisi&auml;..</li>	
+
+	<li>2. Jos p&auml;ivitit uuteen versioon, yrit&auml; palauttaa oletusasetukset. T&auml;m&auml; ei ole mukavaa, jos olet tehnyt paljon muutoksia, mutta versioiden 2.3.x ja 2.4.x v&auml;lill&auml; on tapahtunut paljon muutoksia moduuliin.
+
+	<li>3. Yrit&auml; laittaa p&auml;&auml;lle staattinen konfiguraatiotiedosto monipuolisissa asetuksssa. T&auml;m&auml; toimii osassa j&auml;rjestelmist&auml; paremmin (kuten CGI-pohjaisissa). Huomaa, ett&auml; /tmp/-hakemistoon t&auml;ytyy pysty&auml; kirjoittamaan.
+
+	</ul>
+
+	<br/>
+
+  <h3>Lis&auml;osan kehitt&auml;minen</h3>
+
  Versiosta 2.7.0 l&auml;htien TinyMCE-moduulissa on mahdollista muiden moduulien rekister&ouml;id&auml; lis&auml;yksi&auml; siihen. Se voi esimerkiksi oma ikoni, joka sallii sis&auml;lt&ouml;jen lis&auml;&auml;misen toisesta moduulista, esimerkiksi Galleriasta. T&auml;m&auml;n tekeminen on suhteellisen teknist&auml; tietoa, mutta jos olet moduulin kehitt&auml;j&auml; ja olet kiinnostunut t&auml;st&auml;, ole hyv&auml; ja katso lis&auml;tietoa TinyMCE/docs -hakemistosta.';
 $lang['utma'] = '156861353.144823811.1251375439.1288623556.1288630766.361';
 $lang['utmz'] = '156861353.1285804076.330.37.utmcsr=feedburner|utmccn=Feed: cmsmadesimple/blog (CMS Made Simple)|utmcmd=feed';

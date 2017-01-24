@@ -72,7 +72,8 @@ $lang['datetimeformat_help'] = 'Clic aici pentru a primi ajutor despre cum se fo
 $lang['extraconfigtext'] = 'Extra configurare';
 $lang['extraconfighelp2'] = 'O singura declaratie per linie, virgulele vor fi adaugate inainte si dupa acest continut. Vedeti in TinyMCE-wiki pentru instructiuni.';
 $lang['customdropdowntext'] = 'Dropdown custom';
-$lang['customdropdownhelp'] = 'Insereaza bucati customizabile de cod/text prin selectia lor dintr-un meniu dropdown. 
+$lang['customdropdownhelp'] = 'Insereaza bucati customizabile de cod/text prin selectia lor dintr-un meniu dropdown. 
+
 Utilizari evidente sunt pentru accces facil la taguri etc. Meniul este inserat in bara de unlete folosind &#039;customdropdown&#039;.';
 $lang['startenabledtext'] = 'Startup activat';
 $lang['startenabledhelp'] = 'Debifand aceasta casuta se pornesc editoarele Tiny intr-o stare dezactivata. Ar trebui sa fie folosita impreuna cu butonul de stare.';
@@ -96,9 +97,12 @@ $lang['ignoremodifyfileshelp'] = 'Atentie! Aceasta permite o anumita operatiune 
 $lang['showtogglebutton_text'] = 'Afisare checkbox pentru pornire/oprire wysiwyg';
 $lang['togglewysiwyg'] = 'Pornire/oprire WYSIWYG';
 $lang['styles_tab'] = 'Stiluri CSS';
-$lang['styles_help'] = ' Daca lasati campul gol, TinyMCE va parsa stilesheet-urile CSS si va lista clasele de stiluri pe care le contin. 
-  Daca doriti ca numai unele stiluri sa fie afisate utilizatorului, specificati-le in forma &quot;CustomName1=style1; CustomName2=style2&quot;, 
-  &quot;style1&quot; fiind o clasa din stylesheet si nu puneti . (punctul) folosit in mod normal pentru selectorii de clase pentru exista deja in CSS, va arata asa <span class=&quot;style1&quot;>text</span>, in primul camp de mai jos. 
+$lang['styles_help'] = ' Daca lasati campul gol, TinyMCE va parsa stilesheet-urile CSS si va lista clasele de stiluri pe care le contin. 
+
+  Daca doriti ca numai unele stiluri sa fie afisate utilizatorului, specificati-le in forma &quot;CustomName1=style1; CustomName2=style2&quot;, 
+
+  &quot;style1&quot; fiind o clasa din stylesheet si nu puneti . (punctul) folosit in mod normal pentru selectorii de clase pentru exista deja in CSS, va arata asa <span class=&quot;style1&quot;>text</span>, in primul camp de mai jos. 
+
 ';
 $lang['css_styles_text'] = 'Stiluri';
 $lang['accessdenied'] = 'Acces Interzis. Verificati permisiunile.';
@@ -158,20 +162,34 @@ $lang['thousanddelimiter'] = ', ';
 $lang['size'] = 'Dimensiune';
 $lang['dimensions'] = 'LxH ';
 $lang['advanced_tab'] = 'Avansat';
-$lang['help'] = '	<h3>Ce face acesta?</h3>
-	<p>Permite folosirea TinyMCE ca editor WYSIWYG.</p>
-	<h3>Cum se foloseste?</h3>
-	<p>Instalati-l, apoi mergeti la Preferinte utilizator si setati TinyMCE ca editor wysiwyg preferat.</p>
-	<h3>Probleme</h3>
-	unii utilizatori au probleme cu Tiny la modu ca nu se afiseaza dupa instalare sau actualizare. Aici este un checklist de lucruri pe care le puteti incerca inainte de a cere ajutor mai departe.
-	<br/>
-	<ul>
-	<li>1. Va rugam, VA RUGAM, incercati sa re-uploadati folderul modules/TinyMCE pe server. Ati fi uimiti sa aflati de cate ori acest lucru a salvat situatia.</li>
-	<li>2. Incercati sa activati optiunea de fisier configurare static. Notati ca acest lucru cere ca folderul /tmp/ sa aiba permisiuni de scriere pentru webserver</li>
-	<li>3. Daca actualizati, incercati sa resetati toate setarile. Nu e frumos daca ati facut o multime de modificari, stim, dar o multime de lucruri se pot schimba de la versiune la versiune.</li>
-	</ul>
-	<br/>
-		
+$lang['help'] = '	<h3>Ce face acesta?</h3>
+
+	<p>Permite folosirea TinyMCE ca editor WYSIWYG.</p>
+
+	<h3>Cum se foloseste?</h3>
+
+	<p>Instalati-l, apoi mergeti la Preferinte utilizator si setati TinyMCE ca editor wysiwyg preferat.</p>
+
+	<h3>Probleme</h3>
+
+	unii utilizatori au probleme cu Tiny la modu ca nu se afiseaza dupa instalare sau actualizare. Aici este un checklist de lucruri pe care le puteti incerca inainte de a cere ajutor mai departe.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Va rugam, VA RUGAM, incercati sa re-uploadati folderul modules/TinyMCE pe server. Ati fi uimiti sa aflati de cate ori acest lucru a salvat situatia.</li>
+
+	<li>2. Incercati sa activati optiunea de fisier configurare static. Notati ca acest lucru cere ca folderul /tmp/ sa aiba permisiuni de scriere pentru webserver</li>
+
+	<li>3. Daca actualizati, incercati sa resetati toate setarile. Nu e frumos daca ati facut o multime de modificari, stim, dar o multime de lucruri se pot schimba de la versiune la versiune.</li>
+
+	</ul>
+
+	<br/>
+
+		
+
 ';
 $lang['qca'] = 'P0-1838215043-1282807533934';
 $lang['utmz'] = '156861353.1282807972.1.2.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=cmsms';

@@ -19,7 +19,8 @@ $lang['pdfsettings'] = 'PDF settings';
 $lang['pdfsettingssaved'] = 'The PDF settings were saved';
 $lang['pdfheader'] = 'PDF Header';
 $lang['pdfenable'] = 'Enable PDF-generation';
-$lang['pdfenablehelp'] = 'You should know that PDF-generation is very rudimentary only outputting the most basic of content.
+$lang['pdfenablehelp'] = 'You should know that PDF-generation is very rudimentary only outputting the most basic of content.
+
 Use at will, but please don&#039;t complain about the quality of the result.';
 $lang['headerfontsize'] = 'Header &scaron;rifto dydis';
 $lang['contentfontsize'] = 'Turinio &scaron;rifto dydis';
@@ -52,34 +53,62 @@ $lang['help_class_img'] = 'Class  <img> žymė jei nustatyta showbutton ';
 $lang['help_more'] = 'Įterpkite papildomas pasirinkimus į <a> nuorodą';
 $lang['help_onlyurl'] = 'I&scaron;vedimas tik url, o ne pilna nuorodą';
 $lang['help_includetemplate'] = 'If set to &#039;true&#039; this options makes the print/pdf process the whole template, not just the main content. This probably requires some work on print-specific styles with the mediatype &#039;print&#039; enabled.';
-$lang['help'] = '<b>What does this module do?</b>
-<br/>
-This allow you to insert a link in pages/templates which directs the 
-visitor to a version of the page better suited for printing. Several parameters can be set so make the link and
-printer friendly page look just as you&#039;d like. As of version 0.2.0, a parameter can be set to onthefly-generation of a PDF-file instead.
-<br/>
-For now the module only supports &quot;plain&quot; content pages, no module-redirections etc. But neither does the builtin printing-functionality in CMSms.
-<br/>
-Please note that the module currently only outputs the main content, not alternate content blocks defined in the templates.
-
-<br/><br/>
-<b>How do I use this module?</b>
-<br/>
-Basically you install the module, access it&#039;s administration interface and review/change the templates for the
-link and for the printable page
-<br/>
-In you page content or template you then insert something like:
-<pre>
-{cms_module module=&#039;printing&#039; <i>params</i>}
-</pre>
-and a link should emerge on your pages. 
-<br/><br/>
-<b>Notes:</b>
-<br/>
-<ul>
-<li>PDF Generation is experimental at this time.</li>
-<li>PDF Generation may not work on servers with php 4.x, it is recommended you encourage your host to upgrade to php5 if you want PDF support.</li>
-</ul>
+$lang['help'] = '<b>What does this module do?</b>
+
+<br/>
+
+This allow you to insert a link in pages/templates which directs the 
+
+visitor to a version of the page better suited for printing. Several parameters can be set so make the link and
+
+printer friendly page look just as you&#039;d like. As of version 0.2.0, a parameter can be set to onthefly-generation of a PDF-file instead.
+
+<br/>
+
+For now the module only supports &quot;plain&quot; content pages, no module-redirections etc. But neither does the builtin printing-functionality in CMSms.
+
+<br/>
+
+Please note that the module currently only outputs the main content, not alternate content blocks defined in the templates.
+
+
+
+<br/><br/>
+
+<b>How do I use this module?</b>
+
+<br/>
+
+Basically you install the module, access it&#039;s administration interface and review/change the templates for the
+
+link and for the printable page
+
+<br/>
+
+In you page content or template you then insert something like:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>params</i>}
+
+</pre>
+
+and a link should emerge on your pages. 
+
+<br/><br/>
+
+<b>Notes:</b>
+
+<br/>
+
+<ul>
+
+<li>PDF Generation is experimental at this time.</li>
+
+<li>PDF Generation may not work on servers with php 4.x, it is recommended you encourage your host to upgrade to php5 if you want PDF support.</li>
+
+</ul>
+
 ';
 $lang['utmz'] = '156861353.1250297380.1752.42.utmccn=(referral)|utmcsr=helminsen.no|utmcct=/install/upgrade.php|utmcmd=referral';
 $lang['utma'] = '156861353.179052623084110100.1210423577.1259353230.1259355475.2152';

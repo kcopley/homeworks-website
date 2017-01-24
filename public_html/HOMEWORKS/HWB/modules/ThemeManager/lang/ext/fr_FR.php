@@ -32,26 +32,46 @@ $lang['error'] = 'Erreur&nbsp;!';
 $lang['upgraded'] = 'Le module a &eacute;t&eacute; mis &agrave; jour &agrave; la version %s.';
 $lang['moddescription'] = 'Ce module permet l&#039;importation et l&#039;exportation de th&egrave;mes (gabarits et feuilles de style)';
 $lang['import_succeeded'] = 'Le th&egrave;me a &eacute;t&eacute; import&eacute; avec succ&egrave;s';
-$lang['help'] = '<h3>Que fait ce module&nbsp;?</h3>
-<p>Le module Gestionnaire de Th&egrave;mes (Theme Manager) permet l&#039;importation et l&#039;exportation de gabarits et des feuilles de styles attach&eacute;es en tant que &quot;th&egrave;mes&quot;. Ceci vous permet de partager votre design avec d&#039;autres utilisateurs de CMS Made Simple.</p>
-<h3>Comment l&#039;utiliser&nbsp;?</h3>
-<p>Ce module n&#039;a pas de partie publique, il est visible dans le panneau d&#039;administration.  Il vous permet de s&eacute;lectionner un gabarit (actif), et de cliquer &quot;Exporter&quot;.  Un fichier XML contentant le gabarit et ses feuilles de style attach&eacute;es sera cr&eacute;&eacute; et propos&eacute; au t&eacute;l&eacute;chargement.</p>
-<h3>Permissions</h3>
-<p>Le mod&egrave;le de permission du Gestionnaire de Th&egrave;mes est strict afin de prot&eacute;ger l&#039;int&eacute;grit&eacute; de la base de donn&eacute;es.  La permission &quot;Manage Themes&quot; (Gestion de Th&egrave;mes) est requise pour exporter des th&egrave;mes, et les 3 permissions &quot;Add Stylesheets&quot;, &quot;Add StyleSheet Assocations&quot;, and &quot;Add Templates&quot; (ajout de feuilles de style, ajout d&#039;associations de feuilles de style, ajout de gabarits) sont requises afin de pouvoir importer un th&egrave;me.</p>
-<p>De plus, la fonctionnalit&eacute; inverse existe, vous pouvez importer un fichier th&egrave;me (format xml) et automatiquement obtenir les gabarits et feuilles de style dans votre CMS Made Simple.</p>
-<h3>Support</h3>
-<p>Ce module ne contient aucun support commercial. Cependant, ces ressources sont disponibles pour vous aider&nbsp;:</p>
-<ul>
-<li>Pour la derni&egrave;re version de ce module, les FAQs, ou pour annoncer un bug, veuillez visiter la <a href="http://dev.cmsmadesimple.org/" target="_blank">forge de CMS Made Simple</a>.</li>
-<li>Des discussions compl&eacute;mentaires relatives &agrave; ce module peuvent aussi &ecirc;tre trouv&eacute;es sur les <a href="http://forum.cmsmadesimple.org" target="_blank">Forums CMS Made Simple</a>.</li>
-<li>L&#039;auteur, Calguy1000, est souvent sur IRC sur canal #cms: irc.freenode.net/#cms.</li>
-<li>Et enfin, vous pouvez rencontrer un certain succ&egrave;s en envoyant un email directement &agrave; l&#039;auteur.</li>  
-</ul>
-<p>Conform&eacute;ment &agrave; la licence GPL, ce module est distribu&eacute; tel quel. Veuillez vous r&eacute;f&eacute;rer directement &agrave; la licence pour tout avis de non responsabilit&eacute;.</p>
-
-<h3>Copyright et Licence</h3>
-<p>Copyright &copy; 2005, Robert Campbell <a href="mailto:calguy1000@hotmail.com">calguy1000@hotmail.com</a>. Tous droits r&eacute;serv&eacute;s.</p>
-<p>Ce module est distribu&eacute; sous la licence <a href="http://www.gnu.org/licenses/licenses.html#GPL" target="_blank">GNU Public License</a>. Vous devez agr&eacute;er aux termes de cette licence pour pouvoir utiliser ce module.</p>
+$lang['help'] = '<h3>Que fait ce module&nbsp;?</h3>
+
+<p>Le module Gestionnaire de Th&egrave;mes (Theme Manager) permet l&#039;importation et l&#039;exportation de gabarits et des feuilles de styles attach&eacute;es en tant que &quot;th&egrave;mes&quot;. Ceci vous permet de partager votre design avec d&#039;autres utilisateurs de CMS Made Simple.</p>
+
+<h3>Comment l&#039;utiliser&nbsp;?</h3>
+
+<p>Ce module n&#039;a pas de partie publique, il est visible dans le panneau d&#039;administration.  Il vous permet de s&eacute;lectionner un gabarit (actif), et de cliquer &quot;Exporter&quot;.  Un fichier XML contentant le gabarit et ses feuilles de style attach&eacute;es sera cr&eacute;&eacute; et propos&eacute; au t&eacute;l&eacute;chargement.</p>
+
+<h3>Permissions</h3>
+
+<p>Le mod&egrave;le de permission du Gestionnaire de Th&egrave;mes est strict afin de prot&eacute;ger l&#039;int&eacute;grit&eacute; de la base de donn&eacute;es.  La permission &quot;Manage Themes&quot; (Gestion de Th&egrave;mes) est requise pour exporter des th&egrave;mes, et les 3 permissions &quot;Add Stylesheets&quot;, &quot;Add StyleSheet Assocations&quot;, and &quot;Add Templates&quot; (ajout de feuilles de style, ajout d&#039;associations de feuilles de style, ajout de gabarits) sont requises afin de pouvoir importer un th&egrave;me.</p>
+
+<p>De plus, la fonctionnalit&eacute; inverse existe, vous pouvez importer un fichier th&egrave;me (format xml) et automatiquement obtenir les gabarits et feuilles de style dans votre CMS Made Simple.</p>
+
+<h3>Support</h3>
+
+<p>Ce module ne contient aucun support commercial. Cependant, ces ressources sont disponibles pour vous aider&nbsp;:</p>
+
+<ul>
+
+<li>Pour la derni&egrave;re version de ce module, les FAQs, ou pour annoncer un bug, veuillez visiter la <a href="http://dev.cmsmadesimple.org/" target="_blank">forge de CMS Made Simple</a>.</li>
+
+<li>Des discussions compl&eacute;mentaires relatives &agrave; ce module peuvent aussi &ecirc;tre trouv&eacute;es sur les <a href="http://forum.cmsmadesimple.org" target="_blank">Forums CMS Made Simple</a>.</li>
+
+<li>L&#039;auteur, Calguy1000, est souvent sur IRC sur canal #cms: irc.freenode.net/#cms.</li>
+
+<li>Et enfin, vous pouvez rencontrer un certain succ&egrave;s en envoyant un email directement &agrave; l&#039;auteur.</li>  
+
+</ul>
+
+<p>Conform&eacute;ment &agrave; la licence GPL, ce module est distribu&eacute; tel quel. Veuillez vous r&eacute;f&eacute;rer directement &agrave; la licence pour tout avis de non responsabilit&eacute;.</p>
+
+
+
+<h3>Copyright et Licence</h3>
+
+<p>Copyright &copy; 2005, Robert Campbell <a href="mailto:calguy1000@hotmail.com">calguy1000@hotmail.com</a>. Tous droits r&eacute;serv&eacute;s.</p>
+
+<p>Ce module est distribu&eacute; sous la licence <a href="http://www.gnu.org/licenses/licenses.html#GPL" target="_blank">GNU Public License</a>. Vous devez agr&eacute;er aux termes de cette licence pour pouvoir utiliser ce module.</p>
+
 ';
 $lang['utma'] = '156861353.2003866910.1245652859.1274550256.1274826452.144';
 $lang['utmz'] = '156861353.1274826452.144.131.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=cmsms';

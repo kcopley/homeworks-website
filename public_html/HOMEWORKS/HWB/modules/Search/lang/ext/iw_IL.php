@@ -43,49 +43,87 @@ $lang['eventdesc-SearchCompleted'] = 'נשלך כאשר חיפוש הסתים';
 $lang['eventdesc-SearchItemAdded'] = 'נשלח כאשר פריט חדש מופתח.';
 $lang['eventdesc-SearchItemDeleted'] = 'נשלח כאשר פריט נמחק מהאינדקס.';
 $lang['eventdesc-SearchAllItemsDeleted'] = 'נשלח כאשר כל הפריטים נמחקו מהאינדקס.';
-$lang['eventhelp-SearchInitiated'] = '<p>נשלח כאשר החיפוש הוא התחיל.</p>
-<h4> פרמטרים </h4>
-<ol>
-<li>טקסט זה חיפשו.</li>
-</ol>
+$lang['eventhelp-SearchInitiated'] = '<p>נשלח כאשר החיפוש הוא התחיל.</p>
+
+<h4> פרמטרים </h4>
+
+<ol>
+
+<li>טקסט זה חיפשו.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchCompleted'] = '<p>נשלח כאשר חיפוש הושלם.</p>
-<h4> פרמטרים </h4>
-<ol>
-<li>טקסט זה חיפשו.</li>
-<li>מערך של תוצאות סיום.</li>
-</ol>
+$lang['eventhelp-SearchCompleted'] = '<p>נשלח כאשר חיפוש הושלם.</p>
+
+<h4> פרמטרים </h4>
+
+<ol>
+
+<li>טקסט זה חיפשו.</li>
+
+<li>מערך של תוצאות סיום.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemAdded'] = '<p>נשלח כאשר פריט חדש באינדקס.</p>
-<h4>פרמטרים </h4>
-<ol>
-<li>שם מודול.</li>
-<li>זיהוי של פריט.</li>
-<li>מאפיינים נוספים.</li>
-<li>תוכן למדד ולהוסיף.</li>
-</ol>
+$lang['eventhelp-SearchItemAdded'] = '<p>נשלח כאשר פריט חדש באינדקס.</p>
+
+<h4>פרמטרים </h4>
+
+<ol>
+
+<li>שם מודול.</li>
+
+<li>זיהוי של פריט.</li>
+
+<li>מאפיינים נוספים.</li>
+
+<li>תוכן למדד ולהוסיף.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemDeleted'] = '<p>שלח כאשר פריט נמחק מהאינדקס .</p>
-<h4>פרמטרים</h4>
-<ol>
-<li>שם מודול.</li>
-<li>זיהוי של פריט.</li>
-<li>מאפיינים נוספים.</li>
-</ol>
+$lang['eventhelp-SearchItemDeleted'] = '<p>שלח כאשר פריט נמחק מהאינדקס .</p>
+
+<h4>פרמטרים</h4>
+
+<ol>
+
+<li>שם מודול.</li>
+
+<li>זיהוי של פריט.</li>
+
+<li>מאפיינים נוספים.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchAllItemsDeleted'] = '<p>נשלח כאשר כל הפריטים שנמחקו מן המדד.</p>
-<h4>פרמטרים</h4>
-<ul>
-<li>None</li>
-</ul>
+$lang['eventhelp-SearchAllItemsDeleted'] = '<p>נשלח כאשר כל הפריטים שנמחקו מן המדד.</p>
+
+<h4>פרמטרים</h4>
+
+<ul>
+
+<li>None</li>
+
+</ul>
+
 ';
-$lang['help'] = '<h3>What does this do?</h3>
-<p>Search is a module for searching "core" content along with certain registered modules.  You put in a word or two and it gives you back matching, relevent results.</p>
-<h3>How do I use it?</h3>
-<p>The easiest way to use it is with the {search} wrapper tag (wraps the module in a tag, to simplify the syntax). This will insert the module into your template or page anywhere you wish, and display the search form.  The code would look something like: <code>{search}</code></p>
-<h4>How do i prevent certain content from being indexed</h4>
-<p>The search module will not search any "inactive" pages. However on occasion, when you are using the CustomContent module, or other smarty logic to show different content to different groups of users, it may be advisiable to prevent the entire page from being indexed even when it is live.  To do this include the following tag anywhere on the page <em><!-- pageAttribute: NotSearchable --></em> When the search module sees this tag in the page it will not index any content for that page.</p>
-<p>The <em><!-- pageAttribute: NotSearchable --></em> tag can be placed in the template as well.  if this is done, none of the pages attached to that template will be indexed.  Those pages will be re-indexed if the tag is removed</p>
+$lang['help'] = '<h3>What does this do?</h3>
+
+<p>Search is a module for searching "core" content along with certain registered modules.  You put in a word or two and it gives you back matching, relevent results.</p>
+
+<h3>How do I use it?</h3>
+
+<p>The easiest way to use it is with the {search} wrapper tag (wraps the module in a tag, to simplify the syntax). This will insert the module into your template or page anywhere you wish, and display the search form.  The code would look something like: <code>{search}</code></p>
+
+<h4>How do i prevent certain content from being indexed</h4>
+
+<p>The search module will not search any "inactive" pages. However on occasion, when you are using the CustomContent module, or other smarty logic to show different content to different groups of users, it may be advisiable to prevent the entire page from being indexed even when it is live.  To do this include the following tag anywhere on the page <em><!-- pageAttribute: NotSearchable --></em> When the search module sees this tag in the page it will not index any content for that page.</p>
+
+<p>The <em><!-- pageAttribute: NotSearchable --></em> tag can be placed in the template as well.  if this is done, none of the pages attached to that template will be indexed.  Those pages will be re-indexed if the tag is removed</p>
+
 ';
 $lang['qca'] = 'P0-2002441699-1270635418106';
 $lang['utmz'] = '156861353.1273086462.8.3.utmcsr=4x6hp.net|utmccn=(referral)|utmcmd=referral|utmcct=/iarc/index.php';

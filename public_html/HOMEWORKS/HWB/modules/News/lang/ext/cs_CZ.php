@@ -166,61 +166,106 @@ $lang['options'] = 'Volby';
 $lang['optionsupdated'] = 'Volby &uacute;spě&scaron;ně aktualizov&aacute;ny.';
 $lang['useexpiration'] = 'Použ&iacute;t datum konce';
 $lang['eventdesc-NewsArticleAdded'] = 'Odeslat po vložen&iacute; položky.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Odeslat po vložen&iacute; položky.</p>
-<h4>Parametry</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id položky</li>
-<li>\&quot;category_id\&quot; - Id kategorie t&eacute;to položky</li>
-<li>\&quot;title\&quot; - N&aacute;zev položky</li>
-<li>\&quot;content\&quot; - Obsah položky</li>
-<li>\&quot;summary\&quot; - Souhrn položky</li>
-<li>\&quot;status\&quot; - Stav položky (\&quot;draft\&quot; nebo \&quot;publish\&quot;)</li>
-<li>\&quot;start_time\&quot; - Datum, od kdy ma b&yacute;t položka zobrazov&aacute;na</li>
-<li>\&quot;end_time\&quot; - Datum, od kdy se m&aacute; položka přestat zobrazovat</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Odeslat po vložen&iacute; položky.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id položky</li>
+
+<li>\&quot;category_id\&quot; - Id kategorie t&eacute;to položky</li>
+
+<li>\&quot;title\&quot; - N&aacute;zev položky</li>
+
+<li>\&quot;content\&quot; - Obsah položky</li>
+
+<li>\&quot;summary\&quot; - Souhrn položky</li>
+
+<li>\&quot;status\&quot; - Stav položky (\&quot;draft\&quot; nebo \&quot;publish\&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Datum, od kdy ma b&yacute;t položka zobrazov&aacute;na</li>
+
+<li>\&quot;end_time\&quot; - Datum, od kdy se m&aacute; položka přestat zobrazovat</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Odeslat po editaci položky.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Odeslat po editaci položky.</p>
-<h4>Parametry</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id položky</li>
-<li>\&quot;category_id\&quot; - Id kategorie t&eacute;to položky</li>
-<li>\&quot;title\&quot; - N&aacute;zev položky</li>
-<li>\&quot;content\&quot; - Obsah položky</li>
-<li>\&quot;summary\&quot; - Souhrn položky</li>
-<li>\&quot;status\&quot; - Stav položky (\&quot;draft\&quot; nebo \&quot;publish\&quot;)</li>
-<li>\&quot;start_time\&quot; - Datum, od kdy ma b&yacute;t položka zobrazov&aacute;na</li>
-<li>\&quot;end_time\&quot; - Datum, od kdy se m&aacute; položka přestat zobrazovat</li>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Odeslat po editaci položky.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id položky</li>
+
+<li>\&quot;category_id\&quot; - Id kategorie t&eacute;to položky</li>
+
+<li>\&quot;title\&quot; - N&aacute;zev položky</li>
+
+<li>\&quot;content\&quot; - Obsah položky</li>
+
+<li>\&quot;summary\&quot; - Souhrn položky</li>
+
+<li>\&quot;status\&quot; - Stav položky (\&quot;draft\&quot; nebo \&quot;publish\&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Datum, od kdy ma b&yacute;t položka zobrazov&aacute;na</li>
+
+<li>\&quot;end_time\&quot; - Datum, od kdy se m&aacute; položka přestat zobrazovat</li>
+
 </ul>';
 $lang['eventdesc-NewsArticleDeleted'] = 'Odeslat po smaz&aacute;n&iacute; položky.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Odeslat po smaz&aacute;n&iacute; položky.</p>
-<h4>Parametry</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id položky</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Odeslat po smaz&aacute;n&iacute; položky.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id položky</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Odeslat po vložen&iacute; kategorie.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Odeslat po vložen&iacute; kategorie.</p>
-<h4>Parametry</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id kategorie</li>
-<li>\&quot;name\&quot; - Jm&eacute;no kategorie</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Odeslat po vložen&iacute; kategorie.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id kategorie</li>
+
+<li>\&quot;name\&quot; - Jm&eacute;no kategorie</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Odeslat po &uacute;pravě kategorie.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Odeslat po &uacute;pravě kategorie.</p>
-<h4>Parametry</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id kategorie</li>
-<li>\&quot;name\&quot; - Jm&eacute;no kategorie</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Odeslat po &uacute;pravě kategorie.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id kategorie</li>
+
+<li>\&quot;name\&quot; - Jm&eacute;no kategorie</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Odeslat po smaz&aacute;n&iacute; kategorie.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Odeslat po smaz&aacute;n&iacute; kategorie.</p>
-<h4>Parametry</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id kategorie</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Odeslat po smaz&aacute;n&iacute; kategorie.</p>
+
+<h4>Parametry</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id kategorie</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'Tento parametr je možn&eacute; použ&iacute;t pouze u detailn&iacute;ho pohledu. Povoluje zadat jak&eacute; novinky zobrazit v detailn&iacute;m m&oacute;du. Pokud je použita speci&aacute;ln&iacute; hodnota -1, syst&eacute;m zobraz&iacute; nejnověj&scaron;&iacute;, publikovan&eacute;, nevypr&scaron;el&eacute; čl&aacute;nky.';
 $lang['helpnumber'] = 'Maxim&aacute;ln&iacute; počet položek k zobrazen&iacute; - ponech&aacute;no pr&aacute;zdn&eacute; zobraz&iacute; v&scaron;echny položky.';
@@ -236,42 +281,77 @@ $lang['helpsortasc'] = 'Tř&iacute;dit novinky vzestupně.';
 $lang['helpdetailpage'] = 'Str&aacute;nka pro zobrazn&iacute; detailu novinky. Toto může b&yacute;t buď alias nebo id str&aacute;nky. Umožňuje zobrazit detaily v jin&eacute; &scaron;abloně než souhrn.';
 $lang['helpshowarchive'] = 'Zobrazit pouze vypr&scaron;el&eacute; novinky.';
 $lang['helpbrowsecat'] = 'Zobrazit prohl&iacute;žiteln&yacute; seznam kategori&iacute;.';
-$lang['helpaction'] = 'Přepsat v&yacute;choz&iacute; akci. Možn&eacute; hodnoty jsou:
-<ul>
-<li>&amp;quot;detail&amp;quot; - pro zobrazen&iacute; zadan&eacute;ho čl&aacute;nku v detailn&iacute;m m&oacute;du.</li>
-<li>&amp;quot;default&amp;quot; - pro zobrazen&iacute; pohledu souhrnu</li>
-<li>&amp;quot;fesubmit&amp;quot; - pro zobrazen&iacute; formul&aacute;ře na str&aacute;nk&aacute;ch povoluj&iacute;c&iacute; uživatelům vkl&aacute;dat novnky.</li>
-<li>&amp;quot;browsecat&amp;quot; - pro zobrazen&iacute; prohled&aacute;vateln&eacute;ho seznamu kategori&iacute;.</li>
+$lang['helpaction'] = 'Přepsat v&yacute;choz&iacute; akci. Možn&eacute; hodnoty jsou:
+
+<ul>
+
+<li>&amp;quot;detail&amp;quot; - pro zobrazen&iacute; zadan&eacute;ho čl&aacute;nku v detailn&iacute;m m&oacute;du.</li>
+
+<li>&amp;quot;default&amp;quot; - pro zobrazen&iacute; pohledu souhrnu</li>
+
+<li>&amp;quot;fesubmit&amp;quot; - pro zobrazen&iacute; formul&aacute;ře na str&aacute;nk&aacute;ch povoluj&iacute;c&iacute; uživatelům vkl&aacute;dat novnky.</li>
+
+<li>&amp;quot;browsecat&amp;quot; - pro zobrazen&iacute; prohled&aacute;vateln&eacute;ho seznamu kategori&iacute;.</li>
+
 </ul>';
-$lang['help'] = '<h3>Důležit&eacute; pozn&aacute;mky</h3>
-<p>Verze Novinek 2.9 a vy&scaron;&scaron;&iacute; odstraňuje ze &scaron;ablony parametr formatpostdate a dateformat.  M&iacute;sto toho se pro form&aacute;tov&aacute;n&iacute; data použ&iacute;v&aacute; cms_date_format (jak je naznačeno ve v&yacute;choz&iacute;ch &scaron;ablon&aacute;ch) a v &scaron;ablon&aacute;ch se použ&iacute;v&aacute; entry->postdate m&iacute;sto entry->formatpostdate.</p>
-<h3>Co to děl&aacute;?</h3>
-<p>Novinky jsou modul pro zobrazov&aacute;n&iacute; novinek na str&aacute;nk&aacute;ch, podobn&eacute; stylu blogů, ale s v&iacute;ce vlastnostmi!.  Po instalaci modulu je do Administračn&iacute;ho panelu přid&aacute;no menu, kter&eacute; umožňuje vyb&iacute;rat nebo vkl&aacute;dat kategorie str&aacute;nek. Pot&eacute; co je kategorie vybr&aacute;na nebo vytvořena, je zobrazen seznam novinek t&eacute;to kategorie.  Zde můžete přid&aacute;vat, upravovat nebo mazat novinky zvolen&eacute; kategorie.</p>
-<h4>Mnoho metod zobrazen&iacute;</h4>
-<p>Podporovan&eacute; paraemtry modulu Novinky a podpora pro mnoho &scaron;ablon d&aacute;v&aacute; neomezen&eacute; možnosti zobrazen&iacute; novinek.</p>
-<h4>Vlastn&iacute; pole</h4>
-<p>Modul Novinky podporuje definov&aacute;n&iacute; mnoha vlastn&iacute;ch pol&iacute; (včetně souborů a obr&aacute;zků), což dovoluje připojit pdf soubory nebo obr&aacute;zky do Va&scaron;ich novinek.</p>
-        <h4>Kategorie</h4>
-	<p>Novinky nab&iacute;zej&iacute; hierarchick&eacute; tř&iacute;děn&iacute; kategori&iacute; pro organizaci Va&scaron;ich novinek. Novinka může b&yacute;t pouze v jedn&eacute; kategorii.</p>
-        <h4>RSS Feedy</h4>
-        <p>Novinky podporuj&iacute; generov&aacute;n&iacute; jednoduch&yacute;ch rss feedů z Va&scaron;ich novinek, takže uživatele&eacute; mohou b&yacute;t st&aacute;le informov&aacute;n&iacute; co se na Va&scaron;ich str&aacute;nk&aacute;ch děje.</p>
-	<h4>Vypr&scaron;en&iacute; a status</h4>
-	<p>Každ&aacute; položka může m&iacute;t voliteln&eacute; datum vypr&scaron;en&iacute;, po kter&eacute;m se již nebude zobrazovat na Va&scaron;ich str&aacute;nk&aacute;ch. Novinky mohou b&yacute;t tak&eacute; označeny jako <em>draft</em> pro jejich trval&eacute; odstraněn&iacute; ze str&aacute;nek.</p>
-	<h3>Bezpečnost</h3>
-	<p>uživatel mus&iacute; n&aacute;ležet do skupiny s opr&aacute;vněn&iacute;m &#039;Modify News&#039; pro vkl&aacute;d&aacute;n&iacute; nebo &uacute;pravu novinek.</p>
-        <p>Rovněž pro smaz&aacute;n&iacute; novinek mus&iacute; uživatel n&aacute;ležet do skupiny s opr&aacute;vněn&iacute;m  &#039;Delete News Articles&#039;.</p>
-	<p>Pro změnu &scaron;ablon, uživatel mus&iacute; n&aacute;ležet do skupiny s opr&aacute;vněn&iacute;m &#039;Modify Templates&#039; permission.</p>
-	<p>Pro &uacute;pravu glob&aacute;ln&iacute;ch nastaven&iacute; novinek mus&iacute; uživatel n&aacute;ležet do skupiny s opr&aacute;vněn&iacute;m  &#039;Modify Site Preferences&#039; permission.</p>
-	<p>A pro schv&aacute;len&iacute; zobrazov&aacute;n&iacute; novinek na str&aacute;nk&aacute;ch mus&iacute; uživatel n&aacute;ležet do skupiny s opr&aacute;vněn&iacute;m  &#039;Approve News&#039; permission.</p>
-	<h3>Jak se použ&iacute;v&aacute;?</h3>
-	<p>Nejjednodu&scaron;&scaron;&iacute; je to přes obalovac&iacute; tag {news} (obal&iacute; modul pro zjednodu&scaron;en&iacute; syntaxe). Toto vlož&iacute; modul Novinky do str&aacute;nek kdekoliv si přejete. K&oacute;d vypad&aacute; nějak n&aacute;sledovně: <code>{news number=&#039;5&#039;}</code></p>
-<h3>&Scaron;ablony</h3>
-<p>Od verze 2.3 modul Novinky obsahuje v&iacute;ce datab&aacute;zov&yacute;ch &scaron;ablon a nad&aacute;le nepodporuje dodatečn&eacute; soubory se &scaron;ablonami. Uživatel&eacute; použ&iacute;vaj&iacute;c&iacute; tento star&yacute; &scaron;ablonovac&iacute; syst&eacute;m by měli prov&eacute;st tyto kroky (pro každ&yacute; soubor &scaron;ablony):</p>
-<ul>
-<li>Zkop&iacute;rovat &scaron;ablonu do schr&aacute;nky</li>
-<li>Vytvořit novou datab&aacute;zovou &scaron;ablonu <em>(buď pro souhrn nebo detail)</em>. Přiřadit &scaron;abloně stejn&eacute; jm&eacute;no (včetně koncovky .tpl) podle star&eacute; souborov&eacute; &scaron;ablony a vložit do n&iacute; obsah ze schr&aacute;nky.</li>
-<li>Stisknout odeslat</li>
-</ul>
+$lang['help'] = '<h3>Důležit&eacute; pozn&aacute;mky</h3>
+
+<p>Verze Novinek 2.9 a vy&scaron;&scaron;&iacute; odstraňuje ze &scaron;ablony parametr formatpostdate a dateformat.  M&iacute;sto toho se pro form&aacute;tov&aacute;n&iacute; data použ&iacute;v&aacute; cms_date_format (jak je naznačeno ve v&yacute;choz&iacute;ch &scaron;ablon&aacute;ch) a v &scaron;ablon&aacute;ch se použ&iacute;v&aacute; entry->postdate m&iacute;sto entry->formatpostdate.</p>
+
+<h3>Co to děl&aacute;?</h3>
+
+<p>Novinky jsou modul pro zobrazov&aacute;n&iacute; novinek na str&aacute;nk&aacute;ch, podobn&eacute; stylu blogů, ale s v&iacute;ce vlastnostmi!.  Po instalaci modulu je do Administračn&iacute;ho panelu přid&aacute;no menu, kter&eacute; umožňuje vyb&iacute;rat nebo vkl&aacute;dat kategorie str&aacute;nek. Pot&eacute; co je kategorie vybr&aacute;na nebo vytvořena, je zobrazen seznam novinek t&eacute;to kategorie.  Zde můžete přid&aacute;vat, upravovat nebo mazat novinky zvolen&eacute; kategorie.</p>
+
+<h4>Mnoho metod zobrazen&iacute;</h4>
+
+<p>Podporovan&eacute; paraemtry modulu Novinky a podpora pro mnoho &scaron;ablon d&aacute;v&aacute; neomezen&eacute; možnosti zobrazen&iacute; novinek.</p>
+
+<h4>Vlastn&iacute; pole</h4>
+
+<p>Modul Novinky podporuje definov&aacute;n&iacute; mnoha vlastn&iacute;ch pol&iacute; (včetně souborů a obr&aacute;zků), což dovoluje připojit pdf soubory nebo obr&aacute;zky do Va&scaron;ich novinek.</p>
+
+        <h4>Kategorie</h4>
+
+	<p>Novinky nab&iacute;zej&iacute; hierarchick&eacute; tř&iacute;děn&iacute; kategori&iacute; pro organizaci Va&scaron;ich novinek. Novinka může b&yacute;t pouze v jedn&eacute; kategorii.</p>
+
+        <h4>RSS Feedy</h4>
+
+        <p>Novinky podporuj&iacute; generov&aacute;n&iacute; jednoduch&yacute;ch rss feedů z Va&scaron;ich novinek, takže uživatele&eacute; mohou b&yacute;t st&aacute;le informov&aacute;n&iacute; co se na Va&scaron;ich str&aacute;nk&aacute;ch děje.</p>
+
+	<h4>Vypr&scaron;en&iacute; a status</h4>
+
+	<p>Každ&aacute; položka může m&iacute;t voliteln&eacute; datum vypr&scaron;en&iacute;, po kter&eacute;m se již nebude zobrazovat na Va&scaron;ich str&aacute;nk&aacute;ch. Novinky mohou b&yacute;t tak&eacute; označeny jako <em>draft</em> pro jejich trval&eacute; odstraněn&iacute; ze str&aacute;nek.</p>
+
+	<h3>Bezpečnost</h3>
+
+	<p>uživatel mus&iacute; n&aacute;ležet do skupiny s opr&aacute;vněn&iacute;m &#039;Modify News&#039; pro vkl&aacute;d&aacute;n&iacute; nebo &uacute;pravu novinek.</p>
+
+        <p>Rovněž pro smaz&aacute;n&iacute; novinek mus&iacute; uživatel n&aacute;ležet do skupiny s opr&aacute;vněn&iacute;m  &#039;Delete News Articles&#039;.</p>
+
+	<p>Pro změnu &scaron;ablon, uživatel mus&iacute; n&aacute;ležet do skupiny s opr&aacute;vněn&iacute;m &#039;Modify Templates&#039; permission.</p>
+
+	<p>Pro &uacute;pravu glob&aacute;ln&iacute;ch nastaven&iacute; novinek mus&iacute; uživatel n&aacute;ležet do skupiny s opr&aacute;vněn&iacute;m  &#039;Modify Site Preferences&#039; permission.</p>
+
+	<p>A pro schv&aacute;len&iacute; zobrazov&aacute;n&iacute; novinek na str&aacute;nk&aacute;ch mus&iacute; uživatel n&aacute;ležet do skupiny s opr&aacute;vněn&iacute;m  &#039;Approve News&#039; permission.</p>
+
+	<h3>Jak se použ&iacute;v&aacute;?</h3>
+
+	<p>Nejjednodu&scaron;&scaron;&iacute; je to přes obalovac&iacute; tag {news} (obal&iacute; modul pro zjednodu&scaron;en&iacute; syntaxe). Toto vlož&iacute; modul Novinky do str&aacute;nek kdekoliv si přejete. K&oacute;d vypad&aacute; nějak n&aacute;sledovně: <code>{news number=&#039;5&#039;}</code></p>
+
+<h3>&Scaron;ablony</h3>
+
+<p>Od verze 2.3 modul Novinky obsahuje v&iacute;ce datab&aacute;zov&yacute;ch &scaron;ablon a nad&aacute;le nepodporuje dodatečn&eacute; soubory se &scaron;ablonami. Uživatel&eacute; použ&iacute;vaj&iacute;c&iacute; tento star&yacute; &scaron;ablonovac&iacute; syst&eacute;m by měli prov&eacute;st tyto kroky (pro každ&yacute; soubor &scaron;ablony):</p>
+
+<ul>
+
+<li>Zkop&iacute;rovat &scaron;ablonu do schr&aacute;nky</li>
+
+<li>Vytvořit novou datab&aacute;zovou &scaron;ablonu <em>(buď pro souhrn nebo detail)</em>. Přiřadit &scaron;abloně stejn&eacute; jm&eacute;no (včetně koncovky .tpl) podle star&eacute; souborov&eacute; &scaron;ablony a vložit do n&iacute; obsah ze schr&aacute;nky.</li>
+
+<li>Stisknout odeslat</li>
+
+</ul>
+
 <p>N&aacute;sledov&aacute;n&iacute; těchto kroků vyře&scaron;&iacute; probl&eacute;m s nenalezen&iacute;m &scaron;ablon novinek a jin&eacute; podobn&eacute; chyby smarty při aktualizaci CMS obsahuj&iacute;c&iacute; Novinky ve verzi 2.3 nebo vy&scaron;&scaron;&iacute;.</p>';
 $lang['utma'] = '156861353.4545864025444168000.1227726513.1235876853.1235894120.23';
 $lang['utmz'] = '156861353.1235854022.19.6.utmccn=(referral)|utmcsr=miditower|utmcct=/cms/admin/listmodules.php|utmcmd=referral';

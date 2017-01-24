@@ -51,26 +51,46 @@ $lang['help_class_img'] = 'Kuvan CSS-luokka, jos showbutton on asetettu';
 $lang['help_more'] = 'Aseta lis&auml;asetuksia &amp;lt;a&amp;gt; linkin sis&auml;lle';
 $lang['help_onlyurl'] = 'Tulosta pelkk&auml; url, ei koko linkki&auml;';
 $lang['help_includetemplate'] = 'Jos annettu arvo &#039;true&#039;, t&auml;m&auml; k&auml;sittelee koko sivupohjan eik&auml; vain p&auml;&auml;asiallista sis&auml;lt&ouml;&auml;. T&auml;m&auml; todenn&auml;k&ouml;isesti vaatii lis&auml;ty&ouml;t&auml; tulostustyyleille, jos mediatyyppi &#039;print&#039; on p&auml;&auml;ll&auml;.';
-$lang['help'] = '<b>Mit&auml; t&auml;m&auml; moduuli tekee?</b>
-<br/>
-T&auml;m&auml; sallii sinun lis&auml;t&auml; linkin sivuille/sivupohjiin, jonka kautta k&auml;ytt&auml;j&auml;t n&auml;kev&auml;t tulostimille soveltuvan version sivuista. Se voi my&ouml;s luoda lennosta pdf-tiedoston sivusta.
-<br/>
-Huomaa, ett&auml; jos parametri <i>includetemplate=true</i> ei ole k&auml;yt&ouml;ss&auml;, ainoastaan sivun p&auml;&auml;sis&auml;lt&ouml; tulostetaan. Ja huomaa my&ouml;s, ett&auml; pdf-tiedosto ei vastaa sivujesi ulkoasua, vaan sis&auml;lt&auml;&auml; ainoastaan p&auml;&auml;sis&auml;ll&ouml;n. 
-<br/><br/>
-<b>Kuinka k&auml;yt&auml;n moduulia?</b>
-<br/>
-Periaatteessa asennat moduulin, avaat sen hallintapaneelin kautta ja tarkistat/muutat sivupohjia linkille ja tulostettavalle sivulle
-<br/>
-Sivullesi tai sivupohjaasi sinun t&auml;ytyy lis&auml;t&auml; esimerkiksi:
-<pre>
-{cms_module module=&#039;printing&#039; <i>parametrit</i>}
-</pre>
-tai yksinkertaisesti
-<pre>
-{print <i>parametrit</i>}
-</pre>
-k&auml;ytt&auml;en tulostuslis&auml;osaa.
-<br/>
+$lang['help'] = '<b>Mit&auml; t&auml;m&auml; moduuli tekee?</b>
+
+<br/>
+
+T&auml;m&auml; sallii sinun lis&auml;t&auml; linkin sivuille/sivupohjiin, jonka kautta k&auml;ytt&auml;j&auml;t n&auml;kev&auml;t tulostimille soveltuvan version sivuista. Se voi my&ouml;s luoda lennosta pdf-tiedoston sivusta.
+
+<br/>
+
+Huomaa, ett&auml; jos parametri <i>includetemplate=true</i> ei ole k&auml;yt&ouml;ss&auml;, ainoastaan sivun p&auml;&auml;sis&auml;lt&ouml; tulostetaan. Ja huomaa my&ouml;s, ett&auml; pdf-tiedosto ei vastaa sivujesi ulkoasua, vaan sis&auml;lt&auml;&auml; ainoastaan p&auml;&auml;sis&auml;ll&ouml;n. 
+
+<br/><br/>
+
+<b>Kuinka k&auml;yt&auml;n moduulia?</b>
+
+<br/>
+
+Periaatteessa asennat moduulin, avaat sen hallintapaneelin kautta ja tarkistat/muutat sivupohjia linkille ja tulostettavalle sivulle
+
+<br/>
+
+Sivullesi tai sivupohjaasi sinun t&auml;ytyy lis&auml;t&auml; esimerkiksi:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>parametrit</i>}
+
+</pre>
+
+tai yksinkertaisesti
+
+<pre>
+
+{print <i>parametrit</i>}
+
+</pre>
+
+k&auml;ytt&auml;en tulostuslis&auml;osaa.
+
+<br/>
+
 ';
 $lang['utmz'] = '156861353.1269853138.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)';
 $lang['qca'] = 'P0-418055388-1269853137911';

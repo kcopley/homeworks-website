@@ -176,66 +176,116 @@ $lang['options'] = 'Opzioni';
 $lang['optionsupdated'] = 'Le opzioni sono state aggiornate con successo.';
 $lang['useexpiration'] = 'Usa la data di scadenza';
 $lang['eventdesc-NewsArticleAdded'] = 'Mandato quando un articolo &egrave; aggiunto.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Mandato quando un articolo &egrave; aggiunto.</p>
-<h4>Parametri</h4>
-<ul>
-<li>&quot;news_id&quot; - Id dell&#039;articolo</li>
-<li>&quot;category_id&quot; - Id della categoria dell&#039;articolo</li>
-<li>&quot;title&quot; - Titolo dell&#039;articolo</li>
-<li>&quot;content&quot; - Contenuto dell&#039;articolo</li>
-<li>&quot;summary&quot; - Sommario</li>
-<li>&quot;status&quot; - Stato dell&#039;articolo (&quot;bozza&quot; or &quot;pubblicato&quot;)</li>
-<li>&quot;start_time&quot; - Data in cui l&#039;articolo inizia ad essere visibile</li>
-<li>&quot;end_time&quot; - Data in cui l&#039;articolo smette di essere visibile</li>
-<li>&quot;useexp&quot; - Se la data di scadenza della visibilit&agrave; deve essere ignorata o meno</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Mandato quando un articolo &egrave; aggiunto.</p>
+
+<h4>Parametri</h4>
+
+<ul>
+
+<li>&quot;news_id&quot; - Id dell&#039;articolo</li>
+
+<li>&quot;category_id&quot; - Id della categoria dell&#039;articolo</li>
+
+<li>&quot;title&quot; - Titolo dell&#039;articolo</li>
+
+<li>&quot;content&quot; - Contenuto dell&#039;articolo</li>
+
+<li>&quot;summary&quot; - Sommario</li>
+
+<li>&quot;status&quot; - Stato dell&#039;articolo (&quot;bozza&quot; or &quot;pubblicato&quot;)</li>
+
+<li>&quot;start_time&quot; - Data in cui l&#039;articolo inizia ad essere visibile</li>
+
+<li>&quot;end_time&quot; - Data in cui l&#039;articolo smette di essere visibile</li>
+
+<li>&quot;useexp&quot; - Se la data di scadenza della visibilit&agrave; deve essere ignorata o meno</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Mandato quando un articolo &egrave; aggiornato.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Mandato quando un articolo &egrave; aggiornato.</p>
-<h4>Parametri</h4>
-<ul>
-<li>&quot;news_id&quot; - Id dell&#039;articolo</li>
-<li>&quot;category_id&quot; - Id della categoria dell&#039;articolo</li>
-<li>&quot;title&quot; - Titolo dell&#039;articolo</li>
-<li>&quot;content&quot; - Contenuto dell&#039;articolo</li>
-<li>&quot;summary&quot; - Sommario</li>
-<li>&quot;status&quot; - Stato dell&#039;articolo (&quot;bozza&quot; or &quot;pubblicato&quot;)</li>
-<li>&quot;start_time&quot; - Data in cui l&#039;articolo inizia ad essere visibile</li>
-<li>&quot;end_time&quot; - Data in cui l&#039;articolo smette di essere visibile</li>
-<li>&quot;useexp&quot; - Se la data di scadenza della visibilit&agrave; deve essere ignorata o meno</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Mandato quando un articolo &egrave; aggiornato.</p>
+
+<h4>Parametri</h4>
+
+<ul>
+
+<li>&quot;news_id&quot; - Id dell&#039;articolo</li>
+
+<li>&quot;category_id&quot; - Id della categoria dell&#039;articolo</li>
+
+<li>&quot;title&quot; - Titolo dell&#039;articolo</li>
+
+<li>&quot;content&quot; - Contenuto dell&#039;articolo</li>
+
+<li>&quot;summary&quot; - Sommario</li>
+
+<li>&quot;status&quot; - Stato dell&#039;articolo (&quot;bozza&quot; or &quot;pubblicato&quot;)</li>
+
+<li>&quot;start_time&quot; - Data in cui l&#039;articolo inizia ad essere visibile</li>
+
+<li>&quot;end_time&quot; - Data in cui l&#039;articolo smette di essere visibile</li>
+
+<li>&quot;useexp&quot; - Se la data di scadenza della visibilit&agrave; deve essere ignorata o meno</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Mandato quando un articolo &egrave; cancellato.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Mandato quando un articolo &egrave; cancellato.</p>
-<h4>Parametri</h4>
-<ul>
-<li>&quot;news_id&quot; - Id dell&#039;articolo</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Mandato quando un articolo &egrave; cancellato.</p>
+
+<h4>Parametri</h4>
+
+<ul>
+
+<li>&quot;news_id&quot; - Id dell&#039;articolo</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Mandato quando una categoria &egrave; aggiunta.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Mandato quando una categoria &egrave; aggiunta.</p>
-<h4>Parametri</h4>
-<ul>
-<li>&quot;category_id&quot; - Id della categoria</li>
-<li>&quot;name&quot; - Nome della categoria</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Mandato quando una categoria &egrave; aggiunta.</p>
+
+<h4>Parametri</h4>
+
+<ul>
+
+<li>&quot;category_id&quot; - Id della categoria</li>
+
+<li>&quot;name&quot; - Nome della categoria</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Mandato quando una categoria &egrave; aggiornata.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Mandato quando una categoria &egrave; aggiornata.</p>
-<h4>Parametri</h4>
-<ul>
-<li>&quot;category_id&quot; - Id della categoria</li>
-<li>&quot;name&quot; - Nome della categoria</li>
-<li>&quot;origname&quot; - Il nome originale della categoria</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Mandato quando una categoria &egrave; aggiornata.</p>
+
+<h4>Parametri</h4>
+
+<ul>
+
+<li>&quot;category_id&quot; - Id della categoria</li>
+
+<li>&quot;name&quot; - Nome della categoria</li>
+
+<li>&quot;origname&quot; - Il nome originale della categoria</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Mandato quando una categoria &egrave; cancellata.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Mandato quando una categoria &egrave; cancellata.</p>
-<h4>Parameters</h4>
-<ul>
-<li>&quot;category_id&quot; - Id della categoria</li>
-<li>&quot;name&quot; - Nome della categoria cancellata</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Mandato quando una categoria &egrave; cancellata.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>&quot;category_id&quot; - Id della categoria</li>
+
+<li>&quot;name&quot; - Nome della categoria cancellata</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'Questo parametro &egrave; applicabile solo nella visualizzazione di dettaglio. Permette, se specificata, quale articolo visualizzare nel modo dettaglio. Se viene usato il valore speciale -1, il sistema visualizzar&agrave; gli articoli i pi&ugrave; recenti, pubblicati e non spirati.';
 $lang['helpnumber'] = 'Numero massimo di articoli da visualizzare =- Lasciando vuoto mostrer&agrave; tutti gli articoli.';
@@ -252,34 +302,62 @@ $lang['helpdetailpage'] = 'Pagina di visualizzazione del dettaglio della News. Q
 $lang['helpshowarchive'] = 'Mostra solo gli articoli spirati.';
 $lang['helpbrowsecat'] = 'Mostra una lista di categorie.';
 $lang['helpaction'] = 'Sovrascrive l&#039;azione predefinita. Possibili valori sono &#039;default&#039; per la visualizzazione del sommario e &#039;fesubmit&#039; per la visualizzazione del form nel frontend per permettere agli utenti di pubblicare da l&igrave; gli articoli.';
-$lang['help'] = '<h3>Note Importanti</h3>
-<p>Dalla versione 2.9 News ha rimosso il formatpostdate dai modelli e il parametro dateformat. Per formattare le date dovete usare il modificatore cms_date_format (come indicato nel modello predefinito) ed usare nei Vostri modelli entry->postdate invece di entry->formatpostdate.</p>
-<p>Da questa versione &egrave; disabilitata la visualizzazione diretta dei feed RSS. Per gli RSS Feed utilizzare i due moduli (da installare in questo ordine): CGExtensions e CGFeedMaker.</p>
-<h3>Che cosa fa?</h3>
-<p>News &egrave; un modulo per visualizzare eventi sulla tua pagina, simile allo stile blog, solo con pi&ugrave; funzionalit&agrave;!. Quando il module &egrave; installato, in amministrazione una pagina News &egrave; aggiunta in fondo al menu che vi permette di selezionare o aggiungere una categoria. Quando una categoria &egrave; creata o selezionata, sar&agrave; visualizzata una lista di news per quella categoria. Da qui, potete aggiungere, modificare o cancellare news per quella categoria.</p>
-       <h4>Numerous display methods</h4>
-	<p>The parameters supported by the news module, and support for numerous templates of each time mean that your options for displaying news articles are limitless.</p>
-        <h4>Custom Fields</h4>
-	<p>The News module allows defining numerous custom fields (including files and images) that will allow you to attach pdf files or numerous images to your articles.</p>
-        <h4>Categories</h4>
-	<p>News supplies a hierarchical category mechanism for organizing your articles.  A news article can only be in one place in the hierarchy.</p>
-	<h4>Expiry and Status</h4>
-	<p>Each news article can have an optional expiry date, after which it will not be shown on your web page.  As well, articles can be marked as <em>draft</em> to remove them permanently from your web page.</p>
-	<h3>Sicurezza</h3>
-	<p>L&#039;utente deve appartenere a un gruppo con il permesso &#039;Modifica News&#039; per aggiungere, modificare, o cancellare News.</p>
-	<p>Per cancellare le news, l&#039;utente deve appartenere a un gruppo con il permesso &#039;Cancella articoli news&#039;</p>
-	<p>Per modificare il layout dei Modelli, l&#039;utente deve appartenere a un gruppo con il permesso &#039;Modifica Modelli&#039; </p>
-	<p>Per modificare le preferenze globali delle News, l&#039;utente deve appartenere a un gruppo con il permesso &#039;Modifica Preferenze del Sito&#039;</p>
-	<p>In aggiunta, per approvare news per la visualizzazione nel frontend l&#039;utente deve appartenere ad un gruppo con il permesso &#039;Approva News&#039;.</p>
-	<h3>Come usarlo?</h3>
-	<p>Il modo pi&ugrave; semplice di usarlo &egrave; con il tag {news} (il modulo in un tag, per semplificare la sintassi). Inseririsci il modulo dove vuoi nel vostro Modello o pagina, questo visualizzer&agrave; le news. Esempio di sintassi: <code>{news number=&#039;5&#039;}</code></p>
-<h3>Modelli</h3>
-	<p>Dalla versione 2.3 News supporta modelli multipli da database e NON supporta pi&ugrave; i modelli file. Utenti che usano il vecchio sistema dei modelli file DEVONO seguire questi passi (per ciascun modello):
-<ul>
-<li>Copia il modello file negli appunti</li>
-<li>Crea un nuovo Modello database <em>(di sommario o dettaglio come richiesto)</em>. Dare al nuovo modello lo stesso nome (incluso l&#039;estensione .tpl) esattamente del vecchio file e incollare il contenuto.</li>
-<li>Premere Invio</li>
-</ul>
+$lang['help'] = '<h3>Note Importanti</h3>
+
+<p>Dalla versione 2.9 News ha rimosso il formatpostdate dai modelli e il parametro dateformat. Per formattare le date dovete usare il modificatore cms_date_format (come indicato nel modello predefinito) ed usare nei Vostri modelli entry->postdate invece di entry->formatpostdate.</p>
+
+<p>Da questa versione &egrave; disabilitata la visualizzazione diretta dei feed RSS. Per gli RSS Feed utilizzare i due moduli (da installare in questo ordine): CGExtensions e CGFeedMaker.</p>
+
+<h3>Che cosa fa?</h3>
+
+<p>News &egrave; un modulo per visualizzare eventi sulla tua pagina, simile allo stile blog, solo con pi&ugrave; funzionalit&agrave;!. Quando il module &egrave; installato, in amministrazione una pagina News &egrave; aggiunta in fondo al menu che vi permette di selezionare o aggiungere una categoria. Quando una categoria &egrave; creata o selezionata, sar&agrave; visualizzata una lista di news per quella categoria. Da qui, potete aggiungere, modificare o cancellare news per quella categoria.</p>
+
+       <h4>Numerous display methods</h4>
+
+	<p>The parameters supported by the news module, and support for numerous templates of each time mean that your options for displaying news articles are limitless.</p>
+
+        <h4>Custom Fields</h4>
+
+	<p>The News module allows defining numerous custom fields (including files and images) that will allow you to attach pdf files or numerous images to your articles.</p>
+
+        <h4>Categories</h4>
+
+	<p>News supplies a hierarchical category mechanism for organizing your articles.  A news article can only be in one place in the hierarchy.</p>
+
+	<h4>Expiry and Status</h4>
+
+	<p>Each news article can have an optional expiry date, after which it will not be shown on your web page.  As well, articles can be marked as <em>draft</em> to remove them permanently from your web page.</p>
+
+	<h3>Sicurezza</h3>
+
+	<p>L&#039;utente deve appartenere a un gruppo con il permesso &#039;Modifica News&#039; per aggiungere, modificare, o cancellare News.</p>
+
+	<p>Per cancellare le news, l&#039;utente deve appartenere a un gruppo con il permesso &#039;Cancella articoli news&#039;</p>
+
+	<p>Per modificare il layout dei Modelli, l&#039;utente deve appartenere a un gruppo con il permesso &#039;Modifica Modelli&#039; </p>
+
+	<p>Per modificare le preferenze globali delle News, l&#039;utente deve appartenere a un gruppo con il permesso &#039;Modifica Preferenze del Sito&#039;</p>
+
+	<p>In aggiunta, per approvare news per la visualizzazione nel frontend l&#039;utente deve appartenere ad un gruppo con il permesso &#039;Approva News&#039;.</p>
+
+	<h3>Come usarlo?</h3>
+
+	<p>Il modo pi&ugrave; semplice di usarlo &egrave; con il tag {news} (il modulo in un tag, per semplificare la sintassi). Inseririsci il modulo dove vuoi nel vostro Modello o pagina, questo visualizzer&agrave; le news. Esempio di sintassi: <code>{news number=&#039;5&#039;}</code></p>
+
+<h3>Modelli</h3>
+
+	<p>Dalla versione 2.3 News supporta modelli multipli da database e NON supporta pi&ugrave; i modelli file. Utenti che usano il vecchio sistema dei modelli file DEVONO seguire questi passi (per ciascun modello):
+
+<ul>
+
+<li>Copia il modello file negli appunti</li>
+
+<li>Crea un nuovo Modello database <em>(di sommario o dettaglio come richiesto)</em>. Dare al nuovo modello lo stesso nome (incluso l&#039;estensione .tpl) esattamente del vecchio file e incollare il contenuto.</li>
+
+<li>Premere Invio</li>
+
+</ul>
+
 Seguendo questi passi si dovrebbe risolvere il problema dei nuovi modelli non trovati e altri errori similari di smarty quando aggiorni ad una versione di CMS che contiene News 2.3 o maggiore.</p>';
 $lang['utma'] = '156861353.2077070488.1283419442.1289165992.1289218840.17';
 $lang['utmz'] = '156861353.1289165992.16.14.utmcsr=forum.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php/topic,48753.0.html';

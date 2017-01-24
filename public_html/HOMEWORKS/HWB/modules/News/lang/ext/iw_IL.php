@@ -168,64 +168,112 @@ $lang['options'] = 'אפשרויות';
 $lang['optionsupdated'] = 'האפשרויות עודכנו בהצלחה';
 $lang['useexpiration'] = 'השתמש בתאריך תפוגה';
 $lang['eventdesc-NewsArticleAdded'] = 'נשלח כשנוסף מאמר.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>נשלח כשנוסף מאמר.</p>
-<h4>פרמטרים</h4>
-<ul>
-<li>\\"news_id\\" - קוד הזיהוי של המאמר</li>
-<li>\\"category_id\\" - קוד זיהוי המדור של מאמר זה</li>
-<li>\\"title\\" - כותרת המאמר</li>
-<li>\\"content\\" - תוכן המאמר</li>
-<li>\\"summary\\" - תקציר המאמר</li>
-<li>\\"status\\" - מצב המאמר ("טיוטא" או "פרסם")</li>
-<li>\\"start_time\\" - התאריך שבו המאמר יוצג</li>
-<li>\\"end_time\\" - התאריך שבו המאמר יפסיק להיות מוצג</li>
-<li>\\"useexp\\" - האם יש להתעלם מתאריך התפוגה או לא</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>נשלח כשנוסף מאמר.</p>
+
+<h4>פרמטרים</h4>
+
+<ul>
+
+<li>\\"news_id\\" - קוד הזיהוי של המאמר</li>
+
+<li>\\"category_id\\" - קוד זיהוי המדור של מאמר זה</li>
+
+<li>\\"title\\" - כותרת המאמר</li>
+
+<li>\\"content\\" - תוכן המאמר</li>
+
+<li>\\"summary\\" - תקציר המאמר</li>
+
+<li>\\"status\\" - מצב המאמר ("טיוטא" או "פרסם")</li>
+
+<li>\\"start_time\\" - התאריך שבו המאמר יוצג</li>
+
+<li>\\"end_time\\" - התאריך שבו המאמר יפסיק להיות מוצג</li>
+
+<li>\\"useexp\\" - האם יש להתעלם מתאריך התפוגה או לא</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'נשלח כשמאמר נערך.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>נשלח כשמאמר נערך.</p>
-<h4>פרמטרים</h4>
-<ul>
-<li>\\"news_id\\" - קוד הזיהוי של המאמר</li>
-<li>\\"category_id\\" - מס\' המדור למאמר זה</li>
-<li>\\"title\\" - כותרת המאמר</li>
-<li>\\"content\\" - תוכן המאמר</li>
-<li>\\"summary\\" - תקציר המאמר</li>
-<li>\\"status\\" - מצב המאמר ("טיוטא" או "פרסם")</li>
-<li>\\"start_time\\" - התאריך שבו המאמר יוצג</li>
-<li>\\"end_time\\" - התאריך שבו המאמר יפסיק להיות מוצג</li>
-<li>\\"useexp\\" - האם יש להתעלם מתאריך התפוגה או לא</li>
+$lang['eventhelp-NewsArticleEdited'] = '<p>נשלח כשמאמר נערך.</p>
+
+<h4>פרמטרים</h4>
+
+<ul>
+
+<li>\\"news_id\\" - קוד הזיהוי של המאמר</li>
+
+<li>\\"category_id\\" - מס\' המדור למאמר זה</li>
+
+<li>\\"title\\" - כותרת המאמר</li>
+
+<li>\\"content\\" - תוכן המאמר</li>
+
+<li>\\"summary\\" - תקציר המאמר</li>
+
+<li>\\"status\\" - מצב המאמר ("טיוטא" או "פרסם")</li>
+
+<li>\\"start_time\\" - התאריך שבו המאמר יוצג</li>
+
+<li>\\"end_time\\" - התאריך שבו המאמר יפסיק להיות מוצג</li>
+
+<li>\\"useexp\\" - האם יש להתעלם מתאריך התפוגה או לא</li>
+
 </ul>';
 $lang['eventdesc-NewsArticleDeleted'] = 'נשלח כשמאמר נמחק.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>נשלח כשמאמר נמחק.</p>
-<h4>פרמטרים</h4>
-<ul>
-<li>\\"news_id\\" - קוד הזיהוי של המאמר</li>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>נשלח כשמאמר נמחק.</p>
+
+<h4>פרמטרים</h4>
+
+<ul>
+
+<li>\\"news_id\\" - קוד הזיהוי של המאמר</li>
+
 </ul>';
 $lang['eventdesc-NewsCategoryAdded'] = 'נשלח כאשר נוסף מדור.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>נשלח כאשר נוסף מדור.</p>
-<h4>פרמטרים</h4>
-<ul>
-<li>\\"category_id\\" - קוד הזיהוי של המדור</li>
-<li>\\"name\\" - שם המדור</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>נשלח כאשר נוסף מדור.</p>
+
+<h4>פרמטרים</h4>
+
+<ul>
+
+<li>\\"category_id\\" - קוד הזיהוי של המדור</li>
+
+<li>\\"name\\" - שם המדור</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'נשלח כאשר מדור נערך.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>נשלח כאשר מדור נערך.</p>
-<h4>פרמטרים</h4>
-<ul>
-<li>\\"category_id\\" - קוד הזיהוי של המדור</li>
-<li>\\"name\\" - שם המדור</li>
-<li>\\"origname\\" - השם המקורי של המדור</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>נשלח כאשר מדור נערך.</p>
+
+<h4>פרמטרים</h4>
+
+<ul>
+
+<li>\\"category_id\\" - קוד הזיהוי של המדור</li>
+
+<li>\\"name\\" - שם המדור</li>
+
+<li>\\"origname\\" - השם המקורי של המדור</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'נשלח כאשר מדור נמחק.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>נשלח כאשר מדור נמחק.</p>
-<h4>פרמטרים</h4>
-<ul>
-<li>\\"category_id\\" - קוד הזיהוי של המדור המחוק</li>
-<li>\\"name\\" - שם המדור המחוק</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>נשלח כאשר מדור נמחק.</p>
+
+<h4>פרמטרים</h4>
+
+<ul>
+
+<li>\\"category_id\\" - קוד הזיהוי של המדור המחוק</li>
+
+<li>\\"name\\" - שם המדור המחוק</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'פרמטר זה הוא ישים רק כדי להציג את הפרטים. זה מאפשר ציון אשר מאמר חדשותי כדי להציג במצב בפירוט. אם הערך המיוחד -1 משמש, המערכת תציג את החדש, שפורסם, מאמר שאינו פג.';
 $lang['helpnumber'] = 'Maximum number of items to display =- leaving empty will show all items.';
@@ -241,25 +289,43 @@ $lang['helpsortasc'] = 'לפי ידיעות על מנת תאריך עולה ול
 $lang['helpdetailpage'] = 'דף כדי להציג פרטים חדשות פנימה זה יכול להיות כינוי מקור או תעודת זהות. משמש כדי לאפשר הפרטים שיוצגו תבנית שונה סיכום.';
 $lang['helpshowarchive'] = 'הצג מאמרים שתוקפם פג בלבד.';
 $lang['helpbrowsecat'] = 'מציג רשימת מדורים לעיון.';
-$lang['helpaction'] = '\'Override the default action.  Possible values are:
-<ul>
-<li>"detail" - to display a specified articleid in detail mode.</li>
-<li>"default" - to display the summary view</li>
-<li>"fesubmit" - to display the frontend form for allowing users to submit news articles on the front end.</li>
-<li>"browsecat" - to display a browseable category list.</li>
+$lang['helpaction'] = '\'Override the default action.  Possible values are:
+
+<ul>
+
+<li>"detail" - to display a specified articleid in detail mode.</li>
+
+<li>"default" - to display the summary view</li>
+
+<li>"fesubmit" - to display the frontend form for allowing users to submit news articles on the front end.</li>
+
+<li>"browsecat" - to display a browseable category list.</li>
+
 </ul>';
-$lang['help'] = '	<h3>What does this do?</h3>
-	<p>News is a module for displaying news events on your page, similar to a blog style, except with more features!.  When the module is installed, a News admin page is added to administration menu that will allow you to select or add a news category.  Once a news category is created or selected, a list of news items for that category will be displayed.  From here, you can add, edit or delete news items for that category.</p>
-	<h3>Template variables</h3>
-	<ul>
-		<li><b>itemcount</b> - The number of news articles to be shown.</li>
-		<li><b>entry->authorname</b> - The full name of the the author including First and Last name.</li>
-	</ul>
-	<h3>Security</h3>
-	<p>The user must belong to a group with the \'Modify News\' permission in order to add, edit, or delete News entries.</p>
-	<p>In order to edit the layout templates, the user must belong to a group with the \'Modify Templates\' permission.</p>
-	<p>In order to edit the global news preferences, the user must belong to a group with the \'Modify Site Preferences\' permission.</p>
-	<h3>How do I use it?</h3>
+$lang['help'] = '	<h3>What does this do?</h3>
+
+	<p>News is a module for displaying news events on your page, similar to a blog style, except with more features!.  When the module is installed, a News admin page is added to administration menu that will allow you to select or add a news category.  Once a news category is created or selected, a list of news items for that category will be displayed.  From here, you can add, edit or delete news items for that category.</p>
+
+	<h3>Template variables</h3>
+
+	<ul>
+
+		<li><b>itemcount</b> - The number of news articles to be shown.</li>
+
+		<li><b>entry->authorname</b> - The full name of the the author including First and Last name.</li>
+
+	</ul>
+
+	<h3>Security</h3>
+
+	<p>The user must belong to a group with the \'Modify News\' permission in order to add, edit, or delete News entries.</p>
+
+	<p>In order to edit the layout templates, the user must belong to a group with the \'Modify Templates\' permission.</p>
+
+	<p>In order to edit the global news preferences, the user must belong to a group with the \'Modify Site Preferences\' permission.</p>
+
+	<h3>How do I use it?</h3>
+
 	<p>The easiest way to use it is with the {news} wrapper tag (wraps the module in a tag, to simplify the syntax).  This will insert the module into your template or page anywhere you wish, and display news items.  The code would look something like: <code>{news number=\'5\'}</code></p>';
 $lang['qca'] = 'P0-2002441699-1270635418106';
 $lang['utmz'] = '156861353.1273086462.8.3.utmcsr=4x6hp.net|utmccn=(referral)|utmcmd=referral|utmcct=/iarc/index.php';

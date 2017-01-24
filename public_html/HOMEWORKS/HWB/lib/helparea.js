@@ -1,5 +1,5 @@
 /***********************************************
-* Contractible Headers script- © Dynamic Drive (www.dynamicdrive.com)
+* Contractible Headers script- ï¿½ Dynamic Drive (www.dynamicdrive.com)
 * This notice must stay intact for legal use. Last updated Oct 21st, 2003.
 * Visit http://www.dynamicdrive.com/ for full source code
 ***********************************************/

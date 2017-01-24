@@ -223,7 +223,7 @@ class Book {
             );
 
             foreach ($consigners as $consigner) {
-                $outsidetable->add_object(Display(Consigner::$props, $consigner, Consigner::$source));
+                $outsidetable->add_object(Display(Consigner::$book_display_props, $consigner, Consigner::$source));
             }
             $list->add_object($outsidetable);
         }

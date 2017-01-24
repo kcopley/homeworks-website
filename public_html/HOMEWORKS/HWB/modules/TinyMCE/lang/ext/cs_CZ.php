@@ -60,7 +60,8 @@ $lang['datetimeformat_help'] = 'Klikněte sem pro n&aacute;povědu, jak nastavit
 $lang['extraconfigtext'] = 'Speci&aacute;ln&iacute; konfigurace';
 $lang['extraconfighelp'] = 'Zkontrolujte TinyMCE-wiki pro instrukce';
 $lang['customdropdowntext'] = 'Vlastn&iacute; menu';
-$lang['customdropdownhelp'] = 'Vkl&aacute;d&aacute; upraviteln&eacute; kousky k&oacute;du/textu v&yacute;běrem v dropdown menu. 
+$lang['customdropdownhelp'] = 'Vkl&aacute;d&aacute; upraviteln&eacute; kousky k&oacute;du/textu v&yacute;běrem v dropdown menu. 
+
 Zřejm&eacute; použit&iacute; je pro jednoduch&yacute; př&iacute;stup k tagům atd. Menu je vloženo do n&aacute;strojov&eacute; li&scaron;ty přes &#039;customdropdown&#039;.';
 $lang['startenabledtext'] = 'Start povolen';
 $lang['startenabledhelp'] = 'Od&scaron;krtnut&iacute; t&eacute;to volby spust&iacute; Tiny editor v zak&aacute;zan&eacute;m stavu. Použ&iacute;v&aacute; se společně s přep&iacute;nac&iacute;m tlač&iacute;tkem.';
@@ -135,20 +136,34 @@ $lang['thousanddelimiter'] = ', ';
 $lang['size'] = 'Velikost';
 $lang['dimensions'] = 'HxW';
 $lang['advanced_tab'] = 'Pokročil&eacute;';
-$lang['help'] = '	<h3>Co děl&aacute; tento modul?</h3>
-	<p>Umožn&iacute; použ&iacute;vat TinyMCE WYSIWYG editor pro &uacute;pravu obsahu.</p>
-	<h3>Jak to použ&iacute;t?</h3>
-	<p>Nainstalovat, pot&eacute; j&iacute;t do Uživatelsk&yacute;ch nastaven&iacute;, a nastavit TinyMCE jako V&aacute;&scaron; WYSIWYG editor.</p>
-	<h3>Ře&scaron;en&iacute; probl&eacute;mů</h3>
-	někdo měl probl&eacute;my s nezobrazov&aacute;n&iacute;m tiny po instalaci nebo aktualizaci. Zde je seznam věc&iacute;, kter&eacute; byste měli zkusit dř&iacute;ve než mě kontaktujete pro podporu.
-	<br/>
-	<ul>
-	<li>1. Pros&iacute;m, pros&iacute;m, zkuste znovu nahr&aacute;t adres&aacute;ř modules/TinyMCE na V&aacute;&scaron; serverr. Budete překvapeni, kolikr&aacute;t to lidem pomohlo.</li>
-	<li>2. Zkuste změnit na volbu statick&eacute; konfigurace. Toto vyžaduje, aby byl V&aacute;&scaron; adres&aacute;ř /tmp/ zapisovateln&yacute; webov&yacute;m serverem</li>
-	<li>3. Při aktualizaci zkuste pros&iacute;m zresetovat v&scaron;echna nastaven&iacute;. Je to nemil&eacute; pokud m&aacute;te mnoho &uacute;prav, ale mnoho věc&iacute; se změnilo při přechodu z 2.3.x do 2.4.x s&eacute;rie modulu.
-	<li>4. zkuste povolit statickou konfiguraci v roz&scaron;&iacute;řen&yacute;ch nastafen&iacute;ch. Toto funguje l&eacute;pe na někter&yacute;ch syst&eacute;mech (např. CGI-based)
-	</ul>
-	<br/>
+$lang['help'] = '	<h3>Co děl&aacute; tento modul?</h3>
+
+	<p>Umožn&iacute; použ&iacute;vat TinyMCE WYSIWYG editor pro &uacute;pravu obsahu.</p>
+
+	<h3>Jak to použ&iacute;t?</h3>
+
+	<p>Nainstalovat, pot&eacute; j&iacute;t do Uživatelsk&yacute;ch nastaven&iacute;, a nastavit TinyMCE jako V&aacute;&scaron; WYSIWYG editor.</p>
+
+	<h3>Ře&scaron;en&iacute; probl&eacute;mů</h3>
+
+	někdo měl probl&eacute;my s nezobrazov&aacute;n&iacute;m tiny po instalaci nebo aktualizaci. Zde je seznam věc&iacute;, kter&eacute; byste měli zkusit dř&iacute;ve než mě kontaktujete pro podporu.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Pros&iacute;m, pros&iacute;m, zkuste znovu nahr&aacute;t adres&aacute;ř modules/TinyMCE na V&aacute;&scaron; serverr. Budete překvapeni, kolikr&aacute;t to lidem pomohlo.</li>
+
+	<li>2. Zkuste změnit na volbu statick&eacute; konfigurace. Toto vyžaduje, aby byl V&aacute;&scaron; adres&aacute;ř /tmp/ zapisovateln&yacute; webov&yacute;m serverem</li>
+
+	<li>3. Při aktualizaci zkuste pros&iacute;m zresetovat v&scaron;echna nastaven&iacute;. Je to nemil&eacute; pokud m&aacute;te mnoho &uacute;prav, ale mnoho věc&iacute; se změnilo při přechodu z 2.3.x do 2.4.x s&eacute;rie modulu.
+
+	<li>4. zkuste povolit statickou konfiguraci v roz&scaron;&iacute;řen&yacute;ch nastafen&iacute;ch. Toto funguje l&eacute;pe na někter&yacute;ch syst&eacute;mech (např. CGI-based)
+
+	</ul>
+
+	<br/>
+
 ';
 $lang['utma'] = '156861353.2728179833787326000.1247844799.1249143062.1249145832.24';
 $lang['utmz'] = '156861353.1249118471.17.14.utmccn=(referral)|utmcsr=dev.cmsmadesimple.org|utmcct=/feature_request/list/605|utmcmd=referral';

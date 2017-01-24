@@ -44,55 +44,103 @@ $lang['help_src_img'] = 'Show this image file instead of the default';
 $lang['help_class_img'] = 'Class of <img> tag if showbutton is set';
 $lang['help_more'] = 'Place additional options inside the <a> link';
 $lang['help_onlyurl'] = 'Outputs just the url, not a complete link';
-$lang['changelog'] = '<ul>
-<li>
-<p>version 0.2.1 (calguy1000)</p>
-<p>Tweaks to the default list template.  Adds more smarty variables to the
-list template, and cleans up a warning.</p>
-<p>Fixed a wierd little typo causing the module to break</p>
-</li>
-<li>
-<p>version 0.2.0</p>
-<p>Added support for generating PDF-files</p>
-</li>
-<li>
-<p>version 0.1.1</p>
-<p>Allowed specifying stylesheet content to override the system&#039;s</p>
-</li>
-<li>
-<p>version 0.1.0</p>
-<p>First usable version</p>
-</li>
-</ul>
+$lang['changelog'] = '<ul>
+
+<li>
+
+<p>version 0.2.1 (calguy1000)</p>
+
+<p>Tweaks to the default list template.  Adds more smarty variables to the
+
+list template, and cleans up a warning.</p>
+
+<p>Fixed a wierd little typo causing the module to break</p>
+
+</li>
+
+<li>
+
+<p>version 0.2.0</p>
+
+<p>Added support for generating PDF-files</p>
+
+</li>
+
+<li>
+
+<p>version 0.1.1</p>
+
+<p>Allowed specifying stylesheet content to override the system&#039;s</p>
+
+</li>
+
+<li>
+
+<p>version 0.1.0</p>
+
+<p>First usable version</p>
+
+</li>
+
+</ul>
+
 ';
-$lang['help'] = '<b>What does this module do?</b>
-<br/>
-This allow you to insert a link in pages/templates which directs the 
-visitor to a version of the page better suited for printing. Several parameters can be set so make the link and
-printer friendly page look just as you&#039;d like. As of version 0.2.0, a parameter can be set to onthefly-generation of a PDF-file instead.
-<br/>
-For now the module only supports &quot;plain&quot; content pages, no module-redirections etc. But neither does the builtin printing-functionality in CMSms.
-<br/>
-Please note that the module currently only outputs the main content, not alternate content blocks defined in the templates.
-
-<br/><br/>
-<b>How do I use this module?</b>
-<br/>
-Basically you install the module, access it&#039;s administration interface and review/change the templates for the
-link and for the printable page
-<br/>
-In you page content or template you then insert something like:
-<pre>
-{cms_module module=&#039;printing&#039; <i>params</i>}
-</pre>
-and a link should emerge on your pages. 
-<br/><br/>
-<b>Notes:</b>
-<br/>
-<ul>
-<li>PDF Generation is experimental at this time.</li>
-<li>PDF Generation may not work on servers with php 4.x, it is recommended you encourage your host to upgrade to php5 if you want PDF support.</li>
-</ul>
+$lang['help'] = '<b>What does this module do?</b>
+
+<br/>
+
+This allow you to insert a link in pages/templates which directs the 
+
+visitor to a version of the page better suited for printing. Several parameters can be set so make the link and
+
+printer friendly page look just as you&#039;d like. As of version 0.2.0, a parameter can be set to onthefly-generation of a PDF-file instead.
+
+<br/>
+
+For now the module only supports &quot;plain&quot; content pages, no module-redirections etc. But neither does the builtin printing-functionality in CMSms.
+
+<br/>
+
+Please note that the module currently only outputs the main content, not alternate content blocks defined in the templates.
+
+
+
+<br/><br/>
+
+<b>How do I use this module?</b>
+
+<br/>
+
+Basically you install the module, access it&#039;s administration interface and review/change the templates for the
+
+link and for the printable page
+
+<br/>
+
+In you page content or template you then insert something like:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>params</i>}
+
+</pre>
+
+and a link should emerge on your pages. 
+
+<br/><br/>
+
+<b>Notes:</b>
+
+<br/>
+
+<ul>
+
+<li>PDF Generation is experimental at this time.</li>
+
+<li>PDF Generation may not work on servers with php 4.x, it is recommended you encourage your host to upgrade to php5 if you want PDF support.</li>
+
+</ul>
+
 ';
 $lang['utmz'] = '156861353.1206457831.4.3.utmccn=(referral)|utmcsr=suntours.pl|utmcct=/admin/listmodules.php|utmcmd=referral';
 $lang['utma'] = '156861353.1717093438.1205410641.1206457831.1206977657.5';

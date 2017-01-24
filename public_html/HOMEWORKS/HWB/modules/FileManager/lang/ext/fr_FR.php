@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Ne fonctionne qu&#039;en mode avanc&eacute;';
 $lang['showhiddenfiles'] = 'Afficher les fichiers cach&eacute;s';
 $lang['settingsconfirmsingledelete'] = 'Confirmer la suppression d&#039;un fichier seul ?';
 $lang['settingssaved'] = 'Param&egrave;tres sauvegard&eacute;s';
-$lang['help'] = '		<h3>Que fait ce module ?</h3>
-		<p>Le module Gestionnaire de fichiers (File Manager) offre des fonctions de gestion de fichiers</p>
-		<h3>Comment l&#039;utiliser ?</h3>
+$lang['help'] = '		<h3>Que fait ce module ?</h3>
+
+		<p>Le module Gestionnaire de fichiers (File Manager) offre des fonctions de gestion de fichiers</p>
+
+		<h3>Comment l&#039;utiliser ?</h3>
+
 		<p>S&eacute;lectionnez-le depuis le menu Contenu de l&#039;administration. Il vous servira &agrave; uploader, d&eacute;placer ou effacer les fichiers contenus dans le dossier &quot;uploads&quot; du site. En mode avanc&eacute;, vous aurez alors acc&egrave;s &agrave; tout les fichiers (non recommand&eacute;)</p>';
 $lang['qca'] = 'P0-1624099198-1262715852421';
 $lang['utma'] = '156861353.871440515.1266773941.1266773941.1266773941.1';

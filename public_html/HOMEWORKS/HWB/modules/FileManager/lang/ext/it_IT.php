@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Effettivo solo abilitando il modo avanzato';
 $lang['showhiddenfiles'] = 'Mostra file nascosti';
 $lang['settingsconfirmsingledelete'] = 'Conferma l&#039;eliminazione di un file singolo?';
 $lang['settingssaved'] = 'Impostazioni salvate';
-$lang['help'] = '		<h3>Cosa fa?</h3>
-		<p>Fornisce funzionalit&agrave; di gestione dei file</p>
-		<h3>Come si usa?</h3>
+$lang['help'] = '		<h3>Cosa fa?</h3>
+
+		<p>Fornisce funzionalit&agrave; di gestione dei file</p>
+
+		<h3>Come si usa?</h3>
+
 		<p>Selezionalo dal menu Contenuto nella sezione di amministrazione.</p>';
 $lang['qca'] = 'P0-1187230324-1271659236866';
 $lang['utma'] = '156861353.976402040.1271759292.1276850904.1277118686.4';

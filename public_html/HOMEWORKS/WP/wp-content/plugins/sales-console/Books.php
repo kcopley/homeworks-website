@@ -67,6 +67,11 @@ switch (page_action::GetAction()) {
         page_action::SetNewAction(action_types::get_search(Book::$source));
         GenerateSearch(Book::$props, Book::$source, Book::$post_type)->Render();
         break;
+    case action_types::$remove_book_from_consigner:
+        page_action::SetNewAction(action_types::get_select(Book::$source));
+        Book::remove_book(selection::GetID(Book::$source), selection::GetID(Consigner::$source));
+        Book::SelectBook(selection::GetID(Book::$source))->Render();
+        break;
     default:
         selection::ResetPages(vars::$library_page);
 };
@@ -97,8 +102,8 @@ function media_selector_print_scripts() {
             var file_frame;
             jQuery('.upload_image_button').on('click', function( event ){
 
-                var element = event.srcElement;
-                var post_id = event.srcElement.id;
+                var element = event.target;
+                var post_id = event.target.id;
                 var parent = element.parentElement;
 
                 event.preventDefault();

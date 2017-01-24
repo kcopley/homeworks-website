@@ -51,31 +51,56 @@ $lang['help_class_img'] = 'Class van de <img> tag als de showbutton ingesteld is
 $lang['help_more'] = 'Plaats extra opties binnen de &amp;lt;a&amp;gt; link';
 $lang['help_onlyurl'] = 'Schrijft alleen de url weg, niet de complete link';
 $lang['help_includetemplate'] = 'Indien ingesteld op &#039;waar&#039; wordt de gehele template de basis om te (pdf) printen, niet alleen de inhoud. Dit zal waarschijnlijk wel wat CSS instelwerk nodig hebben, met de mediatype &#039;print&#039; aangevinkt.';
-$lang['help'] = '<b>What does this module do?</b>
-<br/>
-This allow you to insert a link in pages/templates which directs the 
-visitor to a version of the page better suited for printing. It can also link
-to an basic on-the-fly-generated pdf version of the page.
-<br/>
-Please note that unless the parameter <i>includetemplate=true</i> is used, only the main output of the page is outputted. And note
-that the pdf-file outputted may not have much resemblance with you page, but should provide the content.
-<br/><br/>
-<b>How do I use this module?</b>
-<br/>
-Basically you install the module, access it&#039;s administration interface and review/change the templates for the
-link and for the printable page
-<br/>
-In you page content or template you then insert something like:
-<pre>
-{cms_module module=&#039;printing&#039; <i>params</i>}
-</pre>
-or simply
-<pre>
-{print <i>params</i>}
-</pre>
-using the print-plugin
-<br/>
-
+$lang['help'] = '<b>What does this module do?</b>
+
+<br/>
+
+This allow you to insert a link in pages/templates which directs the 
+
+visitor to a version of the page better suited for printing. It can also link
+
+to an basic on-the-fly-generated pdf version of the page.
+
+<br/>
+
+Please note that unless the parameter <i>includetemplate=true</i> is used, only the main output of the page is outputted. And note
+
+that the pdf-file outputted may not have much resemblance with you page, but should provide the content.
+
+<br/><br/>
+
+<b>How do I use this module?</b>
+
+<br/>
+
+Basically you install the module, access it&#039;s administration interface and review/change the templates for the
+
+link and for the printable page
+
+<br/>
+
+In you page content or template you then insert something like:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>params</i>}
+
+</pre>
+
+or simply
+
+<pre>
+
+{print <i>params</i>}
+
+</pre>
+
+using the print-plugin
+
+<br/>
+
+
+
 ';
 $lang['utma'] = '156861353.799969050.1225024056.1244555916.1244572805.339';
 $lang['utmz'] = '156861353.1244550087.337.59.utmcsr=forum.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php/topic,34493.new.html';

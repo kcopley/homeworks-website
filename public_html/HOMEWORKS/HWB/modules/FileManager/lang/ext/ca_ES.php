@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Nom&eacute;s efectiu amb la modalitat avan&ccedi
 $lang['showhiddenfiles'] = 'Mostrar arxius ocults';
 $lang['settingsconfirmsingledelete'] = 'Realment vols esborrar un arxiu?';
 $lang['settingssaved'] = 'Configuraci&oacute; desada';
-$lang['help'] = '		<h3>Qu&egrave; fa aix&ograve;?</h3>
-		<p>Aquest m&ograve;dul proporciona funcions de gesti&oacute; d&#039;arxius, eventualment i esperablement substitu&iuml;nt el for&ccedil;a antic sistema integrat de gesti&oacute; d&#039;arxius.</p>
-		<h3>Com l&#039;utilitzo?</h3>
+$lang['help'] = '		<h3>Qu&egrave; fa aix&ograve;?</h3>
+
+		<p>Aquest m&ograve;dul proporciona funcions de gesti&oacute; d&#039;arxius, eventualment i esperablement substitu&iuml;nt el for&ccedil;a antic sistema integrat de gesti&oacute; d&#039;arxius.</p>
+
+		<h3>Com l&#039;utilitzo?</h3>
+
 		<p>Tria&#039;l des del men&uacute; de contingut en l&#039;entorn d&#039;administraci&oacute;. Mentre l&#039;antic gestor d&#039;arxius encara sigui all&agrave;, has de triar l&#039;opci&oacute; de m&eacute;s avall.</p>';
 $lang['utma'] = '156861353.3109145977533247500.1225311312.1256902475.1256908322.42';
 $lang['utmz'] = '156861353.1254088757.35.2.utmccn=(referral)|utmcsr=66.147.244.155|utmcct=/~clubcocc/cmsmadesimple/install/index.php|utmcmd=referral';

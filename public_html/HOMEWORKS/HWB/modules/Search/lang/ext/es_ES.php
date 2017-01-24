@@ -44,49 +44,87 @@ $lang['eventdesc-SearchCompleted'] = 'Se env&iacute;a al finalizar una b&uacute;
 $lang['eventdesc-SearchItemAdded'] = 'Se env&iacute;a al indexar un nuevo elemento.';
 $lang['eventdesc-SearchItemDeleted'] = 'Se env&iacute;a al eliminar un elemento del &iacute;ndice.';
 $lang['eventdesc-SearchAllItemsDeleted'] = 'Se env&iacute;a al eliminar todos los elementos del &iacute;ndice.';
-$lang['eventhelp-SearchInitiated'] = '<p>Se env&iacute;a al iniciar una b&uacute;squeda.</p>
-<h4>Par&aacute;metros</h4>
-<ol>
-<li>Texto que se busc&oacute;.</li>
-</ol>
+$lang['eventhelp-SearchInitiated'] = '<p>Se env&iacute;a al iniciar una b&uacute;squeda.</p>
+
+<h4>Par&aacute;metros</h4>
+
+<ol>
+
+<li>Texto que se busc&oacute;.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchCompleted'] = '<p>Se env&iacute;a al finalizar una b&uacute;squeda.</p>
-<h4>Par&aacute;metros</h4>
-<ol>
-<li>Texto que se busc&oacute;.</li>
-<li>Array del resultado completo.</li>
-</ol>
+$lang['eventhelp-SearchCompleted'] = '<p>Se env&iacute;a al finalizar una b&uacute;squeda.</p>
+
+<h4>Par&aacute;metros</h4>
+
+<ol>
+
+<li>Texto que se busc&oacute;.</li>
+
+<li>Array del resultado completo.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemAdded'] = '<p>Se env&iacute;a al indexar un nuevo elemento.</p>
-<h4>Par&aacute;metros</h4>
-<ol>
-<li>Nombre del M&oacute;dulo</li>
-<li>Id del elemento.</li>
-<li>Atributo Adicional.</li>
-<li>Contenido a a&ntilde;adir e indexar.</li>
-</ol>
+$lang['eventhelp-SearchItemAdded'] = '<p>Se env&iacute;a al indexar un nuevo elemento.</p>
+
+<h4>Par&aacute;metros</h4>
+
+<ol>
+
+<li>Nombre del M&oacute;dulo</li>
+
+<li>Id del elemento.</li>
+
+<li>Atributo Adicional.</li>
+
+<li>Contenido a a&ntilde;adir e indexar.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemDeleted'] = '<p>Se env&iacute;a al eliminar un elemento del &iacute;ndice.</p>
-<h4>Par&aacute;metros</h4>
-<ol>
-<li>Nombre del M&oacute;dulo</li>
-<li>Id del elemento.</li>
-<li>Atributo Adicional.</li>
-</ol>
+$lang['eventhelp-SearchItemDeleted'] = '<p>Se env&iacute;a al eliminar un elemento del &iacute;ndice.</p>
+
+<h4>Par&aacute;metros</h4>
+
+<ol>
+
+<li>Nombre del M&oacute;dulo</li>
+
+<li>Id del elemento.</li>
+
+<li>Atributo Adicional.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Se env&iacute;a al eliminar todos los elementos del &iacute;ndice.</p>
-<h4>Par&aacute;metros</h4>
-<ul>
-<li>Ninguno</li>
-</ul>
+$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Se env&iacute;a al eliminar todos los elementos del &iacute;ndice.</p>
+
+<h4>Par&aacute;metros</h4>
+
+<ul>
+
+<li>Ninguno</li>
+
+</ul>
+
 ';
-$lang['help'] = '<h3>&iquest;Qu&eacute; hace esto?</h3>
-<p>El m&oacute;dulo de b&uacute;squeda es para realizar b&uacute;squedas en el &quot;core&quot; del contenido al mismo tiempo que en ciertos m&oacute;dulos registrados.  Usted pone una o dos palabras y &eacute;l le dar&aacute; como resultado coincidencias del contenido con las palabras dadas.</p>
-<h3>&iquest;C&oacute;mo lo puedo usar?</h3>
-<p>La forma m&aacute;s sencilla de utilizarlo es con el contenedor de tag {search} (envuelve al m&oacute;dulo en un tag, con el fin de simplificar la sintaxis). Esto permitir&aacute; incluir al m&oacute;dulo en sus plantillas o p&aacute;ginas, cualquiera sea el lugar que quiera, y as&iacute; mostrar el formulario de b&uacute;squedas.  El c&oacute;digo se ver&aacute; algo as&iacute; como esto: <code>{search}</code></p>
-<h4>&iquest;C&oacute;mo puedo hacer para evitar que alg&uacute;n contenido sea indexado?</h4>
-<p>El m&oacute;dulo de b&uacute;squeda no indexar&aacute; aquellas p&aacute;ginas que est&eacute;n &quot;inactivas&quot;. Sin embargo hay ocasiones, cuando usted utiliza el m&oacute;dulo CustomContent, o alg&uacute;n otro con l&oacute;gica smarty para mostrar diferentes contenidos a diferentes grupos de usuarios, puede ser aconsejable prevenir que la p&aacute;gina completa sea indexada a&uacute;n cuando se haya publicado.  Para lograr &eacute;ste objetivo incluya la siguiente tag en cualquier lugar de la p&aacute;gina <em><!-- pageAttribute: NotSearchable --></em> Cuando el m&oacute;dulo de b&uacute;squeda vea &eacute;sta tag en la p&aacute;gina no la indexar&aacute; de ninguna forma.</p>
-<p>La tag <em><!-- pageAttribute: NotSearchable --></em> puede ubicarse tambi&eacute;n en la plantilla.  Si este fuera el caso, ninguna de las p&aacute;ginas unidas a esta plantilla ser&aacute; indexada.  Estas p&aacute;ginas ser&aacute;n re-indexadas si quitamos el tag</p>
+$lang['help'] = '<h3>&iquest;Qu&eacute; hace esto?</h3>
+
+<p>El m&oacute;dulo de b&uacute;squeda es para realizar b&uacute;squedas en el &quot;core&quot; del contenido al mismo tiempo que en ciertos m&oacute;dulos registrados.  Usted pone una o dos palabras y &eacute;l le dar&aacute; como resultado coincidencias del contenido con las palabras dadas.</p>
+
+<h3>&iquest;C&oacute;mo lo puedo usar?</h3>
+
+<p>La forma m&aacute;s sencilla de utilizarlo es con el contenedor de tag {search} (envuelve al m&oacute;dulo en un tag, con el fin de simplificar la sintaxis). Esto permitir&aacute; incluir al m&oacute;dulo en sus plantillas o p&aacute;ginas, cualquiera sea el lugar que quiera, y as&iacute; mostrar el formulario de b&uacute;squedas.  El c&oacute;digo se ver&aacute; algo as&iacute; como esto: <code>{search}</code></p>
+
+<h4>&iquest;C&oacute;mo puedo hacer para evitar que alg&uacute;n contenido sea indexado?</h4>
+
+<p>El m&oacute;dulo de b&uacute;squeda no indexar&aacute; aquellas p&aacute;ginas que est&eacute;n &quot;inactivas&quot;. Sin embargo hay ocasiones, cuando usted utiliza el m&oacute;dulo CustomContent, o alg&uacute;n otro con l&oacute;gica smarty para mostrar diferentes contenidos a diferentes grupos de usuarios, puede ser aconsejable prevenir que la p&aacute;gina completa sea indexada a&uacute;n cuando se haya publicado.  Para lograr &eacute;ste objetivo incluya la siguiente tag en cualquier lugar de la p&aacute;gina <em><!-- pageAttribute: NotSearchable --></em> Cuando el m&oacute;dulo de b&uacute;squeda vea &eacute;sta tag en la p&aacute;gina no la indexar&aacute; de ninguna forma.</p>
+
+<p>La tag <em><!-- pageAttribute: NotSearchable --></em> puede ubicarse tambi&eacute;n en la plantilla.  Si este fuera el caso, ninguna de las p&aacute;ginas unidas a esta plantilla ser&aacute; indexada.  Estas p&aacute;ginas ser&aacute;n re-indexadas si quitamos el tag</p>
+
 ';
 $lang['utma'] = '156861353.305317536.1277281361.1284514388.1284571577.26';
 $lang['utmz'] = '156861353.1284514388.25.8.utmccn=(organic)|utmcsr=google|utmctr=cms made simple translations|utmcmd=organic';

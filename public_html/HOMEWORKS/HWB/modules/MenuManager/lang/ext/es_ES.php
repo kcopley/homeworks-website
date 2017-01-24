@@ -12,11 +12,16 @@ $lang['default'] = 'Por defecto';
 $lang['templates'] = 'Plantillas';
 $lang['addtemplate'] = 'A&ntilde;adir Plantilla';
 $lang['areyousure'] = '&iquest;Seguro que quiere borrar esto?';
-$lang['changelog'] = '	<ul>
-	<li>
-	<p>Versi&oacute;n: 1.0</p>
-	<p>Realizaci&oacute;n Inicial.</p>
-	</li> 
+$lang['changelog'] = '	<ul>
+
+	<li>
+
+	<p>Versi&oacute;n: 1.0</p>
+
+	<p>Realizaci&oacute;n Inicial.</p>
+
+	</li> 
+
 	</ul> ';
 $lang['dbtemplates'] = 'Plantillas de la Base de Datos';
 $lang['description'] = 'Gestiona plantillas de menu que mostrar&aacute;n menus de cualquier clase.';
@@ -35,37 +40,68 @@ $lang['help_start_level'] = 'Esta opci&oacute;n har&aacute; que el men&uacute; s
 $lang['help_start_element'] = 'Comienza el men&uacute; mostrando en el dado start_element y solo exhibiendo ese elemento y su descendencia.  Toma una posici&oacute;n de jerarqu&iacute;a (p.ej. 5.1.2).';
 $lang['help_start_page'] = 'Comienza el men&uacute; mostrando en la dada start_page y solo exhibiendo ese elemento y su descendencia.  Toma un alias de p&aacute;gina.';
 $lang['help_template'] = 'La plantilla a usar para mostrar el menu.  Las plantillas se toman de la tabla de plantillas a menos que el nombre de la misma termine en .tpl, en cuyo caso se tomar&aacute; del directorio de plantillas del Gestor de Menus.';
-$lang['help'] = '	<h3>&iquest;Qu&eacute; hace esto?</h3>
-	<p>El Gestor de Men&uacute;s es un m&oacute;dulo para abstraer los men&uacute;s en un sistema que sea de f&aacute;cil uso y se pueda arreglar a gusto.  Hace una abstracci&oacute;n de la porci&oacute;n a mostrar de los men&uacute;s dentro de plantillas smarty que pueden ser f&aacute;cilmente modificadas para adaptarse a las necesidades del usuario. Entonces, el gestor de men&uacute;s en si es un motor que alimenta a la plantilla. Adaptando las plantillas, o haciendo las suyas propias, usted puede crear virtualmente cualquier men&uacute; que se le pueda ocurrir.</p>
-	<h3>&iquest;C&oacute;mo uso esto?</h3>
-	<p>Simplemente inserte una tag similar a la indicada abajo en su plantilla/p&aacute;gina: <code>{cms_module module=&#039;menumanager&#039;}</code>.  Los par&aacute;metros que la tag acepta se listan abajo.</p>
-	<h3>&iquest;Porqu&eacute; preocuparse de las plantillas?</h3>
-	<p>El Gestor de Men&uacute;s usa plantillas para mostrar su l&oacute;gica.  Viene acompa&ntilde;ado de tres plantillas por defecto llamadas bulletmenu.tpl, cssmenu.tpl y ellnav.tpl. Las tres crean una simple y sin orden lista de p&aacute;ginas, usando diferentes clases e IDs para dar estilo con CSS.  Son similares al sistema de men&uacute;s incluido en versiones anteriores: bulletmenu, CSSMenu y EllNav.</p>
-	<p>Debe notar que usted va a dar estilo al aspecto de los men&uacute;s con CSS. Las Hojas de Estilo no est&aacute;n incluidas en el Gestor de Men&uacute;s, pero deben ser adjuntadas a la plantilla de la p&aacute;gina en forma separada. Para que la plantilla cssmenu.tpl trabaje en IE usted debe tambi&eacute;n incluir un enlace al JavaScript en la secci&oacute;n head de la plantilla de la p&aacute;gina, lo cual es necesario para que funcione el efecto hover en IE.</p>
-	<p>Si usted desea hacer una versi&oacute;n especializada de la plantilla, puede importarla f&aacute;cilmente a la base de datos para luego editarla directamente en la administraci&oacute;n de CMSMS.  Para hacerlo:
-		<ol>
-			<li>Haga click en admin de Gestor de Men&uacute;s.</li>
-			<li>Haga click en la solapa Archivo de Plantillas, y luego click en el bot&oacute;n Importar Plantilla a Base de Datos cercano a bulletmenu.tpl.</li>
-			<li>De a la copia de la plantilla un nombre.  La vamos a llamar &quot;Plantilla Prueba&quot;.</li>
-			<li>Usted deber&aacute; ahora pasar a ver &quot;Plantilla Prueba&quot; en su lista de Plantillas de la Base de Datos.</li>
-		</ol>
-	</p>
-	<p>Ahora usted va a poder modificar f&aacute;cilmente las plantillas de acuerdo a sus necesidades para este sitio web.  Ponga en ella clases, ids i otras tags de manera tal que el formato sea aquel que usted quiere.  Una vez logrado, usted puede insertarla en su sitio utilizando a {cms_module module=&#039;menumanager&#039; template=&#039;Plantilla Prueba&#039;}. Note que la extensi&oacute;n .tpl debe ser incluida si lo que se utiliza es la plantilla.</p>
-	<p>Los par&aacute;metros para el objeto $node usados en la plantilla son los siguientes:
-		<ul>
-			<li>$node->id -- ID Contenido</li>
-			<li>$node->url -- URL del Contenido</li>
-			<li>$node->accesskey -- Llave de Acceso, si definida</li>
-			<li>$node->tabindex -- Tab Index, si definida</li>
-			<li>$node->titleattribute -- Title Attribute (t&iacute;tulo), si definido</li>
-			<li>$node->hierarchy -- Posici&oacute;n jer&aacute;rquica, (e.g. 1.3.3)</li>
-			<li>$node->depth -- Profundidad (nivel) de este nodo en el actual men&uacute;</li>
-			<li>$node->prevdepth -- Profundidad (nivel) de este nodo que estaba justo antes del actual</li>
-			<li>$node->haschildren -- Devuelve un true si este nodo tiene nodos por debajo para ser mostrados</li>
-			<li>$node->menutext -- Texto del Men&uacute;</li>
-			<li>$node->index -- Cuenta de este nodo en el total del men&uacute;</li>
-			<li>$node->parent -- True si el nodo esta por arriba de la p&aacute;gina actual seleccionada</li>
-		</ul>
+$lang['help'] = '	<h3>&iquest;Qu&eacute; hace esto?</h3>
+
+	<p>El Gestor de Men&uacute;s es un m&oacute;dulo para abstraer los men&uacute;s en un sistema que sea de f&aacute;cil uso y se pueda arreglar a gusto.  Hace una abstracci&oacute;n de la porci&oacute;n a mostrar de los men&uacute;s dentro de plantillas smarty que pueden ser f&aacute;cilmente modificadas para adaptarse a las necesidades del usuario. Entonces, el gestor de men&uacute;s en si es un motor que alimenta a la plantilla. Adaptando las plantillas, o haciendo las suyas propias, usted puede crear virtualmente cualquier men&uacute; que se le pueda ocurrir.</p>
+
+	<h3>&iquest;C&oacute;mo uso esto?</h3>
+
+	<p>Simplemente inserte una tag similar a la indicada abajo en su plantilla/p&aacute;gina: <code>{cms_module module=&#039;menumanager&#039;}</code>.  Los par&aacute;metros que la tag acepta se listan abajo.</p>
+
+	<h3>&iquest;Porqu&eacute; preocuparse de las plantillas?</h3>
+
+	<p>El Gestor de Men&uacute;s usa plantillas para mostrar su l&oacute;gica.  Viene acompa&ntilde;ado de tres plantillas por defecto llamadas bulletmenu.tpl, cssmenu.tpl y ellnav.tpl. Las tres crean una simple y sin orden lista de p&aacute;ginas, usando diferentes clases e IDs para dar estilo con CSS.  Son similares al sistema de men&uacute;s incluido en versiones anteriores: bulletmenu, CSSMenu y EllNav.</p>
+
+	<p>Debe notar que usted va a dar estilo al aspecto de los men&uacute;s con CSS. Las Hojas de Estilo no est&aacute;n incluidas en el Gestor de Men&uacute;s, pero deben ser adjuntadas a la plantilla de la p&aacute;gina en forma separada. Para que la plantilla cssmenu.tpl trabaje en IE usted debe tambi&eacute;n incluir un enlace al JavaScript en la secci&oacute;n head de la plantilla de la p&aacute;gina, lo cual es necesario para que funcione el efecto hover en IE.</p>
+
+	<p>Si usted desea hacer una versi&oacute;n especializada de la plantilla, puede importarla f&aacute;cilmente a la base de datos para luego editarla directamente en la administraci&oacute;n de CMSMS.  Para hacerlo:
+
+		<ol>
+
+			<li>Haga click en admin de Gestor de Men&uacute;s.</li>
+
+			<li>Haga click en la solapa Archivo de Plantillas, y luego click en el bot&oacute;n Importar Plantilla a Base de Datos cercano a bulletmenu.tpl.</li>
+
+			<li>De a la copia de la plantilla un nombre.  La vamos a llamar &quot;Plantilla Prueba&quot;.</li>
+
+			<li>Usted deber&aacute; ahora pasar a ver &quot;Plantilla Prueba&quot; en su lista de Plantillas de la Base de Datos.</li>
+
+		</ol>
+
+	</p>
+
+	<p>Ahora usted va a poder modificar f&aacute;cilmente las plantillas de acuerdo a sus necesidades para este sitio web.  Ponga en ella clases, ids i otras tags de manera tal que el formato sea aquel que usted quiere.  Una vez logrado, usted puede insertarla en su sitio utilizando a {cms_module module=&#039;menumanager&#039; template=&#039;Plantilla Prueba&#039;}. Note que la extensi&oacute;n .tpl debe ser incluida si lo que se utiliza es la plantilla.</p>
+
+	<p>Los par&aacute;metros para el objeto $node usados en la plantilla son los siguientes:
+
+		<ul>
+
+			<li>$node->id -- ID Contenido</li>
+
+			<li>$node->url -- URL del Contenido</li>
+
+			<li>$node->accesskey -- Llave de Acceso, si definida</li>
+
+			<li>$node->tabindex -- Tab Index, si definida</li>
+
+			<li>$node->titleattribute -- Title Attribute (t&iacute;tulo), si definido</li>
+
+			<li>$node->hierarchy -- Posici&oacute;n jer&aacute;rquica, (e.g. 1.3.3)</li>
+
+			<li>$node->depth -- Profundidad (nivel) de este nodo en el actual men&uacute;</li>
+
+			<li>$node->prevdepth -- Profundidad (nivel) de este nodo que estaba justo antes del actual</li>
+
+			<li>$node->haschildren -- Devuelve un true si este nodo tiene nodos por debajo para ser mostrados</li>
+
+			<li>$node->menutext -- Texto del Men&uacute;</li>
+
+			<li>$node->index -- Cuenta de este nodo en el total del men&uacute;</li>
+
+			<li>$node->parent -- True si el nodo esta por arriba de la p&aacute;gina actual seleccionada</li>
+
+		</ul>
+
 	</p>';
 $lang['importtemplate'] = 'Importar Plantilla a Base de Datos';
 $lang['menumanager'] = 'Gestor de Menu';

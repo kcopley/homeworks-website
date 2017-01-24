@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Iba v pr&iacute;pade roz&scaron;&iacute;ren&eacu
 $lang['showhiddenfiles'] = 'Uk&aacute;zať skryt&eacute; s&uacute;bory';
 $lang['settingsconfirmsingledelete'] = 'Potvrdenie odstr&aacute;nenia samotn&eacute;ho s&uacute;boru?';
 $lang['settingssaved'] = 'Nastavenia upraven&eacute;';
-$lang['help'] = '		<h3>Čo tento modul rob&iacute;?</h3>
-		<p>Tento modul umožnuje spr&aacute;vu s&uacute;borov</p>
-		<h3>Ako sa použ&iacute;va?</h3>
+$lang['help'] = '		<h3>Čo tento modul rob&iacute;?</h3>
+
+		<p>Tento modul umožnuje spr&aacute;vu s&uacute;borov</p>
+
+		<h3>Ako sa použ&iacute;va?</h3>
+
 		<p>Vyberte si v administrac&iacute;i zo sekcie Obsah položku s&uacute;borov&yacute; manaž&eacute;r</p>';
 $lang['qca'] = 'P0-1608926040-1271144175783';
 $lang['utma'] = '156861353.786385904.1271157997.1279783450.1279798608.56';

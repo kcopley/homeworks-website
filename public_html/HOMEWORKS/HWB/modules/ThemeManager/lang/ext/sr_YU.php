@@ -32,27 +32,48 @@ $lang['error'] = 'Gre&scaron;ka!';
 $lang['upgraded'] = 'Modul ažuriran u  %s verziju';
 $lang['moddescription'] = 'Modul koji dozvoljava uvoz/import i izvoz/eksport  tema (&scaron;ablona i stilova)';
 $lang['import_succeeded'] = 'Tema je uspe&scaron;no uvedena/importirana';
-$lang['help'] = '<h3>&Scaron;ta ovo radi?</h3>
-<p>Ovaj modul vam dozvoljava uvoz/import i izvoz/eksport &scaron;abloni i njihovih priloženih stilova  &quot;temi&quot;. To vam omogućava da delite izgled i stil va&scaron;e stranice sa ostalim korisnicima CMSMSa.</p
-<h3>Kako se koristi</h3>
-<p>Ovaj modul nema front end interfejs, samo admin interfejs.  Taj vam omogućava da izaberete postojeću (aktivnu) &scaron;ablon i kliknite na &quot;Izvoz/Eksport&quot;. XML fajl koja sadrži &scaron;ablon i njegove stilove u prilogu će biti kreiran i poslat putem downloada.</p>
-<h3>Dozvole</h3>
-<p>Model dozvoli je striktan za &quot;Menadžer &scaron;abloni&quot; to obezbeđuje integritet datoteke.  Dozvola &quot;Upravljanje teme&quot; je potrebna za izvoz/eksport temi, ove tri dozvole (&quot;Dodaj stil&quot;, &quot;Dodaj stil asocijaciju&quot;, i &quot;Dodaj &scaron;ablon&quot;) su potrebne za uvoz/import temi.</p>
-<p>Takođe postoji i suprotna funkcionalnost, možete da otpremite fajl teme (xml format) i tako se tema i s njom povezani &scaron;abloni i stilovi, uvedu/importiraju u va&scaron;u CMSMS instalaciju.</p>
-<h3>Podr&scaron;ka</h3>
-<p>Ovaj modul ne uključuje komercijalnu podr&scaron;ku. Međutim, postoji veliki broj informacija na raspolaganju koje vam mogu pomoći:</p>
-<ul>
-<li>Za poslednju verziju ovog modula, FAQ, ili da podnesete izve&scaron;taj gre&scaron;ke ili kupite komercijalnu podr&scaron;ku, molimo vas da posetite stranicu modula <a href="http://dev.cmsmadesimple.org">dev.cmsmadesimple.org</a>.</li>
-<li>Dodatne diskusije o ovom modulu možete naći u <a href="http://forum.cmsmadesimple.org">CMS Made Simple Forumu</a>.</li>
-<li>Autora modula, calguy1000, možete često naći na <a href="irc://irc.freenode.net/#cms">CMS IRC kanalu</a>.</li>
-<li>Možda ćete imati i uspeha direktnim slanjem emaila autoua.</li>  
-</ul>
-<p>Po GPL zakonu,ovaj program je dat kao-je. Molimo vas da pročitate tekst
-licence za puno obja&scaron;nenje.</p>
-
-<h3>Autorska prava i licence</h3>
-<p>Copyright &copy; 2005, Robert Campbell <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. Sva prava pridržana.</p>
-<p>Ovaj modul je otpu&scaron;ten pod <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a>. Morate da prihvatite ovu licencu pre kori&scaron;ćenja modula.</p>
+$lang['help'] = '<h3>&Scaron;ta ovo radi?</h3>
+
+<p>Ovaj modul vam dozvoljava uvoz/import i izvoz/eksport &scaron;abloni i njihovih priloženih stilova  &quot;temi&quot;. To vam omogućava da delite izgled i stil va&scaron;e stranice sa ostalim korisnicima CMSMSa.</p
+
+<h3>Kako se koristi</h3>
+
+<p>Ovaj modul nema front end interfejs, samo admin interfejs.  Taj vam omogućava da izaberete postojeću (aktivnu) &scaron;ablon i kliknite na &quot;Izvoz/Eksport&quot;. XML fajl koja sadrži &scaron;ablon i njegove stilove u prilogu će biti kreiran i poslat putem downloada.</p>
+
+<h3>Dozvole</h3>
+
+<p>Model dozvoli je striktan za &quot;Menadžer &scaron;abloni&quot; to obezbeđuje integritet datoteke.  Dozvola &quot;Upravljanje teme&quot; je potrebna za izvoz/eksport temi, ove tri dozvole (&quot;Dodaj stil&quot;, &quot;Dodaj stil asocijaciju&quot;, i &quot;Dodaj &scaron;ablon&quot;) su potrebne za uvoz/import temi.</p>
+
+<p>Takođe postoji i suprotna funkcionalnost, možete da otpremite fajl teme (xml format) i tako se tema i s njom povezani &scaron;abloni i stilovi, uvedu/importiraju u va&scaron;u CMSMS instalaciju.</p>
+
+<h3>Podr&scaron;ka</h3>
+
+<p>Ovaj modul ne uključuje komercijalnu podr&scaron;ku. Međutim, postoji veliki broj informacija na raspolaganju koje vam mogu pomoći:</p>
+
+<ul>
+
+<li>Za poslednju verziju ovog modula, FAQ, ili da podnesete izve&scaron;taj gre&scaron;ke ili kupite komercijalnu podr&scaron;ku, molimo vas da posetite stranicu modula <a href="http://dev.cmsmadesimple.org">dev.cmsmadesimple.org</a>.</li>
+
+<li>Dodatne diskusije o ovom modulu možete naći u <a href="http://forum.cmsmadesimple.org">CMS Made Simple Forumu</a>.</li>
+
+<li>Autora modula, calguy1000, možete često naći na <a href="irc://irc.freenode.net/#cms">CMS IRC kanalu</a>.</li>
+
+<li>Možda ćete imati i uspeha direktnim slanjem emaila autoua.</li>  
+
+</ul>
+
+<p>Po GPL zakonu,ovaj program je dat kao-je. Molimo vas da pročitate tekst
+
+licence za puno obja&scaron;nenje.</p>
+
+
+
+<h3>Autorska prava i licence</h3>
+
+<p>Copyright &copy; 2005, Robert Campbell <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. Sva prava pridržana.</p>
+
+<p>Ovaj modul je otpu&scaron;ten pod <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a>. Morate da prihvatite ovu licencu pre kori&scaron;ćenja modula.</p>
+
 ';
 $lang['qca'] = 'P0-1458450664-1284573084918';
 $lang['utmz'] = '156861353.1285925682.82.14.utmcsr=dev.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/project/list/module';

@@ -1,15 +1,26 @@
 <?php
-$lang['admin']['help_function_browser_lang'] = '<h3>What does this do?</h3>
-  <p>This plugin detects and outputs the language that the users browser accepts, and cross references it with a list of allowed languages to determine a language value for the session.</p>
-<h3>How do I use it?</h3>
-<p>Insert the tag early into your page template <em>(it can go above the <head> section if you want)</em> and provide it the name of the default language, and the accepted languages (only two character language names are accepted), then do something with the result.  i.e:</p>
-<pre><code>{browser_lang accept=de,fr,en,es default=en assign=tmp}{session_put var=lang val=$tmp}</code></pre>
-<p><em>({session_put} is a plugin provided by the CGSimpleSmarty module)</em></p>
-<h3>What Parameters does it Take?</h3>
-<ul>
-<li><strong>accepted <em>(required)</em></strong><br/> - A comma separated list of two character language names that are accepted.</li>
-<li>default<br/>- <em>(optional)</em> A default language to output if no accepted language was supported by the browser.  en is used if no other value is specified.</li>
-<li>assign<br/>- <em>(optional)</em> The name of the smarty variable to assign the results to.  If not specified the results of this function are returned.</li>
+$lang['admin']['help_function_browser_lang'] = '<h3>What does this do?</h3>
+
+  <p>This plugin detects and outputs the language that the users browser accepts, and cross references it with a list of allowed languages to determine a language value for the session.</p>
+
+<h3>How do I use it?</h3>
+
+<p>Insert the tag early into your page template <em>(it can go above the <head> section if you want)</em> and provide it the name of the default language, and the accepted languages (only two character language names are accepted), then do something with the result.  i.e:</p>
+
+<pre><code>{browser_lang accept=de,fr,en,es default=en assign=tmp}{session_put var=lang val=$tmp}</code></pre>
+
+<p><em>({session_put} is a plugin provided by the CGSimpleSmarty module)</em></p>
+
+<h3>What Parameters does it Take?</h3>
+
+<ul>
+
+<li><strong>accepted <em>(required)</em></strong><br/> - A comma separated list of two character language names that are accepted.</li>
+
+<li>default<br/>- <em>(optional)</em> A default language to output if no accepted language was supported by the browser.  en is used if no other value is specified.</li>
+
+<li>assign<br/>- <em>(optional)</em> The name of the smarty variable to assign the results to.  If not specified the results of this function are returned.</li>
+
 </ul>';
 $lang['admin']['info_target'] = 'Diese Option kann durch den Men&uuml; Manager verwendet werden, um anzuzeigen, wann und wie neue Frames oder Fenster ge&ouml;ffnet werden sollen. Einige Men&uuml; Manager Vorlagen k&ouml;nnten diese Option ignorieren.';
 $lang['admin']['close'] = 'Schlie&szlig;en';
@@ -60,37 +71,65 @@ $lang['admin']['stylesheetcopied'] = 'Stylesheet kopiert';
 $lang['admin']['templatecopied'] = 'Template kopiert';
 $lang['admin']['ecommerce_desc'] = 'Module f&uuml;r die Bereitstellung von eCommerce-F&auml;higkeiten';
 $lang['admin']['ecommerce'] = 'eCommerce';
-$lang['admin']['help_function_content_module'] = '<h3>Was macht dieses Plugin?</h3>
-<p>Dieser Inhaltsblock-Typ erm&ouml;glicht, f&uuml;r verschiedene Module unterschiedliche Inhaltsblock-Typen zu erstellen.</p>
-<p>F&uuml;r einige Module k&ouml;nnen Inhaltsblock-Typen festgelegt werden, die in den Modul-Templates eingesetzt werden k&ouml;nnen. Beispiel: Das FrontEndUsers-Modul kann einen Gruppenlisten-Inhaltsblock-Typ definieren. Damit wird festgelegt, wie Sie den content_module-Tag verwenden k&ouml;nnen, um diesen Block-Typ in Ihren Templates anzupassen.</p>
+$lang['admin']['help_function_content_module'] = '<h3>Was macht dieses Plugin?</h3>
+
+<p>Dieser Inhaltsblock-Typ erm&ouml;glicht, f&uuml;r verschiedene Module unterschiedliche Inhaltsblock-Typen zu erstellen.</p>
+
+<p>F&uuml;r einige Module k&ouml;nnen Inhaltsblock-Typen festgelegt werden, die in den Modul-Templates eingesetzt werden k&ouml;nnen. Beispiel: Das FrontEndUsers-Modul kann einen Gruppenlisten-Inhaltsblock-Typ definieren. Damit wird festgelegt, wie Sie den content_module-Tag verwenden k&ouml;nnen, um diesen Block-Typ in Ihren Templates anzupassen.</p>
+
 <p>Hinweis:</strong> Dieser Inhaltsblock-Typ kann nur von kompatiblen Modulen verwendet werden. Sie sollten ihn niemals anders als in der Hilfe dieser Module vorgeschlagen verwenden.</p>';
 $lang['admin']['error_parsing_content_blocks'] = 'Beim Verarbeiten der Inhaltsbl&ouml;cke ist ein Fehler aufgetreten (vielleicht 2 Bl&ouml;cke mit dem gleichen Namen)';
 $lang['admin']['error_no_default_content_block'] = 'In diesem Template ist kein Standard-Inhaltsblock vorhanden. Bitte stellen Sie sicher, dass der {content}-Tag im Seiten-Template vorhanden ist.';
-$lang['admin']['help_function_cms_stylesheet'] = '	<h3>Was macht dieses Plugin?</h3>
-  <p>Dieses Plugin ist ein Ersatz f&uuml;r den {stylesheet}-Tag, mit dem CSS-Dateien als statische Dateien im Verzeichnis /tmp/cache zwischengespeichert werden k&ouml;nnen. Au&szlig;erdem werden die Stylesheets durch Smarty verarbeitet.</p>
-  <p>Das Plugin ruft die Stylesheet-Informationen vom System ab. Standardm&auml;&szlig;ig werden alle Stylesheets, die dem aktuellen Template zugeordnet sind, in der vom Designer festgelegten Reihenfolge eingelesen und anschlie&szlig;end die HTML-Stylesheet-Tags erzeugt.</p>
-  <p>Die erzeugten Stylesheets erhalten einen eindeutigen Namen, der das letzte Bearbeitungsdatum des Stylesheets in der Datenbank enth&auml;lt. Diese Datei wird nur dann ge&auml;ndert, wenn das Stylesheet ge&auml;ndert wurde.</p>
-  <h3>Wie wird es eingesetzt?</h3>
-  <p>F&uuml;gen Sie einfach nur den folgenden Befehl in den head-Bereich Ihres Templates oder Ihrer Seite ein: <code>{cms_stylesheet}</code></p>
-  <h3>Welche Parameter verwendet es?</h3>
-  <ul>
-  <li><em>(optional)</em>name - anstatt alle Stylesheets der aktuellen Seite zu laden, wird nur das Stylesheet geladen, welches mit diesem Parameter &uuml;bergeben wird, unabh&auml;ngig davon, ob es dem aktuellen Template zugeordnet ist oder nicht.</li>
-  <li><em>(optional)</em>templateid - wird die Template-ID als Parameter &uuml;bergeben, werden anstatt den Stylesheets des aktuellen Templates die Stylesheets ausgegeben, die dem Template mit dieser ID zugeordnet sind.</li>
-  <li><em>(optional)</em>media - in Verbindung mit dem Parameter name kann dieser Parameter verwendet werden, um den Medientyp f&uuml;r dieses Stylesheet zu &uuml;berschreiben. In Verbindung mit dem Parameter templateid werden nur die Stylesheet-Tags ausgegeben, die dem vorgegebenen Medientyp entsprechen.</li>
-  </ul>
-  <h3>Verarbeitung mit Smarty</h3>
-  <p>Wenn die statischen CSS-Dateien aus der Datenbank gelesen werden, erfolgt zuvor eine Verarbeitung mit Smarty. Damit die Stylesheets in bekannter Weise verwendet werden k&ouml;nnen, wurden die Smarty-Kennzeichner abweichend vom CMSms-Standard { und } auf [[ and ]] ge&auml;ndert. Damit kann zum Beispiel mit <code>[[assign var=&#039;rot&#039; value=&#039;#900&#039;]]</code> zu Beginn des Stylesheets eine Smarty-Variable erstellt werden, die dann sp&auml;ter im Stylesheet verwendet werden kann:</p>
-<pre>
-<code>
-h3 .error { color: [[$rot]]; }<br/>
-</code>
-</pre>
-<p>Da die statischen CSS-Dateien im Verzeichnis /tmp/cache der CMSms-Installation zwischengespeichert werden, funktionieren relative Pfade in den CSS nicht mehr. So sollten zum Beispiel Bilder oder andere CSS-Tags, die eine URL verwenden, den Tag [[root_url]] verwenden, um daraus absolute URLs zu machen:</p>
-<pre>
-<code>
-h3 .error { background: url([[root_url]]/uploads/images/fehler_hintergrund.gif); }<br/>
-</code>
-</pre>
+$lang['admin']['help_function_cms_stylesheet'] = '	<h3>Was macht dieses Plugin?</h3>
+
+  <p>Dieses Plugin ist ein Ersatz f&uuml;r den {stylesheet}-Tag, mit dem CSS-Dateien als statische Dateien im Verzeichnis /tmp/cache zwischengespeichert werden k&ouml;nnen. Au&szlig;erdem werden die Stylesheets durch Smarty verarbeitet.</p>
+
+  <p>Das Plugin ruft die Stylesheet-Informationen vom System ab. Standardm&auml;&szlig;ig werden alle Stylesheets, die dem aktuellen Template zugeordnet sind, in der vom Designer festgelegten Reihenfolge eingelesen und anschlie&szlig;end die HTML-Stylesheet-Tags erzeugt.</p>
+
+  <p>Die erzeugten Stylesheets erhalten einen eindeutigen Namen, der das letzte Bearbeitungsdatum des Stylesheets in der Datenbank enth&auml;lt. Diese Datei wird nur dann ge&auml;ndert, wenn das Stylesheet ge&auml;ndert wurde.</p>
+
+  <h3>Wie wird es eingesetzt?</h3>
+
+  <p>F&uuml;gen Sie einfach nur den folgenden Befehl in den head-Bereich Ihres Templates oder Ihrer Seite ein: <code>{cms_stylesheet}</code></p>
+
+  <h3>Welche Parameter verwendet es?</h3>
+
+  <ul>
+
+  <li><em>(optional)</em>name - anstatt alle Stylesheets der aktuellen Seite zu laden, wird nur das Stylesheet geladen, welches mit diesem Parameter &uuml;bergeben wird, unabh&auml;ngig davon, ob es dem aktuellen Template zugeordnet ist oder nicht.</li>
+
+  <li><em>(optional)</em>templateid - wird die Template-ID als Parameter &uuml;bergeben, werden anstatt den Stylesheets des aktuellen Templates die Stylesheets ausgegeben, die dem Template mit dieser ID zugeordnet sind.</li>
+
+  <li><em>(optional)</em>media - in Verbindung mit dem Parameter name kann dieser Parameter verwendet werden, um den Medientyp f&uuml;r dieses Stylesheet zu &uuml;berschreiben. In Verbindung mit dem Parameter templateid werden nur die Stylesheet-Tags ausgegeben, die dem vorgegebenen Medientyp entsprechen.</li>
+
+  </ul>
+
+  <h3>Verarbeitung mit Smarty</h3>
+
+  <p>Wenn die statischen CSS-Dateien aus der Datenbank gelesen werden, erfolgt zuvor eine Verarbeitung mit Smarty. Damit die Stylesheets in bekannter Weise verwendet werden k&ouml;nnen, wurden die Smarty-Kennzeichner abweichend vom CMSms-Standard { und } auf [[ and ]] ge&auml;ndert. Damit kann zum Beispiel mit <code>[[assign var=&#039;rot&#039; value=&#039;#900&#039;]]</code> zu Beginn des Stylesheets eine Smarty-Variable erstellt werden, die dann sp&auml;ter im Stylesheet verwendet werden kann:</p>
+
+<pre>
+
+<code>
+
+h3 .error { color: [[$rot]]; }<br/>
+
+</code>
+
+</pre>
+
+<p>Da die statischen CSS-Dateien im Verzeichnis /tmp/cache der CMSms-Installation zwischengespeichert werden, funktionieren relative Pfade in den CSS nicht mehr. So sollten zum Beispiel Bilder oder andere CSS-Tags, die eine URL verwenden, den Tag [[root_url]] verwenden, um daraus absolute URLs zu machen:</p>
+
+<pre>
+
+<code>
+
+h3 .error { background: url([[root_url]]/uploads/images/fehler_hintergrund.gif); }<br/>
+
+</code>
+
+</pre>
+
 <p><strong>Hinweis:</strong> Aufgrund der Zwischenspeicherung der Stylesheets sollten die Smarty-Variablen direkt zu Beginn eines JEDEN Stylesheets eingef&uuml;gt werden, die diese Variable verwenden.</p>';
 $lang['admin']['pseudocron_granularity'] = 'Ausf&uuml;hrung der Pseudo-Cronjobs';
 $lang['admin']['info_pseudocron_granularity'] = 'Mit diesen Einstellungen wird festgelegt, wie oft die festgelegten Aufgaben automatisch ausgef&uuml;hrt werden';
@@ -137,75 +176,128 @@ $lang['admin']['bulk_success'] = 'Die Massen-Verarbeitung wurde erfolgreich ausg
 $lang['admin']['no_bulk_performed'] = 'Es wurde keine Massen-Verarbeitung ausgef&uuml;hrt.';
 $lang['admin']['info_preview_notice'] = 'WARNUNG: Diese Vorschau verh&auml;lt sich &auml;hnlich wie ein Browser-Fenster, mit dem Sie von der urspr&uuml;nglich ausgew&auml;hlten Seite aus navigieren k&ouml;nnen. Jedoch k&ouml;nnen unerwartete Verhalten auftreten. Wenn Sie auf der urspr&uuml;nglich angew&auml;hlten Seite navigieren und dann dorthin zur&uuml;ckkehren, sehen Sie die unver&auml;nderten Inhalte, obwohl Sie im der Hauptregisterkarte &Auml;nderungen vorgenommen und diese neu geladen haben. Wenn Sie Inhalte hinzuf&uuml;gen, w&auml;hrenddessen Sie auf der Seite navigieren, ist es Ihnen nicht m&ouml;glich zur&uuml;ckzukehren - Sie m&uuml;ssen dann die Vorschau-Seite aktualisieren.';
 $lang['admin']['sitedownexcludes'] = 'Diesen IP-Adressen nicht die Wartungsmeldung anzeigen';
-$lang['admin']['info_sitedownexcludes'] = '<p>&Uuml;ber diesen Parameter kann &uuml;ber eine durch Kommata getrennte Liste von IP-Adressen oder Netzwerken, die von der Wartungsmeldung nicht betroffen sind. Damit k&ouml;nnen die Administratoren an der Webseite arbeiten, w&auml;hrenddessen unbekannten Webseiten-Besuchern die Wartungsmeldung angezeigt wird.</p>
-<p>Die Adressen k&ouml;nnen in den folgenden Formaten festgelegt werden:</p>
-<ol>
-<li> xxx.xxx.xxx.xxx -- (exakte IP-Adresse)</li>
-<li> xxx.xxx.xxx.[yyy-zzz] -- (IP-Adressbereich)</li>
-<li> xxx.xxx.xxx.xxx/nn -- (nnn = Anzahl der Bits, Cisco-Stil  z.Bsp.:  192.168.0.100/24 = entspricht 192.168.0 Klasse-C-Subnetz)</li>
+$lang['admin']['info_sitedownexcludes'] = '<p>&Uuml;ber diesen Parameter kann &uuml;ber eine durch Kommata getrennte Liste von IP-Adressen oder Netzwerken, die von der Wartungsmeldung nicht betroffen sind. Damit k&ouml;nnen die Administratoren an der Webseite arbeiten, w&auml;hrenddessen unbekannten Webseiten-Besuchern die Wartungsmeldung angezeigt wird.</p>
+
+<p>Die Adressen k&ouml;nnen in den folgenden Formaten festgelegt werden:</p>
+
+<ol>
+
+<li> xxx.xxx.xxx.xxx -- (exakte IP-Adresse)</li>
+
+<li> xxx.xxx.xxx.[yyy-zzz] -- (IP-Adressbereich)</li>
+
+<li> xxx.xxx.xxx.xxx/nn -- (nnn = Anzahl der Bits, Cisco-Stil  z.Bsp.:  192.168.0.100/24 = entspricht 192.168.0 Klasse-C-Subnetz)</li>
+
 </ol>';
 $lang['admin']['setup'] = 'Weitere Einstellungen';
 $lang['admin']['handle_404'] = 'Benutzerdefinierte Fehlerbehandlung f&uuml;r 404-Seiten';
 $lang['admin']['sitedown_settings'] = 'Einstellung f&uuml;r die Seitenwartung';
 $lang['admin']['general_settings'] = 'Allgemeine Einstellungen';
-$lang['admin']['help_function_page_attr'] = '<h3>Was macht dieser Tag?</h3>
-<p>Dieser Tag kann verwendet werden, um die Werte der Attribute einer bestimmten Seite zur&uuml;ckzugeben.</p>
-<h3>Wie wird er eingesetzt?</h3>
-<p>F&uuml;gen Sie den folgenden Tag in Ihrem Seiten-Template ein: <code>{page_attr key=&quot;extra1&quot;}</code>.</p>
-<h3>Welche Parameter sind m&ouml;glich?</h3>
-<ul>
-  <li><tt><em>(erforderlich)</em> key</tt> -- der Schl&uuml;ssel, dessen Attribut ausgegeben werden soll.</li>
+$lang['admin']['help_function_page_attr'] = '<h3>Was macht dieser Tag?</h3>
+
+<p>Dieser Tag kann verwendet werden, um die Werte der Attribute einer bestimmten Seite zur&uuml;ckzugeben.</p>
+
+<h3>Wie wird er eingesetzt?</h3>
+
+<p>F&uuml;gen Sie den folgenden Tag in Ihrem Seiten-Template ein: <code>{page_attr key=&quot;extra1&quot;}</code>.</p>
+
+<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+<ul>
+
+  <li><tt><em>(erforderlich)</em> key</tt> -- der Schl&uuml;ssel, dessen Attribut ausgegeben werden soll.</li>
+
 </ul>';
 $lang['admin']['forge'] = 'CMSms-Forge';
 $lang['admin']['disable_wysiwyg'] = 'WYSIWYG f&uuml;r diese Seite nicht erlauben (ohne Ber&uuml;cksichtigung der Template- oder Benutzereinstellungen)';
-$lang['admin']['help_function_page_image'] = '<h3>Was macht dieser Tag?</h3>
-<p>Mit diesem Tag kann das ausgew&auml;hlte Bild oder Vorschaubild der jeweiligen Seite angezeigt werden.</p>
-<h3>Wie wird er eingesetzt?</h3>
-<p>F&uuml;gen Sie den folgenden Tag in Ihrem Seiten-Template ein: <code>{page_image}</code>.</p>
-<h3>Welche Parameter sind m&ouml;glich?</h3>
-<ul>
-  <li><tt><em>(optional)</em> thumbnail</tt> -- Mit diesem Parameter wird anstatt des Bildes das Vorschaubild angezeigt.</li>
+$lang['admin']['help_function_page_image'] = '<h3>Was macht dieser Tag?</h3>
+
+<p>Mit diesem Tag kann das ausgew&auml;hlte Bild oder Vorschaubild der jeweiligen Seite angezeigt werden.</p>
+
+<h3>Wie wird er eingesetzt?</h3>
+
+<p>F&uuml;gen Sie den folgenden Tag in Ihrem Seiten-Template ein: <code>{page_image}</code>.</p>
+
+<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+<ul>
+
+  <li><tt><em>(optional)</em> thumbnail</tt> -- Mit diesem Parameter wird anstatt des Bildes das Vorschaubild angezeigt.</li>
+
 </ul>';
 $lang['admin']['pagelink_circular'] = 'Ein Seitenlink kann nicht als Ziel auf einen anderen Seitenlink verweisen';
 $lang['admin']['destinationnotfound'] = 'Die ausgew&auml;hlte Seite konnte nicht gefunden werden oder ist ung&uuml;ltig';
-$lang['admin']['help_function_dump'] = '<h3>Was macht dieser Tag?</h3>
-  <p>Dieser Tag kann verwendet werden, um die Inhalte jeder beliebigen Smarty-Variable in einem besser lesbaren Format aufzulisten. Dies ist bei der Fehlersuche und beim Bearbeiten der Templates n&uuml;tzlich, wenn Sie das Format und die verf&uuml;gbaren Daten-Typen wissen wollen.</p>
-<h3>Wie wird er eingesetzt?</h3>
-<p>F&uuml;gen Sie den folgenden Tag in Ihrem Seiten-Template ein: <code>{dump item=&#039;die_aufzulistende_Smarty_Variable&#039;}</code>.</p>
-<h3>Welche Parameter sind m&ouml;glich?</h3>
-<ul>
-<li><tt><em>(erforderlich)</em> item (erforderlich)</tt> -- die Smarty-Variable, deren Inhalte aufgelistet werden sollen.</li>
-<li><tt><em>(optional)</em> maxlevel</tt> -- die maximale Anzahl der rekursiv auszugebenden Ebenen (nur wirksam, wenn der Parameter <tt>recurse</tt> gesetzt wurde. Der voreingestellte Wert f&uuml;r diesen Parameter ist 3</li>
-<li><tt><em>(optional)</em> nomethods</tt> -- die Ausgabe der Methoden des Objekts wird &uuml;bersprungen.</li>
-<li><tt><em>(optional)</em> novars</tt> -- die Ausgabe der Mitglieder eines Objekts wird &uuml;bersprungen.</li>
-<li><tt><em>(optional)</em> recurse</tt> -- gibt die maximale Anzahl der Ebenen eines Objektes f&uuml;r jeden Eintrag aus, bis die maximale Anzahl der Ebenen erreicht ist.</li>
+$lang['admin']['help_function_dump'] = '<h3>Was macht dieser Tag?</h3>
+
+  <p>Dieser Tag kann verwendet werden, um die Inhalte jeder beliebigen Smarty-Variable in einem besser lesbaren Format aufzulisten. Dies ist bei der Fehlersuche und beim Bearbeiten der Templates n&uuml;tzlich, wenn Sie das Format und die verf&uuml;gbaren Daten-Typen wissen wollen.</p>
+
+<h3>Wie wird er eingesetzt?</h3>
+
+<p>F&uuml;gen Sie den folgenden Tag in Ihrem Seiten-Template ein: <code>{dump item=&#039;die_aufzulistende_Smarty_Variable&#039;}</code>.</p>
+
+<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+<ul>
+
+<li><tt><em>(erforderlich)</em> item (erforderlich)</tt> -- die Smarty-Variable, deren Inhalte aufgelistet werden sollen.</li>
+
+<li><tt><em>(optional)</em> maxlevel</tt> -- die maximale Anzahl der rekursiv auszugebenden Ebenen (nur wirksam, wenn der Parameter <tt>recurse</tt> gesetzt wurde. Der voreingestellte Wert f&uuml;r diesen Parameter ist 3</li>
+
+<li><tt><em>(optional)</em> nomethods</tt> -- die Ausgabe der Methoden des Objekts wird &uuml;bersprungen.</li>
+
+<li><tt><em>(optional)</em> novars</tt> -- die Ausgabe der Mitglieder eines Objekts wird &uuml;bersprungen.</li>
+
+<li><tt><em>(optional)</em> recurse</tt> -- gibt die maximale Anzahl der Ebenen eines Objektes f&uuml;r jeden Eintrag aus, bis die maximale Anzahl der Ebenen erreicht ist.</li>
+
 </ul>';
 $lang['admin']['sqlerror'] = 'SQL-Fehler in %s';
 $lang['admin']['image'] = 'Bild';
 $lang['admin']['thumbnail'] = 'Vorschaubild';
 $lang['admin']['searchable'] = 'Dieser Seite darf in den Suchergebnissen erscheinen';
-$lang['admin']['help_function_content_image'] = '<h3>Was macht dieser Tag?</h3>
-<p>Mit diesem Plugin kann der Template-Designer den Benutzern ein Auswahlfeld f&uuml;r Bilddateien anbieten, wenn der Inhalt einer Seite bearbeitet wird. Es verh&auml;lt sich genau so wie das content-Plugin (f&uuml;r zus&auml;tzliche Inhaltsbl&ouml;cke).</p>
-<h3>Wie wird er eingesetzt?</h3>
-<p>F&uuml;gen Sie den folgenden Tag in Ihrem Seiten-Template ein: <code>{content_image block=&#039;Bild_1&#039;}</code>.</p>
-<h3>Welche Parameter sind m&ouml;glich?</h3>
-<ul>
-  <li><tt><em>(erforderlich)</em> block</tt> -- das ist der Name f&uuml;r den zus&auml;tzlichen Inhaltsblock.
-  <p>Beispiel:</p>
-  <pre>{content_image block=&#039;Bild_1&#039;}</pre>
-  </li>
-  <li><tt><em>(optional)</em> label</tt> -- Eine Beschriftung oder Eingabeaufforderung f&uuml;r diesen Inhaltsblock auf der Bearbeitungsseite. Ohne Vorgabe wird der Blockname verwendet.</li>
-   <li><tt><em>(optional)</em> dir</tt> -- der Name eines Verzeichnisses, aus dem die Bilder ausgew&auml;hlt werden sollen (relativ zum Verzeichnis /uploads). Ohne Vorgabe wird das /uploads-Verzeichnis verwendet. Sind dort keine Bilder vorhanden, wird bei der Seitenbearbeitung eine Fehlermeldung ausgegeben.
-  <p>Beispiel:</p>
-  <pre>{content_image block=&#039;Bild_1&#039; dir=&#039;images&#039;}</pre>
-  </li>
-  <li><tt><em>(optional)</em> class</tt> -- der Name der CSS-Klasse, der f&uuml;r die Anzeige des img-Tags auf der Webseite verwendet wird.</li>
-  <li><tt><em>(optional)</em> id</tt> -- die ID, die f&uuml;r die Anzeige des img-Tags auf der Webseite verwendet wird.</li> 
-  <li><tt><em>(optional)</em> name</tt> -- der Name, der f&uuml;r die Anzeige des img-Tags auf der Webseite verwendet wird.</li> 
-  <li><tt><em>(optional)</em> width</tt> -- die gew&uuml;nschte Breite des Bildes.</li>
-  <li><tt><em>(optional)</em> height</tt> -- die gew&uuml;nschte H&ouml;he des Bildes.</li>
-  <li><tt><em>(optional)</em> alt</tt> -- ein alternativer Text, wenn das Bild nicht gefunden werden konnte.</li>
-  <li><tt><em>(optional)</em> urlonly</tt> -- es wird nur die URL des Bildes ausgegeben.</li>
+$lang['admin']['help_function_content_image'] = '<h3>Was macht dieser Tag?</h3>
+
+<p>Mit diesem Plugin kann der Template-Designer den Benutzern ein Auswahlfeld f&uuml;r Bilddateien anbieten, wenn der Inhalt einer Seite bearbeitet wird. Es verh&auml;lt sich genau so wie das content-Plugin (f&uuml;r zus&auml;tzliche Inhaltsbl&ouml;cke).</p>
+
+<h3>Wie wird er eingesetzt?</h3>
+
+<p>F&uuml;gen Sie den folgenden Tag in Ihrem Seiten-Template ein: <code>{content_image block=&#039;Bild_1&#039;}</code>.</p>
+
+<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+<ul>
+
+  <li><tt><em>(erforderlich)</em> block</tt> -- das ist der Name f&uuml;r den zus&auml;tzlichen Inhaltsblock.
+
+  <p>Beispiel:</p>
+
+  <pre>{content_image block=&#039;Bild_1&#039;}</pre>
+
+  </li>
+
+  <li><tt><em>(optional)</em> label</tt> -- Eine Beschriftung oder Eingabeaufforderung f&uuml;r diesen Inhaltsblock auf der Bearbeitungsseite. Ohne Vorgabe wird der Blockname verwendet.</li>
+
+   <li><tt><em>(optional)</em> dir</tt> -- der Name eines Verzeichnisses, aus dem die Bilder ausgew&auml;hlt werden sollen (relativ zum Verzeichnis /uploads). Ohne Vorgabe wird das /uploads-Verzeichnis verwendet. Sind dort keine Bilder vorhanden, wird bei der Seitenbearbeitung eine Fehlermeldung ausgegeben.
+
+  <p>Beispiel:</p>
+
+  <pre>{content_image block=&#039;Bild_1&#039; dir=&#039;images&#039;}</pre>
+
+  </li>
+
+  <li><tt><em>(optional)</em> class</tt> -- der Name der CSS-Klasse, der f&uuml;r die Anzeige des img-Tags auf der Webseite verwendet wird.</li>
+
+  <li><tt><em>(optional)</em> id</tt> -- die ID, die f&uuml;r die Anzeige des img-Tags auf der Webseite verwendet wird.</li> 
+
+  <li><tt><em>(optional)</em> name</tt> -- der Name, der f&uuml;r die Anzeige des img-Tags auf der Webseite verwendet wird.</li> 
+
+  <li><tt><em>(optional)</em> width</tt> -- die gew&uuml;nschte Breite des Bildes.</li>
+
+  <li><tt><em>(optional)</em> height</tt> -- die gew&uuml;nschte H&ouml;he des Bildes.</li>
+
+  <li><tt><em>(optional)</em> alt</tt> -- ein alternativer Text, wenn das Bild nicht gefunden werden konnte.</li>
+
+  <li><tt><em>(optional)</em> urlonly</tt> -- es wird nur die URL des Bildes ausgegeben.</li>
+
 </ul>';
 $lang['admin']['error_udt_name_chars'] = 'Ein g&uuml;ltiger Name f&uuml;r einen benutzerdefinierten Tag beginnt mit einem Buchstaben oder einem Unterstrich, gefolgt von einer beliebigen Anzahl Buchstaben, Zahlen oder Unterstrichen.';
 $lang['admin']['errorupdatetemplateallpages'] = 'Dieses Template ist nicht aktiviert.';
@@ -261,15 +353,24 @@ $lang['admin']['checksum_passed'] = 'S&auml;mtliche Pr&uuml;fsummen stimmen mit 
 $lang['admin']['error_retrieving_file_list'] = 'Fehler beim Einlesen der Dateiliste';
 $lang['admin']['files_checksum_failed'] = 'Die Pr&uuml;fung der Dateien anhand der Pr&uuml;fsummen konnte nicht ausgef&uuml;hrt werden';
 $lang['admin']['failure'] = 'Fehler';
-$lang['admin']['help_function_process_pagedata'] = '<h3>Was macht dieser Tag?</h3>
-<p>Dieses Plugin verarbeitet den Inhalt des Feldes &quot;Seitenspezifische Smarty-Daten&quot; via Smarty. Dadurch k&ouml;nnen jeder Seite individuelle Smarty-Daten zugewiesen werden, ohne das Template f&uuml;r jede Seite &auml;ndern zu m&uuml;ssen.</p>
-<h3>Wie wird er eingesetzt?</h3>
-<ol>
-  <li>F&uuml;gen Sie dem Feld &quot;Seitenspezifische Smarty-Daten&quot; (Registerkarte &quot;Optionen&quot;) die f&uuml;r diese Seite gew&uuml;nschten Smarty-Variablen oder Smarty-Logik hinzu.</li>
-  <li>F&uuml;gen Sie <code>{process_pagedata}</code> als ersten Eintrag in Ihr Seiten-Template ein.</li>
-</ol>
-<br/>
-<h3>Welche Parameter sind m&ouml;glich?</h3>
+$lang['admin']['help_function_process_pagedata'] = '<h3>Was macht dieser Tag?</h3>
+
+<p>Dieses Plugin verarbeitet den Inhalt des Feldes &quot;Seitenspezifische Smarty-Daten&quot; via Smarty. Dadurch k&ouml;nnen jeder Seite individuelle Smarty-Daten zugewiesen werden, ohne das Template f&uuml;r jede Seite &auml;ndern zu m&uuml;ssen.</p>
+
+<h3>Wie wird er eingesetzt?</h3>
+
+<ol>
+
+  <li>F&uuml;gen Sie dem Feld &quot;Seitenspezifische Smarty-Daten&quot; (Registerkarte &quot;Optionen&quot;) die f&uuml;r diese Seite gew&uuml;nschten Smarty-Variablen oder Smarty-Logik hinzu.</li>
+
+  <li>F&uuml;gen Sie <code>{process_pagedata}</code> als ersten Eintrag in Ihr Seiten-Template ein.</li>
+
+</ol>
+
+<br/>
+
+<h3>Welche Parameter sind m&ouml;glich?</h3>
+
 <p>Derzeit keine</p>';
 $lang['admin']['page_metadata'] = 'Seitenspezifische Meta-Daten';
 $lang['admin']['pagedata_codeblock'] = 'Seitenspezifische Smarty-Daten';
@@ -344,491 +445,929 @@ $lang['admin']['contenttype_pagelink'] = 'Interner Seitenlink';
 $lang['admin']['nogcbwysiwyg'] = 'WYSIWYG-Editor f&uuml;r Globale Inhaltsbl&ouml;cke deaktivieren';
 $lang['admin']['destination_page'] = 'Zielseite';
 $lang['admin']['additional_params'] = 'Zus&auml;tzliche Parameter';
-$lang['admin']['help_function_current_date'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Gibt aktuelle Datum und Zeit aus. Wird kein Format vorgegeben, wird standardm&auml;&szlig;ig das Format &#039;Jan 01, 2004&#039; verwendet.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{current_date format=&quot;%A, %d.%B %Y %T %Z&quot;}</code></p>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
-	<ul>
-		<li><em>(optional)</em> <tt>format</tt> - Datums-/Zeitformat, verwendet die Parameter der PHP-Funktion strftime. Weitere Informationen finden Sie <a href="http://php.net/strftime" target="_blank">hier</a>.</li>
-		<li><em>(optional)</em> <tt>ucword</tt> - Wird dieser Parameter auf true gesetzt, wird das erste Zeichen eines jeden Wortes als Kleinbuchstabe ausgegeben.</li>
+$lang['admin']['help_function_current_date'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Gibt aktuelle Datum und Zeit aus. Wird kein Format vorgegeben, wird standardm&auml;&szlig;ig das Format &#039;Jan 01, 2004&#039; verwendet.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{current_date format=&quot;%A, %d.%B %Y %T %Z&quot;}</code></p>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+	<ul>
+
+		<li><em>(optional)</em> <tt>format</tt> - Datums-/Zeitformat, verwendet die Parameter der PHP-Funktion strftime. Weitere Informationen finden Sie <a href="http://php.net/strftime" target="_blank">hier</a>.</li>
+
+		<li><em>(optional)</em> <tt>ucword</tt> - Wird dieser Parameter auf true gesetzt, wird das erste Zeichen eines jeden Wortes als Kleinbuchstabe ausgegeben.</li>
+
 	</ul>';
-$lang['admin']['help_function_valid_xhtml'] = '<h3>Was macht dieser Tag?</h3>
-<p>Gibt einen Link zum W3C-HTML-Validator aus.</p>
-<h3>Wie wird er eingesetzt?</h3>
-<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{valid_xhtml}</code>
-<h3>Welche Parameter sind m&ouml;glich?</h3>
-    <ul>
-	<li><em>(optional)</em> <tt>url</tt>         (string)     - die URL f&uuml;r die Validierung. Standard ist http://validator.w3.org/check/referer.</li>
-	<li><em>(optional)</em> <tt>class</tt>       (string)     - damit kann dem Link (a) eine CSS-Klasse zugeordnet werden.</li>
-	<li><em>(optional)</em> <tt>target</tt>      (string)     - damit kann dem Link (a) ein Ziel (target) zugeordnet werden.</li>
-	<li><em>(optional)</em> <tt>image</tt>       (true/false) - mit dem Wert false wird anstatt des Bilds/Icons ein Textlink angezeigt.</li>
-	<li><em>(optional)</em> <tt>text</tt>        (string)     - damit kann ein Text f&uuml;r den Link bzw. ein alternativer Text f&uuml;r das Bild/Icon vorgegeben werden. Standard ist &#039;valid XHTML 1.0 Transitional&#039;.<br />Bei Verwendung eines Bildes/Icons wird der vorgegebene Text als alternativer Text f&uuml;r das Bild verwendet. Dieser Wert kann jedoch vom Wert &#039;alt&#039; des Bildes &uuml;berschrieben werden.</li>
-	<li><em>(optional)</em> <tt>image_class</tt> (string)     - damit kann dem Bild (img) eine CSS-Klasse zugeordnet werden Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein.</li>
-	<li><em>(optional)</em> <tt>src</tt>         (string)     - das angezeigte Bild/Icon. Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Standard ist hier http://www.w3.org/Icons/valid-xhtml10</li>
-	<li><em>(optional)</em> <tt>width</tt>       (string)     - die Breite des Bildes/Icons. Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Standard ist 88 (Breite des Bildes von http://www.w3.org/Icons/valid-xhtml10)</li>
-	<li><em>(optional)</em> <tt>height</tt>      (string)     - die H&ouml;he des Bildes/Icons. Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Standard ist hier 31 (H&amp;amp;ouml;he des Bildes von http://www.w3.org/Icons/valid-xhtml10)</li>
-	<li><em>(optional)</em> <tt>alt</tt>         (string)     - ein alternativer Text f&uuml;r das Bild (Attribut &#039;alt&#039;). Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Ohne diesen Parameter wird der Wert des Parameters &#039;link&#039; verwendet.</li>
+$lang['admin']['help_function_valid_xhtml'] = '<h3>Was macht dieser Tag?</h3>
+
+<p>Gibt einen Link zum W3C-HTML-Validator aus.</p>
+
+<h3>Wie wird er eingesetzt?</h3>
+
+<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{valid_xhtml}</code>
+
+<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+    <ul>
+
+	<li><em>(optional)</em> <tt>url</tt>         (string)     - die URL f&uuml;r die Validierung. Standard ist http://validator.w3.org/check/referer.</li>
+
+	<li><em>(optional)</em> <tt>class</tt>       (string)     - damit kann dem Link (a) eine CSS-Klasse zugeordnet werden.</li>
+
+	<li><em>(optional)</em> <tt>target</tt>      (string)     - damit kann dem Link (a) ein Ziel (target) zugeordnet werden.</li>
+
+	<li><em>(optional)</em> <tt>image</tt>       (true/false) - mit dem Wert false wird anstatt des Bilds/Icons ein Textlink angezeigt.</li>
+
+	<li><em>(optional)</em> <tt>text</tt>        (string)     - damit kann ein Text f&uuml;r den Link bzw. ein alternativer Text f&uuml;r das Bild/Icon vorgegeben werden. Standard ist &#039;valid XHTML 1.0 Transitional&#039;.<br />Bei Verwendung eines Bildes/Icons wird der vorgegebene Text als alternativer Text f&uuml;r das Bild verwendet. Dieser Wert kann jedoch vom Wert &#039;alt&#039; des Bildes &uuml;berschrieben werden.</li>
+
+	<li><em>(optional)</em> <tt>image_class</tt> (string)     - damit kann dem Bild (img) eine CSS-Klasse zugeordnet werden Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein.</li>
+
+	<li><em>(optional)</em> <tt>src</tt>         (string)     - das angezeigte Bild/Icon. Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Standard ist hier http://www.w3.org/Icons/valid-xhtml10</li>
+
+	<li><em>(optional)</em> <tt>width</tt>       (string)     - die Breite des Bildes/Icons. Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Standard ist 88 (Breite des Bildes von http://www.w3.org/Icons/valid-xhtml10)</li>
+
+	<li><em>(optional)</em> <tt>height</tt>      (string)     - die H&ouml;he des Bildes/Icons. Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Standard ist hier 31 (H&amp;amp;ouml;he des Bildes von http://www.w3.org/Icons/valid-xhtml10)</li>
+
+	<li><em>(optional)</em> <tt>alt</tt>         (string)     - ein alternativer Text f&uuml;r das Bild (Attribut &#039;alt&#039;). Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Ohne diesen Parameter wird der Wert des Parameters &#039;link&#039; verwendet.</li>
+
     </ul>';
-$lang['admin']['help_function_valid_css'] = '<h3>Was macht dieser Tag?</h3>
-<p>Gibt einen Link zum W3C-CSS-Validator aus.</p>
-<h3>Wie wird er eingesetzt?</h3>
-<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{valid_css}</code>
-<h3>Welche Parameter sind m&ouml;glich?</h3>
-    <ul>
-	<li><em>(optional)</em> <tt>url</tt>         (string)     - die URL f&uuml;r die Validierung. Standard ist http://jigsaw.w3.org/css-validator/check/referer.</li>
-	<li><em>(optional)</em> <tt>class</tt>       (string)     - damit kann dem Link (a) eine CSS-Klasse zugeordnet werden.</li>
-	<li><em>(optional)</em> <tt>target</tt>      (string)     - damit kann dem Link (a) ein Ziel (target) zugeordnet werden.</li>
-	<li><em>(optional)</em> <tt>image</tt>       (true/false) - mit dem Wert false wird anstatt des Bilds/Icons ein Textlink angezeigt.</li>
-	<li><em>(optional)</em> <tt>text</tt>        (string)     - damit kann ein Text f&uuml;r den Link bzw. ein alternativer Text f&uuml;r das Bild/Icon vorgegeben werden. Standard ist &#039;Valid CSS 2.1&#039;.<br />	Bei Verwendung eines Bildes/Icons wird der vorgegebene Text als alternativer Text f&uuml;r das Bild verwendet. Dieser Wert kann jedoch vom Wert &#039;alt&#039; des Bildes &uuml;berschrieben werden.</li>
-	<li><em>(optional)</em> <tt>image_class</tt> (string)     - damit kann dem Bild (img) eine CSS-Klasse zugeordnet werden Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein.</li>
-        <li><em>(optional)</em> <tt>src</tt>         (string)     - das angezeigte Bild/Icon. Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Standard ist hier http://jigsaw.w3.org/css-validator/images/vcss</li>
-        <li><em>(optional)</em> <tt>width</tt>       (string)     - die Breite des Bildes/Icons. Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Standard ist 88 (Breite des Bildes von http://jigsaw.w3.org/css-validator/images/vcss)</li>
-        <li><em>(optional)</em> <tt>height</tt>      (string)     - die H&ouml;he des Bildes/Icons. Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Standard ist hier 31 (H&ouml;he des Bildes von http://jigsaw.w3.org/css-validator/images/vcss)</li>
-	<li><em>(optional)</em> <tt>alt</tt>         (string)     - ein alternativer Text f&uuml;r das Bild (Attribut &#039;alt&#039;). Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Ohne diesen Parameter wird der Wert des Parameters &#039;link&#039; verwendet.</li>
+$lang['admin']['help_function_valid_css'] = '<h3>Was macht dieser Tag?</h3>
+
+<p>Gibt einen Link zum W3C-CSS-Validator aus.</p>
+
+<h3>Wie wird er eingesetzt?</h3>
+
+<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{valid_css}</code>
+
+<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+    <ul>
+
+	<li><em>(optional)</em> <tt>url</tt>         (string)     - die URL f&uuml;r die Validierung. Standard ist http://jigsaw.w3.org/css-validator/check/referer.</li>
+
+	<li><em>(optional)</em> <tt>class</tt>       (string)     - damit kann dem Link (a) eine CSS-Klasse zugeordnet werden.</li>
+
+	<li><em>(optional)</em> <tt>target</tt>      (string)     - damit kann dem Link (a) ein Ziel (target) zugeordnet werden.</li>
+
+	<li><em>(optional)</em> <tt>image</tt>       (true/false) - mit dem Wert false wird anstatt des Bilds/Icons ein Textlink angezeigt.</li>
+
+	<li><em>(optional)</em> <tt>text</tt>        (string)     - damit kann ein Text f&uuml;r den Link bzw. ein alternativer Text f&uuml;r das Bild/Icon vorgegeben werden. Standard ist &#039;Valid CSS 2.1&#039;.<br />	Bei Verwendung eines Bildes/Icons wird der vorgegebene Text als alternativer Text f&uuml;r das Bild verwendet. Dieser Wert kann jedoch vom Wert &#039;alt&#039; des Bildes &uuml;berschrieben werden.</li>
+
+	<li><em>(optional)</em> <tt>image_class</tt> (string)     - damit kann dem Bild (img) eine CSS-Klasse zugeordnet werden Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein.</li>
+
+        <li><em>(optional)</em> <tt>src</tt>         (string)     - das angezeigte Bild/Icon. Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Standard ist hier http://jigsaw.w3.org/css-validator/images/vcss</li>
+
+        <li><em>(optional)</em> <tt>width</tt>       (string)     - die Breite des Bildes/Icons. Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Standard ist 88 (Breite des Bildes von http://jigsaw.w3.org/css-validator/images/vcss)</li>
+
+        <li><em>(optional)</em> <tt>height</tt>      (string)     - die H&ouml;he des Bildes/Icons. Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Standard ist hier 31 (H&ouml;he des Bildes von http://jigsaw.w3.org/css-validator/images/vcss)</li>
+
+	<li><em>(optional)</em> <tt>alt</tt>         (string)     - ein alternativer Text f&uuml;r das Bild (Attribut &#039;alt&#039;). Der Wert &#039;image&#039; darf jedoch nicht auf false gesetzt sein. Ohne diesen Parameter wird der Wert des Parameters &#039;link&#039; verwendet.</li>
+
     </ul>';
-$lang['admin']['help_function_title'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Gibt den Titel einer Seite aus.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{title}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
+$lang['admin']['help_function_title'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Gibt den Titel einer Seite aus.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{title}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
 	<p><em>(optional)</em> <tt>assign</tt> (string) - Damit kann der Name der Smarty-Variablen festgelegt werden, an die das Ergebnis &uuml;bergeben wird.</p>';
-$lang['admin']['help_function_stylesheet'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>L&auml;dt die Stylesheets aus der Datenbank. Standardm&auml;&szlig;ig werden alle mit dem aktuellen Template verkn&uuml;pften Stylesheets geladen.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in den head-Bereich Ihres Template bzw. Ihrer Seite ein:</p> <code>{stylesheet}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
-	<ul>
-		<li><em>(optional)</em> <tt>name</tt> - damit kann ein Stylesheet festgelegt werden, welches anstatt der mit der aktuellen Seite verkn&uuml;pften Stylesheets geladen werden soll (unabh&auml;ngig davon, ob es mit dem aktuellen Template verkn&uuml;pft ist oder nicht).</li>
-		<li><em>(optional)</em> <tt>media</tt> - Wenn der Parameter name definiert wurde, k&ouml;nnen Sie f&uuml;r dieses Stylesheet einen abweichenden Medientyp festlegen.</li>
+$lang['admin']['help_function_stylesheet'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>L&auml;dt die Stylesheets aus der Datenbank. Standardm&auml;&szlig;ig werden alle mit dem aktuellen Template verkn&uuml;pften Stylesheets geladen.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in den head-Bereich Ihres Template bzw. Ihrer Seite ein:</p> <code>{stylesheet}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+	<ul>
+
+		<li><em>(optional)</em> <tt>name</tt> - damit kann ein Stylesheet festgelegt werden, welches anstatt der mit der aktuellen Seite verkn&uuml;pften Stylesheets geladen werden soll (unabh&auml;ngig davon, ob es mit dem aktuellen Template verkn&uuml;pft ist oder nicht).</li>
+
+		<li><em>(optional)</em> <tt>media</tt> - Wenn der Parameter name definiert wurde, k&ouml;nnen Sie f&uuml;r dieses Stylesheet einen abweichenden Medientyp festlegen.</li>
+
 	</ul>';
-$lang['admin']['help_function_stopexpandcollapse'] = '	<<h3>Was macht dieser Tag?</h3>
-	<p>Damit lassen sich Inhalte auseinander und wieder zusammen falten, zum Beispiel so:</p>
-	<p><a href="#expand1" onClick="expandcontent(&amp;#039;expand1&amp;#039;)" style="cursor:hand; cursor:pointer">F&uuml;r weitere Informationen klicken Sie bitte hier</a><span id=&quot;expand1&quot; class=&quot;expand&quot;><a name="help"></a> - Hier stehen alle ben&ouml;tigten Informationen ...</a></span></p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{startExpandCollapse id=&quot;name&quot; title=&quot;Hier klicken&quot;}</code>. Am Ende der faltbaren Inhalte muss der Tag {stopExpandCollapse} aufgerufen werden. Hier ein Beispiel:</p>
-	<code>{startExpandCollapse id=&quot;name&quot; title=&quot;Hier klicken&quot;}
-	<p>Hier steht der Text, den der Besucher Ihrer Webseite angezeigt bekommt, wenn er auf den oben stehenden Link &quot;Hier klicken&quot; geklickt hat. Es wird dann der gesamte Inhalt angezeigt, der sich zwischen den Tags {startExpandCollapse} und {stopExpandCollapse} befindet.</p>
-	{stopExpandCollapse}
-	</code>
-	<p>Hinweis: Wenn Sie diesen Tag mehrfach auf einer Seite einsetzen m&ouml;chten, muss der Tag mit einer eindeutigen ID versehen werden.</p>
-	<h3>Wie kann ich das Aussehen des Titels ver&auml;ndern?</h3>
-	<p>Das Aussehen des Titels kann via CSS ge&auml;ndert werden. Der Titel wird in einem div-Container angezeigt, der mit der von Ihnen festgelegten ID gekennzeichnet ist.</p>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
-	<p>startExpandCollapse ben&ouml;tigt die folgenden Parameter:</p>
-	<ul>
-	<li><em>erforderlich</em> <tt>id</tt> - eine eindeutige ID f&uuml;r den auseinander/zusammen zu faltenden Bereich.</li>
-	<li><em>erforderlich</em> <tt>title</tt> - Der Text, auf den geklickt werden muss, um die Inhalte auseinander/zusammen zu falten.</li>
-	</ul>
+$lang['admin']['help_function_stopexpandcollapse'] = '	<<h3>Was macht dieser Tag?</h3>
+
+	<p>Damit lassen sich Inhalte auseinander und wieder zusammen falten, zum Beispiel so:</p>
+
+	<p><a href="#expand1" onClick="expandcontent(&amp;#039;expand1&amp;#039;)" style="cursor:hand; cursor:pointer">F&uuml;r weitere Informationen klicken Sie bitte hier</a><span id=&quot;expand1&quot; class=&quot;expand&quot;><a name="help"></a> - Hier stehen alle ben&ouml;tigten Informationen ...</a></span></p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{startExpandCollapse id=&quot;name&quot; title=&quot;Hier klicken&quot;}</code>. Am Ende der faltbaren Inhalte muss der Tag {stopExpandCollapse} aufgerufen werden. Hier ein Beispiel:</p>
+
+	<code>{startExpandCollapse id=&quot;name&quot; title=&quot;Hier klicken&quot;}
+
+	<p>Hier steht der Text, den der Besucher Ihrer Webseite angezeigt bekommt, wenn er auf den oben stehenden Link &quot;Hier klicken&quot; geklickt hat. Es wird dann der gesamte Inhalt angezeigt, der sich zwischen den Tags {startExpandCollapse} und {stopExpandCollapse} befindet.</p>
+
+	{stopExpandCollapse}
+
+	</code>
+
+	<p>Hinweis: Wenn Sie diesen Tag mehrfach auf einer Seite einsetzen m&ouml;chten, muss der Tag mit einer eindeutigen ID versehen werden.</p>
+
+	<h3>Wie kann ich das Aussehen des Titels ver&auml;ndern?</h3>
+
+	<p>Das Aussehen des Titels kann via CSS ge&auml;ndert werden. Der Titel wird in einem div-Container angezeigt, der mit der von Ihnen festgelegten ID gekennzeichnet ist.</p>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+	<p>startExpandCollapse ben&ouml;tigt die folgenden Parameter:</p>
+
+	<ul>
+
+	<li><em>erforderlich</em> <tt>id</tt> - eine eindeutige ID f&uuml;r den auseinander/zusammen zu faltenden Bereich.</li>
+
+	<li><em>erforderlich</em> <tt>title</tt> - Der Text, auf den geklickt werden muss, um die Inhalte auseinander/zusammen zu falten.</li>
+
+	</ul>
+
 	<p>stopExpandCollapse ben&ouml;tigt keine Parameter.</p>';
-$lang['admin']['help_function_startexpandcollapse'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Damit lassen sich Inhalte auseinander und wieder zusammen falten, zum Beispiel so:</p>
-	<p><a href="#expand1" onClick="expandcontent(&amp;#039;expand1&amp;#039;)" style="cursor:hand; cursor:pointer">F&uuml;r weitere Informationen klicken Sie bitte hier</a><span id=&quot;expand1&quot; class=&quot;expand&quot;><a name="help"></a> - Hier stehen alle ben&ouml;tigten Informationen ...</a></span></p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{startExpandCollapse id=&quot;name&quot; title=&quot;Hier klicken&quot;}</code>. Am Ende der faltbaren Inhalte muss der Tag {stopExpandCollapse} aufgerufen werden. Hier ein Beispiel:</p>
-	<code>{startExpandCollapse id=&quot;name&quot; title=&quot;Hier klicken&quot;}
-	<p>Hier steht der Text, den der Besucher Ihrer Webseite angezeigt bekommt, wenn er auf den oben stehenden Link &quot;Hier klicken&quot; geklickt hat. Es wird dann der gesamte Inhalt angezeigt, der sich zwischen den Tags {startExpandCollapse} und {stopExpandCollapse} befindet.</p>
-	{stopExpandCollapse}
-	</code>
-	<p>Hinweis: Wenn Sie diesen Tag mehrfach auf einer Seite einsetzen m&ouml;chten, muss der Tag mit einer eindeutigen ID versehen werden.</p>
-	<h3>Wie kann ich das Aussehen des Titels ver&auml;ndern?</h3>
-	<p>Das Aussehen des Titels kann via CSS ge&auml;ndert werden. Der Titel wird in einem div-Container angezeigt, der mit der von Ihnen festgelegten ID gekennzeichnet ist.</p>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
-	<p>startExpandCollapse ben&ouml;tigt die folgenden Parameter:</p>
-	<ul>
-	<li><em>erforderlich</em> <tt>id</tt> - eine eindeutige ID f&uuml;r den auseinander/zusammen zu faltenden Bereich.</li>
-	<li><em>erforderlich</em> <tt>title</tt> - Der Text, auf den geklickt werden muss, um die Inhalte auseinander/zusammen zu falten.</li>
-	</ul>
+$lang['admin']['help_function_startexpandcollapse'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Damit lassen sich Inhalte auseinander und wieder zusammen falten, zum Beispiel so:</p>
+
+	<p><a href="#expand1" onClick="expandcontent(&amp;#039;expand1&amp;#039;)" style="cursor:hand; cursor:pointer">F&uuml;r weitere Informationen klicken Sie bitte hier</a><span id=&quot;expand1&quot; class=&quot;expand&quot;><a name="help"></a> - Hier stehen alle ben&ouml;tigten Informationen ...</a></span></p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{startExpandCollapse id=&quot;name&quot; title=&quot;Hier klicken&quot;}</code>. Am Ende der faltbaren Inhalte muss der Tag {stopExpandCollapse} aufgerufen werden. Hier ein Beispiel:</p>
+
+	<code>{startExpandCollapse id=&quot;name&quot; title=&quot;Hier klicken&quot;}
+
+	<p>Hier steht der Text, den der Besucher Ihrer Webseite angezeigt bekommt, wenn er auf den oben stehenden Link &quot;Hier klicken&quot; geklickt hat. Es wird dann der gesamte Inhalt angezeigt, der sich zwischen den Tags {startExpandCollapse} und {stopExpandCollapse} befindet.</p>
+
+	{stopExpandCollapse}
+
+	</code>
+
+	<p>Hinweis: Wenn Sie diesen Tag mehrfach auf einer Seite einsetzen m&ouml;chten, muss der Tag mit einer eindeutigen ID versehen werden.</p>
+
+	<h3>Wie kann ich das Aussehen des Titels ver&auml;ndern?</h3>
+
+	<p>Das Aussehen des Titels kann via CSS ge&auml;ndert werden. Der Titel wird in einem div-Container angezeigt, der mit der von Ihnen festgelegten ID gekennzeichnet ist.</p>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+	<p>startExpandCollapse ben&ouml;tigt die folgenden Parameter:</p>
+
+	<ul>
+
+	<li><em>erforderlich</em> <tt>id</tt> - eine eindeutige ID f&uuml;r den auseinander/zusammen zu faltenden Bereich.</li>
+
+	<li><em>erforderlich</em> <tt>title</tt> - Der Text, auf den geklickt werden muss, um die Inhalte auseinander/zusammen zu falten.</li>
+
+	</ul>
+
 	<p>stopExpandCollapse ben&ouml;tigt keine Parameter.</p>';
-$lang['admin']['help_function_adsense'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Google Adsense ist ein popul&auml;res Anzeigen-Programm f&uuml;r Webseiten. Mit diesem Tag lassen sich die Parameter des Adsense-Programms einfach &uuml;bergeben und der Code Ihres Templates bleibt wesentlich sauberer. Weitere Informationen &uuml;ber Googles Adsense-Programm finden Sie <a href="http://www.google.com/adsense" target="_blank">hier</a>.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>Zun&auml;chst sollten Sie sich ein Google-Adsense-Konto einrichten und die Parameter f&uuml;r dessen Einsatz abfragen. Dann f&uuml;gen Sie den Tag wie folgt in Ihr Template bzw. Ihre Seite ein:</p> <code>{adsense ad_client=&quot;pub-random#&quot; ad_width=&quot;120&quot; ad_height=&quot;600&quot; ad_format=&quot;120x600_as&quot;}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
-	<p>Alle Parameter sind optional; wenn Sie meinen, dass einige Parameter nicht erforderlich sind, wird die Anzeige trotzdem funktionieren. Die Parameter sind folgende:</p>
-	<ul>
-		<li>ad_client - Dies ist die pub_random# ID, die Ihrer Adsense-Kontonummer entsprechend sollte.</li>
-		<li><em><erforderlich></em> <tt>ad_width</tt> - Breite der Anzeige</li>
-		<li><em><erforderlich></em> <tt>ad_height</tt> - H&ouml;he der Anzeige</li>
-		<li><em><erforderlich></em> <tt>ad_format</tt> - Format der Anzeige, z.Bsp. 120x600_as</li>
-		<li><em><optional></em> <tt>ad_channel</tt> - Channels sind eine Erweiterung des Adsense-Programms. Wenn Sie dies nutzen, geben Sie es hier ein.</li>
-		<li><em><optional></em> <tt>ad_slot</tt> - Slots werden f&uuml;r die erweiterten M&ouml;glichkeiten von Adsense verwendet. Wenn Sie diese Funktion einsetzen, f&uuml;gen Sie den entsprechenden Parameter hier ein.</li>
-		<li><em><optional></em> <tt>ad_type</tt> - m&ouml;gliche Optionen sind text, image oder text_image.</li>
-		<li><em><optional></em> <tt>color_border</tt> - die Farbe der Umrandung. Verwenden Sie den HEX-Code oder den (englischen) Namen der Farbe (z.Bsp. Red)</li>
-		<li><em><optional></em> <tt>color_link</tt> - die Farbe des Linktextes. Verwenden Sie den HEX-Code oder den (englischen) Namen der Farbe (z.Bsp. Red)</li>
-		<li><em><optional></em> <tt>color_url</tt> - die Farbe der URL. Verwenden Sie den HEX-Code oder den (englischen) Namen der Farbe (z.Bsp. Red)</li>
-		<li><em><optional></em> <tt>color_text</tt> - dies Farbe des Textes. Verwenden Sie den HEX-Code oder den (englischen) Namen der Farbe (z.Bsp. Red)</li>
+$lang['admin']['help_function_adsense'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Google Adsense ist ein popul&auml;res Anzeigen-Programm f&uuml;r Webseiten. Mit diesem Tag lassen sich die Parameter des Adsense-Programms einfach &uuml;bergeben und der Code Ihres Templates bleibt wesentlich sauberer. Weitere Informationen &uuml;ber Googles Adsense-Programm finden Sie <a href="http://www.google.com/adsense" target="_blank">hier</a>.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>Zun&auml;chst sollten Sie sich ein Google-Adsense-Konto einrichten und die Parameter f&uuml;r dessen Einsatz abfragen. Dann f&uuml;gen Sie den Tag wie folgt in Ihr Template bzw. Ihre Seite ein:</p> <code>{adsense ad_client=&quot;pub-random#&quot; ad_width=&quot;120&quot; ad_height=&quot;600&quot; ad_format=&quot;120x600_as&quot;}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+	<p>Alle Parameter sind optional; wenn Sie meinen, dass einige Parameter nicht erforderlich sind, wird die Anzeige trotzdem funktionieren. Die Parameter sind folgende:</p>
+
+	<ul>
+
+		<li>ad_client - Dies ist die pub_random# ID, die Ihrer Adsense-Kontonummer entsprechend sollte.</li>
+
+		<li><em><erforderlich></em> <tt>ad_width</tt> - Breite der Anzeige</li>
+
+		<li><em><erforderlich></em> <tt>ad_height</tt> - H&ouml;he der Anzeige</li>
+
+		<li><em><erforderlich></em> <tt>ad_format</tt> - Format der Anzeige, z.Bsp. 120x600_as</li>
+
+		<li><em><optional></em> <tt>ad_channel</tt> - Channels sind eine Erweiterung des Adsense-Programms. Wenn Sie dies nutzen, geben Sie es hier ein.</li>
+
+		<li><em><optional></em> <tt>ad_slot</tt> - Slots werden f&uuml;r die erweiterten M&ouml;glichkeiten von Adsense verwendet. Wenn Sie diese Funktion einsetzen, f&uuml;gen Sie den entsprechenden Parameter hier ein.</li>
+
+		<li><em><optional></em> <tt>ad_type</tt> - m&ouml;gliche Optionen sind text, image oder text_image.</li>
+
+		<li><em><optional></em> <tt>color_border</tt> - die Farbe der Umrandung. Verwenden Sie den HEX-Code oder den (englischen) Namen der Farbe (z.Bsp. Red)</li>
+
+		<li><em><optional></em> <tt>color_link</tt> - die Farbe des Linktextes. Verwenden Sie den HEX-Code oder den (englischen) Namen der Farbe (z.Bsp. Red)</li>
+
+		<li><em><optional></em> <tt>color_url</tt> - die Farbe der URL. Verwenden Sie den HEX-Code oder den (englischen) Namen der Farbe (z.Bsp. Red)</li>
+
+		<li><em><optional></em> <tt>color_text</tt> - dies Farbe des Textes. Verwenden Sie den HEX-Code oder den (englischen) Namen der Farbe (z.Bsp. Red)</li>
+
 	</ul>';
-$lang['admin']['help_function_sitename'] = '        <h3>Was macht dieser Tag?</h3>
-        <p>Gibt den Namen der Seite aus. Dieser wurde w&auml;hrend der Installation festgelegt und kann in der Administration im Men&uuml; &quot;Administrator > Globale Einstellungen&quot; ge&auml;ndert werden.</p>
-        <h3>Wie wird er eingesetzt?</h3>
-        <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{sitename}</code>
-        <h3>Welche Parameter sind m&ouml;glich?</h3>
+$lang['admin']['help_function_sitename'] = '        <h3>Was macht dieser Tag?</h3>
+
+        <p>Gibt den Namen der Seite aus. Dieser wurde w&auml;hrend der Installation festgelegt und kann in der Administration im Men&uuml; &quot;Administrator > Globale Einstellungen&quot; ge&auml;ndert werden.</p>
+
+        <h3>Wie wird er eingesetzt?</h3>
+
+        <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{sitename}</code>
+
+        <h3>Welche Parameter sind m&ouml;glich?</h3>
+
 	<p><em><em>(optional)</em> <tt>assign</tt> (string) - Damit kann der Name der Smarty-Variablen festgelegt werden, an die das Ergebnis &uuml;bergeben wird.</p>';
-$lang['admin']['help_function_search'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Mit diesem Tag wird nur der Syntax zur Verwendung des <a href="listmodules.php?action=showmodulehelp&amp;module=Search">Search-Moduls</a> vereinfacht. 
-	Anstatt <code>{cms_module module=&quot;Search&quot;}</code> k&ouml;nnen Sie jetzt <code>{search}</code> verwenden, um das Modul in einem Template einzuf&uuml;gen.
-	</p>
-	<h3>Wie wird er eingesetzt?</h3>
+$lang['admin']['help_function_search'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Mit diesem Tag wird nur der Syntax zur Verwendung des <a href="listmodules.php?action=showmodulehelp&amp;module=Search">Search-Moduls</a> vereinfacht. 
+
+	Anstatt <code>{cms_module module=&quot;Search&quot;}</code> k&ouml;nnen Sie jetzt <code>{search}</code> verwenden, um das Modul in einem Template einzuf&uuml;gen.
+
+	</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
 	<p>F&uuml;gen Sie in Ihrem Template an der Stelle, an der das Feld f&uuml;r die Suche erscheinen soll, <code>{search}</code> ein. Weitere Informationen dazu finden Sie in der <a href="listmodules.php?action=showmodulehelp&amp;module=Search">Modul-Hilfe</a> des Search-Moduls.</p>';
-$lang['admin']['help_function_root_url'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Gibt die Root-URL der Webseite aus.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{root_url}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
+$lang['admin']['help_function_root_url'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Gibt die Root-URL der Webseite aus.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{root_url}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
 	<p>Derzeit keine.</p>';
-$lang['admin']['help_function_repeat'] = '	<<h3>Was macht dieser Tag?</h3>
-  <p>Wiederholt eine vorgegebene Sequenz von Zeichen entsprechend der Vorgabe</p>
-	<h3>Wie wird er eingesetzt?</h3>
-  <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{repeat string=&#039;repeat this&#039; times=&#039;3&#039;}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
-  <ul>
-  <li><em>(erforderlich)</em> <tt>string=&#039;text&#039;</tt> - der zu wiederholende String</li>
-  <li><em>(erforderlich)</em> <tt>times=&#039;num&#039;</tt> - die Anzahl der Wiederholungen.</li>
+$lang['admin']['help_function_repeat'] = '	<<h3>Was macht dieser Tag?</h3>
+
+  <p>Wiederholt eine vorgegebene Sequenz von Zeichen entsprechend der Vorgabe</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+  <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{repeat string=&#039;repeat this&#039; times=&#039;3&#039;}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+  <ul>
+
+  <li><em>(erforderlich)</em> <tt>string=&#039;text&#039;</tt> - der zu wiederholende String</li>
+
+  <li><em>(erforderlich)</em> <tt>times=&#039;num&#039;</tt> - die Anzahl der Wiederholungen.</li>
+
   </ul>';
-$lang['admin']['help_function_recently_updated'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Gibt eine Liste der zuletzt aktualisierten Seiten aus.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{recently_updated}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
-	<ul>
- 			<li><p><em>(optional)</em> <tt>number=&#039;10&#039;</tt> - Anzahl der anzuzeigenden Seiten, voreingestellt ist 10.</p><p>Beispiel:</p><code>{recently_updated number=&#039;15&#039;}</code></li>
-			<li><p><em>(optional)</em> <tt>leadin=&#039;Zuletzt modifiziert&#039;</tt> - Text, der links vom Bearbeitungsdatum angezeigt wird.</p><p>Beispiel:</p> <code>{recently_updated leadin=&#039;Zuletzt modifiziert&#039;}</code></li>
-			<li><p><em>(optional)</em> <tt>showtitle=&#039;true&#039;</tt> - Zeigt den Titel an, falls einer existiert (true|false).</p><p>Beispiel:</p> <code>{recently_updated showtitle=&#039;true&#039;}</code></li>
-			<li><p><em>(optional)</em> <tt>css_class=&#039;irgendeine_css&#039;</tt> - f&uuml;gt die Liste in einen div-Tag mit dieser Klasse ein.</p><p>Beispiel:</p> <code>{recently_updated css_class=&#039;irgendeine_css&#039;}</code></li>
-			<li><p><em>(optional)</em> <tt>dateformat=&#039;d.m.y h:m&#039;</tt> - passen Sie das Datumsformat Ihren W&uuml;nschen an (siehe PHP-date-format), Standard ist d.m.y h:m </p><p>Beispiel: <code>{recently_updated dateformat=&#039;D M j G:i:s T Y&#039;}</code></p></li>
-	</ul>
-	<p>oder kombiniert:</p>
+$lang['admin']['help_function_recently_updated'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Gibt eine Liste der zuletzt aktualisierten Seiten aus.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{recently_updated}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+	<ul>
+
+ 			<li><p><em>(optional)</em> <tt>number=&#039;10&#039;</tt> - Anzahl der anzuzeigenden Seiten, voreingestellt ist 10.</p><p>Beispiel:</p><code>{recently_updated number=&#039;15&#039;}</code></li>
+
+			<li><p><em>(optional)</em> <tt>leadin=&#039;Zuletzt modifiziert&#039;</tt> - Text, der links vom Bearbeitungsdatum angezeigt wird.</p><p>Beispiel:</p> <code>{recently_updated leadin=&#039;Zuletzt modifiziert&#039;}</code></li>
+
+			<li><p><em>(optional)</em> <tt>showtitle=&#039;true&#039;</tt> - Zeigt den Titel an, falls einer existiert (true|false).</p><p>Beispiel:</p> <code>{recently_updated showtitle=&#039;true&#039;}</code></li>
+
+			<li><p><em>(optional)</em> <tt>css_class=&#039;irgendeine_css&#039;</tt> - f&uuml;gt die Liste in einen div-Tag mit dieser Klasse ein.</p><p>Beispiel:</p> <code>{recently_updated css_class=&#039;irgendeine_css&#039;}</code></li>
+
+			<li><p><em>(optional)</em> <tt>dateformat=&#039;d.m.y h:m&#039;</tt> - passen Sie das Datumsformat Ihren W&uuml;nschen an (siehe PHP-date-format), Standard ist d.m.y h:m </p><p>Beispiel: <code>{recently_updated dateformat=&#039;D M j G:i:s T Y&#039;}</code></p></li>
+
+	</ul>
+
+	<p>oder kombiniert:</p>
+
 	<code>{recently_updated number=&#039;15&#039; showtitle=&#039;false&#039; leadin=&#039;Zuletzt modifiziert: &#039; css_class=&#039;meine_css&#039; dateformat=&#039;D M j G:i:s T Y&#039;}</code>';
-$lang['admin']['help_function_print'] = '        <h3>Was macht dieser Tag?</h3>
-	<p>Mit diesem Tag wird nur der Syntax zur Verwendung des <a href="listmodules.php?action=showmodulehelp&amp;module=Printing">Print-Modules</a> vereinfacht. 
-	Anstatt <code>{cms_module module=&#039;Printing&#039;}</code> k&ouml;nnen Sie jetzt <code>{print}</code> verwenden, um das Modul in einem Template einzuf&uuml;gen.
-	</p>
-	<h3>Wie wird er eingesetzt?</h3>
+$lang['admin']['help_function_print'] = '        <h3>Was macht dieser Tag?</h3>
+
+	<p>Mit diesem Tag wird nur der Syntax zur Verwendung des <a href="listmodules.php?action=showmodulehelp&amp;module=Printing">Print-Modules</a> vereinfacht. 
+
+	Anstatt <code>{cms_module module=&#039;Printing&#039;}</code> k&ouml;nnen Sie jetzt <code>{print}</code> verwenden, um das Modul in einem Template einzuf&uuml;gen.
+
+	</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
 	<p>F&uuml;gen Sie in Ihrem Template an der Stelle, an der der Druck-Button erscheinen soll, <code>{print}</code> ein. Weitere Informationen dazu finden Sie in der <a href="listmodules.php?action=showmodulehelp&amp;module=Printing">Modulhilfe</a> des Print-Moduls.</p>';
-$lang['admin']['help_function_oldprint'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Erzeugt einen Link, der nur auf den Inhalt der Seite verweist.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{oldprint}</code>
- 	<h3>Welche Parameter sind m&ouml;glich?</h3>
-						 <ul>
-                <li><em>(optional)</em> <tt>goback</tt> - Wenn Sie diesen Parameter auf true setzen, wird auf der auszudruckenden Seite ein Zur&uuml;ck-Link angezeigt.</li>
-                <li><em>(optional)</em> <tt>popup</tt> - Wenn Sie diesen Parameter auf true setzen, wird die auszudruckende Seite in einem neuen Fenster angezeigt.</li>
-                <li><em>(optional)</em> <tt>script</tt> - Wenn Sie diesen Parameter auf true setzen, wird f&uuml;r den Start des Ausdrucks der Seite Javascript verwendet.</li>
-                <li><em>(optional)</em> <tt>showbutton</tt> - Wenn Sie diesen Parameter auf true setzen, wird anstatt des Textlinks ein Druckersymbol angezeigt.</li>
-                <li><em>(optional)</em> <tt>class</tt> - CSS-Klasse f&uuml;r den Link, voreingestellt ist noprint.</li>
-                <li><em>(optional)</em> <tt>text</tt> - Mit diesem Parameter kann der Text f&uuml;r den Link festgelegt werden, der anstatt &szlig;Print this page&szlig; angezeigt werden soll.
-                    <p>Beispiel:</p>
-                     <code>{oldprint text=&quot;Druckversion&quot;}</code>
-                     </li>
-               <li><em>(optional)</em> <tt>title</tt> - Text, der als Titel-Attribut angezeigt wird. Ohne Angabe wird der text-Parameter verwendet.</li>
-                <li><em>(optional)</em> Hier k&ouml;nnen dem Link (a) weitere Optionen hinzugef&uuml;gt werden.</li>
-                <li><em>(optional)</em> <tt>src_img</tt> - Zeigt diese Bilddatei an. Voreingestellt ist images/cms/printbutton.gif.</li>
-                <li><em>(optional)</em> <tt>class_img</tt> - eine CSS-Klasse f&uuml;r den img-Tag (wenn der Parameter showbutton gesetzt wurde).</li>
+$lang['admin']['help_function_oldprint'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Erzeugt einen Link, der nur auf den Inhalt der Seite verweist.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{oldprint}</code>
+
+ 	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+						 <ul>
+
+                <li><em>(optional)</em> <tt>goback</tt> - Wenn Sie diesen Parameter auf true setzen, wird auf der auszudruckenden Seite ein Zur&uuml;ck-Link angezeigt.</li>
+
+                <li><em>(optional)</em> <tt>popup</tt> - Wenn Sie diesen Parameter auf true setzen, wird die auszudruckende Seite in einem neuen Fenster angezeigt.</li>
+
+                <li><em>(optional)</em> <tt>script</tt> - Wenn Sie diesen Parameter auf true setzen, wird f&uuml;r den Start des Ausdrucks der Seite Javascript verwendet.</li>
+
+                <li><em>(optional)</em> <tt>showbutton</tt> - Wenn Sie diesen Parameter auf true setzen, wird anstatt des Textlinks ein Druckersymbol angezeigt.</li>
+
+                <li><em>(optional)</em> <tt>class</tt> - CSS-Klasse f&uuml;r den Link, voreingestellt ist noprint.</li>
+
+                <li><em>(optional)</em> <tt>text</tt> - Mit diesem Parameter kann der Text f&uuml;r den Link festgelegt werden, der anstatt &szlig;Print this page&szlig; angezeigt werden soll.
+
+                    <p>Beispiel:</p>
+
+                     <code>{oldprint text=&quot;Druckversion&quot;}</code>
+
+                     </li>
+
+               <li><em>(optional)</em> <tt>title</tt> - Text, der als Titel-Attribut angezeigt wird. Ohne Angabe wird der text-Parameter verwendet.</li>
+
+                <li><em>(optional)</em> Hier k&ouml;nnen dem Link (a) weitere Optionen hinzugef&uuml;gt werden.</li>
+
+                <li><em>(optional)</em> <tt>src_img</tt> - Zeigt diese Bilddatei an. Voreingestellt ist images/cms/printbutton.gif.</li>
+
+                <li><em>(optional)</em> <tt>class_img</tt> - eine CSS-Klasse f&uuml;r den img-Tag (wenn der Parameter showbutton gesetzt wurde).</li>
+
         </ul>';
 $lang['admin']['login_info_title'] = 'Wichtige Information';
 $lang['admin']['login_info'] = 'Bitte beachten Sie an dieser Stelle folgendes';
-$lang['admin']['login_info_params'] = '<ol> 
-  <li>In Ihrem Browser m&uuml;ssen Cookies aktiviert sein</li> 
-  <li>In Ihrem Browser muss Javascript aktiviert sein</li> 
-  <li>F&uuml;r die folgende Adresse m&uuml;ssen sich neu &ouml;ffnende Fenster zugelassen werden:</li> 
+$lang['admin']['login_info_params'] = '<ol> 
+
+  <li>In Ihrem Browser m&uuml;ssen Cookies aktiviert sein</li> 
+
+  <li>In Ihrem Browser muss Javascript aktiviert sein</li> 
+
+  <li>F&uuml;r die folgende Adresse m&uuml;ssen sich neu &ouml;ffnende Fenster zugelassen werden:</li> 
+
 </ol>';
-$lang['admin']['help_function_news'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Mit diesem Tag wird nur der Syntax zur Verwendung des <a href="listmodules.php?action=showmodulehelp&amp;module=News">News-Moduls</a> vereinfacht. 
-	Anstatt <code>{cms_module module=&#039;News&#039;}</code> k&ouml;nnen Sie jetzt <code>{news}</code> verwenden, um das Modul in einem Template oder eine Seite einzuf&uuml;gen.
-	</p>
-	<h3>Wie wird er eingesetzt?</h3>
+$lang['admin']['help_function_news'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Mit diesem Tag wird nur der Syntax zur Verwendung des <a href="listmodules.php?action=showmodulehelp&amp;module=News">News-Moduls</a> vereinfacht. 
+
+	Anstatt <code>{cms_module module=&#039;News&#039;}</code> k&ouml;nnen Sie jetzt <code>{news}</code> verwenden, um das Modul in einem Template oder eine Seite einzuf&uuml;gen.
+
+	</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
 	<p>F&uuml;gen Sie in Ihrem Template oder einer Seite an der Stelle, an der die News erscheinen sollen, <code>{news}</code> ein. Weitere Informationen dazu finden Sie in der <a href="listmodules.php?action=showmodulehelp&amp;module=News">Modul-Hilfe</a> des News-Moduls.</p>';
-$lang['admin']['help_function_modified_date'] = '        <h3>Was macht dieser Tag?</h3>
-        <p>Gibt Datum und Zeit der letzten &Auml;nderung einer Seite aus. Wird kein Format vorgegeben, erfolgt die Ausgabe in etwa so: &#039;Jan 01, 2004&#039;.</p>
-        <h3>Wie wird er eingesetzt?</h3>
-        <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{modified_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code>
-        <h3>Welche Parameter sind m&ouml;glich?</h3>
-        <ul>
-                <li><em>(optional)</em> <tt>format</tt> - Format von Datum/Zeit, es werden die Parameter der PHP-Funktion strftime verwendet. Weitere Informationen zu diesen Parametern finden Sie <a href="http://php.net/strftime" target="_blank">hier</a>.</li>
+$lang['admin']['help_function_modified_date'] = '        <h3>Was macht dieser Tag?</h3>
+
+        <p>Gibt Datum und Zeit der letzten &Auml;nderung einer Seite aus. Wird kein Format vorgegeben, erfolgt die Ausgabe in etwa so: &#039;Jan 01, 2004&#039;.</p>
+
+        <h3>Wie wird er eingesetzt?</h3>
+
+        <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{modified_date format=&quot;%A %d-%b-%y %T %Z&quot;}</code>
+
+        <h3>Welche Parameter sind m&ouml;glich?</h3>
+
+        <ul>
+
+                <li><em>(optional)</em> <tt>format</tt> - Format von Datum/Zeit, es werden die Parameter der PHP-Funktion strftime verwendet. Weitere Informationen zu diesen Parametern finden Sie <a href="http://php.net/strftime" target="_blank">hier</a>.</li>
+
         </ul>';
-$lang['admin']['help_function_metadata'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Zeigt die Meta-Daten f&uuml;r diese Seite an. Es werden sowohl die Meta-Daten aus den globalen Einstellungen als auch die seitenspezifischen Meta-Daten angezeigt.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{metadata}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
+$lang['admin']['help_function_metadata'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Zeigt die Meta-Daten f&uuml;r diese Seite an. Es werden sowohl die Meta-Daten aus den globalen Einstellungen als auch die seitenspezifischen Meta-Daten angezeigt.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{metadata}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
 	<p><em>(optional)</em> <tt>showbase</tt> (true/false) - Wird dieser Parameter auf false gesetzt, wird der base-Tag nicht an den Browser gesandt. Wenn Sie in der config.php den Parameter $config[use_hierarchy] auf true setzen, MUSS dieser Parameter ebenfalls auf true gesetzt werden.</p>';
-$lang['admin']['help_function_menu_text'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Gibt den Men&uuml;text einer Seite aus.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p>  <code>{menu_text}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
+$lang['admin']['help_function_menu_text'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Gibt den Men&uuml;text einer Seite aus.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p>  <code>{menu_text}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
 	<p>Derzeit keine.</p>';
-$lang['admin']['help_function_menu'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Mit diesem Tag wird nur der Syntax zur Verwendung des <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">Men&uuml;Manager-Moduls</a> vereinfacht.
-	Anstatt <code>{cms_module module=&#039;MenuManager&#039;}</code> k&ouml;nnen Sie jetzt <code>{menu}</code> verwenden, um das Modul in einem Template oder eine Seite einzuf&uuml;gen.</p>
-	<h3>Wie wird er eingesetzt?</h3>
+$lang['admin']['help_function_menu'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Mit diesem Tag wird nur der Syntax zur Verwendung des <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">Men&uuml;Manager-Moduls</a> vereinfacht.
+
+	Anstatt <code>{cms_module module=&#039;MenuManager&#039;}</code> k&ouml;nnen Sie jetzt <code>{menu}</code> verwenden, um das Modul in einem Template oder eine Seite einzuf&uuml;gen.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
 	<p>F&uuml;gen Sie in Ihrem Template oder einer Seite an der Stelle, an der das Men&uuml; erscheinen sollen, <code>{menu}</code> ein. Weitere Informationen dazu finden Sie in der <a href="listmodules.php?action=showmodulehelp&amp;module=MenuManager">Modul-Hilfe</a> des MenuManager-Moduls.</p> ';
-$lang['admin']['help_function_last_modified_by'] = '        <h3>Was macht dieser Tag?</h3>
-        <p>Gibt die Person aus, die die Seite zuletzt bearbeitet hat. Wurde kein Format vorgegeben, wird standardm&auml;&szlig;ig die ID des Autors ausgegeben.</p>
-        <h3>Wie wird er eingesetzt?</h3>
-        <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{last_modified_by format=&quot;fullname&quot;}</code>
-        <h3>Welche Parameter sind m&ouml;glich?</h3>
+$lang['admin']['help_function_last_modified_by'] = '        <h3>Was macht dieser Tag?</h3>
+
+        <p>Gibt die Person aus, die die Seite zuletzt bearbeitet hat. Wurde kein Format vorgegeben, wird standardm&auml;&szlig;ig die ID des Autors ausgegeben.</p>
+
+        <h3>Wie wird er eingesetzt?</h3>
+
+        <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{last_modified_by format=&quot;fullname&quot;}</code>
+
+        <h3>Welche Parameter sind m&ouml;glich?</h3>
+
         <p><em>(optional)</em> <tt>format</tt> - ID (ID des Autors), username (Benutzername des Autors), fullname (voller Name des Autors)</p>';
-$lang['admin']['help_function_image'] = '  <h3>Was macht dieser Tag?</h3>
-  <p>Erzeugt einen image-Tag auf ein Bild im Verzeichnis /uploads/images</p>
-  <h3>Wie wird er eingesetzt?</h3>
-  <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{image src=&#039;irgendwas.jpg&#039;}</code>
-  <h3>Welche Parameter sind m&ouml;glich?</h3>
-  <ul>
-     <li><em>(erforderlich)</em> <tt>src</tt> - Name der Bilddatei im Verzeichnis /images.</li>
-     <li><em>(optional)</em> <tt>width</tt> - Breite des Bildes auf der Seite. Wird standardm&auml;&szlig;ig auf die reale Breite gesetzt.</li>
-     <li><em>(optional)</em> <tt>height</tt> - H&ouml;he des Bildes auf der Seite. Wird standardm&auml;&szlig;ig auf die reale Breite gesetzt.</li>
-     <li><em>(optional)</em> <tt>alt</tt> - Alternativer Text f&uuml;r das Bild -- ist f&uuml;r g&uuml;ltiges XHTML erforderlich. Standardm&auml;&szlig;ig wird der Dateiname verwendet.</li>
-     <li><em>(optional)</em> <tt>class</tt> - CSS-Klasse f&uuml;r das Bild.</li>
-     <li><em>(optional)</em> <tt>title</tt> - Text, der angezeigt wird, wenn sich die Maus &uuml;ber dem Bild befindet. Standardm&auml;&szlig;ig wird der alternative Text verwendet.</li>
-     <li><em>(optional)</em> <tt>addtext</tt> - Text, der dem Tag zus&auml;tzlich hinzugef&uuml;gt werden soll</li>
+$lang['admin']['help_function_image'] = '  <h3>Was macht dieser Tag?</h3>
+
+  <p>Erzeugt einen image-Tag auf ein Bild im Verzeichnis /uploads/images</p>
+
+  <h3>Wie wird er eingesetzt?</h3>
+
+  <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{image src=&#039;irgendwas.jpg&#039;}</code>
+
+  <h3>Welche Parameter sind m&ouml;glich?</h3>
+
+  <ul>
+
+     <li><em>(erforderlich)</em> <tt>src</tt> - Name der Bilddatei im Verzeichnis /images.</li>
+
+     <li><em>(optional)</em> <tt>width</tt> - Breite des Bildes auf der Seite. Wird standardm&auml;&szlig;ig auf die reale Breite gesetzt.</li>
+
+     <li><em>(optional)</em> <tt>height</tt> - H&ouml;he des Bildes auf der Seite. Wird standardm&auml;&szlig;ig auf die reale Breite gesetzt.</li>
+
+     <li><em>(optional)</em> <tt>alt</tt> - Alternativer Text f&uuml;r das Bild -- ist f&uuml;r g&uuml;ltiges XHTML erforderlich. Standardm&auml;&szlig;ig wird der Dateiname verwendet.</li>
+
+     <li><em>(optional)</em> <tt>class</tt> - CSS-Klasse f&uuml;r das Bild.</li>
+
+     <li><em>(optional)</em> <tt>title</tt> - Text, der angezeigt wird, wenn sich die Maus &uuml;ber dem Bild befindet. Standardm&auml;&szlig;ig wird der alternative Text verwendet.</li>
+
+     <li><em>(optional)</em> <tt>addtext</tt> - Text, der dem Tag zus&auml;tzlich hinzugef&uuml;gt werden soll</li>
+
   </ul>';
-$lang['admin']['help_function_html_blob'] = '	<h3>Was macht dieser Tag?</h3>
+$lang['admin']['help_function_html_blob'] = '	<h3>Was macht dieser Tag?</h3>
+
 	<p>F&uuml;r eine Beschreibung schauen Sie bitte in die Hilfe des global_content-Tags.</p>';
-$lang['admin']['help_function_google_search'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Durchsucht Ihre Webseite unter Verwendung der Google-Suche.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{google_search}</code>
-	<p/>Hinweis: Damit die Suche funktioniert, muss Ihre Webseite von Google indiziert worden sein. Sie k&ouml;nnen Ihre Webseite <a href="http://www.google.com/addurl.html">hier</a> bei Google anzumelden.</p>
-	<h3>Wie kann ich das Aussehen einer Textbox oder des Buttons ver&auml;ndern?</h3>
-	<p>Das Aussehen der Textbox und des Buttons kann via CSS ge&auml;ndert werden. Die Textbox kann &uuml;ber die ID textSearch und der Button &uuml;ber die ID buttonSearch formatiert werden.</p>
-
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
-	<ul>
-		<li><em>(optional)</em> <tt>domain</tt> - Dieser Parameter &uuml;bergibt den Domainnamen an die Google-Suche. Dieses Script versucht, die Domain automatisch zu bestimmen.</li>
-		<li><em>(optional)</em> <tt>buttonText</tt> - Der Text, der auf dem Such-Button angezeigt wird. Standard ist &quot;Search Site&quot;.</li>
+$lang['admin']['help_function_google_search'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Durchsucht Ihre Webseite unter Verwendung der Google-Suche.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{google_search}</code>
+
+	<p/>Hinweis: Damit die Suche funktioniert, muss Ihre Webseite von Google indiziert worden sein. Sie k&ouml;nnen Ihre Webseite <a href="http://www.google.com/addurl.html">hier</a> bei Google anzumelden.</p>
+
+	<h3>Wie kann ich das Aussehen einer Textbox oder des Buttons ver&auml;ndern?</h3>
+
+	<p>Das Aussehen der Textbox und des Buttons kann via CSS ge&auml;ndert werden. Die Textbox kann &uuml;ber die ID textSearch und der Button &uuml;ber die ID buttonSearch formatiert werden.</p>
+
+
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+	<ul>
+
+		<li><em>(optional)</em> <tt>domain</tt> - Dieser Parameter &uuml;bergibt den Domainnamen an die Google-Suche. Dieses Script versucht, die Domain automatisch zu bestimmen.</li>
+
+		<li><em>(optional)</em> <tt>buttonText</tt> - Der Text, der auf dem Such-Button angezeigt wird. Standard ist &quot;Search Site&quot;.</li>
+
 	</ul>';
-$lang['admin']['help_function_global_content'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>F&uuml;gt einen Globalen Inhaltsblock in Ihrem Template bzw. Ihrer Seite ein.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{global_content name=&#039;mein_block&#039;}</code>, wobei mein_block der Name ist, der dem Block bei dessen Erstellung gegeben wurde.</p>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
-	<p><em>(erforderlich)</em> <tt>name</tt> - der Name des Globalen Inhaltsblocks, der angezeigt werden soll.</li>
-          <li><em>(optional)</em> <tt>assign</tt> - der Name der Smarty-Variablen, der der Globale Inhaltsblock zugewiesen werden soll.</li>
+$lang['admin']['help_function_global_content'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>F&uuml;gt einen Globalen Inhaltsblock in Ihrem Template bzw. Ihrer Seite ein.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{global_content name=&#039;mein_block&#039;}</code>, wobei mein_block der Name ist, der dem Block bei dessen Erstellung gegeben wurde.</p>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+	<p><em>(erforderlich)</em> <tt>name</tt> - der Name des Globalen Inhaltsblocks, der angezeigt werden soll.</li>
+
+          <li><em>(optional)</em> <tt>assign</tt> - der Name der Smarty-Variablen, der der Globale Inhaltsblock zugewiesen werden soll.</li>
+
 	</ul>';
-$lang['admin']['help_function_get_template_vars'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Gibt alle bekannten Smarty-Variablen auf Ihrer Seite aus.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{get_template_vars}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
+$lang['admin']['help_function_get_template_vars'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Gibt alle bekannten Smarty-Variablen auf Ihrer Seite aus.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{get_template_vars}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
         <p>Derzeit keine.</p>';
-$lang['admin']['help_function_embed'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Mit diesem Tag k&ouml;nnen externe Applikation in CMSms eingebettet werden. Die h&auml;ufigste Anwendung hierf&uuml;r ist wohl ein Forum. 
-	F&uuml;r die Implementierung werden IFRAMES verwendet, so dass &auml;ltere Browser damit Probleme haben k&ouml;nnen. Dies ist jedoch der einzige funktionierende Weg, 
-	ohne die einzubettende Applikation zu modifizieren.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-        <ul>
-        <li>a) F&uuml;gen Sie <code>{embed header=true}</code> in den head-Bereich Ihres Seiten-Templates oder im Metadatenbereich in der Registerkarte &quot;Optionen&quot; der entsprechenden Seite ein. Damit wird das ben&ouml;tigte Javascript in den Quelltext eingef&uuml;gt. Wenn Sie diesen Tag im Metadatenbereich der Registerkarte &quot;Optionen&quot; eingef&uuml;gt haben, sollten Sie darauf achten, dass der Tag <code>{metadata}</code> im head-Bereich Ihres Seiten-Template enthalten ist.</li>
-	<li>F&uuml;gen Sie den folgenden Tag in Ihr Template bzw. Ihre Seite ein: <code>embed url=&#039;http://www.google.com/&#039;}</code></li>
-        </ul>
-        <br/>
-        <h4>Beispiel, um das Iframe gr&ouml;&szlig;er zu machen</h4>
-	<p>F&uuml;gen Sie Ihrem Stylesheet folgendes hinzu:</p>
-        <pre>#myframe { height: 600px; }</pre>
-        <h3>Welche Parameter sind m&ouml;glich?</h3>
-        <ul>
-               <li><em>(erforderlich)</em> <tt>url</tt> - die URL, die im Iframe eingebettet werden soll</li>
-               <li><em>(erforderlich)</em> <tt>header=true</tt> - damit wird der header-Code erzeugt, damit sich die Gr&ouml;&szlig;e des Iframes der eingebetteten Applikation anpasst.</li>
-               <li><em>(optional)</em> <tt>name</tt> - ein Name, der f&uuml;r das Iframe verwendet wird (anstatt myframe).<p>Wenn Sie diese Option verwenden, achten Sie darauf, dass er in beiden Aufrufen des Tags identisch sein muss, also : <code>{embed header=true name=foo}</code> und <code>{embed name=foo url=http://www.google.com}</code>.</p></li>
+$lang['admin']['help_function_embed'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Mit diesem Tag k&ouml;nnen externe Applikation in CMSms eingebettet werden. Die h&auml;ufigste Anwendung hierf&uuml;r ist wohl ein Forum. 
+
+	F&uuml;r die Implementierung werden IFRAMES verwendet, so dass &auml;ltere Browser damit Probleme haben k&ouml;nnen. Dies ist jedoch der einzige funktionierende Weg, 
+
+	ohne die einzubettende Applikation zu modifizieren.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+        <ul>
+
+        <li>a) F&uuml;gen Sie <code>{embed header=true}</code> in den head-Bereich Ihres Seiten-Templates oder im Metadatenbereich in der Registerkarte &quot;Optionen&quot; der entsprechenden Seite ein. Damit wird das ben&ouml;tigte Javascript in den Quelltext eingef&uuml;gt. Wenn Sie diesen Tag im Metadatenbereich der Registerkarte &quot;Optionen&quot; eingef&uuml;gt haben, sollten Sie darauf achten, dass der Tag <code>{metadata}</code> im head-Bereich Ihres Seiten-Template enthalten ist.</li>
+
+	<li>F&uuml;gen Sie den folgenden Tag in Ihr Template bzw. Ihre Seite ein: <code>embed url=&#039;http://www.google.com/&#039;}</code></li>
+
+        </ul>
+
+        <br/>
+
+        <h4>Beispiel, um das Iframe gr&ouml;&szlig;er zu machen</h4>
+
+	<p>F&uuml;gen Sie Ihrem Stylesheet folgendes hinzu:</p>
+
+        <pre>#myframe { height: 600px; }</pre>
+
+        <h3>Welche Parameter sind m&ouml;glich?</h3>
+
+        <ul>
+
+               <li><em>(erforderlich)</em> <tt>url</tt> - die URL, die im Iframe eingebettet werden soll</li>
+
+               <li><em>(erforderlich)</em> <tt>header=true</tt> - damit wird der header-Code erzeugt, damit sich die Gr&ouml;&szlig;e des Iframes der eingebetteten Applikation anpasst.</li>
+
+               <li><em>(optional)</em> <tt>name</tt> - ein Name, der f&uuml;r das Iframe verwendet wird (anstatt myframe).<p>Wenn Sie diese Option verwenden, achten Sie darauf, dass er in beiden Aufrufen des Tags identisch sein muss, also : <code>{embed header=true name=foo}</code> und <code>{embed name=foo url=http://www.google.com}</code>.</p></li>
+
         </ul>';
-$lang['admin']['help_function_edit'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Erzeugt einen Link, um die Seite zu bearbeiten.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{edit}</code>
-        <h3>Welche Parameter sind m&ouml;glich?</h3>
-        <ul>
-                <li><em>(optional)</em> <tt>showbutton</tt> - Wenn Sie diesen Parameter auf true setzen, wird anstatt des Textlinks eine Grafik angezeigt.</li>
-	        <li><em>(optional)</em> <tt>text</tt> - Mit diesem Parameter kann der anzuzeigende Text f&uuml;r den Link festgelegt werden.</li>
+$lang['admin']['help_function_edit'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Erzeugt einen Link, um die Seite zu bearbeiten.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{edit}</code>
+
+        <h3>Welche Parameter sind m&ouml;glich?</h3>
+
+        <ul>
+
+                <li><em>(optional)</em> <tt>showbutton</tt> - Wenn Sie diesen Parameter auf true setzen, wird anstatt des Textlinks eine Grafik angezeigt.</li>
+
+	        <li><em>(optional)</em> <tt>text</tt> - Mit diesem Parameter kann der anzuzeigende Text f&uuml;r den Link festgelegt werden.</li>
+
         </ul>';
-$lang['admin']['help_function_description'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Gibt die Beschreibung einer Seite aus (Titel-Attribut).</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{description}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
+$lang['admin']['help_function_description'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Gibt die Beschreibung einer Seite aus (Titel-Attribut).</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{description}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
 	<p>Derzeit keine.</p>';
-$lang['admin']['help_function_created_date'] = '        <h3>Was macht dieser Tag?</h3>
-        <p>Gibt Datum und Uhrzeit der Erstellung der Seite aus. Wird kein Format vorgegeben, wird standardm&auml;&szlig;ig &#039;Jan 01, 2004&#039; verwendet.</p>
-        <h3>Wie wird er eingesetzt?</h3>
-        <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{created_date format=&quot;%A, %d.%B %Y %T %Z&quot;}</code></p>
-        <h3>Welche Parameter sind m&ouml;glich?</h3>
+$lang['admin']['help_function_created_date'] = '        <h3>Was macht dieser Tag?</h3>
+
+        <p>Gibt Datum und Uhrzeit der Erstellung der Seite aus. Wird kein Format vorgegeben, wird standardm&auml;&szlig;ig &#039;Jan 01, 2004&#039; verwendet.</p>
+
+        <h3>Wie wird er eingesetzt?</h3>
+
+        <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{created_date format=&quot;%A, %d.%B %Y %T %Z&quot;}</code></p>
+
+        <h3>Welche Parameter sind m&ouml;glich?</h3>
+
         <p><em>(optional)</em> <tt>format</tt> - Datums-/Uhrzeit-Format. Verwendet die Parameter der PHP-Funktion strftime. Weitere Informationen dazu finden Sie <a href="http://php.net/strftime" target="_blank">hier</a>.</p>';
-$lang['admin']['help_function_content'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Mit diesem Tag erfolgt die Ausgabe der Inhalte Ihrer Seiten. Er wird im Template eingef&uuml;gt. An dieser Stelle wird dann der Inhalt der jeweils aktuellen Seite angezeigt.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{content}</code>.
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
-	<ul>
-		<li><em>(optional)</em> <tt>block</tt> - &uuml;ber diesen Parameter k&ouml;nnen Sie mehr als einen Inhaltsblock auf einer Seite erstellen. Wird der content-Tags mehrfach in einem Template aufgerufen, werden auch in der Administration auf der Seite zum Bearbeiten der Seite die entsprechende Anzahl Bearbeitungsfelder angezeigt.
-		<p>Beispiel:</p>
-<code>{content block=&quot;Zweiter Inhaltsblock&quot; label=&quot;Zweiter Inhaltsblock&quot;}</code>
-<p>Wenn Sie jetzt diese Seite bearbeiten, erscheint beim Bearbeiten der Seite ein weiterer Textbereich mit dem Namen &quot;Zweiter Inhaltsblock&quot;.</p>
-<p><strong>Hinweis</strong> Der Name des Inhaltsblocks darf nur aus Buchstaben, Zahlen, Leerzeichen, Binde- und Unterstrichen bestehen (keinen Punkt o.&auml;. - falsch w&auml;re also 2. Block).</p></li>
-		<li><em>(optional)</em> <tt>wysiwyg</tt> (true/false) - Wird dieser Parameter auf false gesetzt, wird zum Bearbeiten dieser Seite nicht der festgelegte WYSIWYG-Editor verwendet. Ist der Parameter true, funktioniert es wie bekannt. Funktioniert nur, wenn der block-Parameter verwendet wird.</li>
-		<li><em>(optional)</em> <tt>oneline</tt> (true/false) - Wird dieser Parameter auf true gesetzt, wird bei der Bearbeitung dieses Blocks nur eine Zeile angezeigt. Ist der Parameter false, funktioniert es wie bekannt. Funktioniert nur, wenn der block-Parameter verwendet wird.</li>
-                <li><em>(optional)</em> <tt>size</tt> - wenn der Parameter oneline gesetzt wurde, kann mit diesem Parameter die Gr&ouml;&szlig;e der Textzeile festgelegt werden. Voreingestellt ist 50.</li>
-		<li><em>(optional)</em> <tt>default</tt> - Mit diesem Parameter kann f&uuml;r einen Inhaltsblock ein bestimmter Inhalt voreingestellt werden (funktioniert nur mit zus&auml;tzlichen Inhaltsbl&ouml;cken).</li>
-		<li><em>(optional)</em> <tt>label</tt> - Mit diesem Parameter kann f&uuml;r den jeweiligen Inhaltsblock eine Beschriftung festgelegt werden.</li>
-		<li><em>(optional)</em> <tt>assign</tt> - Mit diesem Parameter kann der Inhalt einer Smarty-Variablen zugewiesen werden. Diese kann dann in anderen Bereichen der Seite verwendet werden. Auch eine Pr&uuml;fung, ob ein bestimmter Inhalt existiert, ist damit m&ouml;glich.
-		<p>Beispiel der &uuml;bergabe eines Seiteninhalts an einen benutzerdefinierten Tag als Parameter:</p>
-<code>
-         {content assign=seiteninhalt}
-         {table_of_contents thepagecontent=&quot;$seiteninhalt&quot;}
-</code>
-</li>
+$lang['admin']['help_function_content'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Mit diesem Tag erfolgt die Ausgabe der Inhalte Ihrer Seiten. Er wird im Template eingef&uuml;gt. An dieser Stelle wird dann der Inhalt der jeweils aktuellen Seite angezeigt.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{content}</code>.
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+	<ul>
+
+		<li><em>(optional)</em> <tt>block</tt> - &uuml;ber diesen Parameter k&ouml;nnen Sie mehr als einen Inhaltsblock auf einer Seite erstellen. Wird der content-Tags mehrfach in einem Template aufgerufen, werden auch in der Administration auf der Seite zum Bearbeiten der Seite die entsprechende Anzahl Bearbeitungsfelder angezeigt.
+
+		<p>Beispiel:</p>
+
+<code>{content block=&quot;Zweiter Inhaltsblock&quot; label=&quot;Zweiter Inhaltsblock&quot;}</code>
+
+<p>Wenn Sie jetzt diese Seite bearbeiten, erscheint beim Bearbeiten der Seite ein weiterer Textbereich mit dem Namen &quot;Zweiter Inhaltsblock&quot;.</p>
+
+<p><strong>Hinweis</strong> Der Name des Inhaltsblocks darf nur aus Buchstaben, Zahlen, Leerzeichen, Binde- und Unterstrichen bestehen (keinen Punkt o.&auml;. - falsch w&auml;re also 2. Block).</p></li>
+
+		<li><em>(optional)</em> <tt>wysiwyg</tt> (true/false) - Wird dieser Parameter auf false gesetzt, wird zum Bearbeiten dieser Seite nicht der festgelegte WYSIWYG-Editor verwendet. Ist der Parameter true, funktioniert es wie bekannt. Funktioniert nur, wenn der block-Parameter verwendet wird.</li>
+
+		<li><em>(optional)</em> <tt>oneline</tt> (true/false) - Wird dieser Parameter auf true gesetzt, wird bei der Bearbeitung dieses Blocks nur eine Zeile angezeigt. Ist der Parameter false, funktioniert es wie bekannt. Funktioniert nur, wenn der block-Parameter verwendet wird.</li>
+
+                <li><em>(optional)</em> <tt>size</tt> - wenn der Parameter oneline gesetzt wurde, kann mit diesem Parameter die Gr&ouml;&szlig;e der Textzeile festgelegt werden. Voreingestellt ist 50.</li>
+
+		<li><em>(optional)</em> <tt>default</tt> - Mit diesem Parameter kann f&uuml;r einen Inhaltsblock ein bestimmter Inhalt voreingestellt werden (funktioniert nur mit zus&auml;tzlichen Inhaltsbl&ouml;cken).</li>
+
+		<li><em>(optional)</em> <tt>label</tt> - Mit diesem Parameter kann f&uuml;r den jeweiligen Inhaltsblock eine Beschriftung festgelegt werden.</li>
+
+		<li><em>(optional)</em> <tt>assign</tt> - Mit diesem Parameter kann der Inhalt einer Smarty-Variablen zugewiesen werden. Diese kann dann in anderen Bereichen der Seite verwendet werden. Auch eine Pr&uuml;fung, ob ein bestimmter Inhalt existiert, ist damit m&ouml;glich.
+
+		<p>Beispiel der &uuml;bergabe eines Seiteninhalts an einen benutzerdefinierten Tag als Parameter:</p>
+
+<code>
+
+         {content assign=seiteninhalt}
+
+         {table_of_contents thepagecontent=&quot;$seiteninhalt&quot;}
+
+</code>
+
+</li>
+
 	</ul>';
 $lang['admin']['help_function_contact_form'] = '<h3> Dieser Tag ist ab CMSms-Version 1.5 nicht mehr im Lieferumfang enthalten, sondern wird in einem <a href="http://dev.cmsmadesimple.org/project/view/626">separaten Projekt</a> weiterentwickelt.</h3>';
-$lang['admin']['help_function_cms_versionname'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Dieser Tag kann verwendet werden, um den Namen der CMSms-Version auszugeben.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{cms_versionname}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
+$lang['admin']['help_function_cms_versionname'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Dieser Tag kann verwendet werden, um den Namen der CMSms-Version auszugeben.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{cms_versionname}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
 	<p>Keine</p>';
-$lang['admin']['help_function_cms_version'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Dieser Tag kann verwendet werden, um die aktuelle CMSms-Versionsnummer in einer Seite oder einem Template auszugeben.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{cms_version}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
+$lang['admin']['help_function_cms_version'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Dieser Tag kann verwendet werden, um die aktuelle CMSms-Versionsnummer in einer Seite oder einem Template auszugeben.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{cms_version}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
 	<p>Keine.</p>';
-$lang['admin']['about_function_cms_selflink'] = '		<p>Author: Ted Kulp <tedkulp@users.sf.net></p>
-		<p>Version: 1.1</p>
-		<p>Modified: Martin B. Vestergaard <mbv@nospam.dk></p>
-		<p>Version: 1.41</p>
-		<p>Modified: Russ Baldwin</p>
-		<p>Version: 1.42</p>
-		<p>Modified: Marcus Bointon <coolbru@users.sf.net></p>
-		<p>Version: 1.43</p>
-		<p>Modified: Tatu Wikman <tsw@backspace.fi></p>
-		<p>Version: 1.44</p>
-		<p>Modified: Hans Mogren <http://hans.bymarken.net/></p>
-		<p>Version: 1.45</p>
-
-		<p>
-		Change History:<br/>
-		1.46 - Fixes a problem with too many queries when using the dir=start option.<br/>
-		1.45 - Added a new option for &quot;dir&quot;, &quot;up&quot;, for links to the parent page e.g. dir=&quot;up&quot; (Hans Mogren).<br />
-		1.44 - Added new parameters &quot;ext&quot; and &quot;ext_info&quot; to allow external links with class=&quot;external&quot; and info text after the link, ugly hack but works thinking about rewriting this(Tatu Wikman)<br />
-		1.43 - Added new parameters &quot;image&quot; and &quot;imageonly&quot; to allow attachment of images to be used for page links, either instead of or in addition to text links. (Marcus Bointon)<br />
-		1.42 - Added new parameter &quot;anchorlink&quot; and a new option for &quot;dir&quot; namely, &quot;anchor&quot;, for internal page links. e.g. dir=&quot;anchor&quot; anchorlink=&quot;internal_link&quot;. (Russ)<br />
-		1.41 - added new parameter &quot;href&quot; (LeisureLarry)<br />
-		1.4 - fixed bug next/prev linking to non-content pages. (Thanks Teemu Koistinen for this fix)<br />
-		1.3 - added option &quot;more&quot;<br />
-		1.2 - by Martin B. Vestergaard
-		<ul>
-		<li>changed default text to Page Name (was Page Alias)</li>
-		<li>added option dir=next/prev to display next or previous item in the hirachy - thanks to 100rk</li>
-		<li>added option class to add a class= statement to the a-tag.</li>
-		<li>added option menu to display menu-text in sted of Page Name</li>
-		<li>added option lang to display link-labels in different languages</li>
-		</ul>
-		1.1 - Changed to new content system<br />
-		1.0 - Initial release
+$lang['admin']['about_function_cms_selflink'] = '		<p>Author: Ted Kulp <tedkulp@users.sf.net></p>
+
+		<p>Version: 1.1</p>
+
+		<p>Modified: Martin B. Vestergaard <mbv@nospam.dk></p>
+
+		<p>Version: 1.41</p>
+
+		<p>Modified: Russ Baldwin</p>
+
+		<p>Version: 1.42</p>
+
+		<p>Modified: Marcus Bointon <coolbru@users.sf.net></p>
+
+		<p>Version: 1.43</p>
+
+		<p>Modified: Tatu Wikman <tsw@backspace.fi></p>
+
+		<p>Version: 1.44</p>
+
+		<p>Modified: Hans Mogren <http://hans.bymarken.net/></p>
+
+		<p>Version: 1.45</p>
+
+
+
+		<p>
+
+		Change History:<br/>
+
+		1.46 - Fixes a problem with too many queries when using the dir=start option.<br/>
+
+		1.45 - Added a new option for &quot;dir&quot;, &quot;up&quot;, for links to the parent page e.g. dir=&quot;up&quot; (Hans Mogren).<br />
+
+		1.44 - Added new parameters &quot;ext&quot; and &quot;ext_info&quot; to allow external links with class=&quot;external&quot; and info text after the link, ugly hack but works thinking about rewriting this(Tatu Wikman)<br />
+
+		1.43 - Added new parameters &quot;image&quot; and &quot;imageonly&quot; to allow attachment of images to be used for page links, either instead of or in addition to text links. (Marcus Bointon)<br />
+
+		1.42 - Added new parameter &quot;anchorlink&quot; and a new option for &quot;dir&quot; namely, &quot;anchor&quot;, for internal page links. e.g. dir=&quot;anchor&quot; anchorlink=&quot;internal_link&quot;. (Russ)<br />
+
+		1.41 - added new parameter &quot;href&quot; (LeisureLarry)<br />
+
+		1.4 - fixed bug next/prev linking to non-content pages. (Thanks Teemu Koistinen for this fix)<br />
+
+		1.3 - added option &quot;more&quot;<br />
+
+		1.2 - by Martin B. Vestergaard
+
+		<ul>
+
+		<li>changed default text to Page Name (was Page Alias)</li>
+
+		<li>added option dir=next/prev to display next or previous item in the hirachy - thanks to 100rk</li>
+
+		<li>added option class to add a class= statement to the a-tag.</li>
+
+		<li>added option menu to display menu-text in sted of Page Name</li>
+
+		<li>added option lang to display link-labels in different languages</li>
+
+		</ul>
+
+		1.1 - Changed to new content system<br />
+
+		1.0 - Initial release
+
 		</p>';
-$lang['admin']['help_function_cms_selflink'] = '                <h3>Was macht dieser Tag?</h3>
-		<p>Zeigt einen Link zu einer anderen CMSms-Inhaltsseite in Ihrem Template oder im Inhalt an. Kann mit dem Parameter ext auch f&uuml;r externe Links eingesetzt werden.</p>
-		<h3>Wie wird er eingesetzt?</h3>
-		<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{cms_selflink page=&#039;1&#039;}</code> oder <code>{cms_selflink page=&#039;alias&#039;}</code></p>
-		<h3>Welche Parameter sind m&ouml;glich?</h3>
-		<ul>
-		<li><em>(optional)</em> <tt>page</tt> - Seiten-ID oder Seiten-Alias, auf den verlinkt werden soll.</li>
-		<li><em>(optional)</em> <tt>dir anchor (interne Links)</tt> - Neue Option f&uuml;r seiteninterne Links. Falls diese Option verwendet wird, dann sollte <tt>anchorlink</tt> auf den Link gesetzt werden.</li> <!-- Russ - 25-04-2006 -->
-		<li><em>(optional)</em> <tt>anchorlink</tt> - Neuer Parameter f&uuml;r einen seiteninternen Link. Wenn dieser Parameter verwendet wird, muss auch der Wert <tt>dir =&#039;anchor&#039;</tt> gesetzt werden. Das Raute-Zeichen muss nicht hinzugef&uuml;gt werden, da dies automatisch erfolgt.</li> <!-- Russ - 25-04-2006 -->
-		<li><em>(optional)</em> <tt>urlparam</tt> - Legt einen zus&auml;tzlichen Parameter f&uuml;r die URL fest. <strong>Verwenden Sie dies nie in Verbindung mit dem Parameter <em>anchorlink</em> .</strong>
-		<li><em>(optional)</em> <tt>tabindex =&#039;ein Wert&#039;</tt> - Legt einen Tabindex f&uuml;r den Link fest.</li> <!-- Russ - 22-06-2005 -->
-		<li><em>(optional)</em> <tt>dir start/next/prev/up (previous)</tt> - Links auf die festgelegte Startseite oder die n&auml;chste oder vorherige Seite, oder die &uuml;bergeordnete Seite. Falls dies verwendet wird, sollte der Wert <tt>page</tt> nicht gesetzt werden.</li> <!-- mbv - 21-06-2005 --><B>Hinweis!</B> Von den eben genannten Parametern sollte nur einer pro cms_selflink-Aufruf verwendet werden!!
-	<li><em>(optional)</em> <tt>text</tt> - Text, der f&uuml;r den Link angezeigt wird. Wird kein Wert festgelegt, wird anstatt dessen der Seitenname verwendet.</li>
-		<li><em>(optional)</em> <tt>menu 1/0</tt> - Wird der Wert auf 1 gesetzt, wird anstatt des Seitennamens der Men&uuml;text verwendet.</li> <!-- mbv - 21-06-2005 -->
-		<li><em>(optional)</em> <tt>target</tt> - Ziel, in dem der Link ge&ouml;ffnet werden soll. N&uuml;tzlich bei Verwendung von Frames und Javascript.</li>
-		<li><em>(optional)</em> <tt>class</tt> - CSS-Klasse f&uuml;r den a-Link. N&uuml;tzlich f&uuml;r die Gestaltung des Links.</li> <!-- mbv - 21-06-2005 -->
-		<li><em>(optional)</em> <tt>lang</tt> - Zeigt Link-Beschriftungen (zum Beispiel &#039;N&auml;chste Seite&#039;/&#039;Vorherige Seite&#039;) in verschiedenen Sprachen an. Ist der Wert 0, wird der Link nicht beschriftet. Aktuell ist D&auml;nisch (da), Holl&auml;ndisch (nl), Englisch (en), Franz&ouml;sisch (fr) und Norwegisch (no) verf&uuml;gbar.</li> <!-- mbv - 21-06-2005 -->
-		<li><em>(optional)</em> <tt>id</tt> - CSS-ID f&uuml;r den a-Link.</li> <!-- mbv - 29-06-2005 -->
-		<li><em>(optional)</em> <tt>more</tt> - damit k&ouml;nnen dem a-Link weitere Parameter hinzugef&uuml;gt werden.</li> <!-- mbv - 29-06-2005 -->
-		<li><em>(optional)</em> <tt>label</tt> - Beschriftung f&uuml;r den Link.</li>
-		<li><em>(optional)</em> <tt>label_side left/right</tt> - Seite, auf der die Beschriftung angezeigt angezeigt wird. Voreingestellt ist left.</li>
-		<li><em>(optional)</em> <tt>title</tt> - Text, der als title-Attribut verwendet wird. Ohne Vorgabe wird der Titel der Seite als Titel f&uuml;r den Link verwendet.</li>
-		<li><em>(optional)</em> <tt>rellink 1/0</tt> - Erzeugt einen relativen Link f&uuml;r eine behindertengerechte Navigation. Funktioniert nur, wenn der dir-Parameter gesetzt ist und sollte nur im head-Bereich eines Templates eingesetzt werden.</li>
-		<li><em>(optional)</em> <tt>href</tt> - Wenn der Parameter href verwendet wird, wird nur der href-Wert erzeugt (kein anderer Parameter m&ouml;glich). <strong>Beispiel:</strong> <code><a href="{cms_selflink href=&#039;alias&#039;}"><img src=&quot;&quot;></a></code></li>
-		<li><em>(optional)</em> <tt>image</tt> - Die URL eines Bildes, welches als Link verwendet werden soll. <strong>Beispiel:</strong> <code>{cms_selflink dir=&#039;next&#039; image=&#039;next.png&#039; text=&#039;Next&#039;}</code></li>
-		<li><em>(optional)</em> <tt>alt</tt> - Alternativer Text, der f&uuml;r den vorstehenden image-Parameter verwendet wird (alt=&quot;&quot; wird nur verwendet, wenn der alt-Parameter nicht vorgegeben ist).</li>
-		<li><em>(optional)</em> <tt>imageonly</tt> - Bei Verwendung von Bildern kann damit die Anzeige von Text-Links unterdr&uuml;ckt werden. Wenn f&uuml;r den Link kein Text verwendet werden soll, k&ouml;nnen Sie mit der Einstellung lang=0 auch die Beschriftung unterdr&uuml;cken. <strong>Beispiel:</strong> <code>{cms_selflink dir=&#039;next&#039; image=&#039;next.png&#039; text=&#039;Next&#039; imageonly=1}</code></li>
-		<li><em>(optional)</em> <tt>ext</tt> - F&uuml;r externe Links, f&uuml;gt class=&#039;external&#039; und Info-Text hinzu. <strong>Warnung:</strong> dieser Parameter ist nur mit den Parametern text, target und title kompatibel!</li>
-		<li><em>(optional)</em> <tt>ext_info</tt> - wird in Verbindung mit den &#039;ext&#039;-Voreinstellungen verwendet (externer Link)</li>
+$lang['admin']['help_function_cms_selflink'] = '                <h3>Was macht dieser Tag?</h3>
+
+		<p>Zeigt einen Link zu einer anderen CMSms-Inhaltsseite in Ihrem Template oder im Inhalt an. Kann mit dem Parameter ext auch f&uuml;r externe Links eingesetzt werden.</p>
+
+		<h3>Wie wird er eingesetzt?</h3>
+
+		<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{cms_selflink page=&#039;1&#039;}</code> oder <code>{cms_selflink page=&#039;alias&#039;}</code></p>
+
+		<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+		<ul>
+
+		<li><em>(optional)</em> <tt>page</tt> - Seiten-ID oder Seiten-Alias, auf den verlinkt werden soll.</li>
+
+		<li><em>(optional)</em> <tt>dir anchor (interne Links)</tt> - Neue Option f&uuml;r seiteninterne Links. Falls diese Option verwendet wird, dann sollte <tt>anchorlink</tt> auf den Link gesetzt werden.</li> <!-- Russ - 25-04-2006 -->
+
+		<li><em>(optional)</em> <tt>anchorlink</tt> - Neuer Parameter f&uuml;r einen seiteninternen Link. Wenn dieser Parameter verwendet wird, muss auch der Wert <tt>dir =&#039;anchor&#039;</tt> gesetzt werden. Das Raute-Zeichen muss nicht hinzugef&uuml;gt werden, da dies automatisch erfolgt.</li> <!-- Russ - 25-04-2006 -->
+
+		<li><em>(optional)</em> <tt>urlparam</tt> - Legt einen zus&auml;tzlichen Parameter f&uuml;r die URL fest. <strong>Verwenden Sie dies nie in Verbindung mit dem Parameter <em>anchorlink</em> .</strong>
+
+		<li><em>(optional)</em> <tt>tabindex =&#039;ein Wert&#039;</tt> - Legt einen Tabindex f&uuml;r den Link fest.</li> <!-- Russ - 22-06-2005 -->
+
+		<li><em>(optional)</em> <tt>dir start/next/prev/up (previous)</tt> - Links auf die festgelegte Startseite oder die n&auml;chste oder vorherige Seite, oder die &uuml;bergeordnete Seite. Falls dies verwendet wird, sollte der Wert <tt>page</tt> nicht gesetzt werden.</li> <!-- mbv - 21-06-2005 --><B>Hinweis!</B> Von den eben genannten Parametern sollte nur einer pro cms_selflink-Aufruf verwendet werden!!
+
+	<li><em>(optional)</em> <tt>text</tt> - Text, der f&uuml;r den Link angezeigt wird. Wird kein Wert festgelegt, wird anstatt dessen der Seitenname verwendet.</li>
+
+		<li><em>(optional)</em> <tt>menu 1/0</tt> - Wird der Wert auf 1 gesetzt, wird anstatt des Seitennamens der Men&uuml;text verwendet.</li> <!-- mbv - 21-06-2005 -->
+
+		<li><em>(optional)</em> <tt>target</tt> - Ziel, in dem der Link ge&ouml;ffnet werden soll. N&uuml;tzlich bei Verwendung von Frames und Javascript.</li>
+
+		<li><em>(optional)</em> <tt>class</tt> - CSS-Klasse f&uuml;r den a-Link. N&uuml;tzlich f&uuml;r die Gestaltung des Links.</li> <!-- mbv - 21-06-2005 -->
+
+		<li><em>(optional)</em> <tt>lang</tt> - Zeigt Link-Beschriftungen (zum Beispiel &#039;N&auml;chste Seite&#039;/&#039;Vorherige Seite&#039;) in verschiedenen Sprachen an. Ist der Wert 0, wird der Link nicht beschriftet. Aktuell ist D&auml;nisch (da), Holl&auml;ndisch (nl), Englisch (en), Franz&ouml;sisch (fr) und Norwegisch (no) verf&uuml;gbar.</li> <!-- mbv - 21-06-2005 -->
+
+		<li><em>(optional)</em> <tt>id</tt> - CSS-ID f&uuml;r den a-Link.</li> <!-- mbv - 29-06-2005 -->
+
+		<li><em>(optional)</em> <tt>more</tt> - damit k&ouml;nnen dem a-Link weitere Parameter hinzugef&uuml;gt werden.</li> <!-- mbv - 29-06-2005 -->
+
+		<li><em>(optional)</em> <tt>label</tt> - Beschriftung f&uuml;r den Link.</li>
+
+		<li><em>(optional)</em> <tt>label_side left/right</tt> - Seite, auf der die Beschriftung angezeigt angezeigt wird. Voreingestellt ist left.</li>
+
+		<li><em>(optional)</em> <tt>title</tt> - Text, der als title-Attribut verwendet wird. Ohne Vorgabe wird der Titel der Seite als Titel f&uuml;r den Link verwendet.</li>
+
+		<li><em>(optional)</em> <tt>rellink 1/0</tt> - Erzeugt einen relativen Link f&uuml;r eine behindertengerechte Navigation. Funktioniert nur, wenn der dir-Parameter gesetzt ist und sollte nur im head-Bereich eines Templates eingesetzt werden.</li>
+
+		<li><em>(optional)</em> <tt>href</tt> - Wenn der Parameter href verwendet wird, wird nur der href-Wert erzeugt (kein anderer Parameter m&ouml;glich). <strong>Beispiel:</strong> <code><a href="{cms_selflink href=&#039;alias&#039;}"><img src=&quot;&quot;></a></code></li>
+
+		<li><em>(optional)</em> <tt>image</tt> - Die URL eines Bildes, welches als Link verwendet werden soll. <strong>Beispiel:</strong> <code>{cms_selflink dir=&#039;next&#039; image=&#039;next.png&#039; text=&#039;Next&#039;}</code></li>
+
+		<li><em>(optional)</em> <tt>alt</tt> - Alternativer Text, der f&uuml;r den vorstehenden image-Parameter verwendet wird (alt=&quot;&quot; wird nur verwendet, wenn der alt-Parameter nicht vorgegeben ist).</li>
+
+		<li><em>(optional)</em> <tt>imageonly</tt> - Bei Verwendung von Bildern kann damit die Anzeige von Text-Links unterdr&uuml;ckt werden. Wenn f&uuml;r den Link kein Text verwendet werden soll, k&ouml;nnen Sie mit der Einstellung lang=0 auch die Beschriftung unterdr&uuml;cken. <strong>Beispiel:</strong> <code>{cms_selflink dir=&#039;next&#039; image=&#039;next.png&#039; text=&#039;Next&#039; imageonly=1}</code></li>
+
+		<li><em>(optional)</em> <tt>ext</tt> - F&uuml;r externe Links, f&uuml;gt class=&#039;external&#039; und Info-Text hinzu. <strong>Warnung:</strong> dieser Parameter ist nur mit den Parametern text, target und title kompatibel!</li>
+
+		<li><em>(optional)</em> <tt>ext_info</tt> - wird in Verbindung mit den &#039;ext&#039;-Voreinstellungen verwendet (externer Link)</li>
+
 		</ul>';
-$lang['admin']['about_function_cms_module'] = '	<p>Author: Ted Kulp<tedkulp@users.sf.net></p>
-	<p>Version: 1.0</p>
-	<p>
-	Change History:<br/>
-	None
+$lang['admin']['about_function_cms_module'] = '	<p>Author: Ted Kulp<tedkulp@users.sf.net></p>
+
+	<p>Version: 1.0</p>
+
+	<p>
+
+	Change History:<br/>
+
+	None
+
 	</p>';
-$lang['admin']['help_function_cms_module'] = '<h3>Was macht dieser Tag?</h3>
-	<p>Dieser Tag wird verwendet, um Module in Ihre Templates und Seiten einzuf&uuml;gen. Wenn ein Modul als Tag-Plugin programmiert wurde (f&uuml;r Details schauen Sie bitte in die Hilfe des Moduls), dann ist es Ihnen m&ouml;glich, das Modul mit diesem Tag aufzurufen.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{cms_module module=&#039;name_des_moduls&#039;}</code>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
-	<p>Es ist lediglich ein Parameter erforderlich. Alle anderen Parameter werden an das Modul weitergegeben.</p>
-	<p><em>(erforderlich)</em> <tt>module</tt> - Name des Moduls, das eingef&uuml;gt werden soll. Dieser ist nicht zeichensensitiv.</li>
+$lang['admin']['help_function_cms_module'] = '<h3>Was macht dieser Tag?</h3>
+
+	<p>Dieser Tag wird verwendet, um Module in Ihre Templates und Seiten einzuf&uuml;gen. Wenn ein Modul als Tag-Plugin programmiert wurde (f&uuml;r Details schauen Sie bitte in die Hilfe des Moduls), dann ist es Ihnen m&ouml;glich, das Modul mit diesem Tag aufzurufen.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{cms_module module=&#039;name_des_moduls&#039;}</code>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+	<p>Es ist lediglich ein Parameter erforderlich. Alle anderen Parameter werden an das Modul weitergegeben.</p>
+
+	<p><em>(erforderlich)</em> <tt>module</tt> - Name des Moduls, das eingef&uuml;gt werden soll. Dieser ist nicht zeichensensitiv.</li>
+
 	</ul>';
-$lang['admin']['about_function_breadcrumbs'] = '<p>Author: Marcus Deglos <<a href="mailto:md@zioncore.com">md@zioncore.com</a>></p>
-<p>Version: 1.7</p>
-<p>
-Change History:<br/>
-1.1 - Modified to use new content rewrite (wishy)<br />
-1.2 - Added parameters: delimiter, initial, and root (arl)<br />
-1.3 - Added parameter: classid (tdh / perl4ever)<br />
-1.4 - Added parameter currentclassid and fixed some bugs (arl)<br />
-1.5 - Modified to use new hierarchy manager<br />
-1.6 - Modified to skip any parents that are marked to be &quot;not shown in menu&quot; except for root<br />
-1.7 - Added root_url parameter (elijahlofgren)<br />
+$lang['admin']['about_function_breadcrumbs'] = '<p>Author: Marcus Deglos <<a href="mailto:md@zioncore.com">md@zioncore.com</a>></p>
+
+<p>Version: 1.7</p>
+
+<p>
+
+Change History:<br/>
+
+1.1 - Modified to use new content rewrite (wishy)<br />
+
+1.2 - Added parameters: delimiter, initial, and root (arl)<br />
+
+1.3 - Added parameter: classid (tdh / perl4ever)<br />
+
+1.4 - Added parameter currentclassid and fixed some bugs (arl)<br />
+
+1.5 - Modified to use new hierarchy manager<br />
+
+1.6 - Modified to skip any parents that are marked to be &quot;not shown in menu&quot; except for root<br />
+
+1.7 - Added root_url parameter (elijahlofgren)<br />
+
 </p>';
-$lang['admin']['help_function_breadcrumbs'] = '<h3>Was macht dieser Tag?</h3>
-<p>Gibt einen Brotkrumenpfad zur Navigation aus.</p>
-<h3>Wie wird er eingesetzt?</h3>
-<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{breadcrumbs}</code>
-<h3>Welche Parameter sind m&ouml;glich?</h3>
-<ul>
-	<li><em>(optional)</em> <tt>delimiter</tt> - Text, um die Eintr&auml;ge in der Auflistung voneinander zu trennen (voreingestellt ist &quot;>>&quot;).
-	<li><em>(optional)</em> <tt>initial</tt> - 1/0 Wird der Wert auf 1 gesetzt, beginnt die Brotkrumennavigation mit einem Trenner (voreingestellt 0).
-	<li><em>(optional)</em> <tt>root</tt> - Seiten-Alias der Seite, der als erster Eintrag in der Auflistung angezeigt werden soll. Kann genutzt werden, um eine Seite als Ursprungsseite darzustellen, obwohl sie es nicht ist.
-	<li><em>(optional)</em> <tt>root_url</tt> - &uuml;berschreibt die URL der Ursprungsseite. N&uuml;tzlich, um einen Link so &#039;/&#039; anstatt so &#039;/home/&#039; aussehen zu lassen. Daf&uuml;r ist es erforderlich, dass die Ursprungsseite als Startseite festgelegt ist.
-	<li><em>(optional)</em> <tt>classid</tt> - Die CSS-Klasse f&uuml;r die Namen der nicht aktuellen Seiten, also die Seiten n-1 in der Auflistung. Wenn der Name ein Link ist, wird die Klasse den href-Tags hinzugef&uuml;gt, anderenfalls den span-Tags.
-	<li><em>(optional)</em> <tt>currentclassid</tt> - Die CSS-Klasse f&uuml;r den span-Tag, der den Namen der aktuellen Seit umschliesst.
-	<li><em>(optional)</em> <tt>starttext</tt> - Text, der vor der Auflistung der Brotkrumennavigation angezeigt wird, wie etwa &#039;You are here&#039;.</li>
+$lang['admin']['help_function_breadcrumbs'] = '<h3>Was macht dieser Tag?</h3>
+
+<p>Gibt einen Brotkrumenpfad zur Navigation aus.</p>
+
+<h3>Wie wird er eingesetzt?</h3>
+
+<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p> <code>{breadcrumbs}</code>
+
+<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+<ul>
+
+	<li><em>(optional)</em> <tt>delimiter</tt> - Text, um die Eintr&auml;ge in der Auflistung voneinander zu trennen (voreingestellt ist &quot;>>&quot;).
+
+	<li><em>(optional)</em> <tt>initial</tt> - 1/0 Wird der Wert auf 1 gesetzt, beginnt die Brotkrumennavigation mit einem Trenner (voreingestellt 0).
+
+	<li><em>(optional)</em> <tt>root</tt> - Seiten-Alias der Seite, der als erster Eintrag in der Auflistung angezeigt werden soll. Kann genutzt werden, um eine Seite als Ursprungsseite darzustellen, obwohl sie es nicht ist.
+
+	<li><em>(optional)</em> <tt>root_url</tt> - &uuml;berschreibt die URL der Ursprungsseite. N&uuml;tzlich, um einen Link so &#039;/&#039; anstatt so &#039;/home/&#039; aussehen zu lassen. Daf&uuml;r ist es erforderlich, dass die Ursprungsseite als Startseite festgelegt ist.
+
+	<li><em>(optional)</em> <tt>classid</tt> - Die CSS-Klasse f&uuml;r die Namen der nicht aktuellen Seiten, also die Seiten n-1 in der Auflistung. Wenn der Name ein Link ist, wird die Klasse den href-Tags hinzugef&uuml;gt, anderenfalls den span-Tags.
+
+	<li><em>(optional)</em> <tt>currentclassid</tt> - Die CSS-Klasse f&uuml;r den span-Tag, der den Namen der aktuellen Seit umschliesst.
+
+	<li><em>(optional)</em> <tt>starttext</tt> - Text, der vor der Auflistung der Brotkrumennavigation angezeigt wird, wie etwa &#039;You are here&#039;.</li>
+
 </ul>';
-$lang['admin']['about_function_anchor'] = '	<p>Author: Ted Kulp<tedkulp@users.sf.net></p>
-	<p>Version: 1.1</p>
-	<p>
-	Change History:<br/>
-	<strong>Update to version 1.1 from 1.0</strong> <em>2006/07/19</em><br/>
-	Russ added the means to insert a title, a tabindex and a class for the anchor link. Westis added accesskey and changed parameter names to not include &#039;anchorlink&#039;.<br/>
-	</hr>
+$lang['admin']['about_function_anchor'] = '	<p>Author: Ted Kulp<tedkulp@users.sf.net></p>
+
+	<p>Version: 1.1</p>
+
+	<p>
+
+	Change History:<br/>
+
+	<strong>Update to version 1.1 from 1.0</strong> <em>2006/07/19</em><br/>
+
+	Russ added the means to insert a title, a tabindex and a class for the anchor link. Westis added accesskey and changed parameter names to not include &#039;anchorlink&#039;.<br/>
+
+	</hr>
+
 	</p>';
-$lang['admin']['help_function_anchor'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Erzeugt einen Anker-Link.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{anchor anchor=&#039;hier&#039; text=&#039;Nach oben&#039;}</code></p>
-	<h3>Welche Parameter sind m&ouml;glich?</h3>
-	<ul>
-	<li><em>(erforderlich)</em> <tt>anchor</tt> - Worauf der Link verweisen soll (der Teil nach der Raute)</li>
-	<li><em>(erforderlich)</em> <tt>text</tt> - Der Text, der im Link angezeigt werden soll</li>
-	<li><em>(optional)</em> <tt>class</tt> - die CSS-Klasse f&uuml;r den Link</li>
-	<li><em>(optional)</em> <tt>title</tt> - das Titel-Attribut f&uuml;r den Link</li>
-	<li><em>(optional)</em> <tt>tabindex</tt> - ein numerischer Tabindex f&uuml;r den Link</li>
-	<li><em>(optional)</em> <tt>accesskey</tt> - ein Accesskey f&uuml;r den Link</li>
-	<li><em>(optional)</em> <tt>onlyhref</tt> - Nur die Referenz (href) anzeigen. Die anderen Parameter sind ohne Funktion.</li>
+$lang['admin']['help_function_anchor'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Erzeugt einen Anker-Link.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: <code>{anchor anchor=&#039;hier&#039; text=&#039;Nach oben&#039;}</code></p>
+
+	<h3>Welche Parameter sind m&ouml;glich?</h3>
+
+	<ul>
+
+	<li><em>(erforderlich)</em> <tt>anchor</tt> - Worauf der Link verweisen soll (der Teil nach der Raute)</li>
+
+	<li><em>(erforderlich)</em> <tt>text</tt> - Der Text, der im Link angezeigt werden soll</li>
+
+	<li><em>(optional)</em> <tt>class</tt> - die CSS-Klasse f&uuml;r den Link</li>
+
+	<li><em>(optional)</em> <tt>title</tt> - das Titel-Attribut f&uuml;r den Link</li>
+
+	<li><em>(optional)</em> <tt>tabindex</tt> - ein numerischer Tabindex f&uuml;r den Link</li>
+
+	<li><em>(optional)</em> <tt>accesskey</tt> - ein Accesskey f&uuml;r den Link</li>
+
+	<li><em>(optional)</em> <tt>onlyhref</tt> - Nur die Referenz (href) anzeigen. Die anderen Parameter sind ohne Funktion.</li>
+
 	</ul>';
-$lang['admin']['help_function_site_mapper'] = '	<h3>Was macht dieser Tag?</h3>
-	<p>Mit diesem Tag wird nur der Syntax zur Verwendung des Men&uuml;Manager-Moduls und der Erstellung einer Sitemap vereinfacht.</p>
-	<h3>Wie wird er eingesetzt?</h3>
-	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: {site_mapper}</code></p><p>Weitere Informationen dazu finden Sie in der Hilfe des MenuManagers.</p>
-  <p>Wenn kein Parameter f&uuml;r template angegeben wird, wird das Template minimal_menu.tpl verwendet.</p>
+$lang['admin']['help_function_site_mapper'] = '	<h3>Was macht dieser Tag?</h3>
+
+	<p>Mit diesem Tag wird nur der Syntax zur Verwendung des Men&uuml;Manager-Moduls und der Erstellung einer Sitemap vereinfacht.</p>
+
+	<h3>Wie wird er eingesetzt?</h3>
+
+	<p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein: {site_mapper}</code></p><p>Weitere Informationen dazu finden Sie in der Hilfe des MenuManagers.</p>
+
+  <p>Wenn kein Parameter f&uuml;r template angegeben wird, wird das Template minimal_menu.tpl verwendet.</p>
+
   <p>Weitere im Tag verwendete Parameter sind im Men&uuml;Manager-Template als  <code>$menuparams.paramname}</code> verf&uuml;gbar.</p>';
-$lang['admin']['help_function_redirect_url'] = '<h3>Was macht dieser Tag?</h3>
-  <p>Dieses Plugin erlaubt Ihnen, Ihre Besucher auf eine andere URL weiterzuleiten. Dies l&auml;sst sich auch gut mit Smarty-Bedingungen verwenden (zum Beispiel, wenn die Seite gerade wegen Wartungsarbeiten nicht erreichbar ist).</p>
-<h3>Wie wird er eingesetzt?</h3>
+$lang['admin']['help_function_redirect_url'] = '<h3>Was macht dieser Tag?</h3>
+
+  <p>Dieses Plugin erlaubt Ihnen, Ihre Besucher auf eine andere URL weiterzuleiten. Dies l&auml;sst sich auch gut mit Smarty-Bedingungen verwenden (zum Beispiel, wenn die Seite gerade wegen Wartungsarbeiten nicht erreichbar ist).</p>
+
+<h3>Wie wird er eingesetzt?</h3>
+
 <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p>  <code>{redirect_url to=&#039;www.cmsmadesimple.de&#039;}</code>';
-$lang['admin']['help_function_redirect_page'] = '<h3>Was macht dieser Tag?</h3>
- <p>Dieses Plugin erlaubt Ihnen, Ihre Besucher auf eine andere Seite weiterzuleiten. Dies l&auml;sst sich auch gut mit Smarty-Bedingungen verwenden (zum Beispiel eine Weiterleitung auf eine Login-Seite, wenn der Besucher noch nicht angemeldet ist).</p>
-<h3>Wie wird er eingesetzt?</h3>
+$lang['admin']['help_function_redirect_page'] = '<h3>Was macht dieser Tag?</h3>
+
+ <p>Dieses Plugin erlaubt Ihnen, Ihre Besucher auf eine andere Seite weiterzuleiten. Dies l&auml;sst sich auch gut mit Smarty-Bedingungen verwenden (zum Beispiel eine Weiterleitung auf eine Login-Seite, wenn der Besucher noch nicht angemeldet ist).</p>
+
+<h3>Wie wird er eingesetzt?</h3>
+
 <p>F&uuml;gen Sie den Tag folgenderma&szlig;en in Ihr Template bzw. Ihre Seite ein:</p>  <code>{redirect_page page=&#039;seiten-alias&#039;}</code>';
 $lang['admin']['of'] = 'von';
 $lang['admin']['first'] = 'Erste';
@@ -1366,247 +1905,441 @@ $lang['admin']['event_desc_contentpostcompile'] = 'Ausf&uuml;hren, nachdem Inhal
 $lang['admin']['event_desc_contentpostrender'] = 'Ausf&uuml;hren, bevor Inhalte zum Browser gesandt werden';
 $lang['admin']['event_desc_smartyprecompile'] = 'Ausf&uuml;hren, bevor irgend etwas von Smarty verarbeitet wird';
 $lang['admin']['event_desc_smartypostcompile'] = 'Ausf&uuml;hren, nachdem irgend etwas von Smarty verarbeitet wurde';
-$lang['admin']['event_help_loginpost'] = '<p>Wird ausgef&uuml;hrt, wenn ein Benutzer sich bei der Administration angemeldet hat.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+$lang['admin']['event_help_loginpost'] = '<p>Wird ausgef&uuml;hrt, wenn ein Benutzer sich bei der Administration angemeldet hat.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+
 </ul>';
-$lang['admin']['event_help_logoutpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Benutzer sich von der Administration abgemeldet hat.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+$lang['admin']['event_help_logoutpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Benutzer sich von der Administration abgemeldet hat.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+
 </ul>';
-$lang['admin']['event_help_adduserpre'] = '<p>Wird ausgef&uuml;hrt, bevor ein Benutzer angelegt wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+$lang['admin']['event_help_adduserpre'] = '<p>Wird ausgef&uuml;hrt, bevor ein Benutzer angelegt wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+
 </ul>';
-$lang['admin']['event_help_adduserpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Benutzer angelegt wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+$lang['admin']['event_help_adduserpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Benutzer angelegt wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+
 </ul>';
-$lang['admin']['event_help_edituserpre'] = '<p>Wird ausgef&uuml;hrt, bevor &Auml;nderungen eines Benutzer gespeichert werden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+$lang['admin']['event_help_edituserpre'] = '<p>Wird ausgef&uuml;hrt, bevor &Auml;nderungen eines Benutzer gespeichert werden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+
 </ul>';
-$lang['admin']['event_help_edituserpost'] = '<p>Wird ausgef&uuml;hrt, nachdem &Auml;nderungen eines Benutzer gespeichert wurden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+$lang['admin']['event_help_edituserpost'] = '<p>Wird ausgef&uuml;hrt, nachdem &Auml;nderungen eines Benutzer gespeichert wurden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+
 </ul>';
-$lang['admin']['event_help_deleteuserpre'] = '<p>Wird ausgef&uuml;hrt, bevor ein Benutzer gel&ouml;scht wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+$lang['admin']['event_help_deleteuserpre'] = '<p>Wird ausgef&uuml;hrt, bevor ein Benutzer gel&ouml;scht wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+
 </ul>';
-$lang['admin']['event_help_deleteuserpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Benutzer gel&ouml;scht wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+$lang['admin']['event_help_deleteuserpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Benutzer gel&ouml;scht wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;user&#039; - Referenz auf den betroffenen Benutzer.</li>
+
 </ul>';
-$lang['admin']['event_help_addgrouppre'] = '<p>Wird ausgef&uuml;hrt, bevor eine Benutzergruppe angelegt wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+$lang['admin']['event_help_addgrouppre'] = '<p>Wird ausgef&uuml;hrt, bevor eine Benutzergruppe angelegt wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+
 </ul>';
-$lang['admin']['event_help_addgrouppost'] = '<p>Wird ausgef&uuml;hrt, nachdem eine Benutzergruppe angelegt wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+$lang['admin']['event_help_addgrouppost'] = '<p>Wird ausgef&uuml;hrt, nachdem eine Benutzergruppe angelegt wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+
 </ul>';
-$lang['admin']['event_help_changegroupassignpre'] = '<p>Ausf&uuml;hren, bevor eine Benutzerverkn&uuml;pfung mit einer Gruppe gespeichert wird</p>
-<h4>Parameter></h4>
-<ul>
-<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
-<li>&#039;users&#039; - Array von Referenzen auf die betroffenen Benutzer dieser Gruppe.</li>
+$lang['admin']['event_help_changegroupassignpre'] = '<p>Ausf&uuml;hren, bevor eine Benutzerverkn&uuml;pfung mit einer Gruppe gespeichert wird</p>
+
+<h4>Parameter></h4>
+
+<ul>
+
+<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+
+<li>&#039;users&#039; - Array von Referenzen auf die betroffenen Benutzer dieser Gruppe.</li>
+
 </ul>';
-$lang['admin']['event_help_changegroupassignpost'] = '<p>Ausf&uuml;hren, nachdem eine Benutzerverkn&uuml;pfung mit einer Gruppe gespeichert wurde</p>
-<h4>Parameter></h4>
-<ul>
-<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
-<li>&#039;users&#039; - Array von Referenzen auf die betroffenen Benutzer dieser Gruppe.</li>
+$lang['admin']['event_help_changegroupassignpost'] = '<p>Ausf&uuml;hren, nachdem eine Benutzerverkn&uuml;pfung mit einer Gruppe gespeichert wurde</p>
+
+<h4>Parameter></h4>
+
+<ul>
+
+<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+
+<li>&#039;users&#039; - Array von Referenzen auf die betroffenen Benutzer dieser Gruppe.</li>
+
 </ul>';
-$lang['admin']['event_help_editgrouppre'] = '<p>Wird ausgef&uuml;hrt, bevor &Auml;nderungen einer Benutzergruppe gespeichert werden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+$lang['admin']['event_help_editgrouppre'] = '<p>Wird ausgef&uuml;hrt, bevor &Auml;nderungen einer Benutzergruppe gespeichert werden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+
 </ul>';
-$lang['admin']['event_help_editgrouppost'] = '<p>Wird ausgef&uuml;hrt, nachdem &Auml;nderungen einer Benutzergruppe gespeichert wurden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+$lang['admin']['event_help_editgrouppost'] = '<p>Wird ausgef&uuml;hrt, nachdem &Auml;nderungen einer Benutzergruppe gespeichert wurden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+
 </ul>';
-$lang['admin']['event_help_deletegrouppre'] = '<p>Wird ausgef&uuml;hrt, bevor eine Benutzergruppe gel&ouml;scht wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+$lang['admin']['event_help_deletegrouppre'] = '<p>Wird ausgef&uuml;hrt, bevor eine Benutzergruppe gel&ouml;scht wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+
 </ul>';
-$lang['admin']['event_help_deletegrouppost'] = '<p>Wird ausgef&uuml;hrt, nachdem eine Benutzergruppe gel&ouml;scht wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+$lang['admin']['event_help_deletegrouppost'] = '<p>Wird ausgef&uuml;hrt, nachdem eine Benutzergruppe gel&ouml;scht wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;group&#039; - Referenz auf die betroffene Benutzergruppe.</li>
+
 </ul>';
-$lang['admin']['event_help_addstylesheetpre'] = '<p>Wird ausgef&uuml;hrt, bevor ein Stylesheet angelegt wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Referenz auf den betroffenen Stylesheet.</li>
+$lang['admin']['event_help_addstylesheetpre'] = '<p>Wird ausgef&uuml;hrt, bevor ein Stylesheet angelegt wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Referenz auf den betroffenen Stylesheet.</li>
+
 </ul>';
-$lang['admin']['event_help_addstylesheetpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Stylesheet angelegt wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Referenz auf den betroffenen Stylesheet.</li>
+$lang['admin']['event_help_addstylesheetpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Stylesheet angelegt wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Referenz auf den betroffenen Stylesheet.</li>
+
 </ul>';
-$lang['admin']['event_help_editstylesheetpre'] = '<p>Wird ausgef&uuml;hrt, bevor &Auml;nderungen an einem Stylesheet gespeichert werden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Referenz auf den betroffenen Stylesheet.</li>
+$lang['admin']['event_help_editstylesheetpre'] = '<p>Wird ausgef&uuml;hrt, bevor &Auml;nderungen an einem Stylesheet gespeichert werden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Referenz auf den betroffenen Stylesheet.</li>
+
 </ul>';
-$lang['admin']['event_help_editstylesheetpost'] = '<p>Wird ausgef&uuml;hrt, nachdem &Auml;nderungen an einem Stylesheet gespeichert wurden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Referenz auf den betroffenen Stylesheet.</li>
+$lang['admin']['event_help_editstylesheetpost'] = '<p>Wird ausgef&uuml;hrt, nachdem &Auml;nderungen an einem Stylesheet gespeichert wurden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Referenz auf den betroffenen Stylesheet.</li>
+
 </ul>';
-$lang['admin']['event_help_deletestylesheetpre'] = '<p>Wird ausgef&uuml;hrt, bevor ein Stylesheet gel&ouml;scht wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Referenz auf den betroffenen Stylesheet.</li>
+$lang['admin']['event_help_deletestylesheetpre'] = '<p>Wird ausgef&uuml;hrt, bevor ein Stylesheet gel&ouml;scht wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Referenz auf den betroffenen Stylesheet.</li>
+
 </ul>';
-$lang['admin']['event_help_deletestylesheetpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Stylesheet gel&ouml;scht wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;stylesheet&#039; - Referenz auf den betroffenen Stylesheet.</li>
+$lang['admin']['event_help_deletestylesheetpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Stylesheet gel&ouml;scht wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;stylesheet&#039; - Referenz auf den betroffenen Stylesheet.</li>
+
 </ul>';
-$lang['admin']['event_help_addtemplatepre'] = '<p>Wird ausgef&uuml;hrt, bevor ein neues Template angelegt wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;template&#039; - Referenz auf das betroffene Template.</li>
+$lang['admin']['event_help_addtemplatepre'] = '<p>Wird ausgef&uuml;hrt, bevor ein neues Template angelegt wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Referenz auf das betroffene Template.</li>
+
 </ul>';
-$lang['admin']['event_help_addtemplatepost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein neues Template angelegt wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;template&#039; - Referenz auf das betroffene Template.</li>
+$lang['admin']['event_help_addtemplatepost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein neues Template angelegt wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Referenz auf das betroffene Template.</li>
+
 </ul>';
-$lang['admin']['event_help_edittemplatepre'] = '<p>Wird ausgef&uuml;hrt, bevor &Auml;nderungen an einem Template gespeichert werden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;template&#039; - Referenz  auf das betroffene Template.</li>
+$lang['admin']['event_help_edittemplatepre'] = '<p>Wird ausgef&uuml;hrt, bevor &Auml;nderungen an einem Template gespeichert werden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Referenz  auf das betroffene Template.</li>
+
 </ul>';
-$lang['admin']['event_help_edittemplatepost'] = '<p>Wird ausgef&uuml;hrt, nachdem &Auml;nderungen an einem Template gespeichert wurden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;template&#039; - Referenz  auf das betroffene Template.</li>
+$lang['admin']['event_help_edittemplatepost'] = '<p>Wird ausgef&uuml;hrt, nachdem &Auml;nderungen an einem Template gespeichert wurden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Referenz  auf das betroffene Template.</li>
+
 </ul>';
-$lang['admin']['event_help_deletetemplatepre'] = '<p>Wird ausgef&uuml;hrt, bevor ein Template gel&ouml;scht wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;template&#039; - Referenz  auf das betroffene Template.</li>
+$lang['admin']['event_help_deletetemplatepre'] = '<p>Wird ausgef&uuml;hrt, bevor ein Template gel&ouml;scht wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Referenz  auf das betroffene Template.</li>
+
 </ul>';
-$lang['admin']['event_help_deletetemplatepost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Template gel&ouml;scht wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;template&#039; - Referenz  auf das betroffene Template.</li>
+$lang['admin']['event_help_deletetemplatepost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Template gel&ouml;scht wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Referenz  auf das betroffene Template.</li>
+
 </ul>';
-$lang['admin']['event_help_templateprecompile'] = '<p>Wird ausgef&uuml;hrt, bevor ein Template an Smarty zur Verarbeitung gesendet wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;template&#039; - Referenz auf den betroffenen Template-Text.</li>
+$lang['admin']['event_help_templateprecompile'] = '<p>Wird ausgef&uuml;hrt, bevor ein Template an Smarty zur Verarbeitung gesendet wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Referenz auf den betroffenen Template-Text.</li>
+
 </ul>';
-$lang['admin']['event_help_templatepostcompile'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Template von Smarty verarbeitet wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;template&#039; - Referenz auf den betroffenen Template-Text.</li>
+$lang['admin']['event_help_templatepostcompile'] = '<p>Wird ausgef&uuml;hrt, nachdem ein Template von Smarty verarbeitet wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;template&#039; - Referenz auf den betroffenen Template-Text.</li>
+
 </ul>';
-$lang['admin']['event_help_addglobalcontentpre'] = '<p>Wird ausgef&uuml;hrt, bevor ein globaler Inhaltsblock angelegt wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock.</li>
+$lang['admin']['event_help_addglobalcontentpre'] = '<p>Wird ausgef&uuml;hrt, bevor ein globaler Inhaltsblock angelegt wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock.</li>
+
 </ul>';
-$lang['admin']['event_help_addglobalcontentpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein globaler Inhaltsblock angelegt wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock.</li>
+$lang['admin']['event_help_addglobalcontentpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein globaler Inhaltsblock angelegt wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock.</li>
+
 </ul>';
-$lang['admin']['event_help_editglobalcontentpre'] = '<p>Wird ausgef&uuml;hrt, bevor &Auml;nderungen an einem globaler Inhaltsblock gespeichert werden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock.</li>
+$lang['admin']['event_help_editglobalcontentpre'] = '<p>Wird ausgef&uuml;hrt, bevor &Auml;nderungen an einem globaler Inhaltsblock gespeichert werden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock.</li>
+
 </ul>';
-$lang['admin']['event_help_editglobalcontentpost'] = '<p>Wird ausgef&uuml;hrt, nachdem &Auml;nderungen an einem globaler Inhaltsblock gespeichert wurden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock.</li>
+$lang['admin']['event_help_editglobalcontentpost'] = '<p>Wird ausgef&uuml;hrt, nachdem &Auml;nderungen an einem globaler Inhaltsblock gespeichert wurden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock.</li>
+
 </ul>';
-$lang['admin']['event_help_deleteglobalcontentpre'] = '<p>Wird ausgef&uuml;hrt, bevor ein globaler Inhaltsblock gel&ouml;scht wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock.</li>
+$lang['admin']['event_help_deleteglobalcontentpre'] = '<p>Wird ausgef&uuml;hrt, bevor ein globaler Inhaltsblock gel&ouml;scht wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock.</li>
+
 </ul>';
-$lang['admin']['event_help_deleteglobalcontentpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein globaler Inhaltsblock gel&ouml;scht wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock.</li>
+$lang['admin']['event_help_deleteglobalcontentpost'] = '<p>Wird ausgef&uuml;hrt, nachdem ein globaler Inhaltsblock gel&ouml;scht wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock.</li>
+
 </ul>';
-$lang['admin']['event_help_globalcontentprecompile'] = '<p>Wird ausgef&uuml;hrt, bevor ein globaler Inhaltsblock zur Verarbeitung an Smarty gesendet wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock-Text.</li>
+$lang['admin']['event_help_globalcontentprecompile'] = '<p>Wird ausgef&uuml;hrt, bevor ein globaler Inhaltsblock zur Verarbeitung an Smarty gesendet wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock-Text.</li>
+
 </ul>';
-$lang['admin']['event_help_globalcontentpostcompile'] = '<p>Wird ausgef&uuml;hrt, nachdem ein globaler Inhaltsblock zur Verarbeitung an Smarty gesendet wurde.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock-Text.</li>
+$lang['admin']['event_help_globalcontentpostcompile'] = '<p>Wird ausgef&uuml;hrt, nachdem ein globaler Inhaltsblock zur Verarbeitung an Smarty gesendet wurde.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;global_content&#039; - Referenz auf den betroffenen globalen Inhaltsblock-Text.</li>
+
 </ul>';
-$lang['admin']['event_help_contenteditpre'] = '<p>Wird ausgef&uuml;hrt, bevor &Auml;nderungen an Inhalten gespeichert werden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;content&#039; - Referenz auf den betroffenen Inhalt.</li>
+$lang['admin']['event_help_contenteditpre'] = '<p>Wird ausgef&uuml;hrt, bevor &Auml;nderungen an Inhalten gespeichert werden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Referenz auf den betroffenen Inhalt.</li>
+
 </ul>';
-$lang['admin']['event_help_contenteditpost'] = '<p>Wird ausgef&uuml;hrt, nachdem &Auml;nderungen an Inhalten gespeichert wurden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;content&#039; - Referenz auf den betroffenen Inhalt.</li>
+$lang['admin']['event_help_contenteditpost'] = '<p>Wird ausgef&uuml;hrt, nachdem &Auml;nderungen an Inhalten gespeichert wurden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Referenz auf den betroffenen Inhalt.</li>
+
 </ul>';
-$lang['admin']['event_help_contentdeletepre'] = '<p>Wird ausgef&uuml;hrt, bevor Inhalte gel&ouml;scht werden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;content&#039; - Referenz auf den betroffenen Inhalt.</li>
+$lang['admin']['event_help_contentdeletepre'] = '<p>Wird ausgef&uuml;hrt, bevor Inhalte gel&ouml;scht werden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Referenz auf den betroffenen Inhalt.</li>
+
 </ul>';
-$lang['admin']['event_help_contentdeletepost'] = '<p>Wird ausgef&uuml;hrt, nachdem Inhalte gel&ouml;scht wurden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;content&#039; - Referenz auf den betroffenen Inhalt.</li>
+$lang['admin']['event_help_contentdeletepost'] = '<p>Wird ausgef&uuml;hrt, nachdem Inhalte gel&ouml;scht wurden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Referenz auf den betroffenen Inhalt.</li>
+
 </ul>';
-$lang['admin']['event_help_contentstylesheet'] = '<p>Wird ausgef&uuml;hrt, bevor ein Stylesheet an den Browser gesendet wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;content&#039; - Referenz auf das betroffene Stylesheet.</li>
+$lang['admin']['event_help_contentstylesheet'] = '<p>Wird ausgef&uuml;hrt, bevor ein Stylesheet an den Browser gesendet wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Referenz auf das betroffene Stylesheet.</li>
+
 </ul>';
-$lang['admin']['event_help_contentprecompile'] = '<p>Wird ausgef&uuml;hrt, bevor Inhalte an Smarty zur Verarbeitung gesendet werden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;content&#039; - Referenz auf den betroffenen Inhaltstext.</li>
+$lang['admin']['event_help_contentprecompile'] = '<p>Wird ausgef&uuml;hrt, bevor Inhalte an Smarty zur Verarbeitung gesendet werden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Referenz auf den betroffenen Inhaltstext.</li>
+
 </ul>';
-$lang['admin']['event_help_contentpostcompile'] = '<p>Wird ausgef&uuml;hrt, nachdem Inhalte von Smarty verarbeitet wurden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;content&#039; - Referenz auf den betroffenen Inhaltstext.</li>
+$lang['admin']['event_help_contentpostcompile'] = '<p>Wird ausgef&uuml;hrt, nachdem Inhalte von Smarty verarbeitet wurden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Referenz auf den betroffenen Inhaltstext.</li>
+
 </ul>';
-$lang['admin']['event_help_contentpostrender'] = '<p>Wird ausgef&uuml;hrt, bevor der kombinierte HTML-Code an den Browser gesendet wird.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;content&#039; - Referenz auf den HTML-Text.</li>
+$lang['admin']['event_help_contentpostrender'] = '<p>Wird ausgef&uuml;hrt, bevor der kombinierte HTML-Code an den Browser gesendet wird.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Referenz auf den HTML-Text.</li>
+
 </ul>';
-$lang['admin']['event_help_smartyprecompile'] = '<p>Wird ausgef&uuml;hrt, bevor Daten zur Verarbeitung an Smarty gesendet werden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;content&#039; - Referenz auf die betroffenen Daten.</li>
+$lang['admin']['event_help_smartyprecompile'] = '<p>Wird ausgef&uuml;hrt, bevor Daten zur Verarbeitung an Smarty gesendet werden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Referenz auf die betroffenen Daten.</li>
+
 </ul>';
-$lang['admin']['event_help_smartypostcompile'] = '<p>Wird ausgef&uuml;hrt, nachdem Daten von Smarty bearbeitet wurden.</p>
-<h4>Parameter</h4>
-<ul>
-<li>&#039;content&#039; - Referenz die betroffenen Daten.</li>
+$lang['admin']['event_help_smartypostcompile'] = '<p>Wird ausgef&uuml;hrt, nachdem Daten von Smarty bearbeitet wurden.</p>
+
+<h4>Parameter</h4>
+
+<ul>
+
+<li>&#039;content&#039; - Referenz die betroffenen Daten.</li>
+
 </ul>';
 $lang['admin']['filterbymodule'] = 'Nach Modulen filtern';
 $lang['admin']['showall'] = 'Alle anzeigen';
@@ -1636,9 +2369,12 @@ $lang['admin']['passwordchangedlogin'] = 'Das Passwort wurde ge&auml;ndert. Bitt
 $lang['admin']['nopasswordforrecovery'] = 'F&uuml;r diesen Benutzer wurde keine Email-Adresse gespeichert. Die Passwort-Wiederherstellung ist daher nicht verf&uuml;gbar. Bitte kontaktieren Sie Ihren Administrator.';
 $lang['admin']['lostpw'] = 'Passwort vergessen?';
 $lang['admin']['lostpwemailsubject'] = '[%s] Passwort-Wiederherstellung';
-$lang['admin']['lostpwemail'] = 'Sie erhalten diese Email, da eine Anfrage zur &Auml;nderung des (%s) Passworts gestellt wurde, welches mit diesem Benutzerkonto verkn&uuml;pft ist (%s). Wenn Sie das Passwort zur&uuml;cksetzen m&ouml;chten, klicken Sie auf den folgenden Link oder geben die URL in einen Browser Ihrer Wahl ein:
-%s
-
+$lang['admin']['lostpwemail'] = 'Sie erhalten diese Email, da eine Anfrage zur &Auml;nderung des (%s) Passworts gestellt wurde, welches mit diesem Benutzerkonto verkn&uuml;pft ist (%s). Wenn Sie das Passwort zur&uuml;cksetzen m&ouml;chten, klicken Sie auf den folgenden Link oder geben die URL in einen Browser Ihrer Wahl ein:
+
+%s
+
+
+
 Wenn Sie meinen, dass dies nicht zutrifft oder Sie diese Eingabe f&auml;lschlicherweise get&auml;tigt haben, ignorieren Sie diese Email - dann wird nichts ge&auml;ndert.';
 $lang['admin']['qca'] = 'P0-1458450664-1284573084918';
 $lang['admin']['utmz'] = '156861353.1290205935.467.38.utmcsr=feedburner|utmccn=Feed: cmsmadesimple/blog (CMS Made Simple)|utmcmd=feed';

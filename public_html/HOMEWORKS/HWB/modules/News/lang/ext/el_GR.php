@@ -170,66 +170,116 @@ $lang['useexpiration'] = 'Χρήση ημερομηνίας λήξης';
 $lang['showautodiscovery'] = 'Ενεργοποίηση της εμφάνισης της υπερσύνδεσης του χαρακτηριστικού "Feed Auto-Discovery"';
 $lang['autodiscoverylink'] = 'URL για το χαρακτηριστικό "Feed Auto-Discovery"  (κενό για το προεπιλεγμένο)';
 $lang['eventdesc-NewsArticleAdded'] = 'Sent when an article is added.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\\"news_id\\" - Id of the news article</li>
-<li>\\"category_id\\" - Id of the category for this article</li>
-<li>\\"title\\" - Title of the article</li>
-<li>\\"content\\" - Content of the article</li>
-<li>\\"summary\\" - Summary of the article</li>
-<li>\\"status\\" - Status of the article ("draft" or "publish")</li>
-<li>\\"start_time\\" - Date the article should start being displayed</li>
-<li>\\"end_time\\" - Date the article should stop being displayed</li>
-<li>\\"useexp\\" - Whether the expiration date should be ignored or not</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\\"news_id\\" - Id of the news article</li>
+
+<li>\\"category_id\\" - Id of the category for this article</li>
+
+<li>\\"title\\" - Title of the article</li>
+
+<li>\\"content\\" - Content of the article</li>
+
+<li>\\"summary\\" - Summary of the article</li>
+
+<li>\\"status\\" - Status of the article ("draft" or "publish")</li>
+
+<li>\\"start_time\\" - Date the article should start being displayed</li>
+
+<li>\\"end_time\\" - Date the article should stop being displayed</li>
+
+<li>\\"useexp\\" - Whether the expiration date should be ignored or not</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Sent when an article is edited.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\\"news_id\\" - Id of the news article</li>
-<li>\\"category_id\\" - Id of the category for this article</li>
-<li>\\"title\\" - Title of the article</li>
-<li>\\"content\\" - Content of the article</li>
-<li>\\"summary\\" - Summary of the article</li>
-<li>\\"status\\" - Status of the article ("draft" or "publish")</li>
-<li>\\"start_time\\" - Date the article should start being displayed</li>
-<li>\\"end_time\\" - Date the article should stop being displayed</li>
-<li>\\"useexp\\" - Whether the expiration date should be ignored or not</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\\"news_id\\" - Id of the news article</li>
+
+<li>\\"category_id\\" - Id of the category for this article</li>
+
+<li>\\"title\\" - Title of the article</li>
+
+<li>\\"content\\" - Content of the article</li>
+
+<li>\\"summary\\" - Summary of the article</li>
+
+<li>\\"status\\" - Status of the article ("draft" or "publish")</li>
+
+<li>\\"start_time\\" - Date the article should start being displayed</li>
+
+<li>\\"end_time\\" - Date the article should stop being displayed</li>
+
+<li>\\"useexp\\" - Whether the expiration date should be ignored or not</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Sent when an article is deleted.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\\"news_id\\" - Id of the news article</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\\"news_id\\" - Id of the news article</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Sent when a category is added.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\\"category_id\\" - Id of the news category</li>
-<li>\\"name\\" - Name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\\"category_id\\" - Id of the news category</li>
+
+<li>\\"name\\" - Name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Sent when a category is edited.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\\"category_id\\" - Id of the news category</li>
-<li>\\"name\\" - Name of the news category</li>
-<li>\\"origname\\" - The original name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\\"category_id\\" - Id of the news category</li>
+
+<li>\\"name\\" - Name of the news category</li>
+
+<li>\\"origname\\" - The original name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Sent when a category is deleted.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\\"category_id\\" - Id of the deleted category </li>
-<li>\\"name\\" - Name of the deleted category</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\\"category_id\\" - Id of the deleted category </li>
+
+<li>\\"name\\" - Name of the deleted category</li>
+
+</ul>
+
 ';
 $lang['helpnumber'] = 'Μέγιστος αριθμός εμφανιζόμενων στοιχείων =- Το κενό θα εμφανίσειόλα τα στοιχεία.';
 $lang['helpstart'] = 'Έναρξη απο το στοιχείο με αριθμό -- αστο κενό για να ξεκινήσει απο το πρώτο.';
@@ -246,10 +296,15 @@ $lang['helpdetailpage'] = 'Επιλογή σελίδας για την εμφά�
 $lang['helpshowarchive'] = 'Show only expired news articles.';
 $lang['helpbrowsecat'] = 'Shows a browseable category list.';
 $lang['helpaction'] = 'Override the default action.  Possible values are \'default\' to display the summary view, and \'fesubmit\' to display the frontend form for allowing users to submit news articles on the front end.';
-$lang['help'] = '	<h3>Τι κάνει αυτό?</h3>
-	<p>Οι ειδήσεις είναι ένα άρθρωμα για την εμφάνιση συμβάντων ειδήσεων στην σελίδα σας, παρόμοι με νησίδα HTML, αλλά με περισσότερες δυνατότητες!.  Μετά την εγκατάσταση του αρθρώματος προστίθεται μια σελίδα διαχείρισης ειδήσεων στο μενού διαχείρισης που σας επιτρέπει να προσθέσεται μια κατηγορία ειδήσεων.  Μόλις προστεθεί ή επιλεχθεί μια κατηγορία ειδήσεων, μία λίστα απο στοιχεία ειδήσεων που αφορούν την κατηγορία θα εμφανιστεί.  Μετά μπορείτε να προσθέσετε ,επεξεργαστείτε, ή να διαγράψετε στοιχεία αυτής της κατηγορίας ειδήσεων.</p>
-	<h3>Ασφάλεια</h3>
-	<p>Ο χρήστης πρέπει να ανήκει στην ομάδα με δικαίωμα \'Τροποποίηση Ειδήσεων\' για να επιτραπεί προσθήκη, επεξεργασία ή διαγραφή εγγραφών ειδήσεων.</p>
-	<h3>Πώς το χρησιμοποιώ?</h3>
+$lang['help'] = '	<h3>Τι κάνει αυτό?</h3>
+
+	<p>Οι ειδήσεις είναι ένα άρθρωμα για την εμφάνιση συμβάντων ειδήσεων στην σελίδα σας, παρόμοι με νησίδα HTML, αλλά με περισσότερες δυνατότητες!.  Μετά την εγκατάσταση του αρθρώματος προστίθεται μια σελίδα διαχείρισης ειδήσεων στο μενού διαχείρισης που σας επιτρέπει να προσθέσεται μια κατηγορία ειδήσεων.  Μόλις προστεθεί ή επιλεχθεί μια κατηγορία ειδήσεων, μία λίστα απο στοιχεία ειδήσεων που αφορούν την κατηγορία θα εμφανιστεί.  Μετά μπορείτε να προσθέσετε ,επεξεργαστείτε, ή να διαγράψετε στοιχεία αυτής της κατηγορίας ειδήσεων.</p>
+
+	<h3>Ασφάλεια</h3>
+
+	<p>Ο χρήστης πρέπει να ανήκει στην ομάδα με δικαίωμα \'Τροποποίηση Ειδήσεων\' για να επιτραπεί προσθήκη, επεξεργασία ή διαγραφή εγγραφών ειδήσεων.</p>
+
+	<h3>Πώς το χρησιμοποιώ?</h3>
+
 	<p>Ο ποιό εύκολος τρόπος είναι σε συνάρτηση με την κεφαλίδα cms_module.  Ετσι εισάγεται το άρθρωμα στο πρότυπο ή σε σελίδα οπουδήποτε θέλετε να και εμφανίζει τα σοιχεία ειδήσεων.  Δείγμα κώδικα : <code>{cms_module module="news" number="5" category="beer"}</code></p>';
 ?>

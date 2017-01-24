@@ -10,6 +10,7 @@ class Consigner {
     public static $source = 'Consigner';
     public static $post_type = 'consigners';
     public static $props;
+    public static $book_display_props;
 
     public static $book_id = 'id';
     public static $book_paid = 'paid';
@@ -61,6 +62,15 @@ class Consigner {
         $owed->edit_param = false;
         $owed->display_in_edit = false;
 
+        $removeButton = new ConsignerRemoveButton('consigner_remove_button');
+        $removeButton->action = action_types::$remove_book_from_consigner;
+        $removeButton->button = 'Remove';
+        $removeButton->add_param = false;
+        $removeButton->display_in_add = false;
+        $removeButton->display_in_edit = false;
+        $removeButton->edit_param = false;
+        $removeButton->search_param = false;
+
         self::$props = array(
             self::$name => $title,
             self::$id => $id,
@@ -72,6 +82,20 @@ class Consigner {
             self::$info => $info,
             self::$totalpaid => $paid,
             self::$totalowed => $owed
+        );
+
+        self::$book_display_props = array(
+            self::$name => $title,
+            self::$id => $id,
+            self::$date => $date,
+            self::$email => $email,
+            self::$address => $address,
+            self::$paypal => $paypal,
+            self::$phone => $phone,
+            self::$info => $info,
+            self::$totalpaid => $paid,
+            self::$totalowed => $owed,
+            'remove_button' => $removeButton,
         );
     }
 

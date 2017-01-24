@@ -32,26 +32,46 @@ $lang['error'] = 'Virhe!';
 $lang['upgraded'] = 'Moduuli p&auml;ivitetty versioon %s.';
 $lang['moddescription'] = 'Moduuli sis&auml;lt&ouml;teemojen (pohjien ja tyylisivujen) tuontiin ja vientiin.';
 $lang['import_succeeded'] = 'Teema on tuotu onnistuneesti';
-$lang['help'] = '<h3>Mit&auml; moduuli tekee?</h3>
-<p>Moduuli mahdollistaa sivupohjien ja niihin liitettyjen tyylitiedostojen k&auml;yt&ouml;n &quot;teemoina&quot;, joita voi tuoda ja vied&auml;. Teemojen avulla voit jakaa sivustosi ulkon&auml;&ouml;n muiden cms-k&auml;ytt&auml;jien k&auml;ytt&ouml;&ouml;n.</p>
-<h3>Kuinka moduulia k&auml;ytet&auml;&auml;n</h3>
-<p>Moduulilla ei ole julkista k&auml;ytt&ouml;liittym&auml;&auml;, vain hallinnan k&auml;ytt&ouml;liittym&auml;. Siit&auml; voit valita aktiivisen sivupohjan ja painaa &quot;Vie&quot;. Sinulle l&auml;hetet&auml;&auml;n selaimen lataustoiminnolla XML-tiedosto, joka sis&auml;lt&auml;&auml; sivupohjan ja siihen liitetyt tyylitiedostot.</p>
-<h3>K&auml;ytt&ouml;oikeudet</h3>
-<p>Teemanhallinnan k&auml;ytt&ouml;oikeudet ovat tiukat tietokannan eheyden varmistamiseksi. &quot;Hallitse teemoja&quot; -oikeus vaaditaan teemojen viemiseksi ja seuraavat kolme oikeutta vaaditaan teemojen tuomiseksi: &quot;Lis&auml;&auml; tyylitiedostoja&quot;, &quot;Lis&auml;&auml; tyylitiedostojen liitoksia&quot; sek&auml; &quot;Lis&auml;&auml; pohjia&quot;.</p>
-<p>Voit ladata (upload) teematiedoston xml-muodossa, jolloin tiedostossa olevat pohjat ja tyylitiedostot tuodaan automaattisesti cmsms-asennukseesi.</p>
-<h3>Tuki</h3>
-<p>T&auml;h&auml;n moduuliin ei kuulu kaupallista tukea. Muutamista paikoista voit kuitenkin saada apua:</p>
-<ul>
-<li>Uusin versio, FAQ ja bugiraportin j&auml;tt&auml;minen sek&auml; kaupallisen tuen ostomahdollisuus ovat moduulin kotisivulla osoitteessa <a href="http://dev.cmsmadesimple.org">dev.cmsmadesimple.org</a>.</li>
-<li>Keskustelua moduulista on <a href="http://forum.cmsmadesimple.org">CMS Made Simple -foorumilla</a>.</li>
-<li>Moduulin tekij&auml;, calguy1000 on usein tavoitettavissa<a href="irc://irc.freenode.net/#cms">CMS IRC-kanavalla</a>.</li>
-<li>Voit my&ouml;s saada jonkin verran apua moduulin tekij&auml;lt&auml; s&auml;hk&ouml;postitse.</li>  
-</ul>
-<p>GPL:n mukaisesti, t&auml;m&auml; ohjelma toimitetaan sellaisena kuin se on (as-is). T&auml;ydellinen vastuuvapauslauseke on lisenssiss&auml;.</p>
-
-<h3>Copyright ja lisenssi</h3>
-<p>Copyright &copy; 2005, Robert Campbell <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a> All Rights Are Reserved.</p>
-<p>T&auml;m&auml; moduuli on julkaistu<a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a> -lisenssill&auml;. Lisenssin ehdot on hyv&auml;ksytt&auml;v&auml; ennen moduulin k&auml;ytt&ouml;&auml;.</p>
+$lang['help'] = '<h3>Mit&auml; moduuli tekee?</h3>
+
+<p>Moduuli mahdollistaa sivupohjien ja niihin liitettyjen tyylitiedostojen k&auml;yt&ouml;n &quot;teemoina&quot;, joita voi tuoda ja vied&auml;. Teemojen avulla voit jakaa sivustosi ulkon&auml;&ouml;n muiden cms-k&auml;ytt&auml;jien k&auml;ytt&ouml;&ouml;n.</p>
+
+<h3>Kuinka moduulia k&auml;ytet&auml;&auml;n</h3>
+
+<p>Moduulilla ei ole julkista k&auml;ytt&ouml;liittym&auml;&auml;, vain hallinnan k&auml;ytt&ouml;liittym&auml;. Siit&auml; voit valita aktiivisen sivupohjan ja painaa &quot;Vie&quot;. Sinulle l&auml;hetet&auml;&auml;n selaimen lataustoiminnolla XML-tiedosto, joka sis&auml;lt&auml;&auml; sivupohjan ja siihen liitetyt tyylitiedostot.</p>
+
+<h3>K&auml;ytt&ouml;oikeudet</h3>
+
+<p>Teemanhallinnan k&auml;ytt&ouml;oikeudet ovat tiukat tietokannan eheyden varmistamiseksi. &quot;Hallitse teemoja&quot; -oikeus vaaditaan teemojen viemiseksi ja seuraavat kolme oikeutta vaaditaan teemojen tuomiseksi: &quot;Lis&auml;&auml; tyylitiedostoja&quot;, &quot;Lis&auml;&auml; tyylitiedostojen liitoksia&quot; sek&auml; &quot;Lis&auml;&auml; pohjia&quot;.</p>
+
+<p>Voit ladata (upload) teematiedoston xml-muodossa, jolloin tiedostossa olevat pohjat ja tyylitiedostot tuodaan automaattisesti cmsms-asennukseesi.</p>
+
+<h3>Tuki</h3>
+
+<p>T&auml;h&auml;n moduuliin ei kuulu kaupallista tukea. Muutamista paikoista voit kuitenkin saada apua:</p>
+
+<ul>
+
+<li>Uusin versio, FAQ ja bugiraportin j&auml;tt&auml;minen sek&auml; kaupallisen tuen ostomahdollisuus ovat moduulin kotisivulla osoitteessa <a href="http://dev.cmsmadesimple.org">dev.cmsmadesimple.org</a>.</li>
+
+<li>Keskustelua moduulista on <a href="http://forum.cmsmadesimple.org">CMS Made Simple -foorumilla</a>.</li>
+
+<li>Moduulin tekij&auml;, calguy1000 on usein tavoitettavissa<a href="irc://irc.freenode.net/#cms">CMS IRC-kanavalla</a>.</li>
+
+<li>Voit my&ouml;s saada jonkin verran apua moduulin tekij&auml;lt&auml; s&auml;hk&ouml;postitse.</li>  
+
+</ul>
+
+<p>GPL:n mukaisesti, t&auml;m&auml; ohjelma toimitetaan sellaisena kuin se on (as-is). T&auml;ydellinen vastuuvapauslauseke on lisenssiss&auml;.</p>
+
+
+
+<h3>Copyright ja lisenssi</h3>
+
+<p>Copyright &copy; 2005, Robert Campbell <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a> All Rights Are Reserved.</p>
+
+<p>T&auml;m&auml; moduuli on julkaistu<a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a> -lisenssill&auml;. Lisenssin ehdot on hyv&auml;ksytt&auml;v&auml; ennen moduulin k&auml;ytt&ouml;&auml;.</p>
+
 ';
 $lang['utmz'] = '156861353.1269853138.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)';
 $lang['qca'] = 'P0-418055388-1269853137911';

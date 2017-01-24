@@ -19,7 +19,8 @@ $lang['pdfsettings'] = 'Configura&ccedil;&otilde;es PDF';
 $lang['pdfsettingssaved'] = 'As configura&ccedil;&otilde;es PDF foram guardadas';
 $lang['pdfheader'] = 'PDF Cabe&ccedil;alho';
 $lang['pdfenable'] = 'Permitir Gerar PDF';
-$lang['pdfenablehelp'] = 'Deve saber que a gera&ccedil;&atilde;o de PDF &eacute; muito rudimentar somente para conte&uacute;dos b&aacute;sicos.
+$lang['pdfenablehelp'] = 'Deve saber que a gera&ccedil;&atilde;o de PDF &eacute; muito rudimentar somente para conte&uacute;dos b&aacute;sicos.
+
 Use &agrave; sua vontade, mas por favor n&atilde;o se queixam da qualidade do resultado.';
 $lang['headerfontsize'] = 'Cabe&ccedil;alho tamanho fonte';
 $lang['contentfontsize'] = 'Conte&uacute;do tamanho fonte';
@@ -52,31 +53,56 @@ $lang['help_class_img'] = 'Class de <img> tag se Showbutton est&aacute; definido
 $lang['help_more'] = 'Colocar op&ccedil;&otilde;es adicionais no interior do <a> link';
 $lang['help_onlyurl'] = 'Sa&iacute;das apenas o URL, n&atilde;o &eacute; um link completo ';
 $lang['help_includetemplate'] = 'Se estiver definido para &quot;true&quot; esta op&ccedil;&atilde;o faz com que a impress&atilde;o / pdf processe todo o template, n&atilde;o apenas o conte&uacute;do principal. Este, provavelmente necessita de alguns ajustes sobre impress&atilde;o espec&iacute;ficos nos estilos com o mediatype &#039;print&#039; activado.';
-$lang['help'] = '<b>What does this module do?</b>
-<br/>
-This allow you to insert a link in pages/templates which directs the 
-visitor to a version of the page better suited for printing. It can also link
-to an basic on-the-fly-generated pdf version of the page.
-<br/>
-Please note that unless the parameter <i>includetemplate=true</i> is used, only the main output of the page is outputted. And note
-that the pdf-file outputted may not have much resemblance with you page, but should provide the content.
-<br/><br/>
-<b>How do I use this module?</b>
-<br/>
-Basically you install the module, access it&#039;s administration interface and review/change the templates for the
-link and for the printable page
-<br/>
-In you page content or template you then insert something like:
-<pre>
-{cms_module module=&#039;printing&#039; <i>params</i>}
-</pre>
-or simply
-<pre>
-{print <i>params</i>}
-</pre>
-using the print-plugin
-<br/>
-<h3>Tradu&ccedil;&atilde;o Portuguesa</h3>
+$lang['help'] = '<b>What does this module do?</b>
+
+<br/>
+
+This allow you to insert a link in pages/templates which directs the 
+
+visitor to a version of the page better suited for printing. It can also link
+
+to an basic on-the-fly-generated pdf version of the page.
+
+<br/>
+
+Please note that unless the parameter <i>includetemplate=true</i> is used, only the main output of the page is outputted. And note
+
+that the pdf-file outputted may not have much resemblance with you page, but should provide the content.
+
+<br/><br/>
+
+<b>How do I use this module?</b>
+
+<br/>
+
+Basically you install the module, access it&#039;s administration interface and review/change the templates for the
+
+link and for the printable page
+
+<br/>
+
+In you page content or template you then insert something like:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>params</i>}
+
+</pre>
+
+or simply
+
+<pre>
+
+{print <i>params</i>}
+
+</pre>
+
+using the print-plugin
+
+<br/>
+
+<h3>Tradu&ccedil;&atilde;o Portuguesa</h3>
+
 <p>Copyright &copy; 2008, Nuno Costa nuno.mfcosta(et)sapo.pt.</p>';
 $lang['utma'] = '156861353.757256758.1245932498.1248267518.1248276518.50';
 $lang['utmz'] = '156861353.1248267518.49.19.utmccn=(referral)|utmcsr=noupe.com|utmcct=/php/cms-theming-tutorials.html|utmcmd=referral';

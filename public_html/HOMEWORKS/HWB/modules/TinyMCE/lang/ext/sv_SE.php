@@ -72,7 +72,8 @@ $lang['datetimeformat_help'] = 'Klicka h&auml;r f&ouml;r hj&auml;lp om hur du fo
 $lang['extraconfigtext'] = 'Extrainst&auml;llningar';
 $lang['extraconfighelp2'] = 'En uppgift per rad, kommatecken kommer att l&auml;ggas till f&ouml;re och efter detta inneh&aring;ll. Se TinyMCE-wiki f&ouml;r instruktioner.';
 $lang['customdropdowntext'] = 'Anpassad dropdown';
-$lang['customdropdownhelp'] = 'Inserts customizable snippets of code/text by selection in a dropdown menu. 
+$lang['customdropdownhelp'] = 'Inserts customizable snippets of code/text by selection in a dropdown menu. 
+
 Obvious uses are easy access to tag&#039;s etc. The menu is inserted into toolbar using &#039;customdropdown&#039;.';
 $lang['startenabledtext'] = 'Startup aktiverat';
 $lang['startenabledhelp'] = 'Om denna inte &auml;r ikryssad kommer TinyMCE-redigerare att starta i inaktivt l&auml;ge. B&ouml;r anv&auml;ndas tillsammans med toggle-knappen (av/p&aring;).';
@@ -154,20 +155,34 @@ $lang['thousanddelimiter'] = ', ';
 $lang['size'] = 'Storlek';
 $lang['dimensions'] = 'BxH';
 $lang['advanced_tab'] = 'Avancerat';
-$lang['help'] = '<h3>What does this do?</h3>
-	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
-	<h3>How do I use it?</h3>
-	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
-	<h3>Troubleshooting</h3>
-	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
-	things you can try before contacting me for further support.
-	<br/>
-	<ul>
-	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You&#039;d be amazed how many times this has helped people.</li>
-	<li>2. Try to switch on the Static Config option. Note that this requires your /tmp/-dir to be writable by the webserver</li>
-	<li>3. If upgrading, please try to reset all settings. Not nice if you&#039;ve done a lot of customization, I know, but a lot of things changes from 2.3.x to 2.4.x series of the module.
-	<li>4. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based)
-	</ul>
+$lang['help'] = '<h3>What does this do?</h3>
+
+	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
+
+	<h3>Troubleshooting</h3>
+
+	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
+
+	things you can try before contacting me for further support.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You&#039;d be amazed how many times this has helped people.</li>
+
+	<li>2. Try to switch on the Static Config option. Note that this requires your /tmp/-dir to be writable by the webserver</li>
+
+	<li>3. If upgrading, please try to reset all settings. Not nice if you&#039;ve done a lot of customization, I know, but a lot of things changes from 2.3.x to 2.4.x series of the module.
+
+	<li>4. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based)
+
+	</ul>
+
 	<br/>';
 $lang['utma'] = '156861353.906052642.1267835734.1278791483.1278872739.125';
 $lang['utmz'] = '156861353.1278791483.124.8.utmccn=(referral)|utmcsr=forum.cmsmadesimple.org|utmcct=/|utmcmd=referral';

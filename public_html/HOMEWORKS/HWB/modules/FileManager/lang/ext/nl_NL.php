@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Alleen effectief in de gevorderenmodus';
 $lang['showhiddenfiles'] = 'Toon verborgen bestanden';
 $lang['settingsconfirmsingledelete'] = 'Bevestig verwijdering van een enkel bestand?';
 $lang['settingssaved'] = 'Instellingen opgeslagen';
-$lang['help'] = '		<h3>Wat doet het?</h3>
-		<p>Deze module verzorgt een bestandsbeheer functionaliteit</p>
-		<h3>Hoe gebruikt u het</h3>
+$lang['help'] = '		<h3>Wat doet het?</h3>
+
+		<p>Deze module verzorgt een bestandsbeheer functionaliteit</p>
+
+		<h3>Hoe gebruikt u het</h3>
+
 		<p>Selecteer Bestandsbeheer in het Inhoudsmenu.</p>';
 $lang['utma'] = '156861353.1269027775.1259416186.1267015852.1267019956.409';
 $lang['utmz'] = '156861353.1266930309.404.68.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=tjassens rolf';

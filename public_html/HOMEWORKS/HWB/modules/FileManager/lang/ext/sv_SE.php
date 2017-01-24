@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Fungerar bara med avancerat l&auml;ge p&aring;';
 $lang['showhiddenfiles'] = 'Visa dolda filer';
 $lang['settingsconfirmsingledelete'] = 'Bekr&auml;fta borttaning av enstaka fil?';
 $lang['settingssaved'] = 'Inst&auml;llningarna sparades';
-$lang['help'] = '		<h3>Vad g&ouml;r den h&auml;r modulen?</h3>
-		<p>Den h&auml;r modulen tillhandah&aring;ller funktioner f&ouml;r filhantering.</p>
-		<h3>Hur anv&auml;nder jag den?</h3>
+$lang['help'] = '		<h3>Vad g&ouml;r den h&auml;r modulen?</h3>
+
+		<p>Den h&auml;r modulen tillhandah&aring;ller funktioner f&ouml;r filhantering.</p>
+
+		<h3>Hur anv&auml;nder jag den?</h3>
+
 		<p>V&auml;ljd den fr&aring;n Inneh&aring;ll i administrationssidan.</p>';
 $lang['utma'] = '156861353.1215732140.1254944166.1255300348.1255385924.5';
 $lang['utmz'] = '156861353.1254951124.3.3.utmccn=(referral)|utmcsr=forum.cmsmadesimple.org|utmcct=/index.php/topic,32040.0.html|utmcmd=referral';

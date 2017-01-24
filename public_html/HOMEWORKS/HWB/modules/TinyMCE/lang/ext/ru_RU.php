@@ -78,8 +78,10 @@ $lang['datetimeformat_help'] = 'Нажмите сюда, чтобы получи
 $lang['extraconfigtext'] = 'Дополнительные настройки';
 $lang['extraconfighelp2'] = 'Одно значение на каждую строку, запятые будут добавлены до и после этого содержимого. Читайте инструкцию к  TinyMCE в Wiki.';
 $lang['customdropdowntext'] = 'Дополнительное выпадающее меню';
-$lang['customdropdownhelp'] = 'Пользовательское выпадающее меню.  Использование для упрощенного доступа к тегам например: "Start expand/collapse-area|{startExpandCollapse id=\\\'expand1\\\' title=\\\'This is my expandable area\\\'}
-
+$lang['customdropdownhelp'] = 'Пользовательское выпадающее меню.  Использование для упрощенного доступа к тегам например: "Start expand/collapse-area|{startExpandCollapse id=\\\'expand1\\\' title=\\\'This is my expandable area\\\'}
+
+
+
 ';
 $lang['startenabledtext'] = 'Стартовые настройки разрешены';
 $lang['startenabledhelp'] = 'При отключении редактор Tiny будет загружаться в отключенном состоянии. Рекомендуется только при использовании чекбокса для включения / выключения редактора.';
@@ -167,26 +169,46 @@ $lang['thousanddelimiter'] = ', ';
 $lang['size'] = 'Размер';
 $lang['dimensions'] = 'ШхВ';
 $lang['advanced_tab'] = 'Дополнительно';
-$lang['help'] = '<h3>What does this do?</h3>
-	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
-	<h3>How do I use it?</h3>
-	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
-  <h3>Spellchecker</h3>
-  <p>As of version 2.6.0, TinyMCE includes an online spellchecker. Please notice that SSL must be turned on in your server-configuration in order for this to work. On some setups this option is called php_openssl but that may vary</p>
-	<h3>Troubleshooting</h3>
-	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
-	things you can try before contacting me for further support.
-	<br/>
-	<ul>
-	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You\'d be amazed how many times this has helped people.</li>	
-	<li>2. If upgrading, please try to reset all settings. Not nice if you\'ve done a lot of customization, I know, but a lot of things changed from 2.3.x to 2.4.x series of the module.
-	<li>3. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based), Note that this requires your /tmp/-dir to be writable by the webserver
-	</ul>
-	<br/>
-  <h3>Plugin development</h3>
-  As of version 2.7.0 the TinyMCE-module has the ability to allow other modules to register extensions for it. Could be a custom icon allowing you to insert
-  content from some module, like Gallery etc. How to do this is pretty tech stuff, but if you are a module developer and interested in checking it out
-  please look in the TinyMCE/docs-dir for further instructions.
+$lang['help'] = '<h3>What does this do?</h3>
+
+	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
+
+  <h3>Spellchecker</h3>
+
+  <p>As of version 2.6.0, TinyMCE includes an online spellchecker. Please notice that SSL must be turned on in your server-configuration in order for this to work. On some setups this option is called php_openssl but that may vary</p>
+
+	<h3>Troubleshooting</h3>
+
+	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
+
+	things you can try before contacting me for further support.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You\'d be amazed how many times this has helped people.</li>	
+
+	<li>2. If upgrading, please try to reset all settings. Not nice if you\'ve done a lot of customization, I know, but a lot of things changed from 2.3.x to 2.4.x series of the module.
+
+	<li>3. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based), Note that this requires your /tmp/-dir to be writable by the webserver
+
+	</ul>
+
+	<br/>
+
+  <h3>Plugin development</h3>
+
+  As of version 2.7.0 the TinyMCE-module has the ability to allow other modules to register extensions for it. Could be a custom icon allowing you to insert
+
+  content from some module, like Gallery etc. How to do this is pretty tech stuff, but if you are a module developer and interested in checking it out
+
+  please look in the TinyMCE/docs-dir for further instructions.
+
 ';
 $lang['qca'] = 'P0-1938388883-1277855813144';
 $lang['utma'] = '156861353.429593658.1277855813.1291889913.1291983831.104';

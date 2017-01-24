@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Efectiv numai cu modul avansat activat';
 $lang['showhiddenfiles'] = 'Afisare fisiere ascunse';
 $lang['settingsconfirmsingledelete'] = 'Confirmati stergerea fisierului?';
 $lang['settingssaved'] = 'Setari salvate';
-$lang['help'] = '		<h3>Ce face acesta?</h3>
-		<p>Acest modul furnizeaza functii de management fisiere</p>
-		<h3>Cum se foloseste?</h3>
+$lang['help'] = '		<h3>Ce face acesta?</h3>
+
+		<p>Acest modul furnizeaza functii de management fisiere</p>
+
+		<h3>Cum se foloseste?</h3>
+
 		<p>Selectati-l din meniu din aria administrativa. </p>';
 $lang['utma'] = '156861353.1859574829.1255590497.1255590497.1255592738.2';
 $lang['utmc'] = '156861353';

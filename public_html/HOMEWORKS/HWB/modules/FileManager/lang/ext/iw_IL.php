@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'רק יעילה עם המצב המתקדם על'
 $lang['showhiddenfiles'] = 'הצג קבצים מוסתרים';
 $lang['settingsconfirmsingledelete'] = 'לאשר את המחיקה של קובץ יחיד?';
 $lang['settingssaved'] = 'ההגדרות נשמרו';
-$lang['help'] = '		<h3>What does this do?</h3>
-		<p>This module provides file management functions</p>
-		<h3>How do I use it?</h3>
+$lang['help'] = '		<h3>What does this do?</h3>
+
+		<p>This module provides file management functions</p>
+
+		<h3>How do I use it?</h3>
+
 		<p>Select it from the content-menu from in the admin. </p>';
 $lang['qca'] = 'P0-1045698296-1254984215802';
 $lang['utmz'] = '156861353.1272806149.13.6.utmcsr=4x6hp.net|utmccn=(referral)|utmcmd=referral|utmcct=/main/admin/listmodules.php';

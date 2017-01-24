@@ -1,1 +1,2 @@
-This is the location you place TinyMCE plugins.
+This is the location you place TinyMCE plugins.
+

@@ -71,28 +71,49 @@ $lang['enableadvanced'] = '上級操作モードを有効にしますか? (許�
 $lang['showhiddenfiles'] = '隠しファイルを表示';
 $lang['settingsconfirmsingledelete'] = 'ファイルごとに削除を確認しますか?';
 $lang['settingssaved'] = '設定の保存';
-$lang['help'] = '		<h3>何ができるのでしょうか?</h3>
-		<p>このモジュールでファイル管理が行なえ、往来のビルドインさえｒたファイル管理機能に取って代わり利用できます。</p>
-		<h3>使用方法</h3>
+$lang['help'] = '		<h3>何ができるのでしょうか?</h3>
+
+		<p>このモジュールでファイル管理が行なえ、往来のビルドインさえｒたファイル管理機能に取って代わり利用できます。</p>
+
+		<h3>使用方法</h3>
+
 		<p>アドミンのコンテンツメニューから利用できます。往来のファイル管理が存在する為に注意が必要となりますが、一番下のファイル管理を選択してください。</p>';
-$lang['changelog'] = '		<ul>
-		  <li><b>Version 0.1.4</b></li>
-		  <li>Fixed cancelling recursive deletion of dirs</li>
-
-		  <li><b>Version 0.1.3</b></li>
-		  <li>Fixed cancelling recursive deletion of dirs</li>
-		  <li>Added Java-applet multifile upload method</li>
-		  <li>Implemented deletion of multiple files</li>
-		  <li>Fixed select all checkbox</li>
-
-		  <li><b>Version 0.1.2</b></li>
-		  <li>Added recursive deletion of dirs</li>
-
-		  <li><b>Version 0.1.1</b></li>
-		  <li>Added support for multiple uploads, and support for unpacking tar.gz-files</li>
-		  <li>Rewrote to use more of the module-api-functions</li>
-		  <li><b>Version 0.1.0</b></li>
-		  <li>First version which work properly and equals the builtin filemanager which is intends to render obsolete</li>
+$lang['changelog'] = '		<ul>
+
+		  <li><b>Version 0.1.4</b></li>
+
+		  <li>Fixed cancelling recursive deletion of dirs</li>
+
+
+
+		  <li><b>Version 0.1.3</b></li>
+
+		  <li>Fixed cancelling recursive deletion of dirs</li>
+
+		  <li>Added Java-applet multifile upload method</li>
+
+		  <li>Implemented deletion of multiple files</li>
+
+		  <li>Fixed select all checkbox</li>
+
+
+
+		  <li><b>Version 0.1.2</b></li>
+
+		  <li>Added recursive deletion of dirs</li>
+
+
+
+		  <li><b>Version 0.1.1</b></li>
+
+		  <li>Added support for multiple uploads, and support for unpacking tar.gz-files</li>
+
+		  <li>Rewrote to use more of the module-api-functions</li>
+
+		  <li><b>Version 0.1.0</b></li>
+
+		  <li>First version which work properly and equals the builtin filemanager which is intends to render obsolete</li>
+
 		</ul>';
 $lang['utma'] = '156861353.421210939.1147253499.1151823476.1152236148.8';
 $lang['utmz'] = '156861353.1149854982.6.3.utmccn=(organic)|utmcsr=google|utmctr=cmsms |utmcmd=organic';

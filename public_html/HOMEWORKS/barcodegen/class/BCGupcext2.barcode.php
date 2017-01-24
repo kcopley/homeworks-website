@@ -11,10 +11,10 @@
  *
  *--------------------------------------------------------------------
  * Revision History
- * v2.0.0	23 apr	2008	Jean-Sébastien Goupil	New Version Update
- * v1.2.3	6  feb	2006	Jean-Sébastien Goupil	Using correctly static method
- * v1.2.3b	31 dec	2005	Jean-Sébastien Goupil	PHP5.1 compatible
- * v1.2.1	27 jun	2005	Jean-Sébastien Goupil	Font support added + correcting output error
+ * v2.0.0	23 apr	2008	Jean-Sï¿½bastien Goupil	New Version Update
+ * v1.2.3	6  feb	2006	Jean-Sï¿½bastien Goupil	Using correctly static method
+ * v1.2.3b	31 dec	2005	Jean-Sï¿½bastien Goupil	PHP5.1 compatible
+ * v1.2.1	27 jun	2005	Jean-Sï¿½bastien Goupil	Font support added + correcting output error
  * V1.00	17 jun	2004	Jean-Sebastien Goupil
  *--------------------------------------------------------------------
  * $Id: BCGupcext2.barcode.php,v 1.13 2009/11/09 04:08:41 jsgoupil Exp $

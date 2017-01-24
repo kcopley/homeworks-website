@@ -44,50 +44,89 @@ $lang['eventdesc-SearchCompleted'] = 'Een tag die wordt aangeroepen als een zoek
 $lang['eventdesc-SearchItemAdded'] = 'Een tag die wordt aangeroepen als een nieuw item is ge&iuml;ndexeerd.';
 $lang['eventdesc-SearchItemDeleted'] = 'Een tag die wordt aangeroepen als een item is verwijderd uit de index.';
 $lang['eventdesc-SearchAllItemsDeleted'] = 'Een tag die wordt aangeroepen als alle items zijn verwijderd uit de index.';
-$lang['eventhelp-SearchInitiated'] = '<p>Verzonden als een zoekopdracht is gestart.</p>
-<h4>Parameters</h4>
-<ol>
-<li>Tekst waarop is gezocht.</li>
-</ol>
+$lang['eventhelp-SearchInitiated'] = '<p>Verzonden als een zoekopdracht is gestart.</p>
+
+<h4>Parameters</h4>
+
+<ol>
+
+<li>Tekst waarop is gezocht.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchCompleted'] = '<p>Verzonden als een zoekopdracht is afgerond.</p>
-<h4>Parameters</h4>
-<ol>
-<li>Tekst waarop is gezocht.</li>
-<li>Lijst met afgeronde resultaten.</li>
-</ol>
+$lang['eventhelp-SearchCompleted'] = '<p>Verzonden als een zoekopdracht is afgerond.</p>
+
+<h4>Parameters</h4>
+
+<ol>
+
+<li>Tekst waarop is gezocht.</li>
+
+<li>Lijst met afgeronde resultaten.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemAdded'] = '<p>Verzonden als een nieuw item is ge&iuml;ndexeerd.</p>
-<h4>Parameters</h4>
-<ol>
-<li>Module naam.</li>
-<li>Id van het item.</li>
-<li>Additionele attributen.</li>
-<li>Inhoud om te indexeren en toe te voegen.</li>
-</ol>
+$lang['eventhelp-SearchItemAdded'] = '<p>Verzonden als een nieuw item is ge&iuml;ndexeerd.</p>
+
+<h4>Parameters</h4>
+
+<ol>
+
+<li>Module naam.</li>
+
+<li>Id van het item.</li>
+
+<li>Additionele attributen.</li>
+
+<li>Inhoud om te indexeren en toe te voegen.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemDeleted'] = '<p>Verzonden als een item is verwijderd uit de index.</p>
-<h4>Parameters</h4>
-<ol>
-<li>Modulenaam.</li>
-<li>Id van het item.</li>
-<li>Additionele attributen.</li>
-</ol>
+$lang['eventhelp-SearchItemDeleted'] = '<p>Verzonden als een item is verwijderd uit de index.</p>
+
+<h4>Parameters</h4>
+
+<ol>
+
+<li>Modulenaam.</li>
+
+<li>Id van het item.</li>
+
+<li>Additionele attributen.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Verzonden als alle item zijn verwijderd uit de index.</p>
-
-<h4>Parameters</h4>
-<ul>
-<li>Geen</li>
-</ul>
+$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Verzonden als alle item zijn verwijderd uit de index.</p>
+
+
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>Geen</li>
+
+</ul>
+
 ';
-$lang['help'] = '<h3>Wat doet het?</h3>
-<p>Search is een module om de &quot;core&quot; inhoud te doorzoeken samen met enkele geregistreerde modulen. U geeft &eacute;&eacute;n of twee woorden op en krijgt passende en relevante resultaten terug.</p>
-<h3>Hoe gebruikt u het?</h3>
-<p>De makkelijkste manier om het te gebruiken is de {search} tag in een sjabloon of pagina te plaatsen, waarna het zoekformulier wordt getoond. De code kan eruit zien als: <code>{search}</code></p>
-<h4>Hoe voorkomt u dat bepaalde inhoud ge&iuml;ndexeerd wordt?</h4>
-<p>De zoekmodule zal geen &quot;inactieve&quot; pagina&#039;s doorzoeken. Echter, als u gebruik maakt van de CustomContent module of van een andere smarty logica om bepaalde inhoud aan bepaalde gebruikersgroepen te tonen, of dit juiste te blokkeren, dan kan het de voorkeur hebben om te voorkomen dat volledige pagina&#039;s ge&iuml;ndexeerd worden. Om dit te bereiken kunt u de volgende tag willekeurig op de pagina plaatsen: <code><! -- pageAttribute: NotSearchable -- ></code> (let op: deze string moet letterlijk overgenomen worden, inclusief de drie losse spaties). Als de zoekmodule deze tag op een pagina tegenkomt zal het de inhoud niet indexeren.</p>
-<p>De <code><! -- pageAttribute: NotSearchable -- ></code> tag kan ook in een sjabloon worden geplaatst.  In dit geval zullen geen van de pagina&#039;s die met deze sjabloon gekoppeld zijn worden ge&iuml;ndexeerd.  Deze pagina&#039;s worden opnieuw ge&iuml;ndexeerd als de tag verwijderd is.</p>
+$lang['help'] = '<h3>Wat doet het?</h3>
+
+<p>Search is een module om de &quot;core&quot; inhoud te doorzoeken samen met enkele geregistreerde modulen. U geeft &eacute;&eacute;n of twee woorden op en krijgt passende en relevante resultaten terug.</p>
+
+<h3>Hoe gebruikt u het?</h3>
+
+<p>De makkelijkste manier om het te gebruiken is de {search} tag in een sjabloon of pagina te plaatsen, waarna het zoekformulier wordt getoond. De code kan eruit zien als: <code>{search}</code></p>
+
+<h4>Hoe voorkomt u dat bepaalde inhoud ge&iuml;ndexeerd wordt?</h4>
+
+<p>De zoekmodule zal geen &quot;inactieve&quot; pagina&#039;s doorzoeken. Echter, als u gebruik maakt van de CustomContent module of van een andere smarty logica om bepaalde inhoud aan bepaalde gebruikersgroepen te tonen, of dit juiste te blokkeren, dan kan het de voorkeur hebben om te voorkomen dat volledige pagina&#039;s ge&iuml;ndexeerd worden. Om dit te bereiken kunt u de volgende tag willekeurig op de pagina plaatsen: <code><! -- pageAttribute: NotSearchable -- ></code> (let op: deze string moet letterlijk overgenomen worden, inclusief de drie losse spaties). Als de zoekmodule deze tag op een pagina tegenkomt zal het de inhoud niet indexeren.</p>
+
+<p>De <code><! -- pageAttribute: NotSearchable -- ></code> tag kan ook in een sjabloon worden geplaatst.  In dit geval zullen geen van de pagina&#039;s die met deze sjabloon gekoppeld zijn worden ge&iuml;ndexeerd.  Deze pagina&#039;s worden opnieuw ge&iuml;ndexeerd als de tag verwijderd is.</p>
+
 ';
 $lang['utma'] = '156861353.1738896039.1278840000.1280414803.1280421296.64';
 $lang['utmz'] = '156861353.1280414803.63.9.utmcsr=forum.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php';

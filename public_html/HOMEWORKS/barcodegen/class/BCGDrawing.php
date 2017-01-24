@@ -8,11 +8,11 @@
  *
  *--------------------------------------------------------------------
  * Revision History
- * v2.1.0	8  nov	2009	Jean-Sébastien Goupil	Support DPI, Rotation
- * v2.0.1	8  mar	2009	Jean-Sébastien Goupil	Supports GIF and WBMP
- * v2.0.0	23 apr	2008	Jean-Sébastien Goupil	New Version Update
- * v1.2.3b	31 dec	2005	Jean-Sébastien Goupil	Just one barcode per drawing
- * v1.2.1	27 jun	2005	Jean-Sébastien Goupil	Font support added
+ * v2.1.0	8  nov	2009	Jean-Sï¿½bastien Goupil	Support DPI, Rotation
+ * v2.0.1	8  mar	2009	Jean-Sï¿½bastien Goupil	Supports GIF and WBMP
+ * v2.0.0	23 apr	2008	Jean-Sï¿½bastien Goupil	New Version Update
+ * v1.2.3b	31 dec	2005	Jean-Sï¿½bastien Goupil	Just one barcode per drawing
+ * v1.2.1	27 jun	2005	Jean-Sï¿½bastien Goupil	Font support added
  * V1.00	17 jun	2004	Jean-Sebastien Goupil
  *--------------------------------------------------------------------
  * $Id: BCGDrawing.php,v 1.12 2009/11/09 04:08:41 jsgoupil Exp $

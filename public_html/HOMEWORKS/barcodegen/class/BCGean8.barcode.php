@@ -14,12 +14,12 @@
  *
  *--------------------------------------------------------------------
  * Revision History
- * v2.0.1	8  mar	2009	Jean-Sébastien Goupil	Fix padding for the barcode
- * v2.0.0	23 apr	2008	Jean-Sébastien Goupil	New Version Update
- * v1.2.3	6  feb	2006	Jean-Sébastien Goupil	Fix label position
- * v1.2.3b	31 dec	2005	Jean-Sébastien Goupil	Checksum separated + PHP5.1 compatible
- * v1.2.2	23 jul	2005	Jean-Sébastien Goupil	Enhance rapidity
- * v1.2.1	27 jun	2005	Jean-Sébastien Goupil	Font support added
+ * v2.0.1	8  mar	2009	Jean-Sï¿½bastien Goupil	Fix padding for the barcode
+ * v2.0.0	23 apr	2008	Jean-Sï¿½bastien Goupil	New Version Update
+ * v1.2.3	6  feb	2006	Jean-Sï¿½bastien Goupil	Fix label position
+ * v1.2.3b	31 dec	2005	Jean-Sï¿½bastien Goupil	Checksum separated + PHP5.1 compatible
+ * v1.2.2	23 jul	2005	Jean-Sï¿½bastien Goupil	Enhance rapidity
+ * v1.2.1	27 jun	2005	Jean-Sï¿½bastien Goupil	Font support added
  * V1.00	17 jun	2004	Jean-Sebastien Goupil
  *--------------------------------------------------------------------
  * $Id: BCGean8.barcode.php,v 1.12 2009/03/23 06:48:30 jsgoupil Exp $

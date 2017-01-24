@@ -105,9 +105,12 @@ $lang['ignoremodifyfileshelp'] = 'Warnung! Damit erlauben Sie einige Optionen zu
 $lang['showtogglebutton_text'] = 'Kontrollfeld zum Aktiveren/Deaktivieren der WYSIWYG-Option anzeigen';
 $lang['togglewysiwyg'] = 'WYSIWYG aktivieren/deaktivieren';
 $lang['styles_tab'] = 'CSS-Stile';
-$lang['styles_help'] = 'Ohne Vorgabe wird TinyMCE Ihre CSS-Datei verarbeiten und dem Benutzer die Stile in einer Liste anzeigen. 
-Wenn Sie dem Benutzer nur ein paar Stile angezeigen m&ouml;chten, k&ouml;nnen Sie dies mit &bdquo;benutzerdefinierterName1=stil1; benutzerdefinierterName2=stil2&ldquo; im ersten Feld festlegen.
-&bdquo;stil1&ldquo; entspricht der CSS-Klasse in Ihrem Stylesheet. Der Punkt f&uuml;r die Klasse darf nicht eingegeben werden. Die ausgegebene Formatierung wird dann in etwa so aussehen:
+$lang['styles_help'] = 'Ohne Vorgabe wird TinyMCE Ihre CSS-Datei verarbeiten und dem Benutzer die Stile in einer Liste anzeigen. 
+
+Wenn Sie dem Benutzer nur ein paar Stile angezeigen m&ouml;chten, k&ouml;nnen Sie dies mit &bdquo;benutzerdefinierterName1=stil1; benutzerdefinierterName2=stil2&ldquo; im ersten Feld festlegen.
+
+&bdquo;stil1&ldquo; entspricht der CSS-Klasse in Ihrem Stylesheet. Der Punkt f&uuml;r die Klasse darf nicht eingegeben werden. Die ausgegebene Formatierung wird dann in etwa so aussehen:
+
 <code>&amp;lt;span class=&quot;stil1&quot;&amp;gt;text&amp;lt;/span&amp;gt;</code> ';
 $lang['css_styles_text'] = 'Stile';
 $lang['accessdenied'] = 'Zugriff verweigert. Bitte pr&uuml;fen Sie Ihre Berechtigungen.';
@@ -168,23 +171,40 @@ $lang['thousanddelimiter'] = ', ';
 $lang['size'] = 'Gr&ouml;&szlig;e';
 $lang['dimensions'] = 'BxH';
 $lang['advanced_tab'] = 'Weitere Optionen';
-$lang['help'] = '       <h3>Was macht dieses Modul?</h3>
-	<p>Es stellt den TinyMCE als WYSIWYG-Editor zur Verf&uuml;gung.</p>
-	<h3>Wie wird es benutzt?</h3>
-	<p>Nach der Installation k&ouml;nnen Sie in der Administration im Men&uuml; &bdquo;Meine Einstellungen -> Benutzerspezifische Einstellungen&ldquo; TinyMCE als WYSIWYG-Editor ausw&auml;hlen.</p>
-  <h3>Sprachpr&uuml;fung</h3>
-  <p>Seit Version 2.6.0 enth&auml;lt TinyMCE eine online Sprachpr&uuml;fung. Bitte beachten Sie, dass in Ihrer Server-Konfiguration SSL aktiviert sein muss, damit dies funktioniert. Bei einigen Installationen wird diese Option php_openssl genannt, dies kann aber auch davon abweichen.</p>
-	<h3>Fehlersuche</h3>
-	<p>Einige Anwender haben Probleme mit der Anzeige des TinyMCE nach der Installation oder Aktualisierung. Im folgenden finden Sie eine Checkliste, 
-	die Sie abarbeiten sollten, bevor Sie mich um Unterst&uuml;tzung bitten.</p>
-	<ol>
-	<li>Bitte, bitte versuchen Sie, das TinyMCE-Verzeichnis nochmals in den /modules-Ordner hochzuladen. Sie w&auml;ren &uuml;berrascht, wenn Sie w&uuml;ssten, wie oft dies bereits anderen Anwendern geholfen hat.</li>
-	<li>Versuchen Sie, die Option f&uuml;r eine statische Konfigurationsdatei zu verwenden. Bitte beachten Sie, dass daf&uuml;r ihr /tmp-Verzeichnis durch den Webserver beschreibbar sein muss.</li>
-	<li>Falls Sie das Modul aktualisiert haben, versuchen Sie, s&auml;mtliche Einstellungen auf die programmseitigen Vorgaben zur&uuml;ckzusetzen. Ich wei&szlig;, dass das nicht gerade sch&ouml;n ist, wenn Sie TinyMCE bereits individuell angepasst hatten, aber mit der Umstellung des Moduls von 2.3.x auf 2.4.x sind eine Menge &Auml;nderungen erfolgt.</li>
-	<li>Versuchen Sie, in der Registerkarte &bdquo;Weitere Optionen&ldquo; die Option zur Verwendung einer statischen Konfigurationsdatei zu verwenden. Auf manchen (CGI-basierten) Systemen funktioniert dies besser. Bitte beachten Sie, dass daf&uuml;r das Verzeichnis /tmp/ durch den Webserver beschreibbar sein muss.</li>
-	</ol>
-  <h3>Plugin-Programmierung</h3>
-  <p>Ab Version 2.7.0 des TinyMCE-Moduls kann anderen Modulen erlaubt werden, Erweiterungen f&uuml;r diese zu registrieren. Dies k&ouml;nnte zum Beispiel ein benutzerdefiniertes Ikon sein, mit dem Inhalte von anderen Module eingef&uuml;gt werden k&ouml;nnen, wie zum Beispiel eine Bildergalerie. Wenn Sie ein Modul-Programmierer sind und mehr &uuml;ber die technischen Hintergr&uuml;nde erfahren m&ouml;chten, finden Sie im Verzeichnis TinyMCE/docs weitere Informationen.
+$lang['help'] = '       <h3>Was macht dieses Modul?</h3>
+
+	<p>Es stellt den TinyMCE als WYSIWYG-Editor zur Verf&uuml;gung.</p>
+
+	<h3>Wie wird es benutzt?</h3>
+
+	<p>Nach der Installation k&ouml;nnen Sie in der Administration im Men&uuml; &bdquo;Meine Einstellungen -> Benutzerspezifische Einstellungen&ldquo; TinyMCE als WYSIWYG-Editor ausw&auml;hlen.</p>
+
+  <h3>Sprachpr&uuml;fung</h3>
+
+  <p>Seit Version 2.6.0 enth&auml;lt TinyMCE eine online Sprachpr&uuml;fung. Bitte beachten Sie, dass in Ihrer Server-Konfiguration SSL aktiviert sein muss, damit dies funktioniert. Bei einigen Installationen wird diese Option php_openssl genannt, dies kann aber auch davon abweichen.</p>
+
+	<h3>Fehlersuche</h3>
+
+	<p>Einige Anwender haben Probleme mit der Anzeige des TinyMCE nach der Installation oder Aktualisierung. Im folgenden finden Sie eine Checkliste, 
+
+	die Sie abarbeiten sollten, bevor Sie mich um Unterst&uuml;tzung bitten.</p>
+
+	<ol>
+
+	<li>Bitte, bitte versuchen Sie, das TinyMCE-Verzeichnis nochmals in den /modules-Ordner hochzuladen. Sie w&auml;ren &uuml;berrascht, wenn Sie w&uuml;ssten, wie oft dies bereits anderen Anwendern geholfen hat.</li>
+
+	<li>Versuchen Sie, die Option f&uuml;r eine statische Konfigurationsdatei zu verwenden. Bitte beachten Sie, dass daf&uuml;r ihr /tmp-Verzeichnis durch den Webserver beschreibbar sein muss.</li>
+
+	<li>Falls Sie das Modul aktualisiert haben, versuchen Sie, s&auml;mtliche Einstellungen auf die programmseitigen Vorgaben zur&uuml;ckzusetzen. Ich wei&szlig;, dass das nicht gerade sch&ouml;n ist, wenn Sie TinyMCE bereits individuell angepasst hatten, aber mit der Umstellung des Moduls von 2.3.x auf 2.4.x sind eine Menge &Auml;nderungen erfolgt.</li>
+
+	<li>Versuchen Sie, in der Registerkarte &bdquo;Weitere Optionen&ldquo; die Option zur Verwendung einer statischen Konfigurationsdatei zu verwenden. Auf manchen (CGI-basierten) Systemen funktioniert dies besser. Bitte beachten Sie, dass daf&uuml;r das Verzeichnis /tmp/ durch den Webserver beschreibbar sein muss.</li>
+
+	</ol>
+
+  <h3>Plugin-Programmierung</h3>
+
+  <p>Ab Version 2.7.0 des TinyMCE-Moduls kann anderen Modulen erlaubt werden, Erweiterungen f&uuml;r diese zu registrieren. Dies k&ouml;nnte zum Beispiel ein benutzerdefiniertes Ikon sein, mit dem Inhalte von anderen Module eingef&uuml;gt werden k&ouml;nnen, wie zum Beispiel eine Bildergalerie. Wenn Sie ein Modul-Programmierer sind und mehr &uuml;ber die technischen Hintergr&uuml;nde erfahren m&ouml;chten, finden Sie im Verzeichnis TinyMCE/docs weitere Informationen.
+
 ';
 $lang['utma'] = '156861353.1152034375.1290922887.1290922887.1290978521.2';
 $lang['utmc'] = '156861353';

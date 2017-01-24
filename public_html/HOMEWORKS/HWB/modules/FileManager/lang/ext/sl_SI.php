@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Učinkovito samo ob aktiviranem naprednem način
 $lang['showhiddenfiles'] = 'Prikaži skrite datoteke';
 $lang['settingsconfirmsingledelete'] = 'Potrditev brisanja posamezne datoteke?';
 $lang['settingssaved'] = 'Nastavitve shranjene';
-$lang['help'] = '		<h3>Kaj to počne?</h3>
-		<p>Modul omogoča upravljanje z datotekami</p>
-		<h3>Kako to uporabim?</h3>
+$lang['help'] = '		<h3>Kaj to počne?</h3>
+
+		<p>Modul omogoča upravljanje z datotekami</p>
+
+		<h3>Kako to uporabim?</h3>
+
 		<p>Izberite iz menija vsebina v administraciji. </p>';
 $lang['utma'] = '156861353.1722464354432002000.1251370098.1258962106.1259238241.16';
 $lang['utmz'] = '156861353.1259238241.16.15.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=cms made simple';

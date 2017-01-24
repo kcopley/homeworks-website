@@ -72,7 +72,8 @@ $lang['datetimeformat_help'] = 'Clique aqui para obter ajuda sobre como formatar
 $lang['extraconfigtext'] = 'Configura&ccedil;&atilde;o extra';
 $lang['extraconfighelp2'] = 'Uma declara&ccedil;&atilde;o por linha, uma v&iacute;rgula ser&aacute; adicionada antes e ap&oacute;s esse conte&uacute;do. Verifique TinyMCE-wiki para obter mais instru&ccedil;&otilde;es.';
 $lang['customdropdowntext'] = 'Menu Suspenso Personalizado';
-$lang['customdropdownhelp'] = 'Insere peda&ccedil;os de c&oacute;digo/texto personaliz&aacute;veis na selec&ccedil;&atilde;o em um menu suspenso.
+$lang['customdropdownhelp'] = 'Insere peda&ccedil;os de c&oacute;digo/texto personaliz&aacute;veis na selec&ccedil;&atilde;o em um menu suspenso.
+
 Acesso a tag&#039;s etc. O menu &eacute; inserido na barra usando &#039;customdropdown&#039;.';
 $lang['startenabledtext'] = 'Arranque activado';
 $lang['startenabledhelp'] = 'Desmarcar Arranque no Tiny  em um estado desabilitado. Deve ser utilizado juntamente com o bot&atilde;o alternar.';
@@ -96,8 +97,10 @@ $lang['ignoremodifyfileshelp'] = 'Aten&ccedil;&atilde;o! Isso permite que se alt
 $lang['showtogglebutton_text'] = 'Mostrar checkbox para colocar wysiwyg on/off';
 $lang['togglewysiwyg'] = 'Colocar Editor on/off';
 $lang['styles_tab'] = 'Estilos CSS';
-$lang['styles_help'] = 'Se deixar o campo em branco, TinyMCE ir&aacute; analisar seu arquivo CSS e lista os estilos contidos nele para o usu&aacute;rio. Se quiser que apenas alguns estilos sejam apresentados ao usu&aacute;rio, especifique-os sob a forma &quot;Estilo 1 = style1; Estilo 2 = style2&quot; no primeiro campo abaixo. Nos restantes dom&iacute;nios, pode especificar estilos CSS para as tabelas, Linhas e C&eacute;lulas que s&atilde;o utilizados no correspondentes di&aacute;logos. Para um campo vazio, os estilos s&atilde;o usados em geral.
-	
+$lang['styles_help'] = 'Se deixar o campo em branco, TinyMCE ir&aacute; analisar seu arquivo CSS e lista os estilos contidos nele para o usu&aacute;rio. Se quiser que apenas alguns estilos sejam apresentados ao usu&aacute;rio, especifique-os sob a forma &quot;Estilo 1 = style1; Estilo 2 = style2&quot; no primeiro campo abaixo. Nos restantes dom&iacute;nios, pode especificar estilos CSS para as tabelas, Linhas e C&eacute;lulas que s&atilde;o utilizados no correspondentes di&aacute;logos. Para um campo vazio, os estilos s&atilde;o usados em geral.
+
+	
+
 		';
 $lang['css_styles_text'] = 'Geral';
 $lang['accessdenied'] = 'Acesso Negado!';
@@ -157,29 +160,52 @@ $lang['thousanddelimiter'] = ', ';
 $lang['size'] = 'Tamanho';
 $lang['dimensions'] = 'A x L';
 $lang['advanced_tab'] = 'Avan&ccedil;ado';
-$lang['help'] = '	<h3>What does this do?</h3>
-	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
-	<h3>How do I use it?</h3>
-	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
-  <h3>Spellchecker</h3>
-  <p>As of version 2.6.0, TinyMCE includes an online spellchecker. Please notice that SSL must be turned on in your server-configuration in order for this to work. On some setups this option is called php_openssl but that may vary</p>
-	<h3>Troubleshooting</h3>
-	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
-	things you can try before contacting me for further support.
-	<br/>
-	<ul>
-	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You&#039;d be amazed how many times this has helped people.</li>	
-	<li>2. If upgrading, please try to reset all settings. Not nice if you&#039;ve done a lot of customization, I know, but a lot of things changed from 2.3.x to 2.4.x series of the module.
-	<li>3. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based), Note that this requires your /tmp/-dir to be writable by the webserver
-	</ul>
-	<br/>
-  <h3>Plugin development</h3>
-  As of version 2.7.0 the TinyMCE-module has the ability to allow other modules to register extensions for it. Could be a custom icon allowing you to insert
-  content from some module, like Gallery etc. How to do this is pretty tech stuff, but if you are a module developer and interested in checking it out
-  please look in the TinyMCE/docs-dir for further instructions.
-
-	<br/>
-		
+$lang['help'] = '	<h3>What does this do?</h3>
+
+	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
+
+  <h3>Spellchecker</h3>
+
+  <p>As of version 2.6.0, TinyMCE includes an online spellchecker. Please notice that SSL must be turned on in your server-configuration in order for this to work. On some setups this option is called php_openssl but that may vary</p>
+
+	<h3>Troubleshooting</h3>
+
+	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
+
+	things you can try before contacting me for further support.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You&#039;d be amazed how many times this has helped people.</li>	
+
+	<li>2. If upgrading, please try to reset all settings. Not nice if you&#039;ve done a lot of customization, I know, but a lot of things changed from 2.3.x to 2.4.x series of the module.
+
+	<li>3. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based), Note that this requires your /tmp/-dir to be writable by the webserver
+
+	</ul>
+
+	<br/>
+
+  <h3>Plugin development</h3>
+
+  As of version 2.7.0 the TinyMCE-module has the ability to allow other modules to register extensions for it. Could be a custom icon allowing you to insert
+
+  content from some module, like Gallery etc. How to do this is pretty tech stuff, but if you are a module developer and interested in checking it out
+
+  please look in the TinyMCE/docs-dir for further instructions.
+
+
+
+	<br/>
+
+		
+
 ';
 $lang['qca'] = 'P0-1236842016-1276975567163';
 $lang['utma'] = '156861353.1127963369.1277311597.1278072220.1278188876.23';

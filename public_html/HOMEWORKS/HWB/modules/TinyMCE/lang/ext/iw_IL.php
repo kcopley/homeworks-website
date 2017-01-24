@@ -72,7 +72,8 @@ $lang['datetimeformat_help'] = 'לחץ כאן לעזרה על תבנית איך 
 $lang['extraconfigtext'] = 'תוספת תצורה';
 $lang['extraconfighelp2'] = 'משפט אחד בכל שורה, פסיקים יתווספו לפני ואחרי תוכן זה. בדוק TinyMCE-wiki עבור ההוראות.';
 $lang['customdropdowntext'] = 'אישית הנפתח';
-$lang['customdropdownhelp'] = 'הוספת קטעי להתאמה אישית של הקוד / טקסט על ידי בחירה מתוך התפריט הנפתח.
+$lang['customdropdownhelp'] = 'הוספת קטעי להתאמה אישית של הקוד / טקסט על ידי בחירה מתוך התפריט הנפתח.
+
 משתמש מאליו הם גישה נוחה של תג וכו התפריט מוכנס לתוך סרגל הכלים באמצעות "customdropdown".';
 $lang['startenabledtext'] = 'ההפעלה מופעל';
 $lang['startenabledhelp'] = 'ביטול הסימון הזה מתחיל זעירים, עורכי במצב לא זמין. יש להשתמש יחד עם כפתור לעבור.';
@@ -96,11 +97,16 @@ $lang['ignoremodifyfileshelp'] = 'אזהרה! זה מאפשר כמה קבצים 
 $lang['showtogglebutton_text'] = 'תיבת הסימון הצג להפוך WYSIWYG on / off';
 $lang['togglewysiwyg'] = 'הפעל WYSIWYG on / off';
 $lang['styles_tab'] = 'CSS סגנונות';
-$lang['styles_help'] = '  If you leave the field empty, TinyMCE will parse your CSS file and list the class styles contained in it to the user. 
-  If you want only some styles presented to the user, specify them in the form "CustomName1=style1; CustomName2=style2", 
-  "style1" being a class call in your stylesheet and you don\'t put the . 
-  normally used for class calls as it is already in your CSS, it will look like this <span class="style1">text</span>, 
-  in the first field below. 
+$lang['styles_help'] = '  If you leave the field empty, TinyMCE will parse your CSS file and list the class styles contained in it to the user. 
+
+  If you want only some styles presented to the user, specify them in the form "CustomName1=style1; CustomName2=style2", 
+
+  "style1" being a class call in your stylesheet and you don\'t put the . 
+
+  normally used for class calls as it is already in your CSS, it will look like this <span class="style1">text</span>, 
+
+  in the first field below. 
+
 ';
 $lang['css_styles_text'] = 'סגנונות';
 $lang['accessdenied'] = 'הגישה נדחתה. אנא בדוק את ההרשאות שלך.';
@@ -159,27 +165,48 @@ $lang['thousanddelimiter'] = ', ';
 $lang['size'] = 'גודל';
 $lang['dimensions'] = 'רxג';
 $lang['advanced_tab'] = 'מתקדם';
-$lang['help'] = '	<h3>What does this do?</h3>
-	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
-	<h3>How do I use it?</h3>
-	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
-  <h3>Spellchecker</h3>
-  <p>As of version 2.6.0, TinyMCE includes an online spellchecker. Please notice that SSL must be turned on in your server-configuration in order for this to work. On some setups this option is called php_openssl but that may vary</p>
-	<h3>Troubleshooting</h3>
-	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
-	things you can try before contacting me for further support.
-	<br/>
-	<ul>
-	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You\'d be amazed how many times this has helped people.</li>	
-	<li>2. If upgrading, please try to reset all settings. Not nice if you\'ve done a lot of customization, I know, but a lot of things changed from 2.3.x to 2.4.x series of the module.
-	<li>3. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based), Note that this requires your /tmp/-dir to be writable by the webserver
-	</ul>
-	<br/>
-  <h3>Plugin development</h3>
-  As of version 2.7.0 the TinyMCE-module has the ability to allow other modules to register extensions for it. Could be a custom icon allowing you to insert
-  content from some module, like Gallery etc. How to do this is pretty tech stuff, but if you are a module developer and interested in checking it out
-  please look in the TinyMCE/docs-dir for further instructions.
-		
+$lang['help'] = '	<h3>What does this do?</h3>
+
+	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
+
+  <h3>Spellchecker</h3>
+
+  <p>As of version 2.6.0, TinyMCE includes an online spellchecker. Please notice that SSL must be turned on in your server-configuration in order for this to work. On some setups this option is called php_openssl but that may vary</p>
+
+	<h3>Troubleshooting</h3>
+
+	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
+
+	things you can try before contacting me for further support.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You\'d be amazed how many times this has helped people.</li>	
+
+	<li>2. If upgrading, please try to reset all settings. Not nice if you\'ve done a lot of customization, I know, but a lot of things changed from 2.3.x to 2.4.x series of the module.
+
+	<li>3. Try enabling the static config option in advanced settings. This works better on some systems (like CGI-based), Note that this requires your /tmp/-dir to be writable by the webserver
+
+	</ul>
+
+	<br/>
+
+  <h3>Plugin development</h3>
+
+  As of version 2.7.0 the TinyMCE-module has the ability to allow other modules to register extensions for it. Could be a custom icon allowing you to insert
+
+  content from some module, like Gallery etc. How to do this is pretty tech stuff, but if you are a module developer and interested in checking it out
+
+  please look in the TinyMCE/docs-dir for further instructions.
+
+		
+
 ';
 $lang['qca'] = 'P0-1045698296-1254984215802';
 $lang['utmz'] = '156861353.1272806149.13.6.utmcsr=4x6hp.net|utmccn=(referral)|utmcmd=referral|utmcct=/main/admin/listmodules.php';

@@ -37,10 +37,14 @@ function isEmpty($path) {
 	}
 	return true;
 }
-
-if (@rmdir($fullname)) { //try just to delete it... will fail if not empty
-  $message=$this->Lang("singledirdeletesuccess"); 
-  $this->Redirect($id,"defaultadmin",$returnid,array("path"=>$params["path"],"module_message"=>$message));
+
+
+if (@rmdir($fullname)) { //try just to delete it... will fail if not empty
+
+  $message=$this->Lang("singledirdeletesuccess"); 
+
+  $this->Redirect($id,"defaultadmin",$returnid,array("path"=>$params["path"],"module_message"=>$message));
+
 }
 if (isEmpty($fullname)) {
 	$error=$this->Lang("singledirdeletefail");

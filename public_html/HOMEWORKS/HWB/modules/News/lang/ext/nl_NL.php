@@ -1,5 +1,6 @@
 <?php
-$lang['info_detail_returnid'] = 'Deze instelling wordt gebruikt om een pagina (en dus een sjabloon) te bepalen om te gebruiken om het detail artikel te tonen. Ge&iuml;ndividualiseerde Nieuws Detail URL&#039;s zullen niet werken als deze parameter niet is ingesteld op een geldige pagina.<br />
+$lang['info_detail_returnid'] = 'Deze instelling wordt gebruikt om een pagina (en dus een sjabloon) te bepalen om te gebruiken om het detail artikel te tonen. Ge&iuml;ndividualiseerde Nieuws Detail URL&#039;s zullen niet werken als deze parameter niet is ingesteld op een geldige pagina.<br />
+
 Bovendien, als deze voorkeur is ingesteld en de News tag is niet voorzien van de detailpage parameter, dan zal deze waarde worden gebruikt voor de detail links';
 $lang['title_detail_returnid'] = 'Standaard pagina voor detail vertoningen';
 $lang['title_submission_settings'] = 'Nieuws Aanmelding Instellingen';
@@ -177,66 +178,116 @@ $lang['options'] = 'Opties';
 $lang['optionsupdated'] = 'De opties zijn bijgewerkt.';
 $lang['useexpiration'] = 'Gebruik vervaldatum';
 $lang['eventdesc-NewsArticleAdded'] = 'Een tag die wordt aangeroepen als een bericht is toegevoegd.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Verzonden als een bericht is toegevoegd.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id van het bericht</li>
-<li>\&quot;category_id\&quot; - Id van de categorie van dit bericht</li>
-<li>\&quot;title\&quot; - Titel van het bericht</li>
-<li>\&quot;content\&quot; - Inhoud van het bericht</li>
-<li>\&quot;summary\&quot; - Samenvatting van het bericht</li>
-<li>\&quot;status\&quot; - Status van het bericht (&quot;draft&quot; of &quot;publish&quot; d.w.z. concept of publiceren)</li>
-<li>\&quot;start_time\&quot; - Datum vanaf dat het bericht zichtbaar moet zijn</li>
-<li>\&quot;end_time\&quot; - Datum totdat het bericht zichtbaar moet zijn</li>
-<li>\&quot;useexp\&quot; - Of de verloopdatum genegeerd moet worden of niet</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Verzonden als een bericht is toegevoegd.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id van het bericht</li>
+
+<li>\&quot;category_id\&quot; - Id van de categorie van dit bericht</li>
+
+<li>\&quot;title\&quot; - Titel van het bericht</li>
+
+<li>\&quot;content\&quot; - Inhoud van het bericht</li>
+
+<li>\&quot;summary\&quot; - Samenvatting van het bericht</li>
+
+<li>\&quot;status\&quot; - Status van het bericht (&quot;draft&quot; of &quot;publish&quot; d.w.z. concept of publiceren)</li>
+
+<li>\&quot;start_time\&quot; - Datum vanaf dat het bericht zichtbaar moet zijn</li>
+
+<li>\&quot;end_time\&quot; - Datum totdat het bericht zichtbaar moet zijn</li>
+
+<li>\&quot;useexp\&quot; - Of de verloopdatum genegeerd moet worden of niet</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Een tag die wordt aangeroepen als een bericht is bewerkt.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Verzonden als een bericht is bewerkt.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id van het bericht</li>
-<li>\&quot;category_id\&quot; - Id van de categorie van dit bericht</li>
-<li>\&quot;title\&quot; - Titel van het bericht</li>
-<li>\&quot;content\&quot; - Inhoud van het bericht</li>
-<li>\&quot;summary\&quot; - Samenvatting van het bericht</li>
-<li>\&quot;status\&quot; - Status van het bericht (&quot;draft&quot; of &quot;publish&quot;)</li>
-<li>\&quot;start_time\&quot; - Datum vanaf dat het bericht zichtbaar moet zijn</li>
-<li>\&quot;end_time\&quot; - Datum totdat het bericht zichtbaar moet zijn</li>
-<li>\&quot;useexp\&quot; - Of de verloopdatum genegeerd moet worden of niet</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Verzonden als een bericht is bewerkt.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id van het bericht</li>
+
+<li>\&quot;category_id\&quot; - Id van de categorie van dit bericht</li>
+
+<li>\&quot;title\&quot; - Titel van het bericht</li>
+
+<li>\&quot;content\&quot; - Inhoud van het bericht</li>
+
+<li>\&quot;summary\&quot; - Samenvatting van het bericht</li>
+
+<li>\&quot;status\&quot; - Status van het bericht (&quot;draft&quot; of &quot;publish&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Datum vanaf dat het bericht zichtbaar moet zijn</li>
+
+<li>\&quot;end_time\&quot; - Datum totdat het bericht zichtbaar moet zijn</li>
+
+<li>\&quot;useexp\&quot; - Of de verloopdatum genegeerd moet worden of niet</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Een tag die wordt aangeroepen als een bericht is verwijderd.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Verzonden als een bericht is verwijderd.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id van het bericht</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Verzonden als een bericht is verwijderd.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id van het bericht</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Een tag die wordt aangeroepen als een categorie is toegevoegd.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Verzonden als een categorie is toegevoegd.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id van de nieuwscategorie</li>
-<li>\&quot;name\&quot; - Naam van de nieuwscategorie</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Verzonden als een categorie is toegevoegd.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id van de nieuwscategorie</li>
+
+<li>\&quot;name\&quot; - Naam van de nieuwscategorie</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Een tag die wordt aangeroepen als een categorie is bewerkt.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Verzonden als een categorie is bewerkt.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id van de nieuwscategorie</li>
-<li>\&quot;name\&quot; - Naam van de nieuwscategorie</li>
-<li>\&quot;origname\&quot; - De originele naam van de nieuwscategorie</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Verzonden als een categorie is bewerkt.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id van de nieuwscategorie</li>
+
+<li>\&quot;name\&quot; - Naam van de nieuwscategorie</li>
+
+<li>\&quot;origname\&quot; - De originele naam van de nieuwscategorie</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Een tag die wordt aangeroepen als een categorie is verwijderd.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Verzonden als een categorie is verwijderd.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id van het bericht</li>
-<li>\&quot;name\&quot; - Naam van de verwijderde categorie</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Verzonden als een categorie is verwijderd.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id van het bericht</li>
+
+<li>\&quot;name\&quot; - Naam van de verwijderde categorie</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'Deze parameter is alleen van toepassing op het detail overzicht. Het specificeert welk nieuws artikel wordt getoond in het detail overzicht. Als de speciale waarde &#039;-1&#039; wordt  gebruikt dan zal de module het nieuwste, gepubliceerde en niet verlopen artikel tonen';
 $lang['helpnumber'] = 'Maximum aantal te tonen items -- door dit leeg te laten worden alle items getoond. Het is een synoniem voor de pagina limiet parameter.';
@@ -252,41 +303,75 @@ $lang['helpsortasc'] = 'Sorteer nieuwsberichten in oplopende volgorde in plaats 
 $lang['helpdetailpage'] = 'Pagina om het nieuwsbericht in te tonen. Dit kan een paginaalias of -id zijn. Gebruikt om het volledige artikel in een ander sjabloon te tonen dan de samenvatting.';
 $lang['helpshowarchive'] = 'Toon alleen verlopen artikelen.';
 $lang['helpbrowsecat'] = 'Toon een doorbladerbare categorielijst.';
-$lang['helpaction'] = 'Negeer de standaardtaak. Mogelijke waarden zijn:
-<ul>
-<li>&quot;detail&quot; - toon van een specifiek artikel ID de detail weergave.</li>
-<li>&quot;default&quot; - toon de samenvattingsweergave</li>
-<li>&quot;fesubmit&quot; - toon het frontend formulier om (ingelogde) gebruikers de mogelijkheid te geven om nieuwsberichten aan te leveren.</li>
-<li>&quot;browsecat&quot; - toon een overzichtslijst van categori&euml;n.</li>
+$lang['helpaction'] = 'Negeer de standaardtaak. Mogelijke waarden zijn:
+
+<ul>
+
+<li>&quot;detail&quot; - toon van een specifiek artikel ID de detail weergave.</li>
+
+<li>&quot;default&quot; - toon de samenvattingsweergave</li>
+
+<li>&quot;fesubmit&quot; - toon het frontend formulier om (ingelogde) gebruikers de mogelijkheid te geven om nieuwsberichten aan te leveren.</li>
+
+<li>&quot;browsecat&quot; - toon een overzichtslijst van categori&euml;n.</li>
+
 </ul>';
-$lang['help'] = '<h3>Belangrijke opmerkingen</h3>
-
-<p>In de versie 2.9 en hoger van de nieuws-module is de formatpostdate functie uit het sjabloon verwijderd, daarnaast wordt ook dateformat parameter niet meer gebruikt.  U zal gebruik moeten maken van de cms_date_format functie (zoals nu wordt gebruikt in de standaard sjablonen) om de datumnotificaties te wijzigen, en plaats de entry->postdate in plaats van de entry->formatpostdate in uw sjabloon.</p>
-
-<p>Deze versie van News is nieuwer dan degene die met versie 1.1 van CMSMS werd meegeleverd. Als u deze versie van News gebruikt moet u zeer voorzichtig zijn met het upgraden van CMSMS om te voorkomen dat gegevens in de modules/News map worden overschreven.</p>
-
-
-
-	<h3>Wat doet het?</h3>
-	<p>News is een module om nieuws te tonen op uw pagina, vergelijkbaar met een blog, maar met meer mogelijkheden! Als de module ge&iuml;nstalleerd is, wordt een News-beheerscherm aan het beheerpaneel toegevoegd waarmee u nieuwscategorie&euml;n kunt selecteren en aanmaken. Als een nieuwscategorie aangemaakt of geselecteerd is, worden een lijst met nieuwsberichten voor die categorie getoond. Vanuit deze lijst kunnen berichten worden gecreeerd, bewerkt of verwijderd.</p>
-	<h3>Sjabloonvariabelen</h3>
-	<ul>
-		<li><b>itemcount</b> - Het aantal nieuwsberichten om te tonen.</li>
-		<li><b>entry->authorname</b> - De volledige naam van de auteur, inclusief de voor- en achternaam.</li>
-	</ul>
-	<h3>Beveiliging</h3>
-	<p>De gebruiker moet lid zijn van een groep met groepsrecht &#039;Modify News&#039; om berichten te mogen aanmaken, bewerken of verwijderen.</p>
-	<p>Om een opmaaksjabloon te mogen bewerken moet de gebruiker lid zijn van een groep met &#039;Modify Templates&#039; rechten.</p>
-	<p>Algemene News-voorkeuren kunnen alleen door gebruikers veranderd worden die onderdeel zijn van een groep met &#039;Modify Site Preferences&#039; rechten.</p>
-	<h3>Hoe gebruik ik het?</h3>
-	<p>De eenvoudigste manier om deze module te gebruiken is de {news} tag in uw sjabloon of pagina op te nemen op die plek waar de nieuwsberichten getoond moeten worden. De code zal er dan ongeveer als volgt uitzien: <code>{news number=&#039;5&#039;}</code></p>
-<h3>Sjablonen</h3>
-	<p>Vanaf versie 2.3 ondersteunt News meerdere database-sjablonen en is de ondersteuning van extra bestandssjablonen gestaakt. Gebruikers die de oude bestandssjablonen gebruikten, moeten voor ieder sjabloon de volgende stappen doorlopen:
-<ul>
-<li>Kopieer de bestandssjabloon naar het clipboard</li>
-<li>Maak een nieuw database-sjabloon aan <em>(een samenvattings- of berichtensjabloon)</em>. Geef het nieuwe sjabloon dezelfde naam (inclusief de .tpl extensie) als de oude bestandssjabloon en plak de inhoud van het clipboard erin.</li>
-<li>Klik Versturen</li>
-</ul>
+$lang['help'] = '<h3>Belangrijke opmerkingen</h3>
+
+
+
+<p>In de versie 2.9 en hoger van de nieuws-module is de formatpostdate functie uit het sjabloon verwijderd, daarnaast wordt ook dateformat parameter niet meer gebruikt.  U zal gebruik moeten maken van de cms_date_format functie (zoals nu wordt gebruikt in de standaard sjablonen) om de datumnotificaties te wijzigen, en plaats de entry->postdate in plaats van de entry->formatpostdate in uw sjabloon.</p>
+
+
+
+<p>Deze versie van News is nieuwer dan degene die met versie 1.1 van CMSMS werd meegeleverd. Als u deze versie van News gebruikt moet u zeer voorzichtig zijn met het upgraden van CMSMS om te voorkomen dat gegevens in de modules/News map worden overschreven.</p>
+
+
+
+
+
+
+
+	<h3>Wat doet het?</h3>
+
+	<p>News is een module om nieuws te tonen op uw pagina, vergelijkbaar met een blog, maar met meer mogelijkheden! Als de module ge&iuml;nstalleerd is, wordt een News-beheerscherm aan het beheerpaneel toegevoegd waarmee u nieuwscategorie&euml;n kunt selecteren en aanmaken. Als een nieuwscategorie aangemaakt of geselecteerd is, worden een lijst met nieuwsberichten voor die categorie getoond. Vanuit deze lijst kunnen berichten worden gecreeerd, bewerkt of verwijderd.</p>
+
+	<h3>Sjabloonvariabelen</h3>
+
+	<ul>
+
+		<li><b>itemcount</b> - Het aantal nieuwsberichten om te tonen.</li>
+
+		<li><b>entry->authorname</b> - De volledige naam van de auteur, inclusief de voor- en achternaam.</li>
+
+	</ul>
+
+	<h3>Beveiliging</h3>
+
+	<p>De gebruiker moet lid zijn van een groep met groepsrecht &#039;Modify News&#039; om berichten te mogen aanmaken, bewerken of verwijderen.</p>
+
+	<p>Om een opmaaksjabloon te mogen bewerken moet de gebruiker lid zijn van een groep met &#039;Modify Templates&#039; rechten.</p>
+
+	<p>Algemene News-voorkeuren kunnen alleen door gebruikers veranderd worden die onderdeel zijn van een groep met &#039;Modify Site Preferences&#039; rechten.</p>
+
+	<h3>Hoe gebruik ik het?</h3>
+
+	<p>De eenvoudigste manier om deze module te gebruiken is de {news} tag in uw sjabloon of pagina op te nemen op die plek waar de nieuwsberichten getoond moeten worden. De code zal er dan ongeveer als volgt uitzien: <code>{news number=&#039;5&#039;}</code></p>
+
+<h3>Sjablonen</h3>
+
+	<p>Vanaf versie 2.3 ondersteunt News meerdere database-sjablonen en is de ondersteuning van extra bestandssjablonen gestaakt. Gebruikers die de oude bestandssjablonen gebruikten, moeten voor ieder sjabloon de volgende stappen doorlopen:
+
+<ul>
+
+<li>Kopieer de bestandssjabloon naar het clipboard</li>
+
+<li>Maak een nieuw database-sjabloon aan <em>(een samenvattings- of berichtensjabloon)</em>. Geef het nieuwe sjabloon dezelfde naam (inclusief de .tpl extensie) als de oude bestandssjabloon en plak de inhoud van het clipboard erin.</li>
+
+<li>Klik Versturen</li>
+
+</ul>
+
 Het uitvoeren van bovenstaande stappen moet het probleem oplossen van verdwenen nieuwssjablonen en vergelijkbare smarty-fouten als u upgrade naar een versie van CMSMS die de News-module versie 2.3 of nieuwer heeft.</p>';
 $lang['utma'] = '156861353.1335698708.1284586217.1286127363.1286137388.108';
 $lang['utmz'] = '156861353.1286137388.108.14.utmccn=(referral)|utmcsr=forum.cmsmadesimple.org|utmcct=/index.php|utmcmd=referral';

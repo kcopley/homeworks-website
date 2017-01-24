@@ -7,9 +7,9 @@
  *
  *--------------------------------------------------------------------
  * Revision History
- * v2.0.0	23 apr	2008	Jean-Sébastien Goupil	New Version Update + fix B and C
- * v1.2.3b	31 dec	2005	Jean-Sébastien Goupil	PHP5.1 compatible
- * v1.2.1	27 jun	2005	Jean-Sébastien Goupil	Font support added
+ * v2.0.0	23 apr	2008	Jean-Sï¿½bastien Goupil	New Version Update + fix B and C
+ * v1.2.3b	31 dec	2005	Jean-Sï¿½bastien Goupil	PHP5.1 compatible
+ * v1.2.1	27 jun	2005	Jean-Sï¿½bastien Goupil	Font support added
  * V1.00	17 jun	2004	Jean-Sebastien Goupil
  *--------------------------------------------------------------------
  * $Id: BCGcodabar.barcode.php,v 1.11 2009/11/09 04:08:41 jsgoupil Exp $

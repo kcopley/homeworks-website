@@ -176,66 +176,116 @@ $lang['options'] = 'Опции';
 $lang['optionsupdated'] = 'Опции были успешно обновлены.';
 $lang['useexpiration'] = 'Использовать дату окончания';
 $lang['eventdesc-NewsArticleAdded'] = 'Отправляется, когда статья добавлена.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Отправляется, когда статья добавлена.</p>
-<h4>Параметры</h4>
-<ul>
-<li>\\"news_id\\" - Id новостной статьи</li>
-<li>\\"category_id\\" - Id категории для этой статьи</li>
-<li>\\"title\\" - Заголовок статьи</li>
-<li>\\"content\\" - Content of the article</li>
-<li>\\"summary\\" - Summary of the article</li>
-<li>\\"status\\" - Status of the article ("draft" or "publish")</li>
-<li>\\"start_time\\" - Дата публикации статьи</li>
-<li>\\"end_time\\" - Дата окончания публикации статьи</li>
-<li>\\"useexp\\" - Должно ли истечение срока быть проигнорировано</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Отправляется, когда статья добавлена.</p>
+
+<h4>Параметры</h4>
+
+<ul>
+
+<li>\\"news_id\\" - Id новостной статьи</li>
+
+<li>\\"category_id\\" - Id категории для этой статьи</li>
+
+<li>\\"title\\" - Заголовок статьи</li>
+
+<li>\\"content\\" - Content of the article</li>
+
+<li>\\"summary\\" - Summary of the article</li>
+
+<li>\\"status\\" - Status of the article ("draft" or "publish")</li>
+
+<li>\\"start_time\\" - Дата публикации статьи</li>
+
+<li>\\"end_time\\" - Дата окончания публикации статьи</li>
+
+<li>\\"useexp\\" - Должно ли истечение срока быть проигнорировано</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Отправляется, когда статья отредактирована.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Отправляется, когда статья отредактирована.</p>
-<h4>Параметры</h4>
-<ul>
-<li>\\"news_id\\" - Id of the news article</li>
-<li>\\"category_id\\" - Id категории для этой статьи</li>
-<li>\\"title\\" - Заголовок статьи</li>
-<li>\\"content\\" - Содержание статьи</li>
-<li>\\"summary\\" - Резюме статьи</li>
-<li>\\"status\\" - Статус статьи ("draft" или "publish")</li>
-<li>\\"start_time\\" - Дата публикации статьи</li>
-<li>\\"end_time\\" - Дата окончания публикации статьи</li>
-<li>\\"useexp\\" - Должно ли истечение срока быть проигнорировано</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Отправляется, когда статья отредактирована.</p>
+
+<h4>Параметры</h4>
+
+<ul>
+
+<li>\\"news_id\\" - Id of the news article</li>
+
+<li>\\"category_id\\" - Id категории для этой статьи</li>
+
+<li>\\"title\\" - Заголовок статьи</li>
+
+<li>\\"content\\" - Содержание статьи</li>
+
+<li>\\"summary\\" - Резюме статьи</li>
+
+<li>\\"status\\" - Статус статьи ("draft" или "publish")</li>
+
+<li>\\"start_time\\" - Дата публикации статьи</li>
+
+<li>\\"end_time\\" - Дата окончания публикации статьи</li>
+
+<li>\\"useexp\\" - Должно ли истечение срока быть проигнорировано</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Отправляется, когда статья была удалена.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Отправляется, когда статья была удалена.</p>
-<h4>Параметры</h4>
-<ul>
-<li>\\"news_id\\" - Id новостной статьи</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Отправляется, когда статья была удалена.</p>
+
+<h4>Параметры</h4>
+
+<ul>
+
+<li>\\"news_id\\" - Id новостной статьи</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Отправляется, когда категория добавлена.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Отправляется, когда категория была добавлена.</p>
-<h4>Параметры</h4>
-<ul>
-<li>\\"category_id\\" - Id новостной категории</li>
-<li>\\"name\\" - Имя новостной категории</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Отправляется, когда категория была добавлена.</p>
+
+<h4>Параметры</h4>
+
+<ul>
+
+<li>\\"category_id\\" - Id новостной категории</li>
+
+<li>\\"name\\" - Имя новостной категории</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Отправляется, когда категория отредактирована.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Отправляется, когда категория отредактирована.</p>
-<h4>Параметры</h4>
-<ul>
-<li>\\"category_id\\" - IId новостной категории</li>
-<li>\\"name\\" - Имя новостной категории</li>
-<li>\\"origname\\" - Исходное  имя новостной категории</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Отправляется, когда категория отредактирована.</p>
+
+<h4>Параметры</h4>
+
+<ul>
+
+<li>\\"category_id\\" - IId новостной категории</li>
+
+<li>\\"name\\" - Имя новостной категории</li>
+
+<li>\\"origname\\" - Исходное  имя новостной категории</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Отправляется, когда категория удалена.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Отправлется, когда категория удалена.</p>
-<h4>Параметры</h4>
-<ul>
-<li>\\"category_id\\" - Id удаленной категории </li>
-<li>\\"name\\" - Имя удаленной категории</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Отправлется, когда категория удалена.</p>
+
+<h4>Параметры</h4>
+
+<ul>
+
+<li>\\"category_id\\" - Id удаленной категории </li>
+
+<li>\\"name\\" - Имя удаленной категории</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'Этот параметр применяется только для подробного просмотра. Это позволяет указать, какие статьи новостей на дисплее в режиме "подробно". Если специальное значение -1 используется, то система будет показывать новейшую опубликованную, не истекшую статью.';
 $lang['helpnumber'] = 'Максимальное число отображаемых элементов =- в случае незаполнения будет показывать все объекты.';
@@ -252,35 +302,64 @@ $lang['helpdetailpage'] = 'Страница для отображения пол
 $lang['helpshowarchive'] = 'Показывать только статьи с истекшим сроком.';
 $lang['helpbrowsecat'] = 'Показывает список категорий.';
 $lang['helpaction'] = 'Отменяет действие значения по умолчанию. Возможные значения - \'default\', чтобы отобразить резюме, и \'fesubmit\', чтобы отобразить форму внешнего интерфейса для того, чтобы позволить пользователям представлять статьи новостей из фронтенда.';
-$lang['help'] = '<h3>Important Notes</h3>
-<p>Version 2.9 and greater of News has removed the formatpostdate member from the templates, and has also removed the dateformat parameter.  You should be using the cms_date_format modifier (as indicated in the default templates) to format dates, and should be using entry->postdate instead of entry->formatpostdate in your templates.</p>
-<h3>What does this do?</h3>
-<p>News is a module for displaying news events on your page, similar to a blog style, except with more features!.  When the module is installed, a News admin page is added to administration menu that will allow you to select or add a news category.  Once a news category is created or selected, a list of news items for that category will be displayed.  From here, you can add, edit or delete news items for that category.</p>
-<h4>Numerous display methods</h4>
-<p>The parameters supported by the news module, and support for numerous templates of each time mean that your options for displaying news articles are limitless.</p>
-<h4>Custom Fields</h4>
-<p>The News module allows defining numerous custom fields (including files and images) that will allow you to attach pdf files or numerous images to your articles.</p>
-        <h4>Categories</h4>
-	<p>News supplies a hierarchical category mechanism for organizing your articles.  A news article can only be in one place in the hierarchy.</p>
-        <h4>RSS Feeds</h4>
-        <p>News supports generating simple rss feeds from your news articles, so that your visitors can always be up to date with what is happening on your site.</p>
-	<h4>Expiry and Status</h4>
-	<p>Each news article can have an optional expiry date, after which it will not be shown on your web page.  As well, articles can be marked as <em>draft</em> to remove them permanently from your web page.</p>
-	<h3>Security</h3>
-	<p>The user must belong to a group with the \'Modify News\' permission in order to add or edit News entries.</p>
-        <p>As well, In order to delete news entries, the user must belong to a group with the \'Delete News Articles\' permission.</p>
-	<p>In order to edit the layout templates, the user must belong to a group with the \'Modify Templates\' permission.</p>
-	<p>In order to edit the global news preferences, the user must belong to a group with the \'Modify Site Preferences\' permission.</p>
-	<p>Additionally, to approve news for frontend display the user must belong to a group with the \'Approve News\' permission.</p>
-	<h3>How do I use it?</h3>
-	<p>The easiest way to use it is with the {news} wrapper tag (wraps the module in a tag, to simplify the syntax).  This will insert the module into your template or page anywhere you wish, and display news items.  The code would look something like: <code>{news number=\'5\'}</code></p>
-<h3>Templates</h3>
-<p>Since version 2.3 News supports multiple database templates, and no longer supports additional file templates.  Users who used the old file template system should follow these steps (for each file template):</p>
-<ul>
-<li>Copy the file template into the clipboard</li>
-<li>Create a new database template <em>(either summary or detailed as required)</em>.  Give the new template the same name (including the .tpl extension) as the old file template, and paste the contents.</li>
-<li>Hit Submit</li>
-</ul>
+$lang['help'] = '<h3>Important Notes</h3>
+
+<p>Version 2.9 and greater of News has removed the formatpostdate member from the templates, and has also removed the dateformat parameter.  You should be using the cms_date_format modifier (as indicated in the default templates) to format dates, and should be using entry->postdate instead of entry->formatpostdate in your templates.</p>
+
+<h3>What does this do?</h3>
+
+<p>News is a module for displaying news events on your page, similar to a blog style, except with more features!.  When the module is installed, a News admin page is added to administration menu that will allow you to select or add a news category.  Once a news category is created or selected, a list of news items for that category will be displayed.  From here, you can add, edit or delete news items for that category.</p>
+
+<h4>Numerous display methods</h4>
+
+<p>The parameters supported by the news module, and support for numerous templates of each time mean that your options for displaying news articles are limitless.</p>
+
+<h4>Custom Fields</h4>
+
+<p>The News module allows defining numerous custom fields (including files and images) that will allow you to attach pdf files or numerous images to your articles.</p>
+
+        <h4>Categories</h4>
+
+	<p>News supplies a hierarchical category mechanism for organizing your articles.  A news article can only be in one place in the hierarchy.</p>
+
+        <h4>RSS Feeds</h4>
+
+        <p>News supports generating simple rss feeds from your news articles, so that your visitors can always be up to date with what is happening on your site.</p>
+
+	<h4>Expiry and Status</h4>
+
+	<p>Each news article can have an optional expiry date, after which it will not be shown on your web page.  As well, articles can be marked as <em>draft</em> to remove them permanently from your web page.</p>
+
+	<h3>Security</h3>
+
+	<p>The user must belong to a group with the \'Modify News\' permission in order to add or edit News entries.</p>
+
+        <p>As well, In order to delete news entries, the user must belong to a group with the \'Delete News Articles\' permission.</p>
+
+	<p>In order to edit the layout templates, the user must belong to a group with the \'Modify Templates\' permission.</p>
+
+	<p>In order to edit the global news preferences, the user must belong to a group with the \'Modify Site Preferences\' permission.</p>
+
+	<p>Additionally, to approve news for frontend display the user must belong to a group with the \'Approve News\' permission.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>The easiest way to use it is with the {news} wrapper tag (wraps the module in a tag, to simplify the syntax).  This will insert the module into your template or page anywhere you wish, and display news items.  The code would look something like: <code>{news number=\'5\'}</code></p>
+
+<h3>Templates</h3>
+
+<p>Since version 2.3 News supports multiple database templates, and no longer supports additional file templates.  Users who used the old file template system should follow these steps (for each file template):</p>
+
+<ul>
+
+<li>Copy the file template into the clipboard</li>
+
+<li>Create a new database template <em>(either summary or detailed as required)</em>.  Give the new template the same name (including the .tpl extension) as the old file template, and paste the contents.</li>
+
+<li>Hit Submit</li>
+
+</ul>
+
 <p>Following these steps should solve the problem of your news templates not being found and other similar smarty errors when you upgrade to a version of CMS that has News 2.3 or greater.</p>';
 $lang['qca'] = 'P0-1938388883-1277855813144';
 $lang['utma'] = '156861353.429593658.1277855813.1286806205.1286814378.25';

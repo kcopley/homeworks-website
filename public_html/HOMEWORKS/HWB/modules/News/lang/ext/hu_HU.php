@@ -166,62 +166,108 @@ $lang['options'] = 'Opci&oacute;k';
 $lang['optionsupdated'] = 'Az opci&oacute;kat sikeresen friss&iacute;tett&uuml;k.';
 $lang['useexpiration'] = 'Lej&aacute;rati d&aacute;tum haszn&aacute;lata';
 $lang['eventdesc-NewsArticleAdded'] = 'Akkor k&uuml;ldj&uuml;k, amikor &uacute;j cikk j&ouml;n l&eacute;tre.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-<li>\&quot;category_id\&quot; - Id of the category for this article</li>
-<li>\&quot;title\&quot; - Title of the article</li>
-<li>\&quot;content\&quot; - Content of the article</li>
-<li>\&quot;summary\&quot; - Summary of the article</li>
-<li>\&quot;status\&quot; - Status of the article (\&quot;draft\&quot; or \&quot;publish\&quot;)</li>
-<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
-<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+<li>\&quot;category_id\&quot; - Id of the category for this article</li>
+
+<li>\&quot;title\&quot; - Title of the article</li>
+
+<li>\&quot;content\&quot; - Content of the article</li>
+
+<li>\&quot;summary\&quot; - Summary of the article</li>
+
+<li>\&quot;status\&quot; - Status of the article (\&quot;draft\&quot; or \&quot;publish\&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
+
+<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Akkor k&uuml;ldj&uuml;k, amikor egy cikk megv&aacute;ltozik.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-<li>\&quot;category_id\&quot; - Id of the category for this article</li>
-<li>\&quot;title\&quot; - Title of the article</li>
-<li>\&quot;content\&quot; - Content of the article</li>
-<li>\&quot;summary\&quot; - Summary of the article</li>
-<li>\&quot;status\&quot; - Status of the article (\&quot;draft\&quot; or \&quot;publish\&quot;)</li>
-<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
-<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+<li>\&quot;category_id\&quot; - Id of the category for this article</li>
+
+<li>\&quot;title\&quot; - Title of the article</li>
+
+<li>\&quot;content\&quot; - Content of the article</li>
+
+<li>\&quot;summary\&quot; - Summary of the article</li>
+
+<li>\&quot;status\&quot; - Status of the article (\&quot;draft\&quot; or \&quot;publish\&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
+
+<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Akkor k&uuml;ldj&uuml;k, amikor egy cikket t&ouml;r&ouml;lnek.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Akkor k&uuml;ldj&uuml;k, amikor egy rovatot felvesznek.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news categpry</li>
-<li>\&quot;name\&quot; - Name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news categpry</li>
+
+<li>\&quot;name\&quot; - Name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Akkor k&uuml;ldj&uuml;k, amikor egy rovatot m&oacute;dos&iacute;tanak.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news categpry</li>
-<li>\&quot;name\&quot; - Name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news categpry</li>
+
+<li>\&quot;name\&quot; - Name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Akkor k&uuml;ldj&uuml;k, amikor egy rovatot t&ouml;r&ouml;lnek.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news categpry</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news categpry</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'Ez a param&eacute;ter csak a r&eacute;szletes n&eacute;zetben &eacute;rtelmezett. Megadhat&oacute; vele, hogy melyik cikk legyen l&aacute;that&oacute; a r&eacute;szletes n&eacute;zetben. Ha -1-et adsz meg, akkor a rendszer a legfrissebb, nem lej&aacute;rt, publik&aacute;lt st&aacute;tusz&uacute; cikket fogja megjelen&iacute;teni.';
 $lang['helpnumber'] = 'A maxim&aacute;lisan megjelen&iacute;thető elemek sz&aacute;ma -- ha nem adod meg, minden elem meg lesz mutatva';
@@ -238,13 +284,20 @@ $lang['helpdetailpage'] = 'Az oldal, ahol a cikkeknek meg kell jelenni&uuml;k. E
 $lang['helpshowarchive'] = 'Csak lej&aacute;rt cikkek mutat&aacute;sa.';
 $lang['helpbrowsecat'] = 'Rovatok b&ouml;ng&eacute;sz&eacute;se.';
 $lang['helpaction'] = 'Override the default action.  Possible values are &#039;default&#039; to display the summary view, and &#039;fesubmit&#039; to display the frontend form for allowing users to submit news articles on the front end.';
-$lang['help'] = '	<h3>What does this do?</h3>
-	<p>News is a module for displaying news events on your page, similar to a blog style, except with more features!.  When the module is installed, a News admin page is added to administration menu that will allow you to select or add a news category.  Once a news category is created or selected, a list of news items for that category will be displayed.  From here, you can add, edit or delete news items for that category.</p>
-	<h3>Security</h3>
-	<p>The user must belong to a group with the \&#039;Modify News\&#039; permission in order to add, edit, or delete News entries.</p>
-	<p>In order to edit the layout templates, the user must belong to a group with the \&#039;Modify Templates\&#039; permission.</p>
-	<p>In order to edit the global news preferences, the user must belong to a group with the \&#039;Modify Site Preferences\&#039; permission.</p>
-	<h3>How do I use it?</h3>
+$lang['help'] = '	<h3>What does this do?</h3>
+
+	<p>News is a module for displaying news events on your page, similar to a blog style, except with more features!.  When the module is installed, a News admin page is added to administration menu that will allow you to select or add a news category.  Once a news category is created or selected, a list of news items for that category will be displayed.  From here, you can add, edit or delete news items for that category.</p>
+
+	<h3>Security</h3>
+
+	<p>The user must belong to a group with the \&#039;Modify News\&#039; permission in order to add, edit, or delete News entries.</p>
+
+	<p>In order to edit the layout templates, the user must belong to a group with the \&#039;Modify Templates\&#039; permission.</p>
+
+	<p>In order to edit the global news preferences, the user must belong to a group with the \&#039;Modify Site Preferences\&#039; permission.</p>
+
+	<h3>How do I use it?</h3>
+
 	<p>The easiest way to use it is in conjunction with the cms_module tag.  This will insert the module into your template or page anywhere you wish, and display news items.  The code would look something like: <code>{cms_module module=\&quot;news\&quot; number=\&quot;5\&quot; category=\&quot;beer\&quot;}</code></p>';
 $lang['utma'] = '156861353.1533605959.1224742544.1241169959.1241177481.17';
 $lang['utmz'] = '156861353.1239430985.12.4.utmcsr=themes.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php';

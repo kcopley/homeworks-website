@@ -1,6 +1,7 @@
 <?php
 $lang['friendlyname'] = 'Printare';
-$lang['description'] = 'Acest modul este o cale usor customizabila de a furniza afisare de pagini pregatite de printare pentru CMSms.
+$lang['description'] = 'Acest modul este o cale usor customizabila de a furniza afisare de pagini pregatite de printare pentru CMSms.
+
 Alternativ un fisier PDF foarte simplu cu continutul principal poate fi creat on-the-fly.';
 $lang['postinstall'] = 'Modulul a fost instalat cu succes';
 $lang['confirmuninstall'] = 'Sunteti sigur ca modulul ar trebui dezinstalat?';
@@ -20,7 +21,8 @@ $lang['pdfsettings'] = 'Setari PDF';
 $lang['pdfsettingssaved'] = 'Setarile pentru PDF au fost salvate';
 $lang['pdfheader'] = 'Header PDF';
 $lang['pdfenable'] = 'Activare generare PDF';
-$lang['pdfenablehelp'] = 'Ar trebui sa stiti ca generarea de PDF este foarte rudimentara, scotand numai continutul de baza.
+$lang['pdfenablehelp'] = 'Ar trebui sa stiti ca generarea de PDF este foarte rudimentara, scotand numai continutul de baza.
+
 Folositi-l, dar nu va plangeti de calitatea rezultatelor.';
 $lang['headerfontsize'] = 'Dimensiune font header';
 $lang['contentfontsize'] = 'Dimensiune font continut';
@@ -53,25 +55,44 @@ $lang['help_class_img'] = 'Clasa elementului <img> daca showbutton este setat';
 $lang['help_more'] = 'Plasare optiuni suplimentare in interiorul linkului <a>';
 $lang['help_onlyurl'] = 'Afiseaza numai url-ul, nu un link complet';
 $lang['help_includetemplate'] = 'Daca este setata &#039;adevarat&#039; aceasta optiune face ca printarea/pdf-ul sa proceseze intregul template, nu numai continutul principal. Acest lucru probabil presupune un pic de lucru la stiluri specifice pentru printare cu mediatype &#039;print&#039; activat.';
-$lang['help'] = '<b>Ce face acest modul?</b>
-<br/>
-Va permite sai inserati un link in pagini/template-uri care directioneaza vizitatorul catre o varianta a paginii mai potrivita pentru printare. Poate trimite de asemenea catre o versiune PDF a paginii generata on-the-fly.
-<br/>
-Luati nota ca daca parametrul <i>includetemplate=true</i> nu este folosit, numai partea de continut principal al paginii va fi afisat. De asemenea versiunea PDF ar putea sa nu aiba mari asemanari cu pagina dumneavoastra, dar ar trebui sa contina continutul.
-<br/><br/>
-<b>Cum se foloseste?</b>
-<br/>
-La modul simplu instalati modulul, accesati interfata lui de administrare si vedeti/editati template-ul pentru link si pagina printabila.
-<br/>
-In contiutul paginii sau in template inserati codul pentru modul astfel:
-<pre>
-{cms_module module=&#039;printing&#039; <i>params</i>}
-</pre>
-sau
-<pre>
-{print <i>params</i>}
-</pre>
-<br/>
+$lang['help'] = '<b>Ce face acest modul?</b>
+
+<br/>
+
+Va permite sai inserati un link in pagini/template-uri care directioneaza vizitatorul catre o varianta a paginii mai potrivita pentru printare. Poate trimite de asemenea catre o versiune PDF a paginii generata on-the-fly.
+
+<br/>
+
+Luati nota ca daca parametrul <i>includetemplate=true</i> nu este folosit, numai partea de continut principal al paginii va fi afisat. De asemenea versiunea PDF ar putea sa nu aiba mari asemanari cu pagina dumneavoastra, dar ar trebui sa contina continutul.
+
+<br/><br/>
+
+<b>Cum se foloseste?</b>
+
+<br/>
+
+La modul simplu instalati modulul, accesati interfata lui de administrare si vedeti/editati template-ul pentru link si pagina printabila.
+
+<br/>
+
+In contiutul paginii sau in template inserati codul pentru modul astfel:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>params</i>}
+
+</pre>
+
+sau
+
+<pre>
+
+{print <i>params</i>}
+
+</pre>
+
+<br/>
+
 ';
 $lang['utmc'] = '156861353';
 $lang['utma'] = '156861353.3573843717708992500.1250056267.1250512405.1250517093.12';

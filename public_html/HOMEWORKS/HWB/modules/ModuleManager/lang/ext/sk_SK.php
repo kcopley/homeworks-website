@@ -90,48 +90,89 @@ $lang['back_to_module_manager'] = '&laquo; n&aacute;vrat do spr&aacute;vcu modul
 $lang['error'] = 'Chyba!';
 $lang['admindescription'] = 'N&aacute;stroj pre vyhľad&aacute;vanie a in&scaron;talovanie modulov cez vzdialen&yacute; server.';
 $lang['accessdenied'] = 'Pr&iacute;stup zamietnut&yacute;. Pros&iacute;m skontrolujte svoje pr&aacute;va.';
-$lang['changelog'] = '<ul>
-<li>Version 1.0. 10 January 2006. Initial Release.</li>
-<li>Version 1.1. July, 2006. Released with the 1.0- beta</li>
-<li>Version 1.1.1 August, 2006.  Require 1.0.1 of nuSOAP</li>
-<li>Version 1.1.2 September, 2006.  Fixed a mistake that resulted in upgrade not not working at all</li>
-<li>Version 1.1.3 September, 2006.
-  <ul>
-  <li>Bumped minimum CMS Version to 1.0</li>
-  <li>Now use 1 request to get the complete list of modules from the repository</li>
-  <li>Added some missing lang strings</li>
-  <li>Added the ability to reset the local cache of repository information</li>
-  <li>Added the ability to restore the repository url to factory defaults</li>
-  </ul>
-</li>
-<li>Version 1.1.4 February, 2007.  Now handles the safe mode check, and disables upgrading or installing modules if the permissions are wrong.</li>
-<li>Version 1.1.5 September, 2007. New preference to make only latest module version show. Added nice message after saving preferences</li>
-</li>
-<li>Version 1.1.6 May, 2008. Now show if available modules are incompatible with the current CMS_VERSION.</li>
-</li>
-<li>Version 1.2 June, 2008.<br/>
-This version should reduce the memory requirements of this module, and trade it off for performance on the server, and mroe requests to the server.
-   <ul>
-    <li>Bumped Minimum CMS Version to 1.3</li>
-    <li>Bumped Minimum repository version to 1.1</li>
-    <li>Get rid of all of the session stuff</li>
-    <li>Add support for requesting modules beginning with a prefix (usually a single letter)</li>
-    <li>Add support for requestion only the newest versions of the modules</li>
-   </ul>
-</li>
-<li>Version 1.2.1 August, 2008.<br/>
-Added a warning message to the top of the admin display.
-</li>
+$lang['changelog'] = '<ul>
+
+<li>Version 1.0. 10 January 2006. Initial Release.</li>
+
+<li>Version 1.1. July, 2006. Released with the 1.0- beta</li>
+
+<li>Version 1.1.1 August, 2006.  Require 1.0.1 of nuSOAP</li>
+
+<li>Version 1.1.2 September, 2006.  Fixed a mistake that resulted in upgrade not not working at all</li>
+
+<li>Version 1.1.3 September, 2006.
+
+  <ul>
+
+  <li>Bumped minimum CMS Version to 1.0</li>
+
+  <li>Now use 1 request to get the complete list of modules from the repository</li>
+
+  <li>Added some missing lang strings</li>
+
+  <li>Added the ability to reset the local cache of repository information</li>
+
+  <li>Added the ability to restore the repository url to factory defaults</li>
+
+  </ul>
+
+</li>
+
+<li>Version 1.1.4 February, 2007.  Now handles the safe mode check, and disables upgrading or installing modules if the permissions are wrong.</li>
+
+<li>Version 1.1.5 September, 2007. New preference to make only latest module version show. Added nice message after saving preferences</li>
+
+</li>
+
+<li>Version 1.1.6 May, 2008. Now show if available modules are incompatible with the current CMS_VERSION.</li>
+
+</li>
+
+<li>Version 1.2 June, 2008.<br/>
+
+This version should reduce the memory requirements of this module, and trade it off for performance on the server, and mroe requests to the server.
+
+   <ul>
+
+    <li>Bumped Minimum CMS Version to 1.3</li>
+
+    <li>Bumped Minimum repository version to 1.1</li>
+
+    <li>Get rid of all of the session stuff</li>
+
+    <li>Add support for requesting modules beginning with a prefix (usually a single letter)</li>
+
+    <li>Add support for requestion only the newest versions of the modules</li>
+
+   </ul>
+
+</li>
+
+<li>Version 1.2.1 August, 2008.<br/>
+
+Added a warning message to the top of the admin display.
+
+</li>
+
 </ul>';
-$lang['help'] = '<h3>What Does This Do?</h3>
-<p>A client for the ModuleRepository, this module allows previewing, and installing modules from remote sites without the need for ftping, or unzipping archives.  Module XML files are downloaded using SOAP, integrity verified, and then expanded automatically.</p>
-<h3>How Do I Use It</h3>
-<p>In order to use this module, you will need the &#039;Modify Modules&#039; permission, and you will also need the complete, and full URL to a &#039;Module Repository&#039; installation.  You can specify this url in the &#039;Site Admin&#039; --> &#039;Global Settings&#039; page.</p><br/>
-<p>You can find the interface for this module under the &#039;Extensions&#039; menu.  When you select this module, the &#039;Module Repository&#039; installation will automatically be queried for a list of it&#039;s available xml modules.  This list will be cross referenced with the list of currently installed modules, and a summary page displayed.  From here, you can view the descriptive information, the help, and the about information for a module without physically installing it.  You can also choose to upgrade or install modules.</p>
-<h3>Support</h3>
-<p>As per the GPL, this software is provided as-is. Please read the text of the license for the full disclaimer.</p>
-<h3>Copyright and License</h3>
-<p>Copyright &copy; 2006, calguy1000 <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. All Rights Are Reserved.</p>
+$lang['help'] = '<h3>What Does This Do?</h3>
+
+<p>A client for the ModuleRepository, this module allows previewing, and installing modules from remote sites without the need for ftping, or unzipping archives.  Module XML files are downloaded using SOAP, integrity verified, and then expanded automatically.</p>
+
+<h3>How Do I Use It</h3>
+
+<p>In order to use this module, you will need the &#039;Modify Modules&#039; permission, and you will also need the complete, and full URL to a &#039;Module Repository&#039; installation.  You can specify this url in the &#039;Site Admin&#039; --> &#039;Global Settings&#039; page.</p><br/>
+
+<p>You can find the interface for this module under the &#039;Extensions&#039; menu.  When you select this module, the &#039;Module Repository&#039; installation will automatically be queried for a list of it&#039;s available xml modules.  This list will be cross referenced with the list of currently installed modules, and a summary page displayed.  From here, you can view the descriptive information, the help, and the about information for a module without physically installing it.  You can also choose to upgrade or install modules.</p>
+
+<h3>Support</h3>
+
+<p>As per the GPL, this software is provided as-is. Please read the text of the license for the full disclaimer.</p>
+
+<h3>Copyright and License</h3>
+
+<p>Copyright &copy; 2006, calguy1000 <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. All Rights Are Reserved.</p>
+
 <p>This module has been released under the <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a>. You must agree to this license before using the module.</p>';
 $lang['utma'] = '156861353.1423109725.1280259016.1283883395.1284147995.32';
 $lang['utmz'] = '156861353.1284147995.32.30.utmcsr=dev.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/project/files/873';

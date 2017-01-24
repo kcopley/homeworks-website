@@ -3,7 +3,7 @@
 +								  +
 +   Project URL: http://dev.cmsmadesimple.org/projects/tinymce	  +
 +								  +
-+	  Written: Tapio Löytty <tapsa@blackmilk.fi>		  +
++	  Written: Tapio Lï¿½ytty <tapsa@blackmilk.fi>		  +
 +=================================================================+
 
 Introduction:

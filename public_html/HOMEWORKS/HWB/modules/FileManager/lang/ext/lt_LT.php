@@ -40,7 +40,8 @@ $lang['and'] = 'ir';
 $lang['confirmsingledelete'] = 'Ar jūs tikras tuo?';
 $lang['confirmsingledirdelete'] = 'Ar jūs tikrai norite i&scaron;trinti direktoriją?';
 $lang['dirtreedeletesuccess'] = 'Direktorija su visu turiniu i&scaron;trinta.';
-$lang['dirtreedeletefail'] = 'Klaida trinant direktoriją. Bet turinys gali būt trinamas.
+$lang['dirtreedeletefail'] = 'Klaida trinant direktoriją. Bet turinys gali būt trinamas.
+
 ';
 $lang['singlefiledeletesuccess'] = 'Byla sėkmingai i&scaron;trinta';
 $lang['filedeletesuccess'] = 'sėkmingai i&scaron;trinta';
@@ -84,7 +85,8 @@ $lang['dirchmodfailmulti'] = 'Changing permissions on the directory failed, some
 $lang['dirchmodsuccessmulti'] = 'Changing permissions on the directory and it&#039;s content was successful';
 $lang['dirchmodsuccess'] = 'Direktorija sėkmingai gavo naujus leidimus';
 $lang['dirchmodfailure'] = 'Direktorijos leidimų pakeitimas nepavyko';
-$lang['dirnotemptyconfirm'] = '&Scaron;i direktorija nėra tu&scaron;čia. Ar jūs tikrai norite i&scaron;trinti ją su visu turiniu?
+$lang['dirnotemptyconfirm'] = '&Scaron;i direktorija nėra tu&scaron;čia. Ar jūs tikrai norite i&scaron;trinti ją su visu turiniu?
+
 ';
 $lang['dirtreedeletecancelled'] = 'Direktorijos trinymas at&scaron;auktas';
 $lang['imsure'] = 'A&scaron; tikras';
@@ -126,9 +128,12 @@ $lang['showhiddenfileshelp'] = 'Efektyvu tik pažangesnėj būsenoj';
 $lang['showhiddenfiles'] = 'Rodyti paslėptas bylas';
 $lang['settingsconfirmsingledelete'] = 'Patvirtinti trynimą vienos bylos?';
 $lang['settingssaved'] = 'Nustatymai i&scaron;saugoti';
-$lang['help'] = '		<h3>What does this do?</h3>
-		<p>This module provides file management functions, eventually and hopefully replacing the rather aged builtin file management</p>
-		<h3>How do I use it?</h3>
+$lang['help'] = '		<h3>What does this do?</h3>
+
+		<p>This module provides file management functions, eventually and hopefully replacing the rather aged builtin file management</p>
+
+		<h3>How do I use it?</h3>
+
 		<p>Select it from the content-menu from in the admin. While the old filemanager is still in there you should select the one furthest down in the menu.</p>';
 $lang['utmz'] = '156861353.1250297380.1752.42.utmccn=(referral)|utmcsr=helminsen.no|utmcct=/install/upgrade.php|utmcmd=referral';
 $lang['utma'] = '156861353.179052623084110100.1210423577.1259353230.1259355475.2152';

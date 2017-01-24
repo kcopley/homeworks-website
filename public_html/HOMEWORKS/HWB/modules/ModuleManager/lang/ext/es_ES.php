@@ -65,27 +65,47 @@ $lang['moddescription'] = 'Un cliente para el M&oacute;dulo Repositorio, este m&
 $lang['error'] = '&iexcl;Error!';
 $lang['admindescription'] = 'Una herramienta para instalar m&oacute;dulos desde servidores remotos.';
 $lang['accessdenied'] = 'Acceso Denegado. revisa tus permisos.';
-$lang['changelog'] = '<ul>
-<li>Version 1.0. 10 January 2006. Initial Release.</li>
-<li>Version 1.1. July, 2006. Released with the 1.0- beta</li>
-<li>Version 1.1.1 August, 2006.  Require 1.0.1 of nuSOAP</li>
+$lang['changelog'] = '<ul>
+
+<li>Version 1.0. 10 January 2006. Initial Release.</li>
+
+<li>Version 1.1. July, 2006. Released with the 1.0- beta</li>
+
+<li>Version 1.1.1 August, 2006.  Require 1.0.1 of nuSOAP</li>
+
 </ul>';
-$lang['help'] = '<h3>&iquest;Que Hace Esto?</h3>
-<p>Es un cliente para el Repositorio de M&oacute;dulos, este m&oacute;dulo permite efectuar una vista previa y la instalaci&oacute;n desde sitios remotos sin la necesidad de hacer ftp, o descomprimir archivos.  Los archivos XML de los m&oacute;dulos son descargados usando SOAP, se verifica su integridad, y luego se expanden autom&aacute;ticamente.</p>
-<h3>Como lo Puedo Usar</h3>
-<p>Con la finalidad de usar este m&oacute;dulo, usted necesitar&aacute; poseer el permiso &#039;Modificar M&oacute;dulos&#039;, y adem&aacute;s va a necesitar el URL completo y preciso de un &#039;Repositorio de M&oacute;dulos&#039; y de esa forma efectuar las instalaciones.  Usted puede especificar este url en la p&aacute;gina &#039;Admin del Sitio&#039; --> &#039;Configuraci&oacute;n Global&#039;.</p><br/>
-<p>Usted puede encontrar la interfase de este m&oacute;dulo bajo el men&uacute; &#039;Extensiones&#039;.  Cuando usted selecciona este m&oacute;dulo, la instalaci&oacute;n del &#039;M&oacute;dulo Repositorio&#039; ser&aacute; requerida autom&aacute;ticamente desde una lista de m&oacute;dulos xml disponibles.  Esta lista ser&aacute; cruzada con referencia a la lista de m&oacute;dulos que actualmente est&aacute;n instalados, y se mostrar&aacute; una p&aacute;gina resumiendo la situaci&oacute;n.  Desde aqu&iacute;, usted podr&aacute; ver la informaci&oacute;n descriptiva, la ayuda, y la informaci&oacute;n con respecto al m&oacute;dulo sin instalarlo f&iacute;sicamente.  Usted va a poder incluso decidir si actualiza o instala al m&oacute;dulo.</p>
-<h3>Soporte</h3>
-<p>Este m&oacute;dulo no incluye soporte comercial. Sin embargo, tiene disponibles un sin n&uacute;mero de recursos disponibles para ayudarlo con &eacute;l:</p>
-<ul>
-<li>Por la versi&oacute;n &uacute;ltima de este m&oacute;dulo, FAQs, para presentar un archivo de Informe de Bug o comprar soporte comercial, por favor visite el sitio web del m&oacute;dulo en <a href="http://dev.cmsmadesimple.org">dev.cmsmadesimple.org</a>.</li>
-<li>Adem&aacute;s el intercambio de ideas respecto a este m&oacute;dulo se puede realizar yendo al <a href="http://forum.cmsmadesimple.org">Foro de CMS Made Simple</a>.</li>
-<li>El autor, calguy1000, con frecuencia puede encontrarlo en el <a href="irc://irc.freenode.net/#cms">CMS IRC Channel</a>.</li>
-<li>Finalmente, puede tener alg&uacute;n &eacute;xito enviando un email al autor en forma directa.</li>  
-</ul>
-<p>De acuerdo con la GPL, este software se provee como es. Por favor lea el texto de la licencia por completo para conocer sus afirmaciones.</p>
-<h3>Copyright y Licencia</h3>
-<p>Copyright &copy; 2006, Robert Campbell <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. Todos los Derechos Reservados.</p>
+$lang['help'] = '<h3>&iquest;Que Hace Esto?</h3>
+
+<p>Es un cliente para el Repositorio de M&oacute;dulos, este m&oacute;dulo permite efectuar una vista previa y la instalaci&oacute;n desde sitios remotos sin la necesidad de hacer ftp, o descomprimir archivos.  Los archivos XML de los m&oacute;dulos son descargados usando SOAP, se verifica su integridad, y luego se expanden autom&aacute;ticamente.</p>
+
+<h3>Como lo Puedo Usar</h3>
+
+<p>Con la finalidad de usar este m&oacute;dulo, usted necesitar&aacute; poseer el permiso &#039;Modificar M&oacute;dulos&#039;, y adem&aacute;s va a necesitar el URL completo y preciso de un &#039;Repositorio de M&oacute;dulos&#039; y de esa forma efectuar las instalaciones.  Usted puede especificar este url en la p&aacute;gina &#039;Admin del Sitio&#039; --> &#039;Configuraci&oacute;n Global&#039;.</p><br/>
+
+<p>Usted puede encontrar la interfase de este m&oacute;dulo bajo el men&uacute; &#039;Extensiones&#039;.  Cuando usted selecciona este m&oacute;dulo, la instalaci&oacute;n del &#039;M&oacute;dulo Repositorio&#039; ser&aacute; requerida autom&aacute;ticamente desde una lista de m&oacute;dulos xml disponibles.  Esta lista ser&aacute; cruzada con referencia a la lista de m&oacute;dulos que actualmente est&aacute;n instalados, y se mostrar&aacute; una p&aacute;gina resumiendo la situaci&oacute;n.  Desde aqu&iacute;, usted podr&aacute; ver la informaci&oacute;n descriptiva, la ayuda, y la informaci&oacute;n con respecto al m&oacute;dulo sin instalarlo f&iacute;sicamente.  Usted va a poder incluso decidir si actualiza o instala al m&oacute;dulo.</p>
+
+<h3>Soporte</h3>
+
+<p>Este m&oacute;dulo no incluye soporte comercial. Sin embargo, tiene disponibles un sin n&uacute;mero de recursos disponibles para ayudarlo con &eacute;l:</p>
+
+<ul>
+
+<li>Por la versi&oacute;n &uacute;ltima de este m&oacute;dulo, FAQs, para presentar un archivo de Informe de Bug o comprar soporte comercial, por favor visite el sitio web del m&oacute;dulo en <a href="http://dev.cmsmadesimple.org">dev.cmsmadesimple.org</a>.</li>
+
+<li>Adem&aacute;s el intercambio de ideas respecto a este m&oacute;dulo se puede realizar yendo al <a href="http://forum.cmsmadesimple.org">Foro de CMS Made Simple</a>.</li>
+
+<li>El autor, calguy1000, con frecuencia puede encontrarlo en el <a href="irc://irc.freenode.net/#cms">CMS IRC Channel</a>.</li>
+
+<li>Finalmente, puede tener alg&uacute;n &eacute;xito enviando un email al autor en forma directa.</li>  
+
+</ul>
+
+<p>De acuerdo con la GPL, este software se provee como es. Por favor lea el texto de la licencia por completo para conocer sus afirmaciones.</p>
+
+<h3>Copyright y Licencia</h3>
+
+<p>Copyright &copy; 2006, Robert Campbell <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. Todos los Derechos Reservados.</p>
+
 <p>Este m&oacute;dulo se ha realizado bajo la <a href="http://www.gnu.org/licenses/licenses.html#GPL">Licencia P&uacute;blica GNU</a>. Usted debe estar de acuerdo con la licencia antes de usar el m&oacute;dulo.</p>';
 $lang['utma'] = '156861353.661434885.1227567621.1241554232.1242674634.67';
 $lang['utmz'] = '156861353.1241473702.63.28.utmccn=(referral)|utmcsr=forum.cmsmadesimple.org|utmcct=/index.php/board,30.0.html|utmcmd=referral';

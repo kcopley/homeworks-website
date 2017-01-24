@@ -78,7 +78,8 @@ $lang['datetimeformat_help'] = 'Kliknite tukaj za pomoč o tem, kako oblikovati 
 $lang['extraconfigtext'] = 'Ekstra namestitev';
 $lang['extraconfighelp2'] = 'Eno izjavo na liniji, vejice bodo dodane pred in po tej vsebini. Preverite TinyMCE-wiki za navodila.';
 $lang['customdropdowntext'] = 'Prikrojen dropdown';
-$lang['customdropdownhelp'] = 'Vstavi prikrojene dele kode/besedila z izbiro v dropdown meniju.
+$lang['customdropdownhelp'] = 'Vstavi prikrojene dele kode/besedila z izbiro v dropdown meniju.
+
 Očitne uporabe so preprost dostop do tag-ov in tako dalje. Meni se vstavi v vrstici s &#039;customdropdown&#039;.';
 $lang['startenabledtext'] = 'Zagon omogočen';
 $lang['startenabledhelp'] = 'Izločenje požene Tiny-editor v onemogočeno stanje. Je treba uporabiti skupaj s preklopnim gumbom.';
@@ -106,11 +107,16 @@ $lang['ignoremodifyfileshelp'] = 'Opozorilo! To omogoča spreminjanje datotek, t
 $lang['showtogglebutton_text'] = 'Pokaži polje wysiwyg Vklopi/Izklopi';
 $lang['togglewysiwyg'] = 'Vklopi/izklopi vizualni urejevalnik';
 $lang['styles_tab'] = 'CSS Stili';
-$lang['styles_help'] = '  If you leave the field empty, TinyMCE will parse your CSS file and list the class styles contained in it to the user. 
-  If you want only some styles presented to the user, specify them in the form &quot;CustomName1=style1; CustomName2=style2&quot;, 
-  &quot;style1&quot; being a class call in your stylesheet and you don&#039;t put the . 
-  normally used for class calls as it is already in your CSS, it will look like this <span class=&quot;style1&quot;>text</span>, 
-  in the first field below. 
+$lang['styles_help'] = '  If you leave the field empty, TinyMCE will parse your CSS file and list the class styles contained in it to the user. 
+
+  If you want only some styles presented to the user, specify them in the form &quot;CustomName1=style1; CustomName2=style2&quot;, 
+
+  &quot;style1&quot; being a class call in your stylesheet and you don&#039;t put the . 
+
+  normally used for class calls as it is already in your CSS, it will look like this <span class=&quot;style1&quot;>text</span>, 
+
+  in the first field below. 
+
 ';
 $lang['css_styles_text'] = 'Stili';
 $lang['accessdenied'] = 'Dostop zavrnjen. Prosimo, preverite dovoljenja.';
@@ -171,21 +177,36 @@ $lang['thousanddelimiter'] = ',';
 $lang['size'] = 'Velikost';
 $lang['dimensions'] = '&Scaron;xV';
 $lang['advanced_tab'] = 'Napredno';
-$lang['help'] = '	<h3>What does this do?</h3>
-	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
-	<h3>How do I use it?</h3>
-	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
-	<h3>Troubleshooting</h3>
-	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
-	things you can try before contacting me for further support.
-	<br/>
-	<ul>
-	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You&#039;d be amazed how many times this has helped people.</li>
-	<li>2. Try to switch on the Static Config option. Note that this requires your /tmp/-dir to be writable by the webserver</li>
-	<li>3. If upgrading, please try to reset all settings. Not nice if you&#039;ve done a lot of customization, I know, but a lot of things changes from 2.3.x to 2.4.x series of the module.
-	</ul>
-	<br/>
-		
+$lang['help'] = '	<h3>What does this do?</h3>
+
+	<p>Enables a TinyMCE to be used as a WYSIWYG.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>Install it, then go to User Preferences and Set TinyMCE to be your wysiwyg of choice.</p>
+
+	<h3>Troubleshooting</h3>
+
+	Some people have trouble with tiny not showing up upon installation or upgrading. Here is a checklist of 
+
+	things you can try before contacting me for further support.
+
+	<br/>
+
+	<ul>
+
+	<li>1. Please, please, try to reupload the modules/TinyMCE dir to your server. You&#039;d be amazed how many times this has helped people.</li>
+
+	<li>2. Try to switch on the Static Config option. Note that this requires your /tmp/-dir to be writable by the webserver</li>
+
+	<li>3. If upgrading, please try to reset all settings. Not nice if you&#039;ve done a lot of customization, I know, but a lot of things changes from 2.3.x to 2.4.x series of the module.
+
+	</ul>
+
+	<br/>
+
+		
+
 ';
 $lang['qca'] = 'P0-1458450664-1284573084918';
 $lang['utmz'] = '156861353.1288689800.326.28.utmcsr=forum.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/index.php';

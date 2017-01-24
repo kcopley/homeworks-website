@@ -121,9 +121,12 @@ $lang['showhiddenfileshelp'] = 'Only effective with advanced mode on';
 $lang['showhiddenfiles'] = 'Show hidden files';
 $lang['settingsconfirmsingledelete'] = 'Confirm deletion of a single file?';
 $lang['settingssaved'] = 'Settings saved';
-$lang['help'] = '		<h3>What does this do?</h3>
-		<p>This module provides file management functions</p>
-		<h3>How do I use it?</h3>
+$lang['help'] = '		<h3>What does this do?</h3>
+
+		<p>This module provides file management functions</p>
+
+		<h3>How do I use it?</h3>
+
 		<p>Select it from the content-menu from in the admin. </p>';
 $lang['utmz'] = '156861353.1228186412.3.3.utmccn=(referral)|utmcsr=localhost|utmcct=/alccm/admin/moduleinterface.php|utmcmd=referral';
 $lang['utma'] = '156861353.1141998637.1228091253.1228186412.1229058939.4';

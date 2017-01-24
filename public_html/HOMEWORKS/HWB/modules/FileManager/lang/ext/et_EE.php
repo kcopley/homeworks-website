@@ -123,9 +123,12 @@ $lang['showhiddenfileshelp'] = 'Ainult effektiivne t&auml;iustatud režiimiga';
 $lang['showhiddenfiles'] = 'N&auml;ita peidetud faile';
 $lang['settingsconfirmsingledelete'] = 'Kinnita &uuml;ksiku faili kustutamine?';
 $lang['settingssaved'] = 'Seaded salvestatud';
-$lang['help'] = '		<h3>What does this do?</h3>
-		<p>This module provides file management functions</p>
-		<h3>How do I use it?</h3>
+$lang['help'] = '		<h3>What does this do?</h3>
+
+		<p>This module provides file management functions</p>
+
+		<h3>How do I use it?</h3>
+
 		<p>Select it from the content-menu from in the admin. </p>';
 $lang['utma'] = '156861353.3215545266732019000.1241091787.1253831573.1253864083.129';
 $lang['utmz'] = '156861353.1253816342.127.26.utmccn=(referral)|utmcsr=klaarpuhastus.ee|utmcct=/admin/moduleinterface.php|utmcmd=referral';

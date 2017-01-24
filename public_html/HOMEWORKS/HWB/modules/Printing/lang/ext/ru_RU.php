@@ -53,34 +53,62 @@ $lang['help_class_img'] = 'Класс <img> тега, если установл�
 $lang['help_more'] = 'Поместите дополнительные опции в <a> ссылки';
 $lang['help_onlyurl'] = 'Ожидается только url, а не полная ссылка';
 $lang['help_includetemplate'] = 'Если установлено значение "true", то для печати, а также вывода в PDF будет использоваться весь шаблон, а не только содержание страницы. Вероятно, вам потребуется доработка стилей для печати.';
-$lang['help'] = '<b>What does this module do?</b>
-<br/>
-This allow you to insert a link in pages/templates which directs the 
-visitor to a version of the page better suited for printing. Several parameters can be set so make the link and
-printer friendly page look just as you\'d like. As of version 0.2.0, a parameter can be set to onthefly-generation of a PDF-file instead.
-<br/>
-For now the module only supports "plain" content pages, no module-redirections etc. But neither does the builtin printing-functionality in CMSms.
-<br/>
-Please note that the module currently only outputs the main content, not alternate content blocks defined in the templates.
-
-<br/><br/>
-<b>How do I use this module?</b>
-<br/>
-Basically you install the module, access it\'s administration interface and review/change the templates for the
-link and for the printable page
-<br/>
-In you page content or template you then insert something like:
-<pre>
-{cms_module module=\'printing\' <i>params</i>}
-</pre>
-and a link should emerge on your pages. 
-<br/><br/>
-<b>Notes:</b>
-<br/>
-<ul>
-<li>PDF Generation is experimental at this time.</li>
-<li>PDF Generation may not work on servers with php 4.x, it is recommended you encourage your host to upgrade to php5 if you want PDF support.</li>
-</ul>
+$lang['help'] = '<b>What does this module do?</b>
+
+<br/>
+
+This allow you to insert a link in pages/templates which directs the 
+
+visitor to a version of the page better suited for printing. Several parameters can be set so make the link and
+
+printer friendly page look just as you\'d like. As of version 0.2.0, a parameter can be set to onthefly-generation of a PDF-file instead.
+
+<br/>
+
+For now the module only supports "plain" content pages, no module-redirections etc. But neither does the builtin printing-functionality in CMSms.
+
+<br/>
+
+Please note that the module currently only outputs the main content, not alternate content blocks defined in the templates.
+
+
+
+<br/><br/>
+
+<b>How do I use this module?</b>
+
+<br/>
+
+Basically you install the module, access it\'s administration interface and review/change the templates for the
+
+link and for the printable page
+
+<br/>
+
+In you page content or template you then insert something like:
+
+<pre>
+
+{cms_module module=\'printing\' <i>params</i>}
+
+</pre>
+
+and a link should emerge on your pages. 
+
+<br/><br/>
+
+<b>Notes:</b>
+
+<br/>
+
+<ul>
+
+<li>PDF Generation is experimental at this time.</li>
+
+<li>PDF Generation may not work on servers with php 4.x, it is recommended you encourage your host to upgrade to php5 if you want PDF support.</li>
+
+</ul>
+
 ';
 $lang['utma'] = '156861353.3831803396166608400.1236078336.1242483093.1242487978.79';
 $lang['utmz'] = '156861353.1242036083.77.58.utmccn=(referral)|utmcsr=forum.cmsmadesimple.org|utmcct=/index.php|utmcmd=referral';

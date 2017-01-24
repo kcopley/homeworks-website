@@ -124,11 +124,16 @@ $lang['showhiddenfileshelp'] = 'S&oacute; &eacute; eficaz com o modo avan&ccedil
 $lang['showhiddenfiles'] = 'Mostrar arquivos ocultos';
 $lang['settingsconfirmsingledelete'] = 'Confirma a elimina&ccedil;&atilde;o de um &uacute;nico arquivo?';
 $lang['settingssaved'] = 'Configura&ccedil;&otilde;es salvas';
-$lang['help'] = '		<h3>What does this do?</h3>
-		<p>This module provides file management functions</p>
-		<h3>How do I use it?</h3>
-		<p>Select it from the content-menu from in the admin. </p>
-<h3>Tradu&ccedil;&atilde;o Portuguesa</h3>
+$lang['help'] = '		<h3>What does this do?</h3>
+
+		<p>This module provides file management functions</p>
+
+		<h3>How do I use it?</h3>
+
+		<p>Select it from the content-menu from in the admin. </p>
+
+<h3>Tradu&ccedil;&atilde;o Portuguesa</h3>
+
 		<p>Nuno costa <nuno.mfcosta@sapo.pt></p>';
 $lang['utma'] = '156861353.1237943808.1260371543.1269303018.1269308063.80';
 $lang['utmz'] = '156861353.1269224531.76.37.utmcsr=dev.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/';

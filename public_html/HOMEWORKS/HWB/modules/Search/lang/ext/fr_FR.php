@@ -44,48 +44,85 @@ $lang['eventdesc-SearchCompleted'] = 'Envoy&eacute; quand une recherche est term
 $lang['eventdesc-SearchItemAdded'] = 'Envoy&eacute; quand un nouvel objet est index&eacute;';
 $lang['eventdesc-SearchItemDeleted'] = 'Envoy&eacute; quand un objet est supprim&eacute; de l&#039;index';
 $lang['eventdesc-SearchAllItemsDeleted'] = 'Envoy&eacute; quand tous les objets sont supprim&eacute;s de l&#039;index';
-$lang['eventhelp-SearchInitiated'] = '<p>Envoy&eacute; quand une recherche est d&eacute;but&eacute;e</p>
-<h4>Param&egrave;tres</h4>
-<ol>
-<li>Texte qui &eacute;tait recherch&eacute;</li>
-</ol>
+$lang['eventhelp-SearchInitiated'] = '<p>Envoy&eacute; quand une recherche est d&eacute;but&eacute;e</p>
+
+<h4>Param&egrave;tres</h4>
+
+<ol>
+
+<li>Texte qui &eacute;tait recherch&eacute;</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchCompleted'] = '<p>Envoy&eacute; quand une recherche est termin&eacute;e</p>
-<h4>Param&egrave;tres</h4>
-<ol>
-<li>Texte qui &eacute;tait recherch&eacute;</li>
-<li>Tableau des r&eacute;sultats complets</li>
-</ol>
+$lang['eventhelp-SearchCompleted'] = '<p>Envoy&eacute; quand une recherche est termin&eacute;e</p>
+
+<h4>Param&egrave;tres</h4>
+
+<ol>
+
+<li>Texte qui &eacute;tait recherch&eacute;</li>
+
+<li>Tableau des r&eacute;sultats complets</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemAdded'] = '<p>Envoy&eacute; quand un nouvel objet est index&eacute;</p>
-<h4>Param&egrave;tres</h4>
-<ol>
-<li>Nom du module.</li>
-<li>Id de l&#039;objet.</li>
-<li>Attribut additionnel.</li>
-<li>Contenu &agrave; indexer et ajouter.</li>
-</ol>
+$lang['eventhelp-SearchItemAdded'] = '<p>Envoy&eacute; quand un nouvel objet est index&eacute;</p>
+
+<h4>Param&egrave;tres</h4>
+
+<ol>
+
+<li>Nom du module.</li>
+
+<li>Id de l&#039;objet.</li>
+
+<li>Attribut additionnel.</li>
+
+<li>Contenu &agrave; indexer et ajouter.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchItemDeleted'] = '<p>Envoy&eacute; quand un objet est supprim&eacute; de l&#039;index</p>
-<h4>Param&egrave;tres</h4>
-<ol>
-<li>Nom du module.</li>
-<li>Id de l&#039;objet.</li>
-<li>Attribut additionnel.</li>
-</ol>
+$lang['eventhelp-SearchItemDeleted'] = '<p>Envoy&eacute; quand un objet est supprim&eacute; de l&#039;index</p>
+
+<h4>Param&egrave;tres</h4>
+
+<ol>
+
+<li>Nom du module.</li>
+
+<li>Id de l&#039;objet.</li>
+
+<li>Attribut additionnel.</li>
+
+</ol>
+
 ';
-$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Envoy&eacute; quand tous les objets sont supprim&eacute;s de l&#039;index</p>
-<h4>Param&egrave;tres</h4>
-<ul>
-<li>Aucun</li>
-</ul>
+$lang['eventhelp-SearchAllItemsDeleted'] = '<p>Envoy&eacute; quand tous les objets sont supprim&eacute;s de l&#039;index</p>
+
+<h4>Param&egrave;tres</h4>
+
+<ul>
+
+<li>Aucun</li>
+
+</ul>
+
 ';
-$lang['help'] = '	<h3>Que fait ce module&nbsp;?</h3>
-	<p>Le module de recherche (Search) permet d&#039;effectuer des recherches dans le contenu du &quot;noyau&quot; du site, ainsi que dans certains modules enregistr&eacute;s. Vous donnez un ou deux mots et le module vous renvoie les r&eacute;sultats correspondants et pertinents.</p>
-	<h3>Comment l&#039;utiliser&nbsp;?</h3>
-	<p>La fa&ccedil;on la plus simple est d&#039;utiliser la balise {search}. Ceci est une balise wrapper (qui englobe le module dans une balise pour en simplifier la syntaxe). Ceci va ins&eacute;rer le module dans votre gabarit ou votre page &agrave; l&#039;endroit d&eacute;sir&eacute;, et afficher le formulaire de recherche. Le code ressemble &agrave; ceci&nbsp;: <code>{search}</code></p>
-<h4>Comment emp&ecirc;cher certains contenus d&#039;&ecirc;tre index&eacute;s</h4>
-<p>Le module Recherche (Search) ne cherchera pas dans les page inactives. Cependant, &agrave; l&#039;occasion, si vous utilisez le module CustomContent, ou d&#039;autres logiques Smarty pour afficher des contenus diff&eacute;rents &agrave; diff&eacute;rents utilisateurs, il est conseill&eacute; d&#039;emp&ecirc;cher l&#039;indexation de toute la page, m&ecirc;me si elle est active. Pour cela, ajoutez la balise suivante n&#039;importe o&ugrave; dans la page <em>&amp;lt;!-- pageAttribute: NotSearchable --&amp;gt;</em>. Quand le module de recherche verra ce code dans la page, il n&#039;indexera rien de ce qui se trouve sur cette page.</p>
+$lang['help'] = '	<h3>Que fait ce module&nbsp;?</h3>
+
+	<p>Le module de recherche (Search) permet d&#039;effectuer des recherches dans le contenu du &quot;noyau&quot; du site, ainsi que dans certains modules enregistr&eacute;s. Vous donnez un ou deux mots et le module vous renvoie les r&eacute;sultats correspondants et pertinents.</p>
+
+	<h3>Comment l&#039;utiliser&nbsp;?</h3>
+
+	<p>La fa&ccedil;on la plus simple est d&#039;utiliser la balise {search}. Ceci est une balise wrapper (qui englobe le module dans une balise pour en simplifier la syntaxe). Ceci va ins&eacute;rer le module dans votre gabarit ou votre page &agrave; l&#039;endroit d&eacute;sir&eacute;, et afficher le formulaire de recherche. Le code ressemble &agrave; ceci&nbsp;: <code>{search}</code></p>
+
+<h4>Comment emp&ecirc;cher certains contenus d&#039;&ecirc;tre index&eacute;s</h4>
+
+<p>Le module Recherche (Search) ne cherchera pas dans les page inactives. Cependant, &agrave; l&#039;occasion, si vous utilisez le module CustomContent, ou d&#039;autres logiques Smarty pour afficher des contenus diff&eacute;rents &agrave; diff&eacute;rents utilisateurs, il est conseill&eacute; d&#039;emp&ecirc;cher l&#039;indexation de toute la page, m&ecirc;me si elle est active. Pour cela, ajoutez la balise suivante n&#039;importe o&ugrave; dans la page <em>&amp;lt;!-- pageAttribute: NotSearchable --&amp;gt;</em>. Quand le module de recherche verra ce code dans la page, il n&#039;indexera rien de ce qui se trouve sur cette page.</p>
+
 <p>La balise <em><!-- pageAttribute: NotSearchable --></em> peut &eacute;galement &ecirc;tre plac&eacute;e dans un gabarit. Si c&#039;est le cas, aucune des pages utilisant ce gabarit ne sera index&eacute;e.  Ces pages seront r&eacute;index&eacute;es si la balise est supprim&eacute;e.</p>';
 $lang['utma'] = '156861353.1670852478.1280407408.1280407408.1280407408.1';
 $lang['utmc'] = '156861353';

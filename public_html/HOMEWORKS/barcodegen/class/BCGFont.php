@@ -7,9 +7,9 @@
  *
  *--------------------------------------------------------------------
  * Revision History
- * v2.0.0	23 apr	2008	Jean-Sébastien Goupil	New Version Update
- * v1.2.3	6  feb	2006	Jean-Sébastien Goupil	Correct getWidth()
- * v1.2.3b	30 dec	2005	Jean-Sébastien Goupil	Add getUnderBaseline()
+ * v2.0.0	23 apr	2008	Jean-Sï¿½bastien Goupil	New Version Update
+ * v1.2.3	6  feb	2006	Jean-Sï¿½bastien Goupil	Correct getWidth()
+ * v1.2.3b	30 dec	2005	Jean-Sï¿½bastien Goupil	Add getUnderBaseline()
  * V1.2.1	27 jun	2005	Jean-Sebastien Goupil	New
  *--------------------------------------------------------------------
  * $Id: BCGFont.php,v 1.7 2009/11/09 04:08:41 jsgoupil Exp $

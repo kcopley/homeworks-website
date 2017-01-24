@@ -65,48 +65,89 @@ $lang['moddescription'] = 'Klient pro ModuleRepository, tento modul umožňuje n
 $lang['error'] = 'Chyba!';
 $lang['admindescription'] = 'N&aacute;stroj pro stahov&aacute;n&iacute; a instalov&aacute;n&iacute; modulů ze vzd&aacute;len&yacute;ch serverů.';
 $lang['accessdenied'] = 'Př&iacute;stup zak&aacute;z&aacute;n. Ověřte pros&iacute;m sv&aacute; opr&aacute;vněn&iacute;.';
-$lang['changelog'] = '<ul>
-<li>Version 1.0. 10 January 2006. Initial Release.</li>
-<li>Version 1.1. July, 2006. Released with the 1.0- beta</li>
-<li>Version 1.1.1 August, 2006.  Require 1.0.1 of nuSOAP</li>
-<li>Version 1.1.2 September, 2006.  Fixed a mistake that resulted in upgrade not not working at all</li>
-<li>Version 1.1.3 September, 2006.
-  <ul>
-  <li>Bumped minimum CMS Version to 1.0</li>
-  <li>Now use 1 request to get the complete list of modules from the repository</li>
-  <li>Added some missing lang strings</li>
-  <li>Added the ability to reset the local cache of repository information</li>
-  <li>Added the ability to restore the repository url to factory defaults</li>
-  </ul>
-</li>
-<li>Version 1.1.4 February, 2007.  Now handles the safe mode check, and disables upgrading or installing modules if the permissions are wrong.</li>
-<li>Version 1.1.5 September, 2007. New preference to make only latest module version show. Added nice message after saving preferences</li>
-</li>
-<li>Version 1.1.6 May, 2008. Now show if available modules are incompatible with the current CMS_VERSION.</li>
-</li>
-<li>Version 1.2 June, 2008.<br/>
-This version should reduce the memory requirements of this module, and trade it off for performance on the server, and mroe requests to the server.
-   <ul>
-    <li>Bumped Minimum CMS Version to 1.3</li>
-    <li>Bumped Minimum repository version to 1.1</li>
-    <li>Get rid of all of the session stuff</li>
-    <li>Add support for requesting modules beginning with a prefix (usually a single letter)</li>
-    <li>Add support for requestion only the newest versions of the modules</li>
-   </ul>
-</li>
-<li>Version 1.2.1 August, 2008.<br/>
-Added a warning message to the top of the admin display.
-</li>
+$lang['changelog'] = '<ul>
+
+<li>Version 1.0. 10 January 2006. Initial Release.</li>
+
+<li>Version 1.1. July, 2006. Released with the 1.0- beta</li>
+
+<li>Version 1.1.1 August, 2006.  Require 1.0.1 of nuSOAP</li>
+
+<li>Version 1.1.2 September, 2006.  Fixed a mistake that resulted in upgrade not not working at all</li>
+
+<li>Version 1.1.3 September, 2006.
+
+  <ul>
+
+  <li>Bumped minimum CMS Version to 1.0</li>
+
+  <li>Now use 1 request to get the complete list of modules from the repository</li>
+
+  <li>Added some missing lang strings</li>
+
+  <li>Added the ability to reset the local cache of repository information</li>
+
+  <li>Added the ability to restore the repository url to factory defaults</li>
+
+  </ul>
+
+</li>
+
+<li>Version 1.1.4 February, 2007.  Now handles the safe mode check, and disables upgrading or installing modules if the permissions are wrong.</li>
+
+<li>Version 1.1.5 September, 2007. New preference to make only latest module version show. Added nice message after saving preferences</li>
+
+</li>
+
+<li>Version 1.1.6 May, 2008. Now show if available modules are incompatible with the current CMS_VERSION.</li>
+
+</li>
+
+<li>Version 1.2 June, 2008.<br/>
+
+This version should reduce the memory requirements of this module, and trade it off for performance on the server, and mroe requests to the server.
+
+   <ul>
+
+    <li>Bumped Minimum CMS Version to 1.3</li>
+
+    <li>Bumped Minimum repository version to 1.1</li>
+
+    <li>Get rid of all of the session stuff</li>
+
+    <li>Add support for requesting modules beginning with a prefix (usually a single letter)</li>
+
+    <li>Add support for requestion only the newest versions of the modules</li>
+
+   </ul>
+
+</li>
+
+<li>Version 1.2.1 August, 2008.<br/>
+
+Added a warning message to the top of the admin display.
+
+</li>
+
 </ul>';
-$lang['help'] = '<h3>Co děl&aacute; tento modul?</h3>
-<p>Klient pro ModuleRepository, tento modul dovoluje n&aacute;hled a instalaci modulů ze vzd&aacute;len&yacute;ch str&aacute;nek bez potřeby stahov&aacute;n&iacute; z ftp a rozbalov&aacute;n&iacute;.  XML soubory modulu jsou stahov&aacute;ny pomoc&iacute; SOAP, je zkontrolov&aacute;na integrita a pot&eacute; jsou automaticky rozbaleny.</p>
-<h3>Jak se použ&iacute;v&aacute;</h3>
-<p>Pro použ&iacute;v&aacute;n&iacute; tohoto modulu potřebujete &#039;Modify Modules&#039; opr&aacute;vněn&iacute; a tak&eacute; kompletn&iacute; a plnou cestu URL do &#039;Module Repository&#039;.  Tato cesta lze zadat na str&aacute;nce &#039;Administrace&#039; --> &#039;Glob&aacute;ln&iacute; nastaven&iacute;&#039; .</p><br/>
-<p>Rozhran&iacute; pro tento modul naleznete v menu &#039;Roz&scaron;&iacute;řen&iacute;&#039;.  Při v&yacute;běru tohoto modulu, &#039;Module Repository&#039; instalace automaticky st&aacute;hne seznam dostupn&yacute;ch xml modulů.  Tento seznam je porovn&aacute;n s aktu&aacute;lně instalovan&yacute;mi moduly a zobrazena v&yacute;sledn&aacute; str&aacute;nka.  Zde uvid&iacute;te popis, n&aacute;povědu a informace o modulu bez jeho fyzick&eacute; instalace.  Lze tak&eacute; vybrat aktualizace nebo instalace modulů.</p>
-<h3>Podpora</h3>
-<p>Tento program je dod&aacute;v&aacute;n jak je, dle licence GPL. Pro pln&eacute; odvol&aacute;n&iacute; čtěte pros&iacute;m text licence.</p>
-<h3>Copyright a Licence</h3>
-<p>Copyright &copy; 2006, calguy1000 <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. All Rights Are Reserved.</p>
+$lang['help'] = '<h3>Co děl&aacute; tento modul?</h3>
+
+<p>Klient pro ModuleRepository, tento modul dovoluje n&aacute;hled a instalaci modulů ze vzd&aacute;len&yacute;ch str&aacute;nek bez potřeby stahov&aacute;n&iacute; z ftp a rozbalov&aacute;n&iacute;.  XML soubory modulu jsou stahov&aacute;ny pomoc&iacute; SOAP, je zkontrolov&aacute;na integrita a pot&eacute; jsou automaticky rozbaleny.</p>
+
+<h3>Jak se použ&iacute;v&aacute;</h3>
+
+<p>Pro použ&iacute;v&aacute;n&iacute; tohoto modulu potřebujete &#039;Modify Modules&#039; opr&aacute;vněn&iacute; a tak&eacute; kompletn&iacute; a plnou cestu URL do &#039;Module Repository&#039;.  Tato cesta lze zadat na str&aacute;nce &#039;Administrace&#039; --> &#039;Glob&aacute;ln&iacute; nastaven&iacute;&#039; .</p><br/>
+
+<p>Rozhran&iacute; pro tento modul naleznete v menu &#039;Roz&scaron;&iacute;řen&iacute;&#039;.  Při v&yacute;běru tohoto modulu, &#039;Module Repository&#039; instalace automaticky st&aacute;hne seznam dostupn&yacute;ch xml modulů.  Tento seznam je porovn&aacute;n s aktu&aacute;lně instalovan&yacute;mi moduly a zobrazena v&yacute;sledn&aacute; str&aacute;nka.  Zde uvid&iacute;te popis, n&aacute;povědu a informace o modulu bez jeho fyzick&eacute; instalace.  Lze tak&eacute; vybrat aktualizace nebo instalace modulů.</p>
+
+<h3>Podpora</h3>
+
+<p>Tento program je dod&aacute;v&aacute;n jak je, dle licence GPL. Pro pln&eacute; odvol&aacute;n&iacute; čtěte pros&iacute;m text licence.</p>
+
+<h3>Copyright a Licence</h3>
+
+<p>Copyright &copy; 2006, calguy1000 <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. All Rights Are Reserved.</p>
+
 <p>Tento modul byl vyd&aacute;n pod <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a>. Mus&iacute;te souhlasit s touto licenc&iacute; před použit&iacute;m modulu.</p>';
 $lang['utma'] = '156861353.3769824904990279700.1249913289.1249913289.1249913289.1';
 $lang['utmb'] = '156861353.1.10.1249913289';

@@ -19,7 +19,8 @@ $lang['pdfsettings'] = 'PDF-Einstellungen';
 $lang['pdfsettingssaved'] = 'Die PDF-Einstellungen wurden gespeichert';
 $lang['pdfheader'] = 'PDF-&Uuml;berschrift';
 $lang['pdfenable'] = 'PDF-Erzeugung aktivieren';
-$lang['pdfenablehelp'] = 'Sie sollten wissen, dass nur die Erzeugung von einfachen PDF-Dokumenten unterst&uuml;tzt wird und nur die Inhalte des Content ausgegeben werden.
+$lang['pdfenablehelp'] = 'Sie sollten wissen, dass nur die Erzeugung von einfachen PDF-Dokumenten unterst&uuml;tzt wird und nur die Inhalte des Content ausgegeben werden.
+
 Benutzen Sie dies, wenn Sie es m&ouml;chten, aber bitte beantstanden Sie dann nicht die Qualit&auml;t des Ergebnisses.';
 $lang['headerfontsize'] = 'Schriftgr&ouml;&szlig;e der &Uuml;berschrift';
 $lang['contentfontsize'] = 'Schriftgr&ouml;&szlig;e des Inhalts';
@@ -52,20 +53,34 @@ $lang['help_class_img'] = 'Name der Klasse des <img>-Tags (falls der Parameter s
 $lang['help_more'] = 'Hier k&ouml;nnen zus&auml;tzliche Parameter f&uuml;r den Link (a) angegeben werden';
 $lang['help_onlyurl'] = 'Es wird nur die URL ausgegeben, nicht der komplette Link';
 $lang['help_includetemplate'] = 'Wenn Sie diese Option auf &#039;true&#039; setzen, wird das gesamte Template verarbeitet, nicht nur der Haupt-Content. Dies erfordert eventuell einige spezielle druckerspezifische Stylesheets mit dem Medientyp &#039;print&#039;.';
-$lang['help'] = '<h3>Was macht dieses Modul?</h3>
-
-<p>Dieses Modul f&uuml;gt einen Link in die Seiten/Templates ein, der Ihren Besucher auf eine speziell f&uuml;r den Ausdruck vorbereitete Seite weiterleitet. Au&szlig;erdem kann auch ein Link auf eine live erstellte PDF-Datei erzeugt werden.</p>
-
-<p>Bitte beachten Sie jedoch, dass das Modul aktuell nur den Haupt-Content-Block ausgeben kann. Die Ausgabe von weiteren Content-Bl&ouml;cken oder Modulinhalten wird erst in einer sp&auml;teren Version implementiert.</p>
-
-<h3>Wie wird es eingesetzt?</h3>
-
-<p>Nach der Installation des Moduls k&ouml;nnen Sie sich &uuml;ber die Modul-Administration im Men&uuml; &#039;Inhalte&#039; die Templates f&uuml;r die Links und den Druck der Seite ansehen und &auml;ndern.</p>
-
-<p>In der Seite oder dem Template m&uuml;ssen Sie dann nur noch folgendes einf&uuml;gen:</p>
-<pre>
-{cms_module module=&#039;printing&#039; <i>parameter</i>}
-</pre>
+$lang['help'] = '<h3>Was macht dieses Modul?</h3>
+
+
+
+<p>Dieses Modul f&uuml;gt einen Link in die Seiten/Templates ein, der Ihren Besucher auf eine speziell f&uuml;r den Ausdruck vorbereitete Seite weiterleitet. Au&szlig;erdem kann auch ein Link auf eine live erstellte PDF-Datei erzeugt werden.</p>
+
+
+
+<p>Bitte beachten Sie jedoch, dass das Modul aktuell nur den Haupt-Content-Block ausgeben kann. Die Ausgabe von weiteren Content-Bl&ouml;cken oder Modulinhalten wird erst in einer sp&auml;teren Version implementiert.</p>
+
+
+
+<h3>Wie wird es eingesetzt?</h3>
+
+
+
+<p>Nach der Installation des Moduls k&ouml;nnen Sie sich &uuml;ber die Modul-Administration im Men&uuml; &#039;Inhalte&#039; die Templates f&uuml;r die Links und den Druck der Seite ansehen und &auml;ndern.</p>
+
+
+
+<p>In der Seite oder dem Template m&uuml;ssen Sie dann nur noch folgendes einf&uuml;gen:</p>
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>parameter</i>}
+
+</pre>
+
 <p>und Ihren Seiten wird ein Link zum Drucken der Seiten hinzugef&uuml;gt.</p>';
 $lang['qca'] = 'P0-617342851-1252404665837';
 $lang['utma'] = '156861353.343462282.1252405474.1252405474.1252408135.2';

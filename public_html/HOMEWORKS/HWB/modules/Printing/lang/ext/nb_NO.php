@@ -1,6 +1,7 @@
 <?php
 $lang['friendlyname'] = 'Utskriftvennlige Sider';
-$lang['description'] = 'Denne modulen er en lett tilpassbar m&aring;te &aring; tilby utskriftvennlige sider til CMSMS. 
+$lang['description'] = 'Denne modulen er en lett tilpassbar m&aring;te &aring; tilby utskriftvennlige sider til CMSMS. 
+
 Eller alternativt s&aring; kan veldig enkle PDF-filer med sidens hovedinnhold lages p&aring; direkten.';
 $lang['postinstall'] = 'Modulen ble vellykket installert';
 $lang['confirmuninstall'] = 'Er du sikker p&aring; at modulen skal avinnstalleres?';
@@ -22,7 +23,8 @@ $lang['pdfsettings'] = 'PDF innstillinger';
 $lang['pdfsettingssaved'] = 'PDF innstillingene ble lagret';
 $lang['pdfheader'] = 'PDF Hode(header)';
 $lang['pdfenable'] = 'Tillat PDF-generering';
-$lang['pdfenablehelp'] = 'Du b&oslash;r vite at PDF-generasjonen er sv&aelig;rt element&aelig;r og kun tar ut det mest grunnleggende innholdet.
+$lang['pdfenablehelp'] = 'Du b&oslash;r vite at PDF-generasjonen er sv&aelig;rt element&aelig;r og kun tar ut det mest grunnleggende innholdet.
+
 Bruk fritt, men vennligst ikke klag om kvaliteten p&aring; resultatet.';
 $lang['headerfontsize'] = 'Hode skriftst&oslash;rrelse';
 $lang['contentfontsize'] = 'Innhold skriftst&oslash;rrelse';
@@ -55,25 +57,44 @@ $lang['help_class_img'] = 'Class attributt for < img > tag dersom showbutton er 
 $lang['help_more'] = 'Plasser tilleggsinformasjon i < a > lenken';
 $lang['help_onlyurl'] = 'Skriver bare ut url&#039;en, ikke en fullstendig lenke';
 $lang['help_includetemplate'] = 'Hvis satt til &quot;true&quot; vil dette alternativet gj&oslash;re at utskrift/pdf prosesserer hele malen, ikke bare hovedinnholdet. Dette krever en del arbeid p&aring; print-spesifikke stiler med mediatype &#039;print&#039; aktivert.';
-$lang['help'] = '<b>Hva gj&oslash;r denne modulen?</b>
-<br/>
-Dette tillater deg &aring; sette inn en lenke i sider/maler som sender den bes&oslash;kende til en versjon av siden som er bedre egnet for utskrift. Den kan ogs&aring; lenke til en on-the-fly generert pdf versjon av siden.
-<br/>
-Vennligst bemerk at om ikke parameteren <i>includetemplate=true</i> er benyttet, s&aring; vil kun sidens hovedinnhold bli skrevet. OG bemerk ogs&aring; at pdf-filen som skrives mulig kke har mye likhet med din side, men hovedinnholdet skulle v&aelig;re med.
-<br/><br/>
-<b>Hvordan bruker jeg  denne modulen?</b>
-<br/>
-Du installerer modulen, bes&oslash;ker administrasjonspanelet og ser gjennom/endrer malene for lenken og for den utskriftstilrettelagte siden.
-<br/>
-Du setter inn noe slikt som dette i din side eller sidemal:
-<pre>
-{cms_module module=&#039;printing&#039; <i>parametre</i>}
-</pre>
-eller bare
-<pre>
-{print <i>parametre</i>}
-</pre>
-ved &aring; benytte print-plugin.
+$lang['help'] = '<b>Hva gj&oslash;r denne modulen?</b>
+
+<br/>
+
+Dette tillater deg &aring; sette inn en lenke i sider/maler som sender den bes&oslash;kende til en versjon av siden som er bedre egnet for utskrift. Den kan ogs&aring; lenke til en on-the-fly generert pdf versjon av siden.
+
+<br/>
+
+Vennligst bemerk at om ikke parameteren <i>includetemplate=true</i> er benyttet, s&aring; vil kun sidens hovedinnhold bli skrevet. OG bemerk ogs&aring; at pdf-filen som skrives mulig kke har mye likhet med din side, men hovedinnholdet skulle v&aelig;re med.
+
+<br/><br/>
+
+<b>Hvordan bruker jeg  denne modulen?</b>
+
+<br/>
+
+Du installerer modulen, bes&oslash;ker administrasjonspanelet og ser gjennom/endrer malene for lenken og for den utskriftstilrettelagte siden.
+
+<br/>
+
+Du setter inn noe slikt som dette i din side eller sidemal:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>parametre</i>}
+
+</pre>
+
+eller bare
+
+<pre>
+
+{print <i>parametre</i>}
+
+</pre>
+
+ved &aring; benytte print-plugin.
+
 <br/>';
 $lang['utmz'] = '156861353.1241475651.1265.31.utmcsr=albinisme.helminikon.no|utmccn=(referral)|utmcmd=referral|utmcct=/index.php/extensions';
 $lang['utma'] = '156861353.179052623084110100.1210423577.1241634417.1241639377.1274';

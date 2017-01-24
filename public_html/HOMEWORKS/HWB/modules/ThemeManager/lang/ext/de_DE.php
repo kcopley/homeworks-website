@@ -32,28 +32,50 @@ $lang['error'] = 'Fehler!';
 $lang['upgraded'] = 'Modul auf Version %s aktualisiert .';
 $lang['moddescription'] = 'Ein Modul zum Im- und Exportieren von Themes (Templates und Stylesheets)';
 $lang['import_succeeded'] = 'Das Theme wurde erfolgreich importiert';
-$lang['help'] = '<h3>Was macht dieses Modul?</h3>
-<p>Mit diesem Modul k&ouml;nnen Sie Templates und die mit ihnen verbundenen Stylesheets als &quot;Themes&quot; im- und exportieren, so dass Sie Ihr Theme auch an andere CMSms-Anwender weitergeben k&ouml;nnen.</p
-<h3>Wie wird es eingesetzt ?</h3>
-<p>Dieses Modul hat keine Oberfl&auml;che f&uuml;r den Besucher der Webseite, sondern nur eine Administration. W&auml;hlen Sie ein existierendes (aktives) Template aus und klicken auf &quot;Exportieren&quot;. Daraufhin wird eine XML-Datei erstellt, die das Template und die mit ihr verbundenen Stylesheets enth&auml;lt, und Ihnen anschlie&szlig;end zum Herunterladen angeboten.</p>
-<p><strong>Hinweis:</strong> Wenn das Template des Men&uuml;Managers mitexportiert werden soll, muss dieses Template zuvor im Men&uuml;Manager in die Datenbank importiert werden (siehe Hilfe des MenuManager-Moduls). Wurde im Template nur ein Verweis auf eine Template-Datei eingetragen (<em>(also z.Bsp. {menu template=&#039;simple_navigation<strong>.tpl</strong>&#039;}), wird dies nicht mit exportiert.</p>
-<p>Umgekehrt existiert die gleiche Funktionalit&auml;t. Sie k&ouml;nnen eine Theme-Datei im XML-Format hochladen. Das darin enthaltene Templates und das Stylesheets werden dann automatisch in Ihr System importiert.</p>
-<p><strong>Hinweis:</strong> Nach dem Import des Templates muss dieses noch aktiviert werden (Men&uuml; Layout > Templates), bevor es bei der Seitenbearbeitung ausgew&auml;hlt werden kann.</p>
-<h3>Berechtigungen</h3>
-<p>Um die Integrit&auml;t der Datenbank zu sichern, verwendet das ThemeManager-Modul ein strenges Berechtigungskonzept. F&uuml;r den Export von Themes ist die Berechtigung &quot;Manage Themes&quot; erforderlich. F&uuml;r den Import von Themes werden die drei Berechtigungen &quot;Add Stylesheets&quot;, &quot;Add StyleSheet Assocations&quot; und &quot;Add Templates&quot;) ben&ouml;tigt.</p>
-<h3>Support</h3>
-<p>Dieses Modul beinhaltet keinen kommerziellen Support. Sie k&ouml;nnen jedoch &uuml;ber folgende M&ouml;glichkeiten Hilfe zu dem Modul erhalten:</p>
-<ul>
-<li>F&uuml;r die letzte Version dieses Moduls, FAQs, dem Versand eines Fehlerreports oder dem Kauf kommerziellen Support besuchen Sie bitte die Modul-Homepage unter <a href="http://dev.cmsmadesimple.org">dev.cmsmadesimple.org</a>.</li>
-<li>Weitere Diskussionen zu diesem Modul sind auch in den Foren von <a href="http://forum.cmsmadesimple.org">CMS Made Simple</a> zu finden.</li>
-<li>Der Autor calguy1000 ist h&auml;ufig im <a href="irc://irc.freenode.net/#cms">CMS IRC Channel</a> zu finden.</li>
-<li>Letztlich erreichen Sie den Autor auch &uuml;ber eine direkte Email.</li>    
-</ul>
-<p>Nach der GPL wird diese Software so ver&ouml;ffentlicht, wie sie ist. Bitte lesen Sie den
- Lizenztext f&uuml;r den vollen Haftungsausschluss.</p>
-
-<h3>Copyright und Lizenz</h3>
-<p>Copyright &copy; 2005, Robert Campbell <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. Alle Rechte vorbehalten.</p>
+$lang['help'] = '<h3>Was macht dieses Modul?</h3>
+
+<p>Mit diesem Modul k&ouml;nnen Sie Templates und die mit ihnen verbundenen Stylesheets als &quot;Themes&quot; im- und exportieren, so dass Sie Ihr Theme auch an andere CMSms-Anwender weitergeben k&ouml;nnen.</p
+
+<h3>Wie wird es eingesetzt ?</h3>
+
+<p>Dieses Modul hat keine Oberfl&auml;che f&uuml;r den Besucher der Webseite, sondern nur eine Administration. W&auml;hlen Sie ein existierendes (aktives) Template aus und klicken auf &quot;Exportieren&quot;. Daraufhin wird eine XML-Datei erstellt, die das Template und die mit ihr verbundenen Stylesheets enth&auml;lt, und Ihnen anschlie&szlig;end zum Herunterladen angeboten.</p>
+
+<p><strong>Hinweis:</strong> Wenn das Template des Men&uuml;Managers mitexportiert werden soll, muss dieses Template zuvor im Men&uuml;Manager in die Datenbank importiert werden (siehe Hilfe des MenuManager-Moduls). Wurde im Template nur ein Verweis auf eine Template-Datei eingetragen (<em>(also z.Bsp. {menu template=&#039;simple_navigation<strong>.tpl</strong>&#039;}), wird dies nicht mit exportiert.</p>
+
+<p>Umgekehrt existiert die gleiche Funktionalit&auml;t. Sie k&ouml;nnen eine Theme-Datei im XML-Format hochladen. Das darin enthaltene Templates und das Stylesheets werden dann automatisch in Ihr System importiert.</p>
+
+<p><strong>Hinweis:</strong> Nach dem Import des Templates muss dieses noch aktiviert werden (Men&uuml; Layout > Templates), bevor es bei der Seitenbearbeitung ausgew&auml;hlt werden kann.</p>
+
+<h3>Berechtigungen</h3>
+
+<p>Um die Integrit&auml;t der Datenbank zu sichern, verwendet das ThemeManager-Modul ein strenges Berechtigungskonzept. F&uuml;r den Export von Themes ist die Berechtigung &quot;Manage Themes&quot; erforderlich. F&uuml;r den Import von Themes werden die drei Berechtigungen &quot;Add Stylesheets&quot;, &quot;Add StyleSheet Assocations&quot; und &quot;Add Templates&quot;) ben&ouml;tigt.</p>
+
+<h3>Support</h3>
+
+<p>Dieses Modul beinhaltet keinen kommerziellen Support. Sie k&ouml;nnen jedoch &uuml;ber folgende M&ouml;glichkeiten Hilfe zu dem Modul erhalten:</p>
+
+<ul>
+
+<li>F&uuml;r die letzte Version dieses Moduls, FAQs, dem Versand eines Fehlerreports oder dem Kauf kommerziellen Support besuchen Sie bitte die Modul-Homepage unter <a href="http://dev.cmsmadesimple.org">dev.cmsmadesimple.org</a>.</li>
+
+<li>Weitere Diskussionen zu diesem Modul sind auch in den Foren von <a href="http://forum.cmsmadesimple.org">CMS Made Simple</a> zu finden.</li>
+
+<li>Der Autor calguy1000 ist h&auml;ufig im <a href="irc://irc.freenode.net/#cms">CMS IRC Channel</a> zu finden.</li>
+
+<li>Letztlich erreichen Sie den Autor auch &uuml;ber eine direkte Email.</li>    
+
+</ul>
+
+<p>Nach der GPL wird diese Software so ver&ouml;ffentlicht, wie sie ist. Bitte lesen Sie den
+
+ Lizenztext f&uuml;r den vollen Haftungsausschluss.</p>
+
+
+
+<h3>Copyright und Lizenz</h3>
+
+<p>Copyright &copy; 2005, Robert Campbell <a href="mailto:calguy1000@hotmail.com"><calguy1000@hotmail.com></a>. Alle Rechte vorbehalten.</p>
+
 <p>Dieses Modul wurde unter der <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public License</a> ver&ouml;ffentlicht. Sie m&uuml;ssen dieser Lizenz zustimmen, bevor Sie das Modul verwenden.</p>';
 $lang['qca'] = 'P0-617342851-1252404665837';
 $lang['utma'] = '156861353.343462282.1252405474.1252405474.1252408135.2';

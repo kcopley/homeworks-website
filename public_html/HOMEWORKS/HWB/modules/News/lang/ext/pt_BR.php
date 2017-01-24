@@ -166,66 +166,116 @@ $lang['options'] = 'Op&ccedil;&otilde;es';
 $lang['optionsupdated'] = 'As op&ccedil;&otilde;es foram atualizadas com sucesso.';
 $lang['useexpiration'] = 'Usar data de expira&ccedil;&atilde;o';
 $lang['eventdesc-NewsArticleAdded'] = 'Enviado quando o artigo &eacute; adicionado.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-<li>\&quot;category_id\&quot; - Id of the category for this article</li>
-<li>\&quot;title\&quot; - Title of the article</li>
-<li>\&quot;content\&quot; - Content of the article</li>
-<li>\&quot;summary\&quot; - Summary of the article</li>
-<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
-<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
-<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
-<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+<li>\&quot;category_id\&quot; - Id of the category for this article</li>
+
+<li>\&quot;title\&quot; - Title of the article</li>
+
+<li>\&quot;content\&quot; - Content of the article</li>
+
+<li>\&quot;summary\&quot; - Summary of the article</li>
+
+<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
+
+<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
+
+<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Enviado quando o artigo &eacute; editado.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-<li>\&quot;category_id\&quot; - Id of the category for this article</li>
-<li>\&quot;title\&quot; - Title of the article</li>
-<li>\&quot;content\&quot; - Content of the article</li>
-<li>\&quot;summary\&quot; - Summary of the article</li>
-<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
-<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
-<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
-<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+<li>\&quot;category_id\&quot; - Id of the category for this article</li>
+
+<li>\&quot;title\&quot; - Title of the article</li>
+
+<li>\&quot;content\&quot; - Content of the article</li>
+
+<li>\&quot;summary\&quot; - Summary of the article</li>
+
+<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
+
+<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
+
+<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Enviado quando o artigo &eacute; deletado.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Enviado quando uma categoria &eacute; adicionada.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news category</li>
-<li>\&quot;name\&quot; - Name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news category</li>
+
+<li>\&quot;name\&quot; - Name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Enviado quando uma categoria &eacute; editada.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news category</li>
-<li>\&quot;name\&quot; - Name of the news category</li>
-<li>\&quot;origname\&quot; - The original name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news category</li>
+
+<li>\&quot;name\&quot; - Name of the news category</li>
+
+<li>\&quot;origname\&quot; - The original name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Enviado quando uma categoria &eacute; deletada.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the deleted category </li>
-<li>\&quot;name\&quot; - Name of the deleted category</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the deleted category </li>
+
+<li>\&quot;name\&quot; - Name of the deleted category</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'This parameter is only applicable to the detail view.  It allows specifying which news article to display in detail mode.  If the special value -1 is used, the system will display the newest, published, non expired article.';
 $lang['helpnumber'] = 'N&uacute;mero m&aacute;ximo de itens a exibir =- deixar em branco mostrar&aacute; todos os itens.';
@@ -242,21 +292,36 @@ $lang['helpdetailpage'] = 'P&aacute;gina para exibir a noticia detalhada. Pode s
 $lang['helpshowarchive'] = 'Show only expired news articles.';
 $lang['helpbrowsecat'] = 'Shows a browseable category list.';
 $lang['helpaction'] = 'Override the default action.  Possible values are &#039;default&#039; to display the summary view, and &#039;fesubmit&#039; to display the frontend form for allowing users to submit news articles on the front end.';
-$lang['help'] = '	<h3>O que isto faz?</h3>
-	<p>Not&iacute;cias &eacute; um m&oacute;dulo para exibir eventos e not&iacute;cias no seu site, similar a um blog, mas com muito mais fun&ccedil;&otilde;es!.  Quando o m&oacute;dulo &eacute; instalado, uma p&aacute;gina de administra&ccedil;&atilde;o de Not&iacute;cias &eacute; adicionada ao menu de administradao e ir&aacute; permitir que voc&ecirc;s selecione ou adiocione uma categoria de not&iacute;cias. Uma vez criada ou selecionada, uma lista de itens de not&iacute;cias ser&aacute; exibida. Daqui, voc&ecirc; pode adicionar, editar ou deletar not&iacute;cias para esta categoria.</p>
-	
-<h3>Vari&aacute;veis de Modelo Visual</h3>
-	<ul>
-		<li><b>itemcount</b> - N&uacute;mero de not&iacute;cias a exibir.</li>
-	</ul>
-<h3>Seguran&ccedil;a</h3>
-	<p>O usu&aacute;rio deve pertencer a um grupo com a permiss&atilde;o &#039;Modificar Not&iacute;cias&#039; a fim de adicionar, editar ou apagar Not&iacute;cias.</p>
-	<p> Para adicionar, editar ou apagar Modelos Visuais, o usu&aacute;rio deve pertencer a um grupo com a permiss&atilde;o &#039;Modificar Modelos Visuais&#039;.</p>
-	<p>Para editar as prefer&ecirc;ncias das not&iacute;cias globais, o usu&aacute;rio deve pertencer a um grupo com a permiss&atilde;o &#039;Modificar Prefer&ecirc;ncias do Site&#039;.</p>
-	<h3>Como eu uso?</h3>
-	<p>A maneira mais f&aacute;cil de usar-lo &eacute; em conjun&ccedil;&atilde;o com a tag cms_module. Isto ir&aacute; inserir o m&oacute;dulo dentro do seu Modelo Visual ou p&aacute;gina em qualquer lugar que voc&ecirc; quiser exibir as not&iacute;cias. O c&oacute;digo deve se parecer com algo como: <code>{cms_module module=&quot;news&quot; number=&quot;5&quot; category=&quot;beer&quot;</code>}</p>
-<h3>Informa&ccedil;&atilde;o de Tradu&ccedil;&atilde;o</h3>
-<p>Traduzido por Jos&eacute; Diogenes Silva</br>D&uacute;vidas e sugest&otilde;es: diogenescmsms@gmail.com</p>
+$lang['help'] = '	<h3>O que isto faz?</h3>
+
+	<p>Not&iacute;cias &eacute; um m&oacute;dulo para exibir eventos e not&iacute;cias no seu site, similar a um blog, mas com muito mais fun&ccedil;&otilde;es!.  Quando o m&oacute;dulo &eacute; instalado, uma p&aacute;gina de administra&ccedil;&atilde;o de Not&iacute;cias &eacute; adicionada ao menu de administradao e ir&aacute; permitir que voc&ecirc;s selecione ou adiocione uma categoria de not&iacute;cias. Uma vez criada ou selecionada, uma lista de itens de not&iacute;cias ser&aacute; exibida. Daqui, voc&ecirc; pode adicionar, editar ou deletar not&iacute;cias para esta categoria.</p>
+
+	
+
+<h3>Vari&aacute;veis de Modelo Visual</h3>
+
+	<ul>
+
+		<li><b>itemcount</b> - N&uacute;mero de not&iacute;cias a exibir.</li>
+
+	</ul>
+
+<h3>Seguran&ccedil;a</h3>
+
+	<p>O usu&aacute;rio deve pertencer a um grupo com a permiss&atilde;o &#039;Modificar Not&iacute;cias&#039; a fim de adicionar, editar ou apagar Not&iacute;cias.</p>
+
+	<p> Para adicionar, editar ou apagar Modelos Visuais, o usu&aacute;rio deve pertencer a um grupo com a permiss&atilde;o &#039;Modificar Modelos Visuais&#039;.</p>
+
+	<p>Para editar as prefer&ecirc;ncias das not&iacute;cias globais, o usu&aacute;rio deve pertencer a um grupo com a permiss&atilde;o &#039;Modificar Prefer&ecirc;ncias do Site&#039;.</p>
+
+	<h3>Como eu uso?</h3>
+
+	<p>A maneira mais f&aacute;cil de usar-lo &eacute; em conjun&ccedil;&atilde;o com a tag cms_module. Isto ir&aacute; inserir o m&oacute;dulo dentro do seu Modelo Visual ou p&aacute;gina em qualquer lugar que voc&ecirc; quiser exibir as not&iacute;cias. O c&oacute;digo deve se parecer com algo como: <code>{cms_module module=&quot;news&quot; number=&quot;5&quot; category=&quot;beer&quot;</code>}</p>
+
+<h3>Informa&ccedil;&atilde;o de Tradu&ccedil;&atilde;o</h3>
+
+<p>Traduzido por Jos&eacute; Diogenes Silva</br>D&uacute;vidas e sugest&otilde;es: diogenescmsms@gmail.com</p>
+
 ';
 $lang['utma'] = '156861353.3961599676465751000.1236885004.1236889412.1237485500.3';
 $lang['utmz'] = '156861353.1237485500.3.3.utmcsr=ruimedeiros.com|utmccn=(referral)|utmcmd=referral|utmcct=/index.php';

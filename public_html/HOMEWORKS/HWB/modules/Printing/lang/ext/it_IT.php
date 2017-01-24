@@ -19,7 +19,8 @@ $lang['pdfsettings'] = 'Configurazioni PDF';
 $lang['pdfsettingssaved'] = 'Le configurazioni PDF sono state salvate';
 $lang['pdfheader'] = 'Intestazione PDF';
 $lang['pdfenable'] = 'Abilita la generazione-PDF';
-$lang['pdfenablehelp'] = 'Voi dovreste conoscere che la generazione-PDF &egrave; molto rudimentale e buona solo per visualizzare contenuti molto semplici.
+$lang['pdfenablehelp'] = 'Voi dovreste conoscere che la generazione-PDF &egrave; molto rudimentale e buona solo per visualizzare contenuti molto semplici.
+
 Usatela ma non lamentatevi della qualit&agrave; finale.';
 $lang['headerfontsize'] = 'Dimensione font della Intestazione';
 $lang['contentfontsize'] = 'Dimensione font del Content';
@@ -52,29 +53,52 @@ $lang['help_class_img'] = 'Classe dello Stile CSS per tag <img> se showbutton &e
 $lang['help_more'] = 'Aggiunge ulteriori opzioni al tag link <a>';
 $lang['help_onlyurl'] = 'Stampa solo l&#039;url e non il link completo';
 $lang['help_includetemplate'] = 'Se configurato a &#039;true&#039; queste opzioni effettuano la stampa/pdf dell&#039;intero Modello e non solo del contenuto. Questo probabilmente richiede del lavoro sugli Stili CSS con il media &#039;print&#039; abilitato.';
-$lang['help'] = '<b>What does this module do?</b>
-<br/>
-This allow you to insert a link in pages/templates which directs the 
-visitor to a version of the page better suited for printing. It can also link
-to an basic on-the-fly-generated pdf version of the page.
-<br/>
-Please note that unless the parameter <i>includetemplate=true</i> is used, only the main output of the page is outputted. And note
-that the pdf-file outputted may not have much resemblance with your page, but should provide the content.
-<br/><br/>
-<b>How do I use this module?</b>
-<br/>
-Basically you install the module, access it&#039;s administration interface and review/change the templates for the
-link and for the printable page
-<br/>
-In you page content or template you then insert something like:
-<pre>
-{cms_module module=&#039;printing&#039; <i>params</i>}
-</pre>
-or simply
-<pre>
-{print <i>params</i>}
-</pre>
-using the print-plugin
+$lang['help'] = '<b>What does this module do?</b>
+
+<br/>
+
+This allow you to insert a link in pages/templates which directs the 
+
+visitor to a version of the page better suited for printing. It can also link
+
+to an basic on-the-fly-generated pdf version of the page.
+
+<br/>
+
+Please note that unless the parameter <i>includetemplate=true</i> is used, only the main output of the page is outputted. And note
+
+that the pdf-file outputted may not have much resemblance with your page, but should provide the content.
+
+<br/><br/>
+
+<b>How do I use this module?</b>
+
+<br/>
+
+Basically you install the module, access it&#039;s administration interface and review/change the templates for the
+
+link and for the printable page
+
+<br/>
+
+In you page content or template you then insert something like:
+
+<pre>
+
+{cms_module module=&#039;printing&#039; <i>params</i>}
+
+</pre>
+
+or simply
+
+<pre>
+
+{print <i>params</i>}
+
+</pre>
+
+using the print-plugin
+
 <br/>';
 $lang['qca'] = 'P0-250679722-1271187168764';
 ?>

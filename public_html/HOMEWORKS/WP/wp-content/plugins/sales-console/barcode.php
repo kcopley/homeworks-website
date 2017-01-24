@@ -9,27 +9,17 @@ global $wpdb;
 switch($action) { 
 
 	case "add":
-
 		$bar1 = $_REQUEST['bar1'];
-
 			$bar1str = "SELECT post_id
-
 				FROM $wpdb->postmeta
-
 				WHERE
-
 					(meta_key = '_cmb_resource_barcode' AND meta_value = '$bar1')
-
 				GROUP BY post_id;
-
 			";
 
 			$bar1_id = explode(",",$wpdb->get_var($bar1str));
-
 			$bar1id = $bar1_id[0];
-
 			$_SESSION['bar1'] = $_REQUEST['bar1'];
-
 
 
 		$bar2 = $_REQUEST['bar2'];
@@ -950,7 +940,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar1id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar1id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar1id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar1id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar1id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar1id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -972,7 +962,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar2id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar2id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar2id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar2id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar2id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar2id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -994,7 +984,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar3id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar3id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar3id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar3id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar3id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar3id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1018,7 +1008,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar4id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar4id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar4id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar4id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar4id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar4id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1040,7 +1030,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar5id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar5id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar5id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar5id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar5id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar5id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1062,7 +1052,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar6id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar6id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar6id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar6id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar6id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar6id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1086,7 +1076,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar7id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar7id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar7id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar7id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar7id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar7id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1108,7 +1098,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar8id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar8id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar8id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar8id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar8id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar8id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1130,7 +1120,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar9id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar9id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar9id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar9id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar9id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar9id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1154,7 +1144,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar10id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar10id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar10id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar10id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar10id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar10id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1176,7 +1166,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar11id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar11id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar11id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar11id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar11id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar11id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1198,7 +1188,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar12id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar12id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar12id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar12id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar12id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar12id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1222,7 +1212,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar13id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar13id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar13id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar13id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar13id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar13id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1244,7 +1234,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar14id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar14id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar14id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar14id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar14id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar14id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1266,7 +1256,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar15id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar15id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar15id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar15id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar15id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar15id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1290,7 +1280,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar16id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar16id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar16id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar16id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar16id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar16id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1312,7 +1302,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar17id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar17id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar17id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar17id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar17id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar17id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1334,7 +1324,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar18id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar18id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar18id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar18id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar18id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar18id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1358,7 +1348,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar19id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar19id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar19id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar19id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar19id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar19id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1380,7 +1370,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar20id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar20id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar20id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar20id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar20id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar20id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1402,7 +1392,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar21id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar21id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar21id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar21id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar21id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar21id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1426,7 +1416,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar22id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar22id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar22id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar22id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar22id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar22id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1448,7 +1438,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar23id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar23id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar23id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar23id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar23id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar23id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1470,7 +1460,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar24id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar24id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar24id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar24id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar24id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar24id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1494,7 +1484,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar25id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar25id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar25id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar25id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar25id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar25id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1516,7 +1506,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar26id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar26id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar26id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar26id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar26id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar26id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1538,7 +1528,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar27id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar27id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar27id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar27id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar27id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar27id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1562,7 +1552,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar28id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar28id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar28id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar28id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar28id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar28id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1584,7 +1574,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar29id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar29id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar29id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar29id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar29id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar29id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 
@@ -1606,7 +1596,7 @@ switch($action) {
 
 				<div class="left">
 
-					<small><strong><?php echo substr(get_the_title($bar30id),0,40); ?></strong><br /><strong>MSRP: </strong><?php echo get_post_meta($bar30id,'_cmb_resource_MSRP', true); ?><br /><strong>Price: </strong><?php echo get_post_meta($bar30id,'_cmb_resource_price', true); ?></small>
+					<small><strong><?php echo substr(get_the_title($bar30id),0,40); ?></strong><br /><strong>MSRP: $</strong><?php echo number_format(get_post_meta($bar30id,'_cmb_resource_MSRP', true), 2); ?><br /><strong>Price: $</strong><?php echo number_format(get_post_meta($bar30id,'_cmb_resource_price', true), 2); ?></small>
 
 				</div>
 

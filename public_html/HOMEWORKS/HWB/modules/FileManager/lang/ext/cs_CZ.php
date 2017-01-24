@@ -124,9 +124,12 @@ $lang['showhiddenfileshelp'] = 'Efektivn&iacute; pouze se zapnut&yacute;m roz&sc
 $lang['showhiddenfiles'] = 'Zobrazit skryt&eacute; soubory';
 $lang['settingsconfirmsingledelete'] = 'Potvrdit smaz&aacute;n&iacute; samotn&eacute;ho souboru?';
 $lang['settingssaved'] = 'Nastaven&iacute; uloženo';
-$lang['help'] = '		<h3>Co děl&aacute; tento modul?</h3>
-		<p>Tento modul poskytuje funkce spr&aacute;vy souborů</p>
-		<h3>Jak se použ&iacute;v&aacute;?</h3>
+$lang['help'] = '		<h3>Co děl&aacute; tento modul?</h3>
+
+		<p>Tento modul poskytuje funkce spr&aacute;vy souborů</p>
+
+		<h3>Jak se použ&iacute;v&aacute;?</h3>
+
 		<p>Vyberte tento modul z menu v administraci.</p>';
 $lang['utma'] = '156861353.3769824904990279700.1249913289.1261996808.1263200482.16';
 $lang['utmz'] = '156861353.1249913289.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)';

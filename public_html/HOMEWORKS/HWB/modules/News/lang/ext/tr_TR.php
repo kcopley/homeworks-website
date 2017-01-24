@@ -168,66 +168,116 @@ $lang['options'] = 'Se&ccedil;enekler';
 $lang['optionsupdated'] = 'Se&ccedil;enekler başarılı olarak g&uuml;ncellendi.';
 $lang['useexpiration'] = 'S&uuml;resi ge&ccedil;me tarihini kullan';
 $lang['eventdesc-NewsArticleAdded'] = 'Haber eklendiğinde g&ouml;nderildi.';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-<li>\&quot;category_id\&quot; - Id of the category for this article</li>
-<li>\&quot;title\&quot; - Title of the article</li>
-<li>\&quot;content\&quot; - Content of the article</li>
-<li>\&quot;summary\&quot; - Summary of the article</li>
-<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
-<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
-<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
-<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+<li>\&quot;category_id\&quot; - Id of the category for this article</li>
+
+<li>\&quot;title\&quot; - Title of the article</li>
+
+<li>\&quot;content\&quot; - Content of the article</li>
+
+<li>\&quot;summary\&quot; - Summary of the article</li>
+
+<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
+
+<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
+
+<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Haber d&uuml;zenlendiğinde g&ouml;nderildi.';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-<li>\&quot;category_id\&quot; - Id of the category for this article</li>
-<li>\&quot;title\&quot; - Title of the article</li>
-<li>\&quot;content\&quot; - Content of the article</li>
-<li>\&quot;summary\&quot; - Summary of the article</li>
-<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
-<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
-<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
-<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+<li>\&quot;category_id\&quot; - Id of the category for this article</li>
+
+<li>\&quot;title\&quot; - Title of the article</li>
+
+<li>\&quot;content\&quot; - Content of the article</li>
+
+<li>\&quot;summary\&quot; - Summary of the article</li>
+
+<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
+
+<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
+
+<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Haber silindiğinde g&ouml;nderildi.';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Kategori eklendiğinde g&ouml;nderildi.';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news category</li>
-<li>\&quot;name\&quot; - Name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news category</li>
+
+<li>\&quot;name\&quot; - Name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Kategori d&uuml;zenlendiğinde g&ouml;nderildi.';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news category</li>
-<li>\&quot;name\&quot; - Name of the news category</li>
-<li>\&quot;origname\&quot; - The original name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news category</li>
+
+<li>\&quot;name\&quot; - Name of the news category</li>
+
+<li>\&quot;origname\&quot; - The original name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Kategori silindiğinde g&ouml;nderildi.';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the deleted category </li>
-<li>\&quot;name\&quot; - Name of the deleted category</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the deleted category </li>
+
+<li>\&quot;name\&quot; - Name of the deleted category</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'This parameter is only applicable to the detail view.  It allows specifying which news article to display in detail mode.  If the special value -1 is used, the system will display the newest, published, non expired article.';
 $lang['helpnumber'] = 'G&ouml;sterilecek &ouml;ğe sayısı =- boş bırakılırsa t&uuml;m &ouml;ğeler g&ouml;sterilir.';
@@ -244,18 +294,30 @@ $lang['helpdetailpage'] = 'Page to display News details in.  This can either be 
 $lang['helpshowarchive'] = 'Sadece s&uuml;resi ge&ccedil;miş haberleri g&ouml;ster.';
 $lang['helpbrowsecat'] = 'Taranabilir kategori listesini g&ouml;ster.';
 $lang['helpaction'] = 'Override the default action.  Possible values are &#039;default&#039; to display the summary view, and &#039;fesubmit&#039; to display the frontend form for allowing users to submit news articles on the front end.';
-$lang['help'] = '	<h3>What does this do?</h3>
-	<p>News is a module for displaying news events on your page, similar to a blog style, except with more features!.  When the module is installed, a News admin page is added to administration menu that will allow you to select or add a news category.  Once a news category is created or selected, a list of news items for that category will be displayed.  From here, you can add, edit or delete news items for that category.</p>
-	<h3>Template variables</h3>
-	<ul>
-		<li><b>itemcount</b> - The number of news articles to be shown.</li>
-		<li><b>entry->authorname</b> - The full name of the the author including First and Last name.</li>
-	</ul>
-	<h3>Security</h3>
-	<p>The user must belong to a group with the &#039;Modify News&#039; permission in order to add, edit, or delete News entries.</p>
-	<p>In order to edit the layout templates, the user must belong to a group with the &#039;Modify Templates&#039; permission.</p>
-	<p>In order to edit the global news preferences, the user must belong to a group with the &#039;Modify Site Preferences&#039; permission.</p>
-	<h3>How do I use it?</h3>
+$lang['help'] = '	<h3>What does this do?</h3>
+
+	<p>News is a module for displaying news events on your page, similar to a blog style, except with more features!.  When the module is installed, a News admin page is added to administration menu that will allow you to select or add a news category.  Once a news category is created or selected, a list of news items for that category will be displayed.  From here, you can add, edit or delete news items for that category.</p>
+
+	<h3>Template variables</h3>
+
+	<ul>
+
+		<li><b>itemcount</b> - The number of news articles to be shown.</li>
+
+		<li><b>entry->authorname</b> - The full name of the the author including First and Last name.</li>
+
+	</ul>
+
+	<h3>Security</h3>
+
+	<p>The user must belong to a group with the &#039;Modify News&#039; permission in order to add, edit, or delete News entries.</p>
+
+	<p>In order to edit the layout templates, the user must belong to a group with the &#039;Modify Templates&#039; permission.</p>
+
+	<p>In order to edit the global news preferences, the user must belong to a group with the &#039;Modify Site Preferences&#039; permission.</p>
+
+	<h3>How do I use it?</h3>
+
 	<p>The easiest way to use it is with the {news} wrapper tag (wraps the module in a tag, to simplify the syntax).  This will insert the module into your template or page anywhere you wish, and display news items.  The code would look something like: <code>{news number=&#039;5&#039;}</code></p>';
 $lang['utma'] = '156861353.1664897565.1272759163.1277761254.1277765691.32';
 $lang['utmz'] = '156861353.1277765691.32.5.utmccn=(referral)|utmcsr=dev.cmsmadesimple.org|utmcct=/project/files/250|utmcmd=referral';

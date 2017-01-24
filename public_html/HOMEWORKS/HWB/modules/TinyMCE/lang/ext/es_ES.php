@@ -142,9 +142,12 @@ $lang['thousanddelimiter'] = ', ';
 $lang['size'] = 'Tama&ntilde;o';
 $lang['dimensions'] = 'Alto x Ancho';
 $lang['advanced_tab'] = 'Avanzado';
-$lang['help'] = '	<h3>&iquest;Que hace esto?</h3>
-	<p>Permite usar a TinyMCE como editor WYSIWYG de sus p&aacute;ginas.</p>
-	<h3>&iquest;Como lo uso?</h3>
+$lang['help'] = '	<h3>&iquest;Que hace esto?</h3>
+
+	<p>Permite usar a TinyMCE como editor WYSIWYG de sus p&aacute;ginas.</p>
+
+	<h3>&iquest;Como lo uso?</h3>
+
 	<p>Instalar el m&oacute;dulo, luego ir a preferencias de usuario y elegir a TinyMCE como el editor wysiwyg de su elecci&oacute;n.</p>';
 $lang['qca'] = 'P0-2096054370-1259803615939';
 $lang['utma'] = '156861353.238606854.1259804368.1267940197.1267946953.72';

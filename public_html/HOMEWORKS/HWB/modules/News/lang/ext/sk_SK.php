@@ -176,66 +176,116 @@ $lang['options'] = 'Voľby';
 $lang['optionsupdated'] = 'Voľby boli &uacute;spe&scaron;ne upraven&eacute;.';
 $lang['useexpiration'] = 'Použ&iacute;ť d&aacute;tum konca';
 $lang['eventdesc-NewsArticleAdded'] = 'Poslať po pridan&iacute; novinky';
-$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-<li>\&quot;category_id\&quot; - Id of the category for this article</li>
-<li>\&quot;title\&quot; - Title of the article</li>
-<li>\&quot;content\&quot; - Content of the article</li>
-<li>\&quot;summary\&quot; - Summary of the article</li>
-<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
-<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
-<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
-<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
-</ul>
+$lang['eventhelp-NewsArticleAdded'] = '<p>Sent when an article is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+<li>\&quot;category_id\&quot; - Id of the category for this article</li>
+
+<li>\&quot;title\&quot; - Title of the article</li>
+
+<li>\&quot;content\&quot; - Content of the article</li>
+
+<li>\&quot;summary\&quot; - Summary of the article</li>
+
+<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
+
+<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
+
+<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleEdited'] = 'Poslať po upraven&iacute; novinky';
-$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-<li>\&quot;category_id\&quot; - Id of the category for this article</li>
-<li>\&quot;title\&quot; - Title of the article</li>
-<li>\&quot;content\&quot; - Content of the article</li>
-<li>\&quot;summary\&quot; - Summary of the article</li>
-<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
-<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
-<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
-<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
-</ul>
+$lang['eventhelp-NewsArticleEdited'] = '<p>Sent when an article is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+<li>\&quot;category_id\&quot; - Id of the category for this article</li>
+
+<li>\&quot;title\&quot; - Title of the article</li>
+
+<li>\&quot;content\&quot; - Content of the article</li>
+
+<li>\&quot;summary\&quot; - Summary of the article</li>
+
+<li>\&quot;status\&quot; - Status of the article (&quot;draft&quot; or &quot;publish&quot;)</li>
+
+<li>\&quot;start_time\&quot; - Date the article should start being displayed</li>
+
+<li>\&quot;end_time\&quot; - Date the article should stop being displayed</li>
+
+<li>\&quot;useexp\&quot; - Whether the expiration date should be ignored or not</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsArticleDeleted'] = 'Poslať po odstr&aacute;nen&iacute; novinky';
-$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;news_id\&quot; - Id of the news article</li>
-</ul>
+$lang['eventhelp-NewsArticleDeleted'] = '<p>Sent when an article is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;news_id\&quot; - Id of the news article</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryAdded'] = 'Poslať po pridan&iacute; kateg&oacute;rie';
-$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news category</li>
-<li>\&quot;name\&quot; - Name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryAdded'] = '<p>Sent when a category is added.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news category</li>
+
+<li>\&quot;name\&quot; - Name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryEdited'] = 'Poslať po upraven&iacute; kateg&oacute;rie';
-$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the news category</li>
-<li>\&quot;name\&quot; - Name of the news category</li>
-<li>\&quot;origname\&quot; - The original name of the news category</li>
-</ul>
+$lang['eventhelp-NewsCategoryEdited'] = '<p>Sent when a category is edited.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the news category</li>
+
+<li>\&quot;name\&quot; - Name of the news category</li>
+
+<li>\&quot;origname\&quot; - The original name of the news category</li>
+
+</ul>
+
 ';
 $lang['eventdesc-NewsCategoryDeleted'] = 'Poslať po odstr&aacute;nen&iacute; kateg&oacute;rie';
-$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
-<h4>Parameters</h4>
-<ul>
-<li>\&quot;category_id\&quot; - Id of the deleted category </li>
-<li>\&quot;name\&quot; - Name of the deleted category</li>
-</ul>
+$lang['eventhelp-NewsCategoryDeleted'] = '<p>Sent when a category is deleted.</p>
+
+<h4>Parameters</h4>
+
+<ul>
+
+<li>\&quot;category_id\&quot; - Id of the deleted category </li>
+
+<li>\&quot;name\&quot; - Name of the deleted category</li>
+
+</ul>
+
 ';
 $lang['help_articleid'] = 'Tento parameter je použiteľn&yacute; iba pri použit&iacute; detailu novinky a definuje id konkr&eacute;tnej novnky. Hodnota -1 nastavuje detail najnov&scaron;ej publikovanej, neexpirovanej novinky.';
 $lang['helpnumber'] = 'Maxim&aacute;lny počet položiek k zobrazeniu - ponechan&eacute; pr&aacute;zdne zobraz&iacute; v&scaron;etky položky.';
@@ -252,41 +302,76 @@ $lang['helpdetailpage'] = 'Str&aacute;nka, kde s&aacute; bude zobrazovať detail
 $lang['helpshowarchive'] = 'Uk&aacute;ž star&eacute; pr&iacute;spevky.';
 $lang['helpbrowsecat'] = 'Uk&aacute;že prech&aacute;dzateľn&yacute; zoznam kateg&oacute;ri&iacute;.';
 $lang['helpaction'] = 'Nastavenie prednastavenej akcie. Možn&eacute; hodnoty s&uacute; &#039;default&#039; pre v&yacute;pis a detail novinky a &#039;fesubmit&#039; pre zobrazenie formul&aacute;ra na odoslanie novinky n&aacute;v&scaron;tevn&iacute;kom webu.';
-$lang['help'] = '<h3>D&ocirc;ležit&eacute; upozornenie</h3>
-<p>Od verzie 2.9 a vy&scaron;&scaron;ej bol z modulu odstr&aacute;nen&yacute; prednastaven&yacute; form&aacute;t d&aacute;tumu a zobrazenie d&aacute;tumu formatpostdate. Namiesto entry->formatpostdate m&ocirc;žete použ&iacute;ť  entry->post_date, alebo  entry->cms_date_format, ktor&yacute; nadefinovan&yacute; v glob&aacute;lnej konfigur&aacute;cii.</p>	
-<h3>Čo rob&iacute; tento modul?</h3>
-	<p>Novinky s&uacute; modul pre zobrazovanie udalost&iacute; na Va&scaron;ich str&aacute;nkach, podobne ako blogov&eacute; z&aacute;pisy, iba s viacej možnosťami! Po in&scaron;tal&aacute;cii modulu je vložen&aacute; daľ&scaron;ia položka do administračn&eacute;ho menu a to V&aacute;m umožn&iacute; vybrať alebo vložiť kateg&oacute;riu noviniek. Po vytvoren&iacute; alebo v&yacute;bere kateg&oacute;rie je zobrazen&yacute; zoznam noviniek pre t&uacute;to kateg&oacute;riu. Odtiaľto m&ocirc;žete prid&aacute;vať, upravovať alebo mazať novinky konkr&eacute;tnej kateg&oacute;rie.</p>
-	<h3>Bezpečnosť</h3>
-	<p>Aby už&iacute;vateľ m&ocirc;hol prid&aacute;vať, upravovať alebo mazať novinky, mus&iacute; mať opr&aacute;vnenia skupiny &#039;Modify News&#039;.</p>
-	<h3>Ako sa použ&iacute;va?</h3>
-	<p>Nejednoduch&scaron;ie použitie je vo využit&iacute; t&aacute;gu cms_module. Toto vlož&iacute; modul do &scaron;abl&oacute;ny alebo str&aacute;nky a zobraz&iacute; novinky ako si prajete. Samotn&yacute; k&oacute;d bude vyzerať podobne: <code>{cms_module module=&quot;news&quot; number=&quot;5&quot; category=&quot;beer&quot;}</code></p>
-
-<h4>Možnosti zobrazenia</h4>
-<h4>Numerous display methods</h4>
-<p>The parameters supported by the news module, and support for numerous templates of each time mean that your options for displaying news articles are limitless.</p>
-<h4>Custom Fields</h4>
-<p>The News module allows defining numerous custom fields (including files and images) that will allow you to attach pdf files or numerous images to your articles.</p>
-        <h4>Categories</h4>
-	<p>News supplies a hierarchical category mechanism for organizing your articles.  A news article can only be in one place in the hierarchy.</p>
-        <h4>RSS Feeds</h4>
-        <p>News supports generating simple rss feeds from your news articles, so that your visitors can always be up to date with what is happening on your site.</p>
-	<h4>Expiry and Status</h4>
-	<p>Each news article can have an optional expiry date, after which it will not be shown on your web page.  As well, articles can be marked as <em>draft</em> to remove them permanently from your web page.</p>
-	<h3>Security</h3>
-	<p>The user must belong to a group with the &#039;Modify News&#039; permission in order to add or edit News entries.</p>
-        <p>As well, In order to delete news entries, the user must belong to a group with the &#039;Delete News Articles&#039; permission.</p>
-	<p>In order to edit the layout templates, the user must belong to a group with the &#039;Modify Templates&#039; permission.</p>
-	<p>In order to edit the global news preferences, the user must belong to a group with the &#039;Modify Site Preferences&#039; permission.</p>
-	<p>Additionally, to approve news for frontend display the user must belong to a group with the &#039;Approve News&#039; permission.</p>
-	<h3>How do I use it?</h3>
-	<p>The easiest way to use it is with the {news} wrapper tag (wraps the module in a tag, to simplify the syntax).  This will insert the module into your template or page anywhere you wish, and display news items.  The code would look something like: <code>{news number=&#039;5&#039;}</code></p>
-<h3>Templates</h3>
-<p>Since version 2.3 News supports multiple database templates, and no longer supports additional file templates.  Users who used the old file template system should follow these steps (for each file template):</p>
-<ul>
-<li>Copy the file template into the clipboard</li>
-<li>Create a new database template <em>(either summary or detailed as required)</em>.  Give the new template the same name (including the .tpl extension) as the old file template, and paste the contents.</li>
-<li>Hit Submit</li>
-</ul>
+$lang['help'] = '<h3>D&ocirc;ležit&eacute; upozornenie</h3>
+
+<p>Od verzie 2.9 a vy&scaron;&scaron;ej bol z modulu odstr&aacute;nen&yacute; prednastaven&yacute; form&aacute;t d&aacute;tumu a zobrazenie d&aacute;tumu formatpostdate. Namiesto entry->formatpostdate m&ocirc;žete použ&iacute;ť  entry->post_date, alebo  entry->cms_date_format, ktor&yacute; nadefinovan&yacute; v glob&aacute;lnej konfigur&aacute;cii.</p>	
+
+<h3>Čo rob&iacute; tento modul?</h3>
+
+	<p>Novinky s&uacute; modul pre zobrazovanie udalost&iacute; na Va&scaron;ich str&aacute;nkach, podobne ako blogov&eacute; z&aacute;pisy, iba s viacej možnosťami! Po in&scaron;tal&aacute;cii modulu je vložen&aacute; daľ&scaron;ia položka do administračn&eacute;ho menu a to V&aacute;m umožn&iacute; vybrať alebo vložiť kateg&oacute;riu noviniek. Po vytvoren&iacute; alebo v&yacute;bere kateg&oacute;rie je zobrazen&yacute; zoznam noviniek pre t&uacute;to kateg&oacute;riu. Odtiaľto m&ocirc;žete prid&aacute;vať, upravovať alebo mazať novinky konkr&eacute;tnej kateg&oacute;rie.</p>
+
+	<h3>Bezpečnosť</h3>
+
+	<p>Aby už&iacute;vateľ m&ocirc;hol prid&aacute;vať, upravovať alebo mazať novinky, mus&iacute; mať opr&aacute;vnenia skupiny &#039;Modify News&#039;.</p>
+
+	<h3>Ako sa použ&iacute;va?</h3>
+
+	<p>Nejednoduch&scaron;ie použitie je vo využit&iacute; t&aacute;gu cms_module. Toto vlož&iacute; modul do &scaron;abl&oacute;ny alebo str&aacute;nky a zobraz&iacute; novinky ako si prajete. Samotn&yacute; k&oacute;d bude vyzerať podobne: <code>{cms_module module=&quot;news&quot; number=&quot;5&quot; category=&quot;beer&quot;}</code></p>
+
+
+
+<h4>Možnosti zobrazenia</h4>
+
+<h4>Numerous display methods</h4>
+
+<p>The parameters supported by the news module, and support for numerous templates of each time mean that your options for displaying news articles are limitless.</p>
+
+<h4>Custom Fields</h4>
+
+<p>The News module allows defining numerous custom fields (including files and images) that will allow you to attach pdf files or numerous images to your articles.</p>
+
+        <h4>Categories</h4>
+
+	<p>News supplies a hierarchical category mechanism for organizing your articles.  A news article can only be in one place in the hierarchy.</p>
+
+        <h4>RSS Feeds</h4>
+
+        <p>News supports generating simple rss feeds from your news articles, so that your visitors can always be up to date with what is happening on your site.</p>
+
+	<h4>Expiry and Status</h4>
+
+	<p>Each news article can have an optional expiry date, after which it will not be shown on your web page.  As well, articles can be marked as <em>draft</em> to remove them permanently from your web page.</p>
+
+	<h3>Security</h3>
+
+	<p>The user must belong to a group with the &#039;Modify News&#039; permission in order to add or edit News entries.</p>
+
+        <p>As well, In order to delete news entries, the user must belong to a group with the &#039;Delete News Articles&#039; permission.</p>
+
+	<p>In order to edit the layout templates, the user must belong to a group with the &#039;Modify Templates&#039; permission.</p>
+
+	<p>In order to edit the global news preferences, the user must belong to a group with the &#039;Modify Site Preferences&#039; permission.</p>
+
+	<p>Additionally, to approve news for frontend display the user must belong to a group with the &#039;Approve News&#039; permission.</p>
+
+	<h3>How do I use it?</h3>
+
+	<p>The easiest way to use it is with the {news} wrapper tag (wraps the module in a tag, to simplify the syntax).  This will insert the module into your template or page anywhere you wish, and display news items.  The code would look something like: <code>{news number=&#039;5&#039;}</code></p>
+
+<h3>Templates</h3>
+
+<p>Since version 2.3 News supports multiple database templates, and no longer supports additional file templates.  Users who used the old file template system should follow these steps (for each file template):</p>
+
+<ul>
+
+<li>Copy the file template into the clipboard</li>
+
+<li>Create a new database template <em>(either summary or detailed as required)</em>.  Give the new template the same name (including the .tpl extension) as the old file template, and paste the contents.</li>
+
+<li>Hit Submit</li>
+
+</ul>
+
 <p>Following these steps should solve the problem of your news templates not being found and other similar smarty errors when you upgrade to a version of CMS that has News 2.3 or greater.</p>';
 $lang['utma'] = '156861353.1423109725.1280259016.1283883395.1284147995.32';
 $lang['utmz'] = '156861353.1284147995.32.30.utmcsr=dev.cmsmadesimple.org|utmccn=(referral)|utmcmd=referral|utmcct=/project/files/873';
