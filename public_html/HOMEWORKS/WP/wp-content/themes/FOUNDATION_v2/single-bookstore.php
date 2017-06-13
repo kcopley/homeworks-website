@@ -28,7 +28,7 @@ if ($active==1) { ?>
 
 			<?php if ( has_post_thumbnail() ) {
 
-				the_post_thumbnail();
+				the_post_thumbnail('book-image');
 
 			} else { ?>
 
@@ -84,7 +84,7 @@ if ($active==1) { ?>
 
 			<?php if ( has_post_thumbnail() ) {
 
-				the_post_thumbnail();
+				the_post_thumbnail('book-image');
 
 			} else { ?>
 
@@ -202,7 +202,7 @@ if ($active==1) { ?>
 
 			<?php if ( has_post_thumbnail() ) {
 
-				the_post_thumbnail();
+				the_post_thumbnail('book-image');
 
 			} else { ?>
 

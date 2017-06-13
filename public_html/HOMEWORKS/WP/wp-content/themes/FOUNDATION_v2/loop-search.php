@@ -42,7 +42,7 @@ if ($type == 'publisher') { ?>
 
 			<?php if ( has_post_thumbnail() ) {
 
-				the_post_thumbnail();
+				the_post_thumbnail('book-thumbnail');
 
 			} else { ?>
 
@@ -70,7 +70,7 @@ if ($type == 'publisher') { ?>
 
 			<?php if ( has_post_thumbnail() ) {
 
-				the_post_thumbnail();
+				the_post_thumbnail('book-thumbnail');
 
 			} else { ?>
 

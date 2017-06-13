@@ -175,19 +175,25 @@
 <div id="bkgd">&nbsp;</div>
 
 <header>
-
 	<nav>
-
-		<div class="row">
-
-			<a href="<?php bloginfo( 'url' ); ?>"><img id="logo" src="<?php bloginfo( 'template_url' ); ?>/images/LOGO.png"></a>
-
-		<?php wp_nav_menu( array( 'container' => 'false', 'theme_location' => 'mainnavigation' ) ); ?>
-
-		</div>
-
+            <div class="row" style="height: 3em;">
+                <a href="<?php bloginfo( 'url' ); ?>"><img id="logo" src="<?php bloginfo( 'template_url' ); ?>/images/LOGO.png"></a>
+                <?php 
+                    wp_nav_menu( array( 'container' => 'false', 'theme_location' => 'mainnavigation' ) ); 
+                ?>
+                <br>
+                
+            </div>
+            <div>
+                <div class="column" style="width: 62%"></div>
+                <div class="column">
+                    <?php 
+                        get_search_form();
+                    ?>
+                </div>
+                
+            </div>
 	</nav>
-
 </header>
 
 <section id="wrapper" class="row">

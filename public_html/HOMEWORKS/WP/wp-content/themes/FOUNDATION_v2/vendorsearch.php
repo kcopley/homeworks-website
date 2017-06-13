@@ -84,7 +84,7 @@ Template Name: Publishers
 
 			<?php if ( has_post_thumbnail() ) {
 
-				the_post_thumbnail();
+				the_post_thumbnail('book-thumbnail');
 
 			} else { ?>
 

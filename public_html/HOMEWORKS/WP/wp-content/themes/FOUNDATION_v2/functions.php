@@ -3,7 +3,6 @@
 // ADMINISTRATION FUNCTIONS ---------------------------------------------
 
 
-
 // Hide dashboard panels
 
 add_action('wp_dashboard_setup', 'wpc_dashboard_widgets');
@@ -117,6 +116,8 @@ if ( function_exists ('register_sidebar')) {
 add_action( 'init', 'create_post_type' );
 
 add_theme_support( 'post-thumbnails' );
+add_image_size( 'book-thumbnail', 160, 160, FALSE );
+add_image_size( 'book-image', 400, 400, FALSE );
 
 function create_post_type() {
 

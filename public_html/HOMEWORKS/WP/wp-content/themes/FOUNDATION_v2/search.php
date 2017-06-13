@@ -74,7 +74,7 @@ include($path.'/homeworks/public_html/HOMEWORKS/WP/wp-content/plugins/sales-cons
                     button('Previous')
                 ));
             }
-            if ($paged * $num_per_page < $count){
+            if ($paged * $num_per_page < ($count - $num_per_page)){
                 $divvy->add_object(new Form(style("display: inline-block; margin-right: 10px; margin-left: 10px;"),
                     new Input(type("hidden").id("set_page_num").name("set_page_num").value($paged + 1)),
                     button('Next')
@@ -99,7 +99,7 @@ include($path.'/homeworks/public_html/HOMEWORKS/WP/wp-content/plugins/sales-cons
 
                 $col = new Column(width(15));
                 if ( has_post_thumbnail() ) {
-                    $col->add_object(new TextRender(get_the_post_thumbnail( null, $size, $attr )));
+                    $col->add_object(new TextRender(get_the_post_thumbnail( null, 'book-thumbnail', $attr )));
                 } else {
                     $col->add_object(
                         new IMG(src(get_bloginfo( "template_url" ) + '/images/noimage.gif'))
