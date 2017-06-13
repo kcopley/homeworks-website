@@ -6,8 +6,6 @@
 
 		<div class="five columns offset-by-one">
 
-			<?php get_search_form( ); ?> 
-
 			<div class="row">
 
 				<nav class="four columns">
