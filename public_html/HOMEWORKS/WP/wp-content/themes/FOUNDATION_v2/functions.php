@@ -49,7 +49,7 @@ function sales_console_css() {
 
  		<style type="text/css">
 
-			#menu-media, #menu-posts-content, #menu-posts-slide, #menu-comments, #menu-plugins, #menu-tools, .update-nag, #wp-admin-bar-comments, #wp-admin-bar-new-content, #wp-admin-bar-wpseo-menu, #screen-options-link-wrap, #contextual-help-link-wrap { display: none; } #poststuff td, #poststuff th { font-size: .75em; line-height: 1.4em; }, #poststuff .button-primary { font-size: 1em; }
+			#menu-media, #menu-posts-content, #menu-posts-slide, #menu-comments, #menu-plugins, #menu-tools, .update-nag, #wp-admin-bar-comments, #wp-admin-bar-new-content, #wp-admin-bar-wpseo-menu, #screen-options-link-wrap, #contextual-help-link-wrap { display: none; } #poststuff td, #poststuff th { font-size: .75em; line-height: 1.4em; } #poststuff .button-primary { font-size: 1em; }
 
 		</style>
 

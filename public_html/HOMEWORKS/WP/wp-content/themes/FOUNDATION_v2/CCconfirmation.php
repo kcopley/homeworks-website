@@ -1,6 +1,11 @@
 <?php
 $path = $_SERVER['DOCUMENT_ROOT'];
-include($path.'/homeworks/public_html/HOMEWORKS/WP/wp-content/plugins/sales-console/includes.php');
+if (get_option('offline-mode') == 1) {
+    include($path.'/homeworks/public_html/HOMEWORKS/WP/wp-content/plugins/sales-console/includes.php');
+}
+else {
+    include($path.'/HOMEWORKS/WP/wp-content/plugins/sales-console/includes.php');
+}
 /*
 
 Template Name: Billing
