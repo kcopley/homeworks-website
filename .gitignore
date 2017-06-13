@@ -20,3 +20,6 @@ homewot5/homedir/.cphorde/
 homewot5/homedir/.fontconfig/
 homewot5/homedir/logs/
 *.ico
+/public_html/nbproject/private/
+public_html/nbproject/project.properties
+public_html/nbproject/project.xml

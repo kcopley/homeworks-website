@@ -1,6 +1,45 @@
+
+<script type="text/javascript">
+	function setFromCCS() {
+		document.getElementById("swipe").blur(function (e) {
+			e.preventDefault();
+		});
+		var ccs = document.getElementById("swipe").value;
+		var index1 = ccs.indexOf("%B") + 2;
+		var index2 = ccs.indexOf("^") + 1;
+		var index3 = ccs.indexOf("^", index2 + 1) + 1;
+
+		var cardNumber = ccs.substring(index1, index2 - 1);
+		var expMonth = ccs.substr(index3, 2);
+		var expYear = ccs.substr(index3 + 2, 2);
+		var holderName = ccs.substring(index2, index3 - 1);
+		var index4 = holderName.indexOf("/");
+		var temp1 = holderName.substring(0, index4);
+		var temp2 = holderName.substring(index4 + 1);
+		holderName = temp2 + ' ' + temp1;
+
+		document.getElementById("swipe").style.display = "none";
+		
+		if (document.getElementById("trans_customer_name_card").value == "") {
+			document.getElementById("trans_customer_name_card").value = holderName;
+		}
+		if (document.getElementById("trans_customer_card_number").value == "") {
+			document.getElementById("trans_customer_card_number").value = cardNumber;
+		}
+		if (document.getElementById("trans_customer_card_expiration_month").value == "") {
+			document.getElementById("trans_customer_card_expiration_month").value = expYear;
+		}
+		if (document.getElementById("trans_customer_card_expiration_year").value == "") {
+			document.getElementById("trans_customer_card_expiration_year").value = expMonth;
+		}
+	};
+</script>
+
+
 <?php
 
 session_start();
+
 
 include_once "includes.php";
 selection::GetIDS();
@@ -84,6 +123,7 @@ switch (page_action::GetAction()){
         checkout_cart::clear_all();
         unset($_SESSION[checkout_payment::$current_transaction_id]);
         unset($_SESSION[checkout_payment::$total_amount_paid]);
+		$_SESSION['last_credit_payment'] = 0;
         break;
     case action_types::$clear_checkout_save:
         $tid = $_SESSION[checkout_payment::$current_transaction_id];
@@ -279,7 +319,7 @@ function verify_customer_card_info() {
         $renderlist->add_object(
             new Paragraph(
                 new Strong(new TextRender('Name: ')),
-                new TextRender(checkout_payment::GetName()."<br>"),
+                new TextRender(checkout_payment::GetCardName()."<br>"),
                 new Strong(new TextRender('Email: ')),
                 new TextRender(checkout_payment::GetEmail()."<br>"),
                 new Strong(new TextRender('Billing Address: ')),
@@ -298,23 +338,23 @@ function verify_customer_card_info() {
 function transfirst_submission() {
     $form = new RenderList();
     if (page_action::GetAction() == action_types::$pre_card_submission) {
-        $form = new Form(id('TRANSFIRST').action("https://webservices.primerchants.com/billing/TransactionCentral/processCC.asp?").name('frmReturn').id('frmReturn'),
-       // $form = new Form(id('TRANSFIRST').action(admin_url('admin.php?page=conference-sales&', 'https')).name('frmReturn').id('frmReturn'),
+        $form = new Form(action("https://webservices.primerchants.com/billing/TransactionCentral/processCC.asp?").name('frmReturn').id('frmReturn'),
+        //$form = new Form(id('TRANSFIRST').action(admin_url('admin.php?page=conference-sales&', 'https')).name('frmReturn').id('frmReturn'),
             //added here
-           // new Input(type('hidden').name('Auth').value('Approved')),
+            //new Input(type('hidden').name('Auth').value('Approved')),
             new Input(type('hidden').name('MerchantID').id('100846').value(get_option('merchantid'))),
             new Input(type('hidden').name('RegKey').id('5QJ6J3H3YSYZAAZA').value(get_option('regkey'))),
             new Input(type('hidden').name('CCRURL').value(admin_url('admin.php?page=conference-sales&', 'https'))),
             new Input(type('hidden').name('ConfirmPage').value('Y')),
             new Input(type('hidden').name('RefID').value(checkout_payment::GetTransactionID())),
-            new Input(type('hidden').name('Amount').value(checkout_payment::GetAmountPaid())),
+			new Input(type('hidden').name('Amount').value(checkout_payment::GetAmountPaid())),
             new Input(type('hidden').name('TaxAmount').value(get_paid_amount_tax_total())),
             new Input(type('hidden').name('TaxIndicator').value(1)),
-            new Input(type('hidden').name('NameonAccount').value(checkout_payment::GetName())),
+            new Input(type('hidden').name('NameonAccount').value(checkout_payment::GetCardName())),
             new Input(type('hidden').name('AccountNo').value(checkout_payment::GetCardNumber())),
             new Input(type('hidden').name('CCMonth').value(checkout_payment::GetCardExpirationMonth())),
             new Input(type('hidden').name('CCYear').value(checkout_payment::GetCardExpirationYear())),
-            new Input(type('hidden').name('CVV2').value(checkout_payment::GetCardVerification())),
+            new TextRender('CCV: '), new Input(type('text').name('CVV2').value(checkout_payment::GetCardVerification())),
             new Input(type('hidden').name('AVSADDR').value(checkout_payment::GetAddress())),
             new Input(type('hidden').name('AVSZIP').value(checkout_payment::GetZip())),
             new Input(type('hidden').name('ShipToZipCode').value(checkout_payment::GetZip())),
@@ -396,6 +436,7 @@ function create_transaction() {
     }
     Transaction::$props[Transaction::$conference]->SetValue($transaction, 1);
     if (checkout_payment::GetName()) Transaction::$props[Transaction::$customer_name]->SetValue($transaction, checkout_payment::GetName());
+	if (checkout_payment::GetCardName()) Transaction::$props[Transaction::$customer_name]->SetValue($transaction, checkout_payment::GetCardName());
     if (checkout_payment::GetEmail()) Transaction::$props[Transaction::$customer_email]->SetValue($transaction, checkout_payment::GetEmail());
     if (!Transaction::$props[Transaction::$customer_address])
         Transaction::$props[Transaction::$customer_address]->SetValue($transaction, "Conference Sale");
@@ -483,8 +524,12 @@ function get_customer_credit_info() {
     $leftcolwidth = 20;
     $list = new RenderList(
         new Div(id(checkout_payment::$display_credit).classType('desc').style('display: none;'),
-            new Form(id('TRANSFIRST').action('').name('creditform'),
+            new Form(id('TRANSFIRST').action('').name('creditform').onsubmit('setFromCCS()'),
                 new TableArr(id('formtable').width(100).border(0).cellspacing(0).cellpadding(0),
+					new Row(
+                        new Column(align('right'), new Label(forAttr(checkout_payment::$amount_paid), new TextRender('Amount:'))),
+                        new Column(checkout_payment::InputAmountPaid())
+                    ),
                     new Row(
                         new Column(width($leftcolwidth)),
                         new Column(new Input(id('swipe').type('text').value("").placeholder('Swipe card &hellip;')))
@@ -492,10 +537,10 @@ function get_customer_credit_info() {
                     new Row(
                         new Column(align('right'),
                             new Input(type('hidden').name('TrackData').id('TrackData')),
-                            new Label(forAttr(checkout_payment::$name), new TextRender('Name on Card:'))
+                            new Label(forAttr(checkout_payment::$card_name), new TextRender('Name on Card:'))
                         ),
                         new Column(
-                            new Input(type('text').id(checkout_payment::$name).name(checkout_payment::$name).onclick('setFromCCS()'))
+                            new Input(id(checkout_payment::$card_name).name(checkout_payment::$card_name).type('text'))
                         )
                     ),
                     new Row(
@@ -534,10 +579,6 @@ function get_customer_credit_info() {
                     new Row(
                         new Column(align('right'), new Label(forAttr(checkout_payment::$zip), new TextRender('Zip:'))),
                         new Column(checkout_payment::InputZip())
-                    ),
-                    new Row(
-                        new Column(align('right'), new Label(forAttr(checkout_payment::$amount_paid), new TextRender('Amount:'))),
-                        new Column(checkout_payment::InputAmountPaid())
                     ),
                     new Row(
                         new Column(),
@@ -688,33 +729,6 @@ function insert_scripts() {
                 });
             }
         );
-    </script>
-    <script type="text/javascript">
-        function setFromCCS() {
-            document.getElementById("swipe").blur(function (e) {
-                e.preventDefault();
-            });
-            var ccs = document.getElementById("swipe").value;
-            var index1 = ccs.indexOf("%B") + 2;
-            var index2 = ccs.indexOf("^") + 1;
-            var index3 = ccs.indexOf("^", index2 + 1) + 1;
-
-            var cardNumber = ccs.substring(index1, index2 - 1);
-            var expMonth = ccs.substr(index3, 2);
-            var expYear = ccs.substr(index3 + 2, 2);
-            var holderName = ccs.substring(index2, index3 - 1);
-            var index4 = holderName.indexOf("/");
-            var temp1 = holderName.substring(0, index4);
-            var temp2 = holderName.substring(index4 + 1);
-            holderName = temp2 + ' ' + temp1;
-
-            document.getElementById("swipe").style.display = "none";
-            document.getElementById("ch").value = holderName;
-            document.getElementById("cn").value = cardNumber;
-            document.getElementById("cm").value = expMonth;
-            document.getElementById("cy").value = expYear;
-        }
-        ;
     </script>
     <?php
 }

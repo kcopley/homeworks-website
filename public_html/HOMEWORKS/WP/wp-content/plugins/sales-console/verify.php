@@ -267,7 +267,7 @@ function verify_book_database() {
         $query->the_post();
         global $post;
         $book = $post->ID;
-        verify_book($book);
+        verify_count($book);
         $counter++;
     endwhile;
     $_REQUEST['last_update'] = $offset + 500;
@@ -322,6 +322,10 @@ function verify_radio($id) {
     if (!$var) $var = 1;
     else $var = 2;
     Book::$props[Book::$condition]->SetValue($id, $var);
+}
+
+function verify_count($id) {
+	Book::update_count($id);
 }
 
 function verify_book($id) {

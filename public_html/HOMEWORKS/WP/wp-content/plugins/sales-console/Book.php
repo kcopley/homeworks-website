@@ -289,12 +289,13 @@ class Book {
             Consigner::consigner_add_sold_book($soldconsigner, $book_id);
         }
         self::set_consigners($book_id, $consigners);
-
+		Book::update_count($book_id);
     }
 
     public static function remove_book($book_id, $consigner_id) {
         self::remove_consigner_from_book($book_id, $consigner_id);
         Consigner::remove_book_from_consigner($consigner_id, $book_id);
+		Book::update_count($book_id);
     }
 
     public static function remove_consigner_from_book($book, $consigner) {

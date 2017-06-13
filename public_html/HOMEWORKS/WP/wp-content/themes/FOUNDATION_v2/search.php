@@ -1,163 +1,145 @@
-<?php get_header(); ?>
+<?php get_header(); 
+$path = $_SERVER['DOCUMENT_ROOT'];
+include($path.'/homeworks/public_html/HOMEWORKS/WP/wp-content/plugins/sales-console/includes.php');
+?>
 
 <article class="row">
 
-	<h1 class="offset-by-one">Search Results for <br /> <span>"<?php echo get_search_query(); ?>"</span></h1>
+    <?php
 
-	<div class="seven columns">
+        $h1 = new H1(classType("offset-by-one"), new TextRender("Search Results"));
+        $h1->Render();
+    
+        $paged = $_REQUEST['set_page_num'];
+        if (!$paged || $paged <= 0) $paged = 0;
+        $num_per_page = 16;
 
-	<?php
+        $keyword = $_REQUEST['search_name'];
+        $publisher = $_REQUEST['search_publisher'];
+        $isbn = $_REQUEST['search_ISBN'];
 
-	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $arr = array(
+            array(
+                'key' => '_cmb_resource_available',
+                'value' => 2,
+                'compare' => '='
+            ),
+            array(
+                'key' => '_cmb_resource_online',
+                'value' => 2,
+                'compare' => '='
+            )
+        );
+        if ($publisher) {
+           $arr[] = array(
+               'key' => '_cmb_resource_publisher',
+               'value' => $publisher,
+               'compare' => 'LIKE'
+           );
+        }
 
-	$largs = array(
-		's' => get_search_query(),
-		'posts_per_page' => 25,
-		'order'=> 'ASC',
-		'orderby' => 'title',
-		'post_type' => 'bookstore',
-		'paged' => $paged,
-		'meta_query' => array(
-			array(
-				'key' => '_cmb_resource_available',
-				'value' => 2,
-				'compare' => '='
-			),
-			array(
-				'key' => '_cmb_resource_online',
-				'value' => 2,
-				'compare' => '='
-			)
-		)
-	);
+        if ($isbn) {
+            $arr[] = array(
+                'key' => '_cmb_resource_isbn',
+                'value' => $isbn,
+                'compare' => '='
+            );
+        }
+
+        $largs = array(
+            'numberposts' => $num_per_page,
+            'posts_per_page' => $num_per_page,
+            'order'=> 'ASC',
+            'orderby' => 'title',
+            'post_type' => 'bookstore',
+            'offset' => $num_per_page * $paged,
+            'meta_query' => $arr
+        );
+
+        if ($keyword) {
+            $largs['s'] = $keyword;
+        }
 
 	$lpostslist = new WP_Query( $largs );
 
-	$count = $lpostslist->post_count;
+	$count = $lpostslist->found_posts;
 
-	if ( $lpostslist->have_posts() ):
+        if ( $lpostslist->have_posts()) {
+            $divvy = new Div(style("display: inline-block; width: 80%;"));
+            $divvy->add_object(new Div(style("display: inline-block; width: 50%; margin-right: 15px;"),
+                    new H4(classType("offset-by-one"), new TextRender('('.$count.') resouces found'))));
+            if ($paged > 0) {
+                $divvy->add_object(new Form(style("display: inline-block; margin-right: 10px; margin-left: 10px;"),
+                    new Input(type("hidden").id("set_page_num").name("set_page_num").value($paged - 1)),
+                    button('Previous')
+                ));
+            }
+            if ($paged * $num_per_page < $count){
+                $divvy->add_object(new Form(style("display: inline-block; margin-right: 10px; margin-left: 10px;"),
+                    new Input(type("hidden").id("set_page_num").name("set_page_num").value($paged + 1)),
+                    button('Next')
+                ));
+            }
+            $divvy->Render();
+        }
+        
+        $table = new TableArr(style("table-layout: fixed; width: 100%;").border(0).cellpadding(0).cellspacing(2));
 
-		echo "<h4 class='offset-by-one'>(".$count,") resources</h4>";
+        $offset = false;
+        
+        if ($count > 0):
+            $counter = 0;
+            while ( $lpostslist->have_posts() && $counter < $num_per_page) :
+                $lpostslist->the_post();
 
-   		while ( $lpostslist->have_posts() ) :
+                if (!$offset){
+                    $row = new Row();
+                    $table->add_object($row);
+                }
 
-        	$lpostslist->the_post(); ?>
+                $col = new Column(width(15));
+                if ( has_post_thumbnail() ) {
+                    $col->add_object(new TextRender(get_the_post_thumbnail( null, $size, $attr )));
+                } else {
+                    $col->add_object(
+                        new IMG(src(get_bloginfo( "template_url" ) + '/images/noimage.gif'))
+                    );
+                }
+                $row->add_object($col);
 
-			<div class="row">
+                $row->add_object(new Column(width(1)));
 
-				<div class="three columns">
-
-				<?php if ( has_post_thumbnail() ) {
-
-					the_post_thumbnail();
-
-				} else { ?>
-
-					<img src="<?php bloginfo( 'template_url' ); ?>/images/noimage.gif">
-
-				<?php } ?> 
-
-				</div>
-
-				<div class="nine columns">
-
-					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-
-					<p>Publisher: <?php global $post; echo get_post_meta($post->ID, '_cmb_resource_publisher', true) ?><br />
-
-					Retail price: <strike><?php global $post; echo '$'.number_format(get_post_meta($post->ID, '_cmb_resource_MSRP', true), 2) ?></strike><br />
-
-					<strong>Price: <span class="price"><?php global $post; echo '$'.number_format(get_post_meta($post->ID, '_cmb_resource_price', true), 2) ?></span></strong></p>
-
-					<p><?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?></p>
-
-					<a class="button" href="<?php the_permalink(); ?>">See details</a>
-
-				</div>
-
-			</div>
-
-    			<?php endwhile;
-
-			else: ?>
-
-			<div class="eleven columns offset-by-one">
-
-				<h3>Sorry, no results/additional resources were found.</H3>
-
-				<p>Yes, it can happen. However we're sure you'll find what you are looking for with a different search word &hellip;</p>
-
-				<p><br /><?php get_search_form(); ?></p>
-
-			</div>	
-
-			<?php endif;
-
-			wp_reset_query(); ?>
-
-	</div>
-
-	<div id="publisher-list" class="four columns">
-
-		<h2>Books by "<?php echo get_search_query(); ?>"</h2>
-
-	<?php
-
-	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-	$pargs = array(
-		'posts_per_page' => 25,
-		'order' => 'ASC',
-		'orderby' => 'title',
-		'post_type' => 'bookstore',
-		'paged' => $paged,
-		'meta_query' => array(
-			array(
-				'key' => '_cmb_resource_publisher',
-				'value' => get_search_query(),
-				'compare' => 'LIKE'
-			),
-			array(
-				'key' => '_cmb_resource_available',
-				'value' => 2,
-				'compare' => '='
-			),
-			array(
-				'key' => '_cmb_resource_online',
-				'value' => 2,
-				'compare' => '='
-			)
-		)
-	);
-
-	$ppostslist = new WP_Query( $pargs );
-
-	while ( $ppostslist->have_posts() ) :
-
-		$ppostslist->the_post(); ?>
-
-		<div class="row">
-
-			<div class="eleven columns">
-
-				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-
-				<p>Publisher: <?php global $post; echo get_post_meta($post->ID, '_cmb_resource_publisher', true) ?><br />
-
-				Retail price: <strike><?php global $post; echo '$'.number_format(get_post_meta($post->ID, '_cmb_resource_MSRP', true), 2) ?></strike><br />
-
-				<strong>Price: <span class="price"><?php global $post; echo '$'.number_format(get_post_meta($post->ID, '_cmb_resource_price', true)) ?></span></strong></p>
-
-			</div>
-
-		</div>
-
-    		<?php endwhile;
-
-		wp_reset_query(); ?>
-
-	</div>
-
+                $col = new Column(width(31));
+                $div = new Div(classType("nine columns"),
+                    new H4(new A(href(get_permalink()), new TextRender(get_the_title()))),
+                    new Paragraph(new TextRender("Publisher: "), new TextRender(get_post_meta($post->ID, '_cmb_resource_publisher', true)),
+                            new BR(),
+                            new TextRender("Retail price: "), new TextRender('$'.number_format(get_post_meta($post->ID, '_cmb_resource_MSRP', true), 2)),
+                            new BR(),
+                            new Strong(new TextRender("Price: "), new Span(classType("price")), new TextRender('$'.number_format(get_post_meta($post->ID, '_cmb_resource_price', true), 2)))
+                    ),
+                    new A(classType("button").href(get_permalink()), new TextRender("See details"))
+                );
+                $col->add_object($div);
+                $row->add_object($col);
+                if (!$offset) {
+                    $row->add_object(new Column(width(2)));
+                    $offset = true;
+                }
+                else {
+                    $offset = false;
+                }
+                $counter++;
+            endwhile;
+            $table->Render();
+            
+        else: ?>
+            <div class="eleven columns offset-by-one">
+                <h3>Sorry, no results/additional resources were found.</H3>
+                <p>Yes, it can happen. However we're sure you'll find what you are looking for with a different search word &hellip;</p>
+            </div>
+        <?php endif;
+        wp_reset_query(); ?>
 </article>
 
 <?php get_footer(); ?>

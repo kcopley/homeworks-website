@@ -23,7 +23,7 @@
 <?php foreach($issues as $i){ if($i['severity'] == 1){ ?>
 <p>* <?php echo htmlspecialchars($i['shortMsg']) ?></p>
 <?php if (isset($i['tmplData']['wpURL'])): ?>
-<p><?php if ($i['tmplData']['vulnerabilityPatched']) { ?><strong>Update includes security-related fixes.</strong> <?php } echo $i['tmplData']['wpURL']; ?>/changelog</p>
+<p><?php if ($i['tmplData']['vulnerabilityPatched']) { ?><strong>Update includes security-related fixes.</strong> <?php } echo $i['tmplData']['wpURL']; ?>/#developers</p>
 <?php elseif (isset($i['tmplData']['vulnerabilityPatched']) && $i['tmplData']['vulnerabilityPatched']): ?>
 <p><strong>Update includes security-related fixes.</strong></p>
 <?php endif ?>
@@ -45,13 +45,13 @@
 <?php foreach($issues as $i){ if($i['severity'] == 2){  ?>
 <p>* <?php echo htmlspecialchars($i['shortMsg']) ?></p>
 		<?php if (isset($i['tmplData']['wpURL'])): ?>
-			<p><?php echo $i['tmplData']['wpURL']; ?>/changelog</p>
+			<p><?php echo $i['tmplData']['wpURL']; ?>/#developers</p>
 		<?php endif ?>
 
 <?php } } } ?>
 
 <?php if ($issuesNotShown > 0) { ?>
-<p><?php echo wfUtils::pluralize($issuesNotShown, 'issue'); ?> were omitted from this email. View every issue: <a href="<?php echo esc_attr(network_admin_url('admin.php?page=Wordfence')); ?>"><?php echo esc_html(network_admin_url('admin.php?page=Wordfence')); ?></a></p>
+<p><?php echo wfUtils::pluralize($issuesNotShown, 'issue'); ?> were omitted from this email. View every issue: <a href="<?php echo esc_attr(network_admin_url('admin.php?page=WordfenceScan')); ?>"><?php echo esc_html(network_admin_url('admin.php?page=WordfenceScan')); ?></a></p>
 <?php } ?>
 
 

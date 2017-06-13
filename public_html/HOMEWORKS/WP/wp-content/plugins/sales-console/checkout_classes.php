@@ -8,6 +8,7 @@
 
 class checkout_payment {
     public static $name = 'trans_customer_name';
+	public static $card_name = 'trans_customer_name_card';
     public static $email = 'trans_customer_email';
     public static $card_number = 'trans_customer_card_number';
     public static $card_expiration_month = 'trans_customer_card_expiration_month';
@@ -69,9 +70,13 @@ class checkout_payment {
     public static function InputTransactionID() {
         return new Input(id(self::$transaction_id).name(self::$transaction_id).type('text'));
     }
-
-    public static function GetName() {
+	
+	public static function GetName() {
         return $_REQUEST[self::$name];
+    }
+
+    public static function GetCardName() {
+        return $_REQUEST[self::$card_name];
     }
 
     public static function InputName() {
@@ -79,7 +84,7 @@ class checkout_payment {
     }
 
     public static function GetCardVerification() {
-        return $_REQUEST[self::$name];
+        return $_REQUEST[self::$card_verification];
     }
 
     public static function InputCardVerification() {

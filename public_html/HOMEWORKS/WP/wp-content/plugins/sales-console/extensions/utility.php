@@ -243,6 +243,14 @@ function href($str){
     return ' href="'.$str.'" ';
 }
 
+function onsubmit($str){
+    return ' onsubmit="'.$str.'" ';
+}
+
+function src($str){
+    return ' src="'.$str.'" ';
+}
+
 function add_image($id) {
     set_post_thumbnail($id, absint( $_POST[Book::$image_set]));
 }

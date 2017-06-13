@@ -86,6 +86,7 @@ Template Name: Billing
 
 				$creditcard = "XXXX-XXXX-XXXX-".substr($card,-4,4);
 
+				$cardnum = trim($_REQUEST['billingCard1']).trim($_REQUEST['billingCard2']).trim($_REQUEST['billingCard3']).trim($_REQUEST['billingCard4']);
 			?>
 
 			<strong>Card number:</strong> <?php echo $creditcard; ?><br />
@@ -94,16 +95,10 @@ Template Name: Billing
 
 		</fieldset>
 
-		<?php
-		//<form id="TRANSFIRST" method="POST" action="<?php bloginfo('url'); ?>/response" name="frmReturn" id="frmReturn">
-		?>
 		<form id="TRANSFIRST" method="POST" action="https://webservices.primerchants.com/billing/TransactionCentral/processCC.asp?" name="frmReturn" id="frmReturn">
 			<input type="hidden" name="MerchantID" value="<?php echo get_option('merchantid'); ?>">
 			<input type="hidden" name="RegKey" value="<?php echo get_option('regkey'); ?>">
 			<input type="hidden" name="CCRURL" value="<?php bloginfo('url'); ?>/response">
-
-			<?php // Added this here ?>
-			//<input type="hidden" name="Auth" value="<?php echo 'Approved'; ?>">
 
 			<input type="hidden" name="RefID" value="<?php echo $_SESSION['checkout']['RefID'];?>">
 
@@ -116,11 +111,7 @@ Template Name: Billing
 			<?php }; ?>
 
                         <input type="hidden" name="TaxIndicator" value="1">
-                        <input type="hidden" name="AccountNo" value="
-							<?php echo $_REQUEST['billingCard1'];?>
-							<?php echo $_REQUEST['billingCard2'];?>
-							<?php echo $_REQUEST['billingCard3'];?>
-							<?php echo $_REQUEST['billingCard4'];?>">
+                        <input type="hidden" name="AccountNo" value="<?php echo $cardnum; ?>">
                         <input type="hidden" name="NameonAccount" value="<?php echo $_SESSION['checkout']['billingName'];?>">
                         <input type="hidden" name="CCMonth" value="<?php echo $_SESSION['checkout']['billingMonth'];?>">
                         <input type="hidden" name="CCYear" value="<?php echo $_SESSION['checkout']['billingYear'];?>">

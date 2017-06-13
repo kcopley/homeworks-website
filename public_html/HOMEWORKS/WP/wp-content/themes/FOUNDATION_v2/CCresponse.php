@@ -14,6 +14,36 @@ Template Name: CC Confirmation
 <?php get_header();
 
 $invoice = get_next_invoice();
+
+function process_auth() {
+    if ($_REQUEST[request_sales_Auth()] == sales_AuthCodeDeclined()) {
+        $cw2 = $_REQUEST[request_sales_CCResponse()];
+        if ($cw2 == sales_purchase_error()) {
+            $render = new RenderList(
+                new H4(new TextRender('Purchase Error')),
+                new H4(new TextRender('There was an error processing the order.'))
+            );
+            $render->Render();
+        }
+        else if ($cw2 == sales_incorrect_number()) {
+            $render = new RenderList(
+                new H4(new TextRender('Card Error')),
+                new H4(new TextRender('Credit card information does not match.'))
+            );
+            $render->Render();
+        }
+        else {
+            $render = new RenderList(
+                new H4(new TextRender('Processing Error')),
+                new H4(new TextRender('Your card could not be identified.'))
+            );
+            $render->Render();
+        }
+        return false;
+    }
+    return true;
+}
+
 ?>
 
 <article class="row">
@@ -28,9 +58,14 @@ $invoice = get_next_invoice();
 
 		<div class="row">
 
-		<?php $approval = $_REQUEST["Auth"];
+		<?php 
+		
+		$successful = false;
+		if ($_REQUEST[request_sales_Auth()]) {
+			$successful = process_auth();
+		}
 
-		if ($approval != "Declined") { 
+		if ($successful) { 
 
 			//$emailTo = get_option('customerservice');
 

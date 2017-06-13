@@ -7,6 +7,7 @@
  */
 include_once 'extensions/Column.php';
 include_once 'extensions/Form.php';
+include_once 'extensions/IMG.php';
 include_once 'extensions/Input.php';
 include_once 'extensions/Label.php';
 include_once "extensions/TextRender.php";
@@ -17,6 +18,7 @@ include_once "extensions/RenderList.php";
 include_once "extensions/HR.php";
 include_once "extensions/requests.php";
 include_once "extensions/H4.php";
+include_once "extensions/H1.php";
 include_once "extensions/Div.php";
 include_once "checkout_classes.php";
 include_once "extensions/Paragraph.php";
