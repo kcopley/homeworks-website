@@ -197,6 +197,15 @@ class Transaction
                 )
             );
         }
+		if (!empty(Transaction::get_payment_types($id))) {
+            $table->add_object(
+                new Row(
+                    new Column(style('padding-bottom: 8px;'),
+                        self::get_payment_list($id)
+                    )
+                )
+            );
+        }
         return $table;
     }
 
@@ -288,6 +297,49 @@ class Transaction
             }
         }
         return $table;
+    }
+	
+	public static function get_payment_list($id) {
+        $titlewidth = 20;
+        $otherwidth = 10;
+        $table = new RenderList();
+        if (!empty(Transaction::get_payment_types($id))) {
+            $table = new TableArr(border(0).cellpadding(0).cellspacing(2).id('formtable').width(100).
+                style('padding: 10px; border: solid; border-width: 1px; border-color: #D0D0D0;'),
+                new Row(
+                    new Column(width($titlewidth), new H4(style('margin: 0px; font-size: 14px;'), new TextRender('Payments'))),
+                    new Column(width($otherwidth), new H4(style('margin: 0px;'), new TextRender(''))),
+                    new Column(width($otherwidth), new H4(style('margin: 0px;'), new TextRender(''))),
+                    new Column(width($otherwidth), new H4(style('margin: 0px;'), new TextRender(''))),
+                    new Column(width($otherwidth), new H4(style('margin: 0px;'), new TextRender(''))),
+                    new Column(width($otherwidth), new H4(style('margin: 0px;'), new TextRender(''))),
+                    new Column(width($otherwidth)),
+                    new Column()
+                )
+            );
+
+            $payments = Transaction::get_payment_types($id);
+            foreach ($payments as $payment) {
+                $table->add_object(self::payment_display_transaction($payment));
+            }
+        }
+        return $table;
+    }
+	
+	function payment_display_transaction($payment) {
+        $type = $payment[self::$payment_type];
+		if ($type == checkout_payment::$payment_credit) $type = 'Credit';
+		if ($type == checkout_payment::$payment_cash) $type = 'Cash';
+		if ($type == checkout_payment::$payment_phone) $type = 'Phone';
+		if ($type == checkout_payment::$payment_check) $type = 'Check';
+		$amount = $payment[self::$payment_amount];
+
+        return new Row(
+            new Column(style('padding-top: 6px; padding-bottom: 6px;'),
+                new TextRender($type)),
+            new Column(style('padding-top: 6px; padding-bottom: 6px;'),
+                new TextRender('$'.number_format($amount, 2)))
+        );
     }
 
     function book_display_transaction($book) {
@@ -431,7 +483,8 @@ class Transaction
                             new Column(colspan(10).style('padding-bottom: 0px;'),
                                 new HR(style('margin: 0px;')))),
                         Transaction::get_payment_printing($id),
-                        Transaction::get_refund_printing($id)
+                        Transaction::get_refund_printing($id),
+						Transaction::get_due_printing($id)
                     ),
                     new Paragraph(style('text-align: center;'),
                         new TextRender(get_option('invoicepromo'))
@@ -485,18 +538,21 @@ class Transaction
                 )
             );
         }
-        else {
-            $list->add_object(
-                new Row(
-                    new Column(valign('top')),
-                    new Column(align('right').valign('top').width(10),
-                        new Strong(new TextRender('Due:'))),
-                    new Column(style('padding-left: 4px;'),
-                        new Strong(new TextRender(' $'.number_format(0, 2)))
-                    )
-                )
-            );
-        }
+        return $list;
+    }
+	
+	public static function get_due_printing($id) {
+        $list = new RenderList();
+		$list->add_object(
+			new Row(
+				new Column(valign('top')),
+				new Column(align('right').valign('top').width(10),
+					new Strong(new TextRender('Due:'))),
+				new Column(style('padding-left: 4px;'),
+					new Strong(new TextRender(' $'.number_format(Transaction::get_total($id) - Transaction::get_total_paid($id), 2)))
+				)
+			)
+		);
         return $list;
     }
 

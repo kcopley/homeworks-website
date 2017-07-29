@@ -1200,7 +1200,7 @@ class ImportButton {
     public function GetDisplay($id, $source) {
         $block = false;
         if (Transaction::$props[Transaction::$complete]->GetValue($id) == 2) {
-            $block = true;
+            //$block = true;
         }
 
         if ($this->custom) {
@@ -1232,7 +1232,7 @@ class ImportButton {
     public function GetEditForm($id, $leftwidth, $rightwidth, $form) {
         $block = false;
         if (Transaction::$props[Transaction::$complete]->GetValue($id) == 2) {
-            $block = true;
+            //$block = true;
         }
         if ($this->custom) {
             $button = $this->custom;

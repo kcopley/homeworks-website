@@ -1,6 +1,9 @@
 <?php
 include_once "includes.php";
 
+//Enqueue the JS scripts
+wp_enqueue_media();
+
 selection::GetPages(vars::$consigner_page);
 selection::GetIDS();
 
@@ -62,8 +65,55 @@ switch (page_action::GetAction()) {
         Consigner::PayOutBooks(selection::GetID(Consigner::$source));
         Consigner::SelectConsigner(selection::GetID(Consigner::$source))->Render();
         break;
+	case action_types::add_image(Book::$source):
+        add_image(selection::GetID(Book::$source));
+		page_action::SetNewAction(action_types::get_search(Book::$source));
+		Consigner::SelectConsigner(selection::GetID(Consigner::$source))->Render();
+        break;
     default:
         selection::ResetPages(vars::$consigner_page);
 };
+
+//Add the scripts to the page
+media_selector_print_scripts();
+
+function media_selector_print_scripts() {
+    ?><script type='text/javascript'>
+        jQuery(document).ready( function($) {
+            var file_frame;
+            jQuery('.upload_image_button').on('click', function( event ){
+
+                var element = event.target;
+                var post_id = event.target.id;
+                var parent = element.parentElement;
+
+                event.preventDefault();
+                if ( file_frame ) {
+                    file_frame.open();
+                    return;
+                }
+                // Create the media frame.
+                file_frame = wp.media.frames.file_frame = wp.media({
+                    title: 'Select a image to upload',
+                    button: {
+                        text: 'Use this image',
+                    },
+                    multiple: false	// Set to true to allow multiple files to be selected
+                });
+
+                // When an image is selected, run a callback.
+                file_frame.on( 'select', function() {
+                    // We set multiple to false so only get one image from the uploader
+                    attachment = file_frame.state().get('selection').first().toJSON();
+                    attach = parent.elements["image_attachment_id"];
+                    attach.value = attachment.id;
+                    parent.submit();
+                });
+                // Finally, open the modal
+                file_frame.open();
+            });
+        });
+    </script><?php
+}
 
 ?>

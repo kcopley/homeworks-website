@@ -44,120 +44,100 @@ session_start();
 include_once "includes.php";
 selection::GetIDS();
 
-if ($_REQUEST[request_sales_Auth()]) {
+if ($_REQUEST[sales_Auth()] && !$_SESSION['finalized_credit']) {
     $successful = process_auth();
     if ($successful) {
-        $_REQUEST[checkout_payment::$amount_paid] = $_SESSION['last_credit_payment'];
-        $_REQUEST[checkout_payment::$payment_type] = checkout_payment::$payment_credit;
+        $_SESSION[checkout_payment::$amount_paid] = $_SESSION['last_credit_payment'];
+        $_SESSION[checkout_payment::$payment_type] = checkout_payment::$payment_credit;
         $paid = checkout_payment::GetAmountPaid();
         $currentPaid = checkout_payment::GetTotalAmountPaid();
         $totalPaid = $currentPaid + $paid;
         checkout_payment::SetTotalAmountPaid($totalPaid);
+		$_SESSION['finalized_credit'] = true;
+		$_SESSION['last_credit_payment'] = 0.0;
     }
 }
 else {
     unset($_SESSION['last_credit_payment']);
 }
 
+$tid = $_SESSION[checkout_payment::$current_transaction_id];
+if (!$tid) create_transaction();
 
 switch (page_action::GetAction()){
+	//Add a book from the book box
     case action_types::$add_item_checkout:
-        if (!$_SESSION[checkout_payment::$current_transaction_id] || Transaction::$props[Transaction::$complete]->GetValue($_SESSION[checkout_payment::$current_transaction_id]) == 1) {
-            if (isset($_POST['add_item_button'])) {
-                checkout_cart::add_book(checkout_request::GetBarcode(), checkout_request::GetISBN(), checkout_request::GetQuantity());
-            } else if (isset($_POST['refund_item_button'])) {
-                checkout_cart::add_refund(checkout_request::GetBarcode(), checkout_request::GetISBN(), checkout_request::GetQuantity());
-            }
-        }
+        if (isset($_POST['add_item_button'])) {
+			add_book_to_cart();
+		} else if (isset($_POST['refund_item_button'])) {
+			add_refund_to_cart();
+		}
+		clear_requests();
         break;
+	//Add a credit from the credit box
     case action_types::$add_credit_checkout:
-        $tid = $_SESSION[checkout_payment::$current_transaction_id];
-        if (!$tid || Transaction::$props[Transaction::$complete]->GetValue($tid) == 1) {
-            if (checkout_request::GetCreditAmount() != -1) {
-                checkout_cart::add_credit(checkout_request::GetCreditName(), checkout_request::GetCreditAmount());
-            }
-        }
+		if (checkout_request::GetCreditAmount() != -1) {
+			add_credit_to_cart();
+		}
+		clear_requests();
         break;
+	//Remove the item that was selected
     case action_types::$remove_item_checkout:
-        $tid = $_SESSION[checkout_payment::$current_transaction_id];
-        if (!$tid || Transaction::$props[Transaction::$complete]->GetValue($tid) == 1) {
-            checkout_cart::remove_book_from_cart(selection::GetID(Book::$source), checkout_request::GetRemoveQuantity());
-            Transaction::set_books_from_cart($transaction, checkout_cart::GetCart());
-        }
+		checkout_cart::remove_book_from_cart(selection::GetID(Book::$source), checkout_request::GetRemoveQuantity());
+		clear_requests();
         break;
+	//Remove the credit that was selected
     case action_types::$remove_credit_checkout:
-        $tid = $_SESSION[checkout_payment::$current_transaction_id];
-        if (!$tid || Transaction::$props[Transaction::$complete]->GetValue($tid) == 1) {
-            checkout_cart::remove_credit(checkout_request::GetCreditIndex());
-            Transaction::set_credits_from_cart($transaction, checkout_cart::GetCredit());
-        }
+		checkout_cart::remove_credit(checkout_request::GetCreditIndex());
+		clear_requests();
         break;
+	//Clear the cart of all entries
     case action_types::$clear_checkout_cart:
-        $tid = $_SESSION[checkout_payment::$current_transaction_id];
-        if ($tid && Transaction::$props[Transaction::$complete]->GetValue($tid) == 2){
-            unset($_SESSION[checkout_payment::$current_transaction_id]);
-            unset($_SESSION[checkout_payment::$total_amount_paid]);
-        }
-        checkout_cart::clear_all();
+		checkout_cart::clear_cart();
+		clear_requests();
         break;
+	//Clear the credit column of entries
     case action_types::$clear_checkout_credit:
-        $tid = $_SESSION[checkout_payment::$current_transaction_id];
-        if (!$tid || Transaction::$props[Transaction::$complete]->GetValue($tid) == 1) {
-            checkout_cart::clear_credit();
-        }
+		checkout_cart::clear_credit();
+		clear_requests();
         break;
+	//Process the payment amount
     case action_types::$process_payment:
         $paid = checkout_payment::GetAmountPaid();
         $currentPaid = checkout_payment::GetTotalAmountPaid();
         $totalPaid = $currentPaid + $paid;
         checkout_payment::SetTotalAmountPaid($totalPaid);
         break;
+	//Store the amount of the credit payment
     case action_types::$pre_card_submission:
+		$_SESSION['finalized_credit'] = false;
+		checkout_payment::save_requests();
         $_SESSION['last_credit_payment'] = checkout_payment::GetAmountPaid();
         break;
+	//Clear all of the entries and start a new order
     case action_types::$clear_checkout:
-        $tid = $_SESSION[checkout_payment::$current_transaction_id];
-        if ($tid && Transaction::$props[Transaction::$complete]->GetValue($tid) == 1){
-            wp_delete_post($tid);
-        }
-        checkout_cart::clear_all();
-        unset($_SESSION[checkout_payment::$current_transaction_id]);
-        unset($_SESSION[checkout_payment::$total_amount_paid]);
-		$_SESSION['last_credit_payment'] = 0;
+        clear_checkout_full();
+		clear_requests();
+		create_transaction();
         break;
+	//Save the existing transaction and then create a new one
     case action_types::$clear_checkout_save:
-        $tid = $_SESSION[checkout_payment::$current_transaction_id];
-        if ($tid && (empty(checkout_cart::GetCart()) && empty(checkout_cart::GetCredit()) && empty(checkout_cart::GetRefundBooks()) && empty(Transaction::get_payment_types($tid)))){
-            wp_delete_post($tid);
-        }
-        else {
-            create_transaction();
-        }
-        checkout_cart::clear_all();
-        unset($_SESSION[checkout_payment::$current_transaction_id]);
-        unset($_SESSION[checkout_payment::$total_amount_paid]);
+		clear_checkout_saving();
+		clear_requests();
+        create_transaction();
         break;
+	//Import a transaction!
     case action_types::$import_transaction:
         $tid = $_SESSION[checkout_payment::$current_transaction_id];
-        if ($tid && Transaction::$props[Transaction::$complete]->GetValue($tid) == 1){
-            wp_delete_post($tid);
-        }
-        checkout_cart::clear_all();
-        unset($_SESSION[checkout_payment::$current_transaction_id]);
-        unset($_SESSION[checkout_payment::$total_amount_paid]);
-        $tid = selection::GetID(Transaction::$source);
-        import_transaction($tid);
+		clear_checkout_full();
+        $tnid = selection::GetID(Transaction::$source);
+		print $tnid;
+        import_transaction($tnid);
+		clear_requests();
+		break;
 }
 
-
-if (!empty(checkout_cart::GetCart()) || !empty(checkout_cart::GetCredit()) || !empty(checkout_cart::GetRefundBooks()) || checkout_payment::GetTotalAmountPaid() != 0.0)
-    create_transaction();
-else {
-    $tid = $_SESSION[checkout_payment::$current_transaction_id];
-    if ($tid && Transaction::$props[Transaction::$complete]->GetValue($tid) == 1){
-        wp_delete_post($tid);
-    }
-}
+if ($_SESSION[checkout_payment::$current_transaction_id]) update_transaction();
 
 $table = new TableArr(border(0).cellpadding(0).cellspacing(0).width(100), //global page table
     new Row(
@@ -179,8 +159,60 @@ if ($_SESSION[checkout_payment::$current_transaction_id]) {
 wp_enqueue_media();
 $table->Render();
 $tid = $_SESSION[checkout_payment::$current_transaction_id];
-if (!$tid || Transaction::$props[Transaction::$complete]->GetValue($tid) == 1) {
+if (page_action::GetAction() != action_types::$pre_card_submission) {
     insert_scripts();
+}
+
+function clear_requests() {
+	print 'clearing';
+	update_transaction();
+	finalize_transaction();
+	checkout_payment::clear_requests();
+	checkout_request::clear_requests();
+}
+
+function clear_checkout_full() {
+	$tid = $_SESSION[checkout_payment::$current_transaction_id];
+	if ($tid) {
+		$payments = Transaction::get_payment_types($tid);
+		if ($payments && count($payments) > 0) {
+			update_transaction();
+			finalize_transaction();
+		}
+		else {
+			wp_delete_post($tid);
+		}
+	}
+	checkout_cart::clear_all();
+	unset($_SESSION[checkout_payment::$total_amount_paid]);
+	unset($_SESSION[checkout_payment::$current_transaction_id]);
+	$_SESSION['last_credit_payment'] = 0;
+}
+
+function clear_checkout_saving() {
+	$tid = $_SESSION[checkout_payment::$current_transaction_id];
+	$tid = $_SESSION[checkout_payment::$current_transaction_id];
+	if ($tid) {
+		$payments = Transaction::get_payment_types($tid);
+		update_transaction();
+		finalize_transaction();
+	}
+	checkout_cart::clear_all();
+	unset($_SESSION[checkout_payment::$current_transaction_id]);
+	unset($_SESSION[checkout_payment::$total_amount_paid]);
+	$_SESSION['last_credit_payment'] = 0;
+}
+
+function add_book_to_cart() {
+	checkout_cart::add_book(checkout_request::GetBarcode(), checkout_request::GetISBN(), checkout_request::GetQuantity());
+}
+
+function add_refund_to_cart() {
+	checkout_cart::add_refund(checkout_request::GetBarcode(), checkout_request::GetISBN(), checkout_request::GetQuantity());
+}
+
+function add_credit_to_cart() {
+	checkout_cart::add_credit(checkout_request::GetCreditName(), checkout_request::GetCreditAmount());
 }
 
 function get_paid_message() {
@@ -322,6 +354,8 @@ function verify_customer_card_info() {
                 new TextRender(checkout_payment::GetCardName()."<br>"),
                 new Strong(new TextRender('Email: ')),
                 new TextRender(checkout_payment::GetEmail()."<br>"),
+				new Strong(new TextRender('Payment Amount: ')),
+                new TextRender('$'.number_format(checkout_payment::GetAmountPaid(), 2)."<br>"),
                 new Strong(new TextRender('Billing Address: ')),
                 new TextRender(checkout_payment::GetAddress()."<br>"),
                 new TextRender(checkout_payment::GetCity()),
@@ -376,7 +410,7 @@ function get_payment_info() {
 }
 
 function process_auth() {
-    if ($_REQUEST[request_sales_Auth()] == sales_AuthCodeDeclined()) {
+    if ($_REQUEST[sales_Auth()] == sales_AuthCodeDeclined()) {
         $cw2 = $_REQUEST[request_sales_CCResponse()];
         if ($cw2 == sales_purchase_error()) {
             $render = new RenderList(
@@ -402,6 +436,90 @@ function process_auth() {
         return false;
     }
     return true;
+}
+
+function finalize_transaction() {
+	$transaction = $_SESSION[checkout_payment::$current_transaction_id];
+    if (!$transaction) return;
+	
+	$roundedPaid = checkout_payment::GetTotalAmountPaid() * 100;
+    $roundedPaid = ceil($roundedPaid);
+    $roundedTotal = get_total() * 100;
+    $roundedTotal = floor($roundedTotal);
+	
+	if ($roundedPaid >= $roundedTotal) {
+        Transaction::$props[Transaction::$complete]->SetValue($transaction, 2);
+        $cart = checkout_cart::GetCart();
+        if (!empty($cart)) {
+            foreach ($cart as $key => $value) {
+                $quantity = $value[checkout_cart::$cart_book_quantity];
+                $book_id = $key;
+
+                for ($i = 0; $i < $quantity; $i++) {
+                    Book::sell_book($book_id);
+                }
+            }
+        }
+
+        $refunds = checkout_cart::GetRefundBooks();
+        if (!empty($refunds)) {
+            foreach ($refunds as $key => $value) {
+                $quantity = $value[checkout_cart::$cart_book_quantity];
+                $book_id = $key;
+
+                for ($i = 0; $i < $quantity; $i++) {
+                    Book::add_book($book_id, get_consigner_owner_id());
+                }
+            }
+        }
+		//completed, the books were sold
+		Transaction::$props[Transaction::$complete]->SetValue($transaction, 2);
+		Transaction::set_books_from_cart($transaction, checkout_cart::GetCart());
+		Transaction::set_refunds_from_cart($transaction, checkout_cart::GetRefundBooks());
+		return true;
+    }
+	else {
+		//just saved or cleared... no books actually changed
+		Transaction::$props[Transaction::$complete]->SetValue($transaction,1);
+		Transaction::set_books_from_cart($transaction, checkout_cart::GetCart());
+		Transaction::set_refunds_from_cart($transaction, checkout_cart::GetRefundBooks());
+		return false;
+	}
+}
+
+function update_transaction() {
+	$transaction = $_SESSION[checkout_payment::$current_transaction_id];
+    if (!$transaction) return;
+	
+	//update basic information
+	Transaction::$props[Transaction::$conference]->SetValue($transaction, 1);
+    if (checkout_payment::GetName()) Transaction::$props[Transaction::$customer_name]->SetValue($transaction, checkout_payment::GetName());
+	if (checkout_payment::GetCardName()) Transaction::$props[Transaction::$customer_name]->SetValue($transaction, checkout_payment::GetCardName());
+    if (checkout_payment::GetEmail()) Transaction::$props[Transaction::$customer_email]->SetValue($transaction, checkout_payment::GetEmail());
+    if (!Transaction::$props[Transaction::$customer_address])
+        Transaction::$props[Transaction::$customer_address]->SetValue($transaction, "Conference Sale");
+
+	//update the tax rate
+    Transaction::$props[Transaction::$taxrate]->SetValue($transaction, str_replace('$', '', get_option('ctaxrate') / 100));
+	
+	//update the date
+    date_default_timezone_set('America/Chicago');
+    Transaction::$props[Transaction::$date]->SetValue($transaction, date('Y-m-d'));
+    Transaction::$props[Transaction::$total]->SetValue($transaction, get_total());
+	
+	//update the payments
+	$paymentType = checkout_payment::GetPaymentType();
+    $paid = checkout_payment::GetAmountPaid();
+    if ($paymentType && $paid) {
+        if ($paymentType != checkout_payment::$payment_credit) {
+            Transaction::add_payment($transaction, $paymentType, $paid);
+        } else {
+            $transid = $_POST['TransID'];
+            Transaction::add_payment_credit($transaction, $paymentType, $paid, $transid);
+        }
+    }
+	
+	Transaction::set_credits_from_cart($transaction, checkout_cart::GetCredit());
 }
 
 function create_transaction() {
@@ -434,90 +552,35 @@ function create_transaction() {
         Transaction::$props[Transaction::$invoiceid]->SetValue($transaction, $newinvoice);
         $_SESSION[checkout_payment::$current_transaction_id] = $transaction;
     }
-    Transaction::$props[Transaction::$conference]->SetValue($transaction, 1);
-    if (checkout_payment::GetName()) Transaction::$props[Transaction::$customer_name]->SetValue($transaction, checkout_payment::GetName());
-	if (checkout_payment::GetCardName()) Transaction::$props[Transaction::$customer_name]->SetValue($transaction, checkout_payment::GetCardName());
-    if (checkout_payment::GetEmail()) Transaction::$props[Transaction::$customer_email]->SetValue($transaction, checkout_payment::GetEmail());
-    if (!Transaction::$props[Transaction::$customer_address])
-        Transaction::$props[Transaction::$customer_address]->SetValue($transaction, "Conference Sale");
-
-    Transaction::$props[Transaction::$taxrate]->SetValue($transaction, str_replace('$', '', get_option('ctaxrate') / 100));
-    date_default_timezone_set('America/Chicago');
-    Transaction::$props[Transaction::$date]->SetValue($transaction, date('Y-m-d'));
-    Transaction::$props[Transaction::$total]->SetValue($transaction, get_total());
-
-    $roundedPaid = checkout_payment::GetTotalAmountPaid() * 100;
-    $roundedPaid = ceil($roundedPaid);
-    $roundedTotal = get_total() * 100;
-    $roundedTotal = floor($roundedTotal);
-
-    if ($roundedPaid >= $roundedTotal) {
-        Transaction::$props[Transaction::$complete]->SetValue($transaction, 2);
-        $cart = checkout_cart::GetCart();
-        if (!empty($cart)) {
-            foreach ($cart as $key => $value) {
-                $quantity = $value[checkout_cart::$cart_book_quantity];
-                $book_id = $key;
-
-                for ($i = 0; $i < $quantity; $i++) {
-                    Book::sell_book($book_id);
-                }
-            }
-        }
-
-        $refunds = checkout_cart::GetRefundBooks();
-        if (!empty($refunds)) {
-            foreach ($refunds as $key => $value) {
-                $quantity = $value[checkout_cart::$cart_book_quantity];
-                $book_id = $key;
-
-                for ($i = 0; $i < $quantity; $i++) {
-                    Book::add_book($book_id, get_consigner_owner_id());
-                }
-            }
-        }
-    }
-    else {
-        Transaction::$props[Transaction::$complete]->SetValue($transaction, 1);
-    }
-
-    Transaction::set_books_from_cart($transaction, checkout_cart::GetCart());
-    Transaction::set_credits_from_cart($transaction, checkout_cart::GetCredit());
-    Transaction::set_refunds_from_cart($transaction, checkout_cart::GetRefundBooks());
-
-    $paymentType = checkout_payment::GetPaymentType();
-    $paid = checkout_payment::GetAmountPaid();
-    if ($paymentType && $paid) {
-        if ($paymentType != checkout_payment::$payment_credit) {
-            Transaction::add_payment($transaction, $paymentType, $paid);
-        } else if ($_REQUEST['USER1'] == "credit") {
-            $transid = $_REQUEST['TransID'];
-            Transaction::add_payment_credit($transaction, $paymentType, $paid, $transid);
-        }
-    }
 }
 
 function import_transaction($id) {
-    if (Transaction::$props[Transaction::$complete]->GetValue($id) == 2) return;
-
     $_SESSION[checkout_payment::$current_transaction_id] = $id;
 
     $books = Transaction::get_books($id);
-    foreach ($books as $book) {
-        $book_id = $book[Transaction::$book_id];
-        checkout_cart::add_book(Book::$props[Book::$barcode]->GetValue($book_id), Book::$props[Book::$isbn]->GetValue($book_id), $book[Transaction::$book_quantity]);
-    }
+	if ($books) {
+		foreach ($books as $book) {
+			$book_id = $book[Transaction::$book_id];
+			checkout_cart::add_book(Book::$props[Book::$barcode]->GetValue($book_id), Book::$props[Book::$isbn]->GetValue($book_id), $book[Transaction::$book_quantity]);
+		}
+	}
 
     $refunds = Transaction::get_refunds($id);
-    foreach ($refunds as $refund) {
-        $book_id = $refund[Transaction::$book_id];
-        checkout_cart::add_refund(Book::$props[Book::$barcode]->GetValue($book_id), Book::$props[Book::$isbn]->GetValue($book_id), $book[Transaction::$book_quantity]);
-    }
+	if ($refunds) {
+		foreach ($refunds as $refund) {
+			$book_id = $refund[Transaction::$book_id];
+			checkout_cart::add_refund(Book::$props[Book::$barcode]->GetValue($book_id), Book::$props[Book::$isbn]->GetValue($book_id), $book[Transaction::$book_quantity]);
+		}
+	}
 
-    $credits = Transaction::get_credits($id);
-    foreach ($credits as $credit) {
-        checkout_cart::add_credit($credit[Transaction::$credit_name], $credit[Transaction::$credit_amount]);
-    }
+	$credits = Transaction::get_credits($id);
+	if ($credits) {
+		foreach ($credits as $credit) {
+			checkout_cart::add_credit($credit[Transaction::$credit_name], $credit[Transaction::$credit_amount]);
+		}
+	}
+	
+	checkout_payment::SetTotalAmountPaid(Transaction::get_total_paid($id));
 }
 
 function get_customer_credit_info() {

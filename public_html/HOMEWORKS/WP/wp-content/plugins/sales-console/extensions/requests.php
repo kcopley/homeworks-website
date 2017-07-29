@@ -124,7 +124,7 @@ class page_action {
     public static $action = 'page_action';
 
     public static function InputAction($value) {
-        return new Input(id(page_action::$action).name(page_action::$action).type('hidden').value($value));
+        return new Input(id(page_action::$action).name(page_action::$action).type('hidden').value($value).method('post'));
     }
 
     public static function InputActionForm($value, $form) {

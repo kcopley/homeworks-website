@@ -26,6 +26,7 @@ class Consigner {
     public static $info = 'consigner_info';
     public static $totalpaid = 'consigner_paid';
     public static $totalowed = 'consigner_owed';
+	public static $image = 'book_image';
 
     static function init()
     {

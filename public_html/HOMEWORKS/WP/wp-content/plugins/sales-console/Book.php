@@ -131,7 +131,8 @@ class Book {
             self::$barcode => $barcode,
             self::$cost => $cost,
             self::$isbn => $isbn,
-            'add_book' => $add
+            'add_book' => $add,
+			self::$image => $image,
         );
 
         //$online = new Checkbox('book_online', 'Online', '_cmb_resource_online');

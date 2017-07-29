@@ -52,11 +52,17 @@ class checkout_payment {
     }
 
     public static function GetPaymentType() {
-        return $_REQUEST[self::$payment_type];
+		if ($_POST[self::$payment_type])
+			return $_POST[self::$payment_type];
+		else
+			return $_SESSION[self::$payment_type];
     }
 
     public static function GetAmountPaid() {
-        return $_REQUEST[self::$amount_paid];
+		if ($_POST[self::$amount_paid])
+			return $_POST[self::$amount_paid];
+		else
+			return $_SESSION[self::$amount_paid];
     }
 
     public static function InputAmountPaid() {
@@ -64,7 +70,10 @@ class checkout_payment {
     }
 
     public static function GetTransactionID() {
-        return $_REQUEST[self::$transaction_id];
+		if ($_POST[self::$transaction_id])
+			return $_POST[self::$transaction_id];
+		else
+			return $_SESSION[self::$transaction_id];
     }
 
     public static function InputTransactionID() {
@@ -72,11 +81,17 @@ class checkout_payment {
     }
 	
 	public static function GetName() {
-        return $_REQUEST[self::$name];
+		if ($_POST[self::$name])
+			return $_POST[self::$name];
+		else
+			return $_SESSION[self::$name];
     }
 
     public static function GetCardName() {
-        return $_REQUEST[self::$card_name];
+		if ($_POST[self::$card_name])
+			return $_POST[self::$card_name];
+		else
+			return $_SESSION[self::$card_name];
     }
 
     public static function InputName() {
@@ -84,7 +99,10 @@ class checkout_payment {
     }
 
     public static function GetCardVerification() {
-        return $_REQUEST[self::$card_verification];
+		if ($_POST[self::$card_verification])
+			return $_POST[self::$card_verification];
+		else
+			return $_SESSION[self::$card_verification];
     }
 
     public static function InputCardVerification() {
@@ -92,7 +110,10 @@ class checkout_payment {
     }
 
     public static function GetEmail() {
-        return $_REQUEST[self::$email];
+		if ($_POST[self::$email])
+			return $_POST[self::$email];
+		else
+			return $_SESSION[self::$email];
     }
 
     public static function InputEmail() {
@@ -100,7 +121,10 @@ class checkout_payment {
     }
 
     public static function GetCardNumber() {
-        return $_REQUEST[self::$card_number];
+		if ($_POST[self::$card_number])
+			return $_POST[self::$card_number];
+		else
+			return $_SESSION[self::$card_number];
     }
 
     public static function InputCardNumber() {
@@ -108,7 +132,10 @@ class checkout_payment {
     }
 
     public static function GetCardExpirationMonth() {
-        return $_REQUEST[self::$card_expiration_month];
+		if ($_POST[self::$card_expiration_month])
+			return $_POST[self::$card_expiration_month];
+		else
+			return $_SESSION[self::$card_expiration_month];
     }
 
     public static function InputCardExpirationMonth() {
@@ -116,7 +143,10 @@ class checkout_payment {
     }
 
     public static function GetCardExpirationYear() {
-        return $_REQUEST[self::$card_expiration_year];
+		if ($_POST[self::$card_expiration_year])
+			return $_POST[self::$card_expiration_year];
+		else
+			return $_SESSION[self::$card_expiration_year];
     }
 
     public static function InputCardExpirationYear() {
@@ -124,7 +154,10 @@ class checkout_payment {
     }
 
     public static function GetState() {
-        return $_REQUEST[self::$state];
+		if ($_POST[self::$state])
+			return $_POST[self::$state];
+		else
+			return $_SESSION[self::$state];
     }
 
     public static function InputState() {
@@ -132,7 +165,10 @@ class checkout_payment {
     }
 
     public static function GetAddress() {
-        return $_REQUEST[self::$address];
+		if ($_POST[self::$address])
+			return $_POST[self::$address];
+		else
+			return $_SESSION[self::$address];
     }
 
     public static function InputAddress() {
@@ -140,7 +176,10 @@ class checkout_payment {
     }
 
     public static function GetCity() {
-        return $_REQUEST[self::$city];
+		if ($_POST[self::$city])
+			return $_POST[self::$city];
+		else
+			return $_SESSION[self::$city];
     }
 
     public static function InputCity() {
@@ -148,12 +187,44 @@ class checkout_payment {
     }
 
     public static function GetZip() {
-        return $_REQUEST[self::$zip];
+		if ($_POST[self::$zip])
+			return $_POST[self::$zip];
+		else
+			return $_SESSION[self::$zip];
     }
 
     public static function InputZip() {
         return new Input(id(self::$zip).name(self::$zip).type('text'));
     }
+	
+	public static function clear_requests() {
+		unset($_SESSION[self::$payment_type]);
+		unset($_SESSION[self::$amount_paid]);
+		unset($_SESSION[self::$zip]);
+		unset($_SESSION[self::$city]);
+		unset($_SESSION[self::$address]);
+		unset($_SESSION[self::$state]);
+		unset($_SESSION[self::$card_expiration_year]);
+		unset($_SESSION[self::$card_number]);
+		unset($_SESSION[self::$email]);
+		unset($_SESSION[self::$card_verification]);
+		unset($_SESSION[self::$card_name]);
+		unset($_SESSION[self::$name]);
+	}
+	
+	public static function save_requests() {
+		$_SESSION[self::$payment_type] = $_POST[self::$payment_type];
+		$_SESSION[self::$zip] = $_POST[self::$zip];
+		$_SESSION[self::$city] = $_POST[self::$city];
+		$_SESSION[self::$address] = $_POST[self::$address];
+		$_SESSION[self::$state] = $_POST[self::$state];
+		$_SESSION[self::$card_expiration_year] = $_POST[self::$card_expiration_year];
+		$_SESSION[self::$card_number] = $_POST[self::$card_number];
+		$_SESSION[self::$email] = $_POST[self::$email];
+		$_SESSION[self::$card_verification] = $_POST[self::$card_verification];
+		$_SESSION[self::$card_name] = $_POST[self::$card_name];
+		$_SESSION[self::$name] = $_POST[self::$name];
+	}
 }
 
 class checkout_width_constants {
@@ -175,41 +246,51 @@ class checkout_request {
 
     public static $remove_amount = 'cart_remove_amount';
     public static $remove_credit_index = 'cart_credit_index';
+	
+	public static function clear_requests() {
+		unset($_REQUEST[$quantity]);
+		unset($_REQUEST[$isbn]);
+		unset($_REQUEST[$barcode]);
+		unset($_REQUEST[$credit_name]);
+		unset($_REQUEST[$credit_amount]);
+		unset($_REQUEST[$remove_amount]);
+		unset($_REQUEST[$remove_credit_index]);
+	}
 
     public static function GetBarcode() {
-        if ($_REQUEST[self::$barcode])
-            return $_REQUEST[self::$barcode];
+        if ($_POST[self::$barcode])
+            return $_POST[self::$barcode];
         else return -1;
     }
 
     public static function GetISBN() {
-        if ($_REQUEST[self::$isbn])
-            return $_REQUEST[self::$isbn];
+        if ($_POST[self::$isbn])
+            return $_POST[self::$isbn];
         else return -1;
     }
 
     public static function GetQuantity() {
-        return $_REQUEST[self::$quantity];
+        return $_POST[self::$quantity];
     }
 
     public static function GetCreditName() {
-        if ($_REQUEST[self::$credit_name])
-            return $_REQUEST[self::$credit_name];
+        if ($_POST[self::$credit_name])
+            return $_POST[self::$credit_name];
         else return 'Credit';
     }
 
     public static function GetCreditAmount() {
-        if ($_REQUEST[self::$credit_amount])
-            return $_REQUEST[self::$credit_amount];
+        if ($_POST[self::$credit_amount])
+            return $_POST[self::$credit_amount];
         else return -1;
     }
 
     public static function GetRemoveQuantity() {
-        return $_REQUEST[self::$remove_amount];
+        return $_POST[self::$remove_amount];
     }
 
     public static function GetCreditIndex() {
-        return $_REQUEST[self::$remove_credit_index];
+        return $_POST[self::$remove_credit_index];
     }
 }
 

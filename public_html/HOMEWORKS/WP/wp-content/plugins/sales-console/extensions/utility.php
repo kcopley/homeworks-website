@@ -7,7 +7,7 @@
  */
 
 //Sales Methods
-function request_sales_Auth() { return 'Auth'; }
+function sales_Auth() { return 'Auth'; }
 function request_sales_CCResponse() { return 'CVV2ResponseMsg'; }
 function sales_AuthCodeDeclined() { return 'Declined'; }
 function sales_Notes() { return 'Notes'; }
