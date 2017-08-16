@@ -44,7 +44,7 @@ session_start();
 include_once "includes.php";
 selection::GetIDS();
 
-if ($_REQUEST[sales_Auth()] && !$_SESSION['finalized_credit']) {
+if ($_REQUEST[request_sales_Auth()] && !$_SESSION['finalized_credit']) {
     $successful = process_auth();
     if ($successful) {
         $_SESSION[checkout_payment::$amount_paid] = $_SESSION['last_credit_payment'];
@@ -410,7 +410,7 @@ function get_payment_info() {
 }
 
 function process_auth() {
-    if ($_REQUEST[sales_Auth()] == sales_AuthCodeDeclined()) {
+    if ($_REQUEST[request_sales_Auth()] == sales_AuthCodeDeclined()) {
         $cw2 = $_REQUEST[request_sales_CCResponse()];
         if ($cw2 == sales_purchase_error()) {
             $render = new RenderList(
