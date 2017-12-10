@@ -22,6 +22,7 @@ else {
         $keyword = $_REQUEST['search_name'];
         $publisher = $_REQUEST['search_publisher'];
         $isbn = $_REQUEST['search_ISBN'];
+        $author = $_REQUEST['search_author'];
 
         $arr = array(
             array(
@@ -48,6 +49,14 @@ else {
                 'key' => '_cmb_resource_isbn',
                 'value' => $isbn,
                 'compare' => '='
+            );
+        }
+
+        if ($author) {
+            $arr[] = array(
+                'key' => '_cmb_resource_author',
+                'value' => $author,
+                'relation' => 'LIKE'
             );
         }
 
@@ -115,14 +124,21 @@ else {
                 $row->add_object(new Column(width(1)));
 
                 $col = new Column(width(31));
+
+                $msrp = get_post_meta($post->ID, '_cmb_resource_MSRP', true);
+
+                $paragraph = new Paragraph(new TextRender("Publisher: "), new TextRender(get_post_meta($post->ID, '_cmb_resource_publisher', true)),
+                    new BR());
+                if ($msrp != 'NOTSET') {
+                    $paragraph->add_object(new TextRender("Retail price: "));
+                    $paragraph->add_object(new TextRender('$'.number_format($msrp, 2)));
+                    $paragraph->add_object(new BR());
+                }
+                $paragraph->add_object(new Strong(new TextRender("Price: "), new Span(classType("price")), new TextRender('$'.number_format(get_post_meta($post->ID, '_cmb_resource_price', true), 2))));
+
                 $div = new Div(classType("nine columns"),
                     new H4(new A(href(get_permalink()), new TextRender(get_the_title()))),
-                    new Paragraph(new TextRender("Publisher: "), new TextRender(get_post_meta($post->ID, '_cmb_resource_publisher', true)),
-                            new BR(),
-                            new TextRender("Retail price: "), new TextRender('$'.number_format(get_post_meta($post->ID, '_cmb_resource_MSRP', true), 2)),
-                            new BR(),
-                            new Strong(new TextRender("Price: "), new Span(classType("price")), new TextRender('$'.number_format(get_post_meta($post->ID, '_cmb_resource_price', true), 2)))
-                    ),
+                    $paragraph,
                     new A(classType("button").href(get_permalink()), new TextRender("See details"))
                 );
                 $col->add_object($div);

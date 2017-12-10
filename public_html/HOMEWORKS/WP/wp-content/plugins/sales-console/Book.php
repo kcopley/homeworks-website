@@ -13,6 +13,7 @@ class Book {
     public static $price = 'book_price';
     public static $msrp = 'book_msrp';
     public static $publisher = 'book_publisher';
+    public static $author = 'book_author';
     public static $departments = 'book_departments';
     public static $isbn = 'book_isbn';
     public static $condition = 'book_condition';
@@ -20,6 +21,7 @@ class Book {
     public static $online = 'book_online';
     public static $image = 'book_image';
     public static $quantity = 'book_quantity';
+    public static $checked_quantity = 'book_checked_quantity';
     public static $bookaddbutton = 'book_add_button';
     public static $editaddbutton = 'book_edit_add_button';
     public static $consigner_id = 'consigner_id_input';
@@ -49,12 +51,20 @@ class Book {
         $publisher = new Text('book_publisher', 'Publisher', '_cmb_resource_publisher');
         $isbn = new Text('book_isbn', 'ISBN', '_cmb_resource_isbn');
 
+        $author = new Text('book_author', 'Author', '_cmb_resource_author');
+
         $department = new Category('category_types', 'Department', 'category');
         //$department->search_param = false;
 
         $quantity = new Quantity('book_quantity', 'Quantity', 'quantity');
         $quantity->search_param = false;
         $quantity->edit_param = false;
+
+        $checked_quantity = new Text('book_checked_quantity', 'Checked', '_cmb_checked_count');
+        $checked_quantity->search_param = false;
+        $checked_quantity->edit_param = false;
+        $checked_quantity->exact = 1;
+        $checked_quantity->add_param = false;
 
         $consignerid = new ConsignerID('consigner_id', 'Consigner', '');
         $consignerid->search_param = false;
@@ -96,12 +106,14 @@ class Book {
             self::$msrp => $msrp,
             self::$departments => $department,
             self::$publisher => $publisher,
+            self::$author => $author,
             self::$isbn => $isbn,
             self::$condition => $condition,
             self::$available => $availability,
             self::$online => $online,
             self::$image => $image,
             self::$quantity => $quantity,
+            self::$checked_quantity => $checked_quantity,
             self::$bookaddbutton => $addbutton,
             self::$consigner_id => $consignerid,
         );
@@ -269,6 +281,7 @@ class Book {
         Book::add_consigner_to_book($book_id, $consigner_id);
         Consigner::add_book_to_consigner($consigner_id, $book_id);
         Book::update_count($book_id);
+        Book::add_checked_id($book_id);
     }
 
     public static function add_consigner_to_book($book, $consigner) {
@@ -296,7 +309,8 @@ class Book {
     public static function remove_book($book_id, $consigner_id) {
         self::remove_consigner_from_book($book_id, $consigner_id);
         Consigner::remove_book_from_consigner($consigner_id, $book_id);
-		Book::update_count($book_id);
+        Book::update_count($book_id);
+        Book::remove_checked_id($book_id);
     }
 
     public static function remove_consigner_from_book($book, $consigner) {
@@ -306,6 +320,51 @@ class Book {
         }
         $consigners = array_values($consigners);
         Book::set_consigners($book, $consigners);
+    }
+
+    public static function reset_checked_book($barcode) {
+        $id = checkout_cart::get_book($barcode, -1);
+        self::reset_checked_id($id);
+    }
+
+    public static function reset_checked_id($id) {
+        Book::$props[Book::$checked_quantity]->SetValue($id, 0);
+    }
+
+    public static function add_checked_book($barcode) {
+        $id = checkout_cart::get_book($barcode, -1);
+        self::add_checked_id($id);
+    }
+
+    public static function add_checked_id($id) {
+        $value = Book::$props[Book::$checked_quantity]->GetValue($book);
+        if (!$value) {
+            $value = 0;
+        }
+        if ($value < 0) {
+            $value = 0;
+        }
+        $value = $value + 1;
+        Book::$props[Book::$checked_quantity]->SetValue($id, $value);
+    }
+    
+    public static function remove_checked_book($barcode) {
+        $id = checkout_cart::get_book($barcode, -1);
+        self::remove_checked_id($id);
+    }
+
+    public static function remove_checked_id($id) {
+        $value = Book::$props[Book::$checked_quantity]->GetValue($book);
+        if (!$value) {
+            $value = 0;
+        }
+        if ($value <= 1) {
+            $value = 0;
+        }
+        else {
+            $value = $value - 1;
+        }
+        Book::$props[Book::$checked_quantity]->SetValue($id, $value);
     }
 }
 Book::init();

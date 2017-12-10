@@ -88,36 +88,55 @@ if ($active==1) { ?>
 			<div class="four columns">
 
 			<?php if ( has_post_thumbnail() ) {
-
 				the_post_thumbnail('book-image');
-
 			} else { ?>
-
 				<img src="<?php bloginfo( 'template_url' ); ?>/images/noimage.gif">
-
-			<?php } ?> 
-
+			<?php 
+			} 
+			?> 
 			</div>
 
 			<div class="seven columns end">
-
 				<h2><?php the_title(); ?></h2>
-
-				<p><strong>Publisher:</strong> <?php global $post; echo get_post_meta($post->ID, '_cmb_resource_publisher', true) ?>&nbsp;&nbsp;<a href="<?php echo bloginfo('url'); ?>/?s=<?php global $post; echo get_post_meta($post->ID, '_cmb_resource_publisher', true) ?>">(search)</a><br /><strong>Condition:</strong> <?php global $post; echo get_post_meta($post->ID, '_cmb_resource_condition', true) ?>
-
-<br /><strong>ISBN:</strong> <?php 
-
-	global $post;
-
-	$skuid = get_post_meta($post->ID, '_cmb_resource_isbn', true);
-
-	//if ($skuid == '') $skuid = rtrim(get_post_meta($post->ID, '_cmb_resource_u-sku', true), "U");
-
-	if ($skuid == '') $skuid = "No ISBN listed for this book.";
-
-	echo  $skuid; 
-
-?></p>
+				<p>
+				<?php
+					global $post;
+					$publisher = get_post_meta($post->ID, '_cmb_resource_publisher', true);
+					if ($publisher != '') {
+						echo '<strong>Publisher:</strong> ';
+						echo $publisher;
+					}
+				?>
+				<?php
+					global $post;
+					$author = get_post_meta($post->ID, '_cmb_resource_author', true);
+					if ($author != '') {
+						echo '<br /><strong>Author:</strong> ';
+						echo $author;
+					}
+				?>
+				<?php
+					global $post;
+					$condition = get_post_meta($post->ID, '_cmb_resource_condition', true);
+					if ($condition != '') {
+						echo '<br /><strong>Condition:</strong> ';
+						if ($condition == 1) {
+							echo 'Used';
+						}
+						if ($condition == 2) {
+							echo 'New';
+						}
+					}
+				?>
+				<br /><strong>ISBN:</strong> 
+				
+				<?php 
+					global $post;
+					$skuid = get_post_meta($post->ID, '_cmb_resource_isbn', true);
+					//if ($skuid == '') $skuid = rtrim(get_post_meta($post->ID, '_cmb_resource_u-sku', true), "U");
+					if ($skuid == '') $skuid = "No ISBN listed for this book.";
+					echo  $skuid; 
+				?></p>
 
 				<div class="row">
 
@@ -131,9 +150,9 @@ if ($active==1) { ?>
 
 						if ($count == 2) { ?>
 
-							<p>Retail price: <strike><?php global $post; echo get_post_meta($post->ID, '_cmb_resource_MSRP', true) ?></strike><br />
+							<p>Retail price: <strike><?php global $post; echo '$'.number_format(get_post_meta($post->ID, '_cmb_resource_MSRP', true), 2) ?></strike><br />
 
-							<strong>Price: <span class="price"><?php global $post; echo get_post_meta($post->ID, '_cmb_resource_price', true) ?></span></strong></p>
+							<strong>Price: <span class="price"><?php global $post; echo '$'.number_format(get_post_meta($post->ID, '_cmb_resource_price', true), 2) ?></span></strong></p>
 
 							<p><strong><?php global $post; echo Book::get_consigner_count($post->ID) ?> IN STOCK</strong></p>
 

@@ -9,6 +9,7 @@ include_once "includes.php";
 
 class verify {
     public static $verify_books = 'verify_books';
+    public static $clear_checked_books = 'clear_checked_books';
     public static $verify_consigners = 'verify_consigners';
     public static $verify_transactions = 'verify_transactions';
     public static $delete_transactions = 'delete_transactions';
@@ -27,6 +28,9 @@ class verify {
 }
 
 switch (page_action::GetAction()){
+    case verify::$clear_checked_books:
+        clear_checked_books();
+        break;
     case verify::$verify_books:
         verify_book_database();
         break;
@@ -165,6 +169,18 @@ $list = new RenderList(
                 new TableArr(width(100).cellpadding(0).cellspacing(5).align('right'),
                     new Row(
                         new Column(width(10).align('right'),
+                            new TextRender('Unset Checked Inventory')
+                        ),
+                        new Column(width(16),
+                            new Form(id('clearing_inventory'),
+                                page_action::InputAction(verify::$clear_checked_books),
+                                new Input(type('hidden').value($_REQUEST['last_update']).name('last_update').id('last_update')),
+                                button('Start')
+                            )
+                        )
+                    ),
+                    new Row(
+                        new Column(width(10).align('right'),
                             new TextRender('Update Books')
                         ),
                         new Column(width(16),
@@ -247,6 +263,37 @@ static $isbn = 'book_isbn';
 static $condition = 'book_condition';
 static $available = 'book_availability';
 static $online = 'book_online';
+
+function clear_checked_books() {
+    $offset = $_REQUEST['last_update'];
+    if (!$offset) $offset = 0;
+
+    $args = array(
+        'numberposts' => 500,
+        'posts_per_page' => 500,
+        'post_type' => 'bookstore',
+        'cache_results' => false,
+        'offset' => $offset
+    );
+
+    $query = new WP_Query($args);
+    $counter = 0;
+    while ($query->have_posts()):
+        $query->the_post();
+        global $post;
+        $book = $post->ID;
+        remove_checked_inventory($book);
+        $counter++;
+    endwhile;
+
+    $_REQUEST['last_update'] = $offset + 500;
+    
+    echo 'Completed '.$_REQUEST['last_update'].' books.';
+}
+
+function remove_checked_inventory($id) {
+    Book::$props[Book::$checked_quantity]->SetValue($id, 0);
+}
 
 function verify_book_database() {
     $offset = $_REQUEST['last_update'];
@@ -675,6 +722,11 @@ $list->Render();
 if ($_REQUEST['last_update'] && $_REQUEST['last_update'] < 20000)
 {
     echo '<script>document.getElementById(\'verifying_books\').submit();</script>';
+}
+
+if ($_REQUEST['last_update'] && $_REQUEST['last_update'] < 22000)
+{
+    echo '<script>document.getElementById(\'clearing_inventory\').submit();</script>';
 }
 
 if ($_REQUEST['last_update_trans'] && $_REQUEST['last_update_trans'] < 5000)

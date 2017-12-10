@@ -251,6 +251,10 @@ function src($str){
     return ' src="'.$str.'" ';
 }
 
+function autofocus() {
+    return ' autofocus="'.'autofocus'.'" ';
+}
+
 function add_image($id) {
     set_post_thumbnail($id, absint( $_POST[Book::$image_set]));
 }

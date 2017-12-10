@@ -247,7 +247,7 @@ function sales_console_consigners () { ?>
 function sales_console_transactions () { ?>
 	<div class="wrap">
 		<div id="icon-themes" class="icon32"><br></div>
-		<h2>Consignment</h2>
+		<h2>Transactions</h2>
 		<div id="poststuff">
 			<div id="post-body" class="metabox-holder">
 				<div id="postbox-container-1" class="postbox-container">
@@ -267,7 +267,7 @@ function sales_console_transactions () { ?>
 function sales_console_verification () { ?>
 	<div class="wrap">
 		<div id="icon-themes" class="icon32"><br></div>
-		<h2>Consignment</h2>
+		<h2>Administrative</h2>
 		<div id="poststuff">
 			<div id="post-body" class="metabox-holder">
 				<div id="postbox-container-1" class="postbox-container">
@@ -276,6 +276,26 @@ function sales_console_verification () { ?>
 						<h3 class="hndle"><span>Administrative</span></h3>
 						<div class="inside">
 							<?php include(plugin_dir_path(__FILE__).'verify.php'); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php }
+
+function inventory_verification () { ?>
+	<div class="wrap">
+		<div id="icon-themes" class="icon32"><br></div>
+		<h2>Inventory</h2>
+		<div id="poststuff">
+			<div id="post-body" class="metabox-holder">
+				<div id="postbox-container-1" class="postbox-container">
+					<div id="library_details" class="postbox ">
+						<div class="handlediv"><br /></div>
+						<h3 class="hndle"><span>Inventory</span></h3>
+						<div class="inside">
+							<?php include(plugin_dir_path(__FILE__).'inventory.php'); ?>
 						</div>
 					</div>
 				</div>
@@ -299,6 +319,7 @@ function sales_console_menu () {
 	//add_submenu_page('sales-console-admin', 'Income/Revenue', 'Income/Revenue', 'publish_posts', 'sales_console_income', 'sales_console_income');
 	//add_submenu_page('sales-console-admin', 'Bestsellers', 'Bestsellers', 'publish_posts', 'sales_console_bestsellers', 'sales_console_bestsellers');
 	add_submenu_page('sales-console-admin', 'Administrative', 'Administrative', 'publish_posts', 'sales_console_verification', 'sales_console_verification');
+	add_submenu_page('sales-console-admin', 'Inventory', 'Inventory', 'publish_posts', 'inventory_verification', 'inventory_verification');
 	
 }
 

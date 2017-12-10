@@ -66,7 +66,7 @@ Template Name: Checkout
 
 							$total = $total + $line_cost; 
 
-							$tax = number_format($taxrate*$total,2);
+							$tax = $taxrate * $total;
 
 							$cost = number_format($total+$tax+$shipping,2); ?>
 
@@ -120,7 +120,7 @@ Template Name: Checkout
 
     						<td>Tax<sup>*</sup>:</td>
 
-    						<td>$<?php echo $tax; ?></td>
+    						<td>$<?php echo number_format($tax, 2); ?></td>
 
   					</tr>
 
